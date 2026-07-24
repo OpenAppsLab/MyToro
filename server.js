@@ -139,6 +139,9 @@ const AUTO_ORDER_SETTINGS = {
   waitAfterOpenMs: 30 * 60 * 1000
 };
 
+const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY || 'd9hiin9r01qhv00mf19gd9hiin9r01qhv00mf1a0';
+const FINNHUB_BASE_URL = 'https://finnhub.io/api/v1';
+
 function getNewYorkDateKey(date = new Date()) {
   return new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/New_York',
@@ -164,6 +167,10 @@ function resetAutoOrderState(dateKey) {
   autoOrderState.orderCount = 0;
 }
 
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
+
 function computeTextMatchCount(item, news) {
   const symbolName = item.name.toLowerCase();
   return news.filter((entry) => {
@@ -172,7 +179,90 @@ function computeTextMatchCount(item, news) {
   }).length;
 }
 
-function buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage) {
+function inferSectorProfile(item) {
+  const haystack = `${item.name} ${item.symbol}`.toLowerCase();
+  if (/(nvda|amd|intel|qualcomm|tsm|asml|arm|smci|mu|avgo|qcom|lam|mchp|adi|klac|txn|on)/.test(haystack)) {
+    return { name: 'AI / semis', keywords: ['ai', 'chip', 'semiconductor', 'gpu', 'data center', 'demand', 'orders'] };
+  }
+  if (/(apple|microsoft|meta|amazon|google|adobe|salesforce|oracle|shopify|paypal|crm|intc|msft|aapl|amzn|googl|meta|adbe|shop|pypl)/.test(haystack)) {
+    return { name: 'tech', keywords: ['cloud', 'software', 'ai', 'enterprise', 'earnings', 'growth'] };
+  }
+  if (/(tesla|ford|gm|rivn|f|hmc|nio|xpev)/.test(haystack)) {
+    return { name: 'auto', keywords: ['ev', 'vehicle', 'delivery', 'manufacturing', 'production'] };
+  }
+  if (/(jpm|bac|gs|ms|c|wfc|gs|axp|v|ma|schw|blk)/.test(haystack)) {
+    return { name: 'finance', keywords: ['bank', 'rates', 'credit', 'loan', 'capital'] };
+  }
+  return { name: 'general', keywords: ['earnings', 'guidance', 'growth', 'demand'] };
+}
+
+function scoreNewsSentiment(item, news) {
+  const sectorProfile = inferSectorProfile(item);
+  const relevantEntries = news.filter((entry) => {
+    const text = `${entry.title} ${entry.description}`.toLowerCase();
+    return text.includes(item.symbol.toLowerCase()) || sectorProfile.keywords.some((keyword) => text.includes(keyword));
+  });
+
+  if (!relevantEntries.length) {
+    return 0;
+  }
+
+  let sentimentScore = 0;
+  relevantEntries.forEach((entry) => {
+    const text = `${entry.title} ${entry.description}`.toLowerCase();
+    const positiveHits = (text.match(/surge|strong|beat|raise|boost|upbeat|demand|accelerat|growth|rally|buy|upgrade|bull|gains|expansion/i) || []).length;
+    const negativeHits = (text.match(/fall|weak|miss|cut|warn|slump|risk|concern|down|selloff|slow|pressure|decline|bear/i) || []).length;
+    const weight = 1 + Math.min(4, positiveHits + negativeHits);
+    sentimentScore += (positiveHits - negativeHits) * weight;
+  });
+
+  return clamp(sentimentScore * 5, -20, 20);
+}
+
+function buildAdvancedSignals(item, news, context = {}) {
+  const currentPrice = Number(item.currentPrice || 0);
+  const dayMovePct = Number(item.dayMovePct || 0);
+  const volume = Number(item.volume || 0);
+  const volumeHistory = Array.isArray(item.volumeHistory) ? item.volumeHistory.filter(Boolean) : [];
+  const averageVolume = volumeHistory.length > 0
+    ? volumeHistory.reduce((sum, value) => sum + Number(value || 0), 0) / volumeHistory.length
+    : volume;
+  const volumeRatio = averageVolume > 0 ? Math.min(6, volume / averageVolume) : 1;
+  const unusualVolumeScore = clamp((volumeRatio - 1) * 25, 0, 30);
+
+  const rangeHigh = Number(item.highPrice || currentPrice * 1.02 || 0);
+  const rangeLow = Number(item.lowPrice || currentPrice * 0.98 || 0);
+  const intradayRangePct = rangeHigh && rangeLow && currentPrice ? ((rangeHigh - rangeLow) / currentPrice) * 100 : 0;
+  const optionsFlowScore = clamp(Math.min(30, dayMovePct * 3 + unusualVolumeScore * 0.4 + intradayRangePct * 1.5), 0, 30);
+
+  const sectorSentimentScore = clamp(scoreNewsSentiment(item, news) + (computeTextMatchCount(item, news) * 2), -10, 25);
+
+  const peerMoves = context.peerMoves || {};
+  const targetPeer = context.peerTargets || ['NVDA', 'AMD'];
+  const peerScores = targetPeer
+    .map((peerSymbol) => Number(peerMoves[peerSymbol] || 0))
+    .filter((value) => Number.isFinite(value));
+  const peerAverageMove = peerScores.length ? peerScores.reduce((sum, value) => sum + value, 0) / peerScores.length : 0;
+  const correlationScore = clamp((dayMovePct * 0.35) + (peerAverageMove * 0.35) + (Math.max(0, volumeRatio - 1) * 8), 0, 25);
+
+  const squeezeScore = clamp(Math.max(0, dayMovePct * 2) + unusualVolumeScore * 0.45 + Math.max(0, (volumeRatio - 1) * 15), 0, 25);
+
+  const premarketBlockScore = clamp(Math.max(0, dayMovePct * 1.4) + Math.max(0, unusualVolumeScore - 5) + (item.preMarketMovePct ? item.preMarketMovePct * 0.8 : 0), 0, 20);
+
+  return {
+    optionsFlowScore,
+    volumeSignal: unusualVolumeScore,
+    sectorSentimentScore,
+    correlationScore,
+    squeezeScore,
+    premarketBlockScore,
+    sector: inferSectorProfile(item).name,
+    peerAverageMove,
+    volumeRatio
+  };
+}
+
+function buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, context = {}) {
   const currentPrice = Number(item.currentPrice || 0);
   const dayMovePct = Number(item.dayMovePct || 0);
   const positiveMove = Math.max(0, dayMovePct);
@@ -180,17 +270,18 @@ function buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage) {
   const estimatedProfit = ballparkAmount > 0 ? (positiveMove / 100) * ballparkAmount : 0;
   const leverageProfit = estimatedProfit * leverage;
   const newsMentions = computeTextMatchCount(item, news);
-  const volume = Number(item.volume || 0);
-  const averageVolume = Array.isArray(item.volumeHistory) && item.volumeHistory.length > 0
-    ? item.volumeHistory.filter(Boolean).reduce((sum, value) => sum + value, 0) / item.volumeHistory.filter(Boolean).length
-    : volume;
-  const volumeRatio = averageVolume > 0 ? Math.min(5, volume / averageVolume) : 1;
-  const newsSignal = Math.min(20, newsMentions * 5);
+  const advancedSignals = buildAdvancedSignals(item, news, context);
+
+  const newsSignal = Math.min(20, newsMentions * 5 + Math.max(0, advancedSignals.sectorSentimentScore));
   const momentumSignal = Math.min(30, Math.max(0, positiveMove * 5));
-  const volumeSignal = Math.min(25, Math.max(0, (volumeRatio - 1) * 10));
+  const volumeSignal = Math.min(25, Math.max(0, advancedSignals.volumeSignal));
+  const optionsFlowSignal = Math.min(20, Math.max(0, advancedSignals.optionsFlowScore));
+  const correlationSignal = Math.min(20, Math.max(0, advancedSignals.correlationScore));
+  const squeezeSignal = Math.min(15, Math.max(0, advancedSignals.squeezeScore));
+  const premarketBlockSignal = Math.min(10, Math.max(0, advancedSignals.premarketBlockScore));
   const targetAlignment = targetMovePct > 0 ? Math.max(0, 40 - Math.max(0, targetMovePct - positiveMove) * 2) : 20;
-  const strength = Math.min(100, momentumSignal + volumeSignal + newsSignal + targetAlignment);
-  const viable = positiveMove >= targetMovePct && strength >= 45;
+  const strength = Math.min(100, momentumSignal + volumeSignal + newsSignal + optionsFlowSignal + correlationSignal + squeezeSignal + premarketBlockSignal + targetAlignment);
+  const viable = positiveMove >= targetMovePct && strength >= 50;
   const score = Math.min(100, strength + (viable ? 10 : 0));
   const signalType = dayMovePct >= 0 ? 'bullish' : 'bearish';
 
@@ -209,8 +300,16 @@ function buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage) {
     signalType,
     targetMovePct,
     viable,
-    source: 'Yahoo Finance 5m',
-    liveSignal: true
+    source: 'Yahoo Finance 5m + live market context',
+    liveSignal: true,
+    advancedSignals: {
+      ...advancedSignals,
+      optionsFlowSignal,
+      correlationSignal,
+      squeezeSignal,
+      premarketBlockSignal,
+      newsSignal
+    }
   };
 }
 
@@ -220,8 +319,13 @@ async function rankAutoOptions({ targetProfit, ballparkAmount, leverage }) {
     loadNewsSnapshot()
   ]);
 
+  const peerMoves = market.reduce((accumulator, entry) => {
+    accumulator[entry.symbol] = Number(entry.dayMovePct || 0);
+    return accumulator;
+  }, {});
+
   return market
-    .map((item) => buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage))
+    .map((item) => buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] }))
     .filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, 5);
@@ -304,12 +408,12 @@ async function refreshAutoOrders() {
 }
 
 
-async function fetchJson(url, timeoutMs = 5000) {
+async function fetchJson(url, timeoutMs = 5000, headers = {}) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
 
   try {
-    const response = await fetch(url, { signal: controller.signal });
+    const response = await fetch(url, { signal: controller.signal, headers });
     if (!response.ok) {
       throw new Error(`Request failed with ${response.status} for ${url}`);
     }
@@ -317,6 +421,20 @@ async function fetchJson(url, timeoutMs = 5000) {
   } finally {
     clearTimeout(timer);
   }
+}
+
+async function fetchFinnhubJson(path, params = {}, timeoutMs = 5000) {
+  const query = new URLSearchParams({ token: FINNHUB_API_KEY, ...params });
+  const url = `${FINNHUB_BASE_URL}${path}?${query.toString()}`;
+  return fetchJson(url, timeoutMs, { Accept: 'application/json' });
+}
+
+function normalizeFinnhubNews(item) {
+  return {
+    title: item.headline || item.title || 'Finnhub headline',
+    link: item.url || item.link || '',
+    description: item.summary || item.content || item.source || ''
+  };
 }
 
 function mapLimit(items, limit, worker) {
@@ -340,29 +458,61 @@ async function loadMarketSnapshot() {
   }
 
   const market = await mapLimit(MARKET_SYMBOLS, 8, async (item) => {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(item.symbol)}?interval=5m&range=1d`;
-    const data = await fetchJson(url, 4500);
-    const result = data.chart?.result?.[0];
-    const timestamps = result?.timestamp || [];
-    const quote = result?.indicators?.quote?.[0] || {};
-    const closes = quote.close || [];
-    const volumes = quote.volume || [];
-    const open = quote.open || [];
-    const lastClose = closes[closes.length - 2] || closes[0] || 0;
-    const currentPrice = closes[closes.length - 1] || closes[0] || 0;
-    const dayOpen = open[0] || currentPrice;
-    const volume = volumes[volumes.length - 1] || 0;
-    const changePct = lastClose ? ((currentPrice - lastClose) / lastClose) * 100 : 0;
-    const dayMovePct = dayOpen ? ((currentPrice - dayOpen) / dayOpen) * 100 : 0;
+    try {
+      const quote = await fetchFinnhubJson('/quote', { symbol: item.symbol }, 4500);
+      const candle = await fetchFinnhubJson('/stock/candle', {
+        symbol: item.symbol,
+        resolution: '5',
+        from: Math.floor((Date.now() - 30 * 60 * 1000) / 1000),
+        to: Math.floor(Date.now() / 1000)
+      }, 4500);
 
-    return {
-      ...item,
-      currentPrice,
-      changePct,
-      dayMovePct,
-      volume,
-      updatedAt: timestamps[timestamps.length - 1] || Date.now()
-    };
+      const currentPrice = Number(quote.c || 0);
+      const previousClose = Number(quote.pc || 0);
+      const dayOpen = Number(candle.o?.[0] || quote.o || currentPrice || 0);
+      const volume = Number(candle.v?.[candle.v.length - 1] || 0);
+      const lastClose = Number(candle.c?.[candle.c.length - 2] || quote.pc || 0);
+      const currentCandleClose = Number(candle.c?.[candle.c.length - 1] || currentPrice || 0);
+      const changePct = previousClose ? ((currentPrice - previousClose) / previousClose) * 100 : 0;
+      const dayMovePct = dayOpen ? ((currentCandleClose - dayOpen) / dayOpen) * 100 : 0;
+      const closeHistory = Array.isArray(candle.c) ? candle.c.filter((value) => Number.isFinite(Number(value))) : [];
+      const volumeHistory = Array.isArray(candle.v) ? candle.v.filter((value) => Number.isFinite(Number(value))) : [];
+
+      return {
+        ...item,
+        currentPrice,
+        changePct,
+        dayMovePct,
+        volume,
+        closeHistory,
+        volumeHistory,
+        updatedAt: Date.now()
+      };
+    } catch (error) {
+      const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(item.symbol)}?interval=5m&range=1d`;
+      const data = await fetchJson(url, 4500);
+      const result = data.chart?.result?.[0];
+      const timestamps = result?.timestamp || [];
+      const quote = result?.indicators?.quote?.[0] || {};
+      const closes = quote.close || [];
+      const volumes = quote.volume || [];
+      const open = quote.open || [];
+      const lastClose = closes[closes.length - 2] || closes[0] || 0;
+      const currentPrice = closes[closes.length - 1] || closes[0] || 0;
+      const dayOpen = open[0] || currentPrice;
+      const volume = volumes[volumes.length - 1] || 0;
+      const changePct = lastClose ? ((currentPrice - lastClose) / lastClose) * 100 : 0;
+      const dayMovePct = dayOpen ? ((currentPrice - dayOpen) / dayOpen) * 100 : 0;
+
+      return {
+        ...item,
+        currentPrice,
+        changePct,
+        dayMovePct,
+        volume,
+        updatedAt: timestamps[timestamps.length - 1] || Date.now()
+      };
+    }
   });
 
   marketCache = {
@@ -386,18 +536,28 @@ async function loadNewsSnapshot() {
     'https://feeds.bbci.co.uk/news/world/rss.xml'
   ];
 
-  const headlines = await Promise.all(feeds.map(async (url) => {
-    try {
-      const response = await fetch(url, { signal: AbortSignal.timeout(4000) });
-      if (!response.ok) {
+  const headlines = await Promise.all([
+    (async () => {
+      try {
+        const newsItems = await fetchFinnhubJson('/news', { category: 'general' }, 4500);
+        return Array.isArray(newsItems) ? newsItems.map(normalizeFinnhubNews) : [];
+      } catch {
         return [];
       }
-      const xml = await response.text();
-      return parseRss(xml);
-    } catch {
-      return [];
-    }
-  }));
+    })(),
+    ...feeds.map(async (url) => {
+      try {
+        const response = await fetch(url, { signal: AbortSignal.timeout(4000) });
+        if (!response.ok) {
+          return [];
+        }
+        const xml = await response.text();
+        return parseRss(xml);
+      } catch {
+        return [];
+      }
+    })
+  ]);
 
   const combined = headlines.flat().slice(0, 30);
   newsCache = {
@@ -568,17 +728,6 @@ function getTodayRealizedPnl() {
   return pendingOrders
     .filter((order) => order.status !== 'pending' && getOrderDateKey(order) === todayKey)
     .reduce((sum, order) => sum + getRealizedOrderPnl(order), 0);
-}
-
-function canPlaceAutoOrder() {
-  const realizedPnl = getTodayRealizedPnl();
-  if (realizedPnl >= DAILY_TARGET_PROFIT) {
-    return false;
-  }
-  if (realizedPnl <= -DAILY_MAX_LOSS) {
-    return false;
-  }
-  return !pendingOrders.some((order) => order.status === 'pending');
 }
 
 function isAfterMarketClose() {
@@ -815,28 +964,26 @@ app.get('/api/premarket', async (req, res) => {
       loadNewsSnapshot()
     ]);
 
+    const peerMoves = market.reduce((accumulator, entry) => {
+      accumulator[entry.symbol] = Number(entry.dayMovePct || 0);
+      return accumulator;
+    }, {});
+
     const ranked = market
       .map((item) => {
-        const symbolName = item.name.toLowerCase();
-        const relatedItems = news.filter((entry) => {
-          const text = `${entry.title} ${entry.description}`.toLowerCase();
-          return text.includes(symbolName) || text.includes(item.symbol.toLowerCase()) || text.includes(item.region.toLowerCase());
-        });
-
-        const newsMentions = relatedItems.length;
-        const movePct = Number(item.dayMovePct || 0);
-        const signalScore = Math.min(100, Math.max(0, 50 + (movePct * 8) + (newsMentions * 4)));
-        const leverageProfit = deposit * (movePct / 100) * leverage;
+        const signal = buildLiveSignal(item, news, 100, 3000, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
+        const leverageProfit = deposit * ((Number(item.dayMovePct || 0) || 0) / 100) * leverage;
 
         return {
           symbol: item.symbol,
           name: item.name,
           region: item.region,
           currentPrice: item.currentPrice,
-          movePct,
-          newsMentions,
-          signalScore,
-          leverageProfit
+          movePct: Number(item.dayMovePct || 0),
+          newsMentions: signal.newsMentions,
+          signalScore: signal.score,
+          leverageProfit,
+          advancedSignals: signal.advancedSignals
         };
       })
       .filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
@@ -921,8 +1068,13 @@ app.get('/api/predict', async (req, res) => {
       loadNewsSnapshot()
     ]);
 
+    const peerMoves = market.reduce((accumulator, entry) => {
+      accumulator[entry.symbol] = Number(entry.dayMovePct || 0);
+      return accumulator;
+    }, {});
+
     const scored = market
-      .map((item) => buildLiveSignal(item, news, targetProfit, ballparkAmount, 2))
+      .map((item) => buildLiveSignal(item, news, targetProfit, ballparkAmount, 2, { peerMoves, peerTargets: ['NVDA', 'AMD'] }))
       .filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
       .sort((a, b) => b.score - a.score);
 
@@ -950,6 +1102,12 @@ app.get('/api/predict', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Stock game server listening on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Stock game server listening on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = {
+  buildLiveSignal
+};

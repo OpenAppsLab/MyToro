@@ -1,7 +1,7 @@
 {
   "name": "mytoro",
   "version": "1.0.0",
-  "description": "MyToro intraday NASDAQ prediction game with live data and local history",
+  "description": "MyToro intraday trading game with live data and local history",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

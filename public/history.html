@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History | MyToro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="history-page">
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Performance history</div>
+        <h1>Game History</h1>
+      </div>
+      <div class="topbar-actions">
+        <a class="nav-link" href="index.html">Back to dashboard</a>
+      </div>
+    </header>
+
+    <main class="history-card">
+      <div class="history-summary">
+        <div class="summary-pill">
+          <strong id="historyCount">0</strong><br />
+          saved entries
+        </div>
+        <div class="summary-pill">
+          <strong id="historyWins">0</strong><br />
+          correct days
+        </div>
+        <div class="summary-pill">
+          <strong id="historyLosses">0</strong><br />
+          wrong days
+        </div>
+        <div class="summary-pill">
+          <strong id="historyBalance">$3,000.00</strong><br />
+          capital
+        </div>
+      </div>
+
+      <div class="legend-card" title="Green means pass, red means fail">
+        <span class="tooltip">?</span>
+        <span class="legend-item"><span class="legend-dot green"></span>Pass</span>
+        <span class="legend-item"><span class="legend-dot red"></span>Fail</span>
+        <span class="legend-item"><span class="legend-dot blue"></span>Closed</span>
+        <span class="legend-item"><span class="legend-dot grey"></span>No data</span>
+        <span class="legend-item"><span class="legend-dot amber"></span>Pending</span>
+      </div>
+
+      <div class="history-actions">
+        <button id="refreshPendingButton" class="secondary-button" disabled>Refresh pending orders</button>
+        <button id="clearHistoryButton" class="primary-button">Clear all saved data</button>
+      </div>
+
+      <div id="historyCalendarFull" class="calendar"></div>
+    </main>
+  </div>
+
+  <div id="historyModal" class="history-modal hidden" aria-hidden="true">
+    <div class="history-modal-card" role="dialog" aria-modal="true" aria-labelledby="historyModalTitle">
+      <div class="history-modal-header">
+        <div>
+          <div class="history-modal-title" id="historyModalTitle">Date details</div>
+          <div id="historyModalDate" class="history-modal-date">Select a calendar date to see orders and results.</div>
+        </div>
+        <button id="historyModalClose" class="icon-button" aria-label="Close details">×</button>
+      </div>
+      <div id="historyModalContent" class="history-modal-content"></div>
+    </div>
+  </div>
+
+  <script src="history.js"></script>
+</body>
+</html>

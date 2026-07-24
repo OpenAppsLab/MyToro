@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-Market | MyToro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">🕘 Pre-open view</div>
+        <h1>Pre-Market</h1>
+      </div>
+      <div class="topbar-actions">
+        <a class="nav-link" href="index.html">← Back to Home</a>
+      </div>
+    </header>
+
+    <nav class="mobile-tabs" aria-label="Primary">
+      <a class="tab-button" href="index.html">🏠 Home</a>
+      <a class="tab-button" href="yesterday.html">📈 Yesterday</a>
+      <a class="tab-button active" href="premarket.html">🕘 Pre-Market</a>
+      <a class="tab-button" href="history.html">🗓️ History</a>
+    </nav>
+
+    <main class="page-card">
+      <div class="panel-title-row">
+        <h2>Signal Score</h2>
+        <span class="badge badge-slate">Live pre-market signal</span>
+      </div>
+      <div id="premarketResults" class="results-area"></div>
+    </main>
+  </div>
+
+  <script src="premarket.js"></script>
+</body>
+</html>

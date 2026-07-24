@@ -139,7 +139,7 @@ const AUTO_ORDER_SETTINGS = {
   waitAfterOpenMs: 30 * 60 * 1000
 };
 
-const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY || 'd9hiin9r01qhv00mf19gd9hiin9r01qhv00mf1a0';
+const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY;
 const FINNHUB_BASE_URL = 'https://finnhub.io/api/v1';
 
 function getNewYorkDateKey(date = new Date()) {
@@ -424,6 +424,10 @@ async function fetchJson(url, timeoutMs = 5000, headers = {}) {
 }
 
 async function fetchFinnhubJson(path, params = {}, timeoutMs = 5000) {
+  if (!FINNHUB_API_KEY) {
+    throw new Error('FINNHUB_API_KEY is not configured.');
+  }
+
   const query = new URLSearchParams({ token: FINNHUB_API_KEY, ...params });
   const url = `${FINNHUB_BASE_URL}${path}?${query.toString()}`;
   return fetchJson(url, timeoutMs, { Accept: 'application/json' });

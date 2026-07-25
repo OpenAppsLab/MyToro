@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { buildLiveSignal } = require('../server');
+const { buildLiveSignal, buildOrderRecord, evaluateOrderOutcome } = require('../server');
 
 test('buildLiveSignal includes advanced live forecasting signals', () => {
   const item = {
@@ -34,4 +34,43 @@ test('buildLiveSignal includes advanced live forecasting signals', () => {
   assert.ok(signal.advancedSignals.correlationScore >= 0, 'expected correlation score to be numeric');
   assert.ok(signal.advancedSignals.squeezeScore >= 0, 'expected squeeze score to be numeric');
   assert.ok(signal.advancedSignals.premarketBlockScore >= 0, 'expected pre-market block score to be numeric');
+});
+
+test('trailing stop logic closes a trade once profit target or stop-loss threshold is reached', () => {
+  const order = buildOrderRecord({
+    symbol: 'AAPL',
+    name: 'Apple',
+    entryPrice: 500,
+    targetProfit: 30,
+    ballparkAmount: 3000,
+    leverage: 2,
+    stopLossAmount: 50
+  });
+
+  const profitHit = evaluateOrderOutcome(order, 530);
+  assert.equal(profitHit.result, 'profit-hit');
+  assert.equal(profitHit.status, 'green');
+
+  const stopLossHit = evaluateOrderOutcome(order, 450);
+  assert.equal(stopLossHit.result, 'loss-hit');
+  assert.equal(stopLossHit.status, 'red');
+});
+
+test('a 5% trailing stop moves up as price rises and triggers when price drops below the trailing level', () => {
+  const order = buildOrderRecord({
+    symbol: 'SPY',
+    name: 'S&P 500 ETF',
+    entryPrice: 117.2,
+    targetProfit: 30,
+    ballparkAmount: 3000,
+    leverage: 2
+  });
+
+  const afterRise = evaluateOrderOutcome(order, 125);
+  assert.equal(afterRise.trailingStopPrice, 118.75);
+  assert.equal(afterRise.status, 'pending');
+
+  const afterDrop = evaluateOrderOutcome({ ...afterRise, trailingStopPrice: afterRise.trailingStopPrice }, 118.7);
+  assert.equal(afterDrop.result, 'loss-hit');
+  assert.equal(afterDrop.status, 'red');
 });

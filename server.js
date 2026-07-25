@@ -118,7 +118,7 @@ const ORDER_MONITOR_INTERVAL_MS = 15 * 60 * 1000;
 const AUTO_ORDER_POLL_MS = 60 * 1000;
 const DEFAULT_STOP_LOSS_USD = 15;
 const DAILY_TARGET_PROFIT = 100;
-const DAILY_MAX_LOSS = 1000;
+const DAILY_MAX_LOSS = 50;
 const MIN_ORDER_PROFIT = 30;
 const AUTO_ORDER_STOP_LOSS = 30;
 
@@ -141,6 +141,10 @@ const AUTO_ORDER_SETTINGS = {
 
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY;
 const FINNHUB_BASE_URL = 'https://finnhub.io/api/v1';
+
+function isMockTradingEnabled() {
+  return false;
+}
 
 function getNewYorkDateKey(date = new Date()) {
   return new Intl.DateTimeFormat('en-US', {
@@ -647,6 +651,7 @@ function buildOrderRecord(body) {
   const targetProfit = Number(body.targetProfit || 0);
   const entryPrice = Number(body.entryPrice || 0);
   const leverage = Number(body.leverage || 2);
+  const trailingStopPct = 5;
 
   const requestedStopLossPct = Number(body.stopLossPct);
   const requestedStopLossAmount = Number(body.stopLossAmount);
@@ -655,29 +660,22 @@ function buildOrderRecord(body) {
     ? requestedStopLossAmount
     : 0;
 
-  if (ballparkAmount > 0) {
-    if (!stopLossAmount && stopLossPct === null) {
-      stopLossAmount = DEFAULT_STOP_LOSS_USD;
-      stopLossPct = Number((stopLossAmount / ballparkAmount * 100).toFixed(2));
-    } else if (!stopLossAmount) {
-      stopLossAmount = Number((ballparkAmount * (stopLossPct / 100)).toFixed(2));
-    } else {
-      stopLossPct = Number((stopLossAmount / ballparkAmount * 100).toFixed(2));
-    }
+  if (!stopLossAmount && stopLossPct === null) {
+    stopLossPct = trailingStopPct;
   }
 
-  stopLossPct = Number(Math.max(0.1, Math.min(10.0, stopLossPct || 0)).toFixed(2));
-  if (ballparkAmount > 0) {
-    stopLossAmount = Number((ballparkAmount * (stopLossPct / 100)).toFixed(2));
+  stopLossPct = Number(Math.max(0.1, Math.min(10.0, stopLossPct || trailingStopPct)).toFixed(2));
+  if (entryPrice > 0) {
+    stopLossAmount = Number((entryPrice * (stopLossPct / 100)).toFixed(2));
   }
 
   if (!stopLossAmount) {
-    stopLossAmount = DEFAULT_STOP_LOSS_USD;
+    stopLossAmount = Number((entryPrice * (trailingStopPct / 100)).toFixed(2));
   }
 
   const targetMovePct = ballparkAmount > 0 ? (targetProfit / ballparkAmount) * 100 : 0;
   const stopLossMovePct = stopLossPct;
-  const stopLossPrice = entryPrice > 0 ? Number((entryPrice * (1 - stopLossPct / 100)).toFixed(4)) : 0;
+  const initialTrailingStopPrice = entryPrice > 0 ? Number((entryPrice * (1 - stopLossPct / 100)).toFixed(4)) : 0;
   const targetPrice = entryPrice > 0 ? Number((entryPrice * (1 + targetMovePct / 100)).toFixed(4)) : 0;
 
   return {
@@ -692,7 +690,9 @@ function buildOrderRecord(body) {
     stopLossAmount,
     stopLossPct,
     stopLossMovePct,
-    stopLossPrice,
+    stopLossPrice: initialTrailingStopPrice,
+    trailingStopPrice: initialTrailingStopPrice,
+    highWaterMark: entryPrice,
     targetMovePct,
     targetPrice,
     status: 'pending',
@@ -702,6 +702,45 @@ function buildOrderRecord(body) {
     settledAt: null,
     timeToHitMs: null,
     currentMovePct: 0
+  };
+}
+
+function evaluateOrderOutcome(order, currentPrice) {
+  const entryPrice = Number(order.entryPrice || 0);
+  const targetProfit = Number(order.targetProfit || 0);
+  const leverage = Number(order.leverage || 1);
+  const trailingStopPct = 5;
+
+  if (!entryPrice || !Number.isFinite(entryPrice) || !Number.isFinite(currentPrice)) {
+    return {
+      ...order,
+      currentPrice,
+      currentMovePct: 0,
+      status: order.status,
+      result: null
+    };
+  }
+
+  const currentMovePct = ((currentPrice - entryPrice) / entryPrice) * 100;
+  const targetPrice = entryPrice + targetProfit / leverage;
+  const previousHighWaterMark = Number(order.highWaterMark || entryPrice);
+  const currentHighWaterMark = Math.max(previousHighWaterMark, currentPrice);
+  const currentTrailingStopPrice = currentHighWaterMark * (1 - trailingStopPct / 100);
+
+  const stopWasHit = currentPrice <= currentTrailingStopPrice;
+  const targetWasHit = currentPrice >= targetPrice;
+
+  return {
+    ...order,
+    currentPrice,
+    currentMovePct,
+    highWaterMark: currentHighWaterMark,
+    trailingStopPrice: currentTrailingStopPrice,
+    stopLossPrice: currentTrailingStopPrice,
+    status: targetWasHit ? 'green' : stopWasHit ? 'red' : order.status,
+    result: targetWasHit ? 'profit-hit' : stopWasHit ? 'loss-hit' : null,
+    settledAt: targetWasHit || stopWasHit ? Date.now() : null,
+    timeToHitMs: targetWasHit || stopWasHit ? Date.now() - order.createdAt : null
   };
 }
 
@@ -745,12 +784,16 @@ function isAfterMarketClose() {
   }).formatToParts(now);
 
   const weekday = nyParts.find((part) => part.type === 'weekday')?.value;
+  if (['Sat', 'Sun'].includes(weekday)) {
+    return true;
+  }
+
   const hour = Number(nyParts.find((part) => part.type === 'hour')?.value || 0);
   const minute = Number(nyParts.find((part) => part.type === 'minute')?.value || 0);
   const totalMinutes = hour * 60 + minute;
   const marketClose = 16 * 60;
 
-  return !['Sat', 'Sun'].includes(weekday) && totalMinutes >= marketClose;
+  return totalMinutes >= marketClose;
 }
 
 async function settlePendingOrders() {
@@ -771,6 +814,7 @@ async function settlePendingOrders() {
   }
 
   const now = Date.now();
+  const forceClose = isAfterMarketClose();
 
   pendingOrders.forEach((order) => {
     if (order.status !== 'pending') {
@@ -783,20 +827,19 @@ async function settlePendingOrders() {
     }
 
     const currentPrice = Number(matching.currentPrice || order.entryPrice);
-    const currentMovePct = order.entryPrice
-      ? ((currentPrice - order.entryPrice) / order.entryPrice) * 100
-      : 0;
+    const outcome = evaluateOrderOutcome(order, currentPrice);
 
-    order.currentPrice = currentPrice;
-    order.currentMovePct = currentMovePct;
+    order.currentPrice = outcome.currentPrice;
+    order.currentMovePct = outcome.currentMovePct;
     order.updatedAt = now;
+    order.status = outcome.status;
+    order.result = outcome.result;
+    order.settledAt = outcome.settledAt;
+    order.timeToHitMs = outcome.timeToHitMs;
 
-    const stopWasHit = currentMovePct <= -order.stopLossMovePct;
-    const targetWasHit = currentMovePct >= order.targetMovePct;
-
-    if (stopWasHit || targetWasHit) {
-      order.status = targetWasHit ? 'green' : 'red';
-      order.result = targetWasHit ? 'profit-hit' : 'loss-hit';
+    if (order.status === 'pending' && forceClose) {
+      order.status = order.currentMovePct >= 0 ? 'green' : 'red';
+      order.result = 'day-close';
       order.settledAt = now;
       order.timeToHitMs = now - order.createdAt;
     }
@@ -832,31 +875,42 @@ async function forceClosePendingOrders() {
     }
 
     const currentPrice = Number(matching.currentPrice || order.entryPrice);
-    const currentMovePct = order.entryPrice
-      ? ((currentPrice - order.entryPrice) / order.entryPrice) * 100
-      : 0;
+    const outcome = evaluateOrderOutcome(order, currentPrice);
 
-    order.currentPrice = currentPrice;
-    order.currentMovePct = currentMovePct;
+    order.currentPrice = outcome.currentPrice;
+    order.currentMovePct = outcome.currentMovePct;
     order.updatedAt = now;
-    order.status = currentMovePct >= 0 ? 'green' : 'red';
-    order.result = 'day-close';
+    order.status = outcome.status === 'pending' ? (currentPrice >= order.entryPrice ? 'green' : 'red') : outcome.status;
+    order.result = outcome.result || 'day-close';
     order.settledAt = now;
     order.timeToHitMs = now - order.createdAt;
   });
 }
 
-const orderStatusInterval = setInterval(() => {
-  refreshBackendScheduling().catch(() => {
-    // Confirm order status regularly and keep scheduler active.
-  });
-}, ORDER_MONITOR_INTERVAL_MS);
+let orderStatusInterval = null;
+let autoOrderInterval = null;
 
-const autoOrderInterval = setInterval(() => {
-  refreshBackendScheduling().catch(() => {
-    // Keep the auto-order scheduler running.
-  });
-}, AUTO_ORDER_POLL_MS);
+function startBackendScheduling() {
+  if (orderStatusInterval || autoOrderInterval) {
+    return;
+  }
+
+  orderStatusInterval = setInterval(() => {
+    refreshBackendScheduling().catch(() => {
+      // Confirm order status regularly and keep scheduler active.
+    });
+  }, ORDER_MONITOR_INTERVAL_MS);
+
+  autoOrderInterval = setInterval(() => {
+    refreshBackendScheduling().catch(() => {
+      // Keep the auto-order scheduler running.
+    });
+  }, AUTO_ORDER_POLL_MS);
+
+  settlePendingOrders().catch(() => {});
+  refreshAutoOrders().catch(() => {});
+  refreshBackendScheduling().catch(() => {});
+}
 
 function shouldKeepScheduling(todayKey) {
   const isSameDay = autoOrderState.dateKey === todayKey;
@@ -875,9 +929,9 @@ async function refreshBackendScheduling() {
   }
 }
 
-settlePendingOrders().catch(() => {});
-refreshAutoOrders().catch(() => {});
-refreshBackendScheduling().catch(() => {});
+if (require.main === module) {
+  startBackendScheduling();
+}
 
 function extractText(xml, tag) {
   const regex = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`, 'i');
@@ -923,6 +977,41 @@ function isNasdaqMarketOpen() {
   return totalMinutes >= marketOpen && totalMinutes < marketClose;
 }
 
+function getServerSessionStatus() {
+  const open = isNasdaqMarketOpen();
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
+  const nyParts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23',
+    weekday: 'short'
+  }).formatToParts(now);
+
+  const weekday = nyParts.find((part) => part.type === 'weekday')?.value;
+  const hour = Number(nyParts.find((part) => part.type === 'hour')?.value || 0);
+  const minute = Number(nyParts.find((part) => part.type === 'minute')?.value || 0);
+  const totalMinutes = hour * 60 + minute;
+  const marketOpen = 9 * 60 + 30;
+  const marketClose = 16 * 60;
+
+  let remainingMinutes = 0;
+  if (['Sat', 'Sun'].includes(weekday)) {
+    remainingMinutes = (24 * 60 - totalMinutes) + marketOpen;
+  } else if (open) {
+    remainingMinutes = marketClose - totalMinutes;
+  } else {
+    remainingMinutes = totalMinutes < marketOpen ? marketOpen - totalMinutes : (24 * 60 - totalMinutes) + marketOpen;
+  }
+
+  return {
+    open,
+    state: open ? 'open' : 'closed',
+    remainingMinutes,
+    serverTime: now.toISOString()
+  };
+}
+
 app.get('/api/market', async (req, res) => {
   try {
     const market = await loadMarketSnapshot();
@@ -930,6 +1019,10 @@ app.get('/api/market', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message || 'Unable to load market data' });
   }
+});
+
+app.get('/api/session', (req, res) => {
+  res.json(getServerSessionStatus());
 });
 
 app.get('/api/news', async (req, res) => {
@@ -1045,6 +1138,15 @@ app.post('/api/orders/refresh', async (req, res) => {
   }
 });
 
+app.post('/api/orders/clear', async (req, res) => {
+  try {
+    pendingOrders.length = 0;
+    res.json({ ok: true, orders: [] });
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Unable to clear orders' });
+  }
+});
+
 app.get('/api/predict', async (req, res) => {
   try {
     const { minProfit, ballpark } = req.query;
@@ -1107,11 +1209,17 @@ app.get('/api/predict', async (req, res) => {
 });
 
 if (require.main === module) {
+  console.log('Live trading mode enabled');
   app.listen(PORT, () => {
     console.log(`Stock game server listening on http://localhost:${PORT}`);
   });
 }
 
 module.exports = {
-  buildLiveSignal
+  buildLiveSignal,
+  buildOrderRecord,
+  evaluateOrderOutcome,
+  pendingOrders,
+  canPlaceAutoOrder,
+  getTodayRealizedPnl
 };

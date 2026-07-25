@@ -7,7 +7,9 @@
     "start": "node server.js",
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
-    "test:report": "npx playwright show-report"
+    "test:report": "npx playwright show-report",
+    "test:mock": "npx playwright test tests/regression.spec.js --grep 'Live trading regression suite'",
+    "test:live": "npx playwright test tests/regression.spec.js --grep 'Live trading regression suite'"
   },
   "dependencies": {
     "express": "^4.19.2"

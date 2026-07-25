@@ -2,7 +2,6 @@ const LOCAL_HISTORY_KEY = 'stockgame-history';
 
 const minProfitInput = document.getElementById('minProfit');
 const ballparkInput = document.getElementById('ballpark');
-const saveResultsCheckbox = document.getElementById('saveResults');
 const searchButton = document.getElementById('searchButton');
 const resultsArea = document.getElementById('resultsArea');
 const statusMessage = document.getElementById('statusMessage');
@@ -24,7 +23,7 @@ function showSelectionModal(option, order) {
 
   const symbolName = option?.name || selectedPredictionSymbol || 'your selected option';
   const stopLossMessage = order
-    ? `Your order is placed at $${order.entryPrice.toFixed(2)} with a leverage stop loss target of $${order.stopLossAmount.toFixed(2)} (${order.stopLossPct.toFixed(2)}%). `
+    ? `Your order is placed at $${order.entryPrice.toFixed(2)} with a 5% trailing stop loss at $${(order.trailingStopPrice || order.stopLossPrice || order.entryPrice * 0.95).toFixed(2)}. `
     : '';
 
   selectionModalText.textContent = `You picked ${symbolName} for today. ${stopLossMessage}The position is pending in History until the profit target or stop loss condition is met.`;
@@ -49,10 +48,34 @@ function loadHistory() {
   }
 }
 
-function calculateDailyBalance() {
+async function getLiveOrderPnl() {
+  try {
+    const response = await fetch('/api/orders');
+    const payload = await response.json();
+    const orders = Array.isArray(payload.orders) ? payload.orders : [];
+
+    return orders.reduce((sum, order) => {
+      if (order.status === 'pending') {
+        return sum;
+      }
+
+      const entryPrice = Number(order.entryPrice || 0);
+      const currentPrice = Number(order.currentPrice || entryPrice);
+      const leverage = Number(order.leverage || 1);
+      const ballparkAmount = Number(order.ballparkAmount || 0);
+      const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;
+      const profitLoss = Number(((currentPrice - entryPrice) * shareCount).toFixed(2));
+      return sum + profitLoss;
+    }, 0);
+  } catch {
+    return 0;
+  }
+}
+
+async function calculateDailyBalance() {
   const history = loadHistory();
   const entries = Array.isArray(history.entries) ? history.entries : [];
-  const realized = entries.reduce((sum, entry) => {
+  const localRealized = entries.reduce((sum, entry) => {
     if (entry.status !== 'pending') {
       const profit = Number(entry.minProfit || 0);
       const loss = Number(entry.stopLossAmount || 15);
@@ -60,7 +83,8 @@ function calculateDailyBalance() {
     }
     return sum;
   }, 0);
-  return STARTING_DAILY_BALANCE + realized;
+  const livePnl = await getLiveOrderPnl();
+  return STARTING_DAILY_BALANCE + localRealized + livePnl;
 }
 
 const currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -70,21 +94,21 @@ const currencyFormatter = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 2
 });
 
-function updateDailyBalance() {
+async function updateDailyBalance() {
   if (!dailyBalanceLabel) {
     return;
   }
-  const balance = calculateDailyBalance();
+  const balance = await calculateDailyBalance();
   dailyBalanceLabel.textContent = currencyFormatter.format(balance);
 }
 
-function updateDailyPnl() {
+async function updateDailyPnl() {
   if (!dailyPnlLabel) {
     return;
   }
   const history = loadHistory();
   const entries = Array.isArray(history.entries) ? history.entries : [];
-  const pnl = entries.reduce((sum, entry) => {
+  const localPnl = entries.reduce((sum, entry) => {
     if (entry.status !== 'pending') {
       const profit = Number(entry.minProfit || 0);
       const loss = Number(entry.stopLossAmount || 15);
@@ -92,7 +116,8 @@ function updateDailyPnl() {
     }
     return sum;
   }, 0);
-  dailyPnlLabel.textContent = currencyFormatter.format(pnl);
+  const livePnl = await getLiveOrderPnl();
+  dailyPnlLabel.textContent = currencyFormatter.format(localPnl + livePnl);
 }
 
 function getNasdaqSessionStatus() {
@@ -138,10 +163,18 @@ function formatCountdown(minutes) {
   return `${hours}h ${mins}m`;
 }
 
-function updateSessionBadge() {
-  const session = getNasdaqSessionStatus();
-  const isOpen = session.state === 'open';
+async function updateSessionBadge() {
+  let session;
 
+  try {
+    const response = await fetch('/api/session');
+    const payload = await response.json();
+    session = payload;
+  } catch {
+    session = getNasdaqSessionStatus();
+  }
+
+  const isOpen = session.state === 'open';
   sessionBadge.textContent = isOpen
     ? 'NASDAQ session: open now'
     : 'NASDAQ session: closed now';
@@ -169,6 +202,11 @@ function persistHistory(entry) {
   updateDailyPnl();
 }
 
+window.addEventListener('orders-cleared', () => {
+  updateDailyBalance();
+  updateDailyPnl();
+});
+
 async function createPendingOrder(option) {
   const minProfit = Number(minProfitInput.value || 0);
   const ballpark = Number(ballparkInput.value || 0);
@@ -190,7 +228,7 @@ async function createPendingOrder(option) {
         targetProfit: minProfit,
         ballparkAmount: ballpark,
         leverage: 2,
-        stopLossAmount: 15
+        stopLossPct: 5
       })
     });
 
@@ -216,7 +254,14 @@ async function searchPrediction() {
     return;
   }
 
-  const session = getNasdaqSessionStatus();
+  let session;
+  try {
+    const response = await fetch('/api/session');
+    session = await response.json();
+  } catch {
+    session = getNasdaqSessionStatus();
+  }
+
   if (session.state !== 'open') {
     updateStatus('NASDAQ is not open right now. Please try again during market hours.');
     resultsArea.innerHTML = '<div class="option-card">NASDAQ is currently closed. Use the scan button only during open hours.</div>';
@@ -269,33 +314,6 @@ async function searchPrediction() {
       ? 'Live options are available. You may place an order on a viable pick.'
       : 'No viable live picks right now. Use the top watch candidates and re-scan for updated movement.');
 
-      if (saveResultsCheckbox.checked) {
-      if (!latestPredictionOptions.length) {
-        updateStatus('No valid result to save. Please run a successful scan with qualifying live options.');
-        return;
-      }
-
-      const today = new Date().toISOString();
-      const chosen = latestPredictionOptions.find((item) => item.symbol === selectedPredictionSymbol) || latestPredictionOptions[0];
-      const estimatedProfit = Number(chosen?.estimatedProfit || 0);
-      const nextEntry = {
-        date: today,
-        symbol: chosen?.symbol || 'N/A',
-        name: chosen?.name || 'N/A',
-        minProfit,
-        ballpark,
-        status: 'pending',
-        correct: null,
-        input: payload.inputs,
-        estimatedProfit,
-        stopLossAmount: 15,
-        targetMovePct: ballpark > 0 ? (minProfit / ballpark) * 100 : 0
-      };
-
-      persistHistory(nextEntry);
-      updateDailyPnl();
-      updateStatus(`Saved the result snapshot to local storage as a pending order. It will be settled when the profit target or $15 stop-loss is reached.`);
-    }
   } catch (error) {
     updateStatus(error.message || 'Unable to complete live prediction.');
     resultsArea.innerHTML = 'The live service is unavailable right now. Please try again in a moment.';
@@ -327,7 +345,7 @@ if (resultsArea) {
       return;
     }
 
-    updateStatus(`Order placed at $${order.entryPrice.toFixed(2)} with stop loss set at $${order.stopLossAmount.toFixed(2)}.`);
+    updateStatus(`Order placed at $${order.entryPrice.toFixed(2)} with a 5% trailing stop loss.`);
     showSelectionModal(option, order);
   });
 }
@@ -351,4 +369,8 @@ if (searchButton) {
 updateSessionBadge();
 updateDailyBalance();
 updateDailyPnl();
-setInterval(updateSessionBadge, 60000);
+setInterval(() => {
+  updateSessionBadge();
+  updateDailyBalance();
+  updateDailyPnl();
+}, 60000);

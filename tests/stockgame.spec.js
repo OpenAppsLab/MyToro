@@ -50,6 +50,45 @@ test.describe.parallel('StockGame application', () => {
     await expect(page.locator('.history-order-card')).toContainText('AAPL');
   });
 
+  test('history page shows pending orders and opens order detail cards', async ({ page, request }) => {
+    const today = new Date();
+    const todayKey = formatDateKey(today);
+
+    await request.post('/api/orders', {
+      data: {
+        symbol: 'NVDA',
+        name: 'NVIDIA',
+        entryPrice: 120,
+        targetProfit: 40,
+        ballparkAmount: 3000,
+        leverage: 2,
+        stopLossAmount: 15
+      }
+    });
+
+    await request.post('/api/orders', {
+      data: {
+        symbol: 'AMD',
+        name: 'Advanced Micro Devices',
+        entryPrice: 180,
+        targetProfit: 30,
+        ballparkAmount: 2500,
+        leverage: 2,
+        stopLossAmount: 20
+      }
+    });
+
+    await page.goto('/history.html');
+
+    const tile = page.locator(`[data-date="${todayKey}"]`);
+    await expect(tile).toContainText(/order/i);
+    await tile.click();
+
+    await expect(page.locator('#historyModal')).toBeVisible();
+    await expect(page.locator('.history-order-card').filter({ hasText: 'NVDA' }).first()).toBeVisible();
+    await expect(page.locator('.history-order-card').filter({ hasText: 'AMD' }).first()).toBeVisible();
+  });
+
   test('history refresh button is disabled when no pending backend orders exist', async ({ page }) => {
     await page.goto('/history.html');
     await expect(page.locator('#refreshPendingButton')).toBeDisabled();

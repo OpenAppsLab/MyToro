@@ -24,10 +24,24 @@ function saveHistory(entries) {
   localStorage.setItem(LOCAL_HISTORY_KEY, JSON.stringify({ entries: entries.slice(-60) }));
 }
 
+function getNewYorkDateParts(value = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).formatToParts(new Date(value));
+
+  return {
+    year: parts.find((part) => part.type === 'year')?.value,
+    month: parts.find((part) => part.type === 'month')?.value,
+    day: parts.find((part) => part.type === 'day')?.value
+  };
+}
+
 function toDateKey(value) {
-  const date = new Date(value);
-  date.setHours(0, 0, 0, 0);
-  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+  const { year, month, day } = getNewYorkDateParts(value);
+  return `${year}-${month}-${day}`;
 }
 
 function formatDisplayDate(value) {
@@ -36,14 +50,15 @@ function formatDisplayDate(value) {
     weekday: 'short',
     month: 'short',
     day: 'numeric',
-    year: 'numeric'
+    year: 'numeric',
+    timeZone: 'America/New_York'
   });
 }
 
 function isWeekend(dateKey) {
   const [year, month, day] = dateKey.split('-').map(Number);
-  const date = new Date(year, month - 1, day);
-  const weekday = date.getDay();
+  const date = new Date(Date.UTC(year, month - 1, day, 12));
+  const weekday = date.getUTCDay();
   return weekday === 0 || weekday === 6;
 }
 
@@ -130,44 +145,102 @@ function buildHistoryGroups(entries, orders) {
 }
 
 function buildDateTiles(groups) {
-  const today = new Date();
-  const monthAgo = new Date(today);
-  monthAgo.setDate(today.getDate() - 30);
+  const { year: currentYear, month: currentMonth } = getNewYorkDateParts();
+  const year = Number(currentYear);
+  const month = Number(currentMonth) - 1;
+  const firstDayOfMonth = new Date(Date.UTC(year, month, 1));
+  const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+  const firstWeekday = (firstDayOfMonth.getUTCDay() + 6) % 7;
+  const totalCells = Math.ceil((firstWeekday + daysInMonth) / 7) * 7;
 
-  const tiles = [];
-  for (let cursor = new Date(monthAgo); cursor <= today; cursor.setDate(cursor.getDate() + 1)) {
-    const dateKey = toDateKey(cursor);
+  const headerLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const headerMarkup = headerLabels.map((label) => `<div class="calendar-header-cell">${label}</div>`).join('');
+  const cells = [];
+
+  for (let index = 0; index < totalCells; index += 1) {
+    const cellDate = new Date(Date.UTC(year, month, index - firstWeekday + 1));
+    const cellParts = getNewYorkDateParts(cellDate);
+    const cellYear = Number(cellParts.year);
+    const cellMonth = Number(cellParts.month) - 1;
+    const isCurrentMonth = cellYear === year && cellMonth === month;
+    const dateKey = toDateKey(cellDate);
     const group = groups[dateKey];
     const { className, label } = group ? getGroupStatus(group) : isWeekend(dateKey) ? { className: 'blue', label: 'Closed' } : { className: 'grey', label: 'No data' };
-    const displayDate = formatDisplayDate(dateKey);
 
-    tiles.push(`
-      <div class="day-cell ${className} clickable" data-date="${dateKey}">
-        <strong>${displayDate}</strong>
-        <br/>
-        <small>${label}</small>
+    const dayNumber = Number(cellParts.day);
+    const isMuted = !isCurrentMonth;
+    const cellClassName = [
+      'day-cell',
+      className,
+      isMuted ? 'muted' : '',
+      isCurrentMonth ? 'clickable' : ''
+    ].filter(Boolean).join(' ');
+
+    cells.push(`
+      <div class="${cellClassName}" data-date="${dateKey}" ${isCurrentMonth ? '' : 'aria-hidden="true"'}>
+        <strong>${dayNumber}</strong>
+        <small>${isCurrentMonth ? label : ' '}</small>
       </div>
     `);
   }
 
-  return tiles;
+  return [`<div class="calendar-header">${headerMarkup}</div>`, `<div class="calendar-grid">${cells.join('')}</div>`];
 }
 
-function renderOrderDetailCard(entry) {
-  const statusText = entry.status === 'pending' ? 'Pending' : entry.correct ? 'Profit' : 'Loss';
-  const outcomeText = entry.status === 'pending'
-    ? 'Waiting for stop loss or profit target to resolve.'
-    : entry.correct
-      ? `Realized profit $${Number(entry.minProfit || 0).toFixed(2)}.`
-      : `Realized loss $${Number(entry.stopLossAmount || 15).toFixed(2)}.`;
+function formatCurrency(amount) {
+  return `$${Number(amount || 0).toFixed(2)}`;
+}
+
+function clearAllSavedData() {
+  const confirmed = window.confirm('Are you sure you want to wipe out all the order details?');
+  if (!confirmed) {
+    return;
+  }
+
+  saveHistory([]);
+  window.historyOrders = [];
+  window.dispatchEvent(new CustomEvent('orders-cleared'));
+
+  fetch('/api/orders/clear', { method: 'POST' }).catch(() => {});
+  renderHistoryFull();
+}
+
+function renderOrderDetailCard(order) {
+  const entryPrice = Number(order.entryPrice || 0);
+  const currentPrice = Number(order.currentPrice || entryPrice);
+  const ballparkAmount = Number(order.ballparkAmount || order.ballpark || 0);
+  const leverage = Number(order.leverage || 1);
+  const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;
+  const totalBuyPrice = shareCount * entryPrice;
+  const totalSoldPrice = shareCount * currentPrice;
+  const profitLoss = Number(((currentPrice - entryPrice) * shareCount).toFixed(2));
+  const trailingStopPrice = Number(order.trailingStopPrice || order.stopLossPrice || 0);
+  const isProfitable = Number(currentPrice) >= Number(entryPrice);
+  const statusText = order.status === 'pending'
+    ? 'In progress'
+    : order.status === 'green' || order.correct || isProfitable
+      ? 'Profit'
+      : 'Loss';
+
+  const resultText = order.status === 'pending'
+    ? 'Position remains open. It will close when the profit target or stop loss condition is hit.'
+    : statusText === 'Profit'
+      ? `Realized profit ${formatCurrency(profitLoss)}.`
+      : `Realized loss ${formatCurrency(Math.abs(profitLoss))}.`;
 
   return `
     <div class="history-order-card">
-      <strong>${entry.symbol} - ${statusText}</strong>
-      <small>Target profit: $${Number(entry.minProfit || 0).toFixed(2)}</small>
-      <small>Ballpark: $${Number(entry.ballpark || 0).toFixed(2)}</small>
-      <small>Stop loss: $${Number(entry.stopLossAmount || 15).toFixed(2)} (${Number(entry.stopLossPct || 0).toFixed(2)}%)</small>
-      <small>${outcomeText}</small>
+      <strong>${order.symbol || 'Unknown'} - ${statusText}</strong>
+      <small>Entry price: ${formatCurrency(entryPrice)}</small>
+      <small>Current / exit price: ${formatCurrency(currentPrice)}</small>
+      <small>Shares: ${shareCount}</small>
+      <small>Leverage: ${leverage}x</small>
+      <small>Total buy price: ${formatCurrency(totalBuyPrice)}</small>
+      <small>Total sold price: ${formatCurrency(totalSoldPrice)}</small>
+      <small>Profit / Loss: ${formatCurrency(profitLoss)}</small>
+      <small>Trailing stop: ${formatCurrency(trailingStopPrice)} (${Number(order.stopLossPct || 0).toFixed(2)}%)</small>
+      <small>Target profit: ${formatCurrency(Number(order.targetProfit || 0))}</small>
+      <small>${resultText}</small>
     </div>
   `;
 }
@@ -179,17 +252,25 @@ function openHistoryModal(dateKey) {
     .filter((entry) => toDateKey(entry.date) === dateKey)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
+  const orders = window.historyOrders || [];
+  const selectedOrders = orders
+    .filter((order) => toDateKey(order.createdAt || order.date || order.createdAt) === dateKey)
+    .sort((a, b) => Number(b.createdAt || b.date || 0) - Number(a.createdAt || a.date || 0));
+
   historyModalDate.textContent = formatDisplayDate(dateKey);
 
-  if (!selectedEntries.length) {
+  if (!selectedEntries.length && !selectedOrders.length) {
     historyModalContent.innerHTML = `
       <div class="history-order-card">
         <strong>No saved history for this day.</strong>
-        <small>Place orders on the Home page and save snapshots to build a daily performance record.</small>
+        <small>Place orders on the Home page and live orders will appear here once they are created.</small>
       </div>
     `;
   } else {
-    historyModalContent.innerHTML = selectedEntries.map(renderOrderDetailCard).join('');
+    historyModalContent.innerHTML = [
+      ...selectedOrders.map(renderOrderDetailCard),
+      ...selectedEntries.map(renderOrderDetailCard)
+    ].join('');
   }
 
   historyModal.classList.remove('hidden');
@@ -223,6 +304,8 @@ function attachDateClickHandlers() {
 async function renderHistoryFull() {
   const history = loadHistory();
   const entries = Array.isArray(history.entries) ? history.entries : [];
+  const orders = await loadPendingOrders();
+  window.historyOrders = orders; // store fetched orders for modal use
   const wins = entries.filter((entry) => entry.correct === true).length;
   const losses = entries.filter((entry) => entry.correct === false).length;
   const balance = entries.reduce((sum, entry) => {
@@ -245,7 +328,6 @@ async function renderHistoryFull() {
     historyBalanceLabel.textContent = `$${balance.toFixed(2)}`;
   }
 
-  const orders = await loadPendingOrders();
   updateRefreshButton(orders);
   const groups = buildHistoryGroups(entries, orders);
   const tiles = buildDateTiles(groups);
@@ -257,10 +339,7 @@ async function renderHistoryFull() {
 }
 
 if (clearButton) {
-  clearButton.addEventListener('click', () => {
-    saveHistory([]);
-    renderHistoryFull();
-  });
+  clearButton.addEventListener('click', clearAllSavedData);
 }
 
 if (refreshButton) {

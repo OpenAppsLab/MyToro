@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:48.267Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GS?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "GS",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 925824600,
+      "regularMarketTime": 1785182402,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 1048.23,
+      "fiftyTwoWeekHigh": 1153.99,
+      "fiftyTwoWeekLow": 694.05,
+      "regularMarketDayHigh": 1088.44,
+      "regularMarketDayLow": 1029,
+      "regularMarketVolume": 1979832,
+      "longName": "The Goldman Sachs Group, Inc.",
+      "shortName": "Goldman Sachs Group, Inc. (The)",
+      "chartPreviousClose": 1055.03,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785225600,
+          "end": 1785245400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785245400,
+          "end": 1785268800,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785268800,
+          "end": 1785283200,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            1088.47998046875,
+            1106.6600341796875,
+            1084.72998046875,
+            1077.3800048828125,
+            1088.5
+          ],
+          "close": [
+            1085.56005859375,
+            1098.199951171875,
+            1074.719970703125,
+            1061.22998046875,
+            1048.22998046875
+          ],
+          "open": [
+            1070.0699462890625,
+            1078.52001953125,
+            1072.52001953125,
+            1075,
+            1080.1800537109375
+          ],
+          "low": [
+            1063,
+            1078,
+            1062.47998046875,
+            1051.8199462890625,
+            1029
+          ],
+          "volume": [
+            1718600,
+            1538700,
+            1852700,
+            1381400,
+            2538900
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            1085.56005859375,
+            1098.199951171875,
+            1074.719970703125,
+            1061.22998046875,
+            1048.22998046875
+          ]
+        }
+      ]
+    }
+  }
+}

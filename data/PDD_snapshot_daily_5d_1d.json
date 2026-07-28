@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:39.093Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PDD?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "PDD",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1532611800,
+      "regularMarketTime": 1785182400,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 84.85,
+      "fiftyTwoWeekHigh": 139.41,
+      "fiftyTwoWeekLow": 71.94,
+      "regularMarketDayHigh": 85.75,
+      "regularMarketDayLow": 83.231,
+      "regularMarketVolume": 5945046,
+      "longName": "PDD Holdings Inc.",
+      "shortName": "PDD Holdings Inc.",
+      "chartPreviousClose": 86.05,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785225600,
+          "end": 1785245400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785245400,
+          "end": 1785268800,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785268800,
+          "end": 1785283200,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            86.30000305175781,
+            84.66000366210938,
+            83.88999938964844,
+            83.0999984741211,
+            85.75
+          ],
+          "volume": [
+            4735900,
+            4356300,
+            4537500,
+            4950000,
+            6160800
+          ],
+          "open": [
+            85.97000122070312,
+            84.12999725341797,
+            83.25,
+            83.05999755859375,
+            84.19999694824219
+          ],
+          "close": [
+            84.83000183105469,
+            83.58999633789062,
+            83.30000305175781,
+            82.66000366210938,
+            84.8499984741211
+          ],
+          "low": [
+            84.55999755859375,
+            83.02999877929688,
+            82.05999755859375,
+            82.05999755859375,
+            83.2300033569336
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            84.83000183105469,
+            83.58999633789062,
+            83.30000305175781,
+            82.66000366210938,
+            84.8499984741211
+          ]
+        }
+      ]
+    }
+  }
+}

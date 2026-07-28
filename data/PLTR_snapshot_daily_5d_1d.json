@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:35.508Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PLTR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "PLTR",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1601472600,
+      "regularMarketTime": 1785182401,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 131.53,
+      "fiftyTwoWeekHigh": 207.52,
+      "fiftyTwoWeekLow": 106.37,
+      "regularMarketDayHigh": 132.41,
+      "regularMarketDayLow": 125.32,
+      "regularMarketVolume": 36483907,
+      "longName": "Palantir Technologies Inc.",
+      "shortName": "Palantir Technologies Inc.",
+      "chartPreviousClose": 134.85,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785245400,
+          "start": 1785225600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785268800,
+          "start": 1785245400,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785283200,
+          "start": 1785268800,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            23161800,
+            38588300,
+            29757900,
+            21177000,
+            36601900
+          ],
+          "close": [
+            132.66000366210938,
+            124.56999969482422,
+            123.37000274658203,
+            122.91999816894531,
+            131.52999877929688
+          ],
+          "open": [
+            133.8300018310547,
+            132.22000122070312,
+            125.93499755859375,
+            125.16500091552734,
+            126.15499877929688
+          ],
+          "high": [
+            134.67999267578125,
+            132.34500122070312,
+            126.4000015258789,
+            125.30999755859375,
+            132.41000366210938
+          ],
+          "low": [
+            131.22500610351562,
+            123.44999694824219,
+            120.7300033569336,
+            122.0199966430664,
+            125.30999755859375
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            132.66000366210938,
+            124.56999969482422,
+            123.37000274658203,
+            122.91999816894531,
+            131.52999877929688
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "fetchedAt": "2026-07-28T09:58:43.636Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARM?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ARM",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1694698200,
+      "regularMarketTime": 1785182401,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 266.33,
+      "fiftyTwoWeekHigh": 452.7,
+      "fiftyTwoWeekLow": 100.02,
+      "regularMarketDayHigh": 268.2,
+      "regularMarketDayLow": 251.61,
+      "regularMarketVolume": 5029636,
+      "longName": "Arm Holdings plc",
+      "shortName": "Arm Holdings plc",
+      "chartPreviousClose": 269.61,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785225600,
+          "end": 1785245400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785245400,
+          "end": 1785268800,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785268800,
+          "end": 1785283200,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            289.7300109863281,
+            283.3999938964844,
+            283.0400085449219,
+            260.010009765625,
+            266.3299865722656
+          ],
+          "volume": [
+            5135800,
+            2601700,
+            3603200,
+            4884800,
+            5034000
+          ],
+          "open": [
+            285.4700012207031,
+            280.4800109863281,
+            275.4700012207031,
+            282.7699890136719,
+            263.4800109863281
+          ],
+          "high": [
+            294,
+            288.44000244140625,
+            284,
+            288.989990234375,
+            268.20001220703125
+          ],
+          "low": [
+            274.5,
+            279.5010070800781,
+            274.7699890136719,
+            258.42999267578125,
+            251.61000061035156
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            289.7300109863281,
+            283.3999938964844,
+            283.0400085449219,
+            260.010009765625,
+            266.3299865722656
+          ]
+        }
+      ]
+    }
+  }
+}

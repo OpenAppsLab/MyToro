@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:43.013Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "SNOW",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1600263000,
+      "regularMarketTime": 1785182403,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 272.92,
+      "fiftyTwoWeekHigh": 284.99,
+      "fiftyTwoWeekLow": 118.3,
+      "regularMarketDayHigh": 278.43,
+      "regularMarketDayLow": 265.52,
+      "regularMarketVolume": 3789579,
+      "longName": "Snowflake Inc.",
+      "shortName": "Snowflake Inc.",
+      "chartPreviousClose": 274.34,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785245400,
+          "start": 1785225600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785268800,
+          "start": 1785245400,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785283200,
+          "start": 1785268800,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            3166800,
+            3052100,
+            3114300,
+            3454600,
+            5224100
+          ],
+          "open": [
+            271.6700134277344,
+            269.95001220703125,
+            273.8500061035156,
+            268.8999938964844,
+            275
+          ],
+          "low": [
+            268.9100036621094,
+            260.3399963378906,
+            260.6000061035156,
+            264,
+            265.5199890136719
+          ],
+          "high": [
+            279.489990234375,
+            271,
+            277.5150146484375,
+            270.7900085449219,
+            278.42999267578125
+          ],
+          "close": [
+            271.7300109863281,
+            267.79998779296875,
+            265.1300048828125,
+            268.05999755859375,
+            272.9200134277344
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            271.7300109863281,
+            267.79998779296875,
+            265.1300048828125,
+            268.05999755859375,
+            272.9200134277344
+          ]
+        }
+      ]
+    }
+  }
+}

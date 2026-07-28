@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:41.614Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/UBER?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "UBER",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1557495000,
+      "regularMarketTime": 1785182402,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 68.18,
+      "fiftyTwoWeekHigh": 101.99,
+      "fiftyTwoWeekLow": 65.41,
+      "regularMarketDayHigh": 68.34,
+      "regularMarketDayLow": 65.41,
+      "regularMarketVolume": 22433213,
+      "longName": "Uber Technologies, Inc.",
+      "shortName": "Uber Technologies, Inc.",
+      "chartPreviousClose": 72.17,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785225600,
+          "end": 1785245400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785245400,
+          "end": 1785268800,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785268800,
+          "end": 1785283200,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            71.55000305175781,
+            70.33000183105469,
+            68.91000366210938,
+            65.94000244140625,
+            68.18000030517578
+          ],
+          "low": [
+            71.43000030517578,
+            69.95999908447266,
+            68.3499984741211,
+            65.55999755859375,
+            65.41000366210938
+          ],
+          "high": [
+            72.98999786376953,
+            71.47000122070312,
+            71.08000183105469,
+            70.06999969482422,
+            68.33999633789062
+          ],
+          "open": [
+            72.16999816894531,
+            71.47000122070312,
+            70.16999816894531,
+            69.38999938964844,
+            66.37999725341797
+          ],
+          "volume": [
+            11769000,
+            15001000,
+            23649300,
+            27966300,
+            25704300
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            71.55000305175781,
+            70.33000183105469,
+            68.91000366210938,
+            65.94000244140625,
+            68.18000030517578
+          ]
+        }
+      ]
+    }
+  }
+}

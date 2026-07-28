@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:38.491Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PYPL?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "PYPL",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1436189400,
+      "regularMarketTime": 1785182401,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 56.07,
+      "fiftyTwoWeekHigh": 79.5,
+      "fiftyTwoWeekLow": 38.46,
+      "regularMarketDayHigh": 56.585,
+      "regularMarketDayLow": 55.48,
+      "regularMarketVolume": 13874839,
+      "longName": "PayPal Holdings, Inc.",
+      "shortName": "PayPal Holdings, Inc.",
+      "chartPreviousClose": 56.82,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785225600,
+          "end": 1785245400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785245400,
+          "end": 1785268800,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785268800,
+          "end": 1785283200,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            55.849998474121094,
+            55.5099983215332,
+            56,
+            56.150001525878906,
+            56.06999969482422
+          ],
+          "low": [
+            55,
+            55.23500061035156,
+            54.935001373291016,
+            55.220001220703125,
+            55.47999954223633
+          ],
+          "high": [
+            56.90999984741211,
+            56.380001068115234,
+            56.08000183105469,
+            56.47999954223633,
+            56.584999084472656
+          ],
+          "open": [
+            56.040000915527344,
+            55.97999954223633,
+            55.474998474121094,
+            56.30799865722656,
+            56.36000061035156
+          ],
+          "volume": [
+            15952100,
+            11187000,
+            13945300,
+            11763000,
+            14840200
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            55.849998474121094,
+            55.5099983215332,
+            56,
+            56.150001525878906,
+            56.06999969482422
+          ]
+        }
+      ]
+    }
+  }
+}

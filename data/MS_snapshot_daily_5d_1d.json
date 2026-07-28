@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:48.911Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MS?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "MS",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 730477800,
+      "regularMarketTime": 1785182652,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 214.56,
+      "fiftyTwoWeekHigh": 232.25,
+      "fiftyTwoWeekLow": 136.17,
+      "regularMarketDayHigh": 219.4,
+      "regularMarketDayLow": 210.89,
+      "regularMarketVolume": 3721249,
+      "longName": "Morgan Stanley",
+      "shortName": "Morgan Stanley",
+      "chartPreviousClose": 210.94,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785245400,
+          "start": 1785225600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785268800,
+          "start": 1785245400,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785283200,
+          "start": 1785268800,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            216.39999389648438,
+            218.5,
+            215.17999267578125,
+            214.47999572753906,
+            214.55999755859375
+          ],
+          "low": [
+            212.25,
+            215.52000427246094,
+            213.72000122070312,
+            211.2100067138672,
+            210.88999938964844
+          ],
+          "volume": [
+            6999500,
+            3683200,
+            4962100,
+            4091300,
+            4958100
+          ],
+          "open": [
+            213.66000366210938,
+            215.52000427246094,
+            214.88999938964844,
+            216.39999389648438,
+            218.02000427246094
+          ],
+          "high": [
+            217.39999389648438,
+            219.6300048828125,
+            217.25999450683594,
+            216.39999389648438,
+            219.39999389648438
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            216.39999389648438,
+            218.5,
+            215.17999267578125,
+            214.47999572753906,
+            214.55999755859375
+          ]
+        }
+      ]
+    }
+  }
+}

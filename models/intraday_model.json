@@ -1,0 +1,17 @@
+{
+  "trainedAt": "2026-07-28T10:05:55.209Z",
+  "model": {
+    "weights": {
+      "premarketMove": 0,
+      "openingGap": 0,
+      "firstHourMove": 0,
+      "volumeZ": 0,
+      "sentiment": -0.3434317092713873,
+      "patternStrength": 0,
+      "sectorStrength": -0.3434317092713873,
+      "atrPct": 0,
+      "liquidity": -0.6868634185427746
+    },
+    "bias": -0.6868634185427746
+  }
+}

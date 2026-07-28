@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:50.834Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMCSA?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CMCSA",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 322151400,
+      "regularMarketTime": 1785182401,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 22.8,
+      "fiftyTwoWeekHigh": 32.86,
+      "fiftyTwoWeekLow": 21.28,
+      "regularMarketDayHigh": 23.29,
+      "regularMarketDayLow": 22.36,
+      "regularMarketVolume": 36388504,
+      "longName": "Comcast Corporation",
+      "shortName": "Comcast Corporation",
+      "chartPreviousClose": 23.78,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785245400,
+          "start": 1785225600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785268800,
+          "start": 1785245400,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785283200,
+          "start": 1785268800,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            23.579999923706055,
+            23.489999771118164,
+            21.90999984741211,
+            21.280000686645508,
+            22.360000610351562
+          ],
+          "volume": [
+            27095900,
+            36648000,
+            53009300,
+            48229800,
+            37492900
+          ],
+          "high": [
+            23.950000762939453,
+            24.25,
+            24.010000228881836,
+            22.489999771118164,
+            23.290000915527344
+          ],
+          "close": [
+            23.809999465942383,
+            23.520000457763672,
+            21.920000076293945,
+            22.299999237060547,
+            22.799999237060547
+          ],
+          "open": [
+            23.709999084472656,
+            24.15999984741211,
+            24.010000228881836,
+            21.299999237060547,
+            22.43000030517578
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            23.809999465942383,
+            23.520000457763672,
+            21.920000076293945,
+            22.299999237060547,
+            22.799999237060547
+          ]
+        }
+      ]
+    }
+  }
+}

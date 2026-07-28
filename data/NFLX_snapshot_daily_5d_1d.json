@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:36.763Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "NFLX",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1022160600,
+      "regularMarketTime": 1785182401,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 70.4,
+      "fiftyTwoWeekHigh": 126.71,
+      "fiftyTwoWeekLow": 65.08,
+      "regularMarketDayHigh": 71.65,
+      "regularMarketDayLow": 69.86,
+      "regularMarketVolume": 38903619,
+      "longName": "Netflix, Inc.",
+      "shortName": "Netflix, Inc.",
+      "chartPreviousClose": 67.6,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785225600,
+          "end": 1785245400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785245400,
+          "end": 1785268800,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785268800,
+          "end": 1785283200,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            66.7300033569336,
+            68.3499984741211,
+            67.66999816894531,
+            67.97000122070312,
+            69.86000061035156
+          ],
+          "volume": [
+            56565800,
+            44947300,
+            45029100,
+            37593500,
+            39039800
+          ],
+          "high": [
+            68.75,
+            70.56999969482422,
+            69.36000061035156,
+            70.68000030517578,
+            71.6500015258789
+          ],
+          "open": [
+            67.41999816894531,
+            69.37000274658203,
+            68.56999969482422,
+            69.29000091552734,
+            70.58999633789062
+          ],
+          "close": [
+            68.66999816894531,
+            68.52999877929688,
+            68.88999938964844,
+            70.08999633789062,
+            70.4000015258789
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            68.66999816894531,
+            68.52999877929688,
+            68.88999938964844,
+            70.08999633789062,
+            70.4000015258789
+          ]
+        }
+      ]
+    }
+  }
+}

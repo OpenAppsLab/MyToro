@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:32.521Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AMZN",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 863703000,
+      "regularMarketTime": 1785182401,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 231.39,
+      "fiftyTwoWeekHigh": 278.56,
+      "fiftyTwoWeekLow": 196,
+      "regularMarketDayHigh": 235.89,
+      "regularMarketDayLow": 230.99,
+      "regularMarketVolume": 34898916,
+      "longName": "Amazon.com, Inc.",
+      "shortName": "Amazon.com, Inc.",
+      "chartPreviousClose": 249.99,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785225600,
+          "end": 1785245400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785245400,
+          "end": 1785268800,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785268800,
+          "end": 1785283200,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            246.4199981689453,
+            242.4499969482422,
+            232.0500030517578,
+            231.33999633789062,
+            230.99000549316406
+          ],
+          "close": [
+            247.5500030517578,
+            244.85000610351562,
+            233.66000366210938,
+            232.11000061035156,
+            231.38999938964844
+          ],
+          "high": [
+            249.33999633789062,
+            248.4499969482422,
+            238.35000610351562,
+            234.9499969482422,
+            235.88999938964844
+          ],
+          "open": [
+            249.11000061035156,
+            248.27000427246094,
+            236.25999450683594,
+            234.3800048828125,
+            235.6699981689453
+          ],
+          "volume": [
+            27732100,
+            34112700,
+            47465300,
+            35017400,
+            34934500
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            247.5500030517578,
+            244.85000610351562,
+            233.66000366210938,
+            232.11000061035156,
+            231.38999938964844
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:28.428Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQM?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "QQQM",
+      "exchangeName": "NGM",
+      "fullExchangeName": "NasdaqGM",
+      "instrumentType": "ETF",
+      "firstTradeDate": 1602595800,
+      "regularMarketTime": 1785182400,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 280.86,
+      "fiftyTwoWeekHigh": 308.21,
+      "fiftyTwoWeekLow": 227,
+      "regularMarketDayHigh": 285.05,
+      "regularMarketDayLow": 278.34,
+      "regularMarketVolume": 3343240,
+      "longName": "Invesco NASDAQ 100 ETF",
+      "shortName": "Invesco NASDAQ 100 ETF",
+      "chartPreviousClose": 286.58,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785225600,
+          "end": 1785245400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785245400,
+          "end": 1785268800,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785268800,
+          "end": 1785283200,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            290.95001220703125,
+            289.7099914550781,
+            286.010009765625,
+            284.2699890136719,
+            284.82000732421875
+          ],
+          "high": [
+            292.3500061035156,
+            292.1700134277344,
+            287.66900634765625,
+            285.1600036621094,
+            285.04998779296875
+          ],
+          "low": [
+            289.4100036621094,
+            289.7099914550781,
+            283.20001220703125,
+            280.9800109863281,
+            278.3299865722656
+          ],
+          "volume": [
+            2518000,
+            2658200,
+            3904100,
+            3995400,
+            3352600
+          ],
+          "close": [
+            291.8999938964844,
+            290.4200134277344,
+            284.9800109863281,
+            281.67999267578125,
+            280.8599853515625
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            291.8999938964844,
+            290.4200134277344,
+            284.9800109863281,
+            281.67999267578125,
+            280.8599853515625
+          ]
+        }
+      ]
+    }
+  }
+}

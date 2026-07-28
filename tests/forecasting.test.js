@@ -36,6 +36,30 @@ test('buildLiveSignal includes advanced live forecasting signals', () => {
   assert.ok(signal.advancedSignals.premarketBlockScore >= 0, 'expected pre-market block score to be numeric');
 });
 
+test('buildLiveSignal down-weights overextended or highly volatile setups', () => {
+  const item = {
+    symbol: 'TSLA',
+    name: 'Tesla',
+    region: 'NASDAQ',
+    currentPrice: 320,
+    changePct: 9.1,
+    dayMovePct: 9.1,
+    volume: 260000000,
+    volumeHistory: [60000000, 65000000, 70000000, 72000000, 78000000, 80000000, 85000000],
+    closeHistory: [250, 255, 258, 265, 270, 280, 320],
+    highHistory: [255, 260, 270, 275, 280, 290, 322],
+    lowHistory: [248, 252, 255, 260, 265, 270, 315]
+  };
+
+  const signal = buildLiveSignal(item, [], 100, 3000, 2, {
+    peerMoves: { NVDA: 1.2, AMD: 0.5 },
+    peerTargets: ['NVDA', 'AMD']
+  });
+
+  assert.ok(signal.probability < 0.75, 'expected overextended setups to receive a lower probability');
+  assert.ok(signal.advancedSignals.volatilityRegime === 'high' || signal.advancedSignals.atrPct > 2, 'expected high-volatility regime to be captured');
+});
+
 test('trailing stop logic closes a trade once profit target or stop-loss threshold is reached', () => {
   const order = buildOrderRecord({
     symbol: 'AAPL',

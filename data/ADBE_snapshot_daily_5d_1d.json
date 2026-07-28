@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:34.254Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ADBE?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ADBE",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 524323800,
+      "regularMarketTime": 1785182400,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 237.75,
+      "fiftyTwoWeekHigh": 376.16,
+      "fiftyTwoWeekLow": 190.12,
+      "regularMarketDayHigh": 242.05,
+      "regularMarketDayLow": 229.79,
+      "regularMarketVolume": 5533910,
+      "longName": "Adobe Inc.",
+      "shortName": "Adobe Inc.",
+      "chartPreviousClose": 234.74,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785245400,
+          "start": 1785225600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785268800,
+          "start": 1785245400,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785283200,
+          "start": 1785268800,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            231.5,
+            229.66000366210938,
+            222.75,
+            226.92999267578125,
+            242.0500030517578
+          ],
+          "open": [
+            222.85000610351562,
+            229.66000366210938,
+            222.17999267578125,
+            216.5,
+            230.38999938964844
+          ],
+          "low": [
+            222.3000030517578,
+            218,
+            210.8800048828125,
+            216.14999389648438,
+            229.7899932861328
+          ],
+          "close": [
+            227.16000366210938,
+            218.36000061035156,
+            212.1699981689453,
+            225.11000061035156,
+            237.75
+          ],
+          "volume": [
+            5060600,
+            4361300,
+            4363200,
+            4719900,
+            5541200
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            227.16000366210938,
+            218.36000061035156,
+            212.1699981689453,
+            225.11000061035156,
+            237.75
+          ]
+        }
+      ]
+    }
+  }
+}

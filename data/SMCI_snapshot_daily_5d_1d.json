@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:36.113Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "SMCI",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1175175000,
+      "regularMarketTime": 1785182401,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 29.81,
+      "fiftyTwoWeekHigh": 62.36,
+      "fiftyTwoWeekLow": 19.48,
+      "regularMarketDayHigh": 30.94,
+      "regularMarketDayLow": 28.5,
+      "regularMarketVolume": 35099308,
+      "longName": "Super Micro Computer, Inc.",
+      "shortName": "Super Micro Computer, Inc.",
+      "chartPreviousClose": 23.83,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785225600,
+          "end": 1785245400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785245400,
+          "end": 1785268800,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785268800,
+          "end": 1785283200,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            25.540000915527344,
+            32.279998779296875,
+            32.59000015258789,
+            31.329999923706055,
+            30.940000534057617
+          ],
+          "low": [
+            24.329999923706055,
+            28.5,
+            30.18000030517578,
+            29.280000686645508,
+            28.5
+          ],
+          "volume": [
+            51156400,
+            163015100,
+            86788900,
+            49701600,
+            35511300
+          ],
+          "close": [
+            25.5,
+            30.559999465942383,
+            31.200000762939453,
+            30.100000381469727,
+            29.809999465942383
+          ],
+          "open": [
+            24.399999618530273,
+            28.889999389648438,
+            30.329999923706055,
+            30.6200008392334,
+            30.600000381469727
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            25.5,
+            30.559999465942383,
+            31.200000762939453,
+            30.100000381469727,
+            29.809999465942383
+          ]
+        }
+      ]
+    }
+  }
+}

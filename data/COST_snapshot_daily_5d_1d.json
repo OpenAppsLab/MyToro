@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-28T09:58:34.899Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/COST?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "COST",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 521299800,
+      "regularMarketTime": 1785182401,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 951.58,
+      "fiftyTwoWeekHigh": 1096.5,
+      "fiftyTwoWeekLow": 844.06,
+      "regularMarketDayHigh": 956.57,
+      "regularMarketDayLow": 936.655,
+      "regularMarketVolume": 2108762,
+      "longName": "Costco Wholesale Corporation",
+      "shortName": "Costco Wholesale Corporation",
+      "chartPreviousClose": 935.8,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785245400,
+          "start": 1785225600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785268800,
+          "start": 1785245400,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785283200,
+          "start": 1785268800,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784640600,
+      1784727000,
+      1784813400,
+      1784899800,
+      1785159000
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            1833500,
+            1762700,
+            1785200,
+            1586300,
+            2109500
+          ],
+          "low": [
+            924.4400024414062,
+            920.969970703125,
+            916.760009765625,
+            921.280029296875,
+            936.6599731445312
+          ],
+          "close": [
+            929.219970703125,
+            927.3099975585938,
+            926.0599975585938,
+            935.030029296875,
+            951.5800170898438
+          ],
+          "open": [
+            930.25,
+            930.8800048828125,
+            920.510009765625,
+            925.010009765625,
+            938.1099853515625
+          ],
+          "high": [
+            931.989990234375,
+            933.5999755859375,
+            926.530029296875,
+            936.6599731445312,
+            956.6099853515625
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            927.7449340820312,
+            925.8380126953125,
+            924.5899658203125,
+            935.030029296875,
+            951.5800170898438
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -245,6 +245,26 @@ async function createPendingOrder(option) {
   }
 }
 
+async function fetchIntradaySuggestionsHtml(top = 5) {
+  try {
+    const resp = await fetch(`/api/intraday-picks?top=${top}`);
+    const data = await resp.json();
+    if (!resp.ok || !Array.isArray(data.picks)) return '';
+    if (!data.picks.length) return '';
+
+    return `
+      <section class="intraday-suggestions">
+        <h4>Suggested top intraday picks</h4>
+        <div class="intraday-list">
+          ${data.picks.map(p => `<div class="intraday-item"><strong>${p.symbol}</strong> ${p.name} — ${Math.round((p.probability||0)*100)}%</div>`).join('')}
+        </div>
+      </section>
+    `;
+  } catch {
+    return '';
+  }
+}
+
 async function searchPrediction() {
   updateSessionBadge();
   const minProfit = Number(minProfitInput.value || 0);
@@ -312,6 +332,12 @@ async function searchPrediction() {
 
     resultsArea.innerHTML = `${headerCard}${optionsMarkup}`;
 
+    // include top intraday suggestions for the user to consider
+    const suggestions = await fetchIntradaySuggestionsHtml(5);
+    if (suggestions) {
+      resultsArea.insertAdjacentHTML('afterbegin', suggestions);
+    }
+
     updateStatus(payload.viable
       ? 'Live options are available. You may place an order on a viable pick.'
       : 'No viable live picks right now. Use the top watch candidates and re-scan for updated movement.');
@@ -349,6 +375,11 @@ if (resultsArea) {
 
     updateStatus(`Order placed at $${order.entryPrice.toFixed(2)} with a 5% trailing stop loss.`);
     showSelectionModal(option, order);
+    // after placing an order, suggest top intraday picks for quick follow-up
+    const postSuggestions = await fetchIntradaySuggestionsHtml(5);
+    if (postSuggestions) {
+      resultsArea.insertAdjacentHTML('afterbegin', postSuggestions);
+    }
   });
 }
 

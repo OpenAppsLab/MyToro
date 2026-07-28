@@ -1,12 +1,14 @@
 const premarketResults = document.getElementById('premarketResults');
+const premarketSearchInput = document.getElementById('premarketSearch');
+const premarketSearchButton = document.getElementById('premarketSearchButton');
 
 function money(value) {
   return Number(value || 0).toFixed(2);
 }
 
-async function renderPreMarketPage() {
+async function renderPreMarketPage(query = '') {
   try {
-    const response = await fetch('/api/premarket?depositUSD=100&leverage=2');
+    const response = await fetch(`/api/premarket?depositUSD=100&leverage=2${query ? `&query=${encodeURIComponent(query)}` : ''}`);
     const payload = await response.json();
 
     if (!response.ok || !Array.isArray(payload.results) || !payload.results.length) {
@@ -46,6 +48,10 @@ async function renderPreMarketPage() {
   } catch (error) {
     premarketResults.innerHTML = '<div class="option-card">Pre-market signal data is unavailable right now.</div>';
   }
+}
+
+if (premarketSearchButton) {
+  premarketSearchButton.addEventListener('click', () => renderPreMarketPage(premarketSearchInput?.value || ''));
 }
 
 renderPreMarketPage();

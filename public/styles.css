@@ -360,6 +360,23 @@ label {
   font-size: 0.92rem;
 }
 
+.search-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.search-row label {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.search-row .primary-button {
+  flex-shrink: 0;
+  white-space: nowrap;
+  min-width: 96px;
+}
+
 label span {
   color: #c6d6f0;
   font-size: 0.92rem;
@@ -941,5 +958,14 @@ input:focus {
 
   .mobile-tabs {
     grid-template-columns: 1fr;
+  }
+
+  .search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-row .primary-button {
+    width: 100%;
   }
 }

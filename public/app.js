@@ -2,6 +2,7 @@ const LOCAL_HISTORY_KEY = 'stockgame-history';
 
 const minProfitInput = document.getElementById('minProfit');
 const ballparkInput = document.getElementById('ballpark');
+const symbolSearchInput = document.getElementById('symbolSearch');
 const searchButton = document.getElementById('searchButton');
 const resultsArea = document.getElementById('resultsArea');
 const statusMessage = document.getElementById('statusMessage');
@@ -272,7 +273,8 @@ async function searchPrediction() {
   resultsArea.innerHTML = 'Working on your live Nasdaq prediction...';
 
   try {
-    const response = await fetch(`/api/predict?minProfit=${minProfit}&ballpark=${ballpark}`);
+    const searchQuery = (symbolSearchInput?.value || '').trim();
+    const response = await fetch(`/api/predict?minProfit=${minProfit}&ballpark=${ballpark}${searchQuery ? `&query=${encodeURIComponent(searchQuery)}` : ''}`);
     const payload = await response.json();
 
     if (!response.ok || !payload.result) {

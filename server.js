@@ -281,6 +281,18 @@ function buildAdvancedSignals(item, news, context = {}) {
   };
 }
 
+function filterMarketItemsByQuery(items, query) {
+  const normalized = String(query || '').trim().toLowerCase();
+  if (!normalized) {
+    return items;
+  }
+
+  return items.filter((item) => {
+    const haystack = `${item.symbol || ''} ${item.name || ''} ${item.region || ''}`.toLowerCase();
+    return haystack.includes(normalized);
+  });
+}
+
 function buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, context = {}) {
   const currentPrice = Number(item.currentPrice || 0);
   const dayMovePct = Number(item.dayMovePct || 0);
@@ -1106,6 +1118,7 @@ app.get('/api/premarket', async (req, res) => {
   try {
     const deposit = Number(req.query.depositUSD || 100);
     const leverage = Number(req.query.leverage || 1);
+    const query = String(req.query.query || '').trim();
 
     const [market, news] = await Promise.all([
       loadMarketSnapshot(),
@@ -1117,7 +1130,8 @@ app.get('/api/premarket', async (req, res) => {
       return accumulator;
     }, {});
 
-    const ranked = market
+    const filteredMarket = filterMarketItemsByQuery(market, query);
+    const ranked = filteredMarket
       .map((item) => {
         const signal = buildLiveSignal(item, news, 100, 3000, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
         const leverageProfit = deposit * ((Number(item.dayMovePct || 0) || 0) / 100) * leverage;
@@ -1200,7 +1214,7 @@ app.post('/api/orders/clear', async (req, res) => {
 
 app.get('/api/predict', async (req, res) => {
   try {
-    const { minProfit, ballpark } = req.query;
+    const { minProfit, ballpark, query } = req.query;
     const targetProfit = Number(minProfit || 0);
     const ballparkAmount = Number(ballpark || 0);
     const requiredMovePct = ballparkAmount > 0 ? (targetProfit / ballparkAmount) * 100 : 0;
@@ -1230,7 +1244,8 @@ app.get('/api/predict', async (req, res) => {
       return accumulator;
     }, {});
 
-    const scored = market
+    const filteredMarket = filterMarketItemsByQuery(market, query);
+    const scored = filteredMarket
       .map((item) => buildLiveSignal(item, news, targetProfit, ballparkAmount, 2, { peerMoves, peerTargets: ['NVDA', 'AMD'] }))
       .filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
       .sort((a, b) => b.score - a.score);
@@ -1270,6 +1285,7 @@ module.exports = {
   buildLiveSignal,
   buildOrderRecord,
   evaluateOrderOutcome,
+  filterMarketItemsByQuery,
   pendingOrders,
   canPlaceAutoOrder,
   shouldPlaceAutoOrder,

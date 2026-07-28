@@ -16,6 +16,7 @@ const selectionModalClose = document.getElementById('selectionModalClose');
 const STARTING_DAILY_BALANCE = 3000;
 let latestPredictionOptions = [];
 let selectedPredictionSymbol = '';
+let orderCreateInProgress = false;
 
 function showSelectionModal(option, order) {
   if (!selectionModal || !selectionModalText) {
@@ -212,10 +213,16 @@ async function createPendingOrder(option) {
   const minProfit = Number(minProfitInput.value || 0);
   const ballpark = Number(ballparkInput.value || 0);
 
+  if (orderCreateInProgress) {
+    updateStatus('An order is already being placed. Please wait a moment.');
+    return null;
+  }
+
   if (!option?.symbol || !minProfit || !ballpark) {
     return null;
   }
 
+  orderCreateInProgress = true;
   try {
     const response = await fetch('/api/orders', {
       method: 'POST',
@@ -239,9 +246,11 @@ async function createPendingOrder(option) {
     }
 
     return payload.order;
-  } catch {
-    updateStatus('Unable to place order with the live monitor. Please try again.');
+  } catch (error) {
+    updateStatus(error.message || 'Unable to place order with the live monitor. Please try again.');
     return null;
+  } finally {
+    orderCreateInProgress = false;
   }
 }
 
@@ -355,26 +364,31 @@ if (resultsArea) {
       return;
     }
 
+    target.disabled = true;
     selectedPredictionSymbol = target.getAttribute('data-select');
     const option = latestPredictionOptions.find((item) => item.symbol === selectedPredictionSymbol);
     if (!option) {
       updateStatus('Selected option is no longer available. Please scan again.');
+      target.disabled = false;
       return;
     }
 
     if (!option.viable) {
       updateStatus('This option is a watch candidate only. Re-scan for a live viable pick when the market moves.');
+      target.disabled = false;
       return;
     }
 
     updateStatus(`Placing order for ${option.name}...`);
     const order = await createPendingOrder(option);
     if (!order) {
+      target.disabled = false;
       return;
     }
 
     updateStatus(`Order placed at $${order.entryPrice.toFixed(2)} with a 5% trailing stop loss.`);
     showSelectionModal(option, order);
+    target.disabled = false;
     // after placing an order, suggest top intraday picks for quick follow-up
     const postSuggestions = await fetchIntradaySuggestionsHtml(5);
     if (postSuggestions) {

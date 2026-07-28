@@ -271,6 +271,10 @@ function renderOrderDetailCard(order) {
       ? `Realized profit ${formatCurrency(profitLoss)}.`
       : `Realized loss ${formatCurrency(Math.abs(profitLoss))}.`;
 
+  const totalSoldLine = order.status === 'pending'
+    ? `<small>Current position value: ${formatCurrency(totalSoldPrice)}</small>`
+    : `<small>Total sold price: ${formatCurrency(totalSoldPrice)}</small>`;
+
   return `
     <div class="history-order-card">
       <strong>${order.symbol || 'Unknown'} - ${statusText}</strong>
@@ -279,7 +283,7 @@ function renderOrderDetailCard(order) {
       <small>Shares: ${shareCount}</small>
       <small>Leverage: ${leverage}x</small>
       <small>Total buy price: ${formatCurrency(totalBuyPrice)}</small>
-      <small>Total sold price: ${formatCurrency(totalSoldPrice)}</small>
+      ${totalSoldLine}
       <small>Profit / Loss: ${formatCurrency(profitLoss)}</small>
       <small>Trailing stop: ${formatCurrency(trailingStopPrice)} (${Number(order.stopLossPct || 0).toFixed(2)}%)</small>
       <small>Target profit: ${formatCurrency(Number(order.targetProfit || 0))}</small>

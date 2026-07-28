@@ -103,7 +103,8 @@ test.describe('Live trading regression suite', () => {
     });
 
     await page.locator('#clearHistoryButton').click();
-    await expect(page.locator('#historyCount')).toHaveText('0');
+    await expect(page.locator('#historyProfitDays')).toHaveText('0');
+    await expect(page.locator('#historyLossDays')).toHaveText('0');
   });
 });
 

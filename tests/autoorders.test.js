@@ -2,6 +2,16 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const server = require('../server');
 
+test('auto orders become eligible 30 minutes after the New York market open', () => {
+  const { shouldPlaceAutoOrder } = server;
+
+  const eligible = shouldPlaceAutoOrder(new Date('2026-07-28T14:01:00.000Z'), { orderCount: 0, dateKey: '2026-07-28' }, []);
+  assert.equal(eligible, true, 'expected the first auto-order to become eligible 30 minutes after the New York open');
+
+  const notYetEligible = shouldPlaceAutoOrder(new Date('2026-07-28T13:59:00.000Z'), { orderCount: 0, dateKey: '2026-07-28' }, []);
+  assert.equal(notYetEligible, false, 'expected the first auto-order to wait until 30 minutes after the New York open');
+});
+
 test('auto orders keep running until the $100 profit target or the $50 daily loss cap is reached', () => {
   const { pendingOrders, canPlaceAutoOrder, getTodayRealizedPnl } = server;
 

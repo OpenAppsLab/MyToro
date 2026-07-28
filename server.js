@@ -147,22 +147,37 @@ function isMockTradingEnabled() {
 }
 
 function getNewYorkDateKey(date = new Date()) {
-  return new Intl.DateTimeFormat('en-US', {
+  const parts = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'America/New_York',
     year: 'numeric',
     month: '2-digit',
     day: '2-digit'
-  }).format(date);
+  }).formatToParts(date);
+
+  const year = parts.find((part) => part.type === 'year')?.value;
+  const month = parts.find((part) => part.type === 'month')?.value;
+  const day = parts.find((part) => part.type === 'day')?.value;
+  return `${year}-${month}-${day}`;
 }
 
-function getNewYorkNow() {
-  return new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
+function getNewYorkTimeParts(date = new Date()) {
+  return new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hourCycle: 'h23'
+  }).formatToParts(date);
 }
 
-function getTodayMarketOpenMs() {
-  const nyNow = getNewYorkNow();
-  nyNow.setHours(9, 30, 0, 0);
-  return nyNow.getTime();
+function getNewYorkTimeMinutes(date = new Date()) {
+  const parts = getNewYorkTimeParts(date);
+  const hour = Number(parts.find((part) => part.type === 'hour')?.value || 0);
+  const minute = Number(parts.find((part) => part.type === 'minute')?.value || 0);
+  return hour * 60 + minute;
 }
 
 function resetAutoOrderState(dateKey) {
@@ -304,7 +319,7 @@ function buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, con
     signalType,
     targetMovePct,
     viable,
-    source: 'Yahoo Finance 5m + live market context',
+    source: 'Finnhub live market data + news context',
     liveSignal: true,
     advancedSignals: {
       ...advancedSignals,
@@ -383,6 +398,41 @@ function canPlaceAutoOrder() {
   return true;
 }
 
+function shouldPlaceAutoOrder(now = new Date(), state = autoOrderState, pending = pendingOrders) {
+  const currentDateKey = getNewYorkDateKey(now);
+  if (normalizeDateKey(state.dateKey) !== normalizeDateKey(currentDateKey)) {
+    return false;
+  }
+
+  const currentMinutes = getNewYorkTimeMinutes(now);
+  const marketOpenMinutes = 9 * 60 + 30;
+  const firstOrderReady = state.orderCount === 0 && currentMinutes >= marketOpenMinutes + 30;
+  const subsequentOrderReady = state.orderCount > 0 && !pending.some((order) => order.status === 'pending');
+  return firstOrderReady || subsequentOrderReady;
+}
+
+function normalizeDateKey(value) {
+  if (!value) {
+    return '';
+  }
+
+  const text = String(value).trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) {
+    return text;
+  }
+
+  const parts = text.split(/[\/-]/).filter(Boolean);
+  if (parts.length !== 3) {
+    return text;
+  }
+
+  const [left, middle, right] = parts;
+  const year = Number(right.length === 4 ? right : left);
+  const month = String(Number(middle)).padStart(2, '0');
+  const day = String(Number(parts[0] === right ? middle : right)).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 async function refreshAutoOrders() {
   const todayKey = getNewYorkDateKey();
   if (autoOrderState.dateKey !== todayKey) {
@@ -403,10 +453,7 @@ async function refreshAutoOrders() {
   }
 
   const now = Date.now();
-  const firstOrderReady = autoOrderState.orderCount === 0 && now >= getTodayMarketOpenMs() + AUTO_ORDER_SETTINGS.waitAfterOpenMs;
-  const subsequentOrderReady = autoOrderState.orderCount > 0 && !pendingOrders.some((order) => order.status === 'pending');
-
-  if (firstOrderReady || subsequentOrderReady) {
+  if (shouldPlaceAutoOrder(new Date(now), autoOrderState, pendingOrders)) {
     await placeAutoOrder();
   }
 }
@@ -749,7 +796,7 @@ function getOrderDateKey(order) {
 }
 
 function getRealizedOrderPnl(order) {
-  if (order.status === 'pending') {
+  if (!order || order.status === 'pending') {
     return 0;
   }
 
@@ -761,9 +808,13 @@ function getRealizedOrderPnl(order) {
     return -Number(order.stopLossAmount || 0);
   }
 
-  const currentMovePct = Number(order.currentMovePct || 0);
-  const realized = Number(order.ballparkAmount || 0) * (currentMovePct / 100) * Number(order.leverage || 1);
-  return Number(realized.toFixed(2));
+  const entryPrice = Number(order.entryPrice || 0);
+  const currentPrice = Number(order.currentPrice || entryPrice);
+  const leverage = Number(order.leverage || 1);
+  const ballparkAmount = Number(order.ballparkAmount || 0);
+  const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;
+  const realized = Number(((currentPrice - entryPrice) * shareCount).toFixed(2));
+  return realized;
 }
 
 function getTodayRealizedPnl() {
@@ -1164,7 +1215,7 @@ app.get('/api/predict', async (req, res) => {
           ballparkAmount,
           requiredMovePct
         },
-        liveSource: 'Yahoo Finance 5m data and RSS headlines',
+        liveSource: 'Finnhub live market data and headlines',
         newsSample: []
       });
     }
@@ -1200,7 +1251,7 @@ app.get('/api/predict', async (req, res) => {
         ballparkAmount,
         requiredMovePct
       },
-      liveSource: 'Yahoo Finance 5m data and RSS headlines',
+      liveSource: 'Finnhub live market data and headlines',
       newsSample: news.slice(0, 8)
     });
   } catch (error) {
@@ -1221,5 +1272,6 @@ module.exports = {
   evaluateOrderOutcome,
   pendingOrders,
   canPlaceAutoOrder,
+  shouldPlaceAutoOrder,
   getTodayRealizedPnl
 };

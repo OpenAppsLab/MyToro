@@ -1,9 +1,7 @@
 const LOCAL_HISTORY_KEY = 'stockgame-history';
 
-const historyCountLabel = document.getElementById('historyCount');
-const historyWinsLabel = document.getElementById('historyWins');
-const historyLossesLabel = document.getElementById('historyLosses');
-const historyBalanceLabel = document.getElementById('historyBalance');
+const historyProfitDaysLabel = document.getElementById('historyProfitDays');
+const historyLossDaysLabel = document.getElementById('historyLossDays');
 const historyCalendar = document.getElementById('historyCalendarFull');
 const clearButton = document.getElementById('clearHistoryButton');
 const refreshButton = document.getElementById('refreshPendingButton');
@@ -90,40 +88,65 @@ function updateRefreshButton(orders) {
   refreshButton.disabled = !hasPending;
 }
 
-function getGroupStatus(group) {
+function isNasdaqMarketOpenNow() {
+  const now = new Date();
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23'
+  }).formatToParts(now);
+  const hour = Number(parts.find((part) => part.type === 'hour')?.value || 0);
+  const minute = Number(parts.find((part) => part.type === 'minute')?.value || 0);
+  const totalMinutes = hour * 60 + minute;
+  return totalMinutes >= (9 * 60 + 30) && totalMinutes < (16 * 60);
+}
+
+function getGroupNetValue(group) {
+  const orderValue = (group?.orders || []).reduce((sum, order) => {
+    if (order.status === 'pending') {
+      return sum;
+    }
+
+    return sum + getOrderRealizedPnl(order);
+  }, 0);
+
+  const entryValue = (group?.entries || []).reduce((sum, entry) => {
+    if (entry.status === 'pending') {
+      return sum;
+    }
+
+    if (entry.correct === true) {
+      return sum + Number(entry.minProfit || 0);
+    }
+
+    return sum - Number(entry.stopLossAmount || 15);
+  }, 0);
+
+  return orderValue + entryValue;
+}
+
+function getGroupStatus(group, dateKey) {
   if (!group) {
-    return { className: 'grey', label: 'No data' };
+    return { className: 'grey' };
   }
 
-  if (group.orders.length) {
-    const settled = group.orders.find((order) => order.status !== 'pending');
-    if (settled) {
-      return {
-        className: settled.status === 'green' ? 'green' : 'red',
-        label: `${group.orders.length} order${group.orders.length > 1 ? 's' : ''}`
-      };
-    }
-    return {
-      className: 'pending',
-      label: `${group.orders.length} order${group.orders.length > 1 ? 's' : ''} - ${group.orders.filter((o) => o.status === 'pending').length} pending`
-    };
+  const isToday = toDateKey(new Date()) === dateKey;
+  const hasPendingItems = (group.orders || []).some((order) => order.status === 'pending') || (group.entries || []).some((entry) => entry.status === 'pending');
+
+  if (hasPendingItems && isToday && isNasdaqMarketOpenNow()) {
+    return { className: 'pending' };
   }
 
-  if (group.entries.length) {
-    const settledEntry = group.entries.find((entry) => entry.status !== 'pending');
-    if (settledEntry) {
-      return {
-        className: settledEntry.correct ? 'green' : 'red',
-        label: settledEntry.correct ? 'Pass' : 'Fail'
-      };
-    }
-    return {
-      className: 'pending',
-      label: 'Pending'
-    };
+  const netValue = getGroupNetValue(group);
+  if (netValue > 0) {
+    return { className: 'green' };
+  }
+  if (netValue < 0) {
+    return { className: 'red' };
   }
 
-  return { className: 'grey', label: 'No data' };
+  return { className: 'grey' };
 }
 
 function buildHistoryGroups(entries, orders) {
@@ -165,7 +188,7 @@ function buildDateTiles(groups) {
     const isCurrentMonth = cellYear === year && cellMonth === month;
     const dateKey = toDateKey(cellDate);
     const group = groups[dateKey];
-    const { className, label } = group ? getGroupStatus(group) : isWeekend(dateKey) ? { className: 'blue', label: 'Closed' } : { className: 'grey', label: 'No data' };
+    const { className } = group ? getGroupStatus(group, dateKey) : isWeekend(dateKey) ? { className: 'grey' } : { className: 'grey' };
 
     const dayNumber = Number(cellParts.day);
     const isMuted = !isCurrentMonth;
@@ -179,7 +202,6 @@ function buildDateTiles(groups) {
     cells.push(`
       <div class="${cellClassName}" data-date="${dateKey}" ${isCurrentMonth ? '' : 'aria-hidden="true"'}>
         <strong>${dayNumber}</strong>
-        <small>${isCurrentMonth ? label : ' '}</small>
       </div>
     `);
   }
@@ -203,6 +225,27 @@ function clearAllSavedData() {
 
   fetch('/api/orders/clear', { method: 'POST' }).catch(() => {});
   renderHistoryFull();
+}
+
+function getOrderRealizedPnl(order) {
+  if (!order || order.status === 'pending') {
+    return 0;
+  }
+
+  if (order.result === 'profit-hit') {
+    return Number(order.targetProfit || 0);
+  }
+
+  if (order.result === 'loss-hit') {
+    return -Number(order.stopLossAmount || 0);
+  }
+
+  const entryPrice = Number(order.entryPrice || 0);
+  const currentPrice = Number(order.currentPrice || entryPrice);
+  const leverage = Number(order.leverage || 1);
+  const ballparkAmount = Number(order.ballparkAmount || 0);
+  const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;
+  return Number(((currentPrice - entryPrice) * shareCount).toFixed(2));
 }
 
 function renderOrderDetailCard(order) {
@@ -306,30 +349,31 @@ async function renderHistoryFull() {
   const entries = Array.isArray(history.entries) ? history.entries : [];
   const orders = await loadPendingOrders();
   window.historyOrders = orders; // store fetched orders for modal use
-  const wins = entries.filter((entry) => entry.correct === true).length;
-  const losses = entries.filter((entry) => entry.correct === false).length;
-  const balance = entries.reduce((sum, entry) => {
-    if (entry.status !== 'pending') {
-      return sum + (entry.correct ? Number(entry.minProfit || 0) : -Number(entry.stopLossAmount || 15));
+  const groups = buildHistoryGroups(entries, orders);
+  const { year: currentYear, month: currentMonth } = getNewYorkDateParts();
+  const profitDays = Object.entries(groups).reduce((sum, [dateKey, group]) => {
+    const [groupYear, groupMonth] = dateKey.split('-').map(Number);
+    if (groupYear !== Number(currentYear) || groupMonth !== Number(currentMonth)) {
+      return sum;
     }
-    return sum;
-  }, 3000);
+    return sum + (getGroupStatus(group, dateKey).className === 'green' ? 1 : 0);
+  }, 0);
+  const lossDays = Object.entries(groups).reduce((sum, [dateKey, group]) => {
+    const [groupYear, groupMonth] = dateKey.split('-').map(Number);
+    if (groupYear !== Number(currentYear) || groupMonth !== Number(currentMonth)) {
+      return sum;
+    }
+    return sum + (getGroupStatus(group, dateKey).className === 'red' ? 1 : 0);
+  }, 0);
 
-  if (historyCountLabel) {
-    historyCountLabel.textContent = entries.length;
+  if (historyProfitDaysLabel) {
+    historyProfitDaysLabel.textContent = profitDays;
   }
-  if (historyWinsLabel) {
-    historyWinsLabel.textContent = wins;
-  }
-  if (historyLossesLabel) {
-    historyLossesLabel.textContent = losses;
-  }
-  if (historyBalanceLabel) {
-    historyBalanceLabel.textContent = `$${balance.toFixed(2)}`;
+  if (historyLossDaysLabel) {
+    historyLossDaysLabel.textContent = lossDays;
   }
 
   updateRefreshButton(orders);
-  const groups = buildHistoryGroups(entries, orders);
   const tiles = buildDateTiles(groups);
 
   if (historyCalendar) {

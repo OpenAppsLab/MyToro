@@ -139,15 +139,82 @@ const autoOrderState = {
   orderCount: 0
 };
 
+const RUNTIME_SETTINGS_PATH = path.join(MODELS_DIR, 'runtime_settings.json');
+
 const AUTO_ORDER_SETTINGS = {
   leverage: 2,
   ballparkAmount: 3000,
-  waitAfterOpenMs: 30 * 60 * 1000
+  waitAfterOpenMs: 30 * 60 * 1000,
+  intradayAlpha: 0.7,
+  minCombinedThreshold: 0.6
 };
 
-// blending settings for auto orders: weight on intraday probability and minimum combined score
-AUTO_ORDER_SETTINGS.intradayAlpha = 0.7; // weight given to intraday probability
-AUTO_ORDER_SETTINGS.minCombinedThreshold = 0.6; // require combined >= this to place auto-order
+function loadRuntimeSettings() {
+  try {
+    if (!fs.existsSync(RUNTIME_SETTINGS_PATH)) {
+      return AUTO_ORDER_SETTINGS;
+    }
+    const raw = fs.readFileSync(RUNTIME_SETTINGS_PATH, 'utf8');
+    const parsed = JSON.parse(raw);
+    if (parsed.intradayAlpha != null) {
+      AUTO_ORDER_SETTINGS.intradayAlpha = Number(parsed.intradayAlpha);
+    }
+    if (parsed.minCombinedThreshold != null) {
+      AUTO_ORDER_SETTINGS.minCombinedThreshold = Number(parsed.minCombinedThreshold);
+    }
+    if (parsed.leverage != null) {
+      AUTO_ORDER_SETTINGS.leverage = Number(parsed.leverage);
+    }
+    if (parsed.ballparkAmount != null) {
+      AUTO_ORDER_SETTINGS.ballparkAmount = Number(parsed.ballparkAmount);
+    }
+  } catch (err) {
+    console.warn('Unable to load runtime settings:', err && err.message);
+  }
+  return AUTO_ORDER_SETTINGS;
+}
+
+function getRuntimeAlpha() {
+  return Number.isFinite(AUTO_ORDER_SETTINGS.intradayAlpha)
+    ? Number(AUTO_ORDER_SETTINGS.intradayAlpha)
+    : 0.7;
+}
+
+function getRuntimeThreshold() {
+  return Number.isFinite(AUTO_ORDER_SETTINGS.minCombinedThreshold)
+    ? Number(AUTO_ORDER_SETTINGS.minCombinedThreshold)
+    : 0.6;
+}
+
+function saveRuntimeSettings(settings = {}) {
+  try {
+    const merged = {
+      leverage: AUTO_ORDER_SETTINGS.leverage,
+      ballparkAmount: AUTO_ORDER_SETTINGS.ballparkAmount,
+      intradayAlpha: AUTO_ORDER_SETTINGS.intradayAlpha,
+      minCombinedThreshold: AUTO_ORDER_SETTINGS.minCombinedThreshold,
+      ...settings
+    };
+    if (merged.intradayAlpha != null) {
+      AUTO_ORDER_SETTINGS.intradayAlpha = Number(merged.intradayAlpha);
+    }
+    if (merged.minCombinedThreshold != null) {
+      AUTO_ORDER_SETTINGS.minCombinedThreshold = Number(merged.minCombinedThreshold);
+    }
+    if (merged.leverage != null) {
+      AUTO_ORDER_SETTINGS.leverage = Number(merged.leverage);
+    }
+    if (merged.ballparkAmount != null) {
+      AUTO_ORDER_SETTINGS.ballparkAmount = Number(merged.ballparkAmount);
+    }
+    if (!fs.existsSync(MODELS_DIR)) fs.mkdirSync(MODELS_DIR, { recursive: true });
+    fs.writeFileSync(RUNTIME_SETTINGS_PATH, JSON.stringify(merged, null, 2));
+    return merged;
+  } catch (err) {
+    console.error('Failed to save runtime settings', err && err.message);
+    return AUTO_ORDER_SETTINGS;
+  }
+}
 
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY || 'd9kd0t9r01qq9sqg0da0d9kd0t9r01qq9sqg0dag';
 const FINNHUB_BASE_URL = 'https://finnhub.io/api/v1';
@@ -839,6 +906,131 @@ function getIntradayModel() {
   return persistedIntradayModel || DEFAULT_INTRADAY_MODEL;
 }
 
+loadRuntimeSettings();
+
+function loadRecentIntradayExamples(limit = 120) {
+  const examples = [];
+  try {
+    const files = fs.readdirSync(DATA_DIR)
+      .filter((file) => file.endsWith('_snapshot_intraday_1d_5m.json'))
+      .slice(0, limit);
+
+    files.forEach((fileName) => {
+      const raw = readLocalSnapshot(fileName);
+      const result = raw?.result;
+      if (!result) return;
+
+      const quote = result.indicators?.quote?.[0] || {};
+      const closes = Array.isArray(quote.close) ? quote.close : [];
+      const highs = Array.isArray(quote.high) ? quote.high : [];
+      const lows = Array.isArray(quote.low) ? quote.low : [];
+      if (closes.length < 2) return;
+
+      const item = {
+        symbol: String(fileName).split('_')[0],
+        name: String(fileName).split('_')[0],
+        closeHistory: closes,
+        highHistory: highs,
+        lowHistory: lows,
+        currentPrice: closes[closes.length - 1],
+        preMarketMovePct: 0,
+        openPrice: closes[0],
+        prevClose: closes[0],
+        dayMovePct: closes[0] ? ((closes[closes.length - 1] - closes[0]) / closes[0]) * 100 : 0
+      };
+
+      examples.push({ item, news: [] });
+    });
+  } catch (err) {
+    console.warn('Unable to load intraday examples for calibration:', err && err.message);
+  }
+  return examples;
+}
+
+function loadWalkForwardTuningReport() {
+  try {
+    const tuningPath = path.join(MODELS_DIR, 'walk_forward_tuning.json');
+    if (!fs.existsSync(tuningPath)) {
+      return null;
+    }
+    return JSON.parse(fs.readFileSync(tuningPath, 'utf8'));
+  } catch (err) {
+    console.warn('Unable to read walk-forward tuning report:', err && err.message);
+    return null;
+  }
+}
+
+function computeCalibrationHealth(curve) {
+  if (!Array.isArray(curve) || !curve.length) {
+    return { meanGap: 0, maxGap: 0, degraded: false };
+  }
+
+  const gaps = curve.map((bin) => Math.abs((bin.meanPred || 0) - (bin.meanActual || 0)));
+  const meanGap = gaps.reduce((sum, gap) => sum + gap, 0) / gaps.length;
+  const maxGap = Math.max(...gaps);
+  return {
+    meanGap,
+    maxGap,
+    degraded: meanGap > 0.08 || maxGap > 0.18
+  };
+}
+
+function computeMarketDrift(market = []) {
+  const currentAbs = (market || [])
+    .map((item) => Math.abs(Number(item.dayMovePct || 0)))
+    .filter((value) => Number.isFinite(value));
+  const currentAvg = currentAbs.length
+    ? currentAbs.reduce((sum, value) => sum + value, 0) / currentAbs.length
+    : 0;
+
+  const historicalAbs = MARKET_SYMBOLS.map((item) => {
+    const local = loadLocalDailySnapshot(item.symbol);
+    if (!local || !local.previousCompletedClose) return null;
+    const movePct = ((local.yesterdayClose - local.previousCompletedClose) / local.previousCompletedClose) * 100;
+    return Math.abs(movePct);
+  }).filter((value) => Number.isFinite(value));
+
+  const historicalAvg = historicalAbs.length
+    ? historicalAbs.reduce((sum, value) => sum + value, 0) / historicalAbs.length
+    : 0;
+
+  const ratio = historicalAvg > 0 ? currentAvg / historicalAvg : 1;
+  return {
+    currentAvg: Number(currentAvg.toFixed(2)),
+    historicalAvg: Number(historicalAvg.toFixed(2)),
+    ratio: Number(ratio.toFixed(2)),
+    warning: ratio > 1.5
+  };
+}
+
+async function countThresholdCandidates(alpha, threshold) {
+  loadRuntimeSettings();
+  const [market, news] = await Promise.all([loadMarketSnapshot(), loadNewsSnapshot()]);
+  const marketStats = buildMarketFeatureStats(market || []);
+  const peerMoves = (market || []).reduce((acc, item) => {
+    acc[item.symbol] = Number(item.dayMovePct || 0);
+    return acc;
+  }, {});
+  const model = getIntradayModel();
+
+  const candidates = (market || []).map((item) => {
+    const live = buildLiveSignal(item, news, DAILY_TARGET_PROFIT, AUTO_ORDER_SETTINGS.ballparkAmount, AUTO_ORDER_SETTINGS.leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
+    const features = buildIntradayFeatureVector(item, live, { marketStats });
+    const p = clamp(logisticPredict(features, model.weights, model.bias), 0, 1);
+    const s = clamp(Number(live.score || 0) / 100, 0, 1);
+    return {
+      combined: alpha * p + (1 - alpha) * s,
+      symbol: item.symbol,
+      name: item.name
+    };
+  }).filter((item) => item.combined >= threshold);
+
+  return {
+    candidateCount: candidates.length,
+    topSymbols: candidates.slice(0, 5).map((item) => item.symbol)
+  };
+}
+
 function detectCandlePatterns(item) {
   const closes = Array.isArray(item.closeHistory) ? item.closeHistory.filter((value) => Number.isFinite(Number(value))).map((value) => Number(value)) : [];
   const highs = Array.isArray(item.highHistory) ? item.highHistory.filter((value) => Number.isFinite(Number(value))).map((value) => Number(value)) : [];
@@ -1180,7 +1372,7 @@ async function rankAutoOptions({ targetProfit, ballparkAmount, leverage }) {
     const intradayModel = getIntradayModel();
     const p = clamp(logisticPredict(intradayFeatures, intradayModel.weights, intradayModel.bias), 0, 1);
     const normScore = (live.score || 0) / 100;
-    const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
+    const alpha = getRuntimeAlpha();
     const combined = alpha * p + (1 - alpha) * normScore;
     return {
       ...live,
@@ -1215,7 +1407,7 @@ async function placeAutoOrder() {
   }
 
   // require minimum combined score before placing automatic order
-  if ((topPick.combinedScore || 0) < (AUTO_ORDER_SETTINGS.minCombinedThreshold || 0.6)) {
+  if ((topPick.combinedScore || 0) < getRuntimeThreshold()) {
     console.log(`Top pick combined score ${(topPick.combinedScore||0).toFixed(3)} below threshold; skipping auto-order.`);
     return null;
   }
@@ -2470,7 +2662,7 @@ app.get('/api/premarket', async (req, res) => {
       const model = getIntradayModel();
       const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
       const normScore = (signal.score || 0) / 100;
-      const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
+      const alpha = getRuntimeAlpha();
       const combined = alpha * p + (1 - alpha) * normScore;
       const leverageProfit = deposit * ((Number(item.dayMovePct || 0) || 0) / 100) * leverage;
 
@@ -2492,7 +2684,7 @@ app.get('/api/premarket', async (req, res) => {
 
     let ranked = query
       ? scored.slice(0, 20)
-      : scored.filter((item) => (item.combinedScore || 0) >= (AUTO_ORDER_SETTINGS.minCombinedThreshold || 0.6)).slice(0, 5);
+      : scored.filter((item) => (item.combinedScore || 0) >= getRuntimeThreshold()).slice(0, 5);
 
     if (!ranked.length && !query) {
       // If no pre-market candidates meet the strict threshold, still show the top signals.
@@ -2539,7 +2731,7 @@ app.post('/api/orders', async (req, res) => {
           const model = getIntradayModel();
           const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
           const normScore = (live.score || 0) / 100;
-          const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
+          const alpha = getRuntimeAlpha();
           const combined = alpha * p + (1 - alpha) * normScore;
           res.locals.orderConfidence = { p, combined, viable: live.viable };
         }
@@ -2633,12 +2825,12 @@ app.get('/api/predict', async (req, res) => {
       const model = getIntradayModel();
       const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
       const normScore = (live.score || 0) / 100;
-      const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
+      const alpha = getRuntimeAlpha();
       const combined = alpha * p + (1 - alpha) * normScore;
       return { ...live, intradayProbability: p, combinedScore: combined };
     }).filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
       .sort((a, b) => b.combinedScore - a.combinedScore)
-      .filter((item) => (item.combinedScore || 0) >= (AUTO_ORDER_SETTINGS.minCombinedThreshold || 0.6));
+      .filter((item) => (item.combinedScore || 0) >= getRuntimeThreshold());
 
     const viableResults = scored.filter((item) => item.viable).slice(0, 5);
     const watchResults = scored.slice(0, 5);
@@ -2654,7 +2846,7 @@ app.get('/api/predict', async (req, res) => {
         const model = getIntradayModel();
         const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
         const normScore = (live.score || 0) / 100;
-        const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
+        const alpha = getRuntimeAlpha();
         const combined = alpha * p + (1 - alpha) * normScore;
         return { ...live, intradayProbability: p, combinedScore: combined };
       }).slice(0, 5);
@@ -2784,6 +2976,70 @@ app.post('/api/train-meta-model', async (req, res) => {
   }
 });
 
+app.get('/api/admin/metrics', async (req, res) => {
+  try {
+    loadRuntimeSettings();
+    const [market, news] = await Promise.all([loadMarketSnapshot(), loadNewsSnapshot()]);
+    const drift = computeMarketDrift(market);
+    const examples = loadRecentIntradayExamples(150);
+    const model = getIntradayModel();
+    const calibration = examples.length
+      ? calibrateModel(examples, model, 'logistic', { thresholdPct: 2.5 })
+      : null;
+    const curve = examples.length
+      ? computeCalibrationCurve(examples, model, { thresholdPct: 2.5, bins: 10 })
+      : [];
+    const health = computeCalibrationHealth(curve);
+    const tuningReport = loadWalkForwardTuningReport();
+    const candidateCounts = await countThresholdCandidates(getRuntimeAlpha(), getRuntimeThreshold());
+    res.json({
+      drift,
+      calibration: { method: calibration?.method || 'logistic', params: calibration || {}, health, curve },
+      tuningReport,
+      candidateCounts,
+      runtimeSettings: {
+        intradayAlpha: AUTO_ORDER_SETTINGS.intradayAlpha,
+        minCombinedThreshold: AUTO_ORDER_SETTINGS.minCombinedThreshold,
+        leverage: AUTO_ORDER_SETTINGS.leverage,
+        ballparkAmount: AUTO_ORDER_SETTINGS.ballparkAmount
+      },
+      generatedAt: new Date().toISOString()
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Unable to load admin metrics' });
+  }
+});
+
+app.post('/api/admin/settings', async (req, res) => {
+  try {
+    const body = req.body || {};
+    const newAlpha = Number(body.intradayAlpha);
+    const newMinCombined = Number(body.minCombinedThreshold);
+    const updated = {};
+
+    if (!Number.isNaN(newAlpha) && newAlpha >= 0 && newAlpha <= 1) {
+      updated.intradayAlpha = newAlpha;
+    }
+
+    if (!Number.isNaN(newMinCombined) && newMinCombined >= 0 && newMinCombined <= 1) {
+      updated.minCombinedThreshold = newMinCombined;
+    }
+
+    if (Object.keys(updated).length) {
+      saveRuntimeSettings(updated);
+    }
+
+    res.json({ ok: true, updated, runtimeSettings: {
+      intradayAlpha: AUTO_ORDER_SETTINGS.intradayAlpha,
+      minCombinedThreshold: AUTO_ORDER_SETTINGS.minCombinedThreshold,
+      leverage: AUTO_ORDER_SETTINGS.leverage,
+      ballparkAmount: AUTO_ORDER_SETTINGS.ballparkAmount
+    }});
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Unable to update settings' });
+  }
+});
+
 if (require.main === module) {
   loadPersistedIntradayModel();
   console.log('Live trading mode enabled');
@@ -2817,5 +3073,11 @@ module.exports = {
   trainMetaModel,
   predictMetaProbability,
   evaluateWalkForward,
-  labelIntradayOutcome
+  labelIntradayOutcome,
+  countThresholdCandidates,
+  saveRuntimeSettings,
+  loadRuntimeSettings,
+  getRuntimeAlpha,
+  getRuntimeThreshold,
+  getIntradayModel
 };

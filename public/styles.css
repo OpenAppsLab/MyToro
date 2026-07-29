@@ -243,20 +243,120 @@ span {
   gap: 20px;
 }
 
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.chart-card {
+  background: rgba(12, 22, 39, 0.98);
+  border: 1px solid rgba(88, 148, 240, 0.16);
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.calibration-chart {
+  min-height: 200px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(79,178,255,0.08));
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding: 16px;
+}
+
+.settings-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: end;
+  margin: 18px 0;
+}
+
+.settings-group {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-group label {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.settings-group input {
+  width: 100%;
+  border: 1px solid rgba(98, 137, 193, 0.28);
+  background: rgba(9, 18, 35, 0.95);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-size: 1rem;
+}
+
+.tuning-summary {
+  padding: 14px 16px;
+  border: 1px solid rgba(88, 148, 240, 0.14);
+  border-radius: 18px;
+  background: rgba(11, 20, 36, 0.92);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.alerts-row {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.alert-pill {
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-pill.healthy {
+  background: rgba(56, 189, 125, 0.14);
+  color: #a7f3d0;
+}
+
+.alert-pill.warning {
+  background: rgba(251, 191, 36, 0.14);
+  color: #fbbf24;
+}
+
+.alert-pill.danger {
+  background: rgba(248, 113, 113, 0.12);
+  color: #fecaca;
+}
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .metric-card {
   background: rgba(12, 22, 39, 0.95);
   border: 1px solid rgba(88, 148, 240, 0.14);
   border-radius: 22px;
-  padding: 14px;
+  padding: 18px;
   display: grid;
-  gap: 6px;
+  gap: 8px;
 }
 
 .metric-card span {

@@ -9,6 +9,8 @@ const {
   buildIntradayFeatureVector,
   buildMarketFeatureStats,
   labelIntradayOutcome,
+  countThresholdCandidates,
+  saveRuntimeSettings,
   DEFAULT_INTRADAY_MODEL
 } = require('../server');
 
@@ -94,11 +96,73 @@ async function run() {
   const tuning = optimizeAlphaThreshold(formattedExamples, {
     intradayModel,
     alphas: [0, 0.25, 0.5, 0.75, 1],
-    thresholds: [0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7],
+    thresholds: [0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7],
     ballparkAmount: 3000,
     leverage: 2,
     thresholdPct: 2.5
   });
+
+  async function chooseRuntimeSettings(results) {
+    const targetMin = 3;
+    const targetMax = 5;
+    const scored = [];
+
+    for (const row of results) {
+      const candidateCounts = await countThresholdCandidates(row.alpha, row.threshold);
+      scored.push({
+        ...row,
+        liveCandidateCount: candidateCounts.candidateCount,
+        topSymbols: candidateCounts.topSymbols
+      });
+    }
+
+    const valid = scored.filter((row) => row.liveCandidateCount >= targetMin && row.liveCandidateCount <= targetMax);
+    if (valid.length) {
+      return valid.sort((a, b) => b.totalPnl - a.totalPnl)[0];
+    }
+
+    const aboveMin = scored.filter((row) => row.liveCandidateCount >= targetMin);
+    if (aboveMin.length) {
+      return aboveMin.sort((a, b) => {
+        const countDiff = Math.abs(a.liveCandidateCount - ((targetMin + targetMax) / 2)) - Math.abs(b.liveCandidateCount - ((targetMin + targetMax) / 2));
+        return countDiff || b.totalPnl - a.totalPnl;
+      })[0];
+    }
+
+    const positiveCandidates = scored.filter((row) => row.liveCandidateCount > 0);
+    if (positiveCandidates.length) {
+      return positiveCandidates.sort((a, b) => b.liveCandidateCount - a.liveCandidateCount || b.totalPnl - a.totalPnl)[0];
+    }
+
+    const fallbackThresholds = [0.05, 0.1, 0.15, 0.2, 0.25, 0.3];
+    const fallbackRows = [];
+    for (const alpha of [0, 0.25, 0.5, 0.75, 1]) {
+      for (const threshold of fallbackThresholds) {
+        const candidateCounts = await countThresholdCandidates(alpha, threshold);
+        fallbackRows.push({
+          alpha,
+          threshold,
+          liveCandidateCount: candidateCounts.candidateCount,
+          topSymbols: candidateCounts.topSymbols
+        });
+      }
+    }
+
+    const fallbackPositive = fallbackRows.filter((row) => row.liveCandidateCount > 0);
+    if (fallbackPositive.length) {
+      return fallbackPositive.sort((a, b) => b.liveCandidateCount - a.liveCandidateCount)[0];
+    }
+
+    return scored.sort((a, b) => b.liveCandidateCount - a.liveCandidateCount || b.totalPnl - a.totalPnl)[0];
+  }
+
+  const recommended = await chooseRuntimeSettings(tuning.results);
+  if (recommended) {
+    saveRuntimeSettings({
+      intradayAlpha: recommended.alpha,
+      minCombinedThreshold: recommended.threshold
+    });
+  }
 
   const walkForward = evaluateWalkForward(formattedExamples, ['premarketMove', 'openingGap', 'firstHourMove', 'volumeZ', 'sentiment', 'patternStrength', 'sectorStrength', 'atrPct', 'liquidity'], intradayModel, 50);
   const logisticCalibration = calibrateModel(formattedExamples, intradayModel, 'logistic', { iterations: 300, learningRate: 0.05 });

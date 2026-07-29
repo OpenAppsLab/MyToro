@@ -18,6 +18,143 @@ let latestPredictionOptions = [];
 let selectedPredictionSymbol = '';
 let orderCreateInProgress = false;
 
+const adminPanel = document.getElementById('adminPanel');
+const adminAlerts = document.getElementById('adminAlerts');
+const driftRatioLabel = document.getElementById('driftRatio');
+const driftDetail = document.getElementById('driftDetail');
+const calibrationHealth = document.getElementById('calibrationHealth');
+const healthDetail = document.getElementById('healthDetail');
+const candidateCountLabel = document.getElementById('candidateCount');
+const candidateDetail = document.getElementById('candidateDetail');
+const calibrationChart = document.getElementById('adminCalibrationChart');
+const curveMeta = document.getElementById('curveMeta');
+const alphaControl = document.getElementById('alphaControl');
+const thresholdControl = document.getElementById('thresholdControl');
+const saveAdminButton = document.getElementById('saveAdminSettings');
+const adminTuningSummary = document.getElementById('adminTuningSummary');
+
+function showAdminAlert(message, type = 'healthy') {
+  if (!adminAlerts) return;
+  adminAlerts.innerHTML = `<span class="alert-pill ${type}">${message}</span>`;
+}
+
+function formatPercent(value) {
+  if (value === null || value === undefined || Number.isNaN(value)) {
+    return '—';
+  }
+  return `${(Number(value) * 100).toFixed(1)}%`;
+}
+
+function renderCalibrationChart(curve = []) {
+  if (!calibrationChart) return;
+  if (!curve.length) {
+    calibrationChart.innerHTML = '<div>Calibration curve unavailable</div>';
+    return;
+  }
+
+  const segments = curve.map((bin) => {
+    const x = Number(bin.meanPred || 0);
+    const y = Number(bin.meanActual || 0);
+    return `<div class="calibration-segment" style="--x:${x}; --y:${y};">
+      <span>${formatPercent(x)} → ${formatPercent(y)}</span>
+    </div>`;
+  }).join('');
+
+  calibrationChart.innerHTML = `
+    <div class="calibration-grid">
+      ${segments}
+      <div class="calibration-line"></div>
+    </div>
+  `;
+}
+
+async function loadAdminMetrics() {
+  if (!adminPanel) return;
+
+  try {
+    const response = await fetch('/api/admin/metrics');
+    const payload = await response.json();
+
+    if (!response.ok) {
+      throw new Error(payload.error || 'Unable to load admin metrics');
+    }
+
+    const drift = payload.drift || {};
+    driftRatioLabel.textContent = drift.ratio != null ? drift.ratio.toFixed(2) : '—';
+    driftDetail.textContent = drift.warning
+      ? `Current amplitude is ${drift.currentAvg} vs historical ${drift.historicalAvg}`
+      : `Stable market drift: ${drift.currentAvg} vs historical ${drift.historicalAvg}`;
+
+    const health = payload.calibration?.health || {};
+    const thresholdHint = payload.runtimeSettings?.minCombinedThreshold ?? 0.6;
+    calibrationHealth.textContent = health.degraded ? 'Degraded' : 'Healthy';
+    healthDetail.textContent = health.degraded
+      ? `Model predictions are off by ${formatPercent(health.meanGap)} on average and ${formatPercent(health.maxGap)} at worst.`
+      : `Model calibration looks stable: average gap ${formatPercent(health.meanGap)}.`;
+
+    candidateCountLabel.textContent = payload.candidateCounts?.candidateCount ?? '—';
+    candidateDetail.textContent = payload.candidateCounts?.topSymbols?.length
+      ? `Top: ${payload.candidateCounts.topSymbols.join(', ')}`
+      : `No current candidates meet the minimum strength (${formatPercent(thresholdHint)}).`;
+
+    const runtime = payload.runtimeSettings || {};
+    if (alphaControl) alphaControl.value = runtime.intradayAlpha ?? 0.7;
+    if (thresholdControl) thresholdControl.value = runtime.minCombinedThreshold ?? 0.6;
+
+    renderCalibrationChart(payload.calibration?.curve || []);
+    curveMeta.textContent = `Based on ${payload.calibration?.curve?.length || 0} calibration bins`;
+
+    const tuning = payload.tuningReport;
+    if (tuning && tuning.best) {
+      adminTuningSummary.innerHTML = `
+        <strong>Best walk-forward tuning</strong><br>
+        alpha ${tuning.best.alpha.toFixed(2)}, threshold ${tuning.best.threshold.toFixed(2)}<br>
+        total PnL $${tuning.best.totalPnl.toFixed(0)}, win rate ${(tuning.best.winRate * 100).toFixed(1)}%<br>
+        candidate set size ${payload.candidateCounts?.candidateCount ?? '—'}.
+      `;
+    } else {
+      adminTuningSummary.textContent = 'Walk-forward tuning report is unavailable or not yet generated.';
+    }
+
+    if (health.degraded || drift.warning) {
+      showAdminAlert('Warning: calibration or market drift requires review.', 'warning');
+    } else {
+      showAdminAlert('Admin diagnostics are within expected limits.', 'healthy');
+    }
+  } catch (error) {
+    showAdminAlert(error.message || 'Unable to load admin metrics', 'danger');
+  }
+}
+
+async function saveAdminSettings() {
+  if (!saveAdminButton) return;
+  saveAdminButton.disabled = true;
+
+  try {
+    const payload = {
+      intradayAlpha: Number(alphaControl?.value || 0.7),
+      minCombinedThreshold: Number(thresholdControl?.value || 0.6)
+    };
+
+    const response = await fetch('/api/admin/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json();
+    if (!response.ok) {
+      throw new Error(result.error || 'Failed to save admin settings');
+    }
+
+    showAdminAlert('Runtime settings updated successfully.', 'healthy');
+    loadAdminMetrics();
+  } catch (error) {
+    showAdminAlert(error.message || 'Unable to save admin settings', 'danger');
+  } finally {
+    saveAdminButton.disabled = false;
+  }
+}
+
 function showSelectionModal(option, order) {
   if (!selectionModal || !selectionModalText) {
     return;
@@ -166,6 +303,10 @@ function formatCountdown(minutes) {
 }
 
 async function updateSessionBadge() {
+  if (!sessionBadge || !sessionNote) {
+    return;
+  }
+
   let session;
 
   try {
@@ -413,11 +554,26 @@ if (searchButton) {
   searchButton.addEventListener('click', searchPrediction);
 }
 
+if (saveAdminButton) {
+  saveAdminButton.addEventListener('click', saveAdminSettings);
+}
+
 updateSessionBadge();
 updateDailyBalance();
 updateDailyPnl();
-setInterval(() => {
-  updateSessionBadge();
-  updateDailyBalance();
-  updateDailyPnl();
-}, 60000);
+
+if (adminPanel) {
+  loadAdminMetrics();
+  setInterval(() => {
+    updateSessionBadge();
+    updateDailyBalance();
+    updateDailyPnl();
+    loadAdminMetrics();
+  }, 60000);
+} else {
+  setInterval(() => {
+    updateSessionBadge();
+    updateDailyBalance();
+    updateDailyPnl();
+  }, 60000);
+}

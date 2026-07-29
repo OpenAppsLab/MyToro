@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-28T09:58:36.113Z",
+  "fetchedAt": "2026-07-29T09:40:27.088Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1175175000,
-      "regularMarketTime": 1785182401,
+      "regularMarketTime": 1785268800,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 29.81,
+      "regularMarketPrice": 28.45,
       "fiftyTwoWeekHigh": 62.36,
       "fiftyTwoWeekLow": 19.48,
-      "regularMarketDayHigh": 30.94,
-      "regularMarketDayLow": 28.5,
-      "regularMarketVolume": 35099308,
+      "regularMarketDayHigh": 28.87,
+      "regularMarketDayLow": 27.13,
+      "regularMarketVolume": 36118334,
       "longName": "Super Micro Computer, Inc.",
       "shortName": "Super Micro Computer, Inc.",
-      "chartPreviousClose": 23.83,
+      "chartPreviousClose": 25.5,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785225600,
-          "end": 1785245400,
+          "start": 1785312000,
+          "end": 1785331800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785245400,
-          "end": 1785268800,
+          "start": 1785331800,
+          "end": 1785355200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785268800,
-          "end": 1785283200,
+          "start": 1785355200,
+          "end": 1785369600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784640600,
       1784727000,
       1784813400,
       1784899800,
-      1785159000
+      1785159000,
+      1785245400
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            25.540000915527344,
-            32.279998779296875,
-            32.59000015258789,
-            31.329999923706055,
-            30.940000534057617
-          ],
-          "low": [
-            24.329999923706055,
-            28.5,
-            30.18000030517578,
-            29.280000686645508,
-            28.5
-          ],
-          "volume": [
-            51156400,
-            163015100,
-            86788900,
-            49701600,
-            35511300
-          ],
-          "close": [
-            25.5,
-            30.559999465942383,
-            31.200000762939453,
-            30.100000381469727,
-            29.809999465942383
-          ],
           "open": [
-            24.399999618530273,
             28.889999389648438,
             30.329999923706055,
             30.6200008392334,
-            30.600000381469727
+            30.600000381469727,
+            28.639999389648438
+          ],
+          "low": [
+            28.5,
+            30.18000030517578,
+            29.280000686645508,
+            28.5,
+            27.1299991607666
+          ],
+          "high": [
+            32.279998779296875,
+            32.59000015258789,
+            31.329999923706055,
+            30.940000534057617,
+            28.8700008392334
+          ],
+          "volume": [
+            163015100,
+            86788900,
+            49701600,
+            35912300,
+            36196300
+          ],
+          "close": [
+            30.559999465942383,
+            31.200000762939453,
+            30.100000381469727,
+            29.809999465942383,
+            28.450000762939453
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            25.5,
             30.559999465942383,
             31.200000762939453,
             30.100000381469727,
-            29.809999465942383
+            29.809999465942383,
+            28.450000762939453
           ]
         }
       ]

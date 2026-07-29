@@ -5,6 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "refresh:snapshots": "node scripts/refresh_snapshots.js",
+    "refresh:models": "node scripts/train_and_persist_intraday.js",
+    "refresh:walkforward": "node scripts/walk_forward_calibration.js",
+    "refresh:daily": "npm run refresh:snapshots && npm run refresh:models && npm run refresh:walkforward",
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
     "test:report": "npx playwright show-report",

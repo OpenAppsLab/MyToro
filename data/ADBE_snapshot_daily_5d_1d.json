@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-28T09:58:34.254Z",
+  "fetchedAt": "2026-07-29T09:40:24.933Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ADBE?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 524323800,
-      "regularMarketTime": 1785182400,
+      "regularMarketTime": 1785268801,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 237.75,
+      "regularMarketPrice": 249.18,
       "fiftyTwoWeekHigh": 376.16,
       "fiftyTwoWeekLow": 190.12,
-      "regularMarketDayHigh": 242.05,
-      "regularMarketDayLow": 229.79,
-      "regularMarketVolume": 5533910,
+      "regularMarketDayHigh": 254.06,
+      "regularMarketDayLow": 241.695,
+      "regularMarketVolume": 7889783,
       "longName": "Adobe Inc.",
       "shortName": "Adobe Inc.",
-      "chartPreviousClose": 234.74,
+      "chartPreviousClose": 227.16,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785245400,
-          "start": 1785225600,
+          "end": 1785331800,
+          "start": 1785312000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785268800,
-          "start": 1785245400,
+          "end": 1785355200,
+          "start": 1785331800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785283200,
-          "start": 1785268800,
+          "end": 1785369600,
+          "start": 1785355200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784640600,
       1784727000,
       1784813400,
       1784899800,
-      1785159000
+      1785159000,
+      1785245400
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            231.5,
-            229.66000366210938,
-            222.75,
-            226.92999267578125,
-            242.0500030517578
-          ],
           "open": [
-            222.85000610351562,
             229.66000366210938,
             222.17999267578125,
             216.5,
-            230.38999938964844
+            230.38999938964844,
+            242.85000610351562
           ],
           "low": [
-            222.3000030517578,
             218,
             210.8800048828125,
             216.14999389648438,
-            229.7899932861328
+            229.7899932861328,
+            241.69000244140625
           ],
           "close": [
-            227.16000366210938,
             218.36000061035156,
             212.1699981689453,
             225.11000061035156,
-            237.75
+            237.75,
+            249.17999267578125
           ],
           "volume": [
-            5060600,
             4361300,
             4363200,
             4719900,
-            5541200
+            5541200,
+            8073700
+          ],
+          "high": [
+            229.66000366210938,
+            222.75,
+            226.92999267578125,
+            242.0500030517578,
+            254.05999755859375
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            227.16000366210938,
             218.36000061035156,
             212.1699981689453,
             225.11000061035156,
-            237.75
+            237.75,
+            249.17999267578125
           ]
         }
       ]

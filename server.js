@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
+const DATA_DIR = path.join(__dirname, 'data');
 
 app.use(express.static(PUBLIC_DIR));
 app.use(express.json({ limit: '200kb' }));
@@ -151,6 +152,13 @@ AUTO_ORDER_SETTINGS.minCombinedThreshold = 0.6; // require combined >= this to p
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY || 'd9kd0t9r01qq9sqg0da0d9kd0t9r01qq9sqg0dag';
 const FINNHUB_BASE_URL = 'https://finnhub.io/api/v1';
 const FINNHUB_ENABLED = Boolean(FINNHUB_API_KEY);
+
+const TWELVEDATA_API_KEY = process.env.TWELVEDATA_API_KEY || 'bd65484fcc1a446f9660c0f8396c15b2';
+const TWELVEDATA_BASE_URL = 'https://api.twelvedata.com';
+const TWELVEDATA_ENABLED = Boolean(TWELVEDATA_API_KEY);
+
+const ALPHAVANTAGE_API_KEY = process.env.ALPHAVANTAGE_API_KEY || '';
+const ALPHAVANTAGE_ENABLED = Boolean(ALPHAVANTAGE_API_KEY);
 
 function isMockTradingEnabled() {
   return false;
@@ -459,6 +467,246 @@ function computeBrierScore(predictions, labels) {
   }, 0) / predictions.length;
 }
 
+function logit(value) {
+  const p = clamp(Number(value) || 0, 1e-6, 1 - 1e-6);
+  return Math.log(p / (1 - p));
+}
+
+function fitLogisticCalibration(predictions, labels, iterations = 300, learningRate = 0.05) {
+  let alpha = 1;
+  let beta = 0;
+  const n = Math.max(1, predictions.length);
+
+  for (let iter = 0; iter < iterations; iter += 1) {
+    let gradA = 0;
+    let gradB = 0;
+
+    for (let index = 0; index < n; index += 1) {
+      const p = clamp(Number(predictions[index]) || 0, 1e-6, 1 - 1e-6);
+      const x = logit(p);
+      const q = sigmoid(alpha * x + beta);
+      const y = labels[index] ? 1 : 0;
+      const error = q - y;
+      gradA += error * x;
+      gradB += error;
+    }
+
+    alpha -= learningRate * (gradA / n);
+    beta -= learningRate * (gradB / n);
+  }
+
+  return { method: 'logistic', alpha, beta };
+}
+
+function fitIsotonicCalibration(predictions, labels) {
+  const pairs = predictions.map((p, index) => ({
+    p: clamp(Number(p) || 0, 0, 1),
+    y: labels[index] ? 1 : 0
+  })).sort((a, b) => a.p - b.p);
+
+  const blocks = pairs.map((pair) => ({
+    sumY: pair.y,
+    count: 1,
+    avg: pair.y,
+    minP: pair.p,
+    maxP: pair.p
+  }));
+
+  let index = 0;
+  while (index < blocks.length - 1) {
+    if (blocks[index].avg > blocks[index + 1].avg) {
+      const merged = {
+        sumY: blocks[index].sumY + blocks[index + 1].sumY,
+        count: blocks[index].count + blocks[index + 1].count,
+        minP: blocks[index].minP,
+        maxP: blocks[index + 1].maxP
+      };
+      merged.avg = merged.sumY / merged.count;
+      blocks.splice(index, 2, merged);
+      index = Math.max(0, index - 1);
+    } else {
+      index += 1;
+    }
+  }
+
+  return { method: 'isotonic', blocks };
+}
+
+function applyIsotonicCalibration(value, calibration) {
+  const p = clamp(Number(value) || 0, 0, 1);
+  const block = calibration.blocks.find((block) => p <= block.maxP) || calibration.blocks[calibration.blocks.length - 1];
+  return block ? block.avg : p;
+}
+
+function applyCalibration(probability, calibration) {
+  if (!calibration || !calibration.method) {
+    return probability;
+  }
+
+  const p = clamp(Number(probability) || 0, 1e-6, 1 - 1e-6);
+  if (calibration.method === 'logistic') {
+    return sigmoid(calibration.alpha * logit(p) + calibration.beta);
+  }
+  if (calibration.method === 'isotonic') {
+    return applyIsotonicCalibration(p, calibration);
+  }
+
+  return probability;
+}
+
+function computeCalibrationCurve(examples, model, options = {}) {
+  const bins = Math.max(2, Number(options.bins || 10));
+  const thresholdPct = Number(options.thresholdPct || 2.5);
+  const context = options.context || {};
+  const paired = [];
+
+  examples.forEach((example) => {
+    const item = example.item || example;
+    const adv = buildAdvancedSignals(item, example.news || [], context);
+    const features = buildIntradayFeatureVector(item, adv, context);
+    const p = clamp(logisticPredict(features, model.weights, model.bias), 0, 1);
+    const label = labelIntradayOutcome(item, thresholdPct) ? 1 : 0;
+    paired.push({ p, y: label });
+  });
+
+  paired.sort((a, b) => a.p - b.p);
+  const groupSize = Math.max(1, Math.floor(paired.length / bins));
+  const curve = [];
+
+  for (let binIndex = 0; binIndex < bins; binIndex += 1) {
+    const group = paired.slice(binIndex * groupSize, binIndex === bins - 1 ? undefined : (binIndex + 1) * groupSize);
+    if (!group.length) {
+      continue;
+    }
+    const meanPred = group.reduce((sum, entry) => sum + entry.p, 0) / group.length;
+    const meanActual = group.reduce((sum, entry) => sum + entry.y, 0) / group.length;
+    curve.push({ meanPred, meanActual, count: group.length });
+  }
+
+  return curve;
+}
+
+function calibrateModel(examples, model, method = 'logistic', options = {}) {
+  const thresholdPct = Number(options.thresholdPct || 2.5);
+  const context = options.context || {};
+  const predictions = [];
+  const labels = [];
+
+  examples.forEach((example) => {
+    const item = example.item || example;
+    const adv = buildAdvancedSignals(item, example.news || [], context);
+    const features = buildIntradayFeatureVector(item, adv, context);
+    const p = clamp(logisticPredict(features, model.weights, model.bias), 0, 1);
+    predictions.push(p);
+    labels.push(labelIntradayOutcome(item, thresholdPct) ? 1 : 0);
+  });
+
+  return method === 'isotonic'
+    ? fitIsotonicCalibration(predictions, labels)
+    : fitLogisticCalibration(predictions, labels, Number(options.iterations || 300), Number(options.learningRate || 0.05));
+}
+
+function buildMetaFeatures(item, advancedSignals, intradayProbability, ensembleScore) {
+  return {
+    p: clamp(Number(intradayProbability) || 0, 0, 1),
+    s: clamp(Number(ensembleScore || 0) / 100, 0, 1),
+    volumeZ: Math.max(-1, Math.min(1, Number(advancedSignals.volumeZ || 0) / 3)),
+    sentiment: Number(advancedSignals.sentimentScore || 50) / 100,
+    patternStrength: Number(advancedSignals.candlePatternStrength || 0),
+    sectorStrength: Number(advancedSignals.sectorStrength || 0.5),
+    atrPct: Number(advancedSignals.atrPct || 0) / 10,
+    trendRegime: advancedSignals.regime === 'trend-up' ? 1 : 0,
+    meanRevertRegime: advancedSignals.regime === 'trend-down' ? 1 : 0
+  };
+}
+
+function trainMetaModel(examples, intradayModel = DEFAULT_INTRADAY_MODEL, options = {}) {
+  const featureNames = ['p', 's', 'volumeZ', 'sentiment', 'patternStrength', 'sectorStrength', 'atrPct', 'trendRegime', 'meanRevertRegime'];
+  const thresholdPct = Number(options.thresholdPct || 2.5);
+  const iterations = Number(options.iterations || 300);
+  const learningRate = Number(options.learningRate || 0.02);
+  const context = options.context || {};
+
+  const formatted = examples.map((example) => {
+    const item = example.item || example;
+    const adv = buildAdvancedSignals(item, example.news || [], context);
+    const intradayFeatures = buildIntradayFeatureVector(item, adv, context);
+    const p = clamp(logisticPredict(intradayFeatures, intradayModel.weights, intradayModel.bias), 0, 1);
+    const live = buildLiveSignal(item, example.news || [], DAILY_TARGET_PROFIT, AUTO_ORDER_SETTINGS.ballparkAmount, AUTO_ORDER_SETTINGS.leverage, context);
+    const features = buildMetaFeatures(item, adv, p, live.ensembleScore);
+    return { features, label: labelIntradayOutcome(item, thresholdPct) };
+  });
+
+  return trainLogisticRegression(formatted, featureNames, iterations, learningRate);
+}
+
+function predictMetaProbability(item, news, intradayModel, metaModel, context = {}) {
+  const adv = buildAdvancedSignals(item, news, context);
+  const intradayFeatures = buildIntradayFeatureVector(item, adv, context);
+  const p = clamp(logisticPredict(intradayFeatures, intradayModel.weights, intradayModel.bias), 0, 1);
+  const live = buildLiveSignal(item, news, DAILY_TARGET_PROFIT, AUTO_ORDER_SETTINGS.ballparkAmount, AUTO_ORDER_SETTINGS.leverage, context);
+  const metaFeatures = buildMetaFeatures(item, adv, p, live.ensembleScore);
+  const q = clamp(logisticPredict(metaFeatures, metaModel.weights, metaModel.bias), 0, 1);
+  return { probability: q, features: metaFeatures, intradayProbability: p, ensembleScore: live.ensembleScore };
+}
+
+function optimizeAlphaThreshold(examples, options = {}) {
+  const alphas = Array.isArray(options.alphas) && options.alphas.length ? options.alphas : [0, 0.25, 0.5, 0.75, 1];
+  const thresholds = Array.isArray(options.thresholds) && options.thresholds.length ? options.thresholds : [0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7];
+  const ballparkAmount = Number(options.ballparkAmount || AUTO_ORDER_SETTINGS.ballparkAmount);
+  const leverage = Number(options.leverage || AUTO_ORDER_SETTINGS.leverage);
+  const thresholdPct = Number(options.thresholdPct || 2.5);
+  const context = options.context || {};
+  const intradayModel = options.intradayModel || getIntradayModel();
+
+  const rows = examples.map((example) => {
+    const item = example.item || example;
+    const adv = buildAdvancedSignals(item, example.news || [], context);
+    const intradayFeatures = buildIntradayFeatureVector(item, adv, context);
+    const p = clamp(logisticPredict(intradayFeatures, intradayModel.weights, intradayModel.bias), 0, 1);
+    const live = buildLiveSignal(item, example.news || [], DAILY_TARGET_PROFIT, ballparkAmount, leverage, context);
+    const s = clamp(Number(live.ensembleScore || 0) / 100, 0, 1);
+    const label = labelIntradayOutcome(item, thresholdPct) ? 1 : 0;
+    const pnl = ((Number(item.dayMovePct) || 0) / 100) * ballparkAmount * leverage;
+    return { p, s, label, pnl };
+  });
+
+  const brier = computeBrierScore(rows.map((row) => row.p), rows.map((row) => row.label));
+  const results = [];
+
+  alphas.forEach((alpha) => {
+    thresholds.forEach((threshold) => {
+      let totalPnl = 0;
+      let count = 0;
+      let wins = 0;
+
+      rows.forEach((row) => {
+        const combined = alpha * row.p + (1 - alpha) * row.s;
+        if (combined >= threshold) {
+          count += 1;
+          totalPnl += row.pnl;
+          if (row.label) {
+            wins += 1;
+          }
+        }
+      });
+
+      results.push({
+        alpha,
+        threshold,
+        totalPnl,
+        orderCount: count,
+        winRate: count ? wins / count : 0,
+        averagePnl: count ? totalPnl / count : 0,
+        brier
+      });
+    });
+  });
+
+  results.sort((a, b) => b.totalPnl - a.totalPnl);
+  return { results, best: results[0], brier };
+}
+
 function buildWalkForwardSplits(examples, foldSize = 50) {
   const splits = [];
   for (let start = 0; start + foldSize * 2 <= examples.length; start += foldSize) {
@@ -585,6 +833,10 @@ function loadPersistedIntradayModel() {
   } catch (err) {
     console.error('Failed to load intraday model', err && err.message);
   }
+}
+
+function getIntradayModel() {
+  return persistedIntradayModel || DEFAULT_INTRADAY_MODEL;
 }
 
 function detectCandlePatterns(item) {
@@ -925,7 +1177,7 @@ async function rankAutoOptions({ targetProfit, ballparkAmount, leverage }) {
     const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
     // build intraday feature vector using advanced signals
     const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
-    const intradayModel = DEFAULT_INTRADAY_MODEL;
+    const intradayModel = getIntradayModel();
     const p = clamp(logisticPredict(intradayFeatures, intradayModel.weights, intradayModel.bias), 0, 1);
     const normScore = (live.score || 0) / 100;
     const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
@@ -1069,12 +1321,188 @@ async function fetchJson(url, timeoutMs = 5000, headers = {}) {
   try {
     const response = await fetch(url, { signal: controller.signal, headers });
     if (!response.ok) {
-      throw new Error(`Request failed with ${response.status} for ${url}`);
+      const error = new Error(`Request failed with ${response.status} for ${url}`);
+      error.status = response.status;
+      throw error;
     }
     return await response.json();
   } finally {
     clearTimeout(timer);
   }
+}
+
+function isProviderBlockingError(error) {
+  return error && (error.status === 403 || error.status === 429);
+}
+
+function readLocalSnapshot(fileName) {
+  try {
+    const filePath = path.join(DATA_DIR, fileName);
+    if (!fs.existsSync(filePath)) {
+      return null;
+    }
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+function loadLocalIntradaySnapshot(symbol) {
+  const raw = readLocalSnapshot(`${symbol}_snapshot_intraday_1d_5m.json`) || readLocalSnapshot(`${symbol}_snapshot.json`);
+  const result = raw?.result;
+  if (!result) {
+    return null;
+  }
+
+  const quote = result?.indicators?.quote?.[0] || {};
+  const closes = Array.isArray(quote.close) ? quote.close : [];
+  const open = Array.isArray(quote.open) ? quote.open : [];
+  const volumes = Array.isArray(quote.volume) ? quote.volume : [];
+  const timestamps = Array.isArray(result.timestamp) ? result.timestamp : [];
+
+  if (!closes.length) {
+    return null;
+  }
+
+  const currentPrice = closes[closes.length - 1] || closes[0] || 0;
+  const dayOpen = open[0] || currentPrice;
+  const lastClose = closes.length > 1 ? closes[closes.length - 2] : closes[0] || 0;
+  const volume = volumes[volumes.length - 1] || 0;
+  const changePct = lastClose ? ((currentPrice - lastClose) / lastClose) * 100 : 0;
+  const dayMovePct = dayOpen ? ((currentPrice - dayOpen) / dayOpen) * 100 : 0;
+
+  return {
+    currentPrice,
+    changePct,
+    dayMovePct,
+    volume,
+    updatedAt: timestamps[timestamps.length - 1] || Date.now()
+  };
+}
+
+function loadLocalDailySnapshot(symbol) {
+  const raw = readLocalSnapshot(`${symbol}_snapshot_daily_5d_1d.json`) || readLocalSnapshot(`${symbol}_snapshot_daily_5d_1d.json`);
+  const result = raw?.result;
+  if (!result) {
+    return null;
+  }
+
+  const closes = Array.isArray(result?.indicators?.quote?.[0]?.close) ? result.indicators.quote[0].close : [];
+  if (closes.length < 2) {
+    return null;
+  }
+
+  const previousCompletedClose = Number(closes[closes.length - 3] || closes[0] || 0);
+  const yesterdayClose = Number(closes[closes.length - 2] || closes[closes.length - 1] || 0);
+  if (!previousCompletedClose || !yesterdayClose) {
+    return null;
+  }
+
+  return { previousCompletedClose, yesterdayClose };
+}
+
+let marketRefreshPromise = null;
+let yesterdayRefreshPromise = null;
+
+function buildLocalMarketSnapshot() {
+  return MARKET_SYMBOLS.map((item) => {
+    const local = loadLocalIntradaySnapshot(item.symbol);
+    return {
+      ...item,
+      currentPrice: local?.currentPrice || 0,
+      changePct: local?.changePct || 0,
+      dayMovePct: local?.dayMovePct || 0,
+      volume: local?.volume || 0,
+      updatedAt: local?.updatedAt || Date.now()
+    };
+  });
+}
+
+function buildLocalYesterdaySnapshot(deposit, leverage, market = []) {
+  const snapshots = MARKET_SYMBOLS.map((item) => {
+    const local = loadLocalDailySnapshot(item.symbol);
+    if (!local) {
+      return null;
+    }
+
+    const movePct = ((local.yesterdayClose - local.previousCompletedClose) / local.previousCompletedClose) * 100;
+    return {
+      symbol: item.symbol,
+      name: item.name,
+      region: item.region,
+      previousClose: local.previousCompletedClose,
+      latestClose: local.yesterdayClose,
+      movePct,
+      estimatedProfit: deposit * (movePct / 100),
+      leverageProfit: deposit * (movePct / 100) * leverage
+    };
+  }).filter(Boolean);
+
+  const positiveHistory = snapshots
+    .filter((item) => item.movePct > 0)
+    .sort((a, b) => b.movePct - a.movePct);
+
+  const fallbackLive = (market || [])
+    .map((item) => ({
+      symbol: item.symbol,
+      name: item.name,
+      region: item.region,
+      currentPrice: item.currentPrice,
+      movePct: item.dayMovePct,
+      estimatedProfit: deposit * ((item.dayMovePct || 0) / 100),
+      leverageProfit: deposit * ((item.dayMovePct || 0) / 100) * leverage
+    }))
+    .filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
+    .sort((a, b) => b.movePct - a.movePct);
+
+  return positiveHistory.length >= 5
+    ? positiveHistory.slice(0, 5)
+    : [...positiveHistory, ...fallbackLive.filter((item) => !positiveHistory.some((entry) => entry.symbol === item.symbol))].slice(0, 5);
+}
+
+async function refreshMarketSnapshot() {
+  if (marketRefreshPromise) {
+    return marketRefreshPromise;
+  }
+
+  marketRefreshPromise = (async () => {
+    try {
+      const result = await fetchMarketSnapshot();
+      marketCache = {
+        expiresAt: Date.now() + MARKET_CACHE_TTL_MS,
+        data: result
+      };
+      return result;
+    } finally {
+      marketRefreshPromise = null;
+    }
+  })();
+
+  return marketRefreshPromise;
+}
+
+async function loadMarketSnapshot() {
+  const now = Date.now();
+  if (marketCache.expiresAt > now) {
+    return marketCache.data;
+  }
+
+  if (marketCache.data?.length) {
+    refreshMarketSnapshot().catch(() => {});
+    return marketCache.data;
+  }
+
+  const localMarket = buildLocalMarketSnapshot();
+  if (localMarket.length) {
+    marketCache = {
+      expiresAt: Date.now() + 5000,
+      data: localMarket
+    };
+    refreshMarketSnapshot().catch(() => {});
+    return localMarket;
+  }
+
+  return await refreshMarketSnapshot();
 }
 
 async function fetchFinnhubJson(path, params = {}, timeoutMs = 5000) {
@@ -1085,6 +1513,44 @@ async function fetchFinnhubJson(path, params = {}, timeoutMs = 5000) {
   const query = new URLSearchParams({ token: FINNHUB_API_KEY, ...params });
   const url = `${FINNHUB_BASE_URL}${path}?${query.toString()}`;
   return fetchJson(url, timeoutMs, { Accept: 'application/json' });
+}
+
+async function fetchTwelveDataJson(path, params = {}, timeoutMs = 5000) {
+  if (!TWELVEDATA_ENABLED) {
+    throw new Error('TwelveData is disabled because TWELVEDATA_API_KEY is not configured.');
+  }
+
+  const query = new URLSearchParams({ apikey: TWELVEDATA_API_KEY, ...params });
+  const url = `${TWELVEDATA_BASE_URL}${path}?${query.toString()}`;
+  return fetchJson(url, timeoutMs, { Accept: 'application/json' });
+}
+
+async function fetchAlphaVantageJson(params = {}, timeoutMs = 5000) {
+  if (!ALPHAVANTAGE_ENABLED) {
+    throw new Error('Alpha Vantage is disabled because ALPHAVANTAGE_API_KEY is not configured.');
+  }
+
+  const query = new URLSearchParams({ apikey: ALPHAVANTAGE_API_KEY, ...params });
+  const url = `https://www.alphavantage.co/query?${query.toString()}`;
+  return fetchJson(url, timeoutMs, { Accept: 'application/json' });
+}
+
+function normalizeAlphaVantageSeries(series) {
+  if (!series || typeof series !== 'object') {
+    return [];
+  }
+  return Object.keys(series)
+    .sort()
+    .map((datetime) => ({ datetime, ...series[datetime] }));
+}
+
+function normalizeTwelveDataValues(values = []) {
+  if (!Array.isArray(values) || values.length === 0) {
+    return [];
+  }
+
+  const sorted = [...values].sort((a, b) => String(a.datetime).localeCompare(String(b.datetime)));
+  return sorted;
 }
 
 function normalizeFinnhubNews(item) {
@@ -1109,44 +1575,130 @@ function mapLimit(items, limit, worker) {
   return Promise.all(workerPool).then(() => results);
 }
 
-async function loadMarketSnapshot() {
-  const now = Date.now();
-  if (marketCache.expiresAt > now) {
-    return marketCache.data;
-  }
+async function fetchMarketSnapshot() {
+  let finnHubBad = false;
+  let twelveDataBad = false;
+  let alphaVantageBad = false;
 
-  const market = await mapLimit(MARKET_SYMBOLS, 4, async (item) => {
-    try {
-      const quote = await fetchFinnhubJson('/quote', { symbol: item.symbol }, 4500);
-      const candle = await fetchFinnhubJson('/stock/candle', {
-        symbol: item.symbol,
-        resolution: '5',
-        from: Math.floor((Date.now() - 30 * 60 * 1000) / 1000),
-        to: Math.floor(Date.now() / 1000)
-      }, 4500);
+  const buildMarketEntry = async (item) => {
+    let entry = null;
 
-      const currentPrice = Number(quote.c || 0);
-      const previousClose = Number(quote.pc || 0);
-      const dayOpen = Number(candle.o?.[0] || quote.o || currentPrice || 0);
-      const volume = Number(candle.v?.[candle.v.length - 1] || 0);
-      const lastClose = Number(candle.c?.[candle.c.length - 2] || quote.pc || 0);
-      const currentCandleClose = Number(candle.c?.[candle.c.length - 1] || currentPrice || 0);
-      const changePct = previousClose ? ((currentPrice - previousClose) / previousClose) * 100 : 0;
-      const dayMovePct = dayOpen ? ((currentCandleClose - dayOpen) / dayOpen) * 100 : 0;
-      const closeHistory = Array.isArray(candle.c) ? candle.c.filter((value) => Number.isFinite(Number(value))) : [];
-      const volumeHistory = Array.isArray(candle.v) ? candle.v.filter((value) => Number.isFinite(Number(value))) : [];
+    if (!finnHubBad) {
+      try {
+        const quote = await fetchFinnhubJson('/quote', { symbol: item.symbol }, 4500);
+        const candle = await fetchFinnhubJson('/stock/candle', {
+          symbol: item.symbol,
+          resolution: '5',
+          from: Math.floor((Date.now() - 30 * 60 * 1000) / 1000),
+          to: Math.floor(Date.now() / 1000)
+        }, 4500);
 
-      return {
-        ...item,
-        currentPrice,
-        changePct,
-        dayMovePct,
-        volume,
-        closeHistory,
-        volumeHistory,
-        updatedAt: Date.now()
-      };
-    } catch (error) {
+        const currentPrice = Number(quote.c || 0);
+        const previousClose = Number(quote.pc || 0);
+        const dayOpen = Number(candle.o?.[0] || quote.o || currentPrice || 0);
+        const volume = Number(candle.v?.[candle.v.length - 1] || 0);
+        const lastClose = Number(candle.c?.[candle.c.length - 2] || quote.pc || 0);
+        const currentCandleClose = Number(candle.c?.[candle.c.length - 1] || currentPrice || 0);
+        const changePct = previousClose ? ((currentPrice - previousClose) / previousClose) * 100 : 0;
+        const dayMovePct = dayOpen ? ((currentCandleClose - dayOpen) / dayOpen) * 100 : 0;
+        const closeHistory = Array.isArray(candle.c) ? candle.c.filter((value) => Number.isFinite(Number(value))) : [];
+        const volumeHistory = Array.isArray(candle.v) ? candle.v.filter((value) => Number.isFinite(Number(value))) : [];
+
+        entry = {
+          ...item,
+          currentPrice,
+          changePct,
+          dayMovePct,
+          volume,
+          closeHistory,
+          volumeHistory,
+          updatedAt: Date.now()
+        };
+      } catch (error) {
+        if (isProviderBlockingError(error)) {
+          finnHubBad = true;
+        }
+      }
+    }
+
+    if (!entry && !twelveDataBad && TWELVEDATA_ENABLED) {
+      try {
+        const data = await fetchTwelveDataJson('/time_series', {
+          symbol: item.symbol,
+          interval: '5min',
+          outputsize: 100,
+          format: 'JSON'
+        }, 4500);
+
+        const values = normalizeTwelveDataValues(data.values || []);
+        if (values.length >= 2) {
+          const current = values[values.length - 1];
+          const previous = values[values.length - 2];
+          const dayOpen = Number(values[0]?.open || current?.close || 0);
+          const currentPrice = Number(current.close || 0);
+          const lastClose = Number(previous.close || 0);
+          const volume = Number(current.volume || 0);
+          const changePct = lastClose ? ((currentPrice - lastClose) / lastClose) * 100 : 0;
+          const dayMovePct = dayOpen ? ((currentPrice - dayOpen) / dayOpen) * 100 : 0;
+
+          entry = {
+            ...item,
+            currentPrice,
+            changePct,
+            dayMovePct,
+            volume,
+            updatedAt: Date.now()
+          };
+        }
+      } catch (error) {
+        if (isProviderBlockingError(error)) {
+          twelveDataBad = true;
+        }
+      }
+    }
+
+    if (!entry && !alphaVantageBad && ALPHAVANTAGE_ENABLED) {
+      try {
+        const response = await fetchAlphaVantageJson({
+          function: 'TIME_SERIES_INTRADAY',
+          symbol: item.symbol,
+          interval: '5min',
+          outputsize: 'compact',
+          datatype: 'json'
+        }, 4500);
+
+        if (response.Note || response['Error Message']) {
+          throw new Error(response.Note || response['Error Message']);
+        }
+
+        const series = normalizeAlphaVantageSeries(response['Time Series (5min)']);
+        if (series.length >= 2) {
+          const current = series[series.length - 1];
+          const previous = series[series.length - 2];
+          const dayOpen = Number(series[0]?.['1. open'] || current?.['4. close'] || 0);
+          const currentPrice = Number(current?.['4. close'] || 0);
+          const lastClose = Number(previous?.['4. close'] || 0);
+          const volume = Number(current?.['5. volume'] || 0);
+          const changePct = lastClose ? ((currentPrice - lastClose) / lastClose) * 100 : 0;
+          const dayMovePct = dayOpen ? ((currentPrice - dayOpen) / dayOpen) * 100 : 0;
+
+          entry = {
+            ...item,
+            currentPrice,
+            changePct,
+            dayMovePct,
+            volume,
+            updatedAt: Date.now()
+          };
+        }
+      } catch (error) {
+        if (isProviderBlockingError(error)) {
+          alphaVantageBad = true;
+        }
+      }
+    }
+
+    if (!entry) {
       try {
         const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(item.symbol)}?interval=5m&range=1d`;
         const data = await fetchJson(url, 4500);
@@ -1163,7 +1715,7 @@ async function loadMarketSnapshot() {
         const changePct = lastClose ? ((currentPrice - lastClose) / lastClose) * 100 : 0;
         const dayMovePct = dayOpen ? ((currentPrice - dayOpen) / dayOpen) * 100 : 0;
 
-        return {
+        entry = {
           ...item,
           currentPrice,
           changePct,
@@ -1171,19 +1723,46 @@ async function loadMarketSnapshot() {
           volume,
           updatedAt: timestamps[timestamps.length - 1] || Date.now()
         };
-      } catch (fallbackError) {
-        console.warn(`Unable to load market snapshot for ${item.symbol}: ${fallbackError.message || fallbackError}`);
-        return {
+      } catch (error) {
+        if (isProviderBlockingError(error)) {
+          console.warn(`Yahoo market fallback blocked for ${item.symbol}: ${error.message || error}`);
+        }
+      }
+    }
+
+    if (!entry) {
+      const local = loadLocalIntradaySnapshot(item.symbol);
+      if (local) {
+        entry = {
           ...item,
-          currentPrice: 0,
-          changePct: 0,
-          dayMovePct: 0,
-          volume: 0,
+          ...local,
           updatedAt: Date.now()
         };
       }
     }
-  });
+
+    if (!entry) {
+      entry = {
+        ...item,
+        currentPrice: 0,
+        changePct: 0,
+        dayMovePct: 0,
+        volume: 0,
+        updatedAt: Date.now()
+      };
+    }
+
+    return entry;
+  };
+
+  const market = [];
+  if (MARKET_SYMBOLS.length > 0) {
+    market.push(await buildMarketEntry(MARKET_SYMBOLS[0]));
+    if (MARKET_SYMBOLS.length > 1) {
+      const remainder = await mapLimit(MARKET_SYMBOLS.slice(1), 4, buildMarketEntry);
+      market.push(...remainder);
+    }
+  }
 
   const validMarket = market.filter((entry) => Number.isFinite(entry.currentPrice) && entry.currentPrice > 0);
   if (!validMarket.length && Array.isArray(marketCache.data) && marketCache.data.length) {
@@ -1199,12 +1778,7 @@ async function loadMarketSnapshot() {
   return marketCache.data;
 }
 
-async function loadNewsSnapshot() {
-  const now = Date.now();
-  if (newsCache.expiresAt > now) {
-    return newsCache.data;
-  }
-
+async function refreshNewsSnapshot() {
   const feeds = [
     'https://feeds.finance.yahoo.com/rss/2.0/headline?s=QQQ&region=US&lang=en-US',
     'https://feeds.finance.yahoo.com/rss/2.0/headline?s=SPY&region=US&lang=en-US',
@@ -1244,50 +1818,148 @@ async function loadNewsSnapshot() {
   return newsCache.data;
 }
 
-async function loadYesterdaySnapshot(deposit, leverage) {
+async function loadNewsSnapshot() {
   const now = Date.now();
-  if (yesterdayCache.expiresAt > now && yesterdayCache.data?.length) {
-    return yesterdayCache.data;
+  if (newsCache.expiresAt > now) {
+    return newsCache.data;
   }
 
+  if (newsCache.data?.length) {
+    refreshNewsSnapshot().catch(() => {});
+    return newsCache.data;
+  }
+
+  refreshNewsSnapshot().catch(() => {});
+  return [];
+}
+
+async function fetchYesterdaySnapshot(deposit, leverage) {
   const market = await loadMarketSnapshot();
-  const historyData = await mapLimit(MARKET_SYMBOLS, 8, async (item) => {
-    try {
-      const chartUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(item.symbol)}?interval=1d&range=5d`;
-      const data = await fetchJson(chartUrl, 4500);
-      const result = data.chart?.result?.[0];
-      const closes = result?.indicators?.quote?.[0]?.close || [];
+  let finnHubBad = false;
+  let twelveDataBad = false;
+  let alphaVantageBad = false;
 
-      if (closes.length < 3) {
-        return null;
+  const historyData = [];
+  for (const item of MARKET_SYMBOLS) {
+    let previousCompletedClose = 0;
+    let yesterdayClose = 0;
+
+    if (!finnHubBad) {
+      try {
+        const nowSec = Math.floor(Date.now() / 1000);
+        const fiveDaysAgoSec = Math.floor((Date.now() - 5 * 24 * 60 * 60 * 1000) / 1000);
+        const candle = await fetchFinnhubJson('/stock/candle', {
+          symbol: item.symbol,
+          resolution: 'D',
+          from: fiveDaysAgoSec,
+          to: nowSec
+        }, 4500);
+
+        const closes = Array.isArray(candle.c) ? candle.c : [];
+        if (closes.length >= 3) {
+          previousCompletedClose = Number(closes[closes.length - 3] || 0);
+          yesterdayClose = Number(closes[closes.length - 2] || 0);
+        }
+      } catch (finnhubError) {
+        if (isProviderBlockingError(finnhubError)) {
+          finnHubBad = true;
+        }
+        console.warn(`Finnhub yesterday fallback failed for ${item.symbol}: ${finnhubError.message || finnhubError}`);
       }
-
-      const previousCompletedClose = Number(closes[closes.length - 3] || 0);
-      const yesterdayClose = Number(closes[closes.length - 2] || 0);
-
-      if (!previousCompletedClose || !yesterdayClose) {
-        return null;
-      }
-
-      const dayMovePct = ((yesterdayClose - previousCompletedClose) / previousCompletedClose) * 100;
-      const estimatedProfit = deposit * (dayMovePct / 100);
-      const leverageProfit = estimatedProfit * leverage;
-
-      return {
-        symbol: item.symbol,
-        name: item.name,
-        region: item.region,
-        previousClose: previousCompletedClose,
-        latestClose: yesterdayClose,
-        movePct: dayMovePct,
-        estimatedProfit,
-        leverageProfit
-      };
-    } catch (error) {
-      // If a single Yahoo request fails or is rate limited, continue with other symbols.
-      return null;
     }
-  });
+
+    if ((!previousCompletedClose || !yesterdayClose) && !twelveDataBad && TWELVEDATA_ENABLED) {
+      try {
+        const data = await fetchTwelveDataJson('/time_series', {
+          symbol: item.symbol,
+          interval: '1day',
+          outputsize: 5,
+          format: 'JSON'
+        }, 4500);
+
+        const values = normalizeTwelveDataValues(data.values || []);
+        if (values.length >= 3) {
+          previousCompletedClose = Number(values[values.length - 3]?.close || 0);
+          yesterdayClose = Number(values[values.length - 2]?.close || 0);
+        }
+      } catch (twelveError) {
+        if (isProviderBlockingError(twelveError)) {
+          twelveDataBad = true;
+        }
+        console.warn(`TwelveData yesterday fallback failed for ${item.symbol}: ${twelveError.message || twelveError}`);
+      }
+    }
+
+    if ((!previousCompletedClose || !yesterdayClose) && !alphaVantageBad && ALPHAVANTAGE_ENABLED) {
+      try {
+        const response = await fetchAlphaVantageJson({
+          function: 'TIME_SERIES_DAILY',
+          symbol: item.symbol,
+          outputsize: 'compact',
+          datatype: 'json'
+        }, 4500);
+
+        if (response.Note || response['Error Message']) {
+          throw new Error(response.Note || response['Error Message']);
+        }
+
+        const series = normalizeAlphaVantageSeries(response['Time Series (Daily)']);
+        if (series.length >= 3) {
+          previousCompletedClose = Number(series[series.length - 3]?.['4. close'] || 0);
+          yesterdayClose = Number(series[series.length - 2]?.['4. close'] || 0);
+        }
+      } catch (alphaError) {
+        if (isProviderBlockingError(alphaError)) {
+          alphaVantageBad = true;
+        }
+        console.warn(`Alpha Vantage yesterday fallback failed for ${item.symbol}: ${alphaError.message || alphaError}`);
+      }
+    }
+
+    if (!previousCompletedClose || !yesterdayClose) {
+      try {
+        const chartUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(item.symbol)}?interval=1d&range=5d`;
+        const data = await fetchJson(chartUrl, 4500);
+        const result = data.chart?.result?.[0];
+        const closes = result?.indicators?.quote?.[0]?.close || [];
+
+        if (closes.length >= 3) {
+          previousCompletedClose = Number(closes[closes.length - 3] || 0);
+          yesterdayClose = Number(closes[closes.length - 2] || 0);
+        }
+      } catch (yahooError) {
+        console.warn(`Yahoo yesterday fallback failed for ${item.symbol}: ${yahooError.message || yahooError}`);
+      }
+    }
+
+    if (!previousCompletedClose || !yesterdayClose) {
+      const local = loadLocalDailySnapshot(item.symbol);
+      if (local) {
+        previousCompletedClose = Number(local.previousCompletedClose || 0);
+        yesterdayClose = Number(local.yesterdayClose || 0);
+      }
+    }
+
+    if (!previousCompletedClose || !yesterdayClose) {
+      historyData.push(null);
+      continue;
+    }
+
+    const dayMovePct = ((yesterdayClose - previousCompletedClose) / previousCompletedClose) * 100;
+    const estimatedProfit = deposit * (dayMovePct / 100);
+    const leverageProfit = estimatedProfit * leverage;
+
+    historyData.push({
+      symbol: item.symbol,
+      name: item.name,
+      region: item.region,
+      previousClose: previousCompletedClose,
+      latestClose: yesterdayClose,
+      movePct: dayMovePct,
+      estimatedProfit,
+      leverageProfit
+    });
+  }
 
   const positiveHistory = historyData
     .filter(Boolean)
@@ -1317,6 +1989,51 @@ async function loadYesterdaySnapshot(deposit, leverage) {
   };
 
   return yesterdayCache.data;
+}
+
+async function refreshYesterdaySnapshot(deposit, leverage) {
+  if (yesterdayRefreshPromise) {
+    return yesterdayRefreshPromise;
+  }
+
+  yesterdayRefreshPromise = (async () => {
+    try {
+      const result = await fetchYesterdaySnapshot(deposit, leverage);
+      yesterdayCache = {
+        expiresAt: Date.now() + YESTERDAY_CACHE_TTL_MS,
+        data: result
+      };
+      return result;
+    } finally {
+      yesterdayRefreshPromise = null;
+    }
+  })();
+
+  return yesterdayRefreshPromise;
+}
+
+async function loadYesterdaySnapshot(deposit, leverage) {
+  const now = Date.now();
+  if (yesterdayCache.expiresAt > now && yesterdayCache.data?.length) {
+    return yesterdayCache.data;
+  }
+
+  if (yesterdayCache.data?.length) {
+    refreshYesterdaySnapshot(deposit, leverage).catch(() => {});
+    return yesterdayCache.data;
+  }
+
+  const localResults = buildLocalYesterdaySnapshot(deposit, leverage);
+  if (localResults.length) {
+    yesterdayCache = {
+      expiresAt: Date.now() + 5000,
+      data: localResults
+    };
+    refreshYesterdaySnapshot(deposit, leverage).catch(() => {});
+    return localResults;
+  }
+
+  return await refreshYesterdaySnapshot(deposit, leverage);
 }
 
 function buildOrderRecord(body) {
@@ -1750,7 +2467,7 @@ app.get('/api/premarket', async (req, res) => {
     const scored = (filteredMarket || []).map((item) => {
       const signal = buildLiveSignal(item, news, 100, 3000, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
       const intradayFeatures = buildIntradayFeatureVector(item, signal, { marketStats });
-      const model = DEFAULT_INTRADAY_MODEL;
+      const model = getIntradayModel();
       const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
       const normScore = (signal.score || 0) / 100;
       const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
@@ -1819,7 +2536,8 @@ app.post('/api/orders', async (req, res) => {
           const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
           const marketStats = buildMarketFeatureStats(market);
           const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
-          const p = clamp(logisticPredict(intradayFeatures, DEFAULT_INTRADAY_MODEL.weights, DEFAULT_INTRADAY_MODEL.bias), 0, 1);
+          const model = getIntradayModel();
+          const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
           const normScore = (live.score || 0) / 100;
           const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
           const combined = alpha * p + (1 - alpha) * normScore;
@@ -1912,7 +2630,7 @@ app.get('/api/predict', async (req, res) => {
     const scored = (filteredMarket || []).map((item) => {
       const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, 2, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
       const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
-      const model = DEFAULT_INTRADAY_MODEL;
+      const model = getIntradayModel();
       const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
       const normScore = (live.score || 0) / 100;
       const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
@@ -1933,7 +2651,7 @@ app.get('/api/predict', async (req, res) => {
       result = filteredMarket.slice(0, 5).map((item) => {
         const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, 2, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
         const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
-        const model = DEFAULT_INTRADAY_MODEL;
+        const model = getIntradayModel();
         const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
         const normScore = (live.score || 0) / 100;
         const alpha = Number(AUTO_ORDER_SETTINGS.intradayAlpha || 0.7);
@@ -2010,6 +2728,62 @@ app.post('/api/backtest-intraday', async (req, res) => {
   }
 });
 
+app.post('/api/calibrate-intraday', async (req, res) => {
+  try {
+    const body = req.body || {};
+    const examples = Array.isArray(body.examples) ? body.examples : [];
+    const method = String(body.method || 'logistic').toLowerCase();
+    const model = body.model || getIntradayModel();
+    const options = body.options || {};
+
+    if (!examples.length) {
+      return res.status(400).json({ error: 'Provide examples array in request body' });
+    }
+
+    const calibration = calibrateModel(examples, model, method, options);
+    const curve = computeCalibrationCurve(examples, model, options);
+    res.json({ calibration, curve, method, total: examples.length });
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Calibration failed' });
+  }
+});
+
+app.post('/api/optimize-alpha', async (req, res) => {
+  try {
+    const body = req.body || {};
+    const examples = Array.isArray(body.examples) ? body.examples : [];
+    const options = body.options || {};
+    const intradayModel = body.intradayModel || getIntradayModel();
+
+    if (!examples.length) {
+      return res.status(400).json({ error: 'Provide examples array in request body' });
+    }
+
+    const result = optimizeAlphaThreshold(examples, { ...options, intradayModel });
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Alpha optimization failed' });
+  }
+});
+
+app.post('/api/train-meta-model', async (req, res) => {
+  try {
+    const body = req.body || {};
+    const examples = Array.isArray(body.examples) ? body.examples : [];
+    const intradayModel = body.intradayModel || getIntradayModel();
+    const options = body.options || {};
+
+    if (!examples.length) {
+      return res.status(400).json({ error: 'Provide examples array in request body' });
+    }
+
+    const metaModel = trainMetaModel(examples, intradayModel, options);
+    res.json({ metaModel, options, total: examples.length });
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Meta-model training failed' });
+  }
+});
+
 if (require.main === module) {
   loadPersistedIntradayModel();
   console.log('Live trading mode enabled');
@@ -2034,5 +2808,14 @@ module.exports = {
   // Intraday helpers
   predictIntradayPicks,
   trainIntradayModel,
+  buildAdvancedSignals,
+  buildIntradayFeatureVector,
+  buildMarketFeatureStats,
+  calibrateModel,
+  computeCalibrationCurve,
+  optimizeAlphaThreshold,
+  trainMetaModel,
+  predictMetaProbability,
+  evaluateWalkForward,
   labelIntradayOutcome
 };

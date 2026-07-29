@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-28T09:58:44.731Z",
+  "fetchedAt": "2026-07-29T09:40:37.200Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MA?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1148563800,
-      "regularMarketTime": 1785182402,
+      "regularMarketTime": 1785268803,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 551.71,
+      "regularMarketPrice": 562.75,
       "fiftyTwoWeekHigh": 601.77,
       "fiftyTwoWeekLow": 464.52,
-      "regularMarketDayHigh": 553.89,
-      "regularMarketDayLow": 542.024,
-      "regularMarketVolume": 2358237,
+      "regularMarketDayHigh": 564.614,
+      "regularMarketDayLow": 557.43,
+      "regularMarketVolume": 3124642,
       "longName": "Mastercard Incorporated",
       "shortName": "Mastercard Incorporated",
-      "chartPreviousClose": 547.44,
+      "chartPreviousClose": 538.3,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785245400,
-          "start": 1785225600,
+          "start": 1785312000,
+          "end": 1785331800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785268800,
-          "start": 1785245400,
+          "start": 1785331800,
+          "end": 1785355200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785283200,
-          "start": 1785268800,
+          "start": 1785355200,
+          "end": 1785369600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784640600,
       1784727000,
       1784813400,
       1784899800,
-      1785159000
+      1785159000,
+      1785245400
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            543.760009765625,
-            538.9400024414062,
-            527.97998046875,
-            531.4600219726562,
-            543.1799926757812
-          ],
-          "low": [
-            536.8499755859375,
-            530.72998046875,
-            523.6099853515625,
-            529.6900024414062,
-            542.02001953125
-          ],
-          "volume": [
-            2935700,
-            2313200,
-            2071700,
-            2551600,
-            2365000
-          ],
           "close": [
-            538.2999877929688,
             531.97998046875,
             530.2899780273438,
             539.6599731445312,
-            551.7100219726562
+            551.7100219726562,
+            562.75
+          ],
+          "low": [
+            530.72998046875,
+            523.6099853515625,
+            529.6900024414062,
+            542.02001953125,
+            557.4299926757812
           ],
           "high": [
-            544.3400268554688,
             540,
             530.8800048828125,
             540,
-            553.8900146484375
+            553.8900146484375,
+            564.6099853515625
+          ],
+          "volume": [
+            2313200,
+            2071700,
+            2551600,
+            2365000,
+            3126100
+          ],
+          "open": [
+            538.9400024414062,
+            527.97998046875,
+            531.4600219726562,
+            543.1799926757812,
+            561.030029296875
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            538.2999877929688,
             531.97998046875,
             530.2899780273438,
             539.6599731445312,
-            551.7100219726562
+            551.7100219726562,
+            562.75
           ]
         }
       ]

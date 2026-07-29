@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-28T09:58:47.150Z",
+  "fetchedAt": "2026-07-29T09:40:40.253Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785182402,
+      "regularMarketTime": 1785268803,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 62.13,
+      "regularMarketPrice": 62.62,
       "fiftyTwoWeekHigh": 62.99,
       "fiftyTwoWeekLow": 44.75,
-      "regularMarketDayHigh": 62.985,
-      "regularMarketDayLow": 61.84,
-      "regularMarketVolume": 36783745,
+      "regularMarketDayHigh": 62.655,
+      "regularMarketDayLow": 61.9,
+      "regularMarketVolume": 22507659,
       "longName": "Bank of America Corporation",
       "shortName": "Bank of America Corporation",
-      "chartPreviousClose": 60.42,
+      "chartPreviousClose": 61.22,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785225600,
-          "end": 1785245400,
+          "start": 1785312000,
+          "end": 1785331800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785245400,
-          "end": 1785268800,
+          "start": 1785331800,
+          "end": 1785355200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785268800,
-          "end": 1785283200,
+          "start": 1785355200,
+          "end": 1785369600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784640600,
       1784727000,
       1784813400,
       1784899800,
-      1785159000
+      1785159000,
+      1785245400
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            60.06999969482422,
-            61.150001525878906,
-            60.709999084472656,
-            61.279998779296875,
-            61.84000015258789
-          ],
-          "close": [
-            61.220001220703125,
-            61.619998931884766,
-            61.279998779296875,
-            62.04999923706055,
-            62.130001068115234
-          ],
-          "high": [
-            61.529998779296875,
-            61.900001525878906,
-            61.5,
-            62.279998779296875,
-            62.9900016784668
-          ],
           "open": [
-            60.900001525878906,
             61.400001525878906,
             61.349998474121094,
             61.529998779296875,
-            62.52000045776367
+            62.52000045776367,
+            62.29999923706055
+          ],
+          "low": [
+            61.150001525878906,
+            60.709999084472656,
+            61.279998779296875,
+            61.84000015258789,
+            61.900001525878906
+          ],
+          "high": [
+            61.900001525878906,
+            61.5,
+            62.279998779296875,
+            62.9900016784668,
+            62.65999984741211
           ],
           "volume": [
-            31631600,
             51484900,
             29253200,
             29035400,
-            36899800
+            36899800,
+            28724700
+          ],
+          "close": [
+            61.619998931884766,
+            61.279998779296875,
+            62.04999923706055,
+            62.130001068115234,
+            62.619998931884766
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            61.220001220703125,
             61.619998931884766,
             61.279998779296875,
             62.04999923706055,
-            62.130001068115234
+            62.130001068115234,
+            62.619998931884766
           ]
         }
       ]

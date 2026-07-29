@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-28T09:58:31.413Z",
+  "fetchedAt": "2026-07-29T09:40:21.159Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1337347800,
-      "regularMarketTime": 1785182401,
+      "regularMarketTime": 1785268801,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 593.87,
+      "regularMarketPrice": 593.41,
       "fiftyTwoWeekHigh": 796.25,
       "fiftyTwoWeekLow": 520.26,
-      "regularMarketDayHigh": 611.26,
-      "regularMarketDayLow": 593.15,
-      "regularMarketVolume": 11106056,
+      "regularMarketDayHigh": 601,
+      "regularMarketDayLow": 587,
+      "regularMarketVolume": 10870647,
       "longName": "Meta Platforms, Inc.",
       "shortName": "Meta Platforms, Inc.",
-      "chartPreviousClose": 645.85,
+      "chartPreviousClose": 643.81,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785245400,
-          "start": 1785225600,
+          "start": 1785312000,
+          "end": 1785331800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785268800,
-          "start": 1785245400,
+          "start": 1785331800,
+          "end": 1785355200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785283200,
-          "start": 1785268800,
+          "start": 1785355200,
+          "end": 1785369600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784640600,
       1784727000,
       1784813400,
       1784899800,
-      1785159000
+      1785159000,
+      1785245400
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            643.2000122070312,
-            624,
-            597.219970703125,
-            594.4500122070312,
-            593.1300048828125
-          ],
           "close": [
-            643.8099975585938,
             627.1699829101562,
             606.0999755859375,
             595.1900024414062,
-            593.8699951171875
-          ],
-          "volume": [
-            9140500,
-            11019600,
-            15494800,
-            11503500,
-            11146200
+            593.8699951171875,
+            593.4099731445312
           ],
           "open": [
-            654.1799926757812,
             647.7000122070312,
             608.4099731445312,
             605.2999877929688,
-            607.219970703125
+            607.219970703125,
+            596.8200073242188
+          ],
+          "volume": [
+            11019600,
+            15494800,
+            11503500,
+            11195300,
+            11946000
+          ],
+          "low": [
+            624,
+            597.219970703125,
+            594.4500122070312,
+            593.1300048828125,
+            587
           ],
           "high": [
-            655.8800048828125,
             649,
             614.6500244140625,
             609.97998046875,
-            611.260009765625
+            611.260009765625,
+            601
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            643.8099975585938,
             627.1699829101562,
             606.0999755859375,
             595.1900024414062,
-            593.8699951171875
+            593.8699951171875,
+            593.4099731445312
           ]
         }
       ]

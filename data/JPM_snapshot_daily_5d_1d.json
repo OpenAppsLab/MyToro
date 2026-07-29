@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-28T09:58:46.522Z",
+  "fetchedAt": "2026-07-29T09:40:39.508Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JPM?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785182403,
+      "regularMarketTime": 1785268802,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 356.2,
-      "fiftyTwoWeekHigh": 359.05,
+      "regularMarketPrice": 357.31,
+      "fiftyTwoWeekHigh": 359.3,
       "fiftyTwoWeekLow": 279.1,
-      "regularMarketDayHigh": 359.05,
-      "regularMarketDayLow": 352.58,
-      "regularMarketVolume": 5718439,
+      "regularMarketDayHigh": 359.25,
+      "regularMarketDayLow": 354.15,
+      "regularMarketVolume": 6524675,
       "longName": "JPMorgan Chase & Co.",
       "shortName": "JP Morgan Chase & Co.",
-      "chartPreviousClose": 338.87,
+      "chartPreviousClose": 345.23,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785245400,
-          "start": 1785225600,
+          "end": 1785331800,
+          "start": 1785312000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785268800,
-          "start": 1785245400,
+          "end": 1785355200,
+          "start": 1785331800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785283200,
-          "start": 1785268800,
+          "end": 1785369600,
+          "start": 1785355200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784640600,
       1784727000,
       1784813400,
       1784899800,
-      1785159000
+      1785159000,
+      1785245400
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            340.1199951171875,
-            345.07000732421875,
-            346.5799865722656,
-            350.6400146484375,
-            357.8900146484375
-          ],
           "low": [
-            337.29998779296875,
             344.25,
             345.4200134277344,
             347.5,
-            352.5799865722656
+            352.5799865722656,
+            354.1499938964844
           ],
           "close": [
-            345.2300109863281,
             348.2099914550781,
             349.8999938964844,
             353.2099914550781,
-            356.20001220703125
+            356.20001220703125,
+            357.30999755859375
           ],
           "volume": [
-            6015300,
             8040200,
             10913000,
             7520800,
-            7884900
+            7884900,
+            6533800
           ],
           "high": [
-            345.739990234375,
             349.07000732421875,
             349.9200134277344,
             353.3699951171875,
-            359.04998779296875
+            359.04998779296875,
+            359.29998779296875
+          ],
+          "open": [
+            345.07000732421875,
+            346.5799865722656,
+            350.6400146484375,
+            357.8900146484375,
+            357.29998779296875
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            345.2300109863281,
             348.2099914550781,
             349.8999938964844,
             353.2099914550781,
-            356.20001220703125
+            356.20001220703125,
+            357.30999755859375
           ]
         }
       ]

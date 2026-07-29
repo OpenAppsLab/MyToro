@@ -1,0 +1,437 @@
+{
+  "generatedAt": "2026-07-29T09:40:46.892Z",
+  "snapshotCount": 40,
+  "intradayModel": {
+    "weights": {
+      "premarketMove": 0,
+      "openingGap": -0.011881658100846102,
+      "firstHourMove": 0,
+      "volumeZ": 0.22067077845012226,
+      "sentiment": -0.28031559972655296,
+      "patternStrength": -0.29843353449248844,
+      "sectorStrength": -0.3403505902197357,
+      "atrPct": -0.017097939981280275,
+      "liquidity": -0.630710099384744
+    },
+    "bias": -0.7007889993163817
+  },
+  "tuning": {
+    "results": [
+      {
+        "alpha": 0,
+        "threshold": 0.4,
+        "totalPnl": 1958.3836935421891,
+        "orderCount": 23,
+        "winRate": 0.21739130434782608,
+        "averagePnl": 85.14711711052996,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0,
+        "threshold": 0.45,
+        "totalPnl": 1387.2154519631722,
+        "orderCount": 16,
+        "winRate": 0.3125,
+        "averagePnl": 86.70096574769826,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0,
+        "threshold": 0.5,
+        "totalPnl": 1387.2154519631722,
+        "orderCount": 16,
+        "winRate": 0.3125,
+        "averagePnl": 86.70096574769826,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.25,
+        "threshold": 0.4,
+        "totalPnl": 1387.2154519631722,
+        "orderCount": 16,
+        "winRate": 0.3125,
+        "averagePnl": 86.70096574769826,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0,
+        "threshold": 0.55,
+        "totalPnl": 910.071539248001,
+        "orderCount": 13,
+        "winRate": 0.15384615384615385,
+        "averagePnl": 70.005503019077,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.25,
+        "threshold": 0.45,
+        "totalPnl": 878.0264803985272,
+        "orderCount": 12,
+        "winRate": 0.16666666666666666,
+        "averagePnl": 73.16887336654393,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0,
+        "threshold": 0.6,
+        "totalPnl": 539.7749762987441,
+        "orderCount": 8,
+        "winRate": 0.25,
+        "averagePnl": 67.47187203734302,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.25,
+        "threshold": 0.5,
+        "totalPnl": 539.7749762987441,
+        "orderCount": 8,
+        "winRate": 0.25,
+        "averagePnl": 67.47187203734302,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0,
+        "threshold": 0.65,
+        "totalPnl": 292.26612808027494,
+        "orderCount": 3,
+        "winRate": 0.3333333333333333,
+        "averagePnl": 97.42204269342498,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0,
+        "threshold": 0.7,
+        "totalPnl": 51.02732170737631,
+        "orderCount": 2,
+        "winRate": 0,
+        "averagePnl": 25.513660853688155,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.25,
+        "threshold": 0.55,
+        "totalPnl": 51.02732170737631,
+        "orderCount": 2,
+        "winRate": 0,
+        "averagePnl": 25.513660853688155,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.5,
+        "threshold": 0.4,
+        "totalPnl": 51.02732170737631,
+        "orderCount": 2,
+        "winRate": 0,
+        "averagePnl": 25.513660853688155,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.25,
+        "threshold": 0.6,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.25,
+        "threshold": 0.65,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.25,
+        "threshold": 0.7,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.5,
+        "threshold": 0.45,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.5,
+        "threshold": 0.5,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.5,
+        "threshold": 0.55,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.5,
+        "threshold": 0.6,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.5,
+        "threshold": 0.65,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.5,
+        "threshold": 0.7,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.75,
+        "threshold": 0.4,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.75,
+        "threshold": 0.45,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.75,
+        "threshold": 0.5,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.75,
+        "threshold": 0.55,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.75,
+        "threshold": 0.6,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.75,
+        "threshold": 0.65,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 0.75,
+        "threshold": 0.7,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 1,
+        "threshold": 0.4,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 1,
+        "threshold": 0.45,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 1,
+        "threshold": 0.5,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 1,
+        "threshold": 0.55,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 1,
+        "threshold": 0.6,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 1,
+        "threshold": 0.65,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      },
+      {
+        "alpha": 1,
+        "threshold": 0.7,
+        "totalPnl": 0,
+        "orderCount": 0,
+        "winRate": 0,
+        "averagePnl": 0,
+        "brier": 0.10917627905730334
+      }
+    ],
+    "best": {
+      "alpha": 0,
+      "threshold": 0.4,
+      "totalPnl": 1958.3836935421891,
+      "orderCount": 23,
+      "winRate": 0.21739130434782608,
+      "averagePnl": 85.14711711052996,
+      "brier": 0.10917627905730334
+    },
+    "brier": 0.10917627905730334
+  },
+  "walkForward": [],
+  "calibration": {
+    "logistic": {
+      "method": "logistic",
+      "alpha": 1.1226399787397543,
+      "beta": -0.04226115932625032
+    },
+    "isotonic": {
+      "method": "isotonic",
+      "blocks": [
+        {
+          "sumY": 0,
+          "count": 1,
+          "avg": 0,
+          "minP": 0.12877173140482456,
+          "maxP": 0.12877173140482456
+        },
+        {
+          "sumY": 0,
+          "count": 1,
+          "avg": 0,
+          "minP": 0.13043258015964274,
+          "maxP": 0.13043258015964274
+        },
+        {
+          "sumY": 0,
+          "count": 1,
+          "avg": 0,
+          "minP": 0.13075192942690986,
+          "maxP": 0.13075192942690986
+        },
+        {
+          "sumY": 0,
+          "count": 1,
+          "avg": 0,
+          "minP": 0.13413556119053874,
+          "maxP": 0.13413556119053874
+        },
+        {
+          "sumY": 0,
+          "count": 1,
+          "avg": 0,
+          "minP": 0.136720891536288,
+          "maxP": 0.136720891536288
+        },
+        {
+          "sumY": 0,
+          "count": 1,
+          "avg": 0,
+          "minP": 0.1370157910403024,
+          "maxP": 0.1370157910403024
+        },
+        {
+          "sumY": 0,
+          "count": 1,
+          "avg": 0,
+          "minP": 0.13722782670041453,
+          "maxP": 0.13722782670041453
+        },
+        {
+          "sumY": 0,
+          "count": 1,
+          "avg": 0,
+          "minP": 0.13760881678381226,
+          "maxP": 0.13760881678381226
+        },
+        {
+          "sumY": 1,
+          "count": 8,
+          "minP": 0.13766230502156926,
+          "maxP": 0.14175993236279233,
+          "avg": 0.125
+        },
+        {
+          "sumY": 3,
+          "count": 21,
+          "minP": 0.16176535920223173,
+          "maxP": 0.16682031992585306,
+          "avg": 0.14285714285714285
+        },
+        {
+          "sumY": 1,
+          "count": 3,
+          "minP": 0.16778126509070157,
+          "maxP": 0.16859998087565328,
+          "avg": 0.3333333333333333
+        }
+      ]
+    }
+  }
+}

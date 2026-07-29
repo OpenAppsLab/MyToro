@@ -32,14 +32,15 @@ flowchart TD
 - Replaced ad‑hoc penalty stacking with a feature-based logistic model for better validation and tunability.
 - Added an intraday-specific feature vector and `DEFAULT_INTRADAY_MODEL` weights used for morning→evening picks.
 - Blended intraday probability with existing ensemble score and enforced a `minCombinedThreshold` for placing auto-orders.
-- Exposed `/api/intraday-picks` and `/api/backtest-intraday` endpoints and added training helpers (`trainIntradayModel`, `trainLogisticRegression`).
+- Exposed `/api/intraday-picks`, `/api/backtest-intraday`, `/api/calibrate-intraday`, `/api/optimize-alpha`, and `/api/train-meta-model` endpoints.
+- Added training helpers in `server.js` for `calibrateModel()`, `optimizeAlphaThreshold()`, `trainMetaModel()`, and `predictMetaProbability()`.
 - Added scripts to persist market snapshots for offline backtests: see [scripts/fetch_yahoo.js](scripts/fetch_yahoo.js) which writes snapshots to the `data/` folder.
 
 **Current limitations**
 
-- Trained model persistence is not yet implemented — weights are currently defaulted or in-memory after training.
-- Formal probability calibration (reliability plots, isotonic/logistic recalibration) is not yet applied to `p`.
-- Stacked meta-model (meta‑learner combining `p` and `s`) and monitoring/A‑B tooling are not yet implemented.
+- Production monitoring, model drift detection, and reliability dashboarding are not yet implemented.
+- A versioned model registry and scheduled retraining pipeline are still future work.
+- UI controls for runtime alpha/threshold tuning and calibration review are not yet available.
 
 **Practical selection summary (short):**
 
@@ -56,18 +57,23 @@ flowchart TD
 - Snapshot persistence script: [scripts/fetch_yahoo.js](scripts/fetch_yahoo.js)
 - Persisted snapshots folder: [data/](data/)
 
+> **Daily training/persistence commands**
+>
+> - `npm run refresh:snapshots` — fetches and saves the latest Yahoo intraday and daily snapshots into `data/`
+> - `npm run refresh:models` — trains the intraday logistic model from snapshots and saves weights to `models/intraday_model.json`
+> - `npm run refresh:daily` — runs both snapshot refresh and model persistence in sequence
+> - `npm run refresh:walkforward` — runs walk-forward calibration tuning using saved `data/` snapshots and writes the tuning report to `models/walk_forward_tuning.json`
+>
+> The server already loads the persisted intraday model at startup via `loadPersistedIntradayModel()` in `server.js`.
+
 **Todos — Next improvements**
 
-- **Persist trained weights:** Save/load trained intraday and ensemble models to `models/` and load at startup (low effort, high impact).
-- **Calibration pipeline:** Produce reliability diagrams, implement logistic/isotonic recalibration on `p`, and write a `calibrateModel()` utility.
-- **Walk-forward tuning:** Run systematic alpha + threshold grid search with the saved `data/` snapshots and choose operating point that optimizes Brier score and realized PnL.
-- **Stacked meta-model:** Train a small meta-learner on `[p, s, other signals]` to improve combined ranking and reduce ad-hoc blending.
-- **Expand features & labels:** Add first-hour move, opening-gap features, order‑flow / options signals, and richer labeling (multi-threshold labels, realized return targets).
-- **Model registry & versioning:** Add `models/` with metadata (trainedAt, dataset, metrics, weights) and an API to roll forward / rollback models.
-- **Monitoring & alerting:** Add endpoints to stream prediction vs outcome metrics (Brier, calibration drift, realized PnL) and surface alerts when model performance degrades.
-- **A/B testing & canary:** Add runtime switches and traffic splits to compare legacy scoring vs learned models on a small subset of auto-orders.
-- **UI controls for runtime tuning:** Expose `alpha` and `minCombinedThreshold` in the admin UI so operators can adjust safely without redeploy.
-- **Scheduled snapshot capture:** Add a cron/endpoint to periodically save snapshots to `data/` for continuous training and richer backtests.
-- **Offline training harness:** Provide CLI scripts to build labeled examples from `data/`, run `trainIntradayModel(...)`, evaluate `evaluateWalkForward(...)`, and persist chosen weights.
+- **Persist trained weights:** Add model persistence for intraday and meta-model weights in `models/`, including saved metadata and automatic loading at startup.
+- **Production calibration UI:** Build reliability diagrams and expose calibration curves in dashboards or admin tooling.
+- **Scheduled retraining pipeline:** Make `refresh:daily` the standard daily workflow, with a scheduled task to persist snapshots, retrain models, and rerun walk-forward tuning.
+- **Model registry/versioning:** Record model metadata in `models/` with `trainedAt`, data source, metrics, and versioned weights for rollback.
+- **Monitoring and alerting:** Add drift, calibration, and realized-PnL monitoring with alerts for degraded model performance.
+- **Runtime tuning controls:** Add safe admin controls for `alpha` and `minCombinedThreshold` with staging/preview support.
+- **Offline training harness:** Extend CLI scripts to build, evaluate, calibrate, and persist deployable model artifacts from `data/` snapshots.
 
 If you want, I can implement the highest-impact item next — I recommend starting with "Persist trained weights" and then running a walk-forward calibration sweep using the `data/` snapshots. Which should I do first?

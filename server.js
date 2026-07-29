@@ -1252,36 +1252,41 @@ async function loadYesterdaySnapshot(deposit, leverage) {
 
   const market = await loadMarketSnapshot();
   const historyData = await mapLimit(MARKET_SYMBOLS, 8, async (item) => {
-    const chartUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(item.symbol)}?interval=1d&range=5d`;
-    const data = await fetchJson(chartUrl, 4500);
-    const result = data.chart?.result?.[0];
-    const closes = result?.indicators?.quote?.[0]?.close || [];
+    try {
+      const chartUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(item.symbol)}?interval=1d&range=5d`;
+      const data = await fetchJson(chartUrl, 4500);
+      const result = data.chart?.result?.[0];
+      const closes = result?.indicators?.quote?.[0]?.close || [];
 
-    if (closes.length < 3) {
+      if (closes.length < 3) {
+        return null;
+      }
+
+      const previousCompletedClose = Number(closes[closes.length - 3] || 0);
+      const yesterdayClose = Number(closes[closes.length - 2] || 0);
+
+      if (!previousCompletedClose || !yesterdayClose) {
+        return null;
+      }
+
+      const dayMovePct = ((yesterdayClose - previousCompletedClose) / previousCompletedClose) * 100;
+      const estimatedProfit = deposit * (dayMovePct / 100);
+      const leverageProfit = estimatedProfit * leverage;
+
+      return {
+        symbol: item.symbol,
+        name: item.name,
+        region: item.region,
+        previousClose: previousCompletedClose,
+        latestClose: yesterdayClose,
+        movePct: dayMovePct,
+        estimatedProfit,
+        leverageProfit
+      };
+    } catch (error) {
+      // If a single Yahoo request fails or is rate limited, continue with other symbols.
       return null;
     }
-
-    const previousCompletedClose = Number(closes[closes.length - 3] || 0);
-    const yesterdayClose = Number(closes[closes.length - 2] || 0);
-
-    if (!previousCompletedClose || !yesterdayClose) {
-      return null;
-    }
-
-    const dayMovePct = ((yesterdayClose - previousCompletedClose) / previousCompletedClose) * 100;
-    const estimatedProfit = deposit * (dayMovePct / 100);
-    const leverageProfit = estimatedProfit * leverage;
-
-    return {
-      symbol: item.symbol,
-      name: item.name,
-      region: item.region,
-      previousClose: previousCompletedClose,
-      latestClose: yesterdayClose,
-      movePct: dayMovePct,
-      estimatedProfit,
-      leverageProfit
-    };
   });
 
   const positiveHistory = historyData
@@ -1768,9 +1773,14 @@ app.get('/api/premarket', async (req, res) => {
     }).filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
       .sort((a, b) => b.combinedScore - a.combinedScore);
 
-    const ranked = query
+    let ranked = query
       ? scored.slice(0, 20)
       : scored.filter((item) => (item.combinedScore || 0) >= (AUTO_ORDER_SETTINGS.minCombinedThreshold || 0.6)).slice(0, 5);
+
+    if (!ranked.length && !query) {
+      // If no pre-market candidates meet the strict threshold, still show the top signals.
+      ranked = scored.slice(0, 5);
+    }
 
     res.json({
       deposit,

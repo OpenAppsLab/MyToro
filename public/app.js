@@ -242,6 +242,26 @@ async function getLiveOrderPnl() {
   }
 }
 
+let homeOrderRefreshTimer = null;
+
+async function refreshHomeOrderState() {
+  try {
+    await Promise.all([updateDailyBalance(), updateDailyPnl()]);
+  } catch {
+    // Ignore refresh errors and keep the UI responsive.
+  }
+}
+
+function startHomeOrderAutoRefresh() {
+  if (homeOrderRefreshTimer) {
+    return;
+  }
+
+  homeOrderRefreshTimer = window.setInterval(() => {
+    refreshHomeOrderState().catch(() => {});
+  }, 15000);
+}
+
 async function calculateDailyBalance() {
   const history = loadHistory();
   const entries = Array.isArray(history.entries) ? history.entries : [];
@@ -592,6 +612,7 @@ if (saveAdminButton) {
 updateSessionBadge();
 updateDailyBalance();
 updateDailyPnl();
+startHomeOrderAutoRefresh();
 
 if (adminPanel) {
   loadAdminMetrics();

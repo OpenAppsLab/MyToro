@@ -136,6 +136,23 @@ async function refreshPendingOrders() {
   }
 }
 
+let pendingOrdersRefreshTimer = null;
+
+function startPendingOrderAutoRefresh() {
+  if (pendingOrdersRefreshTimer) {
+    return;
+  }
+
+  pendingOrdersRefreshTimer = window.setInterval(async () => {
+    try {
+      await refreshPendingOrders();
+      await renderHistoryFull();
+    } catch {
+      // Ignore refresh failures and keep the page responsive.
+    }
+  }, 15000);
+}
+
 function updateRefreshButton(orders) {
   if (!refreshButton) {
     return;
@@ -493,3 +510,4 @@ document.addEventListener('keydown', (event) => {
 });
 
 renderHistoryFull();
+startPendingOrderAutoRefresh();

@@ -115,7 +115,7 @@ const MARKET_SYMBOLS = [
 const MARKET_CACHE_TTL_MS = 60000;
 const NEWS_CACHE_TTL_MS = 30000;
 const YESTERDAY_CACHE_TTL_MS = 60000;
-const ORDER_MONITOR_INTERVAL_MS = 15 * 60 * 1000;
+const ORDER_MONITOR_INTERVAL_MS = 30 * 1000;
 const AUTO_ORDER_POLL_MS = 60 * 1000;
 const DEFAULT_STOP_LOSS_USD = 15;
 const DAILY_TARGET_PROFIT = 100;
@@ -2952,6 +2952,7 @@ app.post('/api/orders', async (req, res) => {
 
     const record = buildOrderRecord(body);
     pendingOrders.unshift(record);
+    await settlePendingOrders();
     res.json({ ok: true, order: record });
   } catch (error) {
     res.status(400).json({ error: error.message || 'Unable to create pending order' });

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T11:42:17.593Z",
+  "fetchedAt": "2026-07-30T13:27:12.293Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 345479400,
-      "regularMarketTime": 1785268801,
+      "regularMarketTime": 1785355201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 340.08,
-      "fiftyTwoWeekHigh": 342.89,
+      "regularMarketPrice": 338.19,
+      "fiftyTwoWeekHigh": 344.57,
       "fiftyTwoWeekLow": 201.5,
-      "regularMarketDayHigh": 342.89,
-      "regularMarketDayLow": 335.6,
-      "regularMarketVolume": 50765695,
+      "regularMarketDayHigh": 344.57,
+      "regularMarketDayLow": 337.35,
+      "regularMarketVolume": 48852885,
       "longName": "Apple Inc.",
       "shortName": "Apple Inc.",
-      "chartPreviousClose": 327.74,
+      "chartPreviousClose": 325.89,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785312000,
-          "end": 1785331800,
+          "end": 1785418200,
+          "start": 1785398400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785331800,
-          "end": 1785355200,
+          "end": 1785441600,
+          "start": 1785418200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785355200,
-          "end": 1785369600,
+          "end": 1785456000,
+          "start": 1785441600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784727000,
       1784813400,
       1784899800,
       1785159000,
-      1785245400
+      1785245400,
+      1785331800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            323.3399963378906,
-            319.3500061035156,
-            321.6199951171875,
-            334.0199890136719,
-            335.6000061035156
-          ],
-          "close": [
-            325.8900146484375,
-            321.6600036621094,
-            333.0199890136719,
-            336.9100036621094,
-            null
-          ],
-          "high": [
-            329,
-            323.29998779296875,
-            334.3699951171875,
-            339.57000732421875,
-            342.8900146484375
-          ],
           "open": [
-            327.8699951171875,
             321.7300109863281,
             321.7900085449219,
             334.5400085449219,
-            340.0299987792969
+            340.0299987792969,
+            339.7300109863281
+          ],
+          "low": [
+            319.3500061035156,
+            321.6199951171875,
+            334.0199890136719,
+            335.6000061035156,
+            337.3500061035156
           ],
           "volume": [
-            38755900,
             40840800,
             47489400,
             49604300,
-            50765695
+            51859000,
+            55929000
+          ],
+          "high": [
+            323.29998779296875,
+            334.3699951171875,
+            339.57000732421875,
+            342.8900146484375,
+            344.57000732421875
+          ],
+          "close": [
+            321.6600036621094,
+            333.0199890136719,
+            336.9100036621094,
+            340.0799865722656,
+            338.19000244140625
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            325.8900146484375,
             321.6600036621094,
             333.0199890136719,
             336.9100036621094,
-            null
+            340.0799865722656,
+            338.19000244140625
           ]
         }
       ]

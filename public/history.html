@@ -21,7 +21,6 @@
     <nav class="mobile-tabs" aria-label="Primary">
       <a class="tab-button" href="index.html">🏠 Home</a>
       <a class="tab-button" href="yesterday.html">📈 Yesterday Results</a>
-      <a class="tab-button" href="premarket.html">🕘 Pre-Market</a>
       <a class="tab-button active" href="history.html">🗓️ History</a>
       <a class="tab-button" href="admin.html">⚙️ Admin</a>
     </nav>
@@ -48,6 +47,9 @@
       </div>
 
       <div class="history-actions">
+        <button id="exportHistoryButton" class="secondary-button">Export data</button>
+        <button id="importHistoryButton" class="secondary-button">Import data</button>
+        <input id="importHistoryInput" type="file" accept="application/json" hidden />
         <button id="refreshPendingButton" class="secondary-button" disabled>Refresh pending orders</button>
         <button id="clearHistoryButton" class="primary-button">Clear all saved data</button>
       </div>

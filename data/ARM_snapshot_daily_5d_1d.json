@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T11:42:37.603Z",
+  "fetchedAt": "2026-07-30T13:27:37.382Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARM?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1694698200,
-      "regularMarketTime": 1785268801,
+      "regularMarketTime": 1785355201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 244.74,
+      "regularMarketPrice": 224.89,
       "fiftyTwoWeekHigh": 452.7,
       "fiftyTwoWeekLow": 100.02,
-      "regularMarketDayHigh": 253.61,
-      "regularMarketDayLow": 240.38,
-      "regularMarketVolume": 5784157,
+      "regularMarketDayHigh": 243.245,
+      "regularMarketDayLow": 222.56,
+      "regularMarketVolume": 8592191,
       "longName": "Arm Holdings plc",
       "shortName": "Arm Holdings plc",
-      "chartPreviousClose": 289.73,
+      "chartPreviousClose": 283.4,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785312000,
-          "end": 1785331800,
+          "end": 1785418200,
+          "start": 1785398400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785331800,
-          "end": 1785355200,
+          "end": 1785441600,
+          "start": 1785418200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785355200,
-          "end": 1785369600,
+          "end": 1785456000,
+          "start": 1785441600,
           "gmtoffset": -14400
         }
       },
@@ -60,60 +60,60 @@
       ]
     },
     "timestamp": [
-      1784727000,
       1784813400,
       1784899800,
       1785159000,
-      1785245400
+      1785245400,
+      1785331800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            283.3999938964844,
-            283.0400085449219,
-            260.010009765625,
-            266.3299865722656,
-            null
-          ],
-          "high": [
-            288.44000244140625,
-            284,
-            288.989990234375,
-            268.20001220703125,
-            253.61000061035156
-          ],
-          "volume": [
-            2601700,
-            3603200,
-            4884800,
-            5047200,
-            5784157
-          ],
           "low": [
-            279.5010070800781,
             274.7699890136719,
             258.42999267578125,
             251.61000061035156,
-            240.3800048828125
+            240.3800048828125,
+            222.55999755859375
+          ],
+          "close": [
+            283.0400085449219,
+            260.010009765625,
+            266.3299865722656,
+            244.74000549316406,
+            224.88999938964844
+          ],
+          "volume": [
+            3603200,
+            4884800,
+            5047200,
+            5852000,
+            9288900
+          ],
+          "high": [
+            284,
+            288.989990234375,
+            268.20001220703125,
+            253.61000061035156,
+            243.2449951171875
           ],
           "open": [
-            280.4800109863281,
             275.4700012207031,
             282.7699890136719,
             263.4800109863281,
-            252.99000549316406
+            252.99000549316406,
+            241.5
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            283.3999938964844,
             283.0400085449219,
             260.010009765625,
             266.3299865722656,
-            null
+            244.74000549316406,
+            224.88999938964844
           ]
         }
       ]

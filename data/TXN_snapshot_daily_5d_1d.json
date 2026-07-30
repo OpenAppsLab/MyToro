@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:20.611Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/TXN?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "TXN",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 76253400,
+      "regularMarketTime": 1785355200,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 271.3,
+      "fiftyTwoWeekHigh": 334.03,
+      "fiftyTwoWeekLow": 152.73,
+      "regularMarketDayHigh": 281.62,
+      "regularMarketDayLow": 268.865,
+      "regularMarketVolume": 9641594,
+      "longName": "Texas Instruments Incorporated",
+      "shortName": "Texas Instruments Incorporated",
+      "chartPreviousClose": 294.19,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            11742800,
+            8270000,
+            9072800,
+            11160400,
+            10212400
+          ],
+          "open": [
+            277.29998779296875,
+            281.1099853515625,
+            281.7900085449219,
+            275.4599914550781,
+            278.5799865722656
+          ],
+          "low": [
+            274.1000061035156,
+            276.29998779296875,
+            273.6700134277344,
+            273.45001220703125,
+            268.760009765625
+          ],
+          "high": [
+            288.3299865722656,
+            283.8900146484375,
+            284.3299865722656,
+            282.80999755859375,
+            281.6199951171875
+          ],
+          "close": [
+            284.989990234375,
+            279.5799865722656,
+            279.4100036621094,
+            277.07000732421875,
+            271.29998779296875
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            284.989990234375,
+            279.5799865722656,
+            279.4100036621094,
+            277.07000732421875,
+            271.29998779296875
+          ]
+        }
+      ]
+    }
+  }
+}

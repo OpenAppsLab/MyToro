@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:59.512Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRVL?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "MRVL",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 962371800,
+      "regularMarketTime": 1785355201,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 163.4,
+      "fiftyTwoWeekHigh": 329.88,
+      "fiftyTwoWeekLow": 61.44,
+      "regularMarketDayHigh": 177.8,
+      "regularMarketDayLow": 162.9,
+      "regularMarketVolume": 24229911,
+      "longName": "Marvell Technology, Inc.",
+      "shortName": "Marvell Technology, Inc.",
+      "chartPreviousClose": 210.99,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785418200,
+          "start": 1785398400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785441600,
+          "start": 1785418200,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785456000,
+          "start": 1785441600,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            205.02000427246094,
+            191.2899932861328,
+            181.75999450683594,
+            167.32000732421875,
+            162.89999389648438
+          ],
+          "volume": [
+            16359900,
+            19837100,
+            21637700,
+            29188500,
+            25480300
+          ],
+          "open": [
+            207.86000061035156,
+            202.91000366210938,
+            198.72000122070312,
+            180,
+            174.02999877929688
+          ],
+          "close": [
+            209.32000732421875,
+            194.22999572753906,
+            189.1699981689453,
+            174.47000122070312,
+            163.39999389648438
+          ],
+          "high": [
+            214.55999755859375,
+            206.07000732421875,
+            199.7899932861328,
+            181.47999572753906,
+            177.8000030517578
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            209.32000732421875,
+            194.22999572753906,
+            189.1699981689453,
+            174.47000122070312,
+            163.39999389648438
+          ]
+        }
+      ]
+    }
+  }
+}

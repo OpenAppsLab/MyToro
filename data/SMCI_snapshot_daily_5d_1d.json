@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T11:42:27.149Z",
+  "fetchedAt": "2026-07-30T13:27:24.255Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1175175000,
-      "regularMarketTime": 1785268800,
+      "regularMarketTime": 1785355200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 28.45,
+      "regularMarketPrice": 25.7,
       "fiftyTwoWeekHigh": 62.36,
       "fiftyTwoWeekLow": 19.48,
-      "regularMarketDayHigh": 28.87,
-      "regularMarketDayLow": 27.13,
-      "regularMarketVolume": 36118334,
+      "regularMarketDayHigh": 28.07,
+      "regularMarketDayLow": 25.68,
+      "regularMarketVolume": 39299285,
       "longName": "Super Micro Computer, Inc.",
       "shortName": "Super Micro Computer, Inc.",
-      "chartPreviousClose": 25.5,
+      "chartPreviousClose": 30.56,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785331800,
-          "start": 1785312000,
+          "end": 1785418200,
+          "start": 1785398400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785355200,
-          "start": 1785331800,
+          "end": 1785441600,
+          "start": 1785418200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785369600,
-          "start": 1785355200,
+          "end": 1785456000,
+          "start": 1785441600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784727000,
       1784813400,
       1784899800,
       1785159000,
-      1785245400
+      1785245400,
+      1785331800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            28.889999389648438,
-            30.329999923706055,
-            30.6200008392334,
-            30.600000381469727,
-            28.610000610351562
-          ],
-          "high": [
-            32.279998779296875,
-            32.59000015258789,
-            31.329999923706055,
-            30.940000534057617,
-            28.8700008392334
-          ],
-          "close": [
-            30.559999465942383,
-            31.200000762939453,
-            30.100000381469727,
-            29.809999465942383,
-            null
-          ],
-          "volume": [
-            163015100,
-            86788900,
-            49701600,
-            35912300,
-            36118334
-          ],
           "low": [
-            28.5,
             30.18000030517578,
             29.280000686645508,
             28.5,
-            27.1299991607666
+            27.1299991607666,
+            25.68000030517578
+          ],
+          "close": [
+            31.200000762939453,
+            30.100000381469727,
+            29.809999465942383,
+            28.450000762939453,
+            25.700000762939453
+          ],
+          "volume": [
+            86788900,
+            49701600,
+            35912300,
+            36449800,
+            40632000
+          ],
+          "open": [
+            30.329999923706055,
+            30.6200008392334,
+            30.600000381469727,
+            28.639999389648438,
+            28.020000457763672
+          ],
+          "high": [
+            32.59000015258789,
+            31.329999923706055,
+            30.940000534057617,
+            28.8700008392334,
+            28.06999969482422
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            30.559999465942383,
             31.200000762939453,
             30.100000381469727,
             29.809999465942383,
-            null
+            28.450000762939453,
+            25.700000762939453
           ]
         }
       ]

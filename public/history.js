@@ -9,17 +9,73 @@ const historyModal = document.getElementById('historyModal');
 const historyModalClose = document.getElementById('historyModalClose');
 const historyModalDate = document.getElementById('historyModalDate');
 const historyModalContent = document.getElementById('historyModalContent');
+const exportButton = document.getElementById('exportHistoryButton');
+const importButton = document.getElementById('importHistoryButton');
+const importInput = document.getElementById('importHistoryInput');
 
 function loadHistory() {
   try {
-    return JSON.parse(localStorage.getItem(LOCAL_HISTORY_KEY) || '{}');
+    const parsed = JSON.parse(localStorage.getItem(LOCAL_HISTORY_KEY) || '{}');
+    if (parsed && typeof parsed === 'object') {
+      return {
+        entries: Array.isArray(parsed.entries) ? parsed.entries : [],
+        orders: Array.isArray(parsed.orders) ? parsed.orders : []
+      };
+    }
   } catch {
-    return {};
+    return { entries: [], orders: [] };
   }
+  return { entries: [], orders: [] };
 }
 
-function saveHistory(entries) {
-  localStorage.setItem(LOCAL_HISTORY_KEY, JSON.stringify({ entries: entries.slice(-60) }));
+function saveHistory(entries, orders) {
+  const normalizedEntries = Array.isArray(entries) ? entries.slice(-60) : [];
+  const normalizedOrders = Array.isArray(orders) ? orders.slice(-60) : [];
+  localStorage.setItem(LOCAL_HISTORY_KEY, JSON.stringify({ entries: normalizedEntries, orders: normalizedOrders }));
+}
+
+function exportHistoryData() {
+  const history = loadHistory();
+  const payload = {
+    exportedAt: new Date().toISOString(),
+    entries: history.entries,
+    orders: history.orders
+  };
+
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `mytoro-history-${toDateKey(new Date())}.json`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+}
+
+async function importHistoryData(file) {
+  if (!file) {
+    return;
+  }
+
+  try {
+    const text = await file.text();
+    const parsed = JSON.parse(text);
+    const entries = Array.isArray(parsed.entries) ? parsed.entries : [];
+    if (!entries.length) {
+      window.alert('No history entries were found in this file.');
+      return;
+    }
+
+    const importedOrders = Array.isArray(parsed.orders) ? parsed.orders : [];
+    saveHistory(entries, importedOrders);
+    window.historyOrders = importedOrders;
+    window.dispatchEvent(new CustomEvent('orders-cleared'));
+    await renderHistoryFull();
+    window.alert('History imported successfully.');
+  } catch (error) {
+    window.alert(`Unable to import history: ${error.message || 'Unknown error'}`);
+  }
 }
 
 function getNewYorkDateParts(value = new Date()) {
@@ -219,7 +275,7 @@ function clearAllSavedData() {
     return;
   }
 
-  saveHistory([]);
+  saveHistory([], []);
   window.historyOrders = [];
   window.dispatchEvent(new CustomEvent('orders-cleared'));
 
@@ -351,7 +407,12 @@ function attachDateClickHandlers() {
 async function renderHistoryFull() {
   const history = loadHistory();
   const entries = Array.isArray(history.entries) ? history.entries : [];
-  const orders = await loadPendingOrders();
+  const importedOrders = Array.isArray(history.orders) ? history.orders : [];
+  const liveOrders = await loadPendingOrders();
+  const orders = [
+    ...importedOrders,
+    ...liveOrders.filter((order) => !importedOrders.some((item) => item.id === order.id))
+  ];
   window.historyOrders = orders; // store fetched orders for modal use
   const groups = buildHistoryGroups(entries, orders);
   const { year: currentYear, month: currentMonth } = getNewYorkDateParts();
@@ -388,6 +449,19 @@ async function renderHistoryFull() {
 
 if (clearButton) {
   clearButton.addEventListener('click', clearAllSavedData);
+}
+
+if (exportButton) {
+  exportButton.addEventListener('click', exportHistoryData);
+}
+
+if (importButton && importInput) {
+  importButton.addEventListener('click', () => importInput.click());
+  importInput.addEventListener('change', async (event) => {
+    const [file] = event.target.files || [];
+    await importHistoryData(file);
+    event.target.value = '';
+  });
 }
 
 if (refreshButton) {

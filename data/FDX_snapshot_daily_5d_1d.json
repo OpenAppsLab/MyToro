@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:00.731Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FDX?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FDX",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 261239400,
+      "regularMarketTime": 1785355202,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 308.61,
+      "fiftyTwoWeekHigh": 345.37,
+      "fiftyTwoWeekLow": 174.134,
+      "regularMarketDayHigh": 312.849,
+      "regularMarketDayLow": 307.66,
+      "regularMarketVolume": 1433332,
+      "longName": "FedEx Corporation",
+      "shortName": "FedEx Corporation",
+      "chartPreviousClose": 321.02,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            1623800,
+            1076700,
+            1782200,
+            1461200,
+            1833100
+          ],
+          "close": [
+            315.6199951171875,
+            314.9599914550781,
+            310.7900085449219,
+            312.6400146484375,
+            308.6099853515625
+          ],
+          "high": [
+            321.5,
+            318.55999755859375,
+            315.989990234375,
+            313.75,
+            312.8500061035156
+          ],
+          "low": [
+            314.30999755859375,
+            314,
+            308.7099914550781,
+            303,
+            307.6600036621094
+          ],
+          "open": [
+            319.9700012207031,
+            316.0400085449219,
+            314.5,
+            310.8500061035156,
+            312
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            315.6199951171875,
+            314.9599914550781,
+            310.7900085449219,
+            312.6400146484375,
+            308.6099853515625
+          ]
+        }
+      ]
+    }
+  }
+}

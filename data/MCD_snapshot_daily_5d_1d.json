@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:04.242Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "MCD",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -110197800,
+      "regularMarketTime": 1785355202,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 271.52,
+      "fiftyTwoWeekHigh": 341.75,
+      "fiftyTwoWeekLow": 260.96,
+      "regularMarketDayHigh": 273.03,
+      "regularMarketDayLow": 270.25,
+      "regularMarketVolume": 2723829,
+      "longName": "McDonald's Corporation",
+      "shortName": "McDonald's Corporation",
+      "chartPreviousClose": 263.57,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            262.79998779296875,
+            264.760009765625,
+            270.6700134277344,
+            273.0199890136719,
+            271.5199890136719
+          ],
+          "high": [
+            264.0199890136719,
+            266.4599914550781,
+            271.1700134277344,
+            278.70001220703125,
+            273.0299987792969
+          ],
+          "open": [
+            261.5799865722656,
+            263.7900085449219,
+            267.5,
+            276.2099914550781,
+            272.6300048828125
+          ],
+          "volume": [
+            5105700,
+            3703500,
+            4874400,
+            5261500,
+            3650700
+          ],
+          "low": [
+            260.9599914550781,
+            262.8999938964844,
+            266.79998779296875,
+            271.6300048828125,
+            270.25
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            262.79998779296875,
+            264.760009765625,
+            270.6700134277344,
+            273.0199890136719,
+            271.5199890136719
+          ]
+        }
+      ]
+    }
+  }
+}

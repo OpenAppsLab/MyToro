@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:22.818Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ON?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ON",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 957274200,
+      "regularMarketTime": 1785355200,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 78.86,
+      "fiftyTwoWeekHigh": 134.92,
+      "fiftyTwoWeekLow": 44.56,
+      "regularMarketDayHigh": 84.6,
+      "regularMarketDayLow": 78.81,
+      "regularMarketVolume": 12171837,
+      "longName": "ON Semiconductor Corporation",
+      "shortName": "ON Semiconductor Corporation",
+      "chartPreviousClose": 92.33,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            91.02999877929688,
+            89.62999725341797,
+            89.7699966430664,
+            86.87999725341797,
+            84.5999984741211
+          ],
+          "low": [
+            87.70999908447266,
+            85.83000183105469,
+            84.58000183105469,
+            83.62999725341797,
+            78.80999755859375
+          ],
+          "close": [
+            90.12999725341797,
+            86.80999755859375,
+            89.04000091552734,
+            84.38999938964844,
+            78.86000061035156
+          ],
+          "open": [
+            88.86000061035156,
+            88.48999786376953,
+            87.81999969482422,
+            86.19000244140625,
+            83.02999877929688
+          ],
+          "volume": [
+            8770900,
+            7352500,
+            8357900,
+            11085300,
+            12193400
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            90.12999725341797,
+            86.80999755859375,
+            89.04000091552734,
+            84.38999938964844,
+            78.86000061035156
+          ]
+        }
+      ]
+    }
+  }
+}

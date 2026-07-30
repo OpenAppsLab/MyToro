@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:27:54.539Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVX?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CVX",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -252322200,
+      "regularMarketTime": 1785355502,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 191.86,
+      "fiftyTwoWeekHigh": 214.71,
+      "fiftyTwoWeekLow": 146.49,
+      "regularMarketDayHigh": 193.53,
+      "regularMarketDayLow": 190.784,
+      "regularMarketVolume": 8093524,
+      "longName": "Chevron Corporation",
+      "shortName": "Chevron Corporation",
+      "chartPreviousClose": 192.98,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785418200,
+          "start": 1785398400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785441600,
+          "start": 1785418200,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785456000,
+          "start": 1785441600,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            194.02000427246094,
+            193.8000030517578,
+            188.6699981689453,
+            186.72999572753906,
+            190.77999877929688
+          ],
+          "close": [
+            194.4199981689453,
+            194.7899932861328,
+            190,
+            187.5800018310547,
+            191.86000061035156
+          ],
+          "volume": [
+            8150000,
+            6700400,
+            7369200,
+            7406800,
+            8101200
+          ],
+          "high": [
+            197.69000244140625,
+            196.8699951171875,
+            192.49000549316406,
+            191.97000122070312,
+            193.55999755859375
+          ],
+          "open": [
+            196.3000030517578,
+            194.4600067138672,
+            188.6699981689453,
+            191.47000122070312,
+            192.5
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            194.4199981689453,
+            194.7899932861328,
+            190,
+            187.5800018310547,
+            191.86000061035156
+          ]
+        }
+      ]
+    }
+  }
+}

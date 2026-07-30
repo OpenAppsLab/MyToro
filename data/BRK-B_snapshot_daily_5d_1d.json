@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:57.389Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BRK-B",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 831648600,
+      "regularMarketTime": 1785355541,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 509.16,
+      "fiftyTwoWeekHigh": 516.85,
+      "fiftyTwoWeekLow": 455.19,
+      "regularMarketDayHigh": 513.357,
+      "regularMarketDayLow": 507.2,
+      "regularMarketVolume": 4985337,
+      "longName": "Berkshire Hathaway Inc.",
+      "shortName": "Berkshire Hathaway Inc. New",
+      "chartPreviousClose": 489.39,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785418200,
+          "start": 1785398400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785441600,
+          "start": 1785418200,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785456000,
+          "start": 1785441600,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            486.05999755859375,
+            490.25,
+            493.9700012207031,
+            499.5,
+            507.20001220703125
+          ],
+          "close": [
+            490.8500061035156,
+            494.92999267578125,
+            497.17999267578125,
+            512.3699951171875,
+            509.1600036621094
+          ],
+          "volume": [
+            2883000,
+            3933000,
+            3482400,
+            6362100,
+            5057500
+          ],
+          "high": [
+            491,
+            497.2900085449219,
+            498.7699890136719,
+            513.4400024414062,
+            513.3599853515625
+          ],
+          "open": [
+            488.3999938964844,
+            491.42999267578125,
+            497.25,
+            500.3299865722656,
+            511.44000244140625
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            490.8500061035156,
+            494.92999267578125,
+            497.17999267578125,
+            512.3699951171875,
+            509.1600036621094
+          ]
+        }
+      ]
+    }
+  }
+}

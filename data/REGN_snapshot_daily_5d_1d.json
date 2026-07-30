@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:41.704Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/REGN?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "REGN",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 670602600,
+      "regularMarketTime": 1785355201,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 695.42,
+      "fiftyTwoWeekHigh": 821.11,
+      "fiftyTwoWeekLow": 541,
+      "regularMarketDayHigh": 702.6,
+      "regularMarketDayLow": 691,
+      "regularMarketVolume": 1006562,
+      "longName": "Regeneron Pharmaceuticals, Inc.",
+      "shortName": "Regeneron Pharmaceuticals, Inc.",
+      "chartPreviousClose": 651.18,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785418200,
+          "start": 1785398400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785441600,
+          "start": 1785418200,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785456000,
+          "start": 1785441600,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            651.9099731445312,
+            656.010009765625,
+            667.1699829101562,
+            695.1799926757812,
+            695.4199829101562
+          ],
+          "high": [
+            655.2000122070312,
+            667.5,
+            678.1199951171875,
+            696.739990234375,
+            702.5999755859375
+          ],
+          "low": [
+            637.7999877929688,
+            654.0499877929688,
+            659.530029296875,
+            676.4600219726562,
+            691
+          ],
+          "volume": [
+            1129400,
+            708400,
+            650800,
+            900200,
+            1022100
+          ],
+          "open": [
+            646.47998046875,
+            658.2899780273438,
+            661.77001953125,
+            676.9299926757812,
+            699.3800048828125
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            651.9099731445312,
+            656.010009765625,
+            667.1699829101562,
+            695.1799926757812,
+            695.4199829101562
+          ]
+        }
+      ]
+    }
+  }
+}

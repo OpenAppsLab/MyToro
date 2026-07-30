@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T11:42:16.704Z",
+  "fetchedAt": "2026-07-30T13:27:11.165Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 917015400,
-      "regularMarketTime": 1785268800,
+      "regularMarketTime": 1785355201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 197.01,
+      "regularMarketPrice": 190.01,
       "fiftyTwoWeekHigh": 236.54,
       "fiftyTwoWeekLow": 164.07,
-      "regularMarketDayHigh": 198.7,
-      "regularMarketDayLow": 192.74,
-      "regularMarketVolume": 125138253,
+      "regularMarketDayHigh": 197.074,
+      "regularMarketDayLow": 190.01,
+      "regularMarketVolume": 136609393,
       "longName": "NVIDIA Corporation",
       "shortName": "NVIDIA Corporation",
-      "chartPreviousClose": 207.29,
+      "chartPreviousClose": 212.06,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785312000,
-          "end": 1785331800,
+          "end": 1785418200,
+          "start": 1785398400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785331800,
-          "end": 1785355200,
+          "end": 1785441600,
+          "start": 1785418200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785355200,
-          "end": 1785369600,
+          "end": 1785456000,
+          "start": 1785441600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784727000,
       1784813400,
       1784899800,
       1785159000,
-      1785245400
+      1785245400,
+      1785331800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            204.9499969482422,
             205.9600067138672,
             204.80999755859375,
             195.44000244140625,
-            192.74000549316406
-          ],
-          "volume": [
-            137645600,
-            110505300,
-            114836800,
-            154353700,
-            125138253
-          ],
-          "open": [
-            205.80999755859375,
-            209.4600067138672,
-            207.4499969482422,
-            208.1999969482422,
-            194.9499969482422
-          ],
-          "high": [
-            214.38999938964844,
-            210.8699951171875,
-            211.91000366210938,
-            208.75,
-            198.6999969482422
+            192.74000549316406,
+            190.00999450683594
           ],
           "close": [
-            212.05999755859375,
             208.75999450683594,
             206.83999633789062,
             196.50999450683594,
-            null
+            197.00999450683594,
+            190.00999450683594
+          ],
+          "volume": [
+            110505300,
+            114836800,
+            154353700,
+            134111500,
+            146961600
+          ],
+          "high": [
+            210.8699951171875,
+            211.91000366210938,
+            208.75,
+            198.6999969482422,
+            197.07000732421875
+          ],
+          "open": [
+            209.4600067138672,
+            207.4499969482422,
+            208.1999969482422,
+            195,
+            195.85000610351562
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            212.05999755859375,
             208.75999450683594,
             206.83999633789062,
             196.50999450683594,
-            null
+            197.00999450683594,
+            190.00999450683594
           ]
         }
       ]

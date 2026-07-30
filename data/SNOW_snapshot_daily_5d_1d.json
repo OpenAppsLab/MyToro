@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T11:42:36.754Z",
+  "fetchedAt": "2026-07-30T13:27:36.325Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1600263000,
-      "regularMarketTime": 1785268803,
+      "regularMarketTime": 1785355202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 270.36,
-      "fiftyTwoWeekHigh": 284.99,
+      "regularMarketPrice": 282.9,
+      "fiftyTwoWeekHigh": 293.56,
       "fiftyTwoWeekLow": 118.3,
-      "regularMarketDayHigh": 277.21,
-      "regularMarketDayLow": 253.59,
-      "regularMarketVolume": 4805529,
+      "regularMarketDayHigh": 293.53,
+      "regularMarketDayLow": 277.82,
+      "regularMarketVolume": 8690174,
       "longName": "Snowflake Inc.",
       "shortName": "Snowflake Inc.",
-      "chartPreviousClose": 271.73,
+      "chartPreviousClose": 267.8,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785312000,
-          "end": 1785331800,
+          "start": 1785398400,
+          "end": 1785418200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785331800,
-          "end": 1785355200,
+          "start": 1785418200,
+          "end": 1785441600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785355200,
-          "end": 1785369600,
+          "start": 1785441600,
+          "end": 1785456000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784727000,
       1784813400,
       1784899800,
       1785159000,
-      1785245400
+      1785245400,
+      1785331800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            260.3399963378906,
-            260.6000061035156,
-            264,
-            265.5199890136719,
-            253.59010314941406
-          ],
-          "volume": [
-            3052100,
-            3114300,
-            3454600,
-            5224100,
-            4805529
-          ],
-          "open": [
-            269.95001220703125,
-            273.8500061035156,
-            268.8999938964844,
-            275,
-            273.0199890136719
-          ],
-          "high": [
-            271,
-            277.5150146484375,
-            270.7900085449219,
-            278.42999267578125,
-            277.2099914550781
-          ],
           "close": [
-            267.79998779296875,
             265.1300048828125,
             268.05999755859375,
             272.9200134277344,
-            null
+            270.3599853515625,
+            282.8999938964844
+          ],
+          "volume": [
+            3114300,
+            3454600,
+            5224100,
+            5145100,
+            8744800
+          ],
+          "open": [
+            273.8500061035156,
+            268.8999938964844,
+            275,
+            273.0199890136719,
+            276.8999938964844
+          ],
+          "low": [
+            260.6000061035156,
+            264,
+            265.5199890136719,
+            253.58999633789062,
+            276.8999938964844
+          ],
+          "high": [
+            277.5150146484375,
+            270.7900085449219,
+            278.42999267578125,
+            277.2099914550781,
+            293.55999755859375
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            267.79998779296875,
             265.1300048828125,
             268.05999755859375,
             272.9200134277344,
-            null
+            270.3599853515625,
+            282.8999938964844
           ]
         }
       ]

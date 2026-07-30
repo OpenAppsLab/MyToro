@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:35.931Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ROKU?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ROKU",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1506605400,
+      "regularMarketTime": 1785355200,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 145.33,
+      "fiftyTwoWeekHigh": 148.88,
+      "fiftyTwoWeekLow": 78.53,
+      "regularMarketDayHigh": 145.67,
+      "regularMarketDayLow": 143.74,
+      "regularMarketVolume": 3045247,
+      "longName": "Roku, Inc.",
+      "shortName": "Roku, Inc.",
+      "chartPreviousClose": 143.08,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            142.15499877929688,
+            141.8000030517578,
+            142.11000061035156,
+            142.6199951171875,
+            143.74000549316406
+          ],
+          "high": [
+            143,
+            142.8300018310547,
+            144.07000732421875,
+            144.49000549316406,
+            145.67999267578125
+          ],
+          "volume": [
+            1985000,
+            2321800,
+            3014400,
+            2296600,
+            3052200
+          ],
+          "low": [
+            141.25,
+            141.75,
+            141.6699981689453,
+            142.6199951171875,
+            143.74000549316406
+          ],
+          "close": [
+            141.6699981689453,
+            141.97000122070312,
+            142.9199981689453,
+            143.91000366210938,
+            145.3300018310547
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            141.6699981689453,
+            141.97000122070312,
+            142.9199981689453,
+            143.91000366210938,
+            145.3300018310547
+          ]
+        }
+      ]
+    }
+  }
+}

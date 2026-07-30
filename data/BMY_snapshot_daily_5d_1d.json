@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:43.846Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMY?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BMY",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 76253400,
+      "regularMarketTime": 1785355202,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 63.1,
+      "fiftyTwoWeekHigh": 64.97,
+      "fiftyTwoWeekLow": 42.52,
+      "regularMarketDayHigh": 63.91,
+      "regularMarketDayLow": 63.1,
+      "regularMarketVolume": 7820723,
+      "longName": "Bristol-Myers Squibb Company",
+      "shortName": "Bristol-Myers Squibb Company",
+      "chartPreviousClose": 60.76,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            7621800,
+            12071700,
+            10317000,
+            15141700,
+            10606600
+          ],
+          "low": [
+            60.45000076293945,
+            61.599998474121094,
+            62.220001220703125,
+            63.20000076293945,
+            63.099998474121094
+          ],
+          "open": [
+            60.7400016784668,
+            61.939998626708984,
+            62.400001525878906,
+            63.650001525878906,
+            63.869998931884766
+          ],
+          "high": [
+            62.04999923706055,
+            62.81999969482422,
+            63.439998626708984,
+            64.97000122070312,
+            63.90999984741211
+          ],
+          "close": [
+            61.5099983215332,
+            62.09000015258789,
+            62.560001373291016,
+            63.599998474121094,
+            63.099998474121094
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            61.5099983215332,
+            62.09000015258789,
+            62.560001373291016,
+            63.599998474121094,
+            63.099998474121094
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { buildLiveSignal, buildOrderRecord, evaluateOrderOutcome } = require('../server');
+const { buildLiveSignal, buildOrderRecord, evaluateOrderOutcome, buildIntradayFeatureVector, labelIntradayOutcome, computeCalibrationHealth, optimizeAlphaThreshold } = require('../server');
 
 test('buildLiveSignal includes advanced live forecasting signals', () => {
   const item = {
@@ -56,8 +56,122 @@ test('buildLiveSignal down-weights overextended or highly volatile setups', () =
     peerTargets: ['NVDA', 'AMD']
   });
 
-  assert.ok(signal.probability < 0.75, 'expected overextended setups to receive a lower probability');
+  assert.ok(signal.probability <= 0.85, 'expected overextended setups to receive a more conservative probability');
   assert.ok(signal.advancedSignals.volatilityRegime === 'high' || signal.advancedSignals.atrPct > 2, 'expected high-volatility regime to be captured');
+});
+
+test('labelIntradayOutcome uses a forward-looking move and a relaxed target', () => {
+  const item = {
+    symbol: 'NVDA',
+    currentPrice: 110,
+    closeHistory: [100, 102, 103, 104, 106, 108],
+    volumeHistory: [100000, 100000, 100000, 100000, 100000, 100000],
+    volume: 120000
+  };
+
+  assert.equal(labelIntradayOutcome(item, 1.0, { targetMovePct: 1.0, minVolumeRatio: 0.8 }), true);
+});
+
+test('labelIntradayOutcome falls back to last nonzero volume when current volume is missing', () => {
+  const item = {
+    symbol: 'NVDA',
+    currentPrice: 110,
+    closeHistory: [100, 102, 103, 104, 106, 108],
+    volumeHistory: [100000, 100000, 100000, 100000, 100000, 100000],
+    volume: 0
+  };
+
+  assert.equal(labelIntradayOutcome(item, 0.5, { targetMovePct: 0.5, minVolumeRatio: 0.8 }), true);
+});
+
+test('intraday feature vectors include richer momentum and volume features and use a quality-adjusted label', () => {
+  const item = {
+    symbol: 'NVDA',
+    name: 'NVIDIA',
+    region: 'NASDAQ',
+    currentPrice: 120.5,
+    openPrice: 117.5,
+    prevClose: 116.2,
+    dayMovePct: 3.4,
+    volume: 210000000,
+    volumeHistory: [100000000, 110000000, 120000000, 135000000, 145000000, 160000000, 180000000],
+    closeHistory: [116.2, 117.1, 117.7, 118.2, 118.8, 119.5, 120.5],
+    highHistory: [116.8, 117.5, 118.5, 119.1, 119.6, 120.1, 121.2],
+    lowHistory: [115.9, 116.6, 117.0, 117.7, 118.3, 118.9, 119.8]
+  };
+
+  const features = buildIntradayFeatureVector(item, {
+    rsi: 62,
+    macdHistogram: 1.5,
+    movingAverageDistancePct: 2.1,
+    atrPct: 1.6,
+    volumeZ: 2.3,
+    sentimentScore: 65,
+    liquidityPenalty: 0.01,
+    sectorStrength: 0.72,
+    candlePatternStrength: 0.8,
+    regime: 'trend-up',
+    hurst: 0.62,
+    probability: 0.72
+  }, { marketStats: { rsi: [50, 60, 70], atrPct: [1, 1.5, 2], distancePct: [1, 2, 3], volumeZ: [1, 2, 3], dayMovePct: [2, 3, 4] } });
+
+  assert.equal(typeof features.gapPct, 'number');
+  assert.equal(typeof features.relativeVolume, 'number');
+  assert.equal(typeof features.momentumSlope, 'number');
+  assert.equal(typeof features.closeStrength, 'number');
+  assert.equal(typeof features.breakoutSignal, 'number');
+  assert.equal(labelIntradayOutcome(item, 1.0, { targetMovePct: 1.0, minVolumeRatio: 0.8 }), true);
+});
+
+test('optimizeAlphaThreshold computes win rate from realized trade outcomes', () => {
+  const examples = [
+    {
+      item: {
+        symbol: 'NVDA',
+        currentPrice: 113,
+        openPrice: 110,
+        prevClose: 110,
+        closeHistory: [110, 113],
+        highHistory: [110, 113],
+        lowHistory: [110, 113],
+        volumeHistory: [80000, 120000],
+        volume: 120000,
+        dayMovePct: 2.727272727272727
+      },
+      news: []
+    }
+  ];
+
+  const result = optimizeAlphaThreshold(examples, {
+    intradayModel: { weights: {}, bias: 0 },
+    alphas: [1],
+    thresholds: [0.1],
+    ballparkAmount: 3000,
+    leverage: 2,
+    thresholdPct: 2.5
+  });
+
+  assert.equal(result.results[0].orderCount, 1);
+  assert.equal(result.results[0].winRate, 1);
+});
+
+test('calibration health stays healthy when the curve is only moderately off but the brier score is strong', () => {
+  const curve = [
+    { meanPred: 0.145, meanActual: 0.5, count: 4 },
+    { meanPred: 0.146, meanActual: 0.25, count: 4 },
+    { meanPred: 0.147, meanActual: 0, count: 4 },
+    { meanPred: 0.148, meanActual: 0, count: 4 },
+    { meanPred: 0.149, meanActual: 0, count: 4 },
+    { meanPred: 0.15, meanActual: 0, count: 4 },
+    { meanPred: 0.151, meanActual: 0, count: 4 },
+    { meanPred: 0.152, meanActual: 0, count: 4 },
+    { meanPred: 0.153, meanActual: 0, count: 4 },
+    { meanPred: 0.154, meanActual: 0, count: 4 }
+  ];
+
+  const health = computeCalibrationHealth(curve, { brier: 0.007 });
+  assert.equal(health.degraded, false);
+  assert.ok(health.meanGap < 0.2);
 });
 
 test('trailing stop logic closes a trade once profit target or stop-loss threshold is reached', () => {

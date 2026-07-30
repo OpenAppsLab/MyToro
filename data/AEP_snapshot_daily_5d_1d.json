@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:39.401Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AEP?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AEP",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -252322200,
+      "regularMarketTime": 1785355201,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 129.4,
+      "fiftyTwoWeekHigh": 140.58,
+      "fiftyTwoWeekLow": 105.7,
+      "regularMarketDayHigh": 134.13,
+      "regularMarketDayLow": 129.03,
+      "regularMarketVolume": 4091942,
+      "longName": "American Electric Power Company, Inc.",
+      "shortName": "American Electric Power Company",
+      "chartPreviousClose": 133.07,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            135.16000366210938,
+            136.57000732421875,
+            135.77000427246094,
+            135.99000549316406,
+            134.1300048828125
+          ],
+          "low": [
+            132.33999633789062,
+            135.1199951171875,
+            133.27999877929688,
+            132.97999572753906,
+            129.02999877929688
+          ],
+          "volume": [
+            3417200,
+            3184700,
+            2597200,
+            3924200,
+            4230900
+          ],
+          "open": [
+            132.33999633789062,
+            135.42999267578125,
+            135.17999267578125,
+            134.08999633789062,
+            133.8000030517578
+          ],
+          "close": [
+            134.9199981689453,
+            135.5399932861328,
+            133.58999633789062,
+            133.02000427246094,
+            129.39999389648438
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            134.9199981689453,
+            135.5399932861328,
+            133.58999633789062,
+            133.02000427246094,
+            129.39999389648438
+          ]
+        }
+      ]
+    }
+  }
+}

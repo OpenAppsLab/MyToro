@@ -5,13 +5,20 @@ const symbols = [
   'QQQ','SPY','QQQM','NVDA','AAPL','MSFT','AMD','META','TSLA','AMZN',
   'AVGO','GOOGL','ADBE','COST','PLTR','SMCI','NFLX','CRM','INTC','PYPL',
   'PDD','CSCO','ORCL','IBM','UBER','SHOP','SNOW','ARM','V','MA',
-  'HD','WMT','JPM','BAC','C','GS','MS','AXP','DIS','CMCSA'
+  'HD','WMT','JPM','BAC','C','GS','MS','AXP','DIS','CMCSA','T','VZ',
+  'CVX','XOM','CAT','HON','UPS','FDX','DOW','NKE','MCD','KO','PG','PEP',
+  'LLY','PFE','MRK','UNH','ABBV','CME','TDG','FIS','MU','QCOM','TXN',
+  'LRCX','ON','ADI','KLAC','MCHP','PM','LULU','RCL','NCLH','BKNG','ABNB',
+  'ETSY','PINS','ROKU','DUK','SO','AEP','PCG','REGN','VRTX','BMY','GILD',
+  'BLK','SCHW','SPGI','NDAQ','RNG','AZO','CVS','UNP','RTX','AIG','BRK-B',
+  'CRWD','MRVL'
 ];
 
 const outDir = path.resolve(__dirname, '..', 'data');
 const jobs = [
   { range: '1d', interval: '5m', suffix: 'intraday_1d_5m' },
-  { range: '5d', interval: '1d', suffix: 'daily_5d_1d' }
+  { range: '5d', interval: '1d', suffix: 'daily_5d_1d' },
+  { range: '2mo', interval: '1d', suffix: 'daily_2mo_1d' }
 ];
 
 async function fetchJson(url, timeoutMs = 10000) {

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:56.277Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AIG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AIG",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 94833000,
+      "regularMarketTime": 1785355203,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 80.2,
+      "fiftyTwoWeekHigh": 87.29,
+      "fiftyTwoWeekLow": 71.25,
+      "regularMarketDayHigh": 80.98,
+      "regularMarketDayLow": 80.02,
+      "regularMarketVolume": 1925924,
+      "longName": "American International Group, Inc.",
+      "shortName": "American International Group, I",
+      "chartPreviousClose": 78.25,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785418200,
+          "start": 1785398400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785441600,
+          "start": 1785418200,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785456000,
+          "start": 1785441600,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            77.37999725341797,
+            77.98999786376953,
+            79.08999633789062,
+            79.58999633789062,
+            80.0199966430664
+          ],
+          "close": [
+            78.16000366210938,
+            79.05999755859375,
+            79.16000366210938,
+            80.83000183105469,
+            80.19999694824219
+          ],
+          "volume": [
+            3503300,
+            2212300,
+            2549300,
+            3315600,
+            2649800
+          ],
+          "high": [
+            78.7300033569336,
+            79.22000122070312,
+            80.2699966430664,
+            81.0199966430664,
+            80.98999786376953
+          ],
+          "open": [
+            77.9800033569336,
+            78.0999984741211,
+            79.08999633789062,
+            79.7699966430664,
+            80.76000213623047
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            78.16000366210938,
+            79.05999755859375,
+            79.16000366210938,
+            80.83000183105469,
+            80.19999694824219
+          ]
+        }
+      ]
+    }
+  }
+}

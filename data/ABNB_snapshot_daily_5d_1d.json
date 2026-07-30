@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:32.638Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABNB?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ABNB",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1607610600,
+      "regularMarketTime": 1785355201,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 153.01,
+      "fiftyTwoWeekHigh": 156.5,
+      "fiftyTwoWeekLow": 110.81,
+      "regularMarketDayHigh": 156.5,
+      "regularMarketDayLow": 151.5,
+      "regularMarketVolume": 3849368,
+      "longName": "Airbnb, Inc.",
+      "shortName": "Airbnb, Inc.",
+      "chartPreviousClose": 140.05,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785418200,
+          "start": 1785398400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785441600,
+          "start": 1785418200,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785456000,
+          "start": 1785441600,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            138.25,
+            142.6999969482422,
+            147.02999877929688,
+            153.19000244140625,
+            156.5
+          ],
+          "volume": [
+            3482600,
+            2414600,
+            2902200,
+            6844100,
+            3851700
+          ],
+          "low": [
+            135.72000122070312,
+            138.16000366210938,
+            143,
+            148.08999633789062,
+            151.5
+          ],
+          "close": [
+            137.57000732421875,
+            141.10000610351562,
+            146.86000061035156,
+            153.11000061035156,
+            153.00999450683594
+          ],
+          "open": [
+            137.5800018310547,
+            138.24000549316406,
+            143.5,
+            148.8300018310547,
+            152.00999450683594
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            137.57000732421875,
+            141.10000610351562,
+            146.86000061035156,
+            153.11000061035156,
+            153.00999450683594
+          ]
+        }
+      ]
+    }
+  }
+}

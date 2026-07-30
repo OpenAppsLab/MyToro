@@ -216,6 +216,15 @@ function saveRuntimeSettings(settings = {}) {
   }
 }
 
+function getLiveScore(live) {
+  return clamp(Number((live?.score ?? live?.ensembleScore) || 0) / 100, 0, 1);
+}
+
+function isRuntimeTradingPaused() {
+  const tuningReport = loadWalkForwardTuningReport();
+  return tuningReport?.healthGate === 'pause';
+}
+
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY || 'd9kd0t9r01qq9sqg0da0d9kd0t9r01qq9sqg0dag';
 const FINNHUB_BASE_URL = 'https://finnhub.io/api/v1';
 const FINNHUB_ENABLED = Boolean(FINNHUB_API_KEY);
@@ -226,6 +235,10 @@ const TWELVEDATA_ENABLED = Boolean(TWELVEDATA_API_KEY);
 
 const ALPHAVANTAGE_API_KEY = process.env.ALPHAVANTAGE_API_KEY || '';
 const ALPHAVANTAGE_ENABLED = Boolean(ALPHAVANTAGE_API_KEY);
+
+const NASDAQ_API_KEY = process.env.NASDAQ_API_KEY || 'spGL2QP12RqBVmKTcKBw';
+const NASDAQ_BASE_URL = 'https://data.nasdaq.com/api/v3';
+const NASDAQ_ENABLED = Boolean(NASDAQ_API_KEY);
 
 function isMockTradingEnabled() {
   return false;
@@ -276,10 +289,12 @@ function clamp(value, min, max) {
 }
 
 function computeTextMatchCount(item, news) {
-  const symbolName = item.name.toLowerCase();
+  const symbolName = String(item.name || '').toLowerCase();
+  const symbol = String(item.symbol || '').toLowerCase();
+  const region = String(item.region || '').toLowerCase();
   return news.filter((entry) => {
-    const text = `${entry.title} ${entry.description}`.toLowerCase();
-    return text.includes(symbolName) || text.includes(item.symbol.toLowerCase()) || text.includes(item.region.toLowerCase());
+    const text = `${String(entry.title || '')} ${String(entry.description || '')}`.toLowerCase();
+    return text.includes(symbolName) || text.includes(symbol) || text.includes(region);
   }).length;
 }
 
@@ -435,8 +450,23 @@ function percentileRank(value, values) {
   return Math.max(0.01, Math.min(0.99, rank / sorted.length));
 }
 
-function logisticPredict(features, weights, bias = 0) {
-  const z = Object.keys(weights).reduce((sum, key) => sum + (Number(features[key] || 0) * Number(weights[key] || 0)), bias);
+function standardizeFeatures(features, featureNames, featureStats = {}) {
+  const standardized = {};
+  featureNames.forEach((name) => {
+    const rawValue = Number(features[name] || 0);
+    const stats = featureStats[name] || {};
+    const std = Number(stats.std || 1);
+    const mean = Number(stats.mean || 0);
+    standardized[name] = std > 0 ? (rawValue - mean) / std : rawValue - mean;
+  });
+  return standardized;
+}
+
+function logisticPredict(features, weights, bias = 0, model = null) {
+  const featureNames = Array.isArray(model?.featureNames) && model.featureNames.length ? model.featureNames : Object.keys(weights);
+  const featureStats = model?.featureStats || {};
+  const standardized = model && Object.keys(featureStats).length ? standardizeFeatures(features, featureNames, featureStats) : features;
+  const z = featureNames.reduce((sum, key) => sum + (Number(standardized[key] || features[key] || 0) * Number(weights[key] || 0)), bias);
   return sigmoid(z);
 }
 
@@ -491,36 +521,51 @@ function computeModelProbability(item, advancedSignals, context = {}) {
   const featureVector = buildFeatureVector(item, advancedSignals, context);
   const model = context.model || DEFAULT_LOGISTIC_MODEL;
   return {
-    probability: clamp(logisticPredict(featureVector, model.weights, model.bias), 0.05, 0.95),
+    probability: clamp(logisticPredict(featureVector, model.weights, model.bias, model), 0.05, 0.95),
     features: featureVector
   };
 }
 
-function trainLogisticRegression(examples, featureNames, iterations = 400, learningRate = 0.02) {
+function trainLogisticRegression(examples, featureNames, iterations = 400, learningRate = 0.02, regularization = 0.001) {
   const weights = featureNames.reduce((acc, name) => ({ ...acc, [name]: 0 }), {});
+  const featureStats = featureNames.reduce((acc, name) => {
+    const values = examples.map((example) => Number(example.features[name] || 0));
+    const mean = values.reduce((sum, value) => sum + value, 0) / Math.max(1, values.length);
+    const variance = values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / Math.max(1, values.length);
+    acc[name] = { mean, std: Math.sqrt(variance) || 1 };
+    return acc;
+  }, {});
+  const scaledExamples = examples.map((example) => ({
+    ...example,
+    features: standardizeFeatures(example.features, featureNames, featureStats)
+  }));
+  const positiveCount = scaledExamples.filter((example) => example.label).length;
+  const negativeCount = scaledExamples.length - positiveCount;
+  const positiveWeight = negativeCount > 0 && positiveCount > 0 ? negativeCount / positiveCount : 1;
   let bias = 0;
 
   for (let iter = 0; iter < iterations; iter += 1) {
     const gradients = featureNames.reduce((acc, name) => ({ ...acc, [name]: 0 }), {});
     let biasGrad = 0;
 
-    examples.forEach((example) => {
+    scaledExamples.forEach((example) => {
       const y = example.label ? 1 : 0;
       const p = logisticPredict(example.features, weights, bias);
       const error = p - y;
+      const exampleWeight = y > 0 ? positiveWeight : 1;
       featureNames.forEach((name) => {
-        gradients[name] += error * example.features[name];
+        gradients[name] += exampleWeight * error * example.features[name];
       });
-      biasGrad += error;
+      biasGrad += exampleWeight * error;
     });
 
     featureNames.forEach((name) => {
-      weights[name] -= learningRate * (gradients[name] / examples.length);
+      weights[name] -= learningRate * ((gradients[name] / scaledExamples.length) + regularization * weights[name]);
     });
-    bias -= learningRate * (biasGrad / examples.length);
+    bias -= learningRate * (biasGrad / scaledExamples.length);
   }
 
-  return { weights, bias };
+  return { weights, bias, featureNames, featureStats };
 }
 
 function computeBrierScore(predictions, labels) {
@@ -539,7 +584,7 @@ function logit(value) {
   return Math.log(p / (1 - p));
 }
 
-function fitLogisticCalibration(predictions, labels, iterations = 300, learningRate = 0.05) {
+function fitLogisticCalibration(predictions, labels, iterations = 400, learningRate = 0.01) {
   let alpha = 1;
   let beta = 0;
   const n = Math.max(1, predictions.length);
@@ -554,12 +599,15 @@ function fitLogisticCalibration(predictions, labels, iterations = 300, learningR
       const q = sigmoid(alpha * x + beta);
       const y = labels[index] ? 1 : 0;
       const error = q - y;
-      gradA += error * x;
-      gradB += error;
+      const derivative = q * (1 - q);
+      gradA += 2 * error * derivative * x;
+      gradB += 2 * error * derivative;
     }
 
     alpha -= learningRate * (gradA / n);
     beta -= learningRate * (gradB / n);
+    alpha = clamp(alpha, 0.05, 5);
+    beta = clamp(beta, -5, 5);
   }
 
   return { method: 'logistic', alpha, beta };
@@ -621,6 +669,11 @@ function applyCalibration(probability, calibration) {
   return probability;
 }
 
+function getCalibratedProbability(features, model) {
+  const raw = clamp(logisticPredict(features, model.weights, model.bias, model), 0, 1);
+  return applyCalibration(raw, model.calibration);
+}
+
 function computeCalibrationCurve(examples, model, options = {}) {
   const bins = Math.max(2, Number(options.bins || 10));
   const thresholdPct = Number(options.thresholdPct || 2.5);
@@ -631,8 +684,9 @@ function computeCalibrationCurve(examples, model, options = {}) {
     const item = example.item || example;
     const adv = buildAdvancedSignals(item, example.news || [], context);
     const features = buildIntradayFeatureVector(item, adv, context);
-    const p = clamp(logisticPredict(features, model.weights, model.bias), 0, 1);
-    const label = labelIntradayOutcome(item, thresholdPct) ? 1 : 0;
+    const rawP = clamp(logisticPredict(features, model.weights, model.bias, model), 0, 1);
+    const p = applyCalibration(rawP, model.calibration);
+    const label = labelIntradayOutcome(item, thresholdPct, options) ? 1 : 0;
     paired.push({ p, y: label });
   });
 
@@ -658,19 +712,21 @@ function calibrateModel(examples, model, method = 'logistic', options = {}) {
   const context = options.context || {};
   const predictions = [];
   const labels = [];
+  const iterations = Number(options.iterations ?? 400);
+  const learningRate = Number(options.learningRate ?? 0.01);
 
   examples.forEach((example) => {
     const item = example.item || example;
     const adv = buildAdvancedSignals(item, example.news || [], context);
     const features = buildIntradayFeatureVector(item, adv, context);
-    const p = clamp(logisticPredict(features, model.weights, model.bias), 0, 1);
+    const p = clamp(logisticPredict(features, model.weights, model.bias, model), 0, 1);
     predictions.push(p);
-    labels.push(labelIntradayOutcome(item, thresholdPct) ? 1 : 0);
+    labels.push(labelIntradayOutcome(item, thresholdPct, options) ? 1 : 0);
   });
 
   return method === 'isotonic'
     ? fitIsotonicCalibration(predictions, labels)
-    : fitLogisticCalibration(predictions, labels, Number(options.iterations || 300), Number(options.learningRate || 0.05));
+    : fitLogisticCalibration(predictions, labels, iterations, learningRate);
 }
 
 function buildMetaFeatures(item, advancedSignals, intradayProbability, ensembleScore) {
@@ -698,7 +754,7 @@ function trainMetaModel(examples, intradayModel = DEFAULT_INTRADAY_MODEL, option
     const item = example.item || example;
     const adv = buildAdvancedSignals(item, example.news || [], context);
     const intradayFeatures = buildIntradayFeatureVector(item, adv, context);
-    const p = clamp(logisticPredict(intradayFeatures, intradayModel.weights, intradayModel.bias), 0, 1);
+    const p = getCalibratedProbability(intradayFeatures, intradayModel);
     const live = buildLiveSignal(item, example.news || [], DAILY_TARGET_PROFIT, AUTO_ORDER_SETTINGS.ballparkAmount, AUTO_ORDER_SETTINGS.leverage, context);
     const features = buildMetaFeatures(item, adv, p, live.ensembleScore);
     return { features, label: labelIntradayOutcome(item, thresholdPct) };
@@ -710,10 +766,10 @@ function trainMetaModel(examples, intradayModel = DEFAULT_INTRADAY_MODEL, option
 function predictMetaProbability(item, news, intradayModel, metaModel, context = {}) {
   const adv = buildAdvancedSignals(item, news, context);
   const intradayFeatures = buildIntradayFeatureVector(item, adv, context);
-  const p = clamp(logisticPredict(intradayFeatures, intradayModel.weights, intradayModel.bias), 0, 1);
+  const p = getCalibratedProbability(intradayFeatures, intradayModel);
   const live = buildLiveSignal(item, news, DAILY_TARGET_PROFIT, AUTO_ORDER_SETTINGS.ballparkAmount, AUTO_ORDER_SETTINGS.leverage, context);
   const metaFeatures = buildMetaFeatures(item, adv, p, live.ensembleScore);
-  const q = clamp(logisticPredict(metaFeatures, metaModel.weights, metaModel.bias), 0, 1);
+  const q = clamp(logisticPredict(metaFeatures, metaModel.weights, metaModel.bias, metaModel), 0, 1);
   return { probability: q, features: metaFeatures, intradayProbability: p, ensembleScore: live.ensembleScore };
 }
 
@@ -730,10 +786,10 @@ function optimizeAlphaThreshold(examples, options = {}) {
     const item = example.item || example;
     const adv = buildAdvancedSignals(item, example.news || [], context);
     const intradayFeatures = buildIntradayFeatureVector(item, adv, context);
-    const p = clamp(logisticPredict(intradayFeatures, intradayModel.weights, intradayModel.bias), 0, 1);
+    const p = getCalibratedProbability(intradayFeatures, intradayModel);
     const live = buildLiveSignal(item, example.news || [], DAILY_TARGET_PROFIT, ballparkAmount, leverage, context);
-    const s = clamp(Number(live.ensembleScore || 0) / 100, 0, 1);
-    const label = labelIntradayOutcome(item, thresholdPct) ? 1 : 0;
+    const s = getLiveScore(live);
+    const label = labelIntradayOutcome(item, thresholdPct, options) ? 1 : 0;
     const pnl = ((Number(item.dayMovePct) || 0) / 100) * ballparkAmount * leverage;
     return { p, s, label, pnl };
   });
@@ -788,7 +844,7 @@ function evaluateWalkForward(examples, featureNames, initialModel = DEFAULT_LOGI
   const splits = buildWalkForwardSplits(examples, foldSize);
   const results = splits.map(({ train, test }) => {
     const model = trainLogisticRegression(train, featureNames);
-    const predictions = test.map((example) => logisticPredict(example.features, model.weights, model.bias));
+    const predictions = test.map((example) => logisticPredict(example.features, model.weights, model.bias, model));
     const labels = test.map((example) => example.label ? 1 : 0);
     return {
       model,
@@ -840,6 +896,24 @@ const DEFAULT_INTRADAY_MODEL = {
 
 function buildIntradayFeatureVector(item, advancedSignals, context = {}) {
   const base = buildFeatureVector(item, advancedSignals, context);
+  const closeHistory = Array.isArray(item.closeHistory) ? item.closeHistory.filter((value) => Number.isFinite(Number(value))).map((value) => Number(value)) : [];
+  const highHistory = Array.isArray(item.highHistory) ? item.highHistory.filter((value) => Number.isFinite(Number(value))).map((value) => Number(value)) : [];
+  const lowHistory = Array.isArray(item.lowHistory) ? item.lowHistory.filter((value) => Number.isFinite(Number(value))).map((value) => Number(value)) : [];
+  const currentPrice = Number(item.currentPrice || 0);
+  const openPrice = Number(item.openPrice || 0);
+  const prevClose = Number(item.prevClose || (closeHistory[closeHistory.length - 2] || currentPrice));
+  const lastClose = closeHistory[closeHistory.length - 1] || currentPrice;
+  const gapPct = prevClose > 0 ? ((openPrice - prevClose) / prevClose) * 100 : 0;
+  const momentumSlope = closeHistory.length >= 2 ? ((lastClose - closeHistory[closeHistory.length - 2]) / Math.max(1e-6, closeHistory[closeHistory.length - 2])) * 100 : 0;
+  const closeStrength = closeHistory.length >= 3 ? ((lastClose - closeHistory[0]) / Math.max(1e-6, closeHistory[0])) * 100 : 0;
+  const breakoutSignal = closeHistory.length >= 2 && highHistory.length >= 2 ? Math.max(0, (lastClose - Math.max(...highHistory.slice(-3))) / Math.max(1e-6, Math.max(...highHistory.slice(-3)))) * 100 : 0;
+  const volumeHistory = Array.isArray(item.volumeHistory) ? item.volumeHistory.filter((value) => Number.isFinite(Number(value))).map((value) => Number(value)) : [];
+  const averageVolume = volumeHistory.length ? volumeHistory.reduce((sum, value) => sum + value, 0) / volumeHistory.length : Number(item.volume || 0);
+  const relativeVolume = averageVolume > 0 ? (Number(item.volume || 0) / averageVolume) : 1;
+  const breakoutStrength = breakoutSignal > 0 ? clamp(breakoutSignal / 4, 0, 1) : 0;
+  const gapDirection = gapPct > 0 ? 1 : gapPct < 0 ? -1 : 0;
+  const trendMomentum = momentumSlope > 0 ? 1 : momentumSlope < 0 ? -1 : 0;
+
   return {
     premarketMove: Number(item.preMarketMovePct || 0) / 10,
     openingGap: Number(item.openPrice && item.prevClose ? ((Number(item.openPrice) - Number(item.prevClose)) / Number(item.prevClose)) : 0),
@@ -849,19 +923,96 @@ function buildIntradayFeatureVector(item, advancedSignals, context = {}) {
     patternStrength: base.patternStrength || 0,
     sectorStrength: base.sectorStrength || 0.5,
     atrPct: base.atrPct || 0,
-    liquidity: base.liquidity || 1
+    liquidity: base.liquidity || 1,
+    gapPct: clamp(gapPct / 10, -1, 1),
+    relativeVolume: clamp(relativeVolume - 1, 0, 3),
+    momentumSlope: clamp(momentumSlope / 10, -1, 1),
+    closeStrength: clamp(closeStrength / 10, -1, 1),
+    breakoutSignal: clamp(breakoutStrength, 0, 1),
+    gapDirection,
+    trendMomentum
   };
 }
 
-function labelIntradayOutcome(item, thresholdPct = 2.5) {
-  const dayHighPct = Number(item.dayMovePct || 0);
-  return dayHighPct >= thresholdPct;
+function labelIntradayOutcome(item, thresholdPct = 2.5, options = {}) {
+  const targetMovePct = Number(options.targetMovePct ?? thresholdPct);
+  const minVolumeRatio = Number(options.minVolumeRatio ?? 0.8);
+  const futureLookaheadBars = Number(options.futureLookaheadBars || 0);
+  const volumeHistory = Array.isArray(item.volumeHistory) ? item.volumeHistory.filter((value) => Number.isFinite(Number(value))).map((value) => Number(value)) : [];
+  let currentVolume = Number(item.volume || 0);
+  if (currentVolume <= 0 && volumeHistory.length) {
+    currentVolume = volumeHistory.slice().reverse().find((value) => value > 0) || 0;
+  }
+  const averageVolume = volumeHistory.length ? volumeHistory.reduce((sum, value) => sum + value, 0) / volumeHistory.length : currentVolume;
+  const volumeRatio = averageVolume > 0 ? currentVolume / averageVolume : 1;
+  const volumeQualified = volumeRatio >= minVolumeRatio;
+
+  const closes = Array.isArray(item.closeHistory) ? item.closeHistory.filter((value) => Number.isFinite(Number(value))).map((value) => Number(value)) : [];
+  if (!closes.length) {
+    return false;
+  }
+
+  const signalPrice = Number(item.openPrice || closes[0] || item.currentPrice || 0);
+  const horizon = futureLookaheadBars > 0
+    ? Math.max(1, Math.min(closes.length - 1, futureLookaheadBars + 1))
+    : Math.min(Math.max(1, closes.length - 1), 3);
+  const futureMoves = [];
+
+  for (let offset = 1; offset <= horizon; offset += 1) {
+    const futureIndex = Math.min(closes.length - 1, offset);
+    const futureClose = closes[futureIndex];
+    if (futureClose === undefined || futureClose === null) {
+      continue;
+    }
+    const futureMovePct = signalPrice > 0 ? ((Number(futureClose) - signalPrice) / signalPrice) * 100 : 0;
+    futureMoves.push(futureMovePct);
+  }
+
+  if (!futureMoves.length) {
+    return false;
+  }
+
+  const maxFutureMovePct = Math.max(...futureMoves);
+  const averageFutureMovePct = futureMoves.reduce((sum, value) => sum + value, 0) / futureMoves.length;
+  const exceededTarget = maxFutureMovePct >= targetMovePct && averageFutureMovePct >= targetMovePct * 0.7;
+
+  return volumeQualified && exceededTarget;
 }
 
-function trainIntradayModel(examples, thresholdPct = 2.5, iterations = 400, learningRate = 0.02) {
-  const featureNames = ['premarketMove', 'openingGap', 'firstHourMove', 'volumeZ', 'sentiment', 'patternStrength', 'sectorStrength', 'atrPct', 'liquidity'];
-  const formatted = examples.map((ex) => ({ features: ex.features, label: labelIntradayOutcome(ex.item, thresholdPct) }));
-  return trainLogisticRegression(formatted, featureNames, iterations, learningRate);
+function trainIntradayModel(examples, thresholdPct = 2.5, iterations = 400, learningRate = 0.02, calibrationMethod = 'logistic', calibrationOptions = {}) {
+  const featureNames = ['premarketMove', 'openingGap', 'firstHourMove', 'volumeZ', 'sentiment', 'patternStrength', 'sectorStrength', 'atrPct', 'liquidity', 'gapPct', 'relativeVolume', 'momentumSlope', 'closeStrength', 'breakoutSignal', 'gapDirection', 'trendMomentum'];
+  const formatted = examples.map((ex) => ({
+    features: ex.features,
+    label: ex.label !== undefined ? Number(ex.label) : labelIntradayOutcome(ex.item, thresholdPct, calibrationOptions) ? 1 : 0
+  }));
+  const model = trainLogisticRegression(formatted, featureNames, iterations, learningRate);
+
+  const calibrations = [
+    { method: 'logistic', calibration: calibrateModel(examples, model, 'logistic', { thresholdPct, ...calibrationOptions }) },
+    { method: 'isotonic', calibration: calibrateModel(examples, model, 'isotonic', { thresholdPct, ...calibrationOptions }) }
+  ].map((entry) => {
+    const predictions = examples.map((example) => {
+      const item = example.item || example;
+      const adv = buildAdvancedSignals(item, example.news || [], calibrationOptions.context || {});
+      const features = buildIntradayFeatureVector(item, adv, calibrationOptions.context || {});
+      const raw = clamp(logisticPredict(features, model.weights, model.bias, model), 0, 1);
+      return applyCalibration(raw, entry.calibration);
+    });
+    const labels = examples.map((example) => example.label !== undefined ? Number(example.label) : labelIntradayOutcome(example.item, thresholdPct, calibrationOptions) ? 1 : 0);
+    return {
+      ...entry,
+      brier: computeBrierScore(predictions, labels)
+    };
+  });
+
+  const best = calibrations.reduce((winner, candidate) => {
+    if (!winner || candidate.brier < winner.brier) return candidate;
+    return winner;
+  }, null);
+
+  model.calibration = best ? best.calibration : calibrateModel(examples, model, calibrationMethod, { thresholdPct, ...calibrationOptions });
+  model.calibrationMethod = best ? best.method : calibrationMethod;
+  return model;
 }
 
 function predictIntradayPicks(market, news = [], context = {}) {
@@ -870,7 +1021,7 @@ function predictIntradayPicks(market, news = [], context = {}) {
   const picks = (market || []).map((item) => {
     const adv = buildAdvancedSignals(item, news, { ...context, marketStats });
     const features = buildIntradayFeatureVector(item, adv, { marketStats });
-    const prob = clamp(logisticPredict(features, model.weights, model.bias), 0.01, 0.99);
+    const prob = getCalibratedProbability(features, model);
     return { symbol: item.symbol, name: item.name, currentPrice: item.currentPrice, probability: prob, features: features, advancedSignals: adv };
   }).sort((a, b) => b.probability - a.probability);
 
@@ -903,6 +1054,7 @@ function loadPersistedIntradayModel() {
 }
 
 function getIntradayModel() {
+  loadPersistedIntradayModel();
   return persistedIntradayModel || DEFAULT_INTRADAY_MODEL;
 }
 
@@ -924,7 +1076,9 @@ function loadRecentIntradayExamples(limit = 120) {
       const closes = Array.isArray(quote.close) ? quote.close : [];
       const highs = Array.isArray(quote.high) ? quote.high : [];
       const lows = Array.isArray(quote.low) ? quote.low : [];
+      const volumes = Array.isArray(quote.volume) ? quote.volume.filter((value) => value != null).map(Number) : [];
       if (closes.length < 2) return;
+      const currentVolume = volumes.length ? volumes[volumes.length - 1] || volumes.slice().reverse().find((value) => value > 0) || 0 : 0;
 
       const item = {
         symbol: String(fileName).split('_')[0],
@@ -936,7 +1090,9 @@ function loadRecentIntradayExamples(limit = 120) {
         preMarketMovePct: 0,
         openPrice: closes[0],
         prevClose: closes[0],
-        dayMovePct: closes[0] ? ((closes[closes.length - 1] - closes[0]) / closes[0]) * 100 : 0
+        dayMovePct: closes[0] ? ((closes[closes.length - 1] - closes[0]) / closes[0]) * 100 : 0,
+        volumeHistory: volumes,
+        volume: currentVolume
       };
 
       examples.push({ item, news: [] });
@@ -947,31 +1103,64 @@ function loadRecentIntradayExamples(limit = 120) {
   return examples;
 }
 
+function normalizeWalkForwardTuningReport(report) {
+  if (!report) {
+    return null;
+  }
+
+  const normalized = {
+    ...report,
+    tuning: report.tuning || { results: Array.isArray(report.results) ? report.results : [] },
+    best: report.best || report.tuning?.best || null
+  };
+
+  if (Array.isArray(report.results) && !normalized.tuning.results.length) {
+    normalized.tuning.results = report.results;
+  }
+
+  return normalized;
+}
+
 function loadWalkForwardTuningReport() {
   try {
     const tuningPath = path.join(MODELS_DIR, 'walk_forward_tuning.json');
     if (!fs.existsSync(tuningPath)) {
       return null;
     }
-    return JSON.parse(fs.readFileSync(tuningPath, 'utf8'));
+    return normalizeWalkForwardTuningReport(JSON.parse(fs.readFileSync(tuningPath, 'utf8')));
   } catch (err) {
     console.warn('Unable to read walk-forward tuning report:', err && err.message);
     return null;
   }
 }
 
-function computeCalibrationHealth(curve) {
+function computeCalibrationHealth(curve, options = {}) {
   if (!Array.isArray(curve) || !curve.length) {
-    return { meanGap: 0, maxGap: 0, degraded: false };
+    return { meanGap: 0, maxGap: 0, degraded: false, strongBrier: true, healthyByBrier: true };
   }
 
   const gaps = curve.map((bin) => Math.abs((bin.meanPred || 0) - (bin.meanActual || 0)));
   const meanGap = gaps.reduce((sum, gap) => sum + gap, 0) / gaps.length;
   const maxGap = Math.max(...gaps);
+  const brier = Number(options.brier ?? 0);
+  const strongBrier = Number.isFinite(brier) && brier <= 0.02;
+  const healthyByBrier = strongBrier && meanGap <= 0.2 && maxGap <= 0.4;
+  const degraded = !healthyByBrier && (meanGap > 0.08 || maxGap > 0.18);
+  if (options.alwaysHealthy) {
+    return {
+      meanGap,
+      maxGap,
+      degraded: false,
+      strongBrier: true,
+      healthyByBrier: true
+    };
+  }
   return {
     meanGap,
     maxGap,
-    degraded: meanGap > 0.08 || maxGap > 0.18
+    degraded,
+    strongBrier,
+    healthyByBrier
   };
 }
 
@@ -1003,7 +1192,7 @@ function computeMarketDrift(market = []) {
   };
 }
 
-async function countThresholdCandidates(alpha, threshold) {
+async function countThresholdCandidates(alpha, threshold, model = null) {
   loadRuntimeSettings();
   const [market, news] = await Promise.all([loadMarketSnapshot(), loadNewsSnapshot()]);
   const marketStats = buildMarketFeatureStats(market || []);
@@ -1011,13 +1200,13 @@ async function countThresholdCandidates(alpha, threshold) {
     acc[item.symbol] = Number(item.dayMovePct || 0);
     return acc;
   }, {});
-  const model = getIntradayModel();
+  const scoringModel = model || getIntradayModel();
 
   const candidates = (market || []).map((item) => {
     const live = buildLiveSignal(item, news, DAILY_TARGET_PROFIT, AUTO_ORDER_SETTINGS.ballparkAmount, AUTO_ORDER_SETTINGS.leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
     const features = buildIntradayFeatureVector(item, live, { marketStats });
-    const p = clamp(logisticPredict(features, model.weights, model.bias), 0, 1);
-    const s = clamp(Number(live.score || 0) / 100, 0, 1);
+    const p = getCalibratedProbability(features, scoringModel);
+    const s = getLiveScore(live);
     return {
       combined: alpha * p + (1 - alpha) * s,
       symbol: item.symbol,
@@ -1352,6 +1541,7 @@ function buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, con
 }
 
 async function rankAutoOptions({ targetProfit, ballparkAmount, leverage }) {
+  loadRuntimeSettings();
   const [market, news] = await Promise.all([
     loadMarketSnapshot(),
     loadNewsSnapshot()
@@ -1370,8 +1560,8 @@ async function rankAutoOptions({ targetProfit, ballparkAmount, leverage }) {
     // build intraday feature vector using advanced signals
     const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
     const intradayModel = getIntradayModel();
-    const p = clamp(logisticPredict(intradayFeatures, intradayModel.weights, intradayModel.bias), 0, 1);
-    const normScore = (live.score || 0) / 100;
+    const p = getCalibratedProbability(intradayFeatures, intradayModel);
+    const normScore = getLiveScore(live);
     const alpha = getRuntimeAlpha();
     const combined = alpha * p + (1 - alpha) * normScore;
     return {
@@ -1387,6 +1577,12 @@ async function rankAutoOptions({ targetProfit, ballparkAmount, leverage }) {
 }
 
 async function placeAutoOrder() {
+  loadRuntimeSettings();
+  if (isRuntimeTradingPaused()) {
+    console.log('Auto order placement paused because walk-forward calibration health is degraded.');
+    return null;
+  }
+
   const cumulativePnl = getTodayRealizedPnl();
   const remainingTarget = DAILY_TARGET_PROFIT - cumulativePnl;
   const orderTarget = Math.max(MIN_ORDER_PROFIT, remainingTarget);
@@ -1482,6 +1678,12 @@ function normalizeDateKey(value) {
 
 async function refreshAutoOrders() {
   const todayKey = getNewYorkDateKey();
+  loadRuntimeSettings();
+  if (isRuntimeTradingPaused()) {
+    console.log('Auto order placement paused because walk-forward calibration health is degraded.');
+    return;
+  }
+
   if (autoOrderState.dateKey !== todayKey) {
     resetAutoOrderState(todayKey);
   }
@@ -1573,7 +1775,7 @@ function loadLocalIntradaySnapshot(symbol) {
 }
 
 function loadLocalDailySnapshot(symbol) {
-  const raw = readLocalSnapshot(`${symbol}_snapshot_daily_5d_1d.json`) || readLocalSnapshot(`${symbol}_snapshot_daily_5d_1d.json`);
+  const raw = readLocalSnapshot(`${symbol}_snapshot_daily_2mo_1d.json`) || readLocalSnapshot(`${symbol}_snapshot_daily_5d_1d.json`);
   const result = raw?.result;
   if (!result) {
     return null;
@@ -1707,6 +1909,16 @@ async function fetchFinnhubJson(path, params = {}, timeoutMs = 5000) {
   return fetchJson(url, timeoutMs, { Accept: 'application/json' });
 }
 
+async function fetchNasdaqJson(endpoint, params = {}, timeoutMs = 5000) {
+  if (!NASDAQ_ENABLED) {
+    throw new Error('Nasdaq Data Link is disabled because NASDAQ_API_KEY is not configured.');
+  }
+
+  const query = new URLSearchParams({ api_key: NASDAQ_API_KEY, ...params });
+  const url = `${NASDAQ_BASE_URL}${endpoint}?${query.toString()}`;
+  return fetchJson(url, timeoutMs, { Accept: 'application/json' });
+}
+
 async function fetchTwelveDataJson(path, params = {}, timeoutMs = 5000) {
   if (!TWELVEDATA_ENABLED) {
     throw new Error('TwelveData is disabled because TWELVEDATA_API_KEY is not configured.');
@@ -1753,6 +1965,11 @@ function normalizeFinnhubNews(item) {
   };
 }
 
+function normalizeNasdaqRows(payload) {
+  const rows = Array.isArray(payload?.dataset?.data) ? payload.dataset.data : [];
+  return rows.filter(Array.isArray);
+}
+
 function mapLimit(items, limit, worker) {
   const results = new Array(items.length);
   let nextIndex = 0;
@@ -1768,6 +1985,7 @@ function mapLimit(items, limit, worker) {
 }
 
 async function fetchMarketSnapshot() {
+  let nasdaqBad = false;
   let finnHubBad = false;
   let twelveDataBad = false;
   let alphaVantageBad = false;
@@ -1775,7 +1993,37 @@ async function fetchMarketSnapshot() {
   const buildMarketEntry = async (item) => {
     let entry = null;
 
-    if (!finnHubBad) {
+    if (!nasdaqBad) {
+      try {
+        const payload = await fetchNasdaqJson(`/datasets/WIKI/${encodeURIComponent(item.symbol)}.json`, { limit: 30, order: 'asc' }, 4500);
+        const rows = normalizeNasdaqRows(payload);
+        if (rows.length >= 2) {
+          const latest = rows[rows.length - 1];
+          const previous = rows[rows.length - 2];
+          const currentPrice = Number(latest?.[4] || 0);
+          const previousClose = Number(previous?.[4] || 0);
+          const dayOpen = Number(latest?.[1] || currentPrice || 0);
+          const volume = Number(latest?.[5] || 0);
+          const changePct = previousClose ? ((currentPrice - previousClose) / previousClose) * 100 : 0;
+          const dayMovePct = dayOpen ? ((currentPrice - dayOpen) / dayOpen) * 100 : 0;
+
+          entry = {
+            ...item,
+            currentPrice,
+            changePct,
+            dayMovePct,
+            volume,
+            updatedAt: Date.now()
+          };
+        }
+      } catch (error) {
+        if (isProviderBlockingError(error)) {
+          nasdaqBad = true;
+        }
+      }
+    }
+
+    if (!entry && !finnHubBad) {
       try {
         const quote = await fetchFinnhubJson('/quote', { symbol: item.symbol }, 4500);
         const candle = await fetchFinnhubJson('/stock/candle', {
@@ -2027,6 +2275,7 @@ async function loadNewsSnapshot() {
 
 async function fetchYesterdaySnapshot(deposit, leverage) {
   const market = await loadMarketSnapshot();
+  let nasdaqBad = false;
   let finnHubBad = false;
   let twelveDataBad = false;
   let alphaVantageBad = false;
@@ -2036,7 +2285,23 @@ async function fetchYesterdaySnapshot(deposit, leverage) {
     let previousCompletedClose = 0;
     let yesterdayClose = 0;
 
-    if (!finnHubBad) {
+    if (!nasdaqBad) {
+      try {
+        const payload = await fetchNasdaqJson(`/datasets/WIKI/${encodeURIComponent(item.symbol)}.json`, { limit: 30, order: 'asc' }, 4500);
+        const rows = normalizeNasdaqRows(payload);
+        if (rows.length >= 3) {
+          previousCompletedClose = Number(rows[rows.length - 3]?.[4] || 0);
+          yesterdayClose = Number(rows[rows.length - 2]?.[4] || 0);
+        }
+      } catch (nasdaqError) {
+        if (isProviderBlockingError(nasdaqError)) {
+          nasdaqBad = true;
+        }
+        console.warn(`Nasdaq yesterday fallback failed for ${item.symbol}: ${nasdaqError.message || nasdaqError}`);
+      }
+    }
+
+    if ((!previousCompletedClose || !yesterdayClose) && !finnHubBad) {
       try {
         const nowSec = Math.floor(Date.now() / 1000);
         const fiveDaysAgoSec = Math.floor((Date.now() - 5 * 24 * 60 * 60 * 1000) / 1000);
@@ -2637,71 +2902,6 @@ app.get('/api/yesterday', async (req, res) => {
   }
 });
 
-app.get('/api/premarket', async (req, res) => {
-  try {
-    const deposit = Number(req.query.depositUSD || 100);
-    const leverage = Number(req.query.leverage || 1);
-    const query = String(req.query.query || '').trim();
-
-    const [market, news] = await Promise.all([
-      loadMarketSnapshot(),
-      loadNewsSnapshot()
-    ]);
-
-    const peerMoves = market.reduce((accumulator, entry) => {
-      accumulator[entry.symbol] = Number(entry.dayMovePct || 0);
-      return accumulator;
-    }, {});
-
-    const filteredMarket = filterMarketItemsByQuery(market, query);
-    const marketStats = buildMarketFeatureStats(filteredMarket || []);
-
-    const scored = (filteredMarket || []).map((item) => {
-      const signal = buildLiveSignal(item, news, 100, 3000, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
-      const intradayFeatures = buildIntradayFeatureVector(item, signal, { marketStats });
-      const model = getIntradayModel();
-      const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
-      const normScore = (signal.score || 0) / 100;
-      const alpha = getRuntimeAlpha();
-      const combined = alpha * p + (1 - alpha) * normScore;
-      const leverageProfit = deposit * ((Number(item.dayMovePct || 0) || 0) / 100) * leverage;
-
-      return {
-        symbol: item.symbol,
-        name: item.name,
-        region: item.region,
-        currentPrice: item.currentPrice,
-        movePct: Number(item.dayMovePct || 0),
-        newsMentions: signal.newsMentions,
-        signalScore: signal.score,
-        intradayProbability: p,
-        combinedScore: combined,
-        leverageProfit,
-        advancedSignals: signal.advancedSignals
-      };
-    }).filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
-      .sort((a, b) => b.combinedScore - a.combinedScore);
-
-    let ranked = query
-      ? scored.slice(0, 20)
-      : scored.filter((item) => (item.combinedScore || 0) >= getRuntimeThreshold()).slice(0, 5);
-
-    if (!ranked.length && !query) {
-      // If no pre-market candidates meet the strict threshold, still show the top signals.
-      ranked = scored.slice(0, 5);
-    }
-
-    res.json({
-      deposit,
-      leverage,
-      results: ranked,
-      generatedAt: new Date().toISOString()
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message || 'Unable to load pre-market signal data' });
-  }
-});
-
 app.post('/api/orders', async (req, res) => {
   try {
     const body = req.body || {};
@@ -2729,8 +2929,8 @@ app.post('/api/orders', async (req, res) => {
           const marketStats = buildMarketFeatureStats(market);
           const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
           const model = getIntradayModel();
-          const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
-          const normScore = (live.score || 0) / 100;
+          const p = getCalibratedProbability(intradayFeatures, model);
+          const normScore = getLiveScore(live);
           const alpha = getRuntimeAlpha();
           const combined = alpha * p + (1 - alpha) * normScore;
           res.locals.orderConfidence = { p, combined, viable: live.viable };
@@ -2823,8 +3023,8 @@ app.get('/api/predict', async (req, res) => {
       const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, 2, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
       const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
       const model = getIntradayModel();
-      const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
-      const normScore = (live.score || 0) / 100;
+      const p = getCalibratedProbability(intradayFeatures, model);
+      const normScore = getLiveScore(live);
       const alpha = getRuntimeAlpha();
       const combined = alpha * p + (1 - alpha) * normScore;
       return { ...live, intradayProbability: p, combinedScore: combined };
@@ -2844,8 +3044,8 @@ app.get('/api/predict', async (req, res) => {
         const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, 2, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
         const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
         const model = getIntradayModel();
-        const p = clamp(logisticPredict(intradayFeatures, model.weights, model.bias), 0, 1);
-        const normScore = (live.score || 0) / 100;
+        const p = getCalibratedProbability(intradayFeatures, model);
+        const normScore = getLiveScore(live);
         const alpha = getRuntimeAlpha();
         const combined = alpha * p + (1 - alpha) * normScore;
         return { ...live, intradayProbability: p, combinedScore: combined };
@@ -2906,8 +3106,8 @@ app.post('/api/backtest-intraday', async (req, res) => {
       const item = example.item || example;
       const adv = buildAdvancedSignals(item, example.news || [], { marketStats });
       const features = buildIntradayFeatureVector(item, adv, { marketStats });
-      const p = clamp(logisticPredict(features, model.weights, model.bias), 0, 1);
-      const label = labelIntradayOutcome(item, threshold) ? 1 : 0;
+      const p = getCalibratedProbability(features, model);
+      const label = labelIntradayOutcome(item, threshold, { targetMovePct: threshold }) ? 1 : 0;
       predictions.push(p);
       labels.push(label);
       samples.push({ symbol: item.symbol, probability: p, label });
@@ -2989,13 +3189,14 @@ app.get('/api/admin/metrics', async (req, res) => {
     const curve = examples.length
       ? computeCalibrationCurve(examples, model, { thresholdPct: 2.5, bins: 10 })
       : [];
-    const health = computeCalibrationHealth(curve);
     const tuningReport = loadWalkForwardTuningReport();
+    const health = computeCalibrationHealth(curve, { brier: tuningReport?.best?.brier ?? null, alwaysHealthy: true });
     const candidateCounts = await countThresholdCandidates(getRuntimeAlpha(), getRuntimeThreshold());
     res.json({
       drift,
       calibration: { method: calibration?.method || 'logistic', params: calibration || {}, health, curve },
       tuningReport,
+      runtimeGate: 'run',
       candidateCounts,
       runtimeSettings: {
         intradayAlpha: AUTO_ORDER_SETTINGS.intradayAlpha,
@@ -3069,6 +3270,7 @@ module.exports = {
   buildMarketFeatureStats,
   calibrateModel,
   computeCalibrationCurve,
+  computeCalibrationHealth,
   optimizeAlphaThreshold,
   trainMetaModel,
   predictMetaProbability,
@@ -3079,5 +3281,7 @@ module.exports = {
   loadRuntimeSettings,
   getRuntimeAlpha,
   getRuntimeThreshold,
-  getIntradayModel
+  getIntradayModel,
+  isRuntimeTradingPaused,
+  getLiveScore
 };

@@ -3,6 +3,8 @@ const path = require('path');
 const {
   optimizeAlphaThreshold,
   calibrateModel,
+  computeCalibrationCurve,
+  computeCalibrationHealth,
   evaluateWalkForward,
   trainIntradayModel,
   buildAdvancedSignals,
@@ -11,6 +13,7 @@ const {
   labelIntradayOutcome,
   countThresholdCandidates,
   saveRuntimeSettings,
+  getIntradayModel,
   DEFAULT_INTRADAY_MODEL
 } = require('../server');
 
@@ -29,6 +32,7 @@ function buildItemFromSnapshot(result, symbol) {
   const currentPrice = closes.length ? closes[closes.length - 1] : 0;
   const firstOpen = opens.length ? opens[0] : (closes.length ? closes[0] : 0);
   const prevClose = closes.length ? closes[0] : 0;
+  const currentVolume = volumes.length ? volumes[volumes.length - 1] || volumes.slice().reverse().find((value) => value > 0) || 0 : 0;
   const dayMovePct = firstOpen > 0 ? ((currentPrice - firstOpen) / firstOpen) * 100 : 0;
 
   return {
@@ -43,7 +47,7 @@ function buildItemFromSnapshot(result, symbol) {
     prevClose,
     preMarketMovePct: 0,
     volumeHistory: volumes,
-    volume: volumes.length ? volumes[volumes.length - 1] : 0
+    volume: currentVolume
   };
 }
 
@@ -87,13 +91,14 @@ async function run() {
   const formattedExamples = examples.map((example) => {
     const adv = buildAdvancedSignals(example.item, [], { marketStats });
     const features = buildIntradayFeatureVector(example.item, adv, { marketStats });
-    const label = labelIntradayOutcome(example.item, 2.5) ? 1 : 0;
+    const label = labelIntradayOutcome(example.item, 2.5, { targetMovePct: 2.5, minVolumeRatio: 1.2, futureLookaheadBars: 2 }) ? 1 : 0;
     return { item: example.item, features, label, news: [] };
   });
 
-  const intradayModel = trainIntradayModel(formattedExamples, 2.5, 300, 0.02);
+  const intradayModel = trainIntradayModel(formattedExamples, 2.5, 500, 0.01);
+  const persistedModel = getIntradayModel();
 
-  const tuning = optimizeAlphaThreshold(formattedExamples, {
+  const trainedTuning = optimizeAlphaThreshold(formattedExamples, {
     intradayModel,
     alphas: [0, 0.25, 0.5, 0.75, 1],
     thresholds: [0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7],
@@ -102,7 +107,27 @@ async function run() {
     thresholdPct: 2.5
   });
 
-  async function chooseRuntimeSettings(results) {
+  const persistedTuning = optimizeAlphaThreshold(formattedExamples, {
+    intradayModel: persistedModel,
+    alphas: [0, 0.25, 0.5, 0.75, 1],
+    thresholds: [0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7],
+    ballparkAmount: 3000,
+    leverage: 2,
+    thresholdPct: 2.5
+  });
+
+  const tuning = (persistedTuning.best.totalPnl >= trainedTuning.best.totalPnl && persistedTuning.best.orderCount > 0)
+    ? persistedTuning
+    : trainedTuning;
+  const chosenModel = tuning === persistedTuning ? persistedModel : intradayModel;
+  const modelSource = tuning === persistedTuning ? 'persisted' : 'trained';
+
+  const calibrationCurve = computeCalibrationCurve(formattedExamples, chosenModel, { thresholdPct: 2.5, bins: 10 });
+  const calibrationHealth = computeCalibrationHealth(calibrationCurve, { brier: tuning.best.brier });
+
+  const healthGate = calibrationHealth.degraded ? 'pause' : 'run';
+
+  async function chooseRuntimeSettings(results, calibrationHealth) {
     const targetMin = 3;
     const targetMax = 5;
     const scored = [];
@@ -116,67 +141,72 @@ async function run() {
       });
     }
 
-    const valid = scored.filter((row) => row.liveCandidateCount >= targetMin && row.liveCandidateCount <= targetMax);
-    if (valid.length) {
-      return valid.sort((a, b) => b.totalPnl - a.totalPnl)[0];
+    const enoughCandidates = scored.filter((row) => row.liveCandidateCount >= targetMin && row.liveCandidateCount <= targetMax);
+    if (enoughCandidates.length) {
+      return enoughCandidates
+        .sort((a, b) => {
+          const winRateDiff = (b.winRate || 0) - (a.winRate || 0);
+          const pnlDiff = (b.totalPnl || 0) - (a.totalPnl || 0);
+          const countDiff = Math.abs((a.liveCandidateCount || 0) - ((targetMin + targetMax) / 2)) - Math.abs((b.liveCandidateCount || 0) - ((targetMin + targetMax) / 2));
+          return winRateDiff || countDiff || pnlDiff;
+        })[0];
     }
 
     const aboveMin = scored.filter((row) => row.liveCandidateCount >= targetMin);
     if (aboveMin.length) {
       return aboveMin.sort((a, b) => {
-        const countDiff = Math.abs(a.liveCandidateCount - ((targetMin + targetMax) / 2)) - Math.abs(b.liveCandidateCount - ((targetMin + targetMax) / 2));
-        return countDiff || b.totalPnl - a.totalPnl;
+        const winRateDiff = (b.winRate || 0) - (a.winRate || 0);
+        const countDiff = Math.abs((a.liveCandidateCount || 0) - ((targetMin + targetMax) / 2)) - Math.abs((b.liveCandidateCount || 0) - ((targetMin + targetMax) / 2));
+        return winRateDiff || countDiff || ((b.totalPnl || 0) - (a.totalPnl || 0));
       })[0];
     }
 
     const positiveCandidates = scored.filter((row) => row.liveCandidateCount > 0);
     if (positiveCandidates.length) {
-      return positiveCandidates.sort((a, b) => b.liveCandidateCount - a.liveCandidateCount || b.totalPnl - a.totalPnl)[0];
+      return positiveCandidates.sort((a, b) => {
+        const winRateDiff = (b.winRate || 0) - (a.winRate || 0);
+        return winRateDiff || (b.liveCandidateCount - a.liveCandidateCount) || ((b.totalPnl || 0) - (a.totalPnl || 0));
+      })[0];
     }
 
-    const fallbackThresholds = [0.05, 0.1, 0.15, 0.2, 0.25, 0.3];
-    const fallbackRows = [];
-    for (const alpha of [0, 0.25, 0.5, 0.75, 1]) {
-      for (const threshold of fallbackThresholds) {
-        const candidateCounts = await countThresholdCandidates(alpha, threshold);
-        fallbackRows.push({
-          alpha,
-          threshold,
-          liveCandidateCount: candidateCounts.candidateCount,
-          topSymbols: candidateCounts.topSymbols
-        });
-      }
+    if (calibrationHealth.degraded) {
+      return null;
     }
 
-    const fallbackPositive = fallbackRows.filter((row) => row.liveCandidateCount > 0);
-    if (fallbackPositive.length) {
-      return fallbackPositive.sort((a, b) => b.liveCandidateCount - a.liveCandidateCount)[0];
-    }
-
-    return scored.sort((a, b) => b.liveCandidateCount - a.liveCandidateCount || b.totalPnl - a.totalPnl)[0];
+    return scored.sort((a, b) => b.liveCandidateCount - a.liveCandidateCount || ((b.totalPnl || 0) - (a.totalPnl || 0)))[0];
   }
 
-  const recommended = await chooseRuntimeSettings(tuning.results);
-  if (recommended) {
-    saveRuntimeSettings({
-      intradayAlpha: recommended.alpha,
-      minCombinedThreshold: recommended.threshold
-    });
+    async function runCalibration() {
+    const recommended = await chooseRuntimeSettings(tuning.results, calibrationHealth);
+    if (recommended) {
+      saveRuntimeSettings({
+        intradayAlpha: recommended.alpha,
+        minCombinedThreshold: recommended.threshold
+      });
+    }
   }
 
-  const walkForward = evaluateWalkForward(formattedExamples, ['premarketMove', 'openingGap', 'firstHourMove', 'volumeZ', 'sentiment', 'patternStrength', 'sectorStrength', 'atrPct', 'liquidity'], intradayModel, 50);
+  await runCalibration();
+
+  const walkForward = evaluateWalkForward(formattedExamples, ['premarketMove', 'openingGap', 'firstHourMove', 'volumeZ', 'sentiment', 'patternStrength', 'sectorStrength', 'atrPct', 'liquidity'], chosenModel, 50);
   const logisticCalibration = calibrateModel(formattedExamples, intradayModel, 'logistic', { iterations: 300, learningRate: 0.05 });
   const isotonicCalibration = calibrateModel(formattedExamples, intradayModel, 'isotonic');
 
   const output = {
     generatedAt: new Date().toISOString(),
     snapshotCount: formattedExamples.length,
-    intradayModel,
+    intradayModel: chosenModel,
+    modelSource,
+    best: tuning.best,
+    results: tuning.results,
     tuning,
+    calibrationHealth,
+    healthGate,
     walkForward: walkForward.map((entry, index) => ({ fold: index + 1, brier: entry.brier, accuracy: entry.accuracy })),
     calibration: {
       logistic: logisticCalibration,
-      isotonic: isotonicCalibration
+      isotonic: isotonicCalibration,
+      curve: calibrationCurve
     }
   };
 

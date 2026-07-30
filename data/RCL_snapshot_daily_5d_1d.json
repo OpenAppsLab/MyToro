@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:29.462Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/RCL?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "RCL",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 736003800,
+      "regularMarketTime": 1785355202,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 323.58,
+      "fiftyTwoWeekHigh": 366.5,
+      "fiftyTwoWeekLow": 232.1,
+      "regularMarketDayHigh": 328.87,
+      "regularMarketDayLow": 315.59,
+      "regularMarketVolume": 2679076,
+      "longName": "Royal Caribbean Cruises Ltd.",
+      "shortName": "Royal Caribbean Cruises Ltd.",
+      "chartPreviousClose": 285.85,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            286.54998779296875,
+            300.3399963378906,
+            307.1000061035156,
+            324.5799865722656,
+            328.8699951171875
+          ],
+          "low": [
+            278.6400146484375,
+            284.55999755859375,
+            289.2099914550781,
+            293.1499938964844,
+            315.5899963378906
+          ],
+          "volume": [
+            5354000,
+            2965300,
+            4147600,
+            3439800,
+            2687100
+          ],
+          "open": [
+            279.1099853515625,
+            285.79998779296875,
+            301.010009765625,
+            302.70001220703125,
+            316.5899963378906
+          ],
+          "close": [
+            283.4100036621094,
+            293.5400085449219,
+            305.0400085449219,
+            322.5,
+            323.5799865722656
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            283.4100036621094,
+            293.5400085449219,
+            305.0400085449219,
+            322.5,
+            323.5799865722656
+          ]
+        }
+      ]
+    }
+  }
+}

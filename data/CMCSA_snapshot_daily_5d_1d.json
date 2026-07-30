@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T11:42:48.435Z",
+  "fetchedAt": "2026-07-30T13:27:51.074Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMCSA?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785268800,
+      "regularMarketTime": 1785355201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 24.19,
+      "regularMarketPrice": 24.61,
       "fiftyTwoWeekHigh": 32.86,
       "fiftyTwoWeekLow": 21.28,
-      "regularMarketDayHigh": 24.26,
-      "regularMarketDayLow": 23.235,
-      "regularMarketVolume": 40818693,
+      "regularMarketDayHigh": 24.875,
+      "regularMarketDayLow": 23.84,
+      "regularMarketVolume": 35979003,
       "longName": "Comcast Corporation",
       "shortName": "Comcast Corporation",
-      "chartPreviousClose": 23.81,
+      "chartPreviousClose": 23.52,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785312000,
-          "end": 1785331800,
+          "start": 1785398400,
+          "end": 1785418200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785331800,
-          "end": 1785355200,
+          "start": 1785418200,
+          "end": 1785441600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785355200,
-          "end": 1785369600,
+          "start": 1785441600,
+          "end": 1785456000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784727000,
       1784813400,
       1784899800,
       1785159000,
-      1785245400
+      1785245400,
+      1785331800
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            24.25,
-            24.010000228881836,
-            22.489999771118164,
-            23.290000915527344,
-            24.260000228881836
-          ],
           "close": [
-            23.520000457763672,
             21.920000076293945,
             22.299999237060547,
             22.799999237060547,
-            null
-          ],
-          "low": [
-            23.489999771118164,
-            21.90999984741211,
-            21.280000686645508,
-            22.360000610351562,
-            23.235000610351562
-          ],
-          "volume": [
-            36648000,
-            53009300,
-            48229800,
-            37492900,
-            40818693
+            24.190000534057617,
+            24.610000610351562
           ],
           "open": [
-            24.15999984741211,
             24.010000228881836,
             21.299999237060547,
             22.43000030517578,
-            23.2549991607666
+            23.25,
+            24.15999984741211
+          ],
+          "high": [
+            24.010000228881836,
+            22.489999771118164,
+            23.290000915527344,
+            24.260000228881836,
+            24.8799991607666
+          ],
+          "low": [
+            21.90999984741211,
+            21.280000686645508,
+            22.360000610351562,
+            23.229999542236328,
+            23.84000015258789
+          ],
+          "volume": [
+            53009300,
+            48229800,
+            37492900,
+            41669500,
+            37034500
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            23.520000457763672,
             21.920000076293945,
             22.299999237060547,
             22.799999237060547,
-            null
+            24.190000534057617,
+            24.610000610351562
           ]
         }
       ]

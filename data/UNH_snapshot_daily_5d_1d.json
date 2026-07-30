@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:12.827Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/UNH?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "UNH",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 466867800,
+      "regularMarketTime": 1785355202,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 420.57,
+      "fiftyTwoWeekHigh": 461.62,
+      "fiftyTwoWeekLow": 234.6,
+      "regularMarketDayHigh": 431.68,
+      "regularMarketDayLow": 420.46,
+      "regularMarketVolume": 5249781,
+      "longName": "UnitedHealth Group Incorporated",
+      "shortName": "UnitedHealth Group Incorporated",
+      "chartPreviousClose": 431.31,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            430.489990234375,
+            429,
+            422.8800048828125,
+            430.4599914550781,
+            431.67999267578125
+          ],
+          "low": [
+            420.3999938964844,
+            418.9200134277344,
+            412.5400085449219,
+            415.1099853515625,
+            420.3500061035156
+          ],
+          "volume": [
+            4868700,
+            3752500,
+            4615700,
+            5917300,
+            5257900
+          ],
+          "open": [
+            428.2699890136719,
+            425.239990234375,
+            422.510009765625,
+            419.92999267578125,
+            428.260009765625
+          ],
+          "close": [
+            423.55999755859375,
+            420.739990234375,
+            417.6400146484375,
+            428.7900085449219,
+            420.57000732421875
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            423.55999755859375,
+            420.739990234375,
+            417.6400146484375,
+            428.7900085449219,
+            420.57000732421875
+          ]
+        }
+      ]
+    }
+  }
+}

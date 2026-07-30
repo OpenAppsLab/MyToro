@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T11:42:28.000Z",
+  "fetchedAt": "2026-07-30T13:27:25.306Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1022160600,
-      "regularMarketTime": 1785268800,
+      "regularMarketTime": 1785355201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 72.39,
+      "regularMarketPrice": 73.63,
       "fiftyTwoWeekHigh": 126.71,
       "fiftyTwoWeekLow": 65.08,
-      "regularMarketDayHigh": 73.755,
-      "regularMarketDayLow": 71.23,
-      "regularMarketVolume": 46873913,
+      "regularMarketDayHigh": 73.73,
+      "regularMarketDayLow": 71.75,
+      "regularMarketVolume": 43188109,
       "longName": "Netflix, Inc.",
       "shortName": "Netflix, Inc.",
-      "chartPreviousClose": 68.67,
+      "chartPreviousClose": 68.53,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785331800,
-          "start": 1785312000,
+          "start": 1785398400,
+          "end": 1785418200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785355200,
-          "start": 1785331800,
+          "start": 1785418200,
+          "end": 1785441600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785369600,
-          "start": 1785355200,
+          "start": 1785441600,
+          "end": 1785456000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784727000,
       1784813400,
       1784899800,
       1785159000,
-      1785245400
+      1785245400,
+      1785331800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            69.37000274658203,
-            68.56999969482422,
-            69.29000091552734,
-            70.58999633789062,
-            72.11000061035156
-          ],
-          "high": [
-            70.56999969482422,
-            69.36000061035156,
-            70.68000030517578,
-            71.6500015258789,
-            73.75499725341797
-          ],
-          "close": [
-            68.52999877929688,
-            68.88999938964844,
-            70.08999633789062,
-            70.4000015258789,
-            null
-          ],
-          "volume": [
-            44947300,
-            45029100,
-            37593500,
-            39090800,
-            46873913
-          ],
           "low": [
-            68.3499984741211,
             67.66999816894531,
             67.97000122070312,
             69.86000061035156,
-            71.2300033569336
+            71.2300033569336,
+            71.75
+          ],
+          "open": [
+            68.56999969482422,
+            69.29000091552734,
+            70.58999633789062,
+            72.06999969482422,
+            72.19000244140625
+          ],
+          "high": [
+            69.36000061035156,
+            70.68000030517578,
+            71.6500015258789,
+            73.76000213623047,
+            73.73999786376953
+          ],
+          "volume": [
+            45029100,
+            37593500,
+            39090800,
+            47160200,
+            43625400
+          ],
+          "close": [
+            68.88999938964844,
+            70.08999633789062,
+            70.4000015258789,
+            72.38999938964844,
+            73.62999725341797
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            68.52999877929688,
             68.88999938964844,
             70.08999633789062,
             70.4000015258789,
-            null
+            72.38999938964844,
+            73.62999725341797
           ]
         }
       ]

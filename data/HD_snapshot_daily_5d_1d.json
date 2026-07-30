@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T11:42:40.276Z",
+  "fetchedAt": "2026-07-30T13:27:40.476Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 370013400,
-      "regularMarketTime": 1785268803,
+      "regularMarketTime": 1785355202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 344.47,
+      "regularMarketPrice": 338.27,
       "fiftyTwoWeekHigh": 426.75,
       "fiftyTwoWeekLow": 289.1,
-      "regularMarketDayHigh": 349.425,
-      "regularMarketDayLow": 342.6,
-      "regularMarketVolume": 3168081,
+      "regularMarketDayHigh": 345.235,
+      "regularMarketDayLow": 336.96,
+      "regularMarketVolume": 4015009,
       "longName": "The Home Depot, Inc.",
       "shortName": "Home Depot, Inc. (The)",
-      "chartPreviousClose": 331.6,
+      "chartPreviousClose": 331.45,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785312000,
-          "end": 1785331800,
+          "start": 1785398400,
+          "end": 1785418200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785331800,
-          "end": 1785355200,
+          "start": 1785418200,
+          "end": 1785441600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785355200,
-          "end": 1785369600,
+          "start": 1785441600,
+          "end": 1785456000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784727000,
       1784813400,
       1784899800,
       1785159000,
-      1785245400
+      1785245400,
+      1785331800
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            336.55999755859375,
-            328.2300109863281,
-            null,
-            341.8900146484375,
-            349.42498779296875
-          ],
           "close": [
-            331.45001220703125,
             324.7099914550781,
-            null,
+            332.9800109863281,
             336.0899963378906,
-            null
-          ],
-          "open": [
-            333.5299987792969,
-            325.29998779296875,
-            null,
-            339.3900146484375,
-            342.6400146484375
+            344.4700012207031,
+            338.2699890136719
           ],
           "volume": [
-            2907700,
             4523100,
-            null,
+            3874500,
             3622400,
-            3168081
+            4308000,
+            4028500
           ],
           "low": [
-            330.7099914550781,
             323.04998779296875,
-            null,
+            323.2300109863281,
             335.3500061035156,
-            342.6000061035156
+            342.6000061035156,
+            336.9599914550781
+          ],
+          "high": [
+            328.2300109863281,
+            333.4599914550781,
+            341.8900146484375,
+            349.42999267578125,
+            345.2699890136719
+          ],
+          "open": [
+            325.29998779296875,
+            325.07000732421875,
+            339.3900146484375,
+            342.6400146484375,
+            340.3800048828125
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            331.45001220703125,
             324.7099914550781,
-            null,
+            332.9800109863281,
             336.0899963378906,
-            null
+            344.4700012207031,
+            338.2699890136719
           ]
         }
       ]

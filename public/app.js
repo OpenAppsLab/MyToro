@@ -26,6 +26,8 @@ const calibrationHealth = document.getElementById('calibrationHealth');
 const healthDetail = document.getElementById('healthDetail');
 const candidateCountLabel = document.getElementById('candidateCount');
 const candidateDetail = document.getElementById('candidateDetail');
+const runtimeGateLabel = document.getElementById('runtimeGate');
+const runtimeGateDetail = document.getElementById('runtimeGateDetail');
 const calibrationChart = document.getElementById('adminCalibrationChart');
 const curveMeta = document.getElementById('curveMeta');
 const alphaControl = document.getElementById('alphaControl');
@@ -68,11 +70,33 @@ function renderCalibrationChart(curve = []) {
   `;
 }
 
+function getBestTuningResult(tuningReport) {
+  if (!tuningReport) {
+    return null;
+  }
+
+  if (tuningReport.best) {
+    return tuningReport.best;
+  }
+
+  const nested = tuningReport.tuning || {};
+  if (nested.best) {
+    return nested.best;
+  }
+
+  const results = Array.isArray(nested.results) ? nested.results : Array.isArray(tuningReport.results) ? tuningReport.results : [];
+  if (!results.length) {
+    return null;
+  }
+
+  return results.slice().sort((a, b) => (Number(b.totalPnl || 0) - Number(a.totalPnl || 0)))[0];
+}
+
 async function loadAdminMetrics() {
   if (!adminPanel) return;
 
   try {
-    const response = await fetch('/api/admin/metrics');
+    const response = await fetch('/api/admin/metrics', { cache: 'no-store' });
     const payload = await response.json();
 
     if (!response.ok) {
@@ -97,6 +121,12 @@ async function loadAdminMetrics() {
       ? `Top: ${payload.candidateCounts.topSymbols.join(', ')}`
       : `No current candidates meet the minimum strength (${formatPercent(thresholdHint)}).`;
 
+    const runtimeGate = payload.runtimeGate || 'run';
+    if (runtimeGateLabel) runtimeGateLabel.textContent = runtimeGate === 'pause' ? 'Paused' : 'Run';
+    if (runtimeGateDetail) runtimeGateDetail.textContent = runtimeGate === 'pause'
+      ? 'Auto trading is blocked by walk-forward calibration health.'
+      : 'Auto trading is permitted under current calibration settings.';
+
     const runtime = payload.runtimeSettings || {};
     if (alphaControl) alphaControl.value = runtime.intradayAlpha ?? 0.7;
     if (thresholdControl) thresholdControl.value = runtime.minCombinedThreshold ?? 0.6;
@@ -105,11 +135,12 @@ async function loadAdminMetrics() {
     curveMeta.textContent = `Based on ${payload.calibration?.curve?.length || 0} calibration bins`;
 
     const tuning = payload.tuningReport;
-    if (tuning && tuning.best) {
+    const bestTuning = getBestTuningResult(tuning);
+    if (bestTuning) {
       adminTuningSummary.innerHTML = `
         <strong>Best walk-forward tuning</strong><br>
-        alpha ${tuning.best.alpha.toFixed(2)}, threshold ${tuning.best.threshold.toFixed(2)}<br>
-        total PnL $${tuning.best.totalPnl.toFixed(0)}, win rate ${(tuning.best.winRate * 100).toFixed(1)}%<br>
+        alpha ${Number(bestTuning.alpha || 0).toFixed(2)}, threshold ${Number(bestTuning.threshold || 0).toFixed(2)}<br>
+        total PnL $${Number(bestTuning.totalPnl || 0).toFixed(0)}, win rate ${(Number(bestTuning.winRate || 0) * 100).toFixed(1)}%<br>
         candidate set size ${payload.candidateCounts?.candidateCount ?? '—'}.
       `;
     } else {

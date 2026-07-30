@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:27:52.210Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/T?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "T",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 438273000,
+      "regularMarketTime": 1785355468,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 23.94,
+      "fiftyTwoWeekHigh": 29.79,
+      "fiftyTwoWeekLow": 19.89,
+      "regularMarketDayHigh": 24.67,
+      "regularMarketDayLow": 23.595,
+      "regularMarketVolume": 68646338,
+      "longName": "AT&T Inc.",
+      "shortName": "AT&T Inc.",
+      "chartPreviousClose": 23.04,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785418200,
+          "start": 1785398400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785441600,
+          "start": 1785418200,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785456000,
+          "start": 1785441600,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            22.959999084472656,
+            24.1299991607666,
+            24.420000076293945,
+            24.65999984741211,
+            23.940000534057617
+          ],
+          "open": [
+            23.25,
+            23,
+            24.1299991607666,
+            24.84000015258789,
+            24.639999389648438
+          ],
+          "high": [
+            23.469999313354492,
+            24.1299991607666,
+            24.520000457763672,
+            25.31999969482422,
+            24.670000076293945
+          ],
+          "volume": [
+            103562100,
+            80670900,
+            74458300,
+            57350500,
+            77466400
+          ],
+          "low": [
+            22.649999618530273,
+            23,
+            24.030000686645508,
+            24.600000381469727,
+            23.600000381469727
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            22.959999084472656,
+            24.1299991607666,
+            24.420000076293945,
+            24.65999984741211,
+            23.940000534057617
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:42.751Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/VRTX?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "VRTX",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 680362200,
+      "regularMarketTime": 1785355201,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 483.33,
+      "fiftyTwoWeekHigh": 533.67,
+      "fiftyTwoWeekLow": 362.5,
+      "regularMarketDayHigh": 492.99,
+      "regularMarketDayLow": 481.93,
+      "regularMarketVolume": 1209262,
+      "longName": "Vertex Pharmaceuticals Incorporated",
+      "shortName": "Vertex Pharmaceuticals Incorpor",
+      "chartPreviousClose": 472.57,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            473.0899963378906,
+            477.3599853515625,
+            479,
+            490.3900146484375,
+            483.3299865722656
+          ],
+          "volume": [
+            1306000,
+            1254000,
+            1631000,
+            1700000,
+            1451200
+          ],
+          "open": [
+            467.0899963378906,
+            476.04998779296875,
+            479.2699890136719,
+            483.1300048828125,
+            492.6700134277344
+          ],
+          "low": [
+            465,
+            472.5799865722656,
+            477.989990234375,
+            482.8599853515625,
+            481.9100036621094
+          ],
+          "high": [
+            477.67999267578125,
+            484,
+            487.2099914550781,
+            493.6099853515625,
+            492.989990234375
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            473.0899963378906,
+            477.3599853515625,
+            479,
+            490.3900146484375,
+            483.3299865722656
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:15.018Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CME?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CME",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1039185000,
+      "regularMarketTime": 1785355201,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 265.44,
+      "fiftyTwoWeekHigh": 329.16,
+      "fiftyTwoWeekLow": 218.31,
+      "regularMarketDayHigh": 266.255,
+      "regularMarketDayLow": 259.44,
+      "regularMarketVolume": 2856820,
+      "longName": "CME Group Inc.",
+      "shortName": "CME Group Inc.",
+      "chartPreviousClose": 249.24,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785418200,
+          "start": 1785398400,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785441600,
+          "start": 1785418200,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785456000,
+          "start": 1785441600,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            2878200,
+            1809400,
+            1675100,
+            2238500,
+            2915100
+          ],
+          "high": [
+            257.5299987792969,
+            256.1600036621094,
+            256.6499938964844,
+            262.3399963378906,
+            266.260009765625
+          ],
+          "low": [
+            249.74000549316406,
+            251.33999633789062,
+            251.50999450683594,
+            255.33999633789062,
+            259.44000244140625
+          ],
+          "close": [
+            254.32000732421875,
+            255.30999755859375,
+            255.36000061035156,
+            260,
+            265.44000244140625
+          ],
+          "open": [
+            250.35000610351562,
+            254.1999969482422,
+            255.47000122070312,
+            256.510009765625,
+            260.25
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            254.32000732421875,
+            255.30999755859375,
+            255.36000061035156,
+            260,
+            265.44000244140625
+          ]
+        }
+      ]
+    }
+  }
+}

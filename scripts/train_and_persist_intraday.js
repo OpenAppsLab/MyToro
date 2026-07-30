@@ -1,7 +1,7 @@
 (async () => {
   const fs = require('fs').promises;
   const path = require('path');
-  const { trainIntradayModel } = require('../server');
+  const { trainIntradayModel, buildAdvancedSignals, buildIntradayFeatureVector, buildMarketFeatureStats, labelIntradayOutcome } = require('../server');
 
   const dataDir = path.resolve(__dirname, '..', 'data');
   const outDir = path.resolve(__dirname, '..', 'models');
@@ -16,6 +16,7 @@
   }
 
   const examples = [];
+  const items = [];
   for (const fname of intradayFiles) {
     try {
       const raw = await fs.readFile(path.join(dataDir, fname), 'utf8');
@@ -28,6 +29,8 @@
       const closes = quote.close || [];
       const highs = quote.high || [];
       const lows = quote.low || [];
+      const volumes = Array.isArray(quote.volume) ? quote.volume.filter((value) => value != null).map(Number) : [];
+      const currentVolume = volumes.length ? volumes[volumes.length - 1] || volumes.slice().reverse().find((value) => value > 0) || 0 : 0;
       const item = {
         symbol: fname.split('_')[0],
         name: fname.split('_')[0],
@@ -38,30 +41,28 @@
         dayMovePct: (closes.length && closes[0]) ? ((closes[closes.length-1] - closes[0]) / closes[0]) * 100 : 0,
         openPrice: closes[0] || 0,
         prevClose: closes[0] || 0,
-        preMarketMovePct: 0
+        preMarketMovePct: 0,
+        volumeHistory: volumes,
+        volume: currentVolume
       };
 
-      // Build advancedSignals by calling into server.js functionality is complex; use simple feature mapping
-      const features = {
-        premarketMove: Number(item.preMarketMovePct || 0) / 10,
-        openingGap: item.openPrice && item.prevClose ? ((Number(item.openPrice) - Number(item.prevClose)) / Number(item.prevClose)) : 0,
-        firstHourMove: 0,
-        volumeZ: 0,
-        sentiment: 0.5,
-        patternStrength: 0,
-        sectorStrength: 0.5,
-        atrPct: 0,
-        liquidity: 1
-      };
-
-      examples.push({ item, features });
+      items.push(item);
+      examples.push({ item, news: [] });
     } catch (err) {
       console.error('Failed to parse', fname, err && err.message);
     }
   }
 
-  console.log('Training intraday model with', examples.length, 'examples');
-  const model = trainIntradayModel(examples, 2.5, 300, 0.02);
+  const marketStats = buildMarketFeatureStats(items);
+  const formattedExamples = examples.map((example) => {
+    const adv = buildAdvancedSignals(example.item, example.news || [], { marketStats });
+    const features = buildIntradayFeatureVector(example.item, adv, { marketStats });
+    const label = labelIntradayOutcome(example.item, 1.0, { targetMovePct: 1.0, minVolumeRatio: 0.8, futureLookaheadBars: 2 }) ? 1 : 0;
+    return { item: example.item, features, label, news: example.news || [] };
+  });
+
+  console.log('Training intraday model with', formattedExamples.length, 'examples');
+  const model = trainIntradayModel(formattedExamples, 1.0, 500, 0.01);
   const outPath = path.join(outDir, 'intraday_model.json');
   await fs.writeFile(outPath, JSON.stringify({ trainedAt: new Date().toISOString(), model }, null, 2));
   console.log('Saved intraday model to', outPath);

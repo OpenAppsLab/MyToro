@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T11:42:30.625Z",
+  "fetchedAt": "2026-07-30T13:27:28.754Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PYPL?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1436189400,
-      "regularMarketTime": 1785268800,
+      "regularMarketTime": 1785355200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 58.32,
+      "regularMarketPrice": 58.35,
       "fiftyTwoWeekHigh": 79.215,
       "fiftyTwoWeekLow": 38.46,
-      "regularMarketDayHigh": 58.8,
-      "regularMarketDayLow": 56.475,
-      "regularMarketVolume": 20823672,
+      "regularMarketDayHigh": 59.47,
+      "regularMarketDayLow": 58.03,
+      "regularMarketVolume": 17029672,
       "longName": "PayPal Holdings, Inc.",
       "shortName": "PayPal Holdings, Inc.",
-      "chartPreviousClose": 55.85,
+      "chartPreviousClose": 55.51,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785312000,
-          "end": 1785331800,
+          "end": 1785418200,
+          "start": 1785398400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785331800,
-          "end": 1785355200,
+          "end": 1785441600,
+          "start": 1785418200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785355200,
-          "end": 1785369600,
+          "end": 1785456000,
+          "start": 1785441600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784727000,
       1784813400,
       1784899800,
       1785159000,
-      1785245400
+      1785245400,
+      1785331800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            11187000,
-            13945300,
-            11763000,
-            14864400,
-            20823672
-          ],
-          "low": [
-            55.23500061035156,
-            54.935001373291016,
-            55.220001220703125,
-            55.47999954223633,
-            56.474998474121094
-          ],
-          "open": [
-            55.97999954223633,
-            55.474998474121094,
-            56.30799865722656,
-            56.36000061035156,
-            56.7599983215332
-          ],
-          "high": [
-            56.380001068115234,
-            56.08000183105469,
-            56.47999954223633,
-            56.584999084472656,
-            58.79999923706055
-          ],
           "close": [
-            55.5099983215332,
             56,
             56.150001525878906,
             56.06999969482422,
-            null
+            58.31999969482422,
+            58.349998474121094
+          ],
+          "open": [
+            55.474998474121094,
+            56.30799865722656,
+            56.36000061035156,
+            56.7599983215332,
+            58.099998474121094
+          ],
+          "high": [
+            56.08000183105469,
+            56.47999954223633,
+            56.584999084472656,
+            58.79999923706055,
+            59.470001220703125
+          ],
+          "volume": [
+            13945300,
+            11763000,
+            14864400,
+            22908900,
+            18727800
+          ],
+          "low": [
+            54.935001373291016,
+            55.220001220703125,
+            55.47999954223633,
+            56.459999084472656,
+            58
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            55.5099983215332,
             56,
             56.150001525878906,
             56.06999969482422,
-            null
+            58.31999969482422,
+            58.349998474121094
           ]
         }
       ]

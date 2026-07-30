@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:28:06.883Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "PG",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -252322200,
+      "regularMarketTime": 1785355446,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 146.1,
+      "fiftyTwoWeekHigh": 167.25,
+      "fiftyTwoWeekLow": 137.62,
+      "regularMarketDayHigh": 146.375,
+      "regularMarketDayLow": 140.2,
+      "regularMarketVolume": 12663401,
+      "longName": "The Procter & Gamble Company",
+      "shortName": "Procter & Gamble Company (The)",
+      "chartPreviousClose": 149.13,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            6499200,
+            6620700,
+            7301800,
+            12848800,
+            14606000
+          ],
+          "open": [
+            146.13999938964844,
+            146.4499969482422,
+            147.85000610351562,
+            151.5,
+            141.3800048828125
+          ],
+          "high": [
+            147.61000061035156,
+            147.99000549316406,
+            150.25,
+            153.67999267578125,
+            146.3800048828125
+          ],
+          "close": [
+            146.97000122070312,
+            147.41000366210938,
+            148.6300048828125,
+            148.8800048828125,
+            146.10000610351562
+          ],
+          "low": [
+            145.58999633789062,
+            145.39999389648438,
+            147.85000610351562,
+            148.52000427246094,
+            140.1999969482422
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            145.88099670410156,
+            147.41000366210938,
+            148.6300048828125,
+            148.8800048828125,
+            146.10000610351562
+          ]
+        }
+      ]
+    }
+  }
+}

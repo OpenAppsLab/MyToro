@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-30T13:27:53.372Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/VZ?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "VZ",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 438273000,
+      "regularMarketTime": 1785355202,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 47.22,
+      "fiftyTwoWeekHigh": 51.68,
+      "fiftyTwoWeekLow": 38.39,
+      "regularMarketDayHigh": 48.52,
+      "regularMarketDayLow": 45.7,
+      "regularMarketVolume": 41364141,
+      "longName": "Verizon Communications Inc.",
+      "shortName": "Verizon Communications Inc.",
+      "chartPreviousClose": 44.29,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785398400,
+          "end": 1785418200,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785418200,
+          "end": 1785441600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785441600,
+          "end": 1785456000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784813400,
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            44.58000183105469,
+            46.439998626708984,
+            47.560001373291016,
+            49.0099983215332,
+            48.540000915527344
+          ],
+          "close": [
+            43.81999969482422,
+            46.380001068115234,
+            47.31999969482422,
+            48.189998626708984,
+            47.220001220703125
+          ],
+          "volume": [
+            28013500,
+            40755200,
+            30409500,
+            29692600,
+            41378200
+          ],
+          "low": [
+            43.779998779296875,
+            43.72999954223633,
+            46.31999969482422,
+            47.79999923706055,
+            45.70000076293945
+          ],
+          "open": [
+            44.15999984741211,
+            44.08000183105469,
+            46.380001068115234,
+            47.849998474121094,
+            48.47999954223633
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            43.81999969482422,
+            46.380001068115234,
+            47.31999969482422,
+            48.189998626708984,
+            47.220001220703125
+          ]
+        }
+      ]
+    }
+  }
+}

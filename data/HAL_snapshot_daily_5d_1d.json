@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:53.224Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HAL?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "HAL",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 76253400,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 31.64,
+      "fiftyTwoWeekHigh": 43.59,
+      "fiftyTwoWeekLow": 20.39,
+      "regularMarketDayHigh": 31.7,
+      "regularMarketDayLow": 30.98,
+      "regularMarketVolume": 8230415,
+      "longName": "Halliburton Company",
+      "shortName": "Halliburton Company",
+      "chartPreviousClose": 32.71,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            32.900001525878906,
+            32,
+            31.200000762939453,
+            31.1200008392334,
+            30.979999542236328
+          ],
+          "open": [
+            32.9900016784668,
+            32.599998474121094,
+            32.16999816894531,
+            32,
+            31.209999084472656
+          ],
+          "close": [
+            33.36000061035156,
+            32.130001068115234,
+            31.229999542236328,
+            31.190000534057617,
+            31.639999389648438
+          ],
+          "volume": [
+            12702300,
+            12372500,
+            13398800,
+            12568500,
+            8230800
+          ],
+          "high": [
+            33.7400016784668,
+            33.310001373291016,
+            32.22999954223633,
+            32.029998779296875,
+            31.700000762939453
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            33.36000061035156,
+            32.130001068115234,
+            31.229999542236328,
+            31.190000534057617,
+            31.639999389648438
+          ]
+        }
+      ]
+    }
+  }
+}

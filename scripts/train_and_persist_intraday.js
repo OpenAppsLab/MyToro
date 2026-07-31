@@ -57,12 +57,12 @@
   const formattedExamples = examples.map((example) => {
     const adv = buildAdvancedSignals(example.item, example.news || [], { marketStats });
     const features = buildIntradayFeatureVector(example.item, adv, { marketStats });
-    const label = labelIntradayOutcome(example.item, 1.0, { targetMovePct: 1.0, minVolumeRatio: 0.8, futureLookaheadBars: 2 }) ? 1 : 0;
+    const label = labelIntradayOutcome(example.item, 1.5, { targetMovePct: 1.5, minVolumeRatio: 0.9, futureLookaheadBars: 2 }) ? 1 : 0;
     return { item: example.item, features, label, news: example.news || [] };
   });
 
   console.log('Training intraday model with', formattedExamples.length, 'examples');
-  const model = trainIntradayModel(formattedExamples, 1.0, 500, 0.01);
+  const model = trainIntradayModel(formattedExamples, 1.5, 500, 0.01);
   const outPath = path.join(outDir, 'intraday_model.json');
   await fs.writeFile(outPath, JSON.stringify({ trainedAt: new Date().toISOString(), model }, null, 2));
   console.log('Saved intraday model to', outPath);

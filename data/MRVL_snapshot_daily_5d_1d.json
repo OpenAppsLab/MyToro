@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:59.512Z",
+  "fetchedAt": "2026-07-31T07:52:58.817Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRVL?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 962371800,
-      "regularMarketTime": 1785355201,
+      "regularMarketTime": 1785441601,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 163.4,
+      "regularMarketPrice": 183.3,
       "fiftyTwoWeekHigh": 329.88,
       "fiftyTwoWeekLow": 61.44,
-      "regularMarketDayHigh": 177.8,
-      "regularMarketDayLow": 162.9,
-      "regularMarketVolume": 24229911,
+      "regularMarketDayHigh": 184.35,
+      "regularMarketDayLow": 175.16,
+      "regularMarketVolume": 28995831,
       "longName": "Marvell Technology, Inc.",
       "shortName": "Marvell Technology, Inc.",
-      "chartPreviousClose": 210.99,
+      "chartPreviousClose": 209.32,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            205.02000427246094,
-            191.2899932861328,
-            181.75999450683594,
-            167.32000732421875,
-            162.89999389648438
-          ],
-          "volume": [
-            16359900,
-            19837100,
-            21637700,
-            29188500,
-            25480300
-          ],
-          "open": [
-            207.86000061035156,
-            202.91000366210938,
-            198.72000122070312,
-            180,
-            174.02999877929688
-          ],
-          "close": [
-            209.32000732421875,
-            194.22999572753906,
-            189.1699981689453,
-            174.47000122070312,
-            163.39999389648438
-          ],
           "high": [
-            214.55999755859375,
             206.07000732421875,
             199.7899932861328,
             181.47999572753906,
-            177.8000030517578
+            177.8000030517578,
+            184.35000610351562
+          ],
+          "close": [
+            194.22999572753906,
+            189.1699981689453,
+            174.47000122070312,
+            163.39999389648438,
+            183.3000030517578
+          ],
+          "open": [
+            202.91000366210938,
+            198.72000122070312,
+            180,
+            174.02999877929688,
+            178.3800048828125
+          ],
+          "low": [
+            191.2899932861328,
+            181.75999450683594,
+            167.32000732421875,
+            162.89999389648438,
+            175.14999389648438
+          ],
+          "volume": [
+            19837100,
+            21637700,
+            29188500,
+            25708900,
+            29636400
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            209.32000732421875,
             194.22999572753906,
             189.1699981689453,
             174.47000122070312,
-            163.39999389648438
+            163.39999389648438,
+            183.3000030517578
           ]
         }
       ]

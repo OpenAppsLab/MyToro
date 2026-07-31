@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:16.105Z",
+  "fetchedAt": "2026-07-31T07:52:03.174Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TDG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1142433000,
-      "regularMarketTime": 1785355203,
+      "regularMarketTime": 1785441603,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1264.6,
+      "regularMarketPrice": 1249.91,
       "fiftyTwoWeekHigh": 1620.58,
       "fiftyTwoWeekLow": 1123.61,
-      "regularMarketDayHigh": 1298.41,
-      "regularMarketDayLow": 1261.34,
-      "regularMarketVolume": 230612,
+      "regularMarketDayHigh": 1265,
+      "regularMarketDayLow": 1236.88,
+      "regularMarketVolume": 261629,
       "longName": "TransDigm Group Incorporated",
       "shortName": "Transdigm Group Incorporated",
-      "chartPreviousClose": 1194.7,
+      "chartPreviousClose": 1213.83,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            1204.27001953125,
-            1217.1300048828125,
-            1247.6500244140625,
-            1288.9100341796875,
-            1261.22998046875
-          ],
-          "close": [
-            1213.8299560546875,
-            1236.7099609375,
-            1286.27001953125,
-            1307.969970703125,
-            1264.5999755859375
-          ],
-          "volume": [
-            248200,
-            269700,
-            343800,
-            292500,
-            299100
-          ],
-          "high": [
-            1227.72998046875,
-            1255.7099609375,
-            1291.8599853515625,
-            1317.6600341796875,
-            1298.5
-          ],
           "open": [
-            1206.02001953125,
             1217.1500244140625,
             1250.989990234375,
             1296.780029296875,
-            1298.5
+            1298.5,
+            1264.5999755859375
+          ],
+          "volume": [
+            269700,
+            343800,
+            292500,
+            299100,
+            306700
+          ],
+          "high": [
+            1255.7099609375,
+            1291.8599853515625,
+            1317.6600341796875,
+            1298.5,
+            1265
+          ],
+          "close": [
+            1236.7099609375,
+            1286.27001953125,
+            1307.969970703125,
+            1264.5999755859375,
+            1249.9100341796875
+          ],
+          "low": [
+            1217.1300048828125,
+            1247.6500244140625,
+            1288.9100341796875,
+            1261.22998046875,
+            1236.8800048828125
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            1213.8299560546875,
             1236.7099609375,
             1286.27001953125,
             1307.969970703125,
-            1264.5999755859375
+            1264.5999755859375,
+            1249.9100341796875
           ]
         }
       ]

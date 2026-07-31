@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:47.161Z",
+  "fetchedAt": "2026-07-31T08:03:17.029Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHW?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 559315800,
-      "regularMarketTime": 1785355202,
+      "regularMarketTime": 1785441602,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 104.47,
+      "regularMarketPrice": 104.33,
       "fiftyTwoWeekHigh": 107.5,
       "fiftyTwoWeekLow": 83.96,
-      "regularMarketDayHigh": 106.72,
-      "regularMarketDayLow": 104.4,
-      "regularMarketVolume": 5891817,
+      "regularMarketDayHigh": 104.79,
+      "regularMarketDayLow": 103.07,
+      "regularMarketVolume": 5003540,
       "longName": "The Charles Schwab Corporation",
       "shortName": "Charles Schwab Corporation (The",
-      "chartPreviousClose": 100.8,
+      "chartPreviousClose": 101.61,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            101.61000061035156,
-            101.97000122070312,
-            104.18000030517578,
-            105.97000122070312,
-            104.47000122070312
-          ],
-          "high": [
-            102.70999908447266,
-            102,
-            104.29000091552734,
-            106.29000091552734,
-            106.7300033569336
-          ],
-          "low": [
-            100.2699966430664,
-            100.55000305175781,
-            102.36000061035156,
-            103.44999694824219,
-            104.38999938964844
-          ],
           "volume": [
-            8258400,
             5175300,
             7276400,
             7809100,
-            7149300
+            7149300,
+            7479700
+          ],
+          "close": [
+            101.97000122070312,
+            104.18000030517578,
+            105.97000122070312,
+            104.47000122070312,
+            104.33000183105469
           ],
           "open": [
-            100.2699966430664,
             101.61000061035156,
             102.68000030517578,
             104.23999786376953,
-            106
+            106,
+            103.93000030517578
+          ],
+          "high": [
+            102,
+            104.29000091552734,
+            106.29000091552734,
+            106.7300033569336,
+            104.81999969482422
+          ],
+          "low": [
+            100.55000305175781,
+            102.36000061035156,
+            103.44999694824219,
+            104.38999938964844,
+            103.06999969482422
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            101.61000061035156,
             101.97000122070312,
             104.18000030517578,
             105.97000122070312,
-            104.47000122070312
+            104.47000122070312,
+            104.33000183105469
           ]
         }
       ]

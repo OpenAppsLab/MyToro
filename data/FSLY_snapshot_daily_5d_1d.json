@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:31.004Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FSLY?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FSLY",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1558099800,
+      "regularMarketTime": 1785441601,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 21.55,
+      "fiftyTwoWeekHigh": 34.82,
+      "fiftyTwoWeekLow": 6.29,
+      "regularMarketDayHigh": 21.805,
+      "regularMarketDayLow": 20.71,
+      "regularMarketVolume": 3454233,
+      "longName": "Fastly, Inc.",
+      "shortName": "Fastly, Inc.",
+      "chartPreviousClose": 19.43,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            19.329999923706055,
+            19.399999618530273,
+            18.93000030517578,
+            20.06999969482422,
+            20.709999084472656
+          ],
+          "open": [
+            19.65999984741211,
+            20.56999969482422,
+            19.989999771118164,
+            20.799999237060547,
+            20.81999969482422
+          ],
+          "close": [
+            20.239999771118164,
+            20.040000915527344,
+            20.799999237060547,
+            20.690000534057617,
+            21.549999237060547
+          ],
+          "volume": [
+            4373000,
+            3313800,
+            5073800,
+            5306300,
+            3509000
+          ],
+          "high": [
+            20.65999984741211,
+            20.649999618530273,
+            21.075000762939453,
+            21.450000762939453,
+            21.80500030517578
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            20.239999771118164,
+            20.040000915527344,
+            20.799999237060547,
+            20.690000534057617,
+            21.549999237060547
+          ]
+        }
+      ]
+    }
+  }
+}

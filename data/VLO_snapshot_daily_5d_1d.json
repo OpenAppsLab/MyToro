@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:06:08.076Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/VLO?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "VLO",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 379002600,
+      "regularMarketTime": 1785441603,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 311.71,
+      "fiftyTwoWeekHigh": 320.24,
+      "fiftyTwoWeekLow": 130.78,
+      "regularMarketDayHigh": 313.74,
+      "regularMarketDayLow": 294.21,
+      "regularMarketVolume": 1896150,
+      "longName": "Valero Energy Corporation",
+      "shortName": "Valero Energy Corporation",
+      "chartPreviousClose": 305.26,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            302.5,
+            304.92999267578125,
+            298.8800048828125,
+            301.32000732421875,
+            311.7099914550781
+          ],
+          "low": [
+            301.04998779296875,
+            295.7200012207031,
+            297.82000732421875,
+            301.32000732421875,
+            294.2099914550781
+          ],
+          "volume": [
+            2320000,
+            2372800,
+            2512000,
+            2319800,
+            2254700
+          ],
+          "high": [
+            309.010009765625,
+            306.1300048828125,
+            307,
+            309.9800109863281,
+            313.75
+          ],
+          "open": [
+            304.3699951171875,
+            295.75,
+            304.8999938964844,
+            306.3299865722656,
+            296.4100036621094
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            302.5,
+            304.92999267578125,
+            298.8800048828125,
+            301.32000732421875,
+            311.7099914550781
+          ]
+        }
+      ]
+    }
+  }
+}

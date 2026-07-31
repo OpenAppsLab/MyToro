@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:03:20.910Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/TFC?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "TFC",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 322237800,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 52.01,
+      "fiftyTwoWeekHigh": 56.2,
+      "fiftyTwoWeekLow": 40.78,
+      "regularMarketDayHigh": 52.59,
+      "regularMarketDayLow": 51.59,
+      "regularMarketVolume": 6646305,
+      "longName": "Truist Financial Corporation",
+      "shortName": "Truist Financial Corporation",
+      "chartPreviousClose": 51.2,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            52.040000915527344,
+            52.75,
+            53.08000183105469,
+            53.13999938964844,
+            52.59000015258789
+          ],
+          "open": [
+            51.40999984741211,
+            52.029998779296875,
+            52.31999969482422,
+            52.58000183105469,
+            52.38999938964844
+          ],
+          "close": [
+            51.7599983215332,
+            52.119998931884766,
+            52.9900016784668,
+            52.310001373291016,
+            52.0099983215332
+          ],
+          "volume": [
+            5033500,
+            5630400,
+            8120900,
+            7326800,
+            8529000
+          ],
+          "low": [
+            51.290000915527344,
+            51.84000015258789,
+            52.220001220703125,
+            52.11000061035156,
+            51.59000015258789
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            51.7599983215332,
+            52.119998931884766,
+            52.9900016784668,
+            52.310001373291016,
+            52.0099983215332
+          ]
+        }
+      ]
+    }
+  }
+}

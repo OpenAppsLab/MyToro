@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:03.053Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DVA?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "DVA",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 815149800,
+      "regularMarketTime": 1785441603,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 238.86,
+      "fiftyTwoWeekHigh": 244.49,
+      "fiftyTwoWeekLow": 101,
+      "regularMarketDayHigh": 241.77,
+      "regularMarketDayLow": 238.825,
+      "regularMarketVolume": 392974,
+      "longName": "DaVita Inc.",
+      "shortName": "DaVita Inc.",
+      "chartPreviousClose": 234.27,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            235.00999450683594,
+            235.52999877929688,
+            237.6699981689453,
+            241.13999938964844,
+            239.64999389648438
+          ],
+          "volume": [
+            535300,
+            625500,
+            650500,
+            694500,
+            393000
+          ],
+          "close": [
+            235.44000244140625,
+            236.30999755859375,
+            239.4600067138672,
+            240.9600067138672,
+            238.86000061035156
+          ],
+          "high": [
+            237.85000610351562,
+            239.10000610351562,
+            241.72999572753906,
+            244.49000549316406,
+            241.77000427246094
+          ],
+          "low": [
+            231.1999969482422,
+            233.55999755859375,
+            237.22000122070312,
+            238.67999267578125,
+            238.7899932861328
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            235.44000244140625,
+            236.30999755859375,
+            239.4600067138672,
+            240.9600067138672,
+            238.86000061035156
+          ]
+        }
+      ]
+    }
+  }
+}

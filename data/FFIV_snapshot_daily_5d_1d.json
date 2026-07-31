@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:29.716Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FFIV?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FFIV",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 928503000,
+      "regularMarketTime": 1785441601,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 388.75,
+      "fiftyTwoWeekHigh": 435,
+      "fiftyTwoWeekLow": 223.76,
+      "regularMarketDayHigh": 393.58,
+      "regularMarketDayLow": 386.01,
+      "regularMarketVolume": 699997,
+      "longName": "F5, Inc.",
+      "shortName": "F5, Inc.",
+      "chartPreviousClose": 388.08,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            393.7699890136719,
+            410.80999755859375,
+            414,
+            411.1000061035156,
+            393.5799865722656
+          ],
+          "close": [
+            392.2099914550781,
+            407.9599914550781,
+            403.4599914550781,
+            386.95001220703125,
+            388.75
+          ],
+          "open": [
+            393.7699890136719,
+            398.79998779296875,
+            393.989990234375,
+            403.4599914550781,
+            390.6000061035156
+          ],
+          "volume": [
+            530700,
+            1615000,
+            1621700,
+            850600,
+            719300
+          ],
+          "low": [
+            385.3699951171875,
+            391.5400085449219,
+            366.92999267578125,
+            385.7200012207031,
+            386.010009765625
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            392.2099914550781,
+            407.9599914550781,
+            403.4599914550781,
+            386.95001220703125,
+            388.75
+          ]
+        }
+      ]
+    }
+  }
+}

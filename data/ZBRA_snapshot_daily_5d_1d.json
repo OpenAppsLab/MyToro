@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:42.759Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZBRA?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ZBRA",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 682263000,
+      "regularMarketTime": 1785441600,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 288.57,
+      "fiftyTwoWeekHigh": 352.66,
+      "fiftyTwoWeekLow": 199.05,
+      "regularMarketDayHigh": 292.76,
+      "regularMarketDayLow": 276.53,
+      "regularMarketVolume": 759653,
+      "longName": "Zebra Technologies Corporation",
+      "shortName": "Zebra Technologies Corporation",
+      "chartPreviousClose": 256.95,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            265.6199951171875,
+            268.4200134277344,
+            284.8299865722656,
+            288.5899963378906,
+            292.760009765625
+          ],
+          "close": [
+            259.9200134277344,
+            264.5899963378906,
+            284.3999938964844,
+            282.9800109863281,
+            288.57000732421875
+          ],
+          "open": [
+            258.4599914550781,
+            264.0199890136719,
+            265.1499938964844,
+            284.3800048828125,
+            283.0799865722656
+          ],
+          "low": [
+            256.6700134277344,
+            261.92999267578125,
+            263.0799865722656,
+            280.92999267578125,
+            276.5299987792969
+          ],
+          "volume": [
+            406200,
+            568200,
+            1261900,
+            1079800,
+            759800
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            259.9200134277344,
+            264.5899963378906,
+            284.3999938964844,
+            282.9800109863281,
+            288.57000732421875
+          ]
+        }
+      ]
+    }
+  }
+}

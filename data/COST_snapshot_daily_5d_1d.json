@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:27:22.126Z",
+  "fetchedAt": "2026-07-31T07:50:57.330Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COST?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 521299800,
-      "regularMarketTime": 1785355201,
+      "regularMarketTime": 1785441601,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 974.03,
+      "regularMarketPrice": 954.17,
       "fiftyTwoWeekHigh": 1096.5,
       "fiftyTwoWeekLow": 844.06,
-      "regularMarketDayHigh": 978.8,
-      "regularMarketDayLow": 963,
-      "regularMarketVolume": 1757729,
+      "regularMarketDayHigh": 960.76,
+      "regularMarketDayLow": 949.76,
+      "regularMarketVolume": 2132773,
       "longName": "Costco Wholesale Corporation",
       "shortName": "Costco Wholesale Corporation",
-      "chartPreviousClose": 927.31,
+      "chartPreviousClose": 926.06,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            926.0599975585938,
-            935.030029296875,
-            951.5800170898438,
-            966.5800170898438,
-            974.030029296875
-          ],
-          "high": [
-            926.530029296875,
-            936.6599731445312,
-            956.6099853515625,
-            987.5499877929688,
-            978.7999877929688
-          ],
           "volume": [
-            1785200,
             1586300,
             2109500,
             2682800,
-            1973400
+            1973400,
+            2334500
           ],
           "open": [
-            920.510009765625,
             925.010009765625,
             938.1099853515625,
             970.5499877929688,
-            968.0700073242188
+            968.0700073242188,
+            955.0399780273438
           ],
           "low": [
-            916.760009765625,
             921.280029296875,
             936.6599731445312,
             965.8699951171875,
-            963
+            963,
+            949.6799926757812
+          ],
+          "high": [
+            936.6599731445312,
+            956.6099853515625,
+            987.5499877929688,
+            978.7999877929688,
+            960.760009765625
+          ],
+          "close": [
+            935.030029296875,
+            951.5800170898438,
+            966.5800170898438,
+            974.030029296875,
+            954.1699829101562
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            924.5899658203125,
             935.030029296875,
             951.5800170898438,
             966.5800170898438,
-            974.030029296875
+            974.030029296875,
+            954.1699829101562
           ]
         }
       ]

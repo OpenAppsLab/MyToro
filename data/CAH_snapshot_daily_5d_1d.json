@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:55.885Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CAH?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CAH",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 428851800,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 227.07,
+      "fiftyTwoWeekHigh": 243.21,
+      "fiftyTwoWeekLow": 137.75,
+      "regularMarketDayHigh": 227.78,
+      "regularMarketDayLow": 224.705,
+      "regularMarketVolume": 1131835,
+      "longName": "Cardinal Health, Inc.",
+      "shortName": "Cardinal Health, Inc.",
+      "chartPreviousClose": 225.98,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            227.8800048828125,
+            227.77999877929688,
+            232.08999633789062,
+            234.02000427246094,
+            226.27999877929688
+          ],
+          "high": [
+            228.97000122070312,
+            230.61000061035156,
+            233.77000427246094,
+            234.02000427246094,
+            227.77999877929688
+          ],
+          "volume": [
+            1466600,
+            1106300,
+            2652200,
+            2746000,
+            1484200
+          ],
+          "low": [
+            225.97000122070312,
+            227.02999877929688,
+            230.32000732421875,
+            228.49000549316406,
+            224.11000061035156
+          ],
+          "close": [
+            228.02999877929688,
+            229.35000610351562,
+            232.50999450683594,
+            229.1199951171875,
+            227.07000732421875
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            228.02999877929688,
+            229.35000610351562,
+            232.50999450683594,
+            229.1199951171875,
+            227.07000732421875
+          ]
+        }
+      ]
+    }
+  }
+}

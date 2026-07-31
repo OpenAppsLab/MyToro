@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:27:08.942Z",
+  "fetchedAt": "2026-07-31T07:50:42.351Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSEArca",
       "instrumentType": "ETF",
       "firstTradeDate": 728317800,
-      "regularMarketTime": 1785355200,
+      "regularMarketTime": 1785441600,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 729.46,
+      "regularMarketPrice": 741.69,
       "fiftyTwoWeekHigh": 760.4,
       "fiftyTwoWeekLow": 619.29,
-      "regularMarketDayHigh": 742.67,
-      "regularMarketDayLow": 729.1,
-      "regularMarketVolume": 69069318,
+      "regularMarketDayHigh": 742.45,
+      "regularMarketDayLow": 734.59,
+      "regularMarketVolume": 65907594,
       "longName": "State Street SPDR S&P 500 ETF Trust",
       "shortName": "State Street SPDR S&P 500 ETF T",
-      "chartPreviousClose": 747.41,
+      "chartPreviousClose": 738.18,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            739.3699951171875,
-            738.510009765625,
-            744.9099731445312,
-            739.1900024414062,
-            739.969970703125
-          ],
-          "close": [
-            738.1799926757812,
-            738.9299926757812,
-            739.0900268554688,
-            740.8599853515625,
-            729.4600219726562
-          ],
           "volume": [
-            55437300,
             44782000,
             41461200,
             47322200,
-            70473800
-          ],
-          "low": [
-            735.2100219726562,
-            737.2899780273438,
-            735.8699951171875,
-            735.97998046875,
-            729.0999755859375
+            70697200,
+            66725600
           ],
           "high": [
-            742.5599975585938,
             743.719970703125,
             745.530029296875,
             742.7899780273438,
-            742.6799926757812
+            742.6799926757812,
+            742.4500122070312
+          ],
+          "low": [
+            737.2899780273438,
+            735.8699951171875,
+            735.97998046875,
+            729.0999755859375,
+            734.5900268554688
+          ],
+          "close": [
+            738.9299926757812,
+            739.0900268554688,
+            740.8599853515625,
+            729.4600219726562,
+            741.6900024414062
+          ],
+          "open": [
+            738.510009765625,
+            744.9099731445312,
+            739.1900024414062,
+            739.969970703125,
+            736.0499877929688
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            738.1799926757812,
             738.9299926757812,
             739.0900268554688,
             740.8599853515625,
-            729.4600219726562
+            729.4600219726562,
+            741.6900024414062
           ]
         }
       ]

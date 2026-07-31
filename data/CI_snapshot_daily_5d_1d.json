@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:57.332Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CI?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CI",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 386433000,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 287.66,
+      "fiftyTwoWeekHigh": 315.47,
+      "fiftyTwoWeekLow": 239.51,
+      "regularMarketDayHigh": 291.9,
+      "regularMarketDayLow": 281.03,
+      "regularMarketVolume": 1856463,
+      "longName": "The Cigna Group",
+      "shortName": "The Cigna Group",
+      "chartPreviousClose": 286.29,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            285.92999267578125,
+            286.7099914550781,
+            291.8900146484375,
+            296.2200012207031,
+            281.0299987792969
+          ],
+          "close": [
+            289.57000732421875,
+            291.0199890136719,
+            301.05999755859375,
+            296.4700012207031,
+            287.6600036621094
+          ],
+          "volume": [
+            1084200,
+            1313500,
+            1858800,
+            1719300,
+            2320600
+          ],
+          "high": [
+            290.57000732421875,
+            293.3299865722656,
+            304.69000244140625,
+            303,
+            291.95001220703125
+          ],
+          "open": [
+            288.0799865722656,
+            289.6499938964844,
+            293.5799865722656,
+            303,
+            286
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            289.57000732421875,
+            291.0199890136719,
+            301.05999755859375,
+            296.4700012207031,
+            287.6600036621094
+          ]
+        }
+      ]
+    }
+  }
+}

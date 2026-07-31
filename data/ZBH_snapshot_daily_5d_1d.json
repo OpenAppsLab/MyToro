@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:37.692Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZBH?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ZBH",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 996067800,
+      "regularMarketTime": 1785441603,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 94.96,
+      "fiftyTwoWeekHigh": 108.29,
+      "fiftyTwoWeekLow": 79.12,
+      "regularMarketDayHigh": 96.475,
+      "regularMarketDayLow": 93.51,
+      "regularMarketVolume": 1594326,
+      "longName": "Zimmer Biomet Holdings, Inc.",
+      "shortName": "Zimmer Biomet Holdings, Inc.",
+      "chartPreviousClose": 89.65,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            91.3499984741211,
+            92.06999969482422,
+            95.75,
+            97.1500015258789,
+            94.95999908447266
+          ],
+          "low": [
+            90.43000030517578,
+            90.87999725341797,
+            94.05999755859375,
+            95.02999877929688,
+            93.48999786376953
+          ],
+          "volume": [
+            1252100,
+            1568300,
+            3737100,
+            3616100,
+            2178000
+          ],
+          "high": [
+            92.37999725341797,
+            93.29000091552734,
+            97.5999984741211,
+            97.38999938964844,
+            96.4800033569336
+          ],
+          "open": [
+            91.0199966430664,
+            91.29000091552734,
+            94.88999938964844,
+            95.76000213623047,
+            96.16999816894531
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            91.3499984741211,
+            92.06999969482422,
+            95.75,
+            97.1500015258789,
+            94.95999908447266
+          ]
+        }
+      ]
+    }
+  }
+}

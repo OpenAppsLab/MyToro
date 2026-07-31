@@ -9,7 +9,7 @@ const DATA_DIR = path.join(__dirname, 'data');
 app.use(express.static(PUBLIC_DIR));
 app.use(express.json({ limit: '200kb' }));
 
-const MARKET_SYMBOLS = [
+const DEFAULT_MARKET_SYMBOLS = [
   { symbol: 'QQQ', name: 'Nasdaq 100 ETF', region: 'NASDAQ' },
   { symbol: 'SPY', name: 'S&P 500 ETF', region: 'NASDAQ' },
   { symbol: 'QQQM', name: 'Invesco NASDAQ 100 ETF', region: 'NASDAQ' },
@@ -112,10 +112,156 @@ const MARKET_SYMBOLS = [
   { symbol: 'MRVL', name: 'Marvell', region: 'NASDAQ' }
 ];
 
-const MARKET_CACHE_TTL_MS = 60000;
+const SECTOR_MARKET_SYMBOLS = [
+  { symbol: 'AXP', name: 'American Express', region: 'NASDAQ' },
+  { symbol: 'BAC', name: 'Bank of America', region: 'NASDAQ' },
+  { symbol: 'BLK', name: 'BlackRock', region: 'NASDAQ' },
+  { symbol: 'C', name: 'Citigroup', region: 'NASDAQ' },
+  { symbol: 'COF', name: 'Capital One', region: 'NASDAQ' },
+  { symbol: 'DFS', name: 'Discover Financial', region: 'NASDAQ' },
+  { symbol: 'FITB', name: 'Fifth Third Bank', region: 'NASDAQ' },
+  { symbol: 'GS', name: 'Goldman Sachs', region: 'NASDAQ' },
+  { symbol: 'JPM', name: 'JPMorgan Chase', region: 'NASDAQ' },
+  { symbol: 'KEY', name: 'KeyCorp', region: 'NASDAQ' },
+  { symbol: 'MS', name: 'Morgan Stanley', region: 'NASDAQ' },
+  { symbol: 'MTB', name: 'M&T Bank', region: 'NASDAQ' },
+  { symbol: 'PNC', name: 'PNC Financial', region: 'NASDAQ' },
+  { symbol: 'RF', name: 'Regions Financial', region: 'NASDAQ' },
+  { symbol: 'SCHW', name: 'Charles Schwab', region: 'NASDAQ' },
+  { symbol: 'STT', name: 'State Street', region: 'NASDAQ' },
+  { symbol: 'SYF', name: 'Synchrony Financial', region: 'NASDAQ' },
+  { symbol: 'TFC', name: 'Truist Financial', region: 'NASDAQ' },
+  { symbol: 'USB', name: 'U.S. Bancorp', region: 'NASDAQ' },
+  { symbol: 'WFC', name: 'Wells Fargo', region: 'NASDAQ' },
+  { symbol: 'CFG', name: 'Citizens Financial', region: 'NASDAQ' },
+  { symbol: 'CMA', name: 'Comerica', region: 'NASDAQ' },
+  { symbol: 'HBAN', name: 'Huntington Bancshares', region: 'NASDAQ' },
+  { symbol: 'AAPL', name: 'Apple', region: 'NASDAQ' },
+  { symbol: 'ACN', name: 'Accenture', region: 'NASDAQ' },
+  { symbol: 'ADBE', name: 'Adobe', region: 'NASDAQ' },
+  { symbol: 'ADSK', name: 'Autodesk', region: 'NASDAQ' },
+  { symbol: 'AMD', name: 'Advanced Micro Devices', region: 'NASDAQ' },
+  { symbol: 'AMAT', name: 'Applied Materials', region: 'NASDAQ' },
+  { symbol: 'AVGO', name: 'Broadcom', region: 'NASDAQ' },
+  { symbol: 'CRM', name: 'Salesforce', region: 'NASDAQ' },
+  { symbol: 'CSCO', name: 'Cisco', region: 'NASDAQ' },
+  { symbol: 'CTAS', name: 'Cintas', region: 'NASDAQ' },
+  { symbol: 'CTXS', name: 'Citrix Systems', region: 'NASDAQ' },
+  { symbol: 'DXC', name: 'DXC Technology', region: 'NASDAQ' },
+  { symbol: 'FIS', name: 'FIS', region: 'NASDAQ' },
+  { symbol: 'FISV', name: 'Fiserv', region: 'NASDAQ' },
+  { symbol: 'FTNT', name: 'Fortinet', region: 'NASDAQ' },
+  { symbol: 'GOOGL', name: 'Alphabet', region: 'NASDAQ' },
+  { symbol: 'IBM', name: 'IBM', region: 'NASDAQ' },
+  { symbol: 'INTC', name: 'Intel', region: 'NASDAQ' },
+  { symbol: 'INTU', name: 'Intuit', region: 'NASDAQ' },
+  { symbol: 'KLAC', name: 'KLA', region: 'NASDAQ' },
+  { symbol: 'LRCX', name: 'Lam Research', region: 'NASDAQ' },
+  { symbol: 'MCHP', name: 'Microchip', region: 'NASDAQ' },
+  { symbol: 'MDB', name: 'MongoDB', region: 'NASDAQ' },
+  { symbol: 'MSFT', name: 'Microsoft', region: 'NASDAQ' },
+  { symbol: 'MU', name: 'Micron', region: 'NASDAQ' },
+  { symbol: 'NOW', name: 'ServiceNow', region: 'NASDAQ' },
+  { symbol: 'NVDA', name: 'NVIDIA', region: 'NASDAQ' },
+  { symbol: 'ORCL', name: 'Oracle', region: 'NASDAQ' },
+  { symbol: 'PANW', name: 'Palo Alto Networks', region: 'NASDAQ' },
+  { symbol: 'PAYX', name: 'Paychex', region: 'NASDAQ' },
+  { symbol: 'QCOM', name: 'Qualcomm', region: 'NASDAQ' },
+  { symbol: 'SAP', name: 'SAP', region: 'NASDAQ' },
+  { symbol: 'STX', name: 'Seagate', region: 'NASDAQ' },
+  { symbol: 'SWKS', name: 'Skyworks', region: 'NASDAQ' },
+  { symbol: 'TTD', name: 'Trade Desk', region: 'NASDAQ' },
+  { symbol: 'TXN', name: 'Texas Instruments', region: 'NASDAQ' },
+  { symbol: 'VRSN', name: 'Verisign', region: 'NASDAQ' },
+  { symbol: 'WDC', name: 'Western Digital', region: 'NASDAQ' },
+  { symbol: 'ANET', name: 'Arista Networks', region: 'NASDAQ' },
+  { symbol: 'CDNS', name: 'Cadence Design', region: 'NASDAQ' },
+  { symbol: 'CDW', name: 'CDW', region: 'NASDAQ' },
+  { symbol: 'DDOG', name: 'Datadog', region: 'NASDAQ' },
+  { symbol: 'ENPH', name: 'Enphase', region: 'NASDAQ' },
+  { symbol: 'EPAM', name: 'EPAM Systems', region: 'NASDAQ' },
+  { symbol: 'FFIV', name: 'F5 Networks', region: 'NASDAQ' },
+  { symbol: 'FSLY', name: 'Fastly', region: 'NASDAQ' },
+  { symbol: 'HPQ', name: 'HP', region: 'NASDAQ' },
+  { symbol: 'KEYS', name: 'Keysight', region: 'NASDAQ' },
+  { symbol: 'MPWR', name: 'Monolithic Power', region: 'NASDAQ' },
+  { symbol: 'NTAP', name: 'NetApp', region: 'NASDAQ' },
+  { symbol: 'PLTR', name: 'Palantir', region: 'NASDAQ' },
+  { symbol: 'ROP', name: 'Roper Technologies', region: 'NASDAQ' },
+  { symbol: 'SNOW', name: 'Snowflake', region: 'NASDAQ' },
+  { symbol: 'WDAY', name: 'Workday', region: 'NASDAQ' },
+  { symbol: 'ZBRA', name: 'Zebra Technologies', region: 'NASDAQ' },
+  { symbol: 'ABBV', name: 'AbbVie', region: 'NASDAQ' },
+  { symbol: 'ABT', name: 'Abbott', region: 'NASDAQ' },
+  { symbol: 'ALGN', name: 'Align Technology', region: 'NASDAQ' },
+  { symbol: 'AMGN', name: 'Amgen', region: 'NASDAQ' },
+  { symbol: 'BAX', name: 'Baxter', region: 'NASDAQ' },
+  { symbol: 'BIO', name: 'Bio-Rad', region: 'NASDAQ' },
+  { symbol: 'BIIB', name: 'Biogen', region: 'NASDAQ' },
+  { symbol: 'BMY', name: 'Bristol Myers', region: 'NASDAQ' },
+  { symbol: 'BSX', name: 'Boston Scientific', region: 'NASDAQ' },
+  { symbol: 'CAH', name: 'Cardinal Health', region: 'NASDAQ' },
+  { symbol: 'CI', name: 'Cigna', region: 'NASDAQ' },
+  { symbol: 'CVS', name: 'CVS Health', region: 'NASDAQ' },
+  { symbol: 'DGX', name: 'Quest Diagnostics', region: 'NASDAQ' },
+  { symbol: 'DHR', name: 'Danaher', region: 'NASDAQ' },
+  { symbol: 'DVA', name: 'DaVita', region: 'NASDAQ' },
+  { symbol: 'ELV', name: 'Elevance Health', region: 'NASDAQ' },
+  { symbol: 'EW', name: 'Edwards Lifesciences', region: 'NASDAQ' },
+  { symbol: 'GILD', name: 'Gilead', region: 'NASDAQ' },
+  { symbol: 'HCA', name: 'HCA Healthcare', region: 'NASDAQ' },
+  { symbol: 'HOLX', name: 'Hologic', region: 'NASDAQ' },
+  { symbol: 'HUM', name: 'Humana', region: 'NASDAQ' },
+  { symbol: 'IDXX', name: 'IDEXX', region: 'NASDAQ' },
+  { symbol: 'ILMN', name: 'Illumina', region: 'NASDAQ' },
+  { symbol: 'IQV', name: 'IQVIA', region: 'NASDAQ' },
+  { symbol: 'ISRG', name: 'Intuitive Surgical', region: 'NASDAQ' },
+  { symbol: 'JNJ', name: 'Johnson & Johnson', region: 'NASDAQ' },
+  { symbol: 'LLY', name: 'Eli Lilly', region: 'NASDAQ' },
+  { symbol: 'MCK', name: 'McKesson', region: 'NASDAQ' },
+  { symbol: 'MDT', name: 'Medtronic', region: 'NASDAQ' },
+  { symbol: 'MRK', name: 'Merck', region: 'NASDAQ' },
+  { symbol: 'MRNA', name: 'Moderna', region: 'NASDAQ' },
+  { symbol: 'PFE', name: 'Pfizer', region: 'NASDAQ' },
+  { symbol: 'PKI', name: 'PerkinElmer', region: 'NASDAQ' },
+  { symbol: 'REGN', name: 'Regeneron', region: 'NASDAQ' },
+  { symbol: 'RMD', name: 'ResMed', region: 'NASDAQ' },
+  { symbol: 'SYK', name: 'Stryker', region: 'NASDAQ' },
+  { symbol: 'TMO', name: 'Thermo Fisher', region: 'NASDAQ' },
+  { symbol: 'VTRS', name: 'Viatris', region: 'NASDAQ' },
+  { symbol: 'VRTX', name: 'Vertex', region: 'NASDAQ' },
+  { symbol: 'WAT', name: 'Waters', region: 'NASDAQ' },
+  { symbol: 'WST', name: 'West Pharmaceutical', region: 'NASDAQ' },
+  { symbol: 'ZBH', name: 'Zimmer Biomet', region: 'NASDAQ' },
+  { symbol: 'COP', name: 'ConocoPhillips', region: 'NASDAQ' },
+  { symbol: 'CTRA', name: 'Coterra Energy', region: 'NASDAQ' },
+  { symbol: 'CVX', name: 'Chevron', region: 'NASDAQ' },
+  { symbol: 'DVN', name: 'Devon Energy', region: 'NASDAQ' },
+  { symbol: 'EOG', name: 'EOG Resources', region: 'NASDAQ' },
+  { symbol: 'FANG', name: 'Diamondback Energy', region: 'NASDAQ' },
+  { symbol: 'HAL', name: 'Halliburton', region: 'NASDAQ' },
+  { symbol: 'HES', name: 'Hess', region: 'NASDAQ' },
+  { symbol: 'KMI', name: 'Kinder Morgan', region: 'NASDAQ' },
+  { symbol: 'MPC', name: 'Marathon Petroleum', region: 'NASDAQ' },
+  { symbol: 'MRO', name: 'Marathon Oil', region: 'NASDAQ' },
+  { symbol: 'OKE', name: 'ONEOK', region: 'NASDAQ' },
+  { symbol: 'OXY', name: 'Occidental', region: 'NASDAQ' },
+  { symbol: 'PXD', name: 'Pioneer Natural Resources', region: 'NASDAQ' },
+  { symbol: 'SLB', name: 'Schlumberger', region: 'NASDAQ' },
+  { symbol: 'VLO', name: 'Valero', region: 'NASDAQ' },
+  { symbol: 'WMB', name: 'Williams Companies', region: 'NASDAQ' },
+  { symbol: 'XOM', name: 'Exxon Mobil', region: 'NASDAQ' }
+];
+
+const MARKET_SYMBOLS = [...new Map([
+  ...DEFAULT_MARKET_SYMBOLS,
+  ...SECTOR_MARKET_SYMBOLS
+].map((entry) => [entry.symbol, entry])).values()];
+
+const MARKET_CACHE_TTL_MS = 15000;
 const NEWS_CACHE_TTL_MS = 30000;
 const YESTERDAY_CACHE_TTL_MS = 60000;
-const ORDER_MONITOR_INTERVAL_MS = 30 * 1000;
+const ORDER_MONITOR_INTERVAL_MS = 10 * 1000;
 const AUTO_ORDER_POLL_MS = 60 * 1000;
 const DEFAULT_STOP_LOSS_USD = 15;
 const DAILY_TARGET_PROFIT = 100;
@@ -1741,8 +1887,33 @@ function readLocalSnapshot(fileName) {
   }
 }
 
+function isFreshSnapshot(raw, now = new Date()) {
+  if (!raw || typeof raw !== 'object') {
+    return false;
+  }
+
+  if (raw.fetchedAt) {
+    const fetchedAt = new Date(raw.fetchedAt);
+    if (Number.isFinite(fetchedAt.getTime())) {
+      const ageMs = now.getTime() - fetchedAt.getTime();
+      const sameDay = getNewYorkDateKey(fetchedAt) === getNewYorkDateKey(now);
+      if (ageMs > 15 * 60 * 1000) {
+        return false;
+      }
+      if (isNasdaqMarketOpen() && !sameDay) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
 function loadLocalIntradaySnapshot(symbol) {
   const raw = readLocalSnapshot(`${symbol}_snapshot_intraday_1d_5m.json`) || readLocalSnapshot(`${symbol}_snapshot.json`);
+  if (!isFreshSnapshot(raw)) {
+    return null;
+  }
   const result = raw?.result;
   if (!result) {
     return null;
@@ -1770,7 +1941,55 @@ function loadLocalIntradaySnapshot(symbol) {
     changePct,
     dayMovePct,
     volume,
-    updatedAt: timestamps[timestamps.length - 1] || Date.now()
+    updatedAt: timestamps[timestamps.length - 1] || Date.now(),
+    timestamps,
+    closes,
+    opens: open
+  };
+}
+
+function resolvePriceFromIntradaySnapshot(symbol, timestamp) {
+  const snapshot = loadLocalIntradaySnapshot(symbol);
+  if (!snapshot?.closes?.length) {
+    return null;
+  }
+
+  const targetTimestamp = Number(timestamp || Date.now());
+  const targetSeconds = Math.floor(targetTimestamp / 1000);
+  const timestamps = Array.isArray(snapshot.timestamps) ? snapshot.timestamps : [];
+  const closes = Array.isArray(snapshot.closes) ? snapshot.closes : [];
+
+  if (!timestamps.length || !closes.length) {
+    return null;
+  }
+
+  const matchingIndex = timestamps.findIndex((value) => Number(value) >= targetSeconds);
+  const fallbackIndex = matchingIndex >= 0 ? Math.max(0, matchingIndex - 1) : closes.length - 1;
+  const index = Number.isFinite(fallbackIndex) ? fallbackIndex : closes.length - 1;
+  const price = Number(closes[index] || closes[closes.length - 1] || 0);
+  return Number.isFinite(price) && price > 0 ? price : null;
+}
+
+function resolveOrderMetricsForDisplay(order, options = {}) {
+  const entryPrice = Number(order?.entryPrice || 0);
+  const currentPrice = Number(order?.currentPrice || entryPrice || 0);
+  const symbol = String(order?.symbol || '').toUpperCase();
+  const referenceTime = Number(options.referenceTime || order?.updatedAt || order?.settledAt || order?.createdAt || Date.now());
+  const resolvedEntryPrice = resolvePriceFromIntradaySnapshot(symbol, order?.createdAt || referenceTime) || entryPrice;
+  const resolvedCurrentPrice = resolvePriceFromIntradaySnapshot(symbol, referenceTime) || currentPrice || resolvedEntryPrice;
+  const leverage = Number(order?.leverage || 1);
+  const ballparkAmount = Number(order?.ballparkAmount || order?.ballpark || 0);
+  const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;
+  const realizedPnl = Number(((resolvedCurrentPrice - resolvedEntryPrice) * shareCount).toFixed(2));
+  const movePct = resolvedEntryPrice > 0 ? ((resolvedCurrentPrice - resolvedEntryPrice) / resolvedEntryPrice) * 100 : 0;
+
+  return {
+    ...order,
+    resolvedEntryPrice,
+    resolvedCurrentPrice,
+    resolvedMovePct: movePct,
+    resolvedPnl: realizedPnl,
+    resolvedShareCount: shareCount
   };
 }
 
@@ -1875,15 +2094,20 @@ async function refreshMarketSnapshot() {
   return marketRefreshPromise;
 }
 
-async function loadMarketSnapshot() {
+async function loadMarketSnapshot(options = {}) {
+  const forceRefresh = Boolean(options.forceRefresh);
   const now = Date.now();
-  if (marketCache.expiresAt > now) {
+  if (!forceRefresh && marketCache.expiresAt > now) {
     return marketCache.data;
   }
 
-  if (marketCache.data?.length) {
+  if (!forceRefresh && marketCache.data?.length) {
     refreshMarketSnapshot().catch(() => {});
     return marketCache.data;
+  }
+
+  if (forceRefresh) {
+    return await refreshMarketSnapshot();
   }
 
   const localMarket = buildLocalMarketSnapshot();
@@ -2205,10 +2429,15 @@ async function fetchMarketSnapshot() {
   }
 
   const validMarket = market.filter((entry) => Number.isFinite(entry.currentPrice) && entry.currentPrice > 0);
-  if (!validMarket.length && Array.isArray(marketCache.data) && marketCache.data.length) {
-    console.warn('Fresh market snapshot failed; returning stale cached market data.');
-    return marketCache.data;
-  }
+const cacheIsFresh = Array.isArray(marketCache.data) && marketCache.data.length && marketCache.data.some((entry) => {
+      const updatedAt = Number(entry.updatedAt || 0);
+      return updatedAt > Date.now() - 5 * 60 * 1000;
+    });
+
+    if (!validMarket.length && cacheIsFresh) {
+      console.warn('Fresh market snapshot failed; returning recent cached market data.');
+      return marketCache.data;
+    }
 
   marketCache = {
     expiresAt: Date.now() + MARKET_CACHE_TTL_MS,
@@ -2576,6 +2805,7 @@ function evaluateOrderOutcome(order, currentPrice) {
 
   const stopWasHit = currentPrice <= currentTrailingStopPrice;
   const targetWasHit = currentPrice >= targetPrice;
+  const isFlatMove = Math.abs(currentPrice - entryPrice) <= 1e-6;
 
   return {
     ...order,
@@ -2584,10 +2814,10 @@ function evaluateOrderOutcome(order, currentPrice) {
     highWaterMark: currentHighWaterMark,
     trailingStopPrice: currentTrailingStopPrice,
     stopLossPrice: currentTrailingStopPrice,
-    status: targetWasHit ? 'green' : stopWasHit ? 'red' : order.status,
-    result: targetWasHit ? 'profit-hit' : stopWasHit ? 'loss-hit' : null,
-    settledAt: targetWasHit || stopWasHit ? Date.now() : null,
-    timeToHitMs: targetWasHit || stopWasHit ? Date.now() - order.createdAt : null
+    status: isFlatMove ? 'flat' : targetWasHit ? 'green' : stopWasHit ? 'red' : order.status,
+    result: isFlatMove ? null : targetWasHit ? 'profit-hit' : stopWasHit ? 'loss-hit' : null,
+    settledAt: isFlatMove || targetWasHit || stopWasHit ? Date.now() : null,
+    timeToHitMs: isFlatMove || targetWasHit || stopWasHit ? Date.now() - order.createdAt : null
   };
 }
 
@@ -2654,7 +2884,7 @@ async function settlePendingOrders() {
 
   let market;
   try {
-    market = await loadMarketSnapshot();
+    market = await loadMarketSnapshot({ forceRefresh: true });
   } catch (error) {
     console.warn('Unable to settle pending orders due to market snapshot error:', error.message || error);
     return;
@@ -2689,8 +2919,13 @@ async function settlePendingOrders() {
     order.timeToHitMs = outcome.timeToHitMs;
 
     if (order.status === 'pending' && forceClose) {
-      order.status = order.currentMovePct >= 0 ? 'green' : 'red';
-      order.result = 'day-close';
+      if (Math.abs(order.currentMovePct) < 1e-6) {
+        order.status = 'flat';
+        order.result = null;
+      } else {
+        order.status = order.currentMovePct >= 0 ? 'green' : 'red';
+        order.result = 'day-close';
+      }
       order.settledAt = now;
       order.timeToHitMs = now - order.createdAt;
     }
@@ -2704,7 +2939,7 @@ async function forceClosePendingOrders() {
 
   let market;
   try {
-    market = await loadMarketSnapshot();
+    market = await loadMarketSnapshot({ forceRefresh: true });
   } catch (error) {
     console.warn('Unable to force-close pending orders due to market snapshot error:', error.message || error);
     return;
@@ -2962,7 +3197,8 @@ app.post('/api/orders', async (req, res) => {
 app.get('/api/orders', async (req, res) => {
   try {
     await settlePendingOrders();
-    res.json({ orders: pendingOrders.slice(0, 20) });
+    const orders = pendingOrders.slice(0, 20).map((order) => resolveOrderMetricsForDisplay(order));
+    res.json({ orders });
   } catch (error) {
     res.status(500).json({ error: error.message || 'Unable to load pending orders' });
   }
@@ -2971,7 +3207,8 @@ app.get('/api/orders', async (req, res) => {
 app.post('/api/orders/refresh', async (req, res) => {
   try {
     await settlePendingOrders();
-    res.json({ orders: pendingOrders.slice(0, 20) });
+    const orders = pendingOrders.slice(0, 20).map((order) => resolveOrderMetricsForDisplay(order));
+    res.json({ orders });
   } catch (error) {
     res.status(500).json({ error: error.message || 'Unable to refresh pending orders' });
   }
@@ -3258,6 +3495,7 @@ module.exports = {
   buildLiveSignal,
   buildOrderRecord,
   evaluateOrderOutcome,
+  resolveOrderMetricsForDisplay,
   filterMarketItemsByQuery,
   pendingOrders,
   canPlaceAutoOrder,

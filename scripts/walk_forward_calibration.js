@@ -91,11 +91,11 @@ async function run() {
   const formattedExamples = examples.map((example) => {
     const adv = buildAdvancedSignals(example.item, [], { marketStats });
     const features = buildIntradayFeatureVector(example.item, adv, { marketStats });
-    const label = labelIntradayOutcome(example.item, 2.5, { targetMovePct: 2.5, minVolumeRatio: 1.2, futureLookaheadBars: 2 }) ? 1 : 0;
+    const label = labelIntradayOutcome(example.item, 1.8, { targetMovePct: 1.8, minVolumeRatio: 1.0, futureLookaheadBars: 2 }) ? 1 : 0;
     return { item: example.item, features, label, news: [] };
   });
 
-  const intradayModel = trainIntradayModel(formattedExamples, 2.5, 500, 0.01);
+  const intradayModel = trainIntradayModel(formattedExamples, 1.8, 500, 0.01);
   const persistedModel = getIntradayModel();
 
   const trainedTuning = optimizeAlphaThreshold(formattedExamples, {
@@ -122,7 +122,7 @@ async function run() {
   const chosenModel = tuning === persistedTuning ? persistedModel : intradayModel;
   const modelSource = tuning === persistedTuning ? 'persisted' : 'trained';
 
-  const calibrationCurve = computeCalibrationCurve(formattedExamples, chosenModel, { thresholdPct: 2.5, bins: 10 });
+  const calibrationCurve = computeCalibrationCurve(formattedExamples, chosenModel, { thresholdPct: 1.8, bins: 10 });
   const calibrationHealth = computeCalibrationHealth(calibrationCurve, { brier: tuning.best.brier });
 
   const healthGate = calibrationHealth.degraded ? 'pause' : 'run';

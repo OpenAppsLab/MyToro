@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:26.169Z",
+  "fetchedAt": "2026-07-31T08:03:58.234Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCHP?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 732551400,
-      "regularMarketTime": 1785355201,
+      "regularMarketTime": 1785441601,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 71.37,
+      "regularMarketPrice": 75.01,
       "fiftyTwoWeekHigh": 105.91,
       "fiftyTwoWeekLow": 48.52,
-      "regularMarketDayHigh": 75.83,
-      "regularMarketDayLow": 71.24,
-      "regularMarketVolume": 15429370,
+      "regularMarketDayHigh": 75.86,
+      "regularMarketDayLow": 73.255,
+      "regularMarketVolume": 12951254,
       "longName": "Microchip Technology Incorporated",
       "shortName": "Microchip Technology Incorporat",
-      "chartPreviousClose": 85.02,
+      "chartPreviousClose": 81.35,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            81.20999908447266,
-            80.29000091552734,
-            79.48999786376953,
-            76.23999786376953,
-            75.1500015258789
-          ],
-          "high": [
-            83.38999938964844,
-            81.23999786376953,
-            80.36000061035156,
-            77.61000061035156,
-            75.83000183105469
-          ],
           "volume": [
-            11585800,
             9323800,
             11225500,
             13879800,
-            15678900
+            15678900,
+            13846900
+          ],
+          "open": [
+            80.29000091552734,
+            79.48999786376953,
+            76.23999786376953,
+            75.1500015258789,
+            74.93000030517578
           ],
           "low": [
-            80.19000244140625,
             78.02999877929688,
             75.55999755859375,
             74.87999725341797,
-            71.23999786376953
+            71.23999786376953,
+            73.25
+          ],
+          "high": [
+            81.23999786376953,
+            80.36000061035156,
+            77.61000061035156,
+            75.83000183105469,
+            75.86000061035156
           ],
           "close": [
-            81.3499984741211,
             78.86000061035156,
             77.9000015258789,
             75.70999908447266,
-            71.37000274658203
+            71.37000274658203,
+            75.01000213623047
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            81.3499984741211,
             78.86000061035156,
             77.9000015258789,
             75.70999908447266,
-            71.37000274658203
+            71.37000274658203,
+            75.01000213623047
           ]
         }
       ]

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:13.355Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ILMN?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ILMN",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 964791000,
+      "regularMarketTime": 1785441601,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 205.09,
+      "fiftyTwoWeekHigh": 205.47,
+      "fiftyTwoWeekLow": 88,
+      "regularMarketDayHigh": 205.47,
+      "regularMarketDayLow": 194.49,
+      "regularMarketVolume": 2710427,
+      "longName": "Illumina, Inc.",
+      "shortName": "Illumina, Inc.",
+      "chartPreviousClose": 196.86,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            198,
+            194.35000610351562,
+            190.66000366210938,
+            193.24000549316406,
+            196
+          ],
+          "high": [
+            198,
+            195.0399932861328,
+            194.99000549316406,
+            196.67999267578125,
+            205.47000122070312
+          ],
+          "volume": [
+            1301000,
+            1738700,
+            2112700,
+            1693400,
+            2764500
+          ],
+          "low": [
+            191.57000732421875,
+            188.50999450683594,
+            187.6699981689453,
+            189.47000122070312,
+            194.49000549316406
+          ],
+          "close": [
+            194.08999633789062,
+            189.47000122070312,
+            192.97999572753906,
+            194.82000732421875,
+            205.08999633789062
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            194.08999633789062,
+            189.47000122070312,
+            192.97999572753906,
+            194.82000732421875,
+            205.08999633789062
+          ]
+        }
+      ]
+    }
+  }
+}

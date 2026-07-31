@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:36.316Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/WST?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "WST",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 322151400,
+      "regularMarketTime": 1785441603,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 339.59,
+      "fiftyTwoWeekHigh": 386,
+      "fiftyTwoWeekLow": 223.83,
+      "regularMarketDayHigh": 339.66,
+      "regularMarketDayLow": 334.37,
+      "regularMarketVolume": 389080,
+      "longName": "West Pharmaceutical Services, Inc.",
+      "shortName": "West Pharmaceutical Services, I",
+      "chartPreviousClose": 355.48,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            327.9700012207031,
+            325.2699890136719,
+            330.4100036621094,
+            330.69000244140625,
+            334.3599853515625
+          ],
+          "open": [
+            351.7900085449219,
+            329.239990234375,
+            334.54998779296875,
+            337.3900146484375,
+            336.1400146484375
+          ],
+          "volume": [
+            1508600,
+            1605500,
+            876500,
+            922100,
+            563900
+          ],
+          "close": [
+            328.20001220703125,
+            331.25,
+            337,
+            337.4599914550781,
+            339.5899963378906
+          ],
+          "high": [
+            351.7900085449219,
+            336.7200012207031,
+            339.6099853515625,
+            339.3500061035156,
+            339.6600036621094
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            327.98577880859375,
+            331.03375244140625,
+            336.7799987792969,
+            337.4599914550781,
+            339.5899963378906
+          ]
+        }
+      ]
+    }
+  }
+}

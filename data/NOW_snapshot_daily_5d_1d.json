@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:03.698Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "NOW",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1340976600,
+      "regularMarketTime": 1785441603,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 110.07,
+      "fiftyTwoWeekHigh": 196.4,
+      "fiftyTwoWeekLow": 81.24,
+      "regularMarketDayHigh": 113.115,
+      "regularMarketDayLow": 106.38,
+      "regularMarketVolume": 26647525,
+      "longName": "ServiceNow, Inc.",
+      "shortName": "ServiceNow, Inc.",
+      "chartPreviousClose": 91.94,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            29625400,
+            32533700,
+            33681100,
+            40448100,
+            29665300
+          ],
+          "high": [
+            98.93000030517578,
+            108.1500015258789,
+            112.27999877929688,
+            118.36000061035156,
+            113.12000274658203
+          ],
+          "open": [
+            94.91999816894531,
+            101.87000274658203,
+            106.87999725341797,
+            110.41999816894531,
+            110.5
+          ],
+          "low": [
+            94.87000274658203,
+            100.3499984741211,
+            106.5,
+            109.5,
+            106.37999725341797
+          ],
+          "close": [
+            98.77999877929688,
+            105.55999755859375,
+            110.62000274658203,
+            115.76000213623047,
+            110.06999969482422
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            98.77999877929688,
+            105.55999755859375,
+            110.62000274658203,
+            115.76000213623047,
+            110.06999969482422
+          ]
+        }
+      ]
+    }
+  }
+}

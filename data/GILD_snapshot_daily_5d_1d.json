@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:44.957Z",
+  "fetchedAt": "2026-07-31T08:05:07.171Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GILD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 696090600,
-      "regularMarketTime": 1785355200,
+      "regularMarketTime": 1785441601,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 132.73,
+      "regularMarketPrice": 131.28,
       "fiftyTwoWeekHigh": 157.29,
       "fiftyTwoWeekLow": 108.46,
-      "regularMarketDayHigh": 134.63,
-      "regularMarketDayLow": 132.565,
-      "regularMarketVolume": 6510475,
+      "regularMarketDayHigh": 131.39,
+      "regularMarketDayLow": 128.28,
+      "regularMarketVolume": 6156159,
       "longName": "Gilead Sciences, Inc.",
       "shortName": "Gilead Sciences, Inc.",
-      "chartPreviousClose": 130.34,
+      "chartPreviousClose": 130.86,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            6299300,
-            5529600,
-            4953700,
-            6945600,
-            7763600
-          ],
           "close": [
-            130.86000061035156,
             129.30999755859375,
             130.52000427246094,
             134.32000732421875,
-            132.72999572753906
-          ],
-          "open": [
-            129.22000122070312,
-            130.92999267578125,
-            131,
-            133.11000061035156,
-            134.41000366210938
-          ],
-          "high": [
-            131.07000732421875,
-            131.64999389648438,
-            133.05999755859375,
-            136.25999450683594,
-            134.63999938964844
+            132.72999572753906,
+            131.27999877929688
           ],
           "low": [
-            127.61000061035156,
             129.0399932861328,
             129.42999267578125,
             132.6300048828125,
-            132.57000732421875
+            132.57000732421875,
+            128.27999877929688
+          ],
+          "open": [
+            130.92999267578125,
+            131,
+            133.11000061035156,
+            134.41000366210938,
+            130.02000427246094
+          ],
+          "high": [
+            131.64999389648438,
+            133.05999755859375,
+            136.25999450683594,
+            134.63999938964844,
+            131.38999938964844
+          ],
+          "volume": [
+            5529600,
+            4953700,
+            6945600,
+            7763600,
+            6724500
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            130.86000061035156,
             129.30999755859375,
             130.52000427246094,
             134.32000732421875,
-            132.72999572753906
+            132.72999572753906,
+            131.27999877929688
           ]
         }
       ]

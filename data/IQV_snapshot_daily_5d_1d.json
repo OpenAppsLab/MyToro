@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:15.028Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/IQV?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "IQV",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1368106200,
+      "regularMarketTime": 1785441792,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 237.79,
+      "fiftyTwoWeekHigh": 251.36,
+      "fiftyTwoWeekLow": 154.5,
+      "regularMarketDayHigh": 246.087,
+      "regularMarketDayLow": 235.01,
+      "regularMarketVolume": 1435428,
+      "longName": "IQVIA Holdings Inc.",
+      "shortName": "IQVIA Holdings, Inc.",
+      "chartPreviousClose": 207.32,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            208.13999938964844,
+            207.33999633789062,
+            235,
+            241.7899932861328,
+            243.85000610351562
+          ],
+          "high": [
+            209.99000549316406,
+            213.47999572753906,
+            247.72000122070312,
+            251.36000061035156,
+            246.08999633789062
+          ],
+          "volume": [
+            1089800,
+            2160100,
+            5096500,
+            2241800,
+            1703700
+          ],
+          "close": [
+            208.0500030517578,
+            213.22000122070312,
+            242.94000244140625,
+            247.55999755859375,
+            237.7899932861328
+          ],
+          "low": [
+            206.9199981689453,
+            206.8699951171875,
+            232.5,
+            240.6999969482422,
+            235.00999450683594
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            208.0500030517578,
+            213.22000122070312,
+            242.94000244140625,
+            247.55999755859375,
+            237.7899932861328
+          ]
+        }
+      ]
+    }
+  }
+}

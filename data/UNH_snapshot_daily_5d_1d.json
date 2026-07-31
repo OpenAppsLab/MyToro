@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:12.827Z",
+  "fetchedAt": "2026-07-31T07:51:59.269Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/UNH?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 466867800,
-      "regularMarketTime": 1785355202,
+      "regularMarketTime": 1785441602,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 420.57,
+      "regularMarketPrice": 421.47,
       "fiftyTwoWeekHigh": 461.62,
       "fiftyTwoWeekLow": 234.6,
-      "regularMarketDayHigh": 431.68,
-      "regularMarketDayLow": 420.46,
-      "regularMarketVolume": 5249781,
+      "regularMarketDayHigh": 427.34,
+      "regularMarketDayLow": 411.29,
+      "regularMarketVolume": 2843674,
       "longName": "UnitedHealth Group Incorporated",
       "shortName": "UnitedHealth Group Incorporated",
-      "chartPreviousClose": 431.31,
+      "chartPreviousClose": 423.56,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            430.489990234375,
-            429,
-            422.8800048828125,
-            430.4599914550781,
-            431.67999267578125
-          ],
           "low": [
-            420.3999938964844,
             418.9200134277344,
             412.5400085449219,
             415.1099853515625,
-            420.3500061035156
+            420.3500061035156,
+            411.2900085449219
           ],
-          "volume": [
-            4868700,
-            3752500,
-            4615700,
-            5917300,
-            5257900
+          "high": [
+            429,
+            422.8800048828125,
+            430.4599914550781,
+            431.67999267578125,
+            427.3399963378906
           ],
           "open": [
-            428.2699890136719,
             425.239990234375,
             422.510009765625,
             419.92999267578125,
-            428.260009765625
+            428.260009765625,
+            415.19000244140625
           ],
           "close": [
-            423.55999755859375,
             420.739990234375,
             417.6400146484375,
             428.7900085449219,
-            420.57000732421875
+            420.57000732421875,
+            421.4700012207031
+          ],
+          "volume": [
+            3752500,
+            4615700,
+            5917300,
+            5257900,
+            3647500
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            423.55999755859375,
             420.739990234375,
             417.6400146484375,
             428.7900085449219,
-            420.57000732421875
+            420.57000732421875,
+            421.4700012207031
           ]
         }
       ]

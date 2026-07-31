@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:25.939Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DDOG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "DDOG",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1568899800,
+      "regularMarketTime": 1785441600,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 268.56,
+      "fiftyTwoWeekHigh": 278.705,
+      "fiftyTwoWeekLow": 98.01,
+      "regularMarketDayHigh": 270.33,
+      "regularMarketDayLow": 263.425,
+      "regularMarketVolume": 4011717,
+      "longName": "Datadog, Inc.",
+      "shortName": "Datadog, Inc.",
+      "chartPreviousClose": 244.39,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            246.86000061035156,
+            251.86000061035156,
+            250.8800048828125,
+            264.20001220703125,
+            268.55999755859375
+          ],
+          "open": [
+            248.44000244140625,
+            254.48500061035156,
+            255.1699981689453,
+            252.8800048828125,
+            263.80499267578125
+          ],
+          "high": [
+            248.44000244140625,
+            257.8599853515625,
+            255.5399932861328,
+            273.7300109863281,
+            270.3299865722656
+          ],
+          "volume": [
+            2628000,
+            3207800,
+            4046300,
+            6621200,
+            4418800
+          ],
+          "low": [
+            241.17999267578125,
+            249,
+            237.6699981689453,
+            252.5,
+            262.6099853515625
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            246.86000061035156,
+            251.86000061035156,
+            250.8800048828125,
+            264.20001220703125,
+            268.55999755859375
+          ]
+        }
+      ]
+    }
+  }
+}

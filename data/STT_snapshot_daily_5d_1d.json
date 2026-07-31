@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:03:18.333Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/STT?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "STT",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 322151400,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 182.82,
+      "fiftyTwoWeekHigh": 192.51,
+      "fiftyTwoWeekLow": 104.64,
+      "regularMarketDayHigh": 183.22,
+      "regularMarketDayLow": 177.23,
+      "regularMarketVolume": 1827313,
+      "longName": "State Street Corporation",
+      "shortName": "State Street Corporation",
+      "chartPreviousClose": 184.21,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            184.52000427246094,
+            185.39999389648438,
+            183.11000061035156,
+            182,
+            178.1199951171875
+          ],
+          "volume": [
+            1755900,
+            1665700,
+            1698800,
+            2083100,
+            2274300
+          ],
+          "high": [
+            186.33999633789062,
+            187,
+            185.0500030517578,
+            183.75,
+            183.22000122070312
+          ],
+          "close": [
+            185.39999389648438,
+            184.66000366210938,
+            182.57000732421875,
+            176.0399932861328,
+            182.82000732421875
+          ],
+          "low": [
+            183.39999389648438,
+            182.30999755859375,
+            180.16000366210938,
+            175.5,
+            177.22999572753906
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            185.39999389648438,
+            184.66000366210938,
+            182.57000732421875,
+            176.0399932861328,
+            182.82000732421875
+          ]
+        }
+      ]
+    }
+  }
+}

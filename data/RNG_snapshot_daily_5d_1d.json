@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:50.528Z",
+  "fetchedAt": "2026-07-31T07:52:46.905Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RNG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1380288600,
-      "regularMarketTime": 1785355203,
+      "regularMarketTime": 1785441603,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 57.58,
+      "regularMarketPrice": 53.48,
       "fiftyTwoWeekHigh": 58.98,
       "fiftyTwoWeekLow": 23.59,
-      "regularMarketDayHigh": 58.98,
-      "regularMarketDayLow": 56.2,
-      "regularMarketVolume": 2139412,
+      "regularMarketDayHigh": 56.67,
+      "regularMarketDayLow": 53.13,
+      "regularMarketVolume": 2060730,
       "longName": "RingCentral, Inc.",
       "shortName": "Ringcentral, Inc.",
-      "chartPreviousClose": 37.66,
+      "chartPreviousClose": 38.62,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            37.09000015258789,
-            40.29999923706055,
-            49.529998779296875,
-            54.689998626708984,
-            56.150001525878906
-          ],
-          "high": [
-            39.97999954223633,
-            50.13999938964844,
-            55.29999923706055,
-            57.209999084472656,
-            58.97999954223633
-          ],
           "volume": [
-            4855500,
             8922700,
             5488400,
             2980500,
-            2478100
-          ],
-          "open": [
-            38.11000061035156,
-            40.5,
-            49.61000061035156,
-            55.2400016784668,
-            56.790000915527344
+            2478100,
+            2350600
           ],
           "close": [
-            38.619998931884766,
             48.310001373291016,
             53.70000076293945,
             56.93000030517578,
-            57.58000183105469
+            57.58000183105469,
+            53.47999954223633
+          ],
+          "open": [
+            40.5,
+            49.61000061035156,
+            55.2400016784668,
+            56.790000915527344,
+            56.25
+          ],
+          "high": [
+            50.13999938964844,
+            55.29999923706055,
+            57.209999084472656,
+            58.97999954223633,
+            56.66999816894531
+          ],
+          "low": [
+            40.29999923706055,
+            49.529998779296875,
+            54.689998626708984,
+            56.150001525878906,
+            53.130001068115234
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            38.619998931884766,
             48.310001373291016,
             53.70000076293945,
             56.93000030517578,
-            57.58000183105469
+            57.58000183105469,
+            53.47999954223633
           ]
         }
       ]

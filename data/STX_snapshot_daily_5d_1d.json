@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:13.295Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/STX?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "STX",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1039617000,
+      "regularMarketTime": 1785441600,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 851.68,
+      "fiftyTwoWeekHigh": 1145,
+      "fiftyTwoWeekLow": 144.75,
+      "regularMarketDayHigh": 901.18,
+      "regularMarketDayLow": 831,
+      "regularMarketVolume": 7240837,
+      "longName": "Seagate Technology Holdings plc",
+      "shortName": "Seagate Technology Holdings PLC",
+      "chartPreviousClose": 913.36,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            879.2100219726562,
+            855.989990234375,
+            774.8099975585938,
+            786.8499755859375,
+            878.9099731445312
+          ],
+          "volume": [
+            5226300,
+            4636600,
+            8941600,
+            9280100,
+            7344000
+          ],
+          "close": [
+            851.6900024414062,
+            816.989990234375,
+            747.2999877929688,
+            764.4299926757812,
+            851.6799926757812
+          ],
+          "high": [
+            906,
+            871,
+            777.0999755859375,
+            814.969970703125,
+            901.1799926757812
+          ],
+          "low": [
+            835.5,
+            781.1699829101562,
+            698.989990234375,
+            747.5499877929688,
+            831
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            851.6900024414062,
+            816.989990234375,
+            747.2999877929688,
+            764.4299926757812,
+            851.6799926757812
+          ]
+        }
+      ]
+    }
+  }
+}

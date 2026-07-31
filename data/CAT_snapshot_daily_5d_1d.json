@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:27:56.999Z",
+  "fetchedAt": "2026-07-31T07:51:40.041Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CAT?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785355202,
+      "regularMarketTime": 1785441602,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 782.71,
+      "regularMarketPrice": 809.14,
       "fiftyTwoWeekHigh": 1073.46,
       "fiftyTwoWeekLow": 405.46,
-      "regularMarketDayHigh": 822.795,
-      "regularMarketDayLow": 776.045,
-      "regularMarketVolume": 5135151,
+      "regularMarketDayHigh": 822.7,
+      "regularMarketDayLow": 801.7,
+      "regularMarketVolume": 3151057,
       "longName": "Caterpillar Inc.",
       "shortName": "Caterpillar, Inc.",
-      "chartPreviousClose": 889.31,
+      "chartPreviousClose": 894.54,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            881.9500122070312,
             881.1900024414062,
             839.5800170898438,
             824,
-            776
+            776,
+            801.6799926757812
           ],
           "close": [
-            894.5399780273438,
             888.72998046875,
             873.280029296875,
             840.8499755859375,
-            782.7100219726562
-          ],
-          "volume": [
-            2677100,
-            1982100,
-            3150000,
-            3808600,
-            5966400
+            782.7100219726562,
+            809.1400146484375
           ],
           "open": [
-            886.5599975585938,
             895,
             887.5,
             855.760009765625,
-            810.22998046875
+            810.22998046875,
+            810.75
           ],
           "high": [
-            909.5999755859375,
             902.8200073242188,
             894.02001953125,
             855.8200073242188,
-            822.7999877929688
+            822.7999877929688,
+            822.760009765625
+          ],
+          "volume": [
+            1982100,
+            3150000,
+            3808600,
+            5966400,
+            3505200
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            894.5399780273438,
             888.72998046875,
             873.280029296875,
             840.8499755859375,
-            782.7100219726562
+            782.7100219726562,
+            809.1400146484375
           ]
         }
       ]

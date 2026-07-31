@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:19.524Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCK?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "MCK",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 784477800,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 865.51,
+      "fiftyTwoWeekHigh": 999,
+      "fiftyTwoWeekLow": 637,
+      "regularMarketDayHigh": 877.15,
+      "regularMarketDayLow": 862.664,
+      "regularMarketVolume": 554755,
+      "longName": "McKesson Corporation",
+      "shortName": "McKesson Corporation",
+      "chartPreviousClose": 824.49,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            827.47998046875,
+            836.8599853515625,
+            865.510009765625,
+            887.6099853515625,
+            862.6599731445312
+          ],
+          "high": [
+            843.530029296875,
+            856.52001953125,
+            894.0999755859375,
+            907,
+            877.1500244140625
+          ],
+          "open": [
+            829.9299926757812,
+            841.8699951171875,
+            868.8200073242188,
+            900,
+            868.6799926757812
+          ],
+          "close": [
+            840.9000244140625,
+            850.0599975585938,
+            889.5,
+            888.5599975585938,
+            865.510009765625
+          ],
+          "volume": [
+            823800,
+            799800,
+            1602000,
+            838000,
+            990000
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            840.9000244140625,
+            850.0599975585938,
+            889.5,
+            888.5599975585938,
+            865.510009765625
+          ]
+        }
+      ]
+    }
+  }
+}

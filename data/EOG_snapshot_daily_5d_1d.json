@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:49.934Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EOG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "EOG",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 623511000,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 145.51,
+      "fiftyTwoWeekHigh": 151.87,
+      "fiftyTwoWeekLow": 101.59,
+      "regularMarketDayHigh": 145.67,
+      "regularMarketDayLow": 142.48,
+      "regularMarketVolume": 1220624,
+      "longName": "EOG Resources, Inc.",
+      "shortName": "EOG Resources, Inc.",
+      "chartPreviousClose": 145.49,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            144,
+            143,
+            141.07000732421875,
+            144.92999267578125,
+            143.72999572753906
+          ],
+          "low": [
+            144,
+            140,
+            138.91000366210938,
+            143.5,
+            142.44000244140625
+          ],
+          "close": [
+            146.38999938964844,
+            140.30999755859375,
+            139.63999938964844,
+            145.94000244140625,
+            145.50999450683594
+          ],
+          "high": [
+            148.22000122070312,
+            144.4600067138672,
+            143.25999450683594,
+            146.10000610351562,
+            145.6699981689453
+          ],
+          "volume": [
+            1980900,
+            2519900,
+            3292600,
+            2557700,
+            1630300
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            146.38999938964844,
+            140.30999755859375,
+            139.63999938964844,
+            145.94000244140625,
+            145.50999450683594
+          ]
+        }
+      ]
+    }
+  }
+}

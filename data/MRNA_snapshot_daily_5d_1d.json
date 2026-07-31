@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:23.630Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRNA?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "MRNA",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1544193000,
+      "regularMarketTime": 1785441601,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 57.92,
+      "fiftyTwoWeekHigh": 85.6,
+      "fiftyTwoWeekLow": 22.28,
+      "regularMarketDayHigh": 58.08,
+      "regularMarketDayLow": 54.52,
+      "regularMarketVolume": 4430003,
+      "longName": "Moderna, Inc.",
+      "shortName": "Moderna, Inc.",
+      "chartPreviousClose": 57.02,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            4427800,
+            5038200,
+            5553600,
+            4348300,
+            4437600
+          ],
+          "open": [
+            57.255001068115234,
+            54.75,
+            54.83100128173828,
+            55.040000915527344,
+            55.96500015258789
+          ],
+          "low": [
+            53.849998474121094,
+            54.38999938964844,
+            53.345001220703125,
+            54.15999984741211,
+            54.52000045776367
+          ],
+          "close": [
+            54.06999969482422,
+            55.630001068115234,
+            55.80500030517578,
+            54.4900016784668,
+            57.91999816894531
+          ],
+          "high": [
+            57.459999084472656,
+            57.06999969482422,
+            55.849998474121094,
+            56.25,
+            58.08000183105469
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            54.06999969482422,
+            55.630001068115234,
+            55.80500030517578,
+            54.4900016784668,
+            57.91999816894531
+          ]
+        }
+      ]
+    }
+  }
+}

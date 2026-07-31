@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:28.483Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EPAM?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "EPAM",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1328711400,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 103.66,
+      "fiftyTwoWeekHigh": 222.53,
+      "fiftyTwoWeekLow": 73.06,
+      "regularMarketDayHigh": 104.8,
+      "regularMarketDayLow": 99.82,
+      "regularMarketVolume": 1860341,
+      "longName": "EPAM Systems, Inc.",
+      "shortName": "EPAM Systems, Inc.",
+      "chartPreviousClose": 86.14,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            941000,
+            1148100,
+            2537700,
+            1996200,
+            2255100
+          ],
+          "open": [
+            87.69999694824219,
+            92.0199966430664,
+            97.4800033569336,
+            100.2699966430664,
+            104.27999877929688
+          ],
+          "low": [
+            87.16999816894531,
+            91.16999816894531,
+            97.19999694824219,
+            100.20999908447266,
+            99.80999755859375
+          ],
+          "high": [
+            91.48999786376953,
+            94.44000244140625,
+            101.4800033569336,
+            109.01000213623047,
+            104.80000305175781
+          ],
+          "close": [
+            89.8499984741211,
+            94.16999816894531,
+            100.4000015258789,
+            106.88999938964844,
+            103.66000366210938
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            89.8499984741211,
+            94.16999816894531,
+            100.4000015258789,
+            106.88999938964844,
+            103.66000366210938
+          ]
+        }
+      ]
+    }
+  }
+}

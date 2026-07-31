@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:40.566Z",
+  "fetchedAt": "2026-07-31T07:52:34.350Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PCG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785355202,
+      "regularMarketTime": 1785441602,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 17.71,
+      "regularMarketPrice": 17.78,
       "fiftyTwoWeekHigh": 19.16,
       "fiftyTwoWeekLow": 13.32,
-      "regularMarketDayHigh": 17.93,
-      "regularMarketDayLow": 17.63,
-      "regularMarketVolume": 20826105,
+      "regularMarketDayHigh": 17.83,
+      "regularMarketDayLow": 17.341,
+      "regularMarketVolume": 33074763,
       "longName": "PG&E Corporation",
       "shortName": "Pacific Gas & Electric Co.",
-      "chartPreviousClose": 18.11,
+      "chartPreviousClose": 17.54,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
           "close": [
-            17.540000915527344,
             17.850000381469727,
             17.600000381469727,
             17.780000686645508,
-            17.709999084472656
-          ],
-          "high": [
-            17.989999771118164,
-            17.979999542236328,
-            17.989999771118164,
-            18.440000534057617,
-            17.93000030517578
-          ],
-          "volume": [
-            38979800,
-            32825200,
-            15768700,
-            23834000,
-            24371600
+            17.709999084472656,
+            17.780000686645508
           ],
           "open": [
-            17.809999465942383,
             17.65999984741211,
             17.770000457763672,
             17.760000228881836,
-            17.899999618530273
+            17.899999618530273,
+            17.65999984741211
           ],
           "low": [
-            17.459999084472656,
             17.520000457763672,
             17.5,
             17.719999313354492,
-            17.6299991607666
+            17.6299991607666,
+            17.34000015258789
+          ],
+          "high": [
+            17.979999542236328,
+            17.989999771118164,
+            18.440000534057617,
+            17.93000030517578,
+            17.829999923706055
+          ],
+          "volume": [
+            32825200,
+            15768700,
+            23834000,
+            24371600,
+            36486900
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            17.540000915527344,
             17.850000381469727,
             17.600000381469727,
             17.780000686645508,
-            17.709999084472656
+            17.709999084472656,
+            17.780000686645508
           ]
         }
       ]

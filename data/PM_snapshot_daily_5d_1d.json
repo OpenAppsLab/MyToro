@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:27.309Z",
+  "fetchedAt": "2026-07-31T07:52:18.028Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PM?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1205760600,
-      "regularMarketTime": 1785355202,
+      "regularMarketTime": 1785441602,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 198.44,
+      "regularMarketPrice": 192,
       "fiftyTwoWeekHigh": 207.76,
       "fiftyTwoWeekLow": 142.11,
-      "regularMarketDayHigh": 202.555,
-      "regularMarketDayLow": 198.2,
-      "regularMarketVolume": 3915062,
+      "regularMarketDayHigh": 195.92,
+      "regularMarketDayLow": 191.673,
+      "regularMarketVolume": 5779085,
       "longName": "Philip Morris International Inc.",
       "shortName": "Philip Morris International Inc",
-      "chartPreviousClose": 194.3,
+      "chartPreviousClose": 191.12,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            191.1199951171875,
-            193,
-            195.66000366210938,
-            200.1699981689453,
-            198.44000244140625
-          ],
-          "high": [
-            194.72000122070312,
-            195.6300048828125,
-            196.7899932861328,
-            207.75999450683594,
-            202.57000732421875
-          ],
-          "volume": [
-            6450100,
-            4438800,
-            3699000,
-            8064900,
-            3917800
-          ],
           "open": [
-            191.9499969482422,
             192.58999633789062,
             193,
             198.75999450683594,
-            201
+            201,
+            193.1999969482422
+          ],
+          "volume": [
+            4438800,
+            3699000,
+            8064900,
+            3917800,
+            6799500
           ],
           "low": [
-            189.0500030517578,
             191.77999877929688,
             192.5500030517578,
             198.67999267578125,
-            198.19000244140625
+            198.19000244140625,
+            191.6699981689453
+          ],
+          "high": [
+            195.6300048828125,
+            196.7899932861328,
+            207.75999450683594,
+            202.57000732421875,
+            195.9199981689453
+          ],
+          "close": [
+            193,
+            195.66000366210938,
+            200.1699981689453,
+            198.44000244140625,
+            192
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            191.1199951171875,
             193,
             195.66000366210938,
             200.1699981689453,
-            198.44000244140625
+            198.44000244140625,
+            192
           ]
         }
       ]

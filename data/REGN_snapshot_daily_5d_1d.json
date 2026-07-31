@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:41.704Z",
+  "fetchedAt": "2026-07-31T08:05:27.577Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/REGN?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 670602600,
-      "regularMarketTime": 1785355201,
+      "regularMarketTime": 1785441600,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 695.42,
+      "regularMarketPrice": 738.34,
       "fiftyTwoWeekHigh": 821.11,
       "fiftyTwoWeekLow": 541,
-      "regularMarketDayHigh": 702.6,
-      "regularMarketDayLow": 691,
-      "regularMarketVolume": 1006562,
+      "regularMarketDayHigh": 740,
+      "regularMarketDayLow": 694.98,
+      "regularMarketVolume": 1429257,
       "longName": "Regeneron Pharmaceuticals, Inc.",
       "shortName": "Regeneron Pharmaceuticals, Inc.",
-      "chartPreviousClose": 651.18,
+      "chartPreviousClose": 651.91,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
           "close": [
-            651.9099731445312,
             656.010009765625,
             667.1699829101562,
             695.1799926757812,
-            695.4199829101562
-          ],
-          "high": [
-            655.2000122070312,
-            667.5,
-            678.1199951171875,
-            696.739990234375,
-            702.5999755859375
-          ],
-          "low": [
-            637.7999877929688,
-            654.0499877929688,
-            659.530029296875,
-            676.4600219726562,
-            691
+            695.4199829101562,
+            738.3400268554688
           ],
           "volume": [
-            1129400,
             708400,
             650800,
             900200,
-            1022100
+            1022100,
+            1460700
           ],
           "open": [
-            646.47998046875,
             658.2899780273438,
             661.77001953125,
             676.9299926757812,
-            699.3800048828125
+            699.3800048828125,
+            701.9000244140625
+          ],
+          "high": [
+            667.5,
+            678.1199951171875,
+            696.739990234375,
+            702.5999755859375,
+            740
+          ],
+          "low": [
+            654.0499877929688,
+            659.530029296875,
+            676.4600219726562,
+            691,
+            694.97998046875
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            651.9099731445312,
             656.010009765625,
             667.1699829101562,
             695.1799926757812,
-            695.4199829101562
+            695.4199829101562,
+            738.3400268554688
           ]
         }
       ]

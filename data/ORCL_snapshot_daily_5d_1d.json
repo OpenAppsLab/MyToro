@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:27:31.976Z",
+  "fetchedAt": "2026-07-31T08:04:06.204Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ORCL?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 511021800,
-      "regularMarketTime": 1785355533,
+      "regularMarketTime": 1785441852,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 117.74,
+      "regularMarketPrice": 127.56,
       "fiftyTwoWeekHigh": 345.72,
       "fiftyTwoWeekLow": 114.5,
-      "regularMarketDayHigh": 121.92,
-      "regularMarketDayLow": 116.2,
-      "regularMarketVolume": 27130082,
+      "regularMarketDayHigh": 128.34,
+      "regularMarketDayLow": 121.59,
+      "regularMarketVolume": 36882152,
       "longName": "Oracle Corporation",
       "shortName": "Oracle Corporation",
-      "chartPreviousClose": 125.84,
+      "chartPreviousClose": 120.04,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
           "close": [
-            120.04000091552734,
             114.98999786376953,
             119.9000015258789,
             119.95999908447266,
-            117.73999786376953
-          ],
-          "open": [
-            123.95999908447266,
-            122.47000122070312,
-            118,
-            118.18000030517578,
-            119.41999816894531
+            117.73999786376953,
+            127.55999755859375
           ],
           "low": [
-            119.44000244140625,
             114.75,
             116.80000305175781,
             114.5,
-            116.19999694824219
+            116.19999694824219,
+            121.58000183105469
           ],
-          "volume": [
-            30900600,
-            46405700,
-            36916600,
-            32665400,
-            27844200
+          "open": [
+            122.47000122070312,
+            118,
+            118.18000030517578,
+            119.41999816894531,
+            122.87000274658203
           ],
           "high": [
-            124.69999694824219,
             123.08000183105469,
             121.98999786376953,
             122.33000183105469,
-            121.91999816894531
+            121.91999816894531,
+            128.33999633789062
+          ],
+          "volume": [
+            46405700,
+            36916600,
+            32665400,
+            28081800,
+            41094800
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            120.04000091552734,
             114.98999786376953,
             119.9000015258789,
             119.95999908447266,
-            117.73999786376953
+            117.73999786376953,
+            127.55999755859375
           ]
         }
       ]

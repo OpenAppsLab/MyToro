@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:57.389Z",
+  "fetchedAt": "2026-07-31T07:52:55.907Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 831648600,
-      "regularMarketTime": 1785355541,
+      "regularMarketTime": 1785441602,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 509.16,
+      "regularMarketPrice": 509.68,
       "fiftyTwoWeekHigh": 516.85,
       "fiftyTwoWeekLow": 455.19,
-      "regularMarketDayHigh": 513.357,
-      "regularMarketDayLow": 507.2,
-      "regularMarketVolume": 4985337,
+      "regularMarketDayHigh": 509.91,
+      "regularMarketDayLow": 501.27,
+      "regularMarketVolume": 2979577,
       "longName": "Berkshire Hathaway Inc.",
       "shortName": "Berkshire Hathaway Inc. New",
-      "chartPreviousClose": 489.39,
+      "chartPreviousClose": 490.85,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            486.05999755859375,
-            490.25,
-            493.9700012207031,
-            499.5,
-            507.20001220703125
-          ],
-          "close": [
-            490.8500061035156,
-            494.92999267578125,
-            497.17999267578125,
-            512.3699951171875,
-            509.1600036621094
-          ],
-          "volume": [
-            2883000,
-            3933000,
-            3482400,
-            6362100,
-            5057500
-          ],
           "high": [
-            491,
             497.2900085449219,
             498.7699890136719,
             513.4400024414062,
-            513.3599853515625
+            513.3599853515625,
+            509.9100036621094
+          ],
+          "close": [
+            494.92999267578125,
+            497.17999267578125,
+            512.3699951171875,
+            509.1600036621094,
+            509.67999267578125
+          ],
+          "volume": [
+            3933000,
+            3482400,
+            6362100,
+            5057500,
+            4055100
           ],
           "open": [
-            488.3999938964844,
             491.42999267578125,
             497.25,
             500.3299865722656,
-            511.44000244140625
+            511.44000244140625,
+            505.9800109863281
+          ],
+          "low": [
+            490.25,
+            493.9700012207031,
+            499.5,
+            507.20001220703125,
+            501.2699890136719
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            490.8500061035156,
             494.92999267578125,
             497.17999267578125,
             512.3699951171875,
-            509.1600036621094
+            509.1600036621094,
+            509.67999267578125
           ]
         }
       ]

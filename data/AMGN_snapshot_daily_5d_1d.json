@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:47.936Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMGN?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AMGN",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 424704600,
+      "regularMarketTime": 1785441601,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 387.64,
+      "fiftyTwoWeekHigh": 398,
+      "fiftyTwoWeekLow": 269.77,
+      "regularMarketDayHigh": 388.41,
+      "regularMarketDayLow": 378.215,
+      "regularMarketVolume": 2487808,
+      "longName": "Amgen Inc.",
+      "shortName": "Amgen Inc.",
+      "chartPreviousClose": 371.5,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            372.1600036621094,
+            374.3999938964844,
+            382.2099914550781,
+            386.5799865722656,
+            378.2200012207031
+          ],
+          "open": [
+            372.7300109863281,
+            378.54998779296875,
+            383.25,
+            395.0299987792969,
+            379.75
+          ],
+          "close": [
+            376.0400085449219,
+            376.260009765625,
+            393.1000061035156,
+            387.6400146484375,
+            387.6400146484375
+          ],
+          "high": [
+            379.4100036621094,
+            382.2799987792969,
+            398,
+            397.8800048828125,
+            388.4100036621094
+          ],
+          "volume": [
+            2493800,
+            2902200,
+            3413000,
+            3003700,
+            3004900
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            376.0400085449219,
+            376.260009765625,
+            393.1000061035156,
+            387.6400146484375,
+            387.6400146484375
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:25.045Z",
+  "fetchedAt": "2026-07-31T08:03:55.368Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 339859800,
-      "regularMarketTime": 1785355201,
+      "regularMarketTime": 1785441601,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 170.19,
+      "regularMarketPrice": 180.33,
       "fiftyTwoWeekHigh": 307.37,
       "fiftyTwoWeekLow": 83.224,
-      "regularMarketDayHigh": 191.37,
-      "regularMarketDayLow": 169.81,
-      "regularMarketVolume": 20167967,
+      "regularMarketDayHigh": 186.86,
+      "regularMarketDayLow": 178.855,
+      "regularMarketVolume": 17447964,
       "longName": "KLA Corporation",
       "shortName": "KLA Corporation",
-      "chartPreviousClose": 214.69,
+      "chartPreviousClose": 218.73,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            218.72999572753906,
-            210.52000427246094,
-            203.36000061035156,
-            190.8000030517578,
-            170.19000244140625
-          ],
-          "volume": [
-            8774000,
-            11304900,
-            14194900,
-            17199200,
-            20346000
-          ],
-          "low": [
-            212.86000061035156,
-            207.44000244140625,
-            195.55999755859375,
-            186.75,
-            169.80999755859375
-          ],
-          "high": [
-            219.02999877929688,
-            219.99000549316406,
-            214.00999450683594,
-            195.99000549316406,
-            191.3699951171875
-          ],
           "open": [
-            213.38999938964844,
             214.50999450683594,
             210.82000732421875,
             193.27000427246094,
-            177.6300048828125
+            177.6300048828125,
+            186.86000061035156
+          ],
+          "low": [
+            207.44000244140625,
+            195.55999755859375,
+            186.75,
+            169.80999755859375,
+            178.86000061035156
+          ],
+          "close": [
+            210.52000427246094,
+            203.36000061035156,
+            190.8000030517578,
+            170.19000244140625,
+            180.3300018310547
+          ],
+          "volume": [
+            11304900,
+            14194900,
+            17199200,
+            20427600,
+            17469800
+          ],
+          "high": [
+            219.99000549316406,
+            214.00999450683594,
+            195.99000549316406,
+            191.3699951171875,
+            186.86000061035156
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            218.72999572753906,
             210.52000427246094,
             203.36000061035156,
             190.8000030517578,
-            170.19000244140625
+            170.19000244140625,
+            180.3300018310547
           ]
         }
       ]

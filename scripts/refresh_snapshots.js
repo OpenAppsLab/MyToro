@@ -1,18 +1,8 @@
 const fs = require('fs').promises;
 const path = require('path');
+const { getCuratedSymbolSet } = require('./symbol_watchlist');
 
-const symbols = [
-  'QQQ','SPY','QQQM','NVDA','AAPL','MSFT','AMD','META','TSLA','AMZN',
-  'AVGO','GOOGL','ADBE','COST','PLTR','SMCI','NFLX','CRM','INTC','PYPL',
-  'PDD','CSCO','ORCL','IBM','UBER','SHOP','SNOW','ARM','V','MA',
-  'HD','WMT','JPM','BAC','C','GS','MS','AXP','DIS','CMCSA','T','VZ',
-  'CVX','XOM','CAT','HON','UPS','FDX','DOW','NKE','MCD','KO','PG','PEP',
-  'LLY','PFE','MRK','UNH','ABBV','CME','TDG','FIS','MU','QCOM','TXN',
-  'LRCX','ON','ADI','KLAC','MCHP','PM','LULU','RCL','NCLH','BKNG','ABNB',
-  'ETSY','PINS','ROKU','DUK','SO','AEP','PCG','REGN','VRTX','BMY','GILD',
-  'BLK','SCHW','SPGI','NDAQ','RNG','AZO','CVS','UNP','RTX','AIG','BRK-B',
-  'CRWD','MRVL'
-];
+const symbols = getCuratedSymbolSet();
 
 const outDir = path.resolve(__dirname, '..', 'data');
 const jobs = [

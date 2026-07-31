@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:03:59.594Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MDB?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "MDB",
+      "exchangeName": "NGM",
+      "fullExchangeName": "NasdaqGM",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1508419800,
+      "regularMarketTime": 1785441601,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 325.88,
+      "fiftyTwoWeekHigh": 444.72,
+      "fiftyTwoWeekLow": 198.47,
+      "regularMarketDayHigh": 328.775,
+      "regularMarketDayLow": 318.17,
+      "regularMarketVolume": 1456813,
+      "longName": "MongoDB, Inc.",
+      "shortName": "MongoDB, Inc.",
+      "chartPreviousClose": 299.14,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            298.2200012207031,
+            309.7099914550781,
+            310.6199951171875,
+            321.1000061035156,
+            325.8800048828125
+          ],
+          "open": [
+            301.6650085449219,
+            306.5,
+            309.510009765625,
+            309.4700012207031,
+            319.1000061035156
+          ],
+          "low": [
+            291.7900085449219,
+            303.56500244140625,
+            295.3699951171875,
+            309.010009765625,
+            318.1700134277344
+          ],
+          "high": [
+            302.1499938964844,
+            314.1600036621094,
+            314.010009765625,
+            332.8599853515625,
+            328.8800048828125
+          ],
+          "volume": [
+            689200,
+            870600,
+            969900,
+            1987700,
+            1457400
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            298.2200012207031,
+            309.7099914550781,
+            310.6199951171875,
+            321.1000061035156,
+            325.8800048828125
+          ]
+        }
+      ]
+    }
+  }
+}

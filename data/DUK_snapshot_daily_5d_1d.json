@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:37.011Z",
+  "fetchedAt": "2026-07-31T07:52:29.902Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DUK?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785355202,
+      "regularMarketTime": 1785441602,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 129.08,
+      "regularMarketPrice": 126.27,
       "fiftyTwoWeekHigh": 134.49,
       "fiftyTwoWeekLow": 113.9,
-      "regularMarketDayHigh": 130.29,
-      "regularMarketDayLow": 128.365,
-      "regularMarketVolume": 3622823,
+      "regularMarketDayHigh": 129.295,
+      "regularMarketDayLow": 125.24,
+      "regularMarketVolume": 4050283,
       "longName": "Duke Energy Corporation",
       "shortName": "Duke Energy Corporation (Holdin",
-      "chartPreviousClose": 127.95,
+      "chartPreviousClose": 129.26,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
           "volume": [
-            3459800,
             2856500,
             2971200,
             3641600,
-            3668300
-          ],
-          "open": [
-            128.85000610351562,
-            129.33999633789062,
-            129.75,
-            129.82000732421875,
-            129.75
+            3668300,
+            4743800
           ],
           "low": [
-            127.55999755859375,
             129.25999450683594,
             128.63999938964844,
             129.22000122070312,
-            128.36000061035156
+            128.36000061035156,
+            125.23999786376953
+          ],
+          "open": [
+            129.33999633789062,
+            129.75,
+            129.82000732421875,
+            129.75,
+            129.16000366210938
           ],
           "high": [
-            129.7100067138672,
             131,
             130.8699951171875,
             132.64999389648438,
-            130.2899932861328
+            130.2899932861328,
+            129.3000030517578
           ],
           "close": [
-            129.25999450683594,
             130.52000427246094,
             128.8300018310547,
             129.24000549316406,
-            129.0800018310547
+            129.0800018310547,
+            126.2699966430664
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            129.25999450683594,
             130.52000427246094,
             128.8300018310547,
             129.24000549316406,
-            129.0800018310547
+            129.0800018310547,
+            126.2699966430664
           ]
         }
       ]

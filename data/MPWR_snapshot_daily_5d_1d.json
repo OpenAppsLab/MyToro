@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:35.016Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MPWR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "MPWR",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1100874600,
+      "regularMarketTime": 1785441601,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 1316.18,
+      "fiftyTwoWeekHigh": 1714.09,
+      "fiftyTwoWeekLow": 706,
+      "regularMarketDayHigh": 1339.99,
+      "regularMarketDayLow": 1290.63,
+      "regularMarketVolume": 1691809,
+      "longName": "Monolithic Power Systems, Inc.",
+      "shortName": "Monolithic Power Systems, Inc.",
+      "chartPreviousClose": 1397.15,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            1318.719970703125,
+            1284.8199462890625,
+            1253.699951171875,
+            1240.02001953125,
+            1290.6300048828125
+          ],
+          "high": [
+            1385.739990234375,
+            1364.8499755859375,
+            1313.739990234375,
+            1327.31005859375,
+            1339.989990234375
+          ],
+          "open": [
+            1373.81005859375,
+            1340,
+            1283.77001953125,
+            1263.27001953125,
+            1290.969970703125
+          ],
+          "close": [
+            1333.81005859375,
+            1339.0799560546875,
+            1282.010009765625,
+            1248.760009765625,
+            1316.1800537109375
+          ],
+          "volume": [
+            805300,
+            848700,
+            1007000,
+            1181900,
+            1720100
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            1333.81005859375,
+            1339.0799560546875,
+            1282.010009765625,
+            1248.760009765625,
+            1316.1800537109375
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -62,12 +62,14 @@ async function importHistoryData(file) {
     const text = await file.text();
     const parsed = JSON.parse(text);
     const entries = Array.isArray(parsed.entries) ? parsed.entries : [];
-    if (!entries.length) {
-      window.alert('No history entries were found in this file.');
+    const importedOrders = Array.isArray(parsed.orders) ? parsed.orders : [];
+    const hasImportableData = entries.length > 0 || importedOrders.length > 0;
+
+    if (!hasImportableData) {
+      window.alert('No history entries or orders were found in this file.');
       return;
     }
 
-    const importedOrders = Array.isArray(parsed.orders) ? parsed.orders : [];
     saveHistory(entries, importedOrders);
     window.historyOrders = importedOrders;
     window.dispatchEvent(new CustomEvent('orders-cleared'));
@@ -313,17 +315,17 @@ function getOrderRealizedPnl(order) {
     return -Number(order.stopLossAmount || 0);
   }
 
-  const entryPrice = Number(order.entryPrice || 0);
-  const currentPrice = Number(order.currentPrice || entryPrice);
+  const entryPrice = Number(order.resolvedEntryPrice || order.entryPrice || 0);
+  const currentPrice = Number(order.resolvedCurrentPrice || order.currentPrice || entryPrice);
   const leverage = Number(order.leverage || 1);
-  const ballparkAmount = Number(order.ballparkAmount || 0);
+  const ballparkAmount = Number(order.ballparkAmount || order.ballpark || 0);
   const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;
   return Number(((currentPrice - entryPrice) * shareCount).toFixed(2));
 }
 
 function renderOrderDetailCard(order) {
-  const entryPrice = Number(order.entryPrice || 0);
-  const currentPrice = Number(order.currentPrice || entryPrice);
+  const entryPrice = Number(order.resolvedEntryPrice || order.entryPrice || 0);
+  const currentPrice = Number(order.resolvedCurrentPrice || order.currentPrice || entryPrice);
   const ballparkAmount = Number(order.ballparkAmount || order.ballpark || 0);
   const leverage = Number(order.leverage || 1);
   const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;

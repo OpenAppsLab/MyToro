@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:11.899Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SAP?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "SAP",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 811431000,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 180.88,
+      "fiftyTwoWeekHigh": 299.48,
+      "fiftyTwoWeekLow": 144.97,
+      "regularMarketDayHigh": 183.06,
+      "regularMarketDayLow": 178.54,
+      "regularMarketVolume": 3950490,
+      "longName": "SAP SE",
+      "shortName": "SAP  SE",
+      "chartPreviousClose": 146.38,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            153.75,
+            169.8800048828125,
+            175.60000610351562,
+            183.32000732421875,
+            182.30999755859375
+          ],
+          "high": [
+            161.30999755859375,
+            173.3699951171875,
+            182.17999267578125,
+            188.86000061035156,
+            183.05999755859375
+          ],
+          "close": [
+            160,
+            171.00999450683594,
+            179.1699981689453,
+            185.99000549316406,
+            180.8800048828125
+          ],
+          "volume": [
+            6191300,
+            4497500,
+            4235700,
+            5962400,
+            4112200
+          ],
+          "low": [
+            153.2100067138672,
+            167.6999969482422,
+            175.1999969482422,
+            181.3000030517578,
+            178.5399932861328
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            160,
+            171.00999450683594,
+            179.1699981689453,
+            185.99000549316406,
+            180.8800048828125
+          ]
+        }
+      ]
+    }
+  }
+}

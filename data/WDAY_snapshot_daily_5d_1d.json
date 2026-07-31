@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:41.652Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/WDAY?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "WDAY",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1350048600,
+      "regularMarketTime": 1785441600,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 158.11,
+      "fiftyTwoWeekHigh": 249.85,
+      "fiftyTwoWeekLow": 110.36,
+      "regularMarketDayHigh": 160.99,
+      "regularMarketDayLow": 149.54,
+      "regularMarketVolume": 6768988,
+      "longName": "Workday, Inc.",
+      "shortName": "Workday, Inc.",
+      "chartPreviousClose": 127.87,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            3459000,
+            6866600,
+            7406900,
+            7241400,
+            6819200
+          ],
+          "high": [
+            136,
+            150.24000549316406,
+            160.5500030517578,
+            170.39999389648438,
+            160.99000549316406
+          ],
+          "close": [
+            135.33999633789062,
+            147.5399932861328,
+            159.69000244140625,
+            168.00999450683594,
+            158.11000061035156
+          ],
+          "open": [
+            130.49000549316406,
+            141.5500030517578,
+            151.52999877929688,
+            159.7899932861328,
+            158.02000427246094
+          ],
+          "low": [
+            130.49000549316406,
+            140.19000244140625,
+            151.05999755859375,
+            158.99000549316406,
+            149.5399932861328
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            135.33999633789062,
+            147.5399932861328,
+            159.69000244140625,
+            168.00999450683594,
+            158.11000061035156
+          ]
+        }
+      ]
+    }
+  }
+}

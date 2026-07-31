@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:15.987Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/TTD?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "TTD",
+      "exchangeName": "NGM",
+      "fullExchangeName": "NasdaqGM",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1474464600,
+      "regularMarketTime": 1785441600,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 18.28,
+      "fiftyTwoWeekHigh": 91.45,
+      "fiftyTwoWeekLow": 16.7,
+      "regularMarketDayHigh": 18.65,
+      "regularMarketDayLow": 18.024,
+      "regularMarketVolume": 14836745,
+      "longName": "The Trade Desk, Inc.",
+      "shortName": "The Trade Desk, Inc.",
+      "chartPreviousClose": 16.79,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            17.510000228881836,
+            18.434999465942383,
+            19.059999465942383,
+            19.510000228881836,
+            18.649999618530273
+          ],
+          "close": [
+            17.290000915527344,
+            17.8799991607666,
+            18.90999984741211,
+            19.09000015258789,
+            18.280000686645508
+          ],
+          "volume": [
+            19695300,
+            13237900,
+            20621800,
+            18823500,
+            18533400
+          ],
+          "low": [
+            16.860000610351562,
+            17.6299991607666,
+            18.010000228881836,
+            18.540000915527344,
+            18.02400016784668
+          ],
+          "open": [
+            16.959999084472656,
+            17.790000915527344,
+            18.094999313354492,
+            18.670000076293945,
+            18.399999618530273
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            17.290000915527344,
+            17.8799991607666,
+            18.90999984741211,
+            19.09000015258789,
+            18.280000686645508
+          ]
+        }
+      ]
+    }
+  }
+}

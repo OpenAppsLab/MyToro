@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:34.888Z",
+  "fetchedAt": "2026-07-31T07:52:27.160Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PINS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1555594200,
-      "regularMarketTime": 1785355419,
+      "regularMarketTime": 1785441799,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 24.44,
+      "regularMarketPrice": 24.43,
       "fiftyTwoWeekHigh": 39.93,
       "fiftyTwoWeekLow": 13.84,
-      "regularMarketDayHigh": 24.63,
-      "regularMarketDayLow": 23.96,
-      "regularMarketVolume": 11015054,
+      "regularMarketDayHigh": 24.555,
+      "regularMarketDayLow": 23.72,
+      "regularMarketVolume": 9681456,
       "longName": "Pinterest, Inc.",
       "shortName": "Pinterest, Inc.",
-      "chartPreviousClose": 22.54,
+      "chartPreviousClose": 21.89,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
           "volume": [
-            8583400,
             8711000,
             9334000,
             17109700,
-            11031600
-          ],
-          "open": [
-            22.270000457763672,
-            22.149999618530273,
-            22.540000915527344,
-            23.469999313354492,
-            24.040000915527344
-          ],
-          "low": [
-            21.549999237060547,
-            21.952999114990234,
-            22.4950008392334,
-            23.299999237060547,
-            23.959999084472656
-          ],
-          "high": [
-            22.489999771118164,
-            22.40999984741211,
-            23.78499984741211,
-            24.420000076293945,
-            24.6299991607666
+            11059900,
+            9843500
           ],
           "close": [
-            21.889999389648438,
             22.1299991607666,
             23.5,
             24.360000610351562,
-            24.440000534057617
+            24.440000534057617,
+            24.43000030517578
+          ],
+          "open": [
+            22.149999618530273,
+            22.540000915527344,
+            23.469999313354492,
+            24.040000915527344,
+            23.989999771118164
+          ],
+          "high": [
+            22.40999984741211,
+            23.78499984741211,
+            24.420000076293945,
+            24.6299991607666,
+            24.55500030517578
+          ],
+          "low": [
+            21.952999114990234,
+            22.4950008392334,
+            23.299999237060547,
+            23.959999084472656,
+            23.719999313354492
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            21.889999389648438,
             22.1299991607666,
             23.5,
             24.360000610351562,
-            24.440000534057617
+            24.440000534057617,
+            24.43000030517578
           ]
         }
       ]

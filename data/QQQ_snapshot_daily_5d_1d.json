@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:27:07.714Z",
+  "fetchedAt": "2026-07-31T07:50:41.035Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGM",
       "instrumentType": "ETF",
       "firstTradeDate": 921076200,
-      "regularMarketTime": 1785355200,
+      "regularMarketTime": 1785441600,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 661.73,
+      "regularMarketPrice": 683.55,
       "fiftyTwoWeekHigh": 748.65,
       "fiftyTwoWeekLow": 551.68,
-      "regularMarketDayHigh": 680.05,
-      "regularMarketDayLow": 661.14,
-      "regularMarketVolume": 51059473,
+      "regularMarketDayHigh": 685.12,
+      "regularMarketDayLow": 673.3,
+      "regularMarketVolume": 65000770,
       "longName": "Invesco QQQ Trust",
       "shortName": "Invesco QQQ Trust, Series 1",
-      "chartPreviousClose": 705.35,
+      "chartPreviousClose": 691.96,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            687.7899780273438,
-            682.47998046875,
-            675.9500122070312,
-            667.8800048828125,
-            661.1400146484375
-          ],
           "high": [
-            698.6599731445312,
             692.6300048828125,
             692.2999877929688,
             679.4000244140625,
-            680.0499877929688
+            680.0499877929688,
+            685.1199951171875
           ],
           "volume": [
-            44028600,
             42876700,
             42681500,
             51398700,
-            56713400
+            57233300,
+            66408600
+          ],
+          "low": [
+            682.47998046875,
+            675.9500122070312,
+            667.8800048828125,
+            661.1400146484375,
+            673.2999877929688
           ],
           "open": [
-            694.6699829101562,
             690.4099731445312,
             691.6799926757812,
             676.22998046875,
-            675.510009765625
+            675.510009765625,
+            674.760009765625
           ],
           "close": [
-            691.9600219726562,
             684.22998046875,
             682.1199951171875,
             675.489990234375,
-            661.72998046875
+            661.72998046875,
+            683.5499877929688
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            691.9600219726562,
             684.22998046875,
             682.1199951171875,
             675.489990234375,
-            661.72998046875
+            661.72998046875,
+            683.5499877929688
           ]
         }
       ]

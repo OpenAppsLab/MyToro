@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:49.453Z",
+  "fetchedAt": "2026-07-31T07:52:45.463Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NDAQ?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1025530200,
-      "regularMarketTime": 1785355200,
+      "regularMarketTime": 1785441600,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 95.55,
+      "regularMarketPrice": 95.16,
       "fiftyTwoWeekHigh": 101.79,
       "fiftyTwoWeekLow": 76.55,
-      "regularMarketDayHigh": 96.87,
-      "regularMarketDayLow": 95.35,
-      "regularMarketVolume": 3021741,
+      "regularMarketDayHigh": 95.74,
+      "regularMarketDayLow": 93.29,
+      "regularMarketVolume": 4451922,
       "longName": "Nasdaq, Inc.",
       "shortName": "Nasdaq, Inc.",
-      "chartPreviousClose": 90.9,
+      "chartPreviousClose": 90.42,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            93.05999755859375,
             91.4800033569336,
             93.12000274658203,
             94.51000213623047,
-            95.5
-          ],
-          "low": [
-            90.0999984741211,
-            90.83999633789062,
-            91.04000091552734,
-            93.5199966430664,
-            95.3499984741211
+            95.5,
+            95.08000183105469
           ],
           "high": [
-            93.58000183105469,
             92.93000030517578,
             94.2300033569336,
             96.7699966430664,
-            96.87000274658203
-          ],
-          "volume": [
-            5396200,
-            4054300,
-            3819900,
-            4262700,
-            3099200
+            96.87000274658203,
+            95.73999786376953
           ],
           "close": [
-            90.41999816894531,
             92.08999633789062,
             93.94000244140625,
             95.95999908447266,
-            95.55000305175781
+            95.55000305175781,
+            95.16000366210938
+          ],
+          "volume": [
+            4054300,
+            3819900,
+            4262700,
+            3099200,
+            4644600
+          ],
+          "low": [
+            90.83999633789062,
+            91.04000091552734,
+            93.5199966430664,
+            95.3499984741211,
+            93.26000213623047
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            90.41999816894531,
             92.08999633789062,
             93.94000244140625,
             95.95999908447266,
-            95.55000305175781
+            95.55000305175781,
+            95.16000366210938
           ]
         }
       ]

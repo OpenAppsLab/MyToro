@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:32.334Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPQ?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "HPQ",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -252322200,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 26.86,
+      "fiftyTwoWeekHigh": 29.65,
+      "fiftyTwoWeekLow": 17.56,
+      "regularMarketDayHigh": 27.47,
+      "regularMarketDayLow": 26.235,
+      "regularMarketVolume": 15184208,
+      "longName": "HP Inc.",
+      "shortName": "HP Inc.",
+      "chartPreviousClose": 24.51,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            24.770000457763672,
+            25.979999542236328,
+            26.920000076293945,
+            28.09000015258789,
+            27.3700008392334
+          ],
+          "low": [
+            24.760000228881836,
+            25.8700008392334,
+            26.799999237060547,
+            27.579999923706055,
+            26.239999771118164
+          ],
+          "close": [
+            25.75,
+            26.549999237060547,
+            28.290000915527344,
+            28.40999984741211,
+            26.860000610351562
+          ],
+          "volume": [
+            11631500,
+            13928200,
+            25472900,
+            18802500,
+            17407300
+          ],
+          "high": [
+            26,
+            26.59000015258789,
+            28.3700008392334,
+            29.1200008392334,
+            27.469999313354492
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            25.75,
+            26.549999237060547,
+            28.290000915527344,
+            28.40999984741211,
+            26.860000610351562
+          ]
+        }
+      ]
+    }
+  }
+}

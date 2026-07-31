@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:54.527Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BSX?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BSX",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 706282200,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 46,
+      "fiftyTwoWeekHigh": 109.5,
+      "fiftyTwoWeekLow": 42.2,
+      "regularMarketDayHigh": 46.195,
+      "regularMarketDayLow": 44.55,
+      "regularMarketVolume": 25887192,
+      "longName": "Boston Scientific Corporation",
+      "shortName": "Boston Scientific Corporation",
+      "chartPreviousClose": 43.58,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            44.709999084472656,
+            46.31999969482422,
+            47.15999984741211,
+            46.880001068115234,
+            46.20000076293945
+          ],
+          "volume": [
+            20689900,
+            20039000,
+            26905700,
+            51286700,
+            25889300
+          ],
+          "open": [
+            43.970001220703125,
+            44.599998474121094,
+            46.41999816894531,
+            42.66999816894531,
+            45.27000045776367
+          ],
+          "low": [
+            43.720001220703125,
+            44.59000015258789,
+            45.810001373291016,
+            42.54999923706055,
+            44.54999923706055
+          ],
+          "close": [
+            44.25,
+            45.5099983215332,
+            46.060001373291016,
+            46.040000915527344,
+            46
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            44.25,
+            45.5099983215332,
+            46.060001373291016,
+            46.040000915527344,
+            46
+          ]
+        }
+      ]
+    }
+  }
+}

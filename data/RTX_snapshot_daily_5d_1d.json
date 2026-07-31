@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:55.110Z",
+  "fetchedAt": "2026-07-31T07:52:52.837Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RTX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -244546200,
-      "regularMarketTime": 1785355202,
+      "regularMarketTime": 1785441602,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 215.25,
+      "regularMarketPrice": 214.38,
       "fiftyTwoWeekHigh": 221.34,
       "fiftyTwoWeekLow": 150.61,
-      "regularMarketDayHigh": 220.25,
-      "regularMarketDayLow": 215.01,
-      "regularMarketVolume": 8211453,
+      "regularMarketDayHigh": 214.64,
+      "regularMarketDayLow": 209.395,
+      "regularMarketVolume": 3831433,
       "longName": "RTX Corporation",
       "shortName": "RTX Corporation",
-      "chartPreviousClose": 194.88,
+      "chartPreviousClose": 209.16,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            205,
             210.8300018310547,
             214.4199981689453,
             220.99000549316406,
-            220
-          ],
-          "volume": [
-            9998800,
-            5877300,
-            8191700,
-            7776800,
-            8232500
+            220,
+            214.5
           ],
           "high": [
-            213.49000549316406,
             214.88999938964844,
             220.38999938964844,
             221.33999633789062,
-            220.57000732421875
+            220.57000732421875,
+            214.63999938964844
           ],
           "close": [
-            209.16000366210938,
             212.7899932861328,
             218.4199981689453,
             218.5800018310547,
-            215.25
+            215.25,
+            214.3800048828125
+          ],
+          "volume": [
+            5877300,
+            8191700,
+            7776800,
+            8232500,
+            5239000
           ],
           "low": [
-            202.50999450683594,
             209.25999450683594,
             213.8000030517578,
             215.89999389648438,
-            215.00999450683594
+            215.00999450683594,
+            209.38999938964844
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            209.16000366210938,
             212.7899932861328,
             218.4199981689453,
             218.5800018310547,
-            215.25
+            215.25,
+            214.3800048828125
           ]
         }
       ]

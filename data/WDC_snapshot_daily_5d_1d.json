@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:20.312Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/WDC?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "WDC",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 278692200,
+      "regularMarketTime": 1785441600,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 533.04,
+      "fiftyTwoWeekHigh": 799.87,
+      "fiftyTwoWeekLow": 73.14,
+      "regularMarketDayHigh": 547,
+      "regularMarketDayLow": 507,
+      "regularMarketVolume": 8042458,
+      "longName": "Western Digital Corporation",
+      "shortName": "Western Digital Corporation",
+      "chartPreviousClose": 558.3,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            4775600,
+            6217000,
+            10511900,
+            9231500,
+            8346000
+          ],
+          "high": [
+            552,
+            531.2899780273438,
+            467.260009765625,
+            499.19000244140625,
+            547.0700073242188
+          ],
+          "close": [
+            519.7999877929688,
+            497.9200134277344,
+            463.510009765625,
+            462.0400085449219,
+            533.0399780273438
+          ],
+          "open": [
+            538.5,
+            523,
+            466.0899963378906,
+            480.3999938964844,
+            511.6499938964844
+          ],
+          "low": [
+            509.55999755859375,
+            471.32000732421875,
+            422.1099853515625,
+            456.7200012207031,
+            507
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            519.7999877929688,
+            497.9200134277344,
+            463.510009765625,
+            462.0400085449219,
+            533.0399780273438
+          ]
+        }
+      ]
+    }
+  }
+}

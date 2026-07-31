@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:05.403Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EW?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "EW",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 954167400,
+      "regularMarketTime": 1785441603,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 86.92,
+      "fiftyTwoWeekHigh": 96.29,
+      "fiftyTwoWeekLow": 72.3,
+      "regularMarketDayHigh": 87.035,
+      "regularMarketDayLow": 85.05,
+      "regularMarketVolume": 3129689,
+      "longName": "Edwards Lifesciences Corporation",
+      "shortName": "Edwards Lifesciences Corporatio",
+      "chartPreviousClose": 83.82,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            82.52999877929688,
+            81.16000366210938,
+            83.22000122070312,
+            82.91000366210938,
+            85.05000305175781
+          ],
+          "volume": [
+            10480900,
+            6707500,
+            5606800,
+            5594700,
+            3935900
+          ],
+          "high": [
+            89.08000183105469,
+            84.12000274658203,
+            85.51000213623047,
+            86,
+            87.04000091552734
+          ],
+          "open": [
+            88,
+            83.30000305175781,
+            84.5999984741211,
+            84.79000091552734,
+            85.41000366210938
+          ],
+          "close": [
+            82.62999725341797,
+            83.04000091552734,
+            83.68000030517578,
+            85.76000213623047,
+            86.91999816894531
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            82.62999725341797,
+            83.04000091552734,
+            83.68000030517578,
+            85.76000213623047,
+            86.91999816894531
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:06:06.746Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/TRGP?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "TRGP",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1291732200,
+      "regularMarketTime": 1785441603,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 268.34,
+      "fiftyTwoWeekHigh": 291.04,
+      "fiftyTwoWeekLow": 144.14,
+      "regularMarketDayHigh": 270.16,
+      "regularMarketDayLow": 260.65,
+      "regularMarketVolume": 741619,
+      "longName": "Targa Resources Corp.",
+      "shortName": "Targa Resources, Inc.",
+      "chartPreviousClose": 285.58,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            281.3299865722656,
+            267.6400146484375,
+            261.6499938964844,
+            264.6700134277344,
+            268.3399963378906
+          ],
+          "low": [
+            280.9200134277344,
+            267.1099853515625,
+            259.8500061035156,
+            264.44000244140625,
+            260.6499938964844
+          ],
+          "high": [
+            291.0400085449219,
+            281.0400085449219,
+            268.07000732421875,
+            269.04998779296875,
+            270.20001220703125
+          ],
+          "open": [
+            286.010009765625,
+            276.42999267578125,
+            268.05999755859375,
+            266.94000244140625,
+            265.239990234375
+          ],
+          "volume": [
+            1061800,
+            1285000,
+            1721500,
+            1201000,
+            987900
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            281.3299865722656,
+            267.6400146484375,
+            261.6499938964844,
+            264.6700134277344,
+            268.3399963378906
+          ]
+        }
+      ]
+    }
+  }
+}

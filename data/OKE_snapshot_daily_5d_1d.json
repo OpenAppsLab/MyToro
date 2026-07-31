@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:06:01.113Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/OKE?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "OKE",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 339255000,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 89.07,
+      "fiftyTwoWeekHigh": 96.07,
+      "fiftyTwoWeekLow": 64.02,
+      "regularMarketDayHigh": 89.65,
+      "regularMarketDayLow": 88.2,
+      "regularMarketVolume": 2063960,
+      "longName": "ONEOK, Inc.",
+      "shortName": "ONEOK, Inc.",
+      "chartPreviousClose": 93.23,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            93.47000122070312,
+            90.86000061035156,
+            89.5199966430664,
+            90.26000213623047,
+            89.02999877929688
+          ],
+          "low": [
+            93.06999969482422,
+            89.38999938964844,
+            87.63999938964844,
+            89.19000244140625,
+            88.19000244140625
+          ],
+          "close": [
+            93.16000366210938,
+            89.45999908447266,
+            88.80000305175781,
+            90,
+            89.06999969482422
+          ],
+          "volume": [
+            4436200,
+            4016200,
+            3999500,
+            3002500,
+            3107800
+          ],
+          "high": [
+            95.87999725341797,
+            91.72000122070312,
+            90.18000030517578,
+            91.30999755859375,
+            89.73999786376953
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            93.16000366210938,
+            89.45999908447266,
+            88.80000305175781,
+            90,
+            89.06999969482422
+          ]
+        }
+      ]
+    }
+  }
+}

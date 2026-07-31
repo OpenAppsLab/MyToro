@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:27:14.509Z",
+  "fetchedAt": "2026-07-31T08:03:35.627Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785355201,
+      "regularMarketTime": 1785441601,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 429.56,
+      "regularMarketPrice": 485.39,
       "fiftyTwoWeekHigh": 584.73,
       "fiftyTwoWeekLow": 149.22,
-      "regularMarketDayHigh": 457.22,
-      "regularMarketDayLow": 424.032,
-      "regularMarketVolume": 31474125,
+      "regularMarketDayHigh": 498.2,
+      "regularMarketDayLow": 457.68,
+      "regularMarketVolume": 35105728,
       "longName": "Advanced Micro Devices, Inc.",
       "shortName": "Advanced Micro Devices, Inc.",
-      "chartPreviousClose": 552.33,
+      "chartPreviousClose": 539.69,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            556.489990234375,
-            549,
-            528,
-            472.75,
-            457.2200012207031
-          ],
-          "close": [
-            539.6900024414062,
-            521.9500122070312,
-            494.95001220703125,
-            454.6199951171875,
-            429.55999755859375
-          ],
           "open": [
-            544.739990234375,
             546.9199829101562,
             527.510009765625,
             467,
-            452.67999267578125
+            452.67999267578125,
+            460
           ],
-          "low": [
-            525,
-            518,
-            476.92999267578125,
-            442.2699890136719,
-            424.0299987792969
+          "high": [
+            549,
+            528,
+            472.75,
+            457.2200012207031,
+            498.20001220703125
           ],
           "volume": [
-            27155100,
             27200700,
             31800300,
             36315500,
-            32171500
+            32304900,
+            36765900
+          ],
+          "close": [
+            521.9500122070312,
+            494.95001220703125,
+            454.6199951171875,
+            429.55999755859375,
+            485.3900146484375
+          ],
+          "low": [
+            518,
+            476.92999267578125,
+            442.2699890136719,
+            424.0299987792969,
+            457.67999267578125
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            539.6900024414062,
             521.9500122070312,
             494.95001220703125,
             454.6199951171875,
-            429.55999755859375
+            429.55999755859375,
+            485.3900146484375
           ]
         }
       ]

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:03:19.732Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SYF?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "SYF",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1406813400,
+      "regularMarketTime": 1785441603,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 77.17,
+      "fiftyTwoWeekHigh": 88.77,
+      "fiftyTwoWeekLow": 63.08,
+      "regularMarketDayHigh": 77.39,
+      "regularMarketDayLow": 74.695,
+      "regularMarketVolume": 2903065,
+      "longName": "Synchrony Financial",
+      "shortName": "Synchrony Financial",
+      "chartPreviousClose": 71.77,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            71.19000244140625,
+            73.8499984741211,
+            75.33999633789062,
+            76.02999877929688,
+            75.43000030517578
+          ],
+          "volume": [
+            3858100,
+            4631200,
+            3920000,
+            3605800,
+            4195200
+          ],
+          "close": [
+            72.9000015258789,
+            75.30999755859375,
+            77.12000274658203,
+            74.97000122070312,
+            77.16999816894531
+          ],
+          "high": [
+            73.83499908447266,
+            75.38999938964844,
+            77.27999877929688,
+            77.48999786376953,
+            77.38999938964844
+          ],
+          "low": [
+            71.01000213623047,
+            73.5999984741211,
+            75.01200103759766,
+            74.86000061035156,
+            74.68299865722656
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            72.9000015258789,
+            75.30999755859375,
+            77.12000274658203,
+            74.97000122070312,
+            77.16999816894531
+          ]
+        }
+      ]
+    }
+  }
+}

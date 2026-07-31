@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:36.413Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/NTAP?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "NTAP",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 816964200,
+      "regularMarketTime": 1785441600,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 173.98,
+      "fiftyTwoWeekHigh": 192.83,
+      "fiftyTwoWeekLow": 93.69,
+      "regularMarketDayHigh": 174.5,
+      "regularMarketDayLow": 170.5,
+      "regularMarketVolume": 1656857,
+      "longName": "NetApp, Inc.",
+      "shortName": "NetApp, Inc.",
+      "chartPreviousClose": 164.64,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            163.44000244140625,
+            165.17999267578125,
+            163.67999267578125,
+            171.50999450683594,
+            170.5
+          ],
+          "volume": [
+            1231400,
+            1723300,
+            2786500,
+            3758500,
+            1995200
+          ],
+          "high": [
+            169.17999267578125,
+            171.10000610351562,
+            174.9199981689453,
+            178.2899932861328,
+            174.5
+          ],
+          "open": [
+            163.44000244140625,
+            170.22000122070312,
+            168.50999450683594,
+            173.5500030517578,
+            174.00999450683594
+          ],
+          "close": [
+            167.74000549316406,
+            169.8000030517578,
+            174.52999877929688,
+            173.22999572753906,
+            173.97999572753906
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            167.74000549316406,
+            169.8000030517578,
+            174.52999877929688,
+            173.22999572753906,
+            173.97999572753906
+          ]
+        }
+      ]
+    }
+  }
+}

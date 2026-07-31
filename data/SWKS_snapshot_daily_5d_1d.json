@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:04:14.654Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SWKS?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "SWKS",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 463411800,
+      "regularMarketTime": 1785441600,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 62.48,
+      "fiftyTwoWeekHigh": 90.9,
+      "fiftyTwoWeekLow": 51.93,
+      "regularMarketDayHigh": 62.54,
+      "regularMarketDayLow": 59.86,
+      "regularMarketVolume": 8270247,
+      "longName": "Skyworks Solutions, Inc.",
+      "shortName": "Skyworks Solutions, Inc.",
+      "chartPreviousClose": 60.47,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            4811100,
+            5436000,
+            8125400,
+            17001200,
+            8539600
+          ],
+          "high": [
+            61.40999984741211,
+            63.70000076293945,
+            65.5199966430664,
+            64.08000183105469,
+            62.540000915527344
+          ],
+          "low": [
+            59.95000076293945,
+            60.2400016784668,
+            62.630001068115234,
+            57.5,
+            59.86000061035156
+          ],
+          "close": [
+            60.209999084472656,
+            63.439998626708984,
+            64.68000030517578,
+            61.189998626708984,
+            62.47999954223633
+          ],
+          "open": [
+            60.22999954223633,
+            60.290000915527344,
+            63.849998474121094,
+            58.59000015258789,
+            61.31999969482422
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            60.209999084472656,
+            63.439998626708984,
+            64.68000030517578,
+            61.189998626708984,
+            62.47999954223633
+          ]
+        }
+      ]
+    }
+  }
+}

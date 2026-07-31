@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:27:58.232Z",
+  "fetchedAt": "2026-07-31T07:51:41.465Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HON?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785355201,
+      "regularMarketTime": 1785441601,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 241.12,
+      "regularMarketPrice": 241.91,
       "fiftyTwoWeekHigh": 260.283,
       "fiftyTwoWeekLow": 195.868,
-      "regularMarketDayHigh": 246.24,
-      "regularMarketDayLow": 240.32,
-      "regularMarketVolume": 2490935,
+      "regularMarketDayHigh": 242.42,
+      "regularMarketDayLow": 237.36,
+      "regularMarketVolume": 2829298,
       "longName": "Honeywell International Inc.",
       "shortName": "Honeywell International Inc.",
-      "chartPreviousClose": 232.99,
+      "chartPreviousClose": 246.27,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785398400,
-          "end": 1785418200,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785418200,
-          "end": 1785441600,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785441600,
-          "end": 1785456000,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            246.27000427246094,
-            243.14999389648438,
-            245.75,
-            247.0500030517578,
-            241.1199951171875
-          ],
-          "open": [
-            238,
-            246.88999938964844,
-            244.5,
-            249.8000030517578,
-            245.44000244140625
-          ],
           "low": [
-            237.69000244140625,
             239.1199951171875,
             242.52999877929688,
             246.08999633789062,
-            240.32000732421875
-          ],
-          "volume": [
-            6306300,
-            3822500,
-            4053300,
-            2945300,
-            2775200
+            240.32000732421875,
+            237.36000061035156
           ],
           "high": [
-            250.27000427246094,
             247.75,
             248.00999450683594,
             252,
-            246.24000549316406
+            246.24000549316406,
+            242.4199981689453
+          ],
+          "open": [
+            246.88999938964844,
+            244.5,
+            249.8000030517578,
+            245.44000244140625,
+            241.8800048828125
+          ],
+          "close": [
+            243.14999389648438,
+            245.75,
+            247.0500030517578,
+            241.1199951171875,
+            241.91000366210938
+          ],
+          "volume": [
+            3822500,
+            4053300,
+            2945300,
+            2775200,
+            2839500
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            246.27000427246094,
             243.14999389648438,
             245.75,
             247.0500030517578,
-            241.1199951171875
+            241.1199951171875,
+            241.91000366210938
           ]
         }
       ]

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:03:48.121Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FTNT?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FTNT",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1258554600,
+      "regularMarketTime": 1785441601,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 154.25,
+      "fiftyTwoWeekHigh": 170.35,
+      "fiftyTwoWeekLow": 70.12,
+      "regularMarketDayHigh": 169.26,
+      "regularMarketDayLow": 152.23,
+      "regularMarketVolume": 10681900,
+      "longName": "Fortinet, Inc.",
+      "shortName": "Fortinet, Inc.",
+      "chartPreviousClose": 151.54,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            2817200,
+            4796100,
+            6016800,
+            12380400,
+            11018600
+          ],
+          "high": [
+            154.32000732421875,
+            157.1300048828125,
+            153.24000549316406,
+            154.99000549316406,
+            169.25999450683594
+          ],
+          "open": [
+            152.6999969482422,
+            157.1300048828125,
+            152.60000610351562,
+            148.27000427246094,
+            164
+          ],
+          "low": [
+            151.47999572753906,
+            151.67999267578125,
+            146.1199951171875,
+            143.77000427246094,
+            152.22999572753906
+          ],
+          "close": [
+            152.3699951171875,
+            152.3800048828125,
+            149.97999572753906,
+            153.22000122070312,
+            154.25
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            152.3699951171875,
+            152.3800048828125,
+            149.97999572753906,
+            153.22000122070312,
+            154.25
+          ]
+        }
+      ]
+    }
+  }
+}

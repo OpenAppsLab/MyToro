@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:27:59.388Z",
+  "fetchedAt": "2026-07-31T07:51:43.308Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/UPS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 942244200,
-      "regularMarketTime": 1785355474,
+      "regularMarketTime": 1785441852,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 104.56,
+      "regularMarketPrice": 105.27,
       "fiftyTwoWeekHigh": 122.41,
       "fiftyTwoWeekLow": 82,
-      "regularMarketDayHigh": 105.75,
-      "regularMarketDayLow": 103.975,
-      "regularMarketVolume": 5008970,
+      "regularMarketDayHigh": 105.45,
+      "regularMarketDayLow": 102.83,
+      "regularMarketVolume": 4402106,
       "longName": "United Parcel Service, Inc.",
       "shortName": "United Parcel Service, Inc.",
-      "chartPreviousClose": 115.84,
+      "chartPreviousClose": 114.1,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            113.8499984741211,
-            113.30000305175781,
-            112.37000274658203,
-            103.08999633789062,
-            103.9800033569336
-          ],
           "high": [
-            116.80999755859375,
             115.44000244140625,
             114.87000274658203,
             109.19999694824219,
-            105.75
+            105.75,
+            105.48999786376953
           ],
           "volume": [
-            4198400,
             3881100,
             6719200,
             14291000,
-            6032900
+            6032900,
+            5910500
+          ],
+          "low": [
+            113.30000305175781,
+            112.37000274658203,
+            103.08999633789062,
+            103.9800033569336,
+            102.83000183105469
           ],
           "open": [
-            116.52999877929688,
             114.66000366210938,
             114.87000274658203,
             108.5999984741211,
-            105.04000091552734
+            105.04000091552734,
+            105.19999694824219
           ],
           "close": [
-            114.0999984741211,
             114.79000091552734,
             112.94999694824219,
             105.52999877929688,
-            104.55999755859375
+            104.55999755859375,
+            105.2699966430664
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            114.0999984741211,
             114.79000091552734,
             112.94999694824219,
             105.52999877929688,
-            104.55999755859375
+            104.55999755859375,
+            105.2699966430664
           ]
         }
       ]

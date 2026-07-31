@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:03:46.886Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FISV?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FISV",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 528039000,
+      "regularMarketTime": 1785441601,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 54.07,
+      "fiftyTwoWeekHigh": 141.38,
+      "fiftyTwoWeekLow": 47.04,
+      "regularMarketDayHigh": 54.82,
+      "regularMarketDayLow": 53.08,
+      "regularMarketVolume": 7063714,
+      "longName": "Fiserv, Inc.",
+      "shortName": "Fiserv, Inc.",
+      "chartPreviousClose": 49.97,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            50.22999954223633,
+            51.529998779296875,
+            52.560001373291016,
+            54.119998931884766,
+            54.61000061035156
+          ],
+          "low": [
+            49.9900016784668,
+            51.18000030517578,
+            52.5,
+            54.08000183105469,
+            53.060001373291016
+          ],
+          "close": [
+            51.02000045776367,
+            52.310001373291016,
+            54.209999084472656,
+            55.630001068115234,
+            54.06999969482422
+          ],
+          "volume": [
+            5261100,
+            5429100,
+            6011200,
+            6966700,
+            7391000
+          ],
+          "high": [
+            51.720001220703125,
+            52.61000061035156,
+            54.66999816894531,
+            56,
+            54.81999969482422
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            51.02000045776367,
+            52.310001373291016,
+            54.209999084472656,
+            55.630001068115234,
+            54.06999969482422
+          ]
+        }
+      ]
+    }
+  }
+}

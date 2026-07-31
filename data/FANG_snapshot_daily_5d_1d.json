@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:05:51.485Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FANG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FANG",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1350048600,
+      "regularMarketTime": 1785441600,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 199.77,
+      "fiftyTwoWeekHigh": 214.51,
+      "fiftyTwoWeekLow": 134.3,
+      "regularMarketDayHigh": 199.93,
+      "regularMarketDayLow": 195.48,
+      "regularMarketVolume": 1389557,
+      "longName": "Diamondback Energy, Inc.",
+      "shortName": "Diamondback Energy, Inc.",
+      "chartPreviousClose": 205.49,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            204.67999267578125,
+            195.8000030517578,
+            190.30999755859375,
+            199.1300048828125,
+            199.77000427246094
+          ],
+          "low": [
+            203.5,
+            195.42999267578125,
+            190.0500030517578,
+            195.97999572753906,
+            195.47999572753906
+          ],
+          "high": [
+            210.5500030517578,
+            201.7100067138672,
+            198.58999633789062,
+            199.97000122070312,
+            199.92999267578125
+          ],
+          "open": [
+            205.8300018310547,
+            197.0800018310547,
+            197.11000061035156,
+            198.1999969482422,
+            196.92999267578125
+          ],
+          "volume": [
+            2403900,
+            1742400,
+            2513100,
+            1926400,
+            1514600
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            204.67999267578125,
+            195.8000030517578,
+            190.30999755859375,
+            199.1300048828125,
+            199.77000427246094
+          ]
+        }
+      ]
+    }
+  }
+}

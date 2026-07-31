@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T13:28:52.721Z",
+  "fetchedAt": "2026-07-31T08:04:58.747Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785355203,
+      "regularMarketTime": 1785441603,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 105.92,
+      "regularMarketPrice": 105.22,
       "fiftyTwoWeekHigh": 110.68,
       "fiftyTwoWeekLow": 61.19,
-      "regularMarketDayHigh": 110,
-      "regularMarketDayLow": 105.84,
-      "regularMarketVolume": 5304433,
+      "regularMarketDayHigh": 105.48,
+      "regularMarketDayLow": 103.02,
+      "regularMarketVolume": 7737679,
       "longName": "CVS Health Corporation",
       "shortName": "CVS Health Corporation",
-      "chartPreviousClose": 108.08,
+      "chartPreviousClose": 106.89,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785418200,
-          "start": 1785398400,
+          "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785441600,
-          "start": 1785418200,
+          "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785456000,
-          "start": 1785441600,
+          "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784813400,
       1784899800,
       1785159000,
       1785245400,
-      1785331800
+      1785331800,
+      1785418200
     ],
     "indicators": {
       "quote": [
         {
           "high": [
-            107.55000305175781,
             108.38999938964844,
             107.87999725341797,
             109.58999633789062,
-            110
-          ],
-          "close": [
-            106.88999938964844,
-            107.73999786376953,
-            107.06999969482422,
-            109.33999633789062,
-            105.91999816894531
+            110,
+            105.4800033569336
           ],
           "open": [
-            107.2699966430664,
             107.6500015258789,
             107.41000366210938,
             107.97000122070312,
-            110
+            110,
+            105
           ],
-          "low": [
-            106,
-            106.91000366210938,
-            105.36000061035156,
-            107.08000183105469,
-            105.83999633789062
+          "close": [
+            107.73999786376953,
+            107.06999969482422,
+            109.33999633789062,
+            105.91999816894531,
+            105.22000122070312
           ],
           "volume": [
-            5823900,
             5370500,
             7857400,
             6681700,
-            7717700
+            7717700,
+            7738000
+          ],
+          "low": [
+            106.91000366210938,
+            105.36000061035156,
+            107.08000183105469,
+            105.83999633789062,
+            103.01000213623047
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            106.88999938964844,
             107.73999786376953,
             107.06999969482422,
             109.33999633789062,
-            105.91999816894531
+            105.91999816894531,
+            105.22000122070312
           ]
         }
       ]

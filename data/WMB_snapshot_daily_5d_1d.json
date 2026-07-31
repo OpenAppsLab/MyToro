@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-07-31T08:06:09.612Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMB?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "WMB",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 378657000,
+      "regularMarketTime": 1785441602,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 70.91,
+      "fiftyTwoWeekHigh": 80.08,
+      "fiftyTwoWeekLow": 55.82,
+      "regularMarketDayHigh": 71.22,
+      "regularMarketDayLow": 69.83,
+      "regularMarketVolume": 6248201,
+      "longName": "The Williams Companies, Inc.",
+      "shortName": "Williams Companies, Inc. (The)",
+      "chartPreviousClose": 75.25,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1784899800,
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            76.41999816894531,
+            73.0199966430664,
+            71.33000183105469,
+            71.31999969482422,
+            71.22000122070312
+          ],
+          "volume": [
+            6108600,
+            8262600,
+            7852300,
+            5299100,
+            6248400
+          ],
+          "low": [
+            73.8499984741211,
+            70.56999969482422,
+            69.2699966430664,
+            69.77999877929688,
+            69.83000183105469
+          ],
+          "open": [
+            75.4000015258789,
+            72.81999969482422,
+            70.77999877929688,
+            71.19000244140625,
+            70.19999694824219
+          ],
+          "close": [
+            74,
+            70.79000091552734,
+            70.16000366210938,
+            70.12999725341797,
+            70.91000366210938
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            74,
+            70.79000091552734,
+            70.16000366210938,
+            70.12999725341797,
+            70.91000366210938
+          ]
+        }
+      ]
+    }
+  }
+}

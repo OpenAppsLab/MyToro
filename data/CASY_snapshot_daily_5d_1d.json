@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:34.723Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CASY?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CASY",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 435504600,
+      "regularMarketTime": 1785528000,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 871,
+      "fiftyTwoWeekHigh": 927.85,
+      "fiftyTwoWeekLow": 490,
+      "regularMarketDayHigh": 879.66,
+      "regularMarketDayLow": 863.669,
+      "regularMarketVolume": 218805,
+      "longName": "Casey's General Stores, Inc.",
+      "shortName": "Caseys General Stores, Inc.",
+      "chartPreviousClose": 861.63,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            840.4199829101562,
+            854.219970703125,
+            858.1500244140625,
+            858.3499755859375,
+            863.6699829101562
+          ],
+          "close": [
+            853.3800048828125,
+            856.8599853515625,
+            867.1599731445312,
+            867.5,
+            871
+          ],
+          "high": [
+            867.4299926757812,
+            878.510009765625,
+            885.489990234375,
+            879,
+            879.6599731445312
+          ],
+          "volume": [
+            292000,
+            388900,
+            349900,
+            236500,
+            218800
+          ],
+          "open": [
+            867.4299926757812,
+            867,
+            858.1500244140625,
+            867.1900024414062,
+            867.0599975585938
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            852.7406005859375,
+            856.2179565429688,
+            866.5101928710938,
+            866.8499755859375,
+            871
+          ]
+        }
+      ]
+    }
+  }
+}

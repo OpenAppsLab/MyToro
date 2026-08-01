@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:45.495Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GPC?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "GPC",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 322151400,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 124.37,
+      "fiftyTwoWeekHigh": 151.57,
+      "fiftyTwoWeekLow": 90.78,
+      "regularMarketDayHigh": 125.77,
+      "regularMarketDayLow": 123.395,
+      "regularMarketVolume": 709983,
+      "longName": "Genuine Parts Company",
+      "shortName": "Genuine Parts Company",
+      "chartPreviousClose": 124.21,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            125,
+            129.99000549316406,
+            128.77000427246094,
+            129.44000244140625,
+            123.33000183105469
+          ],
+          "low": [
+            124.25,
+            128.86000061035156,
+            127.16000366210938,
+            123.62000274658203,
+            123.33000183105469
+          ],
+          "close": [
+            127.69999694824219,
+            129.7100067138672,
+            129.97999572753906,
+            124.83000183105469,
+            124.37000274658203
+          ],
+          "high": [
+            128.7899932861328,
+            132,
+            131.14999389648438,
+            129.97000122070312,
+            125.7699966430664
+          ],
+          "volume": [
+            1546200,
+            1363100,
+            1505300,
+            1154100,
+            1219300
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            127.69999694824219,
+            129.7100067138672,
+            129.97999572753906,
+            124.83000183105469,
+            124.37000274658203
+          ]
+        }
+      ]
+    }
+  }
+}

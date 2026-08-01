@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:06:08.076Z",
+  "fetchedAt": "2026-08-01T14:16:05.492Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VLO?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 379002600,
-      "regularMarketTime": 1785441603,
+      "regularMarketTime": 1785528002,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 311.71,
+      "regularMarketPrice": 312.9,
       "fiftyTwoWeekHigh": 320.24,
       "fiftyTwoWeekLow": 130.78,
-      "regularMarketDayHigh": 313.74,
-      "regularMarketDayLow": 294.21,
-      "regularMarketVolume": 1896150,
+      "regularMarketDayHigh": 314.853,
+      "regularMarketDayLow": 306.275,
+      "regularMarketVolume": 2385738,
       "longName": "Valero Energy Corporation",
       "shortName": "Valero Energy Corporation",
-      "chartPreviousClose": 305.26,
+      "chartPreviousClose": 302.5,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            302.5,
-            304.92999267578125,
-            298.8800048828125,
-            301.32000732421875,
-            311.7099914550781
-          ],
-          "low": [
-            301.04998779296875,
-            295.7200012207031,
-            297.82000732421875,
-            301.32000732421875,
-            294.2099914550781
-          ],
           "volume": [
-            2320000,
             2372800,
             2512000,
             2319800,
-            2254700
-          ],
-          "high": [
-            309.010009765625,
-            306.1300048828125,
-            307,
-            309.9800109863281,
-            313.75
+            2254700,
+            2431400
           ],
           "open": [
-            304.3699951171875,
             295.75,
             304.8999938964844,
             306.3299865722656,
-            296.4100036621094
+            296.4100036621094,
+            312.3299865722656
+          ],
+          "low": [
+            295.7200012207031,
+            297.82000732421875,
+            301.32000732421875,
+            294.2099914550781,
+            306.25
+          ],
+          "high": [
+            306.1300048828125,
+            307,
+            309.9800109863281,
+            313.75,
+            315
+          ],
+          "close": [
+            304.92999267578125,
+            298.8800048828125,
+            301.32000732421875,
+            311.7099914550781,
+            312.8999938964844
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            302.5,
-            304.92999267578125,
-            298.8800048828125,
-            301.32000732421875,
-            311.7099914550781
+            303.756103515625,
+            297.7294006347656,
+            300.1600036621094,
+            310.5099792480469,
+            312.8999938964844
           ]
         }
       ]

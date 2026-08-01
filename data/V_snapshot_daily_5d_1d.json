@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:51:18.434Z",
+  "fetchedAt": "2026-08-01T14:16:04.376Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/V?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1205933400,
-      "regularMarketTime": 1785441603,
+      "regularMarketTime": 1785528002,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 366.27,
+      "regularMarketPrice": 366.13,
       "fiftyTwoWeekHigh": 373.97,
       "fiftyTwoWeekLow": 293.89,
-      "regularMarketDayHigh": 367,
-      "regularMarketDayLow": 360.75,
-      "regularMarketVolume": 8389060,
+      "regularMarketDayHigh": 366.88,
+      "regularMarketDayLow": 360.1,
+      "regularMarketVolume": 4869821,
       "longName": "Visa Inc.",
       "shortName": "Visa Inc.",
-      "chartPreviousClose": 351.6,
+      "chartPreviousClose": 355.74,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            355.739990234375,
-            362.5299987792969,
-            366.5899963378906,
-            368.7300109863281,
-            366.2699890136719
-          ],
-          "high": [
-            355.8399963378906,
-            363.6600036621094,
-            371.1600036621094,
-            373.9700012207031,
-            367
-          ],
           "open": [
-            353.4700012207031,
             359.3500061035156,
             365.05999755859375,
             357,
-            365
-          ],
-          "low": [
-            351.04998779296875,
-            358.25,
-            362.7300109863281,
-            355.4800109863281,
-            360.75
+            365,
+            363.760009765625
           ],
           "volume": [
-            4482800,
             6631100,
             11061900,
             11289900,
-            8391400
+            8391400,
+            7824000
+          ],
+          "high": [
+            363.6600036621094,
+            371.1600036621094,
+            373.9700012207031,
+            367,
+            366.8800048828125
+          ],
+          "low": [
+            358.25,
+            362.7300109863281,
+            355.4800109863281,
+            360.75,
+            360.1000061035156
+          ],
+          "close": [
+            362.5299987792969,
+            366.5899963378906,
+            368.7300109863281,
+            366.2699890136719,
+            366.1300048828125
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            355.739990234375,
             362.5299987792969,
             366.5899963378906,
             368.7300109863281,
-            366.2699890136719
+            366.2699890136719,
+            366.1300048828125
           ]
         }
       ]

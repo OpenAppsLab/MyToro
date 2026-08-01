@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:05:03.053Z",
+  "fetchedAt": "2026-08-01T14:18:24.056Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DVA?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 815149800,
-      "regularMarketTime": 1785441603,
+      "regularMarketTime": 1785528003,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 238.86,
+      "regularMarketPrice": 240.09,
       "fiftyTwoWeekHigh": 244.49,
       "fiftyTwoWeekLow": 101,
-      "regularMarketDayHigh": 241.77,
-      "regularMarketDayLow": 238.825,
-      "regularMarketVolume": 392974,
+      "regularMarketDayHigh": 240.91,
+      "regularMarketDayLow": 236.085,
+      "regularMarketVolume": 302796,
       "longName": "DaVita Inc.",
       "shortName": "DaVita Inc.",
-      "chartPreviousClose": 234.27,
+      "chartPreviousClose": 235.44,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
           "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
           "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
           "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            235.00999450683594,
-            235.52999877929688,
-            237.6699981689453,
-            241.13999938964844,
-            239.64999389648438
-          ],
-          "volume": [
-            535300,
-            625500,
-            650500,
-            694500,
-            393000
-          ],
-          "close": [
-            235.44000244140625,
-            236.30999755859375,
-            239.4600067138672,
-            240.9600067138672,
-            238.86000061035156
-          ],
-          "high": [
-            237.85000610351562,
-            239.10000610351562,
-            241.72999572753906,
-            244.49000549316406,
-            241.77000427246094
-          ],
           "low": [
-            231.1999969482422,
             233.55999755859375,
             237.22000122070312,
             238.67999267578125,
-            238.7899932861328
+            238.7899932861328,
+            236.08999633789062
+          ],
+          "close": [
+            236.30999755859375,
+            239.4600067138672,
+            240.9600067138672,
+            238.86000061035156,
+            240.08999633789062
+          ],
+          "open": [
+            235.52999877929688,
+            237.6699981689453,
+            241.13999938964844,
+            239.64999389648438,
+            237.80999755859375
+          ],
+          "high": [
+            239.10000610351562,
+            241.72999572753906,
+            244.49000549316406,
+            241.77000427246094,
+            240.91000366210938
+          ],
+          "volume": [
+            625500,
+            650500,
+            694500,
+            393000,
+            426600
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            235.44000244140625,
             236.30999755859375,
             239.4600067138672,
             240.9600067138672,
-            238.86000061035156
+            238.86000061035156,
+            240.08999633789062
           ]
         }
       ]

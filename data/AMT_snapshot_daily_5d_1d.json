@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:36.594Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMT?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AMT",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 888589800,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 173.36,
+      "fiftyTwoWeekHigh": 214.79,
+      "fiftyTwoWeekLow": 160.06,
+      "regularMarketDayHigh": 174.17,
+      "regularMarketDayLow": 170.96,
+      "regularMarketVolume": 4301315,
+      "longName": "American Tower Corporation",
+      "shortName": "American Tower Corporation (REI",
+      "chartPreviousClose": 166.67,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            165.5500030517578,
+            169.16000366210938,
+            172.58999633789062,
+            172.82000732421875,
+            170.9600067138672
+          ],
+          "close": [
+            166.74000549316406,
+            171.5,
+            179.25999450683594,
+            174.4600067138672,
+            173.36000061035156
+          ],
+          "open": [
+            166.4199981689453,
+            169.5399932861328,
+            174.9600067138672,
+            177.3000030517578,
+            172.69000244140625
+          ],
+          "high": [
+            168.22999572753906,
+            178.60000610351562,
+            180.3699951171875,
+            179.86000061035156,
+            174.1699981689453
+          ],
+          "volume": [
+            3520800,
+            4395600,
+            5367700,
+            3697400,
+            4301500
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            166.74000549316406,
+            171.5,
+            179.25999450683594,
+            174.4600067138672,
+            173.36000061035156
+          ]
+        }
+      ]
+    }
+  }
+}

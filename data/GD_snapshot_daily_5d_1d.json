@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:42.098Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GD?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "GD",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -252322200,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 383.42,
+      "fiftyTwoWeekHigh": 400,
+      "fiftyTwoWeekLow": 306.77,
+      "regularMarketDayHigh": 384.66,
+      "regularMarketDayLow": 376.82,
+      "regularMarketVolume": 1523763,
+      "longName": "General Dynamics Corporation",
+      "shortName": "General Dynamics Corporation",
+      "chartPreviousClose": 386.75,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            386.4700012207031,
+            389.25,
+            380.9599914550781,
+            374.0400085449219,
+            376.82000732421875
+          ],
+          "close": [
+            389.1400146484375,
+            393.19000244140625,
+            380.9599914550781,
+            382.20001220703125,
+            383.4200134277344
+          ],
+          "open": [
+            389.1000061035156,
+            393,
+            398.79998779296875,
+            376.8500061035156,
+            382.3800048828125
+          ],
+          "high": [
+            392.57000732421875,
+            395.42999267578125,
+            400,
+            383.4800109863281,
+            384.6700134277344
+          ],
+          "volume": [
+            1194200,
+            1702600,
+            1935800,
+            1199900,
+            1523900
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            389.1400146484375,
+            393.19000244140625,
+            380.9599914550781,
+            382.20001220703125,
+            383.4200134277344
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:41.009Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/APH?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "APH",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 689610600,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 160.7,
+      "fiftyTwoWeekHigh": 178.52,
+      "fiftyTwoWeekLow": 104.71,
+      "regularMarketDayHigh": 167.23,
+      "regularMarketDayLow": 159.85,
+      "regularMarketVolume": 7608736,
+      "longName": "Amphenol Corporation",
+      "shortName": "Amphenol Corporation",
+      "chartPreviousClose": 152.67,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            5566600,
+            10112200,
+            12185800,
+            10763800,
+            9277100
+          ],
+          "open": [
+            155.5,
+            145.44000244140625,
+            152.3000030517578,
+            159.7100067138672,
+            164.8300018310547
+          ],
+          "low": [
+            146.75,
+            139.6699981689453,
+            149.4199981689453,
+            154.72000122070312,
+            159.85000610351562
+          ],
+          "high": [
+            155.5,
+            146,
+            159.27999877929688,
+            161.2100067138672,
+            167.22999572753906
+          ],
+          "close": [
+            149.27999877929688,
+            143.85000610351562,
+            150.30999755859375,
+            159.82000732421875,
+            160.6999969482422
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            149.27999877929688,
+            143.85000610351562,
+            150.30999755859375,
+            159.82000732421875,
+            160.6999969482422
+          ]
+        }
+      ]
+    }
+  }
+}

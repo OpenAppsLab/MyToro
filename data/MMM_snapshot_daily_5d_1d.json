@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:11.366Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MMM?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "MMM",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -252322200,
+      "regularMarketTime": 1785528179,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 176.28,
+      "fiftyTwoWeekHigh": 184.9,
+      "fiftyTwoWeekLow": 139.34,
+      "regularMarketDayHigh": 177.1,
+      "regularMarketDayLow": 174.93,
+      "regularMarketVolume": 1868955,
+      "longName": "3M Company",
+      "shortName": "3M Company",
+      "chartPreviousClose": 172.62,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            175.16000366210938,
+            179.60000610351562,
+            181.1199951171875,
+            177.61000061035156,
+            176.5
+          ],
+          "high": [
+            179.2899932861328,
+            184.89999389648438,
+            182.1999969482422,
+            178.4199981689453,
+            177.13999938964844
+          ],
+          "volume": [
+            4826300,
+            5501400,
+            4822200,
+            2811800,
+            2675800
+          ],
+          "low": [
+            173.52000427246094,
+            178.97999572753906,
+            177.5500030517578,
+            173.9600067138672,
+            174.92999267578125
+          ],
+          "close": [
+            178.22999572753906,
+            182.47999572753906,
+            177.9499969482422,
+            176.07000732421875,
+            176.27999877929688
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            178.22999572753906,
+            182.47999572753906,
+            177.9499969482422,
+            176.07000732421875,
+            176.27999877929688
+          ]
+        }
+      ]
+    }
+  }
+}

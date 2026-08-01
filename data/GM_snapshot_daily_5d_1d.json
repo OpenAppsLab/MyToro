@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:44.399Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GM?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "GM",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1290090600,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 88.86,
+      "fiftyTwoWeekHigh": 91.85,
+      "fiftyTwoWeekLow": 52.09,
+      "regularMarketDayHigh": 89.11,
+      "regularMarketDayLow": 87.06,
+      "regularMarketVolume": 3600846,
+      "longName": "General Motors Company",
+      "shortName": "General Motors Company",
+      "chartPreviousClose": 82.64,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            84.0999984741211,
+            87.20999908447266,
+            89.11000061035156,
+            86.61000061035156,
+            87.04000091552734
+          ],
+          "high": [
+            87.08000183105469,
+            91.1500015258789,
+            91.8499984741211,
+            89.7699966430664,
+            89.11000061035156
+          ],
+          "open": [
+            85,
+            87.61000061035156,
+            90.69999694824219,
+            89.73999786376953,
+            88.8499984741211
+          ],
+          "close": [
+            87.04000091552734,
+            90.30000305175781,
+            89.4000015258789,
+            88.4000015258789,
+            88.86000061035156
+          ],
+          "volume": [
+            9870000,
+            13382300,
+            7981500,
+            6229000,
+            6675100
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            87.04000091552734,
+            90.30000305175781,
+            89.4000015258789,
+            88.4000015258789,
+            88.86000061035156
+          ]
+        }
+      ]
+    }
+  }
+}

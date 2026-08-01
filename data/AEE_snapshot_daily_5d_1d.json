@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:33.171Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AEE?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AEE",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 883751400,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 109.61,
+      "fiftyTwoWeekHigh": 118.32,
+      "fiftyTwoWeekLow": 96.57,
+      "regularMarketDayHigh": 110.25,
+      "regularMarketDayLow": 107.27,
+      "regularMarketVolume": 2754452,
+      "longName": "Ameren Corporation",
+      "shortName": "Ameren Corporation",
+      "chartPreviousClose": 113.78,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            112.11000061035156,
+            112.51000213623047,
+            109.97000122070312,
+            108.75,
+            109.61000061035156
+          ],
+          "low": [
+            111.6500015258789,
+            112.44000244140625,
+            109.81999969482422,
+            107.77999877929688,
+            107.19000244140625
+          ],
+          "high": [
+            113.9000015258789,
+            114.75,
+            112.9000015258789,
+            110.76000213623047,
+            110.25
+          ],
+          "open": [
+            113.08999633789062,
+            113.0999984741211,
+            112.9000015258789,
+            110.76000213623047,
+            108.7699966430664
+          ],
+          "volume": [
+            1141900,
+            1192000,
+            1118500,
+            1967000,
+            2758600
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            112.11000061035156,
+            112.51000213623047,
+            109.97000122070312,
+            108.75,
+            109.61000061035156
+          ]
+        }
+      ]
+    }
+  }
+}

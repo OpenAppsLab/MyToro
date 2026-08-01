@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:03:52.405Z",
+  "fetchedAt": "2026-08-01T14:15:23.005Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785441601,
+      "regularMarketTime": 1785528001,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 91.13,
+      "regularMarketPrice": 90.2,
       "fiftyTwoWeekHigh": 142.35,
-      "fiftyTwoWeekLow": 18.97,
-      "regularMarketDayHigh": 94.1,
-      "regularMarketDayLow": 85.995,
-      "regularMarketVolume": 133597656,
+      "fiftyTwoWeekLow": 19.35,
+      "regularMarketDayHigh": 97.9,
+      "regularMarketDayLow": 90.135,
+      "regularMarketVolume": 104550780,
       "longName": "Intel Corporation",
       "shortName": "Intel Corporation",
-      "chartPreviousClose": 100.23,
+      "chartPreviousClose": 92.32,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            91.58000183105469,
-            86.94000244140625,
-            83.0999984741211,
-            81.79000091552734,
-            85.97000122070312
-          ],
-          "close": [
-            92.31999969482422,
-            91.66999816894531,
-            86.30000305175781,
-            81.87999725341797,
-            91.12999725341797
-          ],
-          "volume": [
-            181132900,
-            133247300,
-            154346700,
-            152394600,
-            138816600
-          ],
-          "high": [
-            101.73999786376953,
-            94.9800033569336,
-            88.27999877929688,
-            88.47000122070312,
-            94.0999984741211
-          ],
           "open": [
-            100.36000061035156,
             92.45999908447266,
             86.62000274658203,
             86.56999969482422,
-            86.51000213623047
+            86.51000213623047,
+            96.72000122070312
+          ],
+          "low": [
+            86.94000244140625,
+            83.0999984741211,
+            81.79000091552734,
+            85.97000122070312,
+            90.12999725341797
+          ],
+          "volume": [
+            133247300,
+            154346700,
+            152394600,
+            140322600,
+            108664200
+          ],
+          "high": [
+            94.9800033569336,
+            88.27999877929688,
+            88.47000122070312,
+            94.0999984741211,
+            97.9000015258789
+          ],
+          "close": [
+            91.66999816894531,
+            86.30000305175781,
+            81.87999725341797,
+            91.12999725341797,
+            90.19999694824219
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            92.31999969482422,
             91.66999816894531,
             86.30000305175781,
             81.87999725341797,
-            91.12999725341797
+            91.12999725341797,
+            90.19999694824219
           ]
         }
       ]

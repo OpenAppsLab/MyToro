@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:05:18.346Z",
+  "fetchedAt": "2026-08-01T14:15:27.538Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LLY?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785441889,
+      "regularMarketTime": 1785528242,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1154.97,
+      "regularMarketPrice": 1148.84,
       "fiftyTwoWeekHigh": 1249.45,
       "fiftyTwoWeekLow": 623.78,
-      "regularMarketDayHigh": 1186.65,
-      "regularMarketDayLow": 1153.59,
-      "regularMarketVolume": 3023808,
+      "regularMarketDayHigh": 1150.63,
+      "regularMarketDayLow": 1119,
+      "regularMarketVolume": 2879738,
       "longName": "Eli Lilly and Company",
       "shortName": "Eli Lilly and Company",
-      "chartPreviousClose": 1185.87,
+      "chartPreviousClose": 1196.03,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            1194.3499755859375,
-            1201,
-            1217.5999755859375,
-            1215.1800537109375,
-            1174.030029296875
-          ],
-          "low": [
-            1187.5,
-            1183.449951171875,
-            1205.010009765625,
-            1204.800048828125,
-            1153.1400146484375
-          ],
-          "close": [
-            1196.030029296875,
-            1197.530029296875,
-            1220.6600341796875,
-            1210.02001953125,
-            1154.969970703125
-          ],
           "volume": [
-            1983300,
             1592800,
             2375400,
             2170900,
-            3027700
+            3027700,
+            2881200
           ],
           "high": [
-            1206.93994140625,
             1205.050048828125,
             1232,
             1229.18994140625,
-            1186.6500244140625
+            1186.6500244140625,
+            1150.6300048828125
+          ],
+          "open": [
+            1201,
+            1217.5999755859375,
+            1215.1800537109375,
+            1174.030029296875,
+            1148.510009765625
+          ],
+          "low": [
+            1183.449951171875,
+            1205.010009765625,
+            1204.800048828125,
+            1153.1400146484375,
+            1119
+          ],
+          "close": [
+            1197.530029296875,
+            1220.6600341796875,
+            1210.02001953125,
+            1154.969970703125,
+            1148.8399658203125
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            1196.030029296875,
             1197.530029296875,
             1220.6600341796875,
             1210.02001953125,
-            1154.969970703125
+            1154.969970703125,
+            1148.8399658203125
           ]
         }
       ]

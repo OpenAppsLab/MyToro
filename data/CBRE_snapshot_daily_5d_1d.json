@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:36.876Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CBRE?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CBRE",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1086874200,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 146.81,
+      "fiftyTwoWeekHigh": 174.27,
+      "fiftyTwoWeekLow": 121.69,
+      "regularMarketDayHigh": 150.485,
+      "regularMarketDayLow": 144.87,
+      "regularMarketVolume": 1829199,
+      "longName": "CBRE Group, Inc.",
+      "shortName": "CBRE Group Inc",
+      "chartPreviousClose": 139.46,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            140.83999633789062,
+            145.0399932861328,
+            143.55999755859375,
+            144.5800018310547,
+            144.8699951171875
+          ],
+          "close": [
+            143.8800048828125,
+            147.0500030517578,
+            147.77999877929688,
+            149.4600067138672,
+            146.80999755859375
+          ],
+          "open": [
+            140.94000244140625,
+            145.80999755859375,
+            146.1300048828125,
+            147,
+            148.24000549316406
+          ],
+          "high": [
+            144.5399932861328,
+            149,
+            153.0800018310547,
+            150.39999389648438,
+            150.49000549316406
+          ],
+          "volume": [
+            2112600,
+            2519800,
+            3663500,
+            2876800,
+            1830800
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            143.8800048828125,
+            147.0500030517578,
+            147.77999877929688,
+            149.4600067138672,
+            146.80999755859375
+          ]
+        }
+      ]
+    }
+  }
+}

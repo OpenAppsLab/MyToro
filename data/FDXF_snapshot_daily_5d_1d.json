@@ -1,0 +1,118 @@
+{
+  "fetchedAt": "2026-08-01T14:19:22.470Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FDXF?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FDXF",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1779888600,
+      "regularMarketTime": 1785528002,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 140.53,
+      "fiftyTwoWeekHigh": 200,
+      "fiftyTwoWeekLow": 135,
+      "regularMarketDayHigh": 141.9,
+      "regularMarketDayLow": 136.935,
+      "regularMarketVolume": 663584,
+      "longName": "FedEx Freight Holding Company, Inc.",
+      "shortName": "FedEx Freight Holding Company, ",
+      "chartPreviousClose": 158,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            1122700,
+            757800,
+            901400,
+            1563100,
+            878300
+          ],
+          "close": [
+            150.3000030517578,
+            150.99000549316406,
+            144.36000061035156,
+            137.5500030517578,
+            140.52999877929688
+          ],
+          "open": [
+            157.24000549316406,
+            150.1300048828125,
+            150.4499969482422,
+            144.58999633789062,
+            136.6300048828125
+          ],
+          "high": [
+            158.35000610351562,
+            153.63999938964844,
+            153.77999877929688,
+            147.3300018310547,
+            141.9199981689453
+          ],
+          "low": [
+            149.25999450683594,
+            147.4499969482422,
+            143.5,
+            135.63999938964844,
+            136.6300048828125
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            150.3000030517578,
+            150.99000549316406,
+            144.36000061035156,
+            137.5500030517578,
+            140.52999877929688
+          ]
+        }
+      ]
+    }
+  }
+}

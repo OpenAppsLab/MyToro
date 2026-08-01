@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:52:23.837Z",
+  "fetchedAt": "2026-08-01T14:17:17.120Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BKNG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 922890600,
-      "regularMarketTime": 1785441601,
+      "regularMarketTime": 1785528001,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 193.24,
+      "regularMarketPrice": 192.9,
       "fiftyTwoWeekHigh": 231.8,
       "fiftyTwoWeekLow": 150.14,
-      "regularMarketDayHigh": 199.9,
-      "regularMarketDayLow": 190.15,
-      "regularMarketVolume": 6347296,
+      "regularMarketDayHigh": 194.96,
+      "regularMarketDayLow": 190.857,
+      "regularMarketVolume": 4436735,
       "longName": "Booking Holdings Inc.",
       "shortName": "Booking Holdings Inc. Common St",
-      "chartPreviousClose": 172.83,
+      "chartPreviousClose": 177.46,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
           "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
           "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
           "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            174.5,
-            180.58999633789062,
-            188.47999572753906,
-            195.33999633789062,
-            190.14999389648438
-          ],
-          "close": [
-            177.4600067138672,
-            186.7899932861328,
-            199.30999755859375,
-            201.3000030517578,
-            193.24000549316406
-          ],
-          "open": [
-            174.60000610351562,
-            180.6699981689453,
-            189.47999572753906,
-            196.44000244140625,
-            197
-          ],
           "high": [
-            180.3000030517578,
             187.33999633789062,
             199.97999572753906,
             204.61000061035156,
-            199.89999389648438
+            199.89999389648438,
+            194.9600067138672
+          ],
+          "close": [
+            186.7899932861328,
+            199.30999755859375,
+            201.3000030517578,
+            193.24000549316406,
+            192.89999389648438
+          ],
+          "open": [
+            180.6699981689453,
+            189.47999572753906,
+            196.44000244140625,
+            197,
+            191.61000061035156
           ],
           "volume": [
-            5012000,
             5665000,
             9074000,
             7906000,
-            7597000
+            7597000,
+            4598400
+          ],
+          "low": [
+            180.58999633789062,
+            188.47999572753906,
+            195.33999633789062,
+            190.14999389648438,
+            190.80999755859375
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            177.4600067138672,
             186.7899932861328,
             199.30999755859375,
             201.3000030517578,
-            193.24000549316406
+            193.24000549316406,
+            192.89999389648438
           ]
         }
       ]

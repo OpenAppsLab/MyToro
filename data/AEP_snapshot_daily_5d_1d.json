@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:52:33.029Z",
+  "fetchedAt": "2026-08-01T14:16:34.302Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AEP?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785441601,
+      "regularMarketTime": 1785528001,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 127.78,
+      "regularMarketPrice": 127.85,
       "fiftyTwoWeekHigh": 140.58,
       "fiftyTwoWeekLow": 105.7,
-      "regularMarketDayHigh": 130.48,
-      "regularMarketDayLow": 127.32,
-      "regularMarketVolume": 5715699,
+      "regularMarketDayHigh": 129.14,
+      "regularMarketDayLow": 126.83,
+      "regularMarketVolume": 5721171,
       "longName": "American Electric Power Company, Inc.",
       "shortName": "American Electric Power Company",
-      "chartPreviousClose": 134.92,
+      "chartPreviousClose": 135.54,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
           "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
           "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
           "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            135.42999267578125,
-            135.17999267578125,
-            134.08999633789062,
-            133.8000030517578,
-            128.72000122070312
-          ],
-          "volume": [
-            3184700,
-            2597200,
-            3924200,
-            4230900,
-            5724000
-          ],
-          "close": [
-            135.5399932861328,
-            133.58999633789062,
-            133.02000427246094,
-            129.39999389648438,
-            127.77999877929688
-          ],
           "high": [
-            136.57000732421875,
             135.77000427246094,
             135.99000549316406,
             134.1300048828125,
-            130.49000549316406
+            130.49000549316406,
+            129.13999938964844
+          ],
+          "close": [
+            133.58999633789062,
+            133.02000427246094,
+            129.39999389648438,
+            127.77999877929688,
+            127.8499984741211
+          ],
+          "open": [
+            135.17999267578125,
+            134.08999633789062,
+            133.8000030517578,
+            128.72000122070312,
+            128
+          ],
+          "volume": [
+            2597200,
+            3924200,
+            4230900,
+            5724000,
+            5721500
           ],
           "low": [
-            135.1199951171875,
             133.27999877929688,
             132.97999572753906,
             129.02999877929688,
-            127.31999969482422
+            127.31999969482422,
+            126.83000183105469
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            135.5399932861328,
             133.58999633789062,
             133.02000427246094,
             129.39999389648438,
-            127.77999877929688
+            127.77999877929688,
+            127.8499984741211
           ]
         }
       ]

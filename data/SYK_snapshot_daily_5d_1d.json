@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:05:30.286Z",
+  "fetchedAt": "2026-08-01T14:15:57.605Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SYK?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785441917,
+      "regularMarketTime": 1785528002,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 348.04,
-      "fiftyTwoWeekHigh": 401.99,
+      "regularMarketPrice": 325.7,
+      "fiftyTwoWeekHigh": 396.86,
       "fiftyTwoWeekLow": 281,
-      "regularMarketDayHigh": 351.485,
-      "regularMarketDayLow": 344.43,
-      "regularMarketVolume": 2486190,
+      "regularMarketDayHigh": 334.46,
+      "regularMarketDayLow": 317.62,
+      "regularMarketVolume": 3965292,
       "longName": "Stryker Corporation",
       "shortName": "Stryker Corporation",
-      "chartPreviousClose": 318.97,
+      "chartPreviousClose": 330.25,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            324.0199890136719,
             331.9200134277344,
             344.010009765625,
             342.9200134277344,
-            344.3999938964844
-          ],
-          "open": [
-            325.0799865722656,
-            332.82000732421875,
-            346.6600036621094,
-            344.1199951171875,
-            349.7300109863281
-          ],
-          "volume": [
-            2372600,
-            2069900,
-            2751800,
-            1857400,
-            2767300
-          ],
-          "high": [
-            330.80999755859375,
-            338.7900085449219,
-            352.4599914550781,
-            352.489990234375,
-            351.489990234375
+            344.3999938964844,
+            317.6199951171875
           ],
           "close": [
-            330.25,
             336.739990234375,
             346.6000061035156,
             352.25,
-            348.0400085449219
+            348.0400085449219,
+            325.70001220703125
+          ],
+          "open": [
+            332.82000732421875,
+            346.6600036621094,
+            344.1199951171875,
+            349.7300109863281,
+            330.1000061035156
+          ],
+          "high": [
+            338.7900085449219,
+            352.4599914550781,
+            352.489990234375,
+            351.489990234375,
+            334.4599914550781
+          ],
+          "volume": [
+            2069900,
+            2751800,
+            1857400,
+            2767300,
+            4535900
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            330.25,
             336.739990234375,
             346.6000061035156,
             352.25,
-            348.0400085449219
+            348.0400085449219,
+            325.70001220703125
           ]
         }
       ]

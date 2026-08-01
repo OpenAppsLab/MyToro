@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:02.343Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AXON?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AXON",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 992957400,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 527.76,
+      "fiftyTwoWeekHigh": 885.92,
+      "fiftyTwoWeekLow": 339.01,
+      "regularMarketDayHigh": 530.97,
+      "regularMarketDayLow": 514.759,
+      "regularMarketVolume": 461328,
+      "longName": "Axon Enterprise, Inc.",
+      "shortName": "Axon Enterprise, Inc.",
+      "chartPreviousClose": 502.34,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            525.47998046875,
+            547.6500244140625,
+            531.2000122070312,
+            525.2999877929688,
+            527.760009765625
+          ],
+          "low": [
+            514.239990234375,
+            520.4400024414062,
+            526.1599731445312,
+            502.7200012207031,
+            514.760009765625
+          ],
+          "high": [
+            533.02001953125,
+            551.0700073242188,
+            564.239990234375,
+            526.030029296875,
+            530.969970703125
+          ],
+          "open": [
+            517,
+            534.25,
+            544.510009765625,
+            517.02001953125,
+            519.0599975585938
+          ],
+          "volume": [
+            787800,
+            953000,
+            900300,
+            618600,
+            491200
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            525.47998046875,
+            547.6500244140625,
+            531.2000122070312,
+            525.2999877929688,
+            527.760009765625
+          ]
+        }
+      ]
+    }
+  }
+}

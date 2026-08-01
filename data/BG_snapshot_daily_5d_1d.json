@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:23.582Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BG",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 996759000,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 106.23,
+      "fiftyTwoWeekHigh": 134.87,
+      "fiftyTwoWeekLow": 76.01,
+      "regularMarketDayHigh": 107.04,
+      "regularMarketDayLow": 104.41,
+      "regularMarketVolume": 1552964,
+      "longName": "Bunge Global SA",
+      "shortName": "Bunge Limited",
+      "chartPreviousClose": 121.53,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            120.25,
+            119.58000183105469,
+            115.94999694824219,
+            107.44999694824219,
+            107.04000091552734
+          ],
+          "open": [
+            119.77999877929688,
+            117.6500015258789,
+            112.88999938964844,
+            105.7699966430664,
+            106.5999984741211
+          ],
+          "low": [
+            116.83000183105469,
+            115.02999877929688,
+            107.30999755859375,
+            102.80999755859375,
+            104.41000366210938
+          ],
+          "close": [
+            117.5,
+            117.37000274658203,
+            107.77999877929688,
+            105.06999969482422,
+            106.2300033569336
+          ],
+          "volume": [
+            1179500,
+            1737700,
+            2990100,
+            2537900,
+            1600100
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            117.5,
+            117.37000274658203,
+            107.77999877929688,
+            105.06999969482422,
+            106.2300033569336
+          ]
+        }
+      ]
+    }
+  }
+}

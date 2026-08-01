@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:03:31.508Z",
+  "fetchedAt": "2026-08-01T14:14:46.571Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 995549400,
-      "regularMarketTime": 1785441603,
+      "regularMarketTime": 1785528003,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 163.29,
+      "regularMarketPrice": 165.92,
       "fiftyTwoWeekHigh": 291.09,
       "fiftyTwoWeekLow": 118.15,
-      "regularMarketDayHigh": 166.605,
-      "regularMarketDayLow": 159.96,
-      "regularMarketVolume": 8484422,
+      "regularMarketDayHigh": 166.88,
+      "regularMarketDayLow": 159.2,
+      "regularMarketVolume": 4712014,
       "longName": "Accenture plc",
       "shortName": "Accenture plc",
-      "chartPreviousClose": 138.74,
+      "chartPreviousClose": 146.99,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            140.7100067138672,
-            149.5800018310547,
-            156.9499969482422,
-            163.86000061035156,
-            159.9600067138672
-          ],
-          "open": [
-            142.5,
-            150.1999969482422,
-            156.9499969482422,
-            165,
-            166.72999572753906
-          ],
           "volume": [
-            6570600,
             7771400,
             10614800,
             10917200,
-            8643800
+            8643800,
+            9387000
+          ],
+          "open": [
+            150.1999969482422,
+            156.9499969482422,
+            165,
+            166.72999572753906,
+            160.82000732421875
+          ],
+          "low": [
+            149.5800018310547,
+            156.9499969482422,
+            163.86000061035156,
+            159.9600067138672,
+            159.1999969482422
           ],
           "high": [
-            147.52999877929688,
             156.83999633789062,
             167.75,
             176.39999389648438,
-            166.72999572753906
+            166.72999572753906,
+            166.94000244140625
           ],
           "close": [
-            146.99000549316406,
             154.05999755859375,
             164.66000366210938,
             173.1699981689453,
-            163.2899932861328
+            163.2899932861328,
+            165.9199981689453
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            146.99000549316406,
             154.05999755859375,
             164.66000366210938,
             173.1699981689453,
-            163.2899932861328
+            163.2899932861328,
+            165.9199981689453
           ]
         }
       ]

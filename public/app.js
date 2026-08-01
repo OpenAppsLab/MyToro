@@ -26,6 +26,10 @@ const calibrationHealth = document.getElementById('calibrationHealth');
 const healthDetail = document.getElementById('healthDetail');
 const candidateCountLabel = document.getElementById('candidateCount');
 const candidateDetail = document.getElementById('candidateDetail');
+const modelRetrainAt = document.getElementById('modelRetrainAt');
+const metaModelRetrainAt = document.getElementById('metaModelRetrainAt');
+const snapshotCountLabel = document.getElementById('snapshotCount');
+const snapshotCountDetail = document.getElementById('snapshotCountDetail');
 const runtimeGateLabel = document.getElementById('runtimeGate');
 const runtimeGateDetail = document.getElementById('runtimeGateDetail');
 const calibrationChart = document.getElementById('adminCalibrationChart');
@@ -64,8 +68,8 @@ function renderCalibrationChart(curve = []) {
 
   calibrationChart.innerHTML = `
     <div class="calibration-grid">
-      ${segments}
       <div class="calibration-line"></div>
+      ${segments}
     </div>
   `;
 }
@@ -145,6 +149,28 @@ async function loadAdminMetrics() {
       `;
     } else {
       adminTuningSummary.textContent = 'Walk-forward tuning report is unavailable or not yet generated.';
+    }
+
+    if (modelRetrainAt) {
+      modelRetrainAt.textContent = payload.modelMetadata?.trainedAt
+        ? new Date(payload.modelMetadata.trainedAt).toLocaleString()
+        : '—';
+    }
+
+    if (metaModelRetrainAt) {
+      metaModelRetrainAt.textContent = payload.metaModelMetadata?.trainedAt
+        ? new Date(payload.metaModelMetadata.trainedAt).toLocaleString()
+        : '—';
+    }
+
+    if (snapshotCountLabel) {
+      snapshotCountLabel.textContent = payload.calibrationMetadata?.snapshotCount ?? '—';
+    }
+
+    if (snapshotCountDetail) {
+      snapshotCountDetail.textContent = payload.calibrationMetadata?.snapshotCount != null
+        ? `Based on ${payload.calibrationMetadata.snapshotCount} snapshots`
+        : 'Based on saved intraday examples';
     }
 
     if (health.degraded || drift.warning) {
@@ -390,8 +416,12 @@ function updateStatus(message) {
 function persistHistory(entry) {
   const existing = loadHistory();
   const entries = Array.isArray(existing.entries) ? existing.entries : [];
+  const orders = Array.isArray(existing.orders) ? existing.orders : [];
   entries.push(entry);
-  localStorage.setItem(LOCAL_HISTORY_KEY, JSON.stringify({ entries: entries.slice(-60) }));
+  localStorage.setItem(LOCAL_HISTORY_KEY, JSON.stringify({
+    entries: entries.slice(-60),
+    orders: orders.slice(-60)
+  }));
   updateDailyBalance();
   updateDailyPnl();
 }

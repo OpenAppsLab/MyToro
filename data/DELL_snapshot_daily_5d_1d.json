@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:27.343Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "DELL",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1471440600,
+      "regularMarketTime": 1785528252,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 405.37,
+      "fiftyTwoWeekHigh": 469.47,
+      "fiftyTwoWeekLow": 110.22,
+      "regularMarketDayHigh": 431.43,
+      "regularMarketDayLow": 400.252,
+      "regularMarketVolume": 4820919,
+      "longName": "Dell Technologies Inc.",
+      "shortName": "Dell Technologies Inc.",
+      "chartPreviousClose": 437.5,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            4960400,
+            9448700,
+            6349100,
+            6193700,
+            4842700
+          ],
+          "high": [
+            447.8800048828125,
+            404,
+            394.9599914550781,
+            413,
+            431.42999267578125
+          ],
+          "open": [
+            435.489990234375,
+            401.260009765625,
+            388.5,
+            384.8900146484375,
+            419
+          ],
+          "low": [
+            411.8699951171875,
+            358.8800048828125,
+            364.1700134277344,
+            383,
+            400.25
+          ],
+          "close": [
+            426.9100036621094,
+            392.1000061035156,
+            369.6400146484375,
+            404.80999755859375,
+            405.3699951171875
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            426.9100036621094,
+            392.1000061035156,
+            369.6400146484375,
+            404.80999755859375,
+            405.3699951171875
+          ]
+        }
+      ]
+    }
+  }
+}

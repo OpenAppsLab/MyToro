@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:08.594Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/COO?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "COO",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 412007400,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 72.32,
+      "fiftyTwoWeekHigh": 89.83,
+      "fiftyTwoWeekLow": 58.89,
+      "regularMarketDayHigh": 72.5,
+      "regularMarketDayLow": 71.15,
+      "regularMarketVolume": 2436437,
+      "longName": "The Cooper Companies, Inc.",
+      "shortName": "The Cooper Companies, Inc.",
+      "chartPreviousClose": 70.31,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            70.26000213623047,
+            71.06999969482422,
+            71.43000030517578,
+            71.77999877929688,
+            71.1500015258789
+          ],
+          "close": [
+            70.29000091552734,
+            72.05999755859375,
+            73.05999755859375,
+            72.6500015258789,
+            72.31999969482422
+          ],
+          "volume": [
+            2199600,
+            1772800,
+            1739200,
+            1407100,
+            2518500
+          ],
+          "high": [
+            71.62999725341797,
+            72.63999938964844,
+            73.08999633789062,
+            73.0999984741211,
+            72.51000213623047
+          ],
+          "open": [
+            70.81999969482422,
+            71.37999725341797,
+            71.5,
+            73.05999755859375,
+            71.94999694824219
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            70.29000091552734,
+            72.05999755859375,
+            73.05999755859375,
+            72.6500015258789,
+            72.31999969482422
+          ]
+        }
+      ]
+    }
+  }
+}

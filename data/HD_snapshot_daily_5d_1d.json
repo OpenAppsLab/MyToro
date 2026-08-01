@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:51:21.187Z",
+  "fetchedAt": "2026-08-01T14:15:19.436Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 370013400,
-      "regularMarketTime": 1785441603,
+      "regularMarketTime": 1785528002,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 333.35,
+      "regularMarketPrice": 331.96,
       "fiftyTwoWeekHigh": 426.75,
       "fiftyTwoWeekLow": 289.1,
-      "regularMarketDayHigh": 335.69,
-      "regularMarketDayLow": 330.25,
-      "regularMarketVolume": 3800487,
+      "regularMarketDayHigh": 333.996,
+      "regularMarketDayLow": 328.795,
+      "regularMarketVolume": 3292591,
       "longName": "The Home Depot, Inc.",
       "shortName": "Home Depot, Inc. (The)",
-      "chartPreviousClose": 324.71,
+      "chartPreviousClose": 332.98,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            323.2300109863281,
             335.3500061035156,
             342.6000061035156,
             336.9599914550781,
-            330.25
-          ],
-          "volume": [
-            3874500,
-            3622400,
-            4308000,
-            4028500,
-            6275400
-          ],
-          "high": [
-            333.4599914550781,
-            341.8900146484375,
-            349.42999267578125,
-            345.2699890136719,
-            335.69000244140625
-          ],
-          "open": [
-            325.07000732421875,
-            339.3900146484375,
-            342.6400146484375,
-            340.3800048828125,
-            334.989990234375
+            330.25,
+            328.79998779296875
           ],
           "close": [
-            332.9800109863281,
             336.0899963378906,
             344.4700012207031,
             338.2699890136719,
-            333.3500061035156
+            333.3500061035156,
+            331.9599914550781
+          ],
+          "open": [
+            339.3900146484375,
+            342.6400146484375,
+            340.3800048828125,
+            334.989990234375,
+            332.44000244140625
+          ],
+          "high": [
+            341.8900146484375,
+            349.42999267578125,
+            345.2699890136719,
+            335.69000244140625,
+            334
+          ],
+          "volume": [
+            3622400,
+            4308000,
+            4028500,
+            6275400,
+            4958900
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            332.9800109863281,
             336.0899963378906,
             344.4700012207031,
             338.2699890136719,
-            333.3500061035156
+            333.3500061035156,
+            331.9599914550781
           ]
         }
       ]

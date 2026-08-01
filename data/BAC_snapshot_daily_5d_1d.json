@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:03:00.159Z",
+  "fetchedAt": "2026-08-01T14:14:56.858Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785441602,
+      "regularMarketTime": 1785528002,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 61.73,
+      "regularMarketPrice": 61.95,
       "fiftyTwoWeekHigh": 62.99,
       "fiftyTwoWeekLow": 44.75,
-      "regularMarketDayHigh": 61.93,
-      "regularMarketDayLow": 61.031,
-      "regularMarketVolume": 18152003,
+      "regularMarketDayHigh": 62.24,
+      "regularMarketDayLow": 61.54,
+      "regularMarketVolume": 15925369,
       "longName": "Bank of America Corporation",
       "shortName": "Bank of America Corporation",
-      "chartPreviousClose": 61.28,
+      "chartPreviousClose": 62.05,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            62.279998779296875,
-            62.9900016784668,
-            62.65999984741211,
-            62.650001525878906,
-            61.93000030517578
-          ],
           "open": [
-            61.529998779296875,
             62.52000045776367,
             62.29999923706055,
             62.5099983215332,
-            61.52000045776367
+            61.52000045776367,
+            61.540000915527344
+          ],
+          "high": [
+            62.9900016784668,
+            62.65999984741211,
+            62.650001525878906,
+            61.93000030517578,
+            62.2400016784668
           ],
           "close": [
-            62.04999923706055,
             62.130001068115234,
             62.619998931884766,
             61.06999969482422,
-            61.72999954223633
+            61.72999954223633,
+            61.95000076293945
           ],
           "volume": [
-            29035400,
             36899800,
             28737900,
             37919000,
-            24844000
+            24844000,
+            27282600
           ],
           "low": [
-            61.279998779296875,
             61.84000015258789,
             61.900001525878906,
             60.90999984741211,
-            61.029998779296875
+            61.029998779296875,
+            61.540000915527344
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            62.04999923706055,
             62.130001068115234,
             62.619998931884766,
             61.06999969482422,
-            61.72999954223633
+            61.72999954223633,
+            61.95000076293945
           ]
         }
       ]

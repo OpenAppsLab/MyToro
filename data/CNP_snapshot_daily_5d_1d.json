@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:41.271Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CNP?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CNP",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -252322200,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 42.04,
+      "fiftyTwoWeekHigh": 45.26,
+      "fiftyTwoWeekLow": 36.6,
+      "regularMarketDayHigh": 42.385,
+      "regularMarketDayLow": 41.87,
+      "regularMarketVolume": 5413531,
+      "longName": "CenterPoint Energy, Inc.",
+      "shortName": "CenterPoint Energy, Inc (Holdin",
+      "chartPreviousClose": 44.56,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            43.72999954223633,
+            43.56999969482422,
+            42.810001373291016,
+            41.90999984741211,
+            41.869998931884766
+          ],
+          "close": [
+            44.0099983215332,
+            44.099998474121094,
+            42.93000030517578,
+            42.150001525878906,
+            42.040000915527344
+          ],
+          "open": [
+            44.33000183105469,
+            43.56999969482422,
+            44.5099983215332,
+            43.11000061035156,
+            42.0099983215332
+          ],
+          "high": [
+            44.630001068115234,
+            45.2599983215332,
+            44.630001068115234,
+            43.41999816894531,
+            42.38999938964844
+          ],
+          "volume": [
+            6354500,
+            7448400,
+            6627000,
+            7716500,
+            7133600
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            44.0099983215332,
+            44.099998474121094,
+            42.93000030517578,
+            42.150001525878906,
+            42.040000915527344
+          ]
+        }
+      ]
+    }
+  }
+}

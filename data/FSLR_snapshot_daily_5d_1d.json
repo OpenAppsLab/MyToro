@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:24.675Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FSLR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FSLR",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1163773800,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 211.03,
+      "fiftyTwoWeekHigh": 320.95,
+      "fiftyTwoWeekLow": 176.47,
+      "regularMarketDayHigh": 217.127,
+      "regularMarketDayLow": 206.39,
+      "regularMarketVolume": 3386602,
+      "longName": "First Solar, Inc.",
+      "shortName": "First Solar, Inc.",
+      "chartPreviousClose": 202.82,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            203.11000061035156,
+            202.11000061035156,
+            203,
+            205.3000030517578,
+            212.77999877929688
+          ],
+          "high": [
+            206.6999969482422,
+            203.75,
+            205.8000030517578,
+            206.74000549316406,
+            217.1300048828125
+          ],
+          "close": [
+            205.8300018310547,
+            202.58999633789062,
+            199.24000549316406,
+            206.00999450683594,
+            211.02999877929688
+          ],
+          "volume": [
+            1815900,
+            2169500,
+            1645900,
+            2397700,
+            3424300
+          ],
+          "low": [
+            199.1300048828125,
+            195.83999633789062,
+            197.35000610351562,
+            201.80999755859375,
+            206.38999938964844
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            205.8300018310547,
+            202.58999633789062,
+            199.24000549316406,
+            206.00999450683594,
+            211.02999877929688
+          ]
+        }
+      ]
+    }
+  }
+}

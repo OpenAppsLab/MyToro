@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:18.589Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/A?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "A",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 942935400,
+      "regularMarketTime": 1785528059,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 138.37,
+      "fiftyTwoWeekHigh": 160.27,
+      "fiftyTwoWeekLow": 108.35,
+      "regularMarketDayHigh": 139.5,
+      "regularMarketDayLow": 135.78,
+      "regularMarketVolume": 1322269,
+      "longName": "Agilent Technologies, Inc.",
+      "shortName": "Agilent Technologies, Inc.",
+      "chartPreviousClose": 138.57,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            1830500,
+            2277100,
+            1864600,
+            1955100,
+            1720600
+          ],
+          "low": [
+            136.13999938964844,
+            138.5800018310547,
+            139.1999969482422,
+            137.22999572753906,
+            135.77999877929688
+          ],
+          "open": [
+            137.58999633789062,
+            139.99000549316406,
+            139.1999969482422,
+            138.72000122070312,
+            138.47000122070312
+          ],
+          "high": [
+            139.05999755859375,
+            142.4199981689453,
+            142.00999450683594,
+            139.5,
+            139.5
+          ],
+          "close": [
+            137.88999938964844,
+            140.5399932861328,
+            140.3000030517578,
+            138.7100067138672,
+            138.3699951171875
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            137.88999938964844,
+            140.5399932861328,
+            140.3000030517578,
+            138.7100067138672,
+            138.3699951171875
+          ]
+        }
+      ]
+    }
+  }
+}

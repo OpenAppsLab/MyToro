@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:32.259Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BEN?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BEN",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 433171800,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 33.86,
+      "fiftyTwoWeekHigh": 34.92,
+      "fiftyTwoWeekLow": 21.11,
+      "regularMarketDayHigh": 34.64,
+      "regularMarketDayLow": 32.83,
+      "regularMarketVolume": 6804190,
+      "longName": "Franklin Resources, Inc.",
+      "shortName": "Franklin Resources, Inc.",
+      "chartPreviousClose": 32.49,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            33.65999984741211,
+            33.41999816894531,
+            33.349998474121094,
+            33.310001373291016,
+            34.63999938964844
+          ],
+          "close": [
+            33.220001220703125,
+            33.33000183105469,
+            32.38999938964844,
+            33.16999816894531,
+            33.86000061035156
+          ],
+          "open": [
+            32.869998931884766,
+            33.20000076293945,
+            33.11000061035156,
+            32.540000915527344,
+            33.47999954223633
+          ],
+          "volume": [
+            5683000,
+            4329500,
+            5229200,
+            6071900,
+            11986200
+          ],
+          "low": [
+            32.709999084472656,
+            32.72999954223633,
+            32.33000183105469,
+            32.2599983215332,
+            32.83000183105469
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            33.220001220703125,
+            33.33000183105469,
+            32.38999938964844,
+            33.16999816894531,
+            33.86000061035156
+          ]
+        }
+      ]
+    }
+  }
+}

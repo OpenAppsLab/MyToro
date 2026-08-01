@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:54.734Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EME?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "EME",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 789748200,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 797.43,
+      "fiftyTwoWeekHigh": 951.96,
+      "fiftyTwoWeekLow": 564.92,
+      "regularMarketDayHigh": 839.99,
+      "regularMarketDayLow": 797.43,
+      "regularMarketVolume": 609310,
+      "longName": "EMCOR Group, Inc.",
+      "shortName": "EMCOR Group, Inc.",
+      "chartPreviousClose": 744.85,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            725.8800048828125,
+            698.3599853515625,
+            668.8200073242188,
+            771.6599731445312,
+            797.4199829101562
+          ],
+          "high": [
+            761.9500122070312,
+            733.3300170898438,
+            711.0800170898438,
+            808.719970703125,
+            839.989990234375
+          ],
+          "open": [
+            746.8200073242188,
+            733.0499877929688,
+            707.02001953125,
+            771.6599731445312,
+            838.9000244140625
+          ],
+          "close": [
+            742.75,
+            705.8200073242188,
+            672.47998046875,
+            802.3699951171875,
+            797.4299926757812
+          ],
+          "volume": [
+            436900,
+            524500,
+            765300,
+            879600,
+            609400
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            742.75,
+            705.8200073242188,
+            672.47998046875,
+            802.3699951171875,
+            797.4299926757812
+          ]
+        }
+      ]
+    }
+  }
+}

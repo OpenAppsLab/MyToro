@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:46.943Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CB?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CB",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 733069800,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 350.68,
+      "fiftyTwoWeekHigh": 365.91,
+      "fiftyTwoWeekLow": 265.3,
+      "regularMarketDayHigh": 354.015,
+      "regularMarketDayLow": 347.2,
+      "regularMarketVolume": 846578,
+      "longName": "Chubb Limited",
+      "shortName": "Chubb Limited",
+      "chartPreviousClose": 359.75,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            358.9800109863281,
+            361.5299987792969,
+            365,
+            358.3599853515625,
+            349.5899963378906
+          ],
+          "high": [
+            362.0899963378906,
+            365.1700134277344,
+            365.9100036621094,
+            359.3500061035156,
+            354.04998779296875
+          ],
+          "close": [
+            358.9100036621094,
+            363.5,
+            361.8999938964844,
+            350.1499938964844,
+            350.67999267578125
+          ],
+          "volume": [
+            1751300,
+            2137800,
+            1858300,
+            1615500,
+            1361900
+          ],
+          "low": [
+            357.2300109863281,
+            360.3500061035156,
+            360.5899963378906,
+            347,
+            347.010009765625
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            358.9100036621094,
+            363.5,
+            361.8999938964844,
+            350.1499938964844,
+            350.67999267578125
+          ]
+        }
+      ]
+    }
+  }
+}

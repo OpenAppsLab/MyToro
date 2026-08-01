@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:04:49.332Z",
+  "fetchedAt": "2026-08-01T14:17:05.896Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 373041000,
-      "regularMarketTime": 1785441602,
+      "regularMarketTime": 1785528002,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 26.75,
+      "regularMarketPrice": 26.16,
       "fiftyTwoWeekHigh": 30,
       "fiftyTwoWeekLow": 15.73,
-      "regularMarketDayHigh": 30,
-      "regularMarketDayLow": 26.045,
-      "regularMarketVolume": 21064684,
+      "regularMarketDayHigh": 27.145,
+      "regularMarketDayLow": 26.025,
+      "regularMarketVolume": 7100383,
       "longName": "Baxter International Inc.",
       "shortName": "Baxter International Inc.",
-      "chartPreviousClose": 21.67,
+      "chartPreviousClose": 22.4,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            21.950000762939453,
-            22.68000030517578,
-            23.850000381469727,
-            24.399999618530273,
-            29.06999969482422
-          ],
-          "volume": [
-            4982900,
-            5445200,
-            7102200,
-            9433100,
-            22670900
-          ],
-          "high": [
-            22.649999618530273,
-            23.399999618530273,
-            24.75,
-            24.93000030517578,
-            30
-          ],
-          "close": [
-            22.399999618530273,
-            23.34000015258789,
-            24.3700008392334,
-            24.770000457763672,
-            26.75
-          ],
           "low": [
-            21.899999618530273,
             22.600000381469727,
             23.579999923706055,
             24.280000686645508,
-            26.049999237060547
+            26.049999237060547,
+            26.030000686645508
+          ],
+          "volume": [
+            5445200,
+            7102200,
+            9433100,
+            22670900,
+            9282400
+          ],
+          "open": [
+            22.68000030517578,
+            23.850000381469727,
+            24.399999618530273,
+            29.06999969482422,
+            26.920000076293945
+          ],
+          "high": [
+            23.399999618530273,
+            24.75,
+            24.93000030517578,
+            30,
+            27.149999618530273
+          ],
+          "close": [
+            23.34000015258789,
+            24.3700008392334,
+            24.770000457763672,
+            26.75,
+            26.15999984741211
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            22.399999618530273,
             23.34000015258789,
             24.3700008392334,
             24.770000457763672,
-            26.75
+            26.75,
+            26.15999984741211
           ]
         }
       ]

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:44.742Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DD?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "DD",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 76253400,
+      "regularMarketTime": 1785528230,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 137,
+      "fiftyTwoWeekHigh": 157.98,
+      "fiftyTwoWeekLow": 87.264,
+      "regularMarketDayHigh": 139.395,
+      "regularMarketDayLow": 136.58,
+      "regularMarketVolume": 2904973,
+      "longName": "DuPont de Nemours, Inc.",
+      "shortName": "DuPont de Nemours, Inc.",
+      "chartPreviousClose": 137.7,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            140.02999877929688,
+            142.6699981689453,
+            141.0800018310547,
+            140.99000549316406,
+            139.39999389648438
+          ],
+          "open": [
+            138.72999572753906,
+            140.47000122070312,
+            141.0800018310547,
+            140,
+            137.9499969482422
+          ],
+          "close": [
+            139.9600067138672,
+            140.77000427246094,
+            138.10000610351562,
+            138.83999633789062,
+            137
+          ],
+          "low": [
+            137.44000244140625,
+            139.49000549316406,
+            136.39999389648438,
+            138.33999633789062,
+            136.5800018310547
+          ],
+          "volume": [
+            1079400,
+            1338800,
+            1463500,
+            1690000,
+            7537000
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            139.9600067138672,
+            140.77000427246094,
+            138.10000610351562,
+            138.83999633789062,
+            137
+          ]
+        }
+      ]
+    }
+  }
+}

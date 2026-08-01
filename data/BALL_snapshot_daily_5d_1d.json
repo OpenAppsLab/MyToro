@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:04.731Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BALL?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BALL",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 99153000,
+      "regularMarketTime": 1785528002,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 64.9,
+      "fiftyTwoWeekHigh": 68.29,
+      "fiftyTwoWeekLow": 44.83,
+      "regularMarketDayHigh": 65.2,
+      "regularMarketDayLow": 64.1,
+      "regularMarketVolume": 1075106,
+      "longName": "Ball Corporation",
+      "shortName": "Ball Corporation",
+      "chartPreviousClose": 63.84,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            64.66999816894531,
+            66.88999938964844,
+            65.83999633789062,
+            65.30999755859375,
+            64.9000015258789
+          ],
+          "low": [
+            64.12999725341797,
+            65.44999694824219,
+            64.9000015258789,
+            64.37999725341797,
+            64.0999984741211
+          ],
+          "volume": [
+            2195900,
+            2441000,
+            2188000,
+            1447800,
+            2168500
+          ],
+          "high": [
+            65.22000122070312,
+            67.55000305175781,
+            66.26000213623047,
+            66.1500015258789,
+            65.19999694824219
+          ],
+          "open": [
+            64.19999694824219,
+            65.63999938964844,
+            66.16000366210938,
+            66.11000061035156,
+            65.12999725341797
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            64.66999816894531,
+            66.88999938964844,
+            65.83999633789062,
+            65.30999755859375,
+            64.9000015258789
+          ]
+        }
+      ]
+    }
+  }
+}

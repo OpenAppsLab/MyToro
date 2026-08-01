@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:04:02.433Z",
+  "fetchedAt": "2026-08-01T14:15:35.532Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 454944600,
-      "regularMarketTime": 1785441601,
+      "regularMarketTime": 1785528000,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 874.66,
+      "regularMarketPrice": 823.03,
       "fiftyTwoWeekHigh": 1255,
-      "fiftyTwoWeekLow": 103.38,
-      "regularMarketDayHigh": 882.49,
-      "regularMarketDayLow": 789.01,
-      "regularMarketVolume": 59596897,
+      "fiftyTwoWeekLow": 105.46,
+      "regularMarketDayHigh": 930.88,
+      "regularMarketDayLow": 818,
+      "regularMarketVolume": 52850199,
       "longName": "Micron Technology, Inc.",
       "shortName": "Micron Technology, Inc.",
-      "chartPreviousClose": 990.21,
+      "chartPreviousClose": 920.95,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
           "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
           "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
           "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            959.030029296875,
-            932.4500122070312,
-            839.6099853515625,
-            833,
-            793.1400146484375
-          ],
-          "high": [
-            967.1400146484375,
-            935,
-            848.3599853515625,
-            841.7999877929688,
-            882.5
-          ],
-          "close": [
-            920.9500122070312,
-            900.2000122070312,
-            820.530029296875,
-            739,
-            874.6599731445312
-          ],
-          "volume": [
-            40803100,
-            47591200,
-            61039300,
-            69846000,
-            61964700
-          ],
           "low": [
-            904,
             854.7899780273438,
             789.0900268554688,
             737.8800048828125,
-            789
+            789,
+            818
+          ],
+          "volume": [
+            47591200,
+            61039300,
+            69846000,
+            63075300,
+            54257900
+          ],
+          "high": [
+            935,
+            848.3599853515625,
+            841.7999877929688,
+            882.5,
+            930.8800048828125
+          ],
+          "close": [
+            900.2000122070312,
+            820.530029296875,
+            739,
+            874.6599731445312,
+            823.030029296875
+          ],
+          "open": [
+            932.4500122070312,
+            839.6099853515625,
+            833,
+            793.1400146484375,
+            919.6500244140625
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            920.9500122070312,
             900.2000122070312,
             820.530029296875,
             739,
-            874.6599731445312
+            874.6599731445312,
+            823.030029296875
           ]
         }
       ]

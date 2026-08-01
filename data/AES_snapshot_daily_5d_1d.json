@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:16.300Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AES?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AES",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 677943000,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 14.68,
+      "fiftyTwoWeekHigh": 17.65,
+      "fiftyTwoWeekLow": 12.33,
+      "regularMarketDayHigh": 14.72,
+      "regularMarketDayLow": 14.65,
+      "regularMarketVolume": 8015874,
+      "longName": "The AES Corporation",
+      "shortName": "The AES Corporation",
+      "chartPreviousClose": 14.84,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            14.850000381469727,
+            14.850000381469727,
+            14.850000381469727,
+            14.850000381469727,
+            14.720000267028809
+          ],
+          "volume": [
+            4319800,
+            6503500,
+            4746900,
+            8417500,
+            10354700
+          ],
+          "low": [
+            14.829999923706055,
+            14.829999923706055,
+            14.819999694824219,
+            14.770000457763672,
+            14.649999618530273
+          ],
+          "open": [
+            14.829999923706055,
+            14.84000015258789,
+            14.850000381469727,
+            14.850000381469727,
+            14.699999809265137
+          ],
+          "close": [
+            14.829999923706055,
+            14.829999923706055,
+            14.819999694824219,
+            14.850000381469727,
+            14.680000305175781
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            14.654236793518066,
+            14.654236793518066,
+            14.644355773925781,
+            14.67400074005127,
+            14.680000305175781
+          ]
+        }
+      ]
+    }
+  }
+}

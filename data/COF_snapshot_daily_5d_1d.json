@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:03:04.293Z",
+  "fetchedAt": "2026-08-01T14:17:29.123Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COF?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 784996200,
-      "regularMarketTime": 1785441602,
+      "regularMarketTime": 1785528003,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 210.14,
+      "regularMarketPrice": 209.01,
       "fiftyTwoWeekHigh": 259.64,
       "fiftyTwoWeekLow": 174.24,
-      "regularMarketDayHigh": 210.52,
-      "regularMarketDayLow": 205.15,
-      "regularMarketVolume": 2872043,
+      "regularMarketDayHigh": 210.84,
+      "regularMarketDayLow": 206.895,
+      "regularMarketVolume": 4019144,
       "longName": "Capital One Financial Corporation",
       "shortName": "Capital One Financial Corporati",
-      "chartPreviousClose": 199.96,
+      "chartPreviousClose": 202.84,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            204.44000244140625,
-            208.47999572753906,
-            212.57000732421875,
-            212.4499969482422,
-            210.52999877929688
-          ],
-          "volume": [
-            3468900,
-            4805600,
-            5263200,
-            4129800,
-            4110300
-          ],
-          "low": [
-            196.50999450683594,
-            204.97000122070312,
-            206.94000244140625,
-            207.85000610351562,
-            205.13999938964844
-          ],
           "open": [
-            198.50999450683594,
             205.85000610351562,
             207.52000427246094,
             210,
-            208.5500030517578
+            208.5500030517578,
+            210
+          ],
+          "high": [
+            208.47999572753906,
+            212.57000732421875,
+            212.4499969482422,
+            210.52999877929688,
+            210.88999938964844
           ],
           "close": [
-            202.83999633789062,
             207.0500030517578,
             212.41000366210938,
             208.7100067138672,
-            210.13999938964844
+            210.13999938964844,
+            209.00999450683594
+          ],
+          "volume": [
+            4805600,
+            5263200,
+            4129800,
+            4110300,
+            4019200
+          ],
+          "low": [
+            204.97000122070312,
+            206.94000244140625,
+            207.85000610351562,
+            205.13999938964844,
+            206.89999389648438
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            202.83999633789062,
             207.0500030517578,
             212.41000366210938,
             208.7100067138672,
-            210.13999938964844
+            210.13999938964844,
+            209.00999450683594
           ]
         }
       ]

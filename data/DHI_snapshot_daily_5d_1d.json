@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:41.100Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DHI?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "DHI",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 707751000,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 143.06,
+      "fiftyTwoWeekHigh": 184.55,
+      "fiftyTwoWeekLow": 131.75,
+      "regularMarketDayHigh": 145.38,
+      "regularMarketDayLow": 142.83,
+      "regularMarketVolume": 1596117,
+      "longName": "D.R. Horton, Inc.",
+      "shortName": "D.R. Horton, Inc.",
+      "chartPreviousClose": 146.76,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            146.75999450683594,
+            149.02999877929688,
+            146.42999267578125,
+            143.27999877929688,
+            142.75999450683594
+          ],
+          "high": [
+            151,
+            152.08999633789062,
+            152.74000549316406,
+            148.3000030517578,
+            145.5
+          ],
+          "open": [
+            148.6699981689453,
+            149.5,
+            148.99000549316406,
+            147.3800048828125,
+            145.14999389648438
+          ],
+          "close": [
+            147.64999389648438,
+            151.16000366210938,
+            147.16000366210938,
+            145.52999877929688,
+            143.05999755859375
+          ],
+          "volume": [
+            2387500,
+            2751500,
+            3578000,
+            2821600,
+            2223100
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            147.64999389648438,
+            151.16000366210938,
+            147.16000366210938,
+            145.52999877929688,
+            143.05999755859375
+          ]
+        }
+      ]
+    }
+  }
+}

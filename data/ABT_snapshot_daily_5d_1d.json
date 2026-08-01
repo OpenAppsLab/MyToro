@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:04:45.586Z",
+  "fetchedAt": "2026-08-01T14:16:13.881Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABT?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785441846,
+      "regularMarketTime": 1785528170,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 105.61,
+      "regularMarketPrice": 105.7,
       "fiftyTwoWeekHigh": 137.49,
       "fiftyTwoWeekLow": 81.97,
-      "regularMarketDayHigh": 106.809,
-      "regularMarketDayLow": 104.48,
-      "regularMarketVolume": 6398607,
+      "regularMarketDayHigh": 106.39,
+      "regularMarketDayLow": 102.89,
+      "regularMarketVolume": 9571717,
       "longName": "Abbott Laboratories",
       "shortName": "Abbott Laboratories",
-      "chartPreviousClose": 100.75,
+      "chartPreviousClose": 103.06,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            101.5,
-            104.08999633789062,
-            106.08999633789062,
-            106.97000122070312,
-            106.01000213623047
-          ],
-          "close": [
-            103.05999755859375,
-            104.48999786376953,
-            107.2699966430664,
-            108,
-            105.61000061035156
-          ],
-          "high": [
-            104.18000030517578,
-            105.86000061035156,
-            109.26000213623047,
-            110.04000091552734,
-            106.80999755859375
-          ],
           "low": [
-            101.5,
             103.37999725341797,
             105.97000122070312,
             106.97000122070312,
-            104.4800033569336
+            104.4800033569336,
+            102.88999938964844
+          ],
+          "close": [
+            104.48999786376953,
+            107.2699966430664,
+            108,
+            105.61000061035156,
+            105.69999694824219
+          ],
+          "open": [
+            104.08999633789062,
+            106.08999633789062,
+            106.97000122070312,
+            106.01000213623047,
+            104.45999908447266
+          ],
+          "high": [
+            105.86000061035156,
+            109.26000213623047,
+            110.04000091552734,
+            106.80999755859375,
+            106.38999938964844
           ],
           "volume": [
-            10366700,
             11619300,
             12665500,
             12157300,
-            8149900
+            8149900,
+            9606900
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            103.05999755859375,
             104.48999786376953,
             107.2699966430664,
             108,
-            105.61000061035156
+            105.61000061035156,
+            105.69999694824219
           ]
         }
       ]

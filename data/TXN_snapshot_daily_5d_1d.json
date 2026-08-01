@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:04:17.384Z",
+  "fetchedAt": "2026-08-01T14:16:01.029Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TXN?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785441600,
+      "regularMarketTime": 1785528001,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 278.76,
+      "regularMarketPrice": 275.74,
       "fiftyTwoWeekHigh": 334.03,
       "fiftyTwoWeekLow": 152.73,
-      "regularMarketDayHigh": 283.58,
-      "regularMarketDayLow": 274.345,
-      "regularMarketVolume": 9178476,
+      "regularMarketDayHigh": 285.11,
+      "regularMarketDayLow": 273.59,
+      "regularMarketVolume": 8797555,
       "longName": "Texas Instruments Incorporated",
       "shortName": "Texas Instruments Incorporated",
-      "chartPreviousClose": 284.99,
+      "chartPreviousClose": 279.58,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            8270000,
-            9072800,
-            11160400,
-            10212400,
-            9238400
-          ],
-          "high": [
-            283.8900146484375,
-            284.3299865722656,
-            282.80999755859375,
-            281.6199951171875,
-            283.5799865722656
-          ],
           "low": [
-            276.29998779296875,
             273.6700134277344,
             273.45001220703125,
             268.760009765625,
-            274.3500061035156
+            274.3500061035156,
+            273.5899963378906
+          ],
+          "volume": [
+            9072800,
+            11160400,
+            10212400,
+            9238400,
+            8832500
+          ],
+          "high": [
+            284.3299865722656,
+            282.80999755859375,
+            281.6199951171875,
+            283.5799865722656,
+            285.1099853515625
           ],
           "close": [
-            279.5799865722656,
             279.4100036621094,
             277.07000732421875,
             271.29998779296875,
-            278.760009765625
+            278.760009765625,
+            275.739990234375
           ],
           "open": [
-            281.1099853515625,
             281.7900085449219,
             275.4599914550781,
             278.5799865722656,
-            276.82000732421875
+            276.82000732421875,
+            284.05999755859375
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            279.5799865722656,
-            279.4100036621094,
-            277.07000732421875,
-            271.29998779296875,
-            278.760009765625
+            277.9866943359375,
+            275.6585998535156,
+            269.9179992675781,
+            277.3399963378906,
+            275.739990234375
           ]
         }
       ]

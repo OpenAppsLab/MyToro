@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:19.732Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/APD?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "APD",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 322151400,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 294.89,
+      "fiftyTwoWeekHigh": 314.87,
+      "fiftyTwoWeekLow": 229.11,
+      "regularMarketDayHigh": 301.75,
+      "regularMarketDayLow": 291.375,
+      "regularMarketVolume": 989711,
+      "longName": "Air Products and Chemicals, Inc.",
+      "shortName": "Air Products and Chemicals, Inc",
+      "chartPreviousClose": 297.87,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            291.3800048828125,
+            292.5799865722656,
+            291.5400085449219,
+            297.3500061035156,
+            291.3800048828125
+          ],
+          "close": [
+            292.5799865722656,
+            292.8500061035156,
+            294.2699890136719,
+            300.20001220703125,
+            294.8900146484375
+          ],
+          "volume": [
+            1218100,
+            1539100,
+            1068900,
+            1614400,
+            1463900
+          ],
+          "high": [
+            297.3399963378906,
+            298.1000061035156,
+            295.5299987792969,
+            311.0799865722656,
+            301.75
+          ],
+          "open": [
+            296.5,
+            293.1099853515625,
+            294.79998779296875,
+            308.5799865722656,
+            299.57000732421875
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            292.5799865722656,
+            292.8500061035156,
+            294.2699890136719,
+            300.20001220703125,
+            294.8900146484375
+          ]
+        }
+      ]
+    }
+  }
+}

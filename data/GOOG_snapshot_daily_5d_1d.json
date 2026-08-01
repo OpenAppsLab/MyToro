@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:29.836Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "GOOG",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1092922200,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 356.65,
+      "fiftyTwoWeekHigh": 404.47,
+      "fiftyTwoWeekLow": 190.92,
+      "regularMarketDayHigh": 358.88,
+      "regularMarketDayLow": 339.17,
+      "regularMarketVolume": 30351093,
+      "longName": "Alphabet Inc.",
+      "shortName": "Alphabet Inc.",
+      "chartPreviousClose": 319.09,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            21419600,
+            20986900,
+            20242900,
+            17309500,
+            30451400
+          ],
+          "close": [
+            326.57000732421875,
+            332.6000061035156,
+            335.760009765625,
+            333.67999267578125,
+            356.6499938964844
+          ],
+          "open": [
+            324.739990234375,
+            327.79998779296875,
+            333.5,
+            333.0799865722656,
+            340.07000732421875
+          ],
+          "high": [
+            330.10101318359375,
+            335.2099914550781,
+            341.9800109863281,
+            335.45001220703125,
+            358.8800048828125
+          ],
+          "low": [
+            324.4100036621094,
+            324.5400085449219,
+            330.4079895019531,
+            329.82000732421875,
+            339.1600036621094
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            326.57000732421875,
+            332.6000061035156,
+            335.760009765625,
+            333.67999267578125,
+            356.6499938964844
+          ]
+        }
+      ]
+    }
+  }
+}

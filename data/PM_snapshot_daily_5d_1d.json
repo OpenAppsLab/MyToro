@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:52:18.028Z",
+  "fetchedAt": "2026-08-01T14:15:46.492Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PM?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1205760600,
-      "regularMarketTime": 1785441602,
+      "regularMarketTime": 1785528002,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 192,
+      "regularMarketPrice": 190.82,
       "fiftyTwoWeekHigh": 207.76,
       "fiftyTwoWeekLow": 142.11,
-      "regularMarketDayHigh": 195.92,
-      "regularMarketDayLow": 191.673,
-      "regularMarketVolume": 5779085,
+      "regularMarketDayHigh": 193.4,
+      "regularMarketDayLow": 188.947,
+      "regularMarketVolume": 5442159,
       "longName": "Philip Morris International Inc.",
       "shortName": "Philip Morris International Inc",
-      "chartPreviousClose": 191.12,
+      "chartPreviousClose": 193,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
           "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
           "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
           "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            192.58999633789062,
-            193,
-            198.75999450683594,
-            201,
-            193.1999969482422
-          ],
-          "volume": [
-            4438800,
-            3699000,
-            8064900,
-            3917800,
-            6799500
-          ],
           "low": [
-            191.77999877929688,
             192.5500030517578,
             198.67999267578125,
             198.19000244140625,
-            191.6699981689453
-          ],
-          "high": [
-            195.6300048828125,
-            196.7899932861328,
-            207.75999450683594,
-            202.57000732421875,
-            195.9199981689453
+            191.6699981689453,
+            188.9499969482422
           ],
           "close": [
-            193,
             195.66000366210938,
             200.1699981689453,
             198.44000244140625,
-            192
+            192,
+            190.82000732421875
+          ],
+          "open": [
+            193,
+            198.75999450683594,
+            201,
+            193.1999969482422,
+            190.0800018310547
+          ],
+          "high": [
+            196.7899932861328,
+            207.75999450683594,
+            202.57000732421875,
+            195.9199981689453,
+            193.4600067138672
+          ],
+          "volume": [
+            3699000,
+            8064900,
+            3917800,
+            6799500,
+            5442700
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            193,
             195.66000366210938,
             200.1699981689453,
             198.44000244140625,
-            192
+            192,
+            190.82000732421875
           ]
         }
       ]

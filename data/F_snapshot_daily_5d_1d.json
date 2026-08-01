@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:27.939Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/F?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "F",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 76253400,
+      "regularMarketTime": 1785528089,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 14.68,
+      "fiftyTwoWeekHigh": 17.78,
+      "fiftyTwoWeekLow": 10.86,
+      "regularMarketDayHigh": 15.03,
+      "regularMarketDayLow": 14.41,
+      "regularMarketVolume": 46174682,
+      "longName": "Ford Motor Company",
+      "shortName": "Ford Motor Company",
+      "chartPreviousClose": 14.37,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            14.8100004196167,
+            14.760000228881836,
+            15.569999694824219,
+            15.34000015258789,
+            14.960000038146973
+          ],
+          "volume": [
+            58748400,
+            75709000,
+            98361100,
+            60025800,
+            55987100
+          ],
+          "high": [
+            14.869999885559082,
+            15.020000457763672,
+            16.290000915527344,
+            15.369999885559082,
+            15.029999732971191
+          ],
+          "low": [
+            14.34000015258789,
+            14.65999984741211,
+            15.15999984741211,
+            14.640000343322754,
+            14.40999984741211
+          ],
+          "close": [
+            14.680000305175781,
+            14.960000038146973,
+            15.279999732971191,
+            14.859999656677246,
+            14.680000305175781
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            14.680000305175781,
+            14.960000038146973,
+            15.279999732971191,
+            14.859999656677246,
+            14.680000305175781
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:31.423Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CCL?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CCL",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 554131800,
+      "regularMarketTime": 1785528002,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 27.81,
+      "fiftyTwoWeekHigh": 34.03,
+      "fiftyTwoWeekLow": 23.45,
+      "regularMarketDayHigh": 27.99,
+      "regularMarketDayLow": 27.28,
+      "regularMarketVolume": 17254862,
+      "longName": "Carnival Corporation Ltd.",
+      "shortName": "Carnival Corporation Ltd.",
+      "chartPreviousClose": 26.33,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            21121000,
+            27081000,
+            20271300,
+            23650600,
+            17264900
+          ],
+          "high": [
+            27.489999771118164,
+            28.31999969482422,
+            28.389999389648438,
+            27.940000534057617,
+            27.989999771118164
+          ],
+          "open": [
+            27.200000762939453,
+            27.09000015258789,
+            27.479999542236328,
+            27.670000076293945,
+            27.899999618530273
+          ],
+          "low": [
+            26.670000076293945,
+            26.90999984741211,
+            27.329999923706055,
+            27.15999984741211,
+            27.280000686645508
+          ],
+          "close": [
+            27.1200008392334,
+            28.229999542236328,
+            27.809999465942383,
+            27.770000457763672,
+            27.809999465942383
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            27.1200008392334,
+            28.229999542236328,
+            27.809999465942383,
+            27.770000457763672,
+            27.809999465942383
+          ]
+        }
+      ]
+    }
+  }
+}

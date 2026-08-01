@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:25.748Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FE?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FE",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 879172200,
+      "regularMarketTime": 1785528086,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 48.31,
+      "fiftyTwoWeekHigh": 52.34,
+      "fiftyTwoWeekLow": 42.73,
+      "regularMarketDayHigh": 48.71,
+      "regularMarketDayLow": 48.16,
+      "regularMarketVolume": 4663176,
+      "longName": "FirstEnergy Corp.",
+      "shortName": "FirstEnergy Corp.",
+      "chartPreviousClose": 49.92,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            49.68000030517578,
+            49.4900016784668,
+            49.93000030517578,
+            49.34000015258789,
+            48.54999923706055
+          ],
+          "low": [
+            49.18000030517578,
+            49.43000030517578,
+            49.029998779296875,
+            48.54999923706055,
+            48.15999984741211
+          ],
+          "close": [
+            49.31999969482422,
+            49.650001525878906,
+            49.130001068115234,
+            48.709999084472656,
+            48.310001373291016
+          ],
+          "volume": [
+            4203400,
+            6061100,
+            5615300,
+            8804900,
+            7468800
+          ],
+          "high": [
+            49.97999954223633,
+            50.45000076293945,
+            50.290000915527344,
+            49.810001373291016,
+            48.709999084472656
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            49.31999969482422,
+            49.650001525878906,
+            49.130001068115234,
+            48.709999084472656,
+            48.310001373291016
+          ]
+        }
+      ]
+    }
+  }
+}

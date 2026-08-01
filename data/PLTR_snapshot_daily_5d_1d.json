@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:04:37.586Z",
+  "fetchedAt": "2026-08-01T14:15:45.403Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PLTR?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1601472600,
-      "regularMarketTime": 1785441600,
+      "regularMarketTime": 1785528000,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 122.26,
+      "regularMarketPrice": 123.06,
       "fiftyTwoWeekHigh": 207.52,
       "fiftyTwoWeekLow": 106.37,
-      "regularMarketDayHigh": 123.67,
-      "regularMarketDayLow": 120.27,
-      "regularMarketVolume": 27558808,
+      "regularMarketDayHigh": 123.39,
+      "regularMarketDayLow": 119.63,
+      "regularMarketVolume": 27949500,
       "longName": "Palantir Technologies Inc.",
       "shortName": "Palantir Technologies Inc.",
-      "chartPreviousClose": 123.37,
+      "chartPreviousClose": 122.92,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            122.91999816894531,
-            131.52999877929688,
-            123.52999877929688,
-            123,
-            122.26000213623047
-          ],
-          "open": [
-            125.16500091552734,
-            126.15499877929688,
-            125.83999633789062,
-            124,
-            121.13999938964844
-          ],
-          "high": [
-            125.30999755859375,
-            132.41000366210938,
-            127.19000244140625,
-            127.27999877929688,
-            123.66999816894531
-          ],
-          "volume": [
-            21177000,
-            36708200,
-            43597300,
-            27207900,
-            27681100
-          ],
           "low": [
-            122.0199966430664,
             125.30999755859375,
             117.88999938964844,
             122.44999694824219,
-            120.2699966430664
+            120.2699966430664,
+            119.62000274658203
+          ],
+          "volume": [
+            36708200,
+            43597300,
+            27207900,
+            27801600,
+            29004900
+          ],
+          "high": [
+            132.41000366210938,
+            127.19000244140625,
+            127.27999877929688,
+            123.66999816894531,
+            123.38999938964844
+          ],
+          "close": [
+            131.52999877929688,
+            123.52999877929688,
+            123,
+            122.26000213623047,
+            123.05999755859375
+          ],
+          "open": [
+            126.15499877929688,
+            125.83999633789062,
+            124,
+            121.13999938964844,
+            122.29000091552734
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            122.91999816894531,
             131.52999877929688,
             123.52999877929688,
             123,
-            122.26000213623047
+            122.26000213623047,
+            123.05999755859375
           ]
         }
       ]

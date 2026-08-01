@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:57.050Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ETR",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 76253400,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 107.62,
+      "fiftyTwoWeekHigh": 118.45,
+      "fiftyTwoWeekLow": 86.4,
+      "regularMarketDayHigh": 109.69,
+      "regularMarketDayLow": 107.609,
+      "regularMarketVolume": 2602811,
+      "longName": "Entergy Corporation",
+      "shortName": "Entergy Corporation",
+      "chartPreviousClose": 115.95,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            2026700,
+            4268500,
+            4302100,
+            3796000,
+            2602800
+          ],
+          "close": [
+            113.76000213623047,
+            112.31999969482422,
+            107.79000091552734,
+            108.02999877929688,
+            107.62000274658203
+          ],
+          "open": [
+            114.76000213623047,
+            113.66000366210938,
+            114.29000091552734,
+            108.44000244140625,
+            108.70999908447266
+          ],
+          "high": [
+            115.83999633789062,
+            115.36000061035156,
+            114.29000091552734,
+            110.30000305175781,
+            109.69000244140625
+          ],
+          "low": [
+            113.12999725341797,
+            112.31999969482422,
+            107.70999908447266,
+            107.94000244140625,
+            107.5999984741211
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            113.76000213623047,
+            112.31999969482422,
+            107.79000091552734,
+            108.02999877929688,
+            107.62000274658203
+          ]
+        }
+      ]
+    }
+  }
+}

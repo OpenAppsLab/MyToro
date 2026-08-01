@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:35.277Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DLTR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "DLTR",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 794586600,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 127.21,
+      "fiftyTwoWeekHigh": 142.4,
+      "fiftyTwoWeekLow": 84.71,
+      "regularMarketDayHigh": 128.5,
+      "regularMarketDayLow": 126.56,
+      "regularMarketVolume": 1502886,
+      "longName": "Dollar Tree, Inc.",
+      "shortName": "Dollar Tree, Inc.",
+      "chartPreviousClose": 120.45,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            121.88999938964844,
+            126.37000274658203,
+            125.87999725341797,
+            126.91000366210938,
+            126.55999755859375
+          ],
+          "close": [
+            125.54000091552734,
+            126.76000213623047,
+            128.9499969482422,
+            128.57000732421875,
+            127.20999908447266
+          ],
+          "open": [
+            121.88999938964844,
+            127.19000244140625,
+            126.37000274658203,
+            127.76000213623047,
+            128.11000061035156
+          ],
+          "high": [
+            125.94000244140625,
+            128.9600067138672,
+            130.74000549316406,
+            129,
+            128.5
+          ],
+          "volume": [
+            2709700,
+            2170500,
+            1997600,
+            1136900,
+            1537000
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            125.54000091552734,
+            126.76000213623047,
+            128.9499969482422,
+            128.57000732421875,
+            127.20999908447266
+          ]
+        }
+      ]
+    }
+  }
+}

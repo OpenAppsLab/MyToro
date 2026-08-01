@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:53.441Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AJG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AJG",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 456586200,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 249.42,
+      "fiftyTwoWeekHigh": 313.55,
+      "fiftyTwoWeekLow": 190.75,
+      "regularMarketDayHigh": 255.73,
+      "regularMarketDayLow": 242.28,
+      "regularMarketVolume": 1293024,
+      "longName": "Arthur J. Gallagher & Co.",
+      "shortName": "Arthur J. Gallagher & Co.",
+      "chartPreviousClose": 247.77,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            248.13999938964844,
+            254.14999389648438,
+            259.3399963378906,
+            253.5399932861328,
+            242.27999877929688
+          ],
+          "volume": [
+            1110000,
+            1533700,
+            1573600,
+            1926400,
+            1735800
+          ],
+          "high": [
+            255.39999389648438,
+            265.3800048828125,
+            269.79998779296875,
+            269.989990234375,
+            255.72999572753906
+          ],
+          "close": [
+            253.36000061035156,
+            265.30999755859375,
+            268.9100036621094,
+            256.4599914550781,
+            249.4199981689453
+          ],
+          "open": [
+            249.4199981689453,
+            255,
+            261.5899963378906,
+            269.989990234375,
+            245.92999267578125
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            253.36000061035156,
+            265.30999755859375,
+            268.9100036621094,
+            256.4599914550781,
+            249.4199981689453
+          ]
+        }
+      ]
+    }
+  }
+}

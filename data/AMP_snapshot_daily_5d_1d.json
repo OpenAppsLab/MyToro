@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:38.772Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMP?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AMP",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1126791000,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 545.84,
+      "fiftyTwoWeekHigh": 553.46,
+      "fiftyTwoWeekLow": 422.37,
+      "regularMarketDayHigh": 549.39,
+      "regularMarketDayLow": 543.44,
+      "regularMarketVolume": 299955,
+      "longName": "Ameriprise Financial, Inc.",
+      "shortName": "Ameriprise Financial, Inc.",
+      "chartPreviousClose": 528.9,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            534.4299926757812,
+            538.22998046875,
+            541.6400146484375,
+            541.4099731445312,
+            545.52001953125
+          ],
+          "volume": [
+            654000,
+            697100,
+            444700,
+            418600,
+            480600
+          ],
+          "high": [
+            543.25,
+            553.4600219726562,
+            547.9199829101562,
+            546.3099975585938,
+            549.3900146484375
+          ],
+          "low": [
+            530.9099731445312,
+            536.2899780273438,
+            539,
+            532.9199829101562,
+            543.4299926757812
+          ],
+          "close": [
+            538.010009765625,
+            546.6199951171875,
+            540.2899780273438,
+            544.4600219726562,
+            545.8400268554688
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            538.010009765625,
+            546.6199951171875,
+            540.2899780273438,
+            544.4600219726562,
+            545.8400268554688
+          ]
+        }
+      ]
+    }
+  }
+}

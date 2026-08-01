@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:03:50.847Z",
+  "fetchedAt": "2026-08-01T14:15:21.857Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IBM?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785441603,
+      "regularMarketTime": 1785528003,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 221.74,
+      "regularMarketPrice": 223.65,
       "fiftyTwoWeekHigh": 332.46,
       "fiftyTwoWeekLow": 199.19,
-      "regularMarketDayHigh": 224.86,
-      "regularMarketDayLow": 220.2,
-      "regularMarketVolume": 5756862,
+      "regularMarketDayHigh": 224.76,
+      "regularMarketDayLow": 216.585,
+      "regularMarketVolume": 9064130,
       "longName": "International Business Machines Corporation",
       "shortName": "International Business Machines",
-      "chartPreviousClose": 206.65,
+      "chartPreviousClose": 214.19,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
           "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
           "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
           "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            216.10000610351562,
-            219.6300048828125,
-            228.97999572753906,
-            230.97000122070312,
-            224.86000061035156
-          ],
-          "close": [
-            214.19000244140625,
-            216.27999877929688,
-            227.5500030517578,
-            226.44000244140625,
-            221.74000549316406
-          ],
-          "volume": [
-            10578800,
-            8362300,
-            13263000,
-            8806700,
-            9629000
-          ],
           "open": [
-            209.27999877929688,
             217.75,
             219.72999572753906,
             227.6999969482422,
-            222
+            222,
+            221.14999389648438
+          ],
+          "volume": [
+            8362300,
+            13263000,
+            8806700,
+            9675200,
+            9085100
+          ],
+          "close": [
+            216.27999877929688,
+            227.5500030517578,
+            226.44000244140625,
+            221.74000549316406,
+            223.64999389648438
+          ],
+          "high": [
+            219.6300048828125,
+            228.97999572753906,
+            230.97000122070312,
+            224.86000061035156,
+            224.75999450683594
           ],
           "low": [
-            206.8000030517578,
             215.2899932861328,
             215.11000061035156,
             223.9499969482422,
-            220.1999969482422
+            220.1999969482422,
+            216.58999633789062
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            214.19000244140625,
             216.27999877929688,
             227.5500030517578,
             226.44000244140625,
-            221.74000549316406
+            221.74000549316406,
+            223.64999389648438
           ]
         }
       ]

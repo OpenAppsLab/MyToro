@@ -7,12 +7,16 @@ const {
   computeCalibrationHealth,
   evaluateWalkForward,
   trainIntradayModel,
+  trainMetaModel,
+  saveMetaModel,
   buildAdvancedSignals,
   buildIntradayFeatureVector,
   buildMarketFeatureStats,
   labelIntradayOutcome,
   countThresholdCandidates,
   saveRuntimeSettings,
+  getRuntimeAlpha,
+  getRuntimeThreshold,
   getIntradayModel,
   DEFAULT_INTRADAY_MODEL
 } = require('../server');
@@ -51,9 +55,11 @@ function buildItemFromSnapshot(result, symbol) {
   };
 }
 
+let snapshotFiles = [];
+
 async function loadSnapshotExamples() {
   const files = await fs.readdir(DATA_DIR);
-  const snapshotFiles = files.filter((name) => name.endsWith('_snapshot_intraday_1d_5m.json')).sort();
+  snapshotFiles = files.filter((name) => name.endsWith('_snapshot_intraday_1d_5m.json')).sort();
   if (!snapshotFiles.length) {
     throw new Error(`No intraday snapshot files found in ${DATA_DIR}`);
   }
@@ -189,14 +195,57 @@ async function run() {
   await runCalibration();
 
   const walkForward = evaluateWalkForward(formattedExamples, ['premarketMove', 'openingGap', 'firstHourMove', 'volumeZ', 'sentiment', 'patternStrength', 'sectorStrength', 'atrPct', 'liquidity'], chosenModel, 50);
+  const metaModel = trainMetaModel(formattedExamples, chosenModel, {
+    thresholdPct: 1.8,
+    iterations: 300,
+    learningRate: 0.02
+  });
+
+  const metaModelMetadata = {
+    trainedAt: new Date().toISOString(),
+    sourceSnapshots: {
+      snapshotCount: snapshotFiles.length,
+      sampleFiles: snapshotFiles.slice(0, 5)
+    },
+    parameters: {
+      thresholdPct: 1.8,
+      alphaCandidates: [0, 0.25, 0.5, 0.75, 1],
+      thresholdCandidates: [0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7],
+      ballparkAmount: 3000,
+      leverage: 2,
+      iterations: 300,
+      learningRate: 0.02
+    },
+    intradayModelSource: modelSource,
+    modelSource: 'meta'
+  };
+
+  const savedMetaModel = saveMetaModel(metaModel, metaModelMetadata);
   const logisticCalibration = calibrateModel(formattedExamples, intradayModel, 'logistic', { iterations: 300, learningRate: 0.05 });
   const isotonicCalibration = calibrateModel(formattedExamples, intradayModel, 'isotonic');
+
+  let runtimeParameters = null;
+  let recommendedRuntimeSettings = null;
+  if (savedMetaModel?.metadata) {
+    runtimeParameters = {
+      intradayAlpha: savedMetaModel.metadata.parameters?.intradayAlpha ?? null,
+      minCombinedThreshold: savedMetaModel.metadata?.minCombinedThreshold ?? null
+    };
+  }
 
   const output = {
     generatedAt: new Date().toISOString(),
     snapshotCount: formattedExamples.length,
     intradayModel: chosenModel,
     modelSource,
+    trainingParameters: metaModelMetadata.parameters,
+    runtimeParameters: {
+      intradayAlpha: getRuntimeAlpha(),
+      minCombinedThreshold: getRuntimeThreshold(),
+      leverage: 2,
+      ballparkAmount: 3000
+    },
+    metaModelMetadata,
     best: tuning.best,
     results: tuning.results,
     tuning,
@@ -212,6 +261,7 @@ async function run() {
 
   await fs.writeFile(OUT_PATH, JSON.stringify(output, null, 2));
   console.log(`Saved walk-forward tuning report to ${OUT_PATH}`);
+  console.log('Saved meta-model to ${META_MODEL_PATH}');
   console.log('Best tuning result:', tuning.best);
 }
 

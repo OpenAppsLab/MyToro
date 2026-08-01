@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:05:46.882Z",
+  "fetchedAt": "2026-08-01T14:15:09.269Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785441880,
+      "regularMarketTime": 1785528242,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 192.31,
+      "regularMarketPrice": 196.83,
       "fiftyTwoWeekHigh": 214.71,
       "fiftyTwoWeekLow": 146.49,
-      "regularMarketDayHigh": 193.119,
-      "regularMarketDayLow": 189.32,
-      "regularMarketVolume": 5360990,
+      "regularMarketDayHigh": 197.553,
+      "regularMarketDayLow": 191.54,
+      "regularMarketVolume": 9899550,
       "longName": "Chevron Corporation",
       "shortName": "Chevron Corporation",
-      "chartPreviousClose": 194.42,
+      "chartPreviousClose": 194.79,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            194.4600067138672,
             188.6699981689453,
             191.47000122070312,
             192.5,
-            189.91000366210938
-          ],
-          "close": [
-            194.7899932861328,
-            190,
-            187.5800018310547,
-            191.86000061035156,
-            192.30999755859375
+            189.91000366210938,
+            195.11000061035156
           ],
           "volume": [
-            6700400,
             7369200,
             7406800,
             8101200,
-            6632000
+            6645000,
+            9928700
           ],
           "high": [
-            196.8699951171875,
             192.49000549316406,
             191.97000122070312,
             193.55999755859375,
-            193.1199951171875
+            193.1199951171875,
+            197.5500030517578
           ],
           "low": [
-            193.8000030517578,
             188.6699981689453,
             186.72999572753906,
             190.77999877929688,
-            189.30999755859375
+            189.30999755859375,
+            191.5399932861328
+          ],
+          "close": [
+            190,
+            187.5800018310547,
+            191.86000061035156,
+            192.30999755859375,
+            196.8300018310547
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            194.7899932861328,
             190,
             187.5800018310547,
             191.86000061035156,
-            192.30999755859375
+            192.30999755859375,
+            196.8300018310547
           ]
         }
       ]

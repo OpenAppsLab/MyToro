@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:36.351Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/D?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "D",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 322151400,
+      "regularMarketTime": 1785528063,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 69.17,
+      "fiftyTwoWeekHigh": 72.99,
+      "fiftyTwoWeekLow": 55.85,
+      "regularMarketDayHigh": 70.06,
+      "regularMarketDayLow": 69.17,
+      "regularMarketVolume": 3523844,
+      "longName": "Dominion Energy, Inc.",
+      "shortName": "Dominion Energy, Inc.",
+      "chartPreviousClose": 71.1,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            2902600,
+            4010900,
+            3097500,
+            3063700,
+            3581000
+          ],
+          "low": [
+            70.08999633789062,
+            70.5999984741211,
+            69.9800033569336,
+            69.0999984741211,
+            69.16999816894531
+          ],
+          "open": [
+            70.81999969482422,
+            70.83999633789062,
+            71.01000213623047,
+            70.5199966430664,
+            69.37000274658203
+          ],
+          "high": [
+            71.41000366210938,
+            71.93000030517578,
+            71.5999984741211,
+            70.79000091552734,
+            70.06999969482422
+          ],
+          "close": [
+            70.2699966430664,
+            70.62000274658203,
+            70.55000305175781,
+            69.7300033569336,
+            69.16999816894531
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            70.2699966430664,
+            70.62000274658203,
+            70.55000305175781,
+            69.7300033569336,
+            69.16999816894531
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:16.859Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FDS?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "FDS",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 835968600,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 263.2,
+      "fiftyTwoWeekHigh": 398.5,
+      "fiftyTwoWeekLow": 185,
+      "regularMarketDayHigh": 264.37,
+      "regularMarketDayLow": 254.99,
+      "regularMarketVolume": 464838,
+      "longName": "FactSet Research Systems Inc.",
+      "shortName": "FactSet Research Systems Inc.",
+      "chartPreviousClose": 254.36,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            270.30999755859375,
+            287.8900146484375,
+            295.5799865722656,
+            279.3900146484375,
+            264.3699951171875
+          ],
+          "open": [
+            260.2200012207031,
+            269.489990234375,
+            283.6600036621094,
+            274.17999267578125,
+            261.2099914550781
+          ],
+          "close": [
+            265.8999938964844,
+            283.8699951171875,
+            282.0400085449219,
+            263.0299987792969,
+            263.20001220703125
+          ],
+          "low": [
+            256.2699890136719,
+            269.489990234375,
+            281.3500061035156,
+            261.8900146484375,
+            254.99000549316406
+          ],
+          "volume": [
+            1759200,
+            1642600,
+            1298800,
+            1148400,
+            674300
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            265.8999938964844,
+            283.8699951171875,
+            282.0400085449219,
+            263.0299987792969,
+            263.20001220703125
+          ]
+        }
+      ]
+    }
+  }
+}

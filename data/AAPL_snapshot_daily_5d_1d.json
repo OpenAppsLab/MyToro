@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:03:29.712Z",
+  "fetchedAt": "2026-08-01T14:14:45.559Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 345479400,
-      "regularMarketTime": 1785441601,
+      "regularMarketTime": 1785528001,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 333.43,
+      "regularMarketPrice": 308.91,
       "fiftyTwoWeekHigh": 344.57,
-      "fiftyTwoWeekLow": 201.5,
-      "regularMarketDayHigh": 334.75,
-      "regularMarketDayLow": 329.59,
-      "regularMarketVolume": 55501839,
+      "fiftyTwoWeekLow": 201.68,
+      "regularMarketDayHigh": 310.69,
+      "regularMarketDayLow": 300,
+      "regularMarketVolume": 127398021,
       "longName": "Apple Inc.",
       "shortName": "Apple Inc.",
-      "chartPreviousClose": 321.66,
+      "chartPreviousClose": 333.02,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            333.0199890136719,
-            336.9100036621094,
-            340.0799865722656,
-            338.19000244140625,
-            333.42999267578125
-          ],
-          "open": [
-            321.7900085449219,
-            334.5400085449219,
-            340.0299987792969,
-            339.7300109863281,
-            333.1000061035156
-          ],
-          "volume": [
-            47489400,
-            49604300,
-            51859000,
-            56090800,
-            73355100
-          ],
           "high": [
-            334.3699951171875,
             339.57000732421875,
             342.8900146484375,
             344.57000732421875,
-            334.75
+            334.75,
+            310.69000244140625
+          ],
+          "close": [
+            336.9100036621094,
+            340.0799865722656,
+            338.19000244140625,
+            333.42999267578125,
+            308.9100036621094
+          ],
+          "volume": [
+            49604300,
+            51859000,
+            56090800,
+            74817800,
+            132275300
+          ],
+          "open": [
+            334.5400085449219,
+            340.0299987792969,
+            339.7300109863281,
+            333.1000061035156,
+            304.80999755859375
           ],
           "low": [
-            321.6199951171875,
             334.0199890136719,
             335.6000061035156,
             337.3500061035156,
-            329.5899963378906
+            329.5899963378906,
+            300
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            333.0199890136719,
             336.9100036621094,
             340.0799865722656,
             338.19000244140625,
-            333.42999267578125
+            333.42999267578125,
+            308.9100036621094
           ]
         }
       ]

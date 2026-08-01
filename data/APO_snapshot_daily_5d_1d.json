@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:45.507Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/APO?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "APO",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1301491800,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 125.59,
+      "fiftyTwoWeekHigh": 153.29,
+      "fiftyTwoWeekLow": 99.56,
+      "regularMarketDayHigh": 126.18,
+      "regularMarketDayLow": 119.89,
+      "regularMarketVolume": 3158220,
+      "longName": "Apollo Global Management, Inc.",
+      "shortName": "Apollo Global Management, Inc. ",
+      "chartPreviousClose": 122.61,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            123,
+            124.0199966430664,
+            123.87000274658203,
+            119.27999877929688,
+            120.6500015258789
+          ],
+          "volume": [
+            4039400,
+            3118700,
+            2859800,
+            4894900,
+            4656000
+          ],
+          "high": [
+            125.61000061035156,
+            125.30000305175781,
+            124.05999755859375,
+            121.30000305175781,
+            126.19000244140625
+          ],
+          "low": [
+            122.27999877929688,
+            123.02999877929688,
+            119.69000244140625,
+            116.56999969482422,
+            119.88999938964844
+          ],
+          "close": [
+            124.23999786376953,
+            124.69000244140625,
+            119.7699966430664,
+            120.25,
+            125.58999633789062
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            124.23999786376953,
+            124.69000244140625,
+            119.7699966430664,
+            120.25,
+            125.58999633789062
+          ]
+        }
+      ]
+    }
+  }
+}

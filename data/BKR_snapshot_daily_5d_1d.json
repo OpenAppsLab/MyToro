@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:03.422Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BKR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BKR",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 544714200,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 60.49,
+      "fiftyTwoWeekHigh": 70.41,
+      "fiftyTwoWeekLow": 41.96,
+      "regularMarketDayHigh": 61.26,
+      "regularMarketDayLow": 59.99,
+      "regularMarketVolume": 5424154,
+      "longName": "Baker Hughes Company",
+      "shortName": "Baker Hughes Company",
+      "chartPreviousClose": 57.25,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            60.59000015258789,
+            58.459999084472656,
+            58.720001220703125,
+            59.900001525878906,
+            60.4900016784668
+          ],
+          "low": [
+            59.84000015258789,
+            57.869998931884766,
+            58.540000915527344,
+            58.72999954223633,
+            59.9900016784668
+          ],
+          "high": [
+            62.66999816894531,
+            60.9900016784668,
+            60.470001220703125,
+            60.119998931884766,
+            61.2599983215332
+          ],
+          "open": [
+            60.630001068115234,
+            60.099998474121094,
+            60.45000076293945,
+            59.18000030517578,
+            60.72999954223633
+          ],
+          "volume": [
+            15186300,
+            12307800,
+            20168000,
+            9294700,
+            5758100
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            60.59000015258789,
+            58.459999084472656,
+            58.720001220703125,
+            59.900001525878906,
+            60.4900016784668
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:44.552Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CHTR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CHTR",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1262701800,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 144.98,
+      "fiftyTwoWeekHigh": 285.82,
+      "fiftyTwoWeekLow": 111.55,
+      "regularMarketDayHigh": 146.58,
+      "regularMarketDayLow": 138.915,
+      "regularMarketVolume": 2826347,
+      "longName": "Charter Communications, Inc.",
+      "shortName": "Charter Communications, Inc.",
+      "chartPreviousClose": 123.31,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            132.57000732421875,
+            141.16000366210938,
+            146.85000610351562,
+            142.08999633789062,
+            146.5800018310547
+          ],
+          "volume": [
+            4126400,
+            3812000,
+            4266200,
+            3387200,
+            2826900
+          ],
+          "low": [
+            123.83000183105469,
+            132.1999969482422,
+            136.5,
+            136.6699981689453,
+            138.8000030517578
+          ],
+          "open": [
+            125.48999786376953,
+            133.5800018310547,
+            138.02000427246094,
+            140,
+            140.5
+          ],
+          "close": [
+            131.61000061035156,
+            139.97000122070312,
+            145.1999969482422,
+            142,
+            144.97999572753906
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            131.61000061035156,
+            139.97000122070312,
+            145.1999969482422,
+            142,
+            144.97999572753906
+          ]
+        }
+      ]
+    }
+  }
+}

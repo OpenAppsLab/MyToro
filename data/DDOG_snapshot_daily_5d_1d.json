@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:04:25.939Z",
+  "fetchedAt": "2026-08-01T14:18:22.989Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DDOG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1568899800,
-      "regularMarketTime": 1785441600,
+      "regularMarketTime": 1785528000,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 268.56,
-      "fiftyTwoWeekHigh": 278.705,
+      "regularMarketPrice": 267.97,
+      "fiftyTwoWeekHigh": 278.758,
       "fiftyTwoWeekLow": 98.01,
-      "regularMarketDayHigh": 270.33,
-      "regularMarketDayLow": 263.425,
-      "regularMarketVolume": 4011717,
+      "regularMarketDayHigh": 278.758,
+      "regularMarketDayLow": 263.78,
+      "regularMarketVolume": 5170133,
       "longName": "Datadog, Inc.",
       "shortName": "Datadog, Inc.",
-      "chartPreviousClose": 244.39,
+      "chartPreviousClose": 246.86,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
           "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
           "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
           "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            246.86000061035156,
-            251.86000061035156,
-            250.8800048828125,
-            264.20001220703125,
-            268.55999755859375
-          ],
-          "open": [
-            248.44000244140625,
-            254.48500061035156,
-            255.1699981689453,
-            252.8800048828125,
-            263.80499267578125
-          ],
-          "high": [
-            248.44000244140625,
-            257.8599853515625,
-            255.5399932861328,
-            273.7300109863281,
-            270.3299865722656
-          ],
           "volume": [
-            2628000,
             3207800,
             4046300,
             6621200,
-            4418800
+            4418800,
+            5271700
+          ],
+          "close": [
+            251.86000061035156,
+            250.8800048828125,
+            264.20001220703125,
+            268.55999755859375,
+            267.9700012207031
+          ],
+          "open": [
+            254.48500061035156,
+            255.1699981689453,
+            252.8800048828125,
+            263.80499267578125,
+            271.5
+          ],
+          "high": [
+            257.8599853515625,
+            255.5399932861328,
+            273.7300109863281,
+            270.3299865722656,
+            278.75799560546875
           ],
           "low": [
-            241.17999267578125,
             249,
             237.6699981689453,
             252.5,
-            262.6099853515625
+            262.6099853515625,
+            263.7799987792969
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            246.86000061035156,
             251.86000061035156,
             250.8800048828125,
             264.20001220703125,
-            268.55999755859375
+            268.55999755859375,
+            267.9700012207031
           ]
         }
       ]

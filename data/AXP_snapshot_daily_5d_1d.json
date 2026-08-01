@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:02:58.639Z",
+  "fetchedAt": "2026-08-01T14:14:55.693Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AXP?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785441602,
+      "regularMarketTime": 1785528003,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 337.52,
+      "regularMarketPrice": 336.25,
       "fiftyTwoWeekHigh": 387.49,
-      "fiftyTwoWeekLow": 288.34,
-      "regularMarketDayHigh": 337.79,
-      "regularMarketDayLow": 329.07,
-      "regularMarketVolume": 1720251,
+      "fiftyTwoWeekLow": 290.63,
+      "regularMarketDayHigh": 340.3,
+      "regularMarketDayLow": 336,
+      "regularMarketVolume": 2327235,
       "longName": "American Express Company",
       "shortName": "American Express Company",
-      "chartPreviousClose": 340.84,
+      "chartPreviousClose": 326.17,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            326.1199951171875,
             331.5,
             335.5,
             333.6199951171875,
-            331.9700012207031
+            331.9700012207031,
+            338.2799987792969
           ],
           "volume": [
-            6365100,
             3774200,
             3535700,
             3437900,
-            2859500
+            2859500,
+            2349800
           ],
           "low": [
-            318.20001220703125,
             329.7900085449219,
             331.42999267578125,
             330,
-            329.07000732421875
+            329.07000732421875,
+            336
           ],
           "high": [
-            329.04998779296875,
             336.6099853515625,
             336.82000732421875,
             336.3900146484375,
-            337.79998779296875
+            337.79998779296875,
+            340.29998779296875
           ],
           "close": [
-            326.1700134277344,
             335.3900146484375,
             336.6300048828125,
             331.5,
-            337.5199890136719
+            337.5199890136719,
+            336.25
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            326.1700134277344,
             335.3900146484375,
             336.6300048828125,
             331.5,
-            337.5199890136719
+            337.5199890136719,
+            336.25
           ]
         }
       ]

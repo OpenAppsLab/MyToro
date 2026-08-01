@@ -24,7 +24,7 @@ test('evaluateOrderOutcome updates the live price and trailing stop while an ord
   assert.equal(updated.status, 'pending');
 });
 
-test('evaluateOrderOutcome marks a zero-move close as flat instead of profit', () => {
+test('evaluateOrderOutcome keeps a pending order open when price equals entry and no trigger is hit', () => {
   const order = {
     entryPrice: 100,
     targetProfit: 50,
@@ -41,6 +41,30 @@ test('evaluateOrderOutcome marks a zero-move close as flat instead of profit', (
 
   assert.equal(updated.currentPrice, 100);
   assert.equal(updated.currentMovePct, 0);
-  assert.equal(updated.status, 'flat');
+  assert.equal(updated.status, 'pending');
   assert.equal(updated.result, null);
+  assert.equal(updated.settledAt, null);
+  assert.equal(updated.timeToHitMs, null);
+});
+
+test('evaluateOrderOutcome treats a trailing stop exit above entry as profit', () => {
+  const order = {
+    entryPrice: 100,
+    targetProfit: 50,
+    leverage: 2,
+    highWaterMark: 120,
+    currentPrice: 100,
+    trailingStopPrice: 95,
+    stopLossPrice: 95,
+    status: 'pending',
+    createdAt: Date.now()
+  };
+
+  const updated = evaluateOrderOutcome(order, 110);
+
+  assert.equal(updated.currentPrice, 110);
+  assert.equal(updated.highWaterMark, 120);
+  assert.equal(updated.trailingStopPrice, 114);
+  assert.equal(updated.status, 'green');
+  assert.equal(updated.result, 'profit-hit');
 });

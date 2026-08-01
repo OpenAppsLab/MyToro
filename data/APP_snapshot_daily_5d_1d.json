@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:46.586Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/APP?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "APP",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1618493400,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 395.9,
+      "fiftyTwoWeekHigh": 745.61,
+      "fiftyTwoWeekLow": 359,
+      "regularMarketDayHigh": 398.16,
+      "regularMarketDayLow": 377.71,
+      "regularMarketVolume": 15443673,
+      "longName": "AppLovin Corporation",
+      "shortName": "Applovin Corporation",
+      "chartPreviousClose": 391.98,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            404.75201416015625,
+            414.4800109863281,
+            413.5350036621094,
+            393.0199890136719,
+            397.8999938964844
+          ],
+          "high": [
+            417.5799865722656,
+            420.94500732421875,
+            420.8500061035156,
+            406.3800048828125,
+            398.1600036621094
+          ],
+          "volume": [
+            5146200,
+            5574500,
+            5599400,
+            7541500,
+            15449700
+          ],
+          "low": [
+            401.45001220703125,
+            395.1499938964844,
+            397.1499938964844,
+            390.0509948730469,
+            377.7099914550781
+          ],
+          "close": [
+            412.7300109863281,
+            418.2200012207031,
+            399.4599914550781,
+            403.8699951171875,
+            395.8999938964844
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            412.7300109863281,
+            418.2200012207031,
+            399.4599914550781,
+            403.8699951171875,
+            395.8999938964844
+          ]
+        }
+      ]
+    }
+  }
+}

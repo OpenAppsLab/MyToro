@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:45.688Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CMG",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1138285800,
+      "regularMarketTime": 1785528219,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 37.22,
+      "fiftyTwoWeekHigh": 44.27,
+      "fiftyTwoWeekLow": 28.04,
+      "regularMarketDayHigh": 38.45,
+      "regularMarketDayLow": 37.182,
+      "regularMarketVolume": 14344469,
+      "longName": "Chipotle Mexican Grill, Inc.",
+      "shortName": "Chipotle Mexican Grill, Inc.",
+      "chartPreviousClose": 31.79,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            32.900001525878906,
+            33.810001373291016,
+            33.650001525878906,
+            36.63999938964844,
+            37.970001220703125
+          ],
+          "high": [
+            33.380001068115234,
+            34.15999984741211,
+            34.5099983215332,
+            39.09000015258789,
+            38.45000076293945
+          ],
+          "volume": [
+            13238400,
+            13816100,
+            18926300,
+            35584400,
+            14346000
+          ],
+          "low": [
+            32.5099983215332,
+            33.099998474121094,
+            33.61000061035156,
+            36.25,
+            37.18000030517578
+          ],
+          "close": [
+            33.20000076293945,
+            33.5099983215332,
+            34.2400016784668,
+            38.52000045776367,
+            37.220001220703125
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            33.20000076293945,
+            33.5099983215332,
+            34.2400016784668,
+            38.52000045776367,
+            37.220001220703125
+          ]
+        }
+      ]
+    }
+  }
+}

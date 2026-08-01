@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:51:53.446Z",
+  "fetchedAt": "2026-08-01T14:15:42.043Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PEP?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785441600,
+      "regularMarketTime": 1785528000,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 140.2,
+      "regularMarketPrice": 139.56,
       "fiftyTwoWeekHigh": 171.48,
       "fiftyTwoWeekLow": 133.73,
-      "regularMarketDayHigh": 142.52,
-      "regularMarketDayLow": 139.42,
-      "regularMarketVolume": 8231350,
+      "regularMarketDayHigh": 140.155,
+      "regularMarketDayLow": 138.38,
+      "regularMarketVolume": 9691523,
       "longName": "PepsiCo, Inc.",
       "shortName": "Pepsico, Inc.",
-      "chartPreviousClose": 134.95,
+      "chartPreviousClose": 136.64,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            135.52999877929688,
-            137.07000732421875,
-            143.2100067138672,
-            143.27999877929688,
-            141.10000610351562
-          ],
-          "high": [
-            137.1300048828125,
-            140.30999755859375,
-            145.42999267578125,
-            145.22999572753906,
-            142.52000427246094
-          ],
-          "close": [
-            136.63999938964844,
-            139.7899932861328,
-            142.86000061035156,
-            143.5,
-            140.1999969482422
-          ],
-          "volume": [
-            7968300,
-            7237900,
-            10648800,
-            8390800,
-            8253100
-          ],
           "low": [
-            134.57000732421875,
             137.00999450683594,
             141.7899932861328,
             142.5800018310547,
-            139.4199981689453
+            139.4199981689453,
+            138.3800048828125
+          ],
+          "close": [
+            139.7899932861328,
+            142.86000061035156,
+            143.5,
+            140.1999969482422,
+            139.55999755859375
+          ],
+          "open": [
+            137.07000732421875,
+            143.2100067138672,
+            143.27999877929688,
+            141.10000610351562,
+            139.52999877929688
+          ],
+          "high": [
+            140.30999755859375,
+            145.42999267578125,
+            145.22999572753906,
+            142.52000427246094,
+            140.16000366210938
+          ],
+          "volume": [
+            7237900,
+            10648800,
+            8390800,
+            8253100,
+            9696900
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            136.63999938964844,
             139.7899932861328,
             142.86000061035156,
             143.5,
-            140.1999969482422
+            140.1999969482422,
+            139.55999755859375
           ]
         }
       ]

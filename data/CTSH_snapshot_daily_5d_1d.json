@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:58.607Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "CTSH",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 898263000,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 55.35,
+      "fiftyTwoWeekHigh": 87.03,
+      "fiftyTwoWeekLow": 37.08,
+      "regularMarketDayHigh": 55.52,
+      "regularMarketDayLow": 52.21,
+      "regularMarketVolume": 7877595,
+      "longName": "Cognizant Technology Solutions Corporation",
+      "shortName": "Cognizant Technology Solutions ",
+      "chartPreviousClose": 45.45,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            46.4900016784668,
+            48.369998931884766,
+            52.310001373291016,
+            53.849998474121094,
+            53.0099983215332
+          ],
+          "high": [
+            48,
+            51.04999923706055,
+            57.060001373291016,
+            54.779998779296875,
+            55.529998779296875
+          ],
+          "close": [
+            47.04999923706055,
+            50.310001373291016,
+            55.970001220703125,
+            53.900001525878906,
+            55.349998474121094
+          ],
+          "volume": [
+            7416100,
+            13905900,
+            18262400,
+            12606100,
+            8124000
+          ],
+          "low": [
+            46.18000030517578,
+            48.279998779296875,
+            51.22999954223633,
+            51.86000061035156,
+            52.209999084472656
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            47.04999923706055,
+            50.310001373291016,
+            55.970001220703125,
+            53.900001525878906,
+            55.349998474121094
+          ]
+        }
+      ]
+    }
+  }
+}

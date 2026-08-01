@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:50:51.625Z",
+  "fetchedAt": "2026-08-01T14:14:53.298Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 863703000,
-      "regularMarketTime": 1785441601,
+      "regularMarketTime": 1785528001,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 235.5,
+      "regularMarketPrice": 271.58,
       "fiftyTwoWeekHigh": 278.56,
       "fiftyTwoWeekLow": 196,
-      "regularMarketDayHigh": 239.824,
-      "regularMarketDayLow": 231.06,
-      "regularMarketVolume": 78755052,
+      "regularMarketDayHigh": 273.23,
+      "regularMarketDayLow": 262.055,
+      "regularMarketVolume": 125921078,
       "longName": "Amazon.com, Inc.",
       "shortName": "Amazon.com, Inc.",
-      "chartPreviousClose": 233.66,
+      "chartPreviousClose": 232.11,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
           "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
           "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
           "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            234.3800048828125,
-            235.6699981689453,
-            232.85000610351562,
-            229.32000732421875,
-            233.35000610351562
-          ],
-          "volume": [
-            35017400,
-            34999500,
-            44521600,
-            44957500,
-            100880900
-          ],
-          "close": [
-            232.11000061035156,
-            231.38999938964844,
-            230.86000061035156,
-            226.64999389648438,
-            235.5
-          ],
-          "high": [
-            234.9499969482422,
-            235.88999938964844,
-            233.11000061035156,
-            232.82000732421875,
-            239.82000732421875
-          ],
           "low": [
-            231.33999633789062,
             230.99000549316406,
             228.10000610351562,
             226.16000366210938,
-            231.05999755859375
+            231.05999755859375,
+            262.010009765625
+          ],
+          "close": [
+            231.38999938964844,
+            230.86000061035156,
+            226.64999389648438,
+            235.5,
+            271.5799865722656
+          ],
+          "open": [
+            235.6699981689453,
+            232.85000610351562,
+            229.32000732421875,
+            233.35000610351562,
+            265
+          ],
+          "high": [
+            235.88999938964844,
+            233.11000061035156,
+            232.82000732421875,
+            239.82000732421875,
+            273.2300109863281
+          ],
+          "volume": [
+            34999500,
+            44521600,
+            44957500,
+            101839800,
+            128881300
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            232.11000061035156,
             231.38999938964844,
             230.86000061035156,
             226.64999389648438,
-            235.5
+            235.5,
+            271.5799865722656
           ]
         }
       ]

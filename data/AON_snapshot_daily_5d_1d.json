@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:43.233Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AON?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AON",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 328800600,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 360.55,
+      "fiftyTwoWeekHigh": 382.34,
+      "fiftyTwoWeekLow": 304.59,
+      "regularMarketDayHigh": 365.02,
+      "regularMarketDayLow": 359.78,
+      "regularMarketVolume": 917990,
+      "longName": "Aon plc",
+      "shortName": "Aon plc",
+      "chartPreviousClose": 361.7,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            359.79998779296875,
+            367.1700134277344,
+            362.260009765625,
+            358.489990234375,
+            359.7799987792969
+          ],
+          "close": [
+            367.1700134277344,
+            381.260009765625,
+            377.1600036621094,
+            366.57000732421875,
+            360.54998779296875
+          ],
+          "high": [
+            369.75,
+            382.3399963378906,
+            379.5,
+            370.489990234375,
+            365.0199890136719
+          ],
+          "volume": [
+            1590500,
+            1508000,
+            2010600,
+            4227700,
+            1315600
+          ],
+          "open": [
+            362.0299987792969,
+            370,
+            367.6400146484375,
+            367.19000244140625,
+            363.0799865722656
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            367.1700134277344,
+            381.260009765625,
+            377.1600036621094,
+            366.57000732421875,
+            360.54998779296875
+          ]
+        }
+      ]
+    }
+  }
+}

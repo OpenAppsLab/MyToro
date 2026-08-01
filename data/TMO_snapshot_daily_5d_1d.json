@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:05:31.412Z",
+  "fetchedAt": "2026-08-01T14:15:59.909Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TMO?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785441602,
+      "regularMarketTime": 1785528002,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 576.77,
+      "regularMarketPrice": 574.3,
       "fiftyTwoWeekHigh": 643.99,
       "fiftyTwoWeekLow": 435.27,
-      "regularMarketDayHigh": 577.05,
-      "regularMarketDayLow": 560.42,
-      "regularMarketVolume": 1760998,
+      "regularMarketDayHigh": 577.59,
+      "regularMarketDayLow": 562.87,
+      "regularMarketVolume": 1610965,
       "longName": "Thermo Fisher Scientific Inc.",
       "shortName": "Thermo Fisher Scientific Inc",
-      "chartPreviousClose": 572.32,
+      "chartPreviousClose": 568.26,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
           "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
           "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
           "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            2939400,
-            1962000,
-            3034300,
-            2546800,
-            2264700
-          ],
-          "high": [
-            574,
-            568.3499755859375,
-            588.5599975585938,
-            584.5399780273438,
-            577.0499877929688
-          ],
           "open": [
-            570,
             565,
             572,
             578.7100219726562,
-            567.3699951171875
+            567.3699951171875,
+            573.4000244140625
           ],
-          "low": [
-            555.9099731445312,
-            556.010009765625,
-            568.97998046875,
-            571.2000122070312,
-            560.4199829101562
+          "high": [
+            568.3499755859375,
+            588.5599975585938,
+            584.5399780273438,
+            577.0499877929688,
+            577.5900268554688
           ],
           "close": [
-            568.260009765625,
             559.530029296875,
             576.4099731445312,
             576.4600219726562,
-            576.77001953125
+            576.77001953125,
+            574.2999877929688
+          ],
+          "volume": [
+            1962000,
+            3034300,
+            2546800,
+            2264700,
+            2112300
+          ],
+          "low": [
+            556.010009765625,
+            568.97998046875,
+            571.2000122070312,
+            560.4199829101562,
+            562.8699951171875
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            568.260009765625,
             559.530029296875,
             576.4099731445312,
             576.4600219726562,
-            576.77001953125
+            576.77001953125,
+            574.2999877929688
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:05:42.779Z",
+  "fetchedAt": "2026-08-01T14:17:10.461Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TECH?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 603037800,
-      "regularMarketTime": 1785441600,
+      "regularMarketTime": 1785528001,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 72.03,
+      "regularMarketPrice": 72.09,
       "fiftyTwoWeekHigh": 72.37,
       "fiftyTwoWeekLow": 43.2,
-      "regularMarketDayHigh": 72.21,
-      "regularMarketDayLow": 71.99,
-      "regularMarketVolume": 5150467,
+      "regularMarketDayHigh": 72.17,
+      "regularMarketDayLow": 71.955,
+      "regularMarketVolume": 4032934,
       "longName": "Bio-Techne Corporation",
       "shortName": "Bio-Techne Corp",
-      "chartPreviousClose": 71.77,
+      "chartPreviousClose": 71.6,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            71.9000015258789,
-            71.66000366210938,
-            71.76000213623047,
-            72.12999725341797,
-            72.0199966430664
-          ],
-          "high": [
-            71.94000244140625,
-            71.87999725341797,
-            72.16000366210938,
-            72.37000274658203,
-            72.20999908447266
-          ],
-          "volume": [
-            2065700,
-            3796400,
-            7785800,
-            6272400,
-            6052000
-          ],
           "low": [
             71.58000183105469,
-            71.58000183105469,
             71.76000213623047,
             71.94000244140625,
-            71.98999786376953
+            71.98999786376953,
+            71.95999908447266
           ],
           "close": [
-            71.5999984741211,
             71.62000274658203,
             72.06999969482422,
             72.02999877929688,
-            72.02999877929688
+            72.02999877929688,
+            72.08999633789062
+          ],
+          "open": [
+            71.66000366210938,
+            71.76000213623047,
+            72.12999725341797,
+            72.0199966430664,
+            72.08999633789062
+          ],
+          "high": [
+            71.87999725341797,
+            72.16000366210938,
+            72.37000274658203,
+            72.20999908447266,
+            72.16999816894531
+          ],
+          "volume": [
+            3796400,
+            7785800,
+            6272400,
+            6052000,
+            4033500
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            71.5999984741211,
             71.62000274658203,
             72.06999969482422,
             72.02999877929688,
-            72.02999877929688
+            72.02999877929688,
+            72.08999633789062
           ]
         }
       ]

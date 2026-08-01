@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:45.930Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETN?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ETN",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 76253400,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 415.2,
+      "fiftyTwoWeekHigh": 436.74,
+      "fiftyTwoWeekLow": 311.92,
+      "regularMarketDayHigh": 419.36,
+      "regularMarketDayLow": 394.41,
+      "regularMarketVolume": 4430408,
+      "longName": "Eaton Corporation plc",
+      "shortName": "Eaton Corporation, PLC",
+      "chartPreviousClose": 404.07,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            404,
+            383.2699890136719,
+            382.20001220703125,
+            381.5,
+            420
+          ],
+          "volume": [
+            2138900,
+            2963500,
+            4513900,
+            3897300,
+            4548500
+          ],
+          "high": [
+            407.6600036621094,
+            388.57000732421875,
+            386.5199890136719,
+            389.3900146484375,
+            420
+          ],
+          "close": [
+            398.6400146484375,
+            386.260009765625,
+            361.8800048828125,
+            386.8900146484375,
+            415.20001220703125
+          ],
+          "low": [
+            387.5,
+            375.75,
+            358.1300048828125,
+            378.5799865722656,
+            394.4100036621094
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            398.6400146484375,
+            386.260009765625,
+            361.8800048828125,
+            386.8900146484375,
+            415.20001220703125
+          ]
+        }
+      ]
+    }
+  }
+}

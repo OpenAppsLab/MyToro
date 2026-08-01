@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:05:27.577Z",
+  "fetchedAt": "2026-08-01T14:15:49.763Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/REGN?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 670602600,
-      "regularMarketTime": 1785441600,
+      "regularMarketTime": 1785528000,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 738.34,
+      "regularMarketPrice": 762.63,
       "fiftyTwoWeekHigh": 821.11,
       "fiftyTwoWeekLow": 541,
-      "regularMarketDayHigh": 740,
-      "regularMarketDayLow": 694.98,
-      "regularMarketVolume": 1429257,
+      "regularMarketDayHigh": 764.65,
+      "regularMarketDayLow": 724.79,
+      "regularMarketVolume": 1126578,
       "longName": "Regeneron Pharmaceuticals, Inc.",
       "shortName": "Regeneron Pharmaceuticals, Inc.",
-      "chartPreviousClose": 651.91,
+      "chartPreviousClose": 656.01,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            656.010009765625,
-            667.1699829101562,
-            695.1799926757812,
-            695.4199829101562,
-            738.3400268554688
-          ],
-          "volume": [
-            708400,
-            650800,
-            900200,
-            1022100,
-            1460700
-          ],
-          "open": [
-            658.2899780273438,
-            661.77001953125,
-            676.9299926757812,
-            699.3800048828125,
-            701.9000244140625
-          ],
-          "high": [
-            667.5,
-            678.1199951171875,
-            696.739990234375,
-            702.5999755859375,
-            740
-          ],
           "low": [
-            654.0499877929688,
             659.530029296875,
             676.4600219726562,
             691,
-            694.97998046875
+            694.97998046875,
+            724.7899780273438
+          ],
+          "close": [
+            667.1699829101562,
+            695.1799926757812,
+            695.4199829101562,
+            738.3400268554688,
+            762.6300048828125
+          ],
+          "open": [
+            661.77001953125,
+            676.9299926757812,
+            699.3800048828125,
+            701.9000244140625,
+            726.6900024414062
+          ],
+          "high": [
+            678.1199951171875,
+            696.739990234375,
+            702.5999755859375,
+            740,
+            764.75
+          ],
+          "volume": [
+            650800,
+            900200,
+            1022100,
+            1460700,
+            1158300
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            656.010009765625,
             667.1699829101562,
             695.1799926757812,
             695.4199829101562,
-            738.3400268554688
+            738.3400268554688,
+            762.6300048828125
           ]
         }
       ]

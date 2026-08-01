@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:04:03.698Z",
+  "fetchedAt": "2026-08-01T14:15:38.817Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1340976600,
-      "regularMarketTime": 1785441603,
+      "regularMarketTime": 1785528003,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 110.07,
-      "fiftyTwoWeekHigh": 196.4,
+      "regularMarketPrice": 111.23,
+      "fiftyTwoWeekHigh": 194.726,
       "fiftyTwoWeekLow": 81.24,
-      "regularMarketDayHigh": 113.115,
-      "regularMarketDayLow": 106.38,
-      "regularMarketVolume": 26647525,
+      "regularMarketDayHigh": 112.39,
+      "regularMarketDayLow": 106.67,
+      "regularMarketVolume": 18903638,
       "longName": "ServiceNow, Inc.",
       "shortName": "ServiceNow, Inc.",
-      "chartPreviousClose": 91.94,
+      "chartPreviousClose": 98.78,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            29625400,
-            32533700,
-            33681100,
-            40448100,
-            29665300
-          ],
-          "high": [
-            98.93000030517578,
-            108.1500015258789,
-            112.27999877929688,
-            118.36000061035156,
-            113.12000274658203
-          ],
           "open": [
-            94.91999816894531,
             101.87000274658203,
             106.87999725341797,
             110.41999816894531,
-            110.5
+            110.5,
+            108.5
           ],
-          "low": [
-            94.87000274658203,
-            100.3499984741211,
-            106.5,
-            109.5,
-            106.37999725341797
+          "high": [
+            108.1500015258789,
+            112.27999877929688,
+            118.36000061035156,
+            113.12000274658203,
+            112.38999938964844
           ],
           "close": [
-            98.77999877929688,
             105.55999755859375,
             110.62000274658203,
             115.76000213623047,
-            110.06999969482422
+            110.06999969482422,
+            111.2300033569336
+          ],
+          "volume": [
+            32533700,
+            33681100,
+            40448100,
+            29757900,
+            20455600
+          ],
+          "low": [
+            100.3499984741211,
+            106.5,
+            109.5,
+            106.37999725341797,
+            106.05000305175781
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            98.77999877929688,
             105.55999755859375,
             110.62000274658203,
             115.76000213623047,
-            110.06999969482422
+            110.06999969482422,
+            111.2300033569336
           ]
         }
       ]

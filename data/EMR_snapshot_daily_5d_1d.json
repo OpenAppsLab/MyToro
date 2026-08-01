@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:55.871Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EMR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "EMR",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 76253400,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 149.82,
+      "fiftyTwoWeekHigh": 165.15,
+      "fiftyTwoWeekLow": 122.64,
+      "regularMarketDayHigh": 150.69,
+      "regularMarketDayLow": 147.955,
+      "regularMarketVolume": 2123217,
+      "longName": "Emerson Electric Co.",
+      "shortName": "Emerson Electric Company",
+      "chartPreviousClose": 147.94,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            148.60000610351562,
+            149,
+            150.77999877929688,
+            149.2899932861328,
+            149.72999572753906
+          ],
+          "volume": [
+            2835200,
+            2740100,
+            3601400,
+            2910900,
+            3724600
+          ],
+          "high": [
+            150.7899932861328,
+            152.08999633789062,
+            150.77999877929688,
+            149.61000061035156,
+            151
+          ],
+          "low": [
+            146.9199981689453,
+            147.6199951171875,
+            145.10000610351562,
+            146.75,
+            147.9499969482422
+          ],
+          "close": [
+            149.3000030517578,
+            151.80999755859375,
+            145.72999572753906,
+            148.63999938964844,
+            149.82000732421875
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            149.3000030517578,
+            151.80999755859375,
+            145.72999572753906,
+            148.63999938964844,
+            149.82000732421875
+          ]
+        }
+      ]
+    }
+  }
+}

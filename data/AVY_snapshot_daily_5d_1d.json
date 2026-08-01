@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:01.197Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVY?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "AVY",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 99153000,
+      "regularMarketTime": 1785528002,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 169.73,
+      "fiftyTwoWeekHigh": 199.54,
+      "fiftyTwoWeekLow": 152.42,
+      "regularMarketDayHigh": 174.17,
+      "regularMarketDayLow": 167.87,
+      "regularMarketVolume": 963597,
+      "longName": "Avery Dennison Corporation",
+      "shortName": "Avery Dennison Corporation",
+      "chartPreviousClose": 160.9,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            161.0500030517578,
+            165.88999938964844,
+            165.38999938964844,
+            173.64999389648438,
+            167.8699951171875
+          ],
+          "high": [
+            164.50999450683594,
+            171.14999389648438,
+            167.8800048828125,
+            187.91000366210938,
+            174.1699981689453
+          ],
+          "open": [
+            161.83999633789062,
+            165.88999938964844,
+            166.60000610351562,
+            185.58999633789062,
+            172.27000427246094
+          ],
+          "close": [
+            163.02999877929688,
+            169.1300048828125,
+            167.13999938964844,
+            174.82000732421875,
+            169.72999572753906
+          ],
+          "volume": [
+            788800,
+            969800,
+            1052100,
+            2072600,
+            1336800
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            163.02999877929688,
+            169.1300048828125,
+            167.13999938964844,
+            174.82000732421875,
+            169.72999572753906
+          ]
+        }
+      ]
+    }
+  }
+}

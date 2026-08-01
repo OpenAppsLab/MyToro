@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:49.784Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ADM?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ADM",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 322151400,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 79.27,
+      "fiftyTwoWeekHigh": 88.46,
+      "fiftyTwoWeekLow": 53.56,
+      "regularMarketDayHigh": 80.44,
+      "regularMarketDayLow": 79.17,
+      "regularMarketVolume": 3484047,
+      "longName": "Archer-Daniels-Midland Company",
+      "shortName": "Archer-Daniels-Midland Company",
+      "chartPreviousClose": 85.92,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            84.43000030517578,
+            83.81999969482422,
+            84.04000091552734,
+            80.41000366210938,
+            80.30000305175781
+          ],
+          "volume": [
+            3733100,
+            4612100,
+            5105000,
+            3258800,
+            7587600
+          ],
+          "high": [
+            84.5,
+            84.62999725341797,
+            84.16000366210938,
+            81.29000091552734,
+            80.44000244140625
+          ],
+          "low": [
+            82.48999786376953,
+            82.12000274658203,
+            80.06999969482422,
+            78.93000030517578,
+            79.16999816894531
+          ],
+          "close": [
+            83.19000244140625,
+            83.18000030517578,
+            80.37999725341797,
+            80.61000061035156,
+            79.2699966430664
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            83.19000244140625,
+            83.18000030517578,
+            80.37999725341797,
+            80.61000061035156,
+            79.2699966430664
+          ]
+        }
+      ]
+    }
+  }
+}

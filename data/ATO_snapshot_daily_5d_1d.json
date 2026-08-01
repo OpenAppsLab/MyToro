@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:56.785Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ATO?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ATO",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 441469800,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 172.78,
+      "fiftyTwoWeekHigh": 192.51,
+      "fiftyTwoWeekLow": 155.56,
+      "regularMarketDayHigh": 174.92,
+      "regularMarketDayLow": 172.22,
+      "regularMarketVolume": 505716,
+      "longName": "Atmos Energy Corporation",
+      "shortName": "Atmos Energy Corporation",
+      "chartPreviousClose": 179.22,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            180.7899932861328,
+            179.61000061035156,
+            180.49000549316406,
+            176.94000244140625,
+            173.3000030517578
+          ],
+          "low": [
+            177.57000732421875,
+            178.97000122070312,
+            177.08999633789062,
+            173.5500030517578,
+            172.22000122070312
+          ],
+          "close": [
+            178.22000122070312,
+            179.3800048828125,
+            177.6699981689453,
+            174.25999450683594,
+            172.77999877929688
+          ],
+          "volume": [
+            638500,
+            984400,
+            961400,
+            1156700,
+            1045400
+          ],
+          "high": [
+            180.7899932861328,
+            182.63999938964844,
+            181.3699951171875,
+            177.4199981689453,
+            174.9199981689453
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            178.22000122070312,
+            179.3800048828125,
+            177.6699981689453,
+            174.25999450683594,
+            172.77999877929688
+          ]
+        }
+      ]
+    }
+  }
+}

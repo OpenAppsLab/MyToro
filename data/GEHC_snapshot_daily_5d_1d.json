@@ -1,0 +1,122 @@
+{
+  "fetchedAt": "2026-08-01T14:19:37.847Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GEHC?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "GEHC",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1671114600,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 68.02,
+      "fiftyTwoWeekHigh": 89.77,
+      "fiftyTwoWeekLow": 58.75,
+      "regularMarketDayHigh": 69.02,
+      "regularMarketDayLow": 67.16,
+      "regularMarketVolume": 4922333,
+      "longName": "GE HealthCare Technologies Inc.",
+      "shortName": "GE HealthCare Technologies Inc.",
+      "chartPreviousClose": 60.58,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            6052100,
+            7986800,
+            15269600,
+            7665100,
+            5126700
+          ],
+          "close": [
+            61.119998931884766,
+            64.11000061035156,
+            71.9000015258789,
+            69.94000244140625,
+            68.0199966430664
+          ],
+          "open": [
+            62.040000915527344,
+            61.400001525878906,
+            69.31999969482422,
+            71.37000274658203,
+            68.83999633789062
+          ],
+          "high": [
+            62.70000076293945,
+            64.25499725341797,
+            72.04000091552734,
+            71.81999969482422,
+            69.0199966430664
+          ],
+          "low": [
+            60.93000030517578,
+            61.400001525878906,
+            68.08000183105469,
+            68.26000213623047,
+            67.15499877929688
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            61.119998931884766,
+            64.11000061035156,
+            71.9000015258789,
+            69.94000244140625,
+            68.0199966430664
+          ]
+        }
+      ]
+    }
+  }
+}

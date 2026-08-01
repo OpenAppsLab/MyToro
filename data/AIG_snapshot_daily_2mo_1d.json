@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:52:54.884Z",
+  "fetchedAt": "2026-08-01T14:16:35.881Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AIG?interval=1d&range=2mo",
   "result": {
     "meta": {
@@ -9,17 +9,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 94833000,
-      "regularMarketTime": 1785441603,
+      "regularMarketTime": 1785528003,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 78.89,
+      "regularMarketPrice": 78.58,
       "fiftyTwoWeekHigh": 87.29,
       "fiftyTwoWeekLow": 71.25,
-      "regularMarketDayHigh": 79.83,
-      "regularMarketDayLow": 77.47,
-      "regularMarketVolume": 2552665,
+      "regularMarketDayHigh": 78.94,
+      "regularMarketDayLow": 78.15,
+      "regularMarketVolume": 1777389,
       "longName": "American International Group, Inc.",
       "shortName": "American International Group, I",
       "chartPreviousClose": 74.23,
@@ -102,7 +102,8 @@
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
@@ -149,7 +150,8 @@
             2549300,
             3315600,
             2649800,
-            3507300
+            3507300,
+            3570100
           ],
           "high": [
             74.30999755859375,
@@ -193,7 +195,8 @@
             80.2699966430664,
             81.0199966430664,
             80.98999786376953,
-            80.06999969482422
+            80.06999969482422,
+            78.94000244140625
           ],
           "open": [
             73.44000244140625,
@@ -237,7 +240,8 @@
             79.08999633789062,
             79.7699966430664,
             80.76000213623047,
-            79.91000366210938
+            79.91000366210938,
+            78.56999969482422
           ],
           "low": [
             73.41999816894531,
@@ -281,7 +285,8 @@
             79.08999633789062,
             79.58999633789062,
             80.0199966430664,
-            77.47000122070312
+            77.47000122070312,
+            78.1500015258789
           ],
           "close": [
             73.44999694824219,
@@ -325,7 +330,8 @@
             79.16000366210938,
             80.83000183105469,
             80.19999694824219,
-            78.88999938964844
+            78.88999938964844,
+            78.58000183105469
           ]
         }
       ],
@@ -373,7 +379,8 @@
             79.16000366210938,
             80.83000183105469,
             80.19999694824219,
-            78.88999938964844
+            78.88999938964844,
+            78.58000183105469
           ]
         }
       ]

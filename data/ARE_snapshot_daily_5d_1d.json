@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:24.231Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARE?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ARE",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 864826200,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 51.45,
+      "fiftyTwoWeekHigh": 88.24,
+      "fiftyTwoWeekLow": 39.41,
+      "regularMarketDayHigh": 52.54,
+      "regularMarketDayLow": 51.2,
+      "regularMarketVolume": 1555855,
+      "longName": "Alexandria Real Estate Equities, Inc.",
+      "shortName": "Alexandria Real Estate Equities",
+      "chartPreviousClose": 50.94,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            52.209999084472656,
+            54.04999923706055,
+            55.7400016784668,
+            53.68000030517578,
+            52.630001068115234
+          ],
+          "volume": [
+            1468200,
+            2690500,
+            2497100,
+            1475300,
+            1559200
+          ],
+          "low": [
+            50.939998626708984,
+            51.95000076293945,
+            53.43000030517578,
+            51.900001525878906,
+            51.20000076293945
+          ],
+          "open": [
+            51.130001068115234,
+            52.0099983215332,
+            54.439998626708984,
+            53.349998474121094,
+            52.060001373291016
+          ],
+          "close": [
+            51.38999938964844,
+            54,
+            53.77000045776367,
+            52.4900016784668,
+            51.45000076293945
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            51.38999938964844,
+            54,
+            53.77000045776367,
+            52.4900016784668,
+            51.45000076293945
+          ]
+        }
+      ]
+    }
+  }
+}

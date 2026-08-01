@@ -34,12 +34,19 @@ function saveHistory(entries, orders) {
   localStorage.setItem(LOCAL_HISTORY_KEY, JSON.stringify({ entries: normalizedEntries, orders: normalizedOrders }));
 }
 
-function exportHistoryData() {
+async function exportHistoryData() {
   const history = loadHistory();
+  const savedOrders = Array.isArray(history.orders) ? history.orders : [];
+  const liveOrders = await loadPendingOrders();
+  const orders = [
+    ...savedOrders,
+    ...liveOrders.filter((order) => !savedOrders.some((saved) => saved.id === order.id))
+  ];
+
   const payload = {
     exportedAt: new Date().toISOString(),
-    entries: history.entries,
-    orders: history.orders
+    entries: Array.isArray(history.entries) ? history.entries : [],
+    orders
   };
 
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
@@ -80,13 +87,21 @@ async function importHistoryData(file) {
   }
 }
 
-function getNewYorkDateParts(value = new Date()) {
+function parseHistoryDateValue(value) {
+  if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    const [year, month, day] = value.split('-').map(Number);
+    return new Date(Date.UTC(year, month - 1, day, 12));
+  }
+  return new Date(value);
+}
+
+function getDateParts(value = new Date(), timeZone) {
   const parts = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'America/New_York',
+    timeZone,
     year: 'numeric',
     month: '2-digit',
     day: '2-digit'
-  }).formatToParts(new Date(value));
+  }).formatToParts(parseHistoryDateValue(value));
 
   return {
     year: parts.find((part) => part.type === 'year')?.value,
@@ -95,27 +110,46 @@ function getNewYorkDateParts(value = new Date()) {
   };
 }
 
+function getBrisbaneDateParts(value = new Date()) {
+  return getDateParts(value, 'Australia/Brisbane');
+}
+
+function getNewYorkDateParts(value = new Date()) {
+  return getDateParts(value, 'America/New_York');
+}
+
 function toDateKey(value) {
-  const { year, month, day } = getNewYorkDateParts(value);
+  const { year, month, day } = getBrisbaneDateParts(value);
   return `${year}-${month}-${day}`;
 }
 
 function formatDisplayDate(value) {
-  const date = new Date(value);
+  const date = parseHistoryDateValue(value);
   return date.toLocaleDateString(undefined, {
     weekday: 'short',
     month: 'short',
     day: 'numeric',
     year: 'numeric',
-    timeZone: 'America/New_York'
+    timeZone: 'Australia/Brisbane'
   });
 }
 
 function isWeekend(dateKey) {
-  const [year, month, day] = dateKey.split('-').map(Number);
-  const date = new Date(Date.UTC(year, month - 1, day, 12));
-  const weekday = date.getUTCDay();
-  return weekday === 0 || weekday === 6;
+  const date = parseHistoryDateValue(dateKey);
+  const weekday = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Australia/Brisbane',
+    weekday: 'short'
+  }).formatToParts(date).find((part) => part.type === 'weekday')?.value;
+  return weekday === 'Sat' || weekday === 'Sun';
+}
+
+function getBrisbaneWeekdayIndex(value) {
+  const date = parseHistoryDateValue(value);
+  const weekday = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Australia/Brisbane',
+    weekday: 'short'
+  }).format(date);
+  return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(weekday);
 }
 
 async function loadPendingOrders() {
@@ -243,21 +277,22 @@ function buildHistoryGroups(entries, orders) {
 }
 
 function buildDateTiles(groups) {
-  const { year: currentYear, month: currentMonth } = getNewYorkDateParts();
+  const { year: currentYear, month: currentMonth } = getBrisbaneDateParts();
   const year = Number(currentYear);
   const month = Number(currentMonth) - 1;
-  const firstDayOfMonth = new Date(Date.UTC(year, month, 1));
-  const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
-  const firstWeekday = (firstDayOfMonth.getUTCDay() + 6) % 7;
-  const totalCells = Math.ceil((firstWeekday + daysInMonth) / 7) * 7;
+  const firstDayOfMonth = new Date(Date.UTC(year, month, 1, 12));
+  const firstWeekday = getBrisbaneWeekdayIndex(firstDayOfMonth);
+  const adjustedFirstWeekday = (firstWeekday + 6) % 7;
+  const daysInMonth = new Date(Date.UTC(year, month + 1, 0, 12)).getUTCDate();
+  const totalCells = Math.ceil((adjustedFirstWeekday + daysInMonth) / 7) * 7;
 
   const headerLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   const headerMarkup = headerLabels.map((label) => `<div class="calendar-header-cell">${label}</div>`).join('');
   const cells = [];
 
   for (let index = 0; index < totalCells; index += 1) {
-    const cellDate = new Date(Date.UTC(year, month, index - firstWeekday + 1));
-    const cellParts = getNewYorkDateParts(cellDate);
+    const cellDate = new Date(Date.UTC(year, month, index - adjustedFirstWeekday + 1, 12));
+    const cellParts = getBrisbaneDateParts(cellDate);
     const cellYear = Number(cellParts.year);
     const cellMonth = Number(cellParts.month) - 1;
     const isCurrentMonth = cellYear === year && cellMonth === month;
@@ -305,14 +340,6 @@ function clearAllSavedData() {
 function getOrderRealizedPnl(order) {
   if (!order || order.status === 'pending') {
     return 0;
-  }
-
-  if (order.result === 'profit-hit') {
-    return Number(order.targetProfit || 0);
-  }
-
-  if (order.result === 'loss-hit') {
-    return -Number(order.stopLossAmount || 0);
   }
 
   const entryPrice = Number(order.resolvedEntryPrice || order.entryPrice || 0);
@@ -391,7 +418,23 @@ function openHistoryModal(dateKey) {
   } else {
     historyModalContent.innerHTML = [
       ...selectedOrders.map(renderOrderDetailCard),
-      ...selectedEntries.map(renderOrderDetailCard)
+      ...selectedEntries.map((entry) => {
+        const historyOrder = {
+          symbol: entry.symbol || 'Unknown',
+          entryPrice: Number(entry.entryPrice || entry.targetPrice || 0),
+          currentPrice: Number(entry.targetPrice || entry.entryPrice || 0),
+          ballparkAmount: Number(entry.ballparkAmount || entry.amount || 0),
+          leverage: Number(entry.leverage || 1),
+          trailingStopPrice: Number(entry.trailingStopPrice || entry.stopLossPrice || 0),
+          stopLossPct: Number(entry.stopLossPct || 0),
+          targetProfit: Number(entry.minProfit || entry.targetProfit || 0),
+          status: entry.correct ? 'green' : 'red',
+          result: entry.correct ? 'profit-hit' : 'loss-hit',
+          resolvedEntryPrice: Number(entry.entryPrice || entry.targetPrice || 0),
+          resolvedCurrentPrice: Number(entry.targetPrice || entry.entryPrice || 0)
+        };
+        return renderOrderDetailCard(historyOrder);
+      })
     ].join('');
   }
 
@@ -434,7 +477,7 @@ async function renderHistoryFull() {
   ];
   window.historyOrders = orders; // store fetched orders for modal use
   const groups = buildHistoryGroups(entries, orders);
-  const { year: currentYear, month: currentMonth } = getNewYorkDateParts();
+  const { year: currentYear, month: currentMonth } = getBrisbaneDateParts();
   const profitDays = Object.entries(groups).reduce((sum, [dateKey, group]) => {
     const [groupYear, groupMonth] = dateKey.split('-').map(Number);
     if (groupYear !== Number(currentYear) || groupMonth !== Number(currentMonth)) {

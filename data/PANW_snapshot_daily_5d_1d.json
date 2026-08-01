@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:04:07.766Z",
+  "fetchedAt": "2026-08-01T14:15:40.845Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1342791000,
-      "regularMarketTime": 1785441600,
+      "regularMarketTime": 1785528000,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 325.68,
+      "regularMarketPrice": 331.83,
       "fiftyTwoWeekHigh": 368.8,
       "fiftyTwoWeekLow": 139.57,
-      "regularMarketDayHigh": 326.295,
-      "regularMarketDayLow": 313.045,
-      "regularMarketVolume": 6637994,
+      "regularMarketDayHigh": 333.98,
+      "regularMarketDayLow": 319.48,
+      "regularMarketVolume": 5023621,
       "longName": "Palo Alto Networks, Inc.",
       "shortName": "Palo Alto Networks, Inc.",
-      "chartPreviousClose": 325.63,
+      "chartPreviousClose": 323.79,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            328.0899963378906,
-            331.510009765625,
-            317.510009765625,
-            319.3800048828125,
-            316.0299987792969
-          ],
-          "low": [
-            321.69000244140625,
-            316.70001220703125,
-            308.5400085449219,
-            310.4599914550781,
-            313.04998779296875
-          ],
-          "close": [
-            323.7900085449219,
-            317.32000732421875,
-            319,
-            314.1499938964844,
-            325.67999267578125
-          ],
           "volume": [
-            5134300,
             5223400,
             6507500,
             6336700,
-            6859300
+            6859300,
+            5024700
+          ],
+          "open": [
+            331.510009765625,
+            317.510009765625,
+            319.3800048828125,
+            316.0299987792969,
+            332.3399963378906
+          ],
+          "low": [
+            316.70001220703125,
+            308.5400085449219,
+            310.4599914550781,
+            313.04998779296875,
+            319.4800109863281
           ],
           "high": [
-            330,
             331.80999755859375,
             323.3999938964844,
             322.1099853515625,
-            326.29998779296875
+            326.29998779296875,
+            333.9800109863281
+          ],
+          "close": [
+            317.32000732421875,
+            319,
+            314.1499938964844,
+            325.67999267578125,
+            331.8299865722656
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            323.7900085449219,
             317.32000732421875,
             319,
             314.1499938964844,
-            325.67999267578125
+            325.67999267578125,
+            331.8299865722656
           ]
         }
       ]

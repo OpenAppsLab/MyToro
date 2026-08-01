@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:12.605Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BX?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BX",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1182519000,
+      "regularMarketTime": 1785528196,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 127.75,
+      "fiftyTwoWeekHigh": 190.09,
+      "fiftyTwoWeekLow": 101.73,
+      "regularMarketDayHigh": 129.07,
+      "regularMarketDayLow": 127.19,
+      "regularMarketVolume": 4893106,
+      "longName": "Blackstone Inc.",
+      "shortName": "Blackstone Inc.",
+      "chartPreviousClose": 130,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            132,
+            132.27000427246094,
+            132.91000366210938,
+            131.1999969482422,
+            127.77999877929688
+          ],
+          "low": [
+            130.41000366210938,
+            130.39999389648438,
+            127.75,
+            125.72000122070312,
+            127.19000244140625
+          ],
+          "close": [
+            132.60000610351562,
+            133.89999389648438,
+            129.39999389648438,
+            128.07000732421875,
+            127.75
+          ],
+          "high": [
+            135.44000244140625,
+            134.02000427246094,
+            133.49000549316406,
+            131.1999969482422,
+            129.08999633789062
+          ],
+          "volume": [
+            6801300,
+            6229400,
+            6291600,
+            5740600,
+            4894700
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            132.60000610351562,
+            133.89999389648438,
+            129.39999389648438,
+            128.07000732421875,
+            127.75
+          ]
+        }
+      ]
+    }
+  }
+}

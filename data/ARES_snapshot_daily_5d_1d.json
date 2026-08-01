@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:50.894Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARES?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ARES",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1399037400,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 128.09,
+      "fiftyTwoWeekHigh": 195.26,
+      "fiftyTwoWeekLow": 95.8,
+      "regularMarketDayHigh": 128.71,
+      "regularMarketDayLow": 121.29,
+      "regularMarketVolume": 2832771,
+      "longName": "Ares Management Corporation",
+      "shortName": "Ares Management Corporation",
+      "chartPreviousClose": 126.51,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            3179300,
+            2619400,
+            2745200,
+            2937400,
+            4177600
+          ],
+          "high": [
+            131.33999633789062,
+            129.50999450683594,
+            127.26000213623047,
+            124.98999786376953,
+            128.7449951171875
+          ],
+          "open": [
+            126.51000213623047,
+            127.77999877929688,
+            126.55999755859375,
+            124.75,
+            128.44000244140625
+          ],
+          "low": [
+            125.83000183105469,
+            126.56999969482422,
+            123.12000274658203,
+            121.66000366210938,
+            121.29000091552734
+          ],
+          "close": [
+            127.76000213623047,
+            127.9000015258789,
+            124.5999984741211,
+            124.12000274658203,
+            128.08999633789062
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            127.76000213623047,
+            127.9000015258789,
+            124.5999984741211,
+            124.12000274658203,
+            128.08999633789062
+          ]
+        }
+      ]
+    }
+  }
+}

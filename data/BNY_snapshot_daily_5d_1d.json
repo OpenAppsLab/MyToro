@@ -1,0 +1,122 @@
+{
+  "fetchedAt": "2026-08-01T14:17:14.757Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BNY?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BNY",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 105283800,
+      "regularMarketTime": 1785528021,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 156.33,
+      "fiftyTwoWeekHigh": 163.77,
+      "fiftyTwoWeekLow": 99.67,
+      "regularMarketDayHigh": 157.285,
+      "regularMarketDayLow": 155.785,
+      "regularMarketVolume": 1521000,
+      "shortName": "The Bank of New York Mellon Cor",
+      "chartPreviousClose": 158.91,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            156.97999572753906,
+            154.8800048828125,
+            151.67999267578125,
+            153.02000427246094,
+            155.7100067138672
+          ],
+          "high": [
+            160.25,
+            159.02999877929688,
+            157.25,
+            156.32000732421875,
+            157.2899932861328
+          ],
+          "close": [
+            157.77000427246094,
+            156.49000549316406,
+            152.5,
+            156.0800018310547,
+            156.3300018310547
+          ],
+          "open": [
+            158.85000610351562,
+            157.47999572753906,
+            156.16000366210938,
+            153.85000610351562,
+            156.6699981689453
+          ],
+          "volume": [
+            2835700,
+            3484800,
+            2836000,
+            2516600,
+            2336000
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            157.77000427246094,
+            156.49000549316406,
+            152.5,
+            156.0800018310547,
+            156.3300018310547
+          ]
+        }
+      ]
+    }
+  }
+}

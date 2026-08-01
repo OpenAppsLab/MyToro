@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:16:27.613Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/LNT?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "LNT",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 99153000,
+      "regularMarketTime": 1785528000,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 70.78,
+      "fiftyTwoWeekHigh": 78.81,
+      "fiftyTwoWeekLow": 63.28,
+      "regularMarketDayHigh": 71.14,
+      "regularMarketDayLow": 69.92,
+      "regularMarketVolume": 3238025,
+      "longName": "Alliant Energy Corporation",
+      "shortName": "Alliant Energy Corporation",
+      "chartPreviousClose": 74.94,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            74.63999938964844,
+            74.8499984741211,
+            74.12000274658203,
+            72.16999816894531,
+            70.45999908447266
+          ],
+          "volume": [
+            2139700,
+            2099000,
+            3418900,
+            3165400,
+            3239600
+          ],
+          "low": [
+            73.7300033569336,
+            73.79000091552734,
+            71.69999694824219,
+            70.69000244140625,
+            69.91999816894531
+          ],
+          "high": [
+            75.16999816894531,
+            75.30999755859375,
+            74.30999755859375,
+            72.29000091552734,
+            71.13999938964844
+          ],
+          "close": [
+            73.93000030517578,
+            73.79000091552734,
+            72,
+            70.88999938964844,
+            70.77999877929688
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            73.37205505371094,
+            73.23311614990234,
+            71.45661926269531,
+            70.35499572753906,
+            70.77999877929688
+          ]
+        }
+      ]
+    }
+  }
+}

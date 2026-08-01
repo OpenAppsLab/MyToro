@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:48.131Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ECHO?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "ECHO",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1199284200,
+      "regularMarketTime": 1785528001,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 84.09,
+      "fiftyTwoWeekHigh": 147.25,
+      "fiftyTwoWeekLow": 26.06,
+      "regularMarketDayHigh": 86.98,
+      "regularMarketDayLow": 83.75,
+      "regularMarketVolume": 4126131,
+      "longName": "EchoStar Corporation",
+      "shortName": "EchoStar Corporation",
+      "chartPreviousClose": 87.88,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "high": [
+            88.66999816894531,
+            86.05000305175781,
+            88.22000122070312,
+            87.02999877929688,
+            86.9800033569336
+          ],
+          "volume": [
+            3517700,
+            7229500,
+            8089600,
+            5673600,
+            4126300
+          ],
+          "low": [
+            85.81999969482422,
+            82.88999938964844,
+            82.4800033569336,
+            83.98999786376953,
+            83.75
+          ],
+          "open": [
+            87.12999725341797,
+            84.45999908447266,
+            86.26000213623047,
+            85.1500015258789,
+            86.9800033569336
+          ],
+          "close": [
+            86.69000244140625,
+            85.93000030517578,
+            83.88999938964844,
+            86.12999725341797,
+            84.08999633789062
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            86.69000244140625,
+            85.93000030517578,
+            83.88999938964844,
+            86.12999725341797,
+            84.08999633789062
+          ]
+        }
+      ]
+    }
+  }
+}

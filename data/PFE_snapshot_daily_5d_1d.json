@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:05:25.166Z",
+  "fetchedAt": "2026-08-01T14:15:43.069Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PFE?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785441729,
+      "regularMarketTime": 1785528109,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 24.91,
+      "regularMarketPrice": 25.01,
       "fiftyTwoWeekHigh": 28.75,
-      "fiftyTwoWeekLow": 23.11,
-      "regularMarketDayHigh": 24.975,
-      "regularMarketDayLow": 24.55,
-      "regularMarketVolume": 37112485,
+      "fiftyTwoWeekLow": 23.4,
+      "regularMarketDayHigh": 25.18,
+      "regularMarketDayLow": 24.67,
+      "regularMarketVolume": 33906387,
       "longName": "Pfizer Inc.",
       "shortName": "Pfizer, Inc.",
-      "chartPreviousClose": 25.01,
+      "chartPreviousClose": 24.54,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            24.540000915527344,
-            24.670000076293945,
-            25.25,
-            25.149999618530273,
-            24.90999984741211
-          ],
-          "volume": [
-            28905700,
-            38355200,
-            49942700,
-            30395000,
-            44924600
-          ],
-          "open": [
-            24.6200008392334,
-            24.56999969482422,
-            24.969999313354492,
-            25.350000381469727,
-            24.84000015258789
-          ],
-          "high": [
-            24.75,
-            24.8799991607666,
-            25.5,
-            25.3700008392334,
-            24.979999542236328
-          ],
           "low": [
-            24.510000228881836,
             24.440000534057617,
             24.940000534057617,
             25.059999465942383,
-            24.549999237060547
+            24.549999237060547,
+            24.670000076293945
+          ],
+          "volume": [
+            38355200,
+            49942700,
+            30395000,
+            44954500,
+            45053400
+          ],
+          "open": [
+            24.56999969482422,
+            24.969999313354492,
+            25.350000381469727,
+            24.84000015258789,
+            24.81999969482422
+          ],
+          "high": [
+            24.8799991607666,
+            25.5,
+            25.3700008392334,
+            24.979999542236328,
+            25.18000030517578
+          ],
+          "close": [
+            24.670000076293945,
+            25.25,
+            25.149999618530273,
+            24.90999984741211,
+            25.010000228881836
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            24.540000915527344,
             24.670000076293945,
             25.25,
             25.149999618530273,
-            24.90999984741211
+            24.90999984741211,
+            25.010000228881836
           ]
         }
       ]

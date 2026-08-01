@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:06.411Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/STZ?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "STZ",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 700842600,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 130.23,
+      "fiftyTwoWeekHigh": 174.32,
+      "fiftyTwoWeekLow": 126.45,
+      "regularMarketDayHigh": 130.42,
+      "regularMarketDayLow": 128.97,
+      "regularMarketVolume": 1299499,
+      "longName": "Constellation Brands, Inc.",
+      "shortName": "Constellation Brands, Inc.",
+      "chartPreviousClose": 130.16,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "close": [
+            129.7100067138672,
+            132.02000427246094,
+            131.75,
+            130.3800048828125,
+            130.22999572753906
+          ],
+          "volume": [
+            1882700,
+            2796500,
+            2491500,
+            2256100,
+            1788000
+          ],
+          "open": [
+            129.3000030517578,
+            132.30999755859375,
+            131.8000030517578,
+            129.00999450683594,
+            129.8699951171875
+          ],
+          "low": [
+            128.27999877929688,
+            131.30999755859375,
+            131.2899932861328,
+            128.5,
+            128.97000122070312
+          ],
+          "high": [
+            131.0500030517578,
+            135.08999633789062,
+            134.0399932861328,
+            130.66000366210938,
+            130.44000244140625
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            128.69595336914062,
+            130.98788452148438,
+            130.72000122070312,
+            130.3800048828125,
+            130.22999572753906
+          ]
+        }
+      ]
+    }
+  }
+}

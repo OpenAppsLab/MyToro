@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:06.654Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EG?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "EG",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 812727000,
+      "regularMarketTime": 1785528002,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 374.15,
+      "fiftyTwoWeekHigh": 401.07,
+      "fiftyTwoWeekLow": 302.44,
+      "regularMarketDayHigh": 376.65,
+      "regularMarketDayLow": 369.37,
+      "regularMarketVolume": 312301,
+      "longName": "Everest Group, Ltd.",
+      "shortName": "Everest Group, Ltd.",
+      "chartPreviousClose": 385.12,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            385,
+            393.1099853515625,
+            395.67999267578125,
+            378.6300048828125,
+            369.1300048828125
+          ],
+          "volume": [
+            319300,
+            324100,
+            458200,
+            692300,
+            433600
+          ],
+          "high": [
+            390.5299987792969,
+            401.07000732421875,
+            399.8299865722656,
+            388.9700012207031,
+            376.6499938964844
+          ],
+          "close": [
+            389.3399963378906,
+            398.70001220703125,
+            393.8900146484375,
+            375.3599853515625,
+            374.1499938964844
+          ],
+          "low": [
+            385,
+            392.8500061035156,
+            391.94000244140625,
+            368.3299865722656,
+            368.9200134277344
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            389.3399963378906,
+            398.70001220703125,
+            393.8900146484375,
+            375.3599853515625,
+            374.1499938964844
+          ]
+        }
+      ]
+    }
+  }
+}

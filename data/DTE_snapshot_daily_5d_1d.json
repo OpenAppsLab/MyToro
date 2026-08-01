@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:42.349Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DTE?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "DTE",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -252322200,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 141.87,
+      "fiftyTwoWeekHigh": 155.75,
+      "fiftyTwoWeekLow": 126.23,
+      "regularMarketDayHigh": 142.36,
+      "regularMarketDayLow": 140.52,
+      "regularMarketVolume": 731390,
+      "longName": "DTE Energy Company",
+      "shortName": "DTE Energy Company",
+      "chartPreviousClose": 149.46,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            146.83999633789062,
+            146.0800018310547,
+            142.5,
+            141.17999267578125,
+            140.5
+          ],
+          "close": [
+            147.22999572753906,
+            146.0800018310547,
+            143.52000427246094,
+            141.6999969482422,
+            141.8699951171875
+          ],
+          "open": [
+            148.6999969482422,
+            146.83999633789062,
+            147.02000427246094,
+            143.3699951171875,
+            141.58999633789062
+          ],
+          "high": [
+            149.75,
+            150.55999755859375,
+            148.52000427246094,
+            144.07000732421875,
+            142.39999389648438
+          ],
+          "volume": [
+            1580900,
+            1685600,
+            1449600,
+            1059100,
+            1596700
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            147.22999572753906,
+            146.0800018310547,
+            143.52000427246094,
+            141.6999969482422,
+            141.8699951171875
+          ]
+        }
+      ]
+    }
+  }
+}

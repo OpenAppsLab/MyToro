@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:05:08.404Z",
+  "fetchedAt": "2026-08-01T14:19:54.678Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HCA?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1299767400,
-      "regularMarketTime": 1785441602,
+      "regularMarketTime": 1785528002,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 395.79,
+      "regularMarketPrice": 402.59,
       "fiftyTwoWeekHigh": 556.52,
-      "fiftyTwoWeekLow": 353.13,
-      "regularMarketDayHigh": 406.76,
-      "regularMarketDayLow": 394.74,
-      "regularMarketVolume": 1038083,
+      "fiftyTwoWeekLow": 353.99,
+      "regularMarketDayHigh": 404.485,
+      "regularMarketDayLow": 391.38,
+      "regularMarketVolume": 1255819,
       "longName": "HCA Healthcare, Inc.",
       "shortName": "HCA Healthcare, Inc.",
-      "chartPreviousClose": 376.5,
+      "chartPreviousClose": 382.19,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            381.5299987792969,
             383.6300048828125,
             396.2200012207031,
             418.1099853515625,
-            402.6499938964844
-          ],
-          "low": [
-            376.4800109863281,
-            383.6300048828125,
-            392.1400146484375,
-            405.760009765625,
-            394.739990234375
-          ],
-          "close": [
-            382.19000244140625,
-            389.6199951171875,
-            418.19000244140625,
-            408.17999267578125,
-            395.7900085449219
-          ],
-          "high": [
-            399,
-            392.6600036621094,
-            419.2200012207031,
-            421.30999755859375,
-            406.760009765625
+            402.6499938964844,
+            395.5
           ],
           "volume": [
-            2703500,
             1979700,
             2925400,
             1849800,
-            1244300
+            1244300,
+            1255900
+          ],
+          "high": [
+            392.6600036621094,
+            419.2200012207031,
+            421.30999755859375,
+            406.760009765625,
+            404.5199890136719
+          ],
+          "low": [
+            383.6300048828125,
+            392.1400146484375,
+            405.760009765625,
+            394.739990234375,
+            391.3800048828125
+          ],
+          "close": [
+            389.6199951171875,
+            418.19000244140625,
+            408.17999267578125,
+            395.7900085449219,
+            402.5899963378906
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            382.19000244140625,
             389.6199951171875,
             418.19000244140625,
             408.17999267578125,
-            395.7900085449219
+            395.7900085449219,
+            402.5899963378906
           ]
         }
       ]

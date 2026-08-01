@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:18:38.877Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DASH?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "DASH",
+      "exchangeName": "NMS",
+      "fullExchangeName": "NasdaqGS",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1607524200,
+      "regularMarketTime": 1785528000,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 196.16,
+      "fiftyTwoWeekHigh": 285.5,
+      "fiftyTwoWeekLow": 143.3,
+      "regularMarketDayHigh": 198.47,
+      "regularMarketDayLow": 193.54,
+      "regularMarketVolume": 3101626,
+      "longName": "DoorDash, Inc.",
+      "shortName": "DoorDash, Inc.",
+      "chartPreviousClose": 172.91,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            3640100,
+            3722100,
+            3878100,
+            3433800,
+            3101700
+          ],
+          "open": [
+            177.5,
+            185.5500030517578,
+            195.1999969482422,
+            189.95199584960938,
+            197.57000732421875
+          ],
+          "close": [
+            184.3699951171875,
+            195.52000427246094,
+            193.52999877929688,
+            197.52999877929688,
+            196.16000366210938
+          ],
+          "high": [
+            185.5500030517578,
+            195.78500366210938,
+            199.88999938964844,
+            197.83999633789062,
+            198.47000122070312
+          ],
+          "low": [
+            177.2899932861328,
+            185.5500030517578,
+            192.82000732421875,
+            188.82000732421875,
+            193.5399932861328
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            184.3699951171875,
+            195.52000427246094,
+            193.52999877929688,
+            197.52999877929688,
+            196.16000366210938
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:09.378Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BBY?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BBY",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 482682600,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 86.26,
+      "fiftyTwoWeekHigh": 91.27,
+      "fiftyTwoWeekLow": 55.1,
+      "regularMarketDayHigh": 87.57,
+      "regularMarketDayLow": 86.08,
+      "regularMarketVolume": 3138367,
+      "longName": "Best Buy Co., Inc.",
+      "shortName": "Best Buy Co., Inc.",
+      "chartPreviousClose": 85.43,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            86.48999786376953,
+            89.0999984741211,
+            89,
+            88.98999786376953,
+            87.44999694824219
+          ],
+          "volume": [
+            2821900,
+            2710900,
+            3793100,
+            2868200,
+            3806500
+          ],
+          "close": [
+            88.44999694824219,
+            89.47000122070312,
+            90.16999816894531,
+            87.81999969482422,
+            86.26000213623047
+          ],
+          "high": [
+            89.27999877929688,
+            90.72000122070312,
+            91.2699966430664,
+            89.75,
+            87.56999969482422
+          ],
+          "low": [
+            86.27999877929688,
+            88.83999633789062,
+            88.25,
+            87.72000122070312,
+            86.08000183105469
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            88.44999694824219,
+            89.47000122070312,
+            90.16999816894531,
+            87.81999969482422,
+            86.26000213623047
+          ]
+        }
+      ]
+    }
+  }
+}

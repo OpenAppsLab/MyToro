@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:01.922Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EQR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "EQR",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 745162200,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 66.45,
+      "fiftyTwoWeekHigh": 71.5,
+      "fiftyTwoWeekLow": 57.57,
+      "regularMarketDayHigh": 67.02,
+      "regularMarketDayLow": 66.29,
+      "regularMarketVolume": 1748824,
+      "longName": "Equity Residential",
+      "shortName": "Equity Residential",
+      "chartPreviousClose": 67.86,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            3352600,
+            4454300,
+            2824200,
+            2579100,
+            3904500
+          ],
+          "low": [
+            67.20999908447266,
+            67.37000274658203,
+            68.2699966430664,
+            66.62999725341797,
+            66.29000091552734
+          ],
+          "open": [
+            67.58000183105469,
+            67.79000091552734,
+            68.61000061035156,
+            68.2300033569336,
+            66.93000030517578
+          ],
+          "high": [
+            68.13999938964844,
+            68.62999725341797,
+            68.97000122070312,
+            69.47000122070312,
+            67.16999816894531
+          ],
+          "close": [
+            67.23999786376953,
+            68.08999633789062,
+            68.8499984741211,
+            67.12000274658203,
+            66.44999694824219
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            67.23999786376953,
+            68.08999633789062,
+            68.8499984741211,
+            67.12000274658203,
+            66.44999694824219
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T08:03:34.282Z",
+  "fetchedAt": "2026-08-01T14:14:48.767Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ADSK?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 488813400,
-      "regularMarketTime": 1785441601,
+      "regularMarketTime": 1785528001,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 234.97,
+      "regularMarketPrice": 234.2,
       "fiftyTwoWeekHigh": 329.09,
       "fiftyTwoWeekLow": 185.5,
-      "regularMarketDayHigh": 238.69,
-      "regularMarketDayLow": 231.755,
-      "regularMarketVolume": 2380909,
+      "regularMarketDayHigh": 235.07,
+      "regularMarketDayLow": 227.99,
+      "regularMarketVolume": 1944851,
       "longName": "Autodesk, Inc.",
       "shortName": "Autodesk, Inc.",
-      "chartPreviousClose": 205.26,
+      "chartPreviousClose": 209.75,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
           "start": 1785484800,
+          "end": 1785504600,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
           "start": 1785504600,
+          "end": 1785528000,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
           "start": 1785528000,
+          "end": 1785542400,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            2888300,
-            2599000,
-            3885000,
-            2431300,
-            2687500
-          ],
           "close": [
-            209.75,
             225.91000366210938,
             237.3800048828125,
             245.25,
-            234.97000122070312
-          ],
-          "open": [
-            208.75,
-            213.50999450683594,
-            231.49000549316406,
-            242.1699981689453,
-            238.08999633789062
-          ],
-          "high": [
-            214.4499969482422,
-            227.6699981689453,
-            243.25,
-            249.13999938964844,
-            238.69000244140625
+            234.97000122070312,
+            234.1999969482422
           ],
           "low": [
-            204.47999572753906,
             212.19000244140625,
             229.39999389648438,
             238.32000732421875,
-            231.75999450683594
+            231.75999450683594,
+            227.99000549316406
+          ],
+          "open": [
+            213.50999450683594,
+            231.49000549316406,
+            242.1699981689453,
+            238.08999633789062,
+            230.44000244140625
+          ],
+          "high": [
+            227.6699981689453,
+            243.25,
+            249.13999938964844,
+            238.69000244140625,
+            235.07000732421875
+          ],
+          "volume": [
+            2599000,
+            3885000,
+            2431300,
+            2687500,
+            1949000
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            209.75,
             225.91000366210938,
             237.3800048828125,
             245.25,
-            234.97000122070312
+            234.97000122070312,
+            234.1999969482422
           ]
         }
       ]

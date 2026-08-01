@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:52:48.432Z",
+  "fetchedAt": "2026-08-01T14:16:58.997Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AZO?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,20 +9,20 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 670602600,
-      "regularMarketTime": 1785441602,
+      "regularMarketTime": 1785528003,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 3006.57,
+      "regularMarketPrice": 3016.25,
       "fiftyTwoWeekHigh": 4388.11,
       "fiftyTwoWeekLow": 2902.2,
-      "regularMarketDayHigh": 3090.005,
-      "regularMarketDayLow": 2983.93,
-      "regularMarketVolume": 160378,
+      "regularMarketDayHigh": 3040.15,
+      "regularMarketDayLow": 2980,
+      "regularMarketVolume": 94145,
       "longName": "AutoZone, Inc.",
       "shortName": "AutoZone, Inc.",
-      "chartPreviousClose": 2923.5,
+      "chartPreviousClose": 2957.41,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            2917.14990234375,
-            2963.5,
-            3091.52001953125,
-            3071.199951171875,
-            2983.929931640625
-          ],
-          "open": [
-            2923,
-            2989.530029296875,
-            3100,
-            3083.280029296875,
-            3110.97998046875
-          ],
-          "volume": [
-            137300,
-            138400,
-            123400,
-            146700,
-            181800
-          ],
-          "high": [
-            2959.989990234375,
-            3090.6201171875,
-            3169.97998046875,
-            3172.070068359375,
-            3110.97998046875
-          ],
           "close": [
-            2957.409912109375,
             3075.260009765625,
             3118.800048828125,
             3142.169921875,
-            3006.570068359375
+            3006.570068359375,
+            3016.25
+          ],
+          "low": [
+            2963.5,
+            3091.52001953125,
+            3071.199951171875,
+            2983.929931640625,
+            2979.110107421875
+          ],
+          "open": [
+            2989.530029296875,
+            3100,
+            3083.280029296875,
+            3110.97998046875,
+            2990
+          ],
+          "high": [
+            3090.6201171875,
+            3169.97998046875,
+            3172.070068359375,
+            3110.97998046875,
+            3040.14990234375
+          ],
+          "volume": [
+            138400,
+            123400,
+            146700,
+            181800,
+            121200
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            2957.409912109375,
             3075.260009765625,
             3118.800048828125,
             3142.169921875,
-            3006.570068359375
+            3006.570068359375,
+            3016.25
           ]
         }
       ]

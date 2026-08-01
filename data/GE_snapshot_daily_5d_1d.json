@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:36.678Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GE?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "GE",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": -252322200,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 360.07,
+      "fiftyTwoWeekHigh": 382.97,
+      "fiftyTwoWeekLow": 263.8,
+      "regularMarketDayHigh": 362.42,
+      "regularMarketDayLow": 354.381,
+      "regularMarketVolume": 3048624,
+      "longName": "GE Aerospace",
+      "shortName": "GE Aerospace",
+      "chartPreviousClose": 353.73,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            359.8599853515625,
+            364.5799865722656,
+            362.70001220703125,
+            354.75,
+            356.239990234375
+          ],
+          "low": [
+            356.05999755859375,
+            358.19000244140625,
+            348.8399963378906,
+            347.6600036621094,
+            353.7799987792969
+          ],
+          "close": [
+            361.6099853515625,
+            363.5899963378906,
+            350.6300048828125,
+            355.0400085449219,
+            360.07000732421875
+          ],
+          "volume": [
+            3839200,
+            3625900,
+            3723000,
+            3187100,
+            3148300
+          ],
+          "high": [
+            365.5,
+            366.7699890136719,
+            362.70001220703125,
+            356.6199951171875,
+            362.4200134277344
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            361.6099853515625,
+            363.5899963378906,
+            350.6300048828125,
+            355.0400085449219,
+            360.07000732421875
+          ]
+        }
+      ]
+    }
+  }
+}

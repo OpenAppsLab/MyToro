@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:17:20.350Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BRO?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "BRO",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 350749800,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 70.4,
+      "fiftyTwoWeekHigh": 98.3,
+      "fiftyTwoWeekLow": 53.81,
+      "regularMarketDayHigh": 70.895,
+      "regularMarketDayLow": 69.28,
+      "regularMarketVolume": 1659419,
+      "longName": "Brown & Brown, Inc.",
+      "shortName": "Brown & Brown, Inc.",
+      "chartPreviousClose": 67.66,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "open": [
+            68.27999877929688,
+            68.97000122070312,
+            72.48999786376953,
+            73.68000030517578,
+            69.94000244140625
+          ],
+          "volume": [
+            2789400,
+            4927200,
+            3552200,
+            4142300,
+            2741700
+          ],
+          "high": [
+            70.2699966430664,
+            74.13999938964844,
+            75.62999725341797,
+            74.44000244140625,
+            70.9000015258789
+          ],
+          "low": [
+            67.87999725341797,
+            67.66999816894531,
+            71.87000274658203,
+            69.79000091552734,
+            69.27999877929688
+          ],
+          "close": [
+            69.69999694824219,
+            73.6500015258789,
+            74.87000274658203,
+            70.87000274658203,
+            70.4000015258789
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            69.69999694824219,
+            73.6500015258789,
+            74.87000274658203,
+            70.87000274658203,
+            70.4000015258789
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -277,7 +277,9 @@ const pendingOrders = [];
 const fs = require('fs');
 const MODELS_DIR = path.join(__dirname, 'models');
 const INTRADAY_MODEL_PATH = path.join(MODELS_DIR, 'intraday_model.json');
+const META_MODEL_PATH = path.join(MODELS_DIR, 'meta_model.json');
 let persistedIntradayModel = null;
+let persistedMetaModel = null;
 
 const autoOrderState = {
   dateKey: '',
@@ -360,6 +362,70 @@ function saveRuntimeSettings(settings = {}) {
     console.error('Failed to save runtime settings', err && err.message);
     return AUTO_ORDER_SETTINGS;
   }
+}
+
+function readJsonFileSync(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      return null;
+    }
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch (err) {
+    console.warn(`Unable to read JSON file ${filePath}:`, err && err.message);
+    return null;
+  }
+}
+
+function extractModelMetadata(fileData, defaultType = 'model') {
+  if (!fileData) return null;
+  const model = fileData.model || fileData.metaModel || null;
+  const metadata = fileData.metadata || {};
+  return {
+    savedAt: fileData.savedAt || null,
+    trainedAt: metadata.trainedAt || fileData.savedAt || null,
+    sourceSnapshots: metadata.sourceSnapshots || null,
+    parameters: metadata.parameters || null,
+    modelSource: metadata.modelSource || defaultType,
+    weightCount: Array.isArray(model?.weights) ? model.weights.length : null
+  };
+}
+
+function saveMetaModel(metaModel, metadata = {}) {
+  try {
+    const payload = {
+      savedAt: new Date().toISOString(),
+      metaModel,
+      metadata
+    };
+    if (!fs.existsSync(MODELS_DIR)) fs.mkdirSync(MODELS_DIR, { recursive: true });
+    fs.writeFileSync(META_MODEL_PATH, JSON.stringify(payload, null, 2));
+    persistedMetaModel = metaModel;
+    return payload;
+  } catch (err) {
+    console.error('Failed to save meta model', err && err.message);
+    return null;
+  }
+}
+
+function loadPersistedMetaModel() {
+  try {
+    if (fs.existsSync(META_MODEL_PATH)) {
+      const raw = fs.readFileSync(META_MODEL_PATH, 'utf8');
+      const parsed = JSON.parse(raw);
+      persistedMetaModel = parsed.metaModel || null;
+      console.log('Loaded persisted meta model from', META_MODEL_PATH);
+    }
+  } catch (err) {
+    console.error('Failed to load persisted meta model', err && err.message);
+  }
+  return persistedMetaModel;
+}
+
+function getPersistedMetaModel() {
+  if (persistedMetaModel == null) {
+    loadPersistedMetaModel();
+  }
+  return persistedMetaModel;
 }
 
 function getLiveScore(live) {
@@ -2805,7 +2871,10 @@ function evaluateOrderOutcome(order, currentPrice) {
 
   const stopWasHit = currentPrice <= currentTrailingStopPrice;
   const targetWasHit = currentPrice >= targetPrice;
-  const isFlatMove = Math.abs(currentPrice - entryPrice) <= 1e-6;
+  const exitIsProfit = currentPrice >= entryPrice;
+  const shouldCloseAsProfit = targetWasHit || (stopWasHit && exitIsProfit);
+  const shouldCloseAsLoss = stopWasHit && !exitIsProfit;
+  const didClose = targetWasHit || stopWasHit;
 
   return {
     ...order,
@@ -2814,10 +2883,10 @@ function evaluateOrderOutcome(order, currentPrice) {
     highWaterMark: currentHighWaterMark,
     trailingStopPrice: currentTrailingStopPrice,
     stopLossPrice: currentTrailingStopPrice,
-    status: isFlatMove ? 'flat' : targetWasHit ? 'green' : stopWasHit ? 'red' : order.status,
-    result: isFlatMove ? null : targetWasHit ? 'profit-hit' : stopWasHit ? 'loss-hit' : null,
-    settledAt: isFlatMove || targetWasHit || stopWasHit ? Date.now() : null,
-    timeToHitMs: isFlatMove || targetWasHit || stopWasHit ? Date.now() - order.createdAt : null
+    status: didClose ? (shouldCloseAsProfit ? 'green' : 'red') : order.status,
+    result: didClose ? (shouldCloseAsProfit ? 'profit-hit' : 'loss-hit') : null,
+    settledAt: didClose ? Date.now() : null,
+    timeToHitMs: didClose ? Date.now() - order.createdAt : null
   };
 }
 
@@ -2830,21 +2899,12 @@ function getRealizedOrderPnl(order) {
     return 0;
   }
 
-  if (order.result === 'profit-hit') {
-    return Number(order.targetProfit || 0);
-  }
-
-  if (order.result === 'loss-hit') {
-    return -Number(order.stopLossAmount || 0);
-  }
-
   const entryPrice = Number(order.entryPrice || 0);
   const currentPrice = Number(order.currentPrice || entryPrice);
   const leverage = Number(order.leverage || 1);
   const ballparkAmount = Number(order.ballparkAmount || 0);
   const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;
-  const realized = Number(((currentPrice - entryPrice) * shareCount).toFixed(2));
-  return realized;
+  return Number(((currentPrice - entryPrice) * shareCount).toFixed(2));
 }
 
 function getTodayRealizedPnl() {
@@ -2907,7 +2967,10 @@ async function settlePendingOrders() {
       return;
     }
 
-    const currentPrice = Number(matching.currentPrice || order.entryPrice);
+    const currentPrice = Number(matching.currentPrice || order.currentPrice || order.entryPrice || 0);
+    if (!Number.isFinite(currentPrice) || currentPrice <= 0) {
+      return;
+    }
     const outcome = evaluateOrderOutcome(order, currentPrice);
 
     order.currentPrice = outcome.currentPrice;
@@ -2960,7 +3023,10 @@ async function forceClosePendingOrders() {
       return;
     }
 
-    const currentPrice = Number(matching.currentPrice || order.entryPrice);
+    const currentPrice = Number(matching.currentPrice || order.currentPrice || order.entryPrice || 0);
+    if (!Number.isFinite(currentPrice) || currentPrice <= 0) {
+      return;
+    }
     const outcome = evaluateOrderOutcome(order, currentPrice);
 
     order.currentPrice = outcome.currentPrice;
@@ -3430,11 +3496,28 @@ app.get('/api/admin/metrics', async (req, res) => {
     const tuningReport = loadWalkForwardTuningReport();
     const health = computeCalibrationHealth(curve, { brier: tuningReport?.best?.brier ?? null, alwaysHealthy: true });
     const candidateCounts = await countThresholdCandidates(getRuntimeAlpha(), getRuntimeThreshold());
+    const intradayModelFile = readJsonFileSync(INTRADAY_MODEL_PATH);
+    const metaModelFile = readJsonFileSync(META_MODEL_PATH);
+    const modelMetadata = extractModelMetadata(intradayModelFile, 'intraday');
+    const metaModelMetadata = extractModelMetadata(metaModelFile, 'meta');
+    const calibrationMetadata = {
+      generatedAt: tuningReport?.generatedAt || null,
+      modelSource: tuningReport?.modelSource || null,
+      snapshotCount: tuningReport?.snapshotCount || null,
+      trainingParameters: tuningReport?.trainingParameters || null,
+      runtimeParameters: tuningReport?.runtimeParameters || null,
+      best: tuningReport?.best || null,
+      curveBins: Array.isArray(curve) ? curve.length : 0
+    };
+    const runtimeGate = tuningReport?.healthGate || 'run';
     res.json({
       drift,
       calibration: { method: calibration?.method || 'logistic', params: calibration || {}, health, curve },
       tuningReport,
-      runtimeGate: 'run',
+      modelMetadata,
+      metaModelMetadata,
+      calibrationMetadata,
+      runtimeGate,
       candidateCounts,
       runtimeSettings: {
         intradayAlpha: AUTO_ORDER_SETTINGS.intradayAlpha,
@@ -3512,6 +3595,7 @@ module.exports = {
   computeCalibrationHealth,
   optimizeAlphaThreshold,
   trainMetaModel,
+  saveMetaModel,
   predictMetaProbability,
   evaluateWalkForward,
   labelIntradayOutcome,

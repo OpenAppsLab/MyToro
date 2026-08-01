@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:52:29.902Z",
+  "fetchedAt": "2026-08-01T14:18:43.548Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DUK?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785441602,
+      "regularMarketTime": 1785528003,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 126.27,
+      "regularMarketPrice": 125.43,
       "fiftyTwoWeekHigh": 134.49,
       "fiftyTwoWeekLow": 113.9,
-      "regularMarketDayHigh": 129.295,
-      "regularMarketDayLow": 125.24,
-      "regularMarketVolume": 4050283,
+      "regularMarketDayHigh": 126.38,
+      "regularMarketDayLow": 124.63,
+      "regularMarketVolume": 3037005,
       "longName": "Duke Energy Corporation",
       "shortName": "Duke Energy Corporation (Holdin",
-      "chartPreviousClose": 129.26,
+      "chartPreviousClose": 130.52,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
           "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
           "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
           "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            2856500,
-            2971200,
-            3641600,
-            3668300,
-            4743800
-          ],
           "low": [
-            129.25999450683594,
             128.63999938964844,
             129.22000122070312,
             128.36000061035156,
-            125.23999786376953
-          ],
-          "open": [
-            129.33999633789062,
-            129.75,
-            129.82000732421875,
-            129.75,
-            129.16000366210938
-          ],
-          "high": [
-            131,
-            130.8699951171875,
-            132.64999389648438,
-            130.2899932861328,
-            129.3000030517578
+            125.23999786376953,
+            124.62999725341797
           ],
           "close": [
-            130.52000427246094,
             128.8300018310547,
             129.24000549316406,
             129.0800018310547,
-            126.2699966430664
+            126.2699966430664,
+            125.43000030517578
+          ],
+          "open": [
+            129.75,
+            129.82000732421875,
+            129.75,
+            129.16000366210938,
+            125.6500015258789
+          ],
+          "high": [
+            130.8699951171875,
+            132.64999389648438,
+            130.2899932861328,
+            129.3000030517578,
+            126.37999725341797
+          ],
+          "volume": [
+            2971200,
+            3641600,
+            3668300,
+            4743800,
+            4311900
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            130.52000427246094,
             128.8300018310547,
             129.24000549316406,
             129.0800018310547,
-            126.2699966430664
+            126.2699966430664,
+            125.43000030517578
           ]
         }
       ]

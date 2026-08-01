@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T07:51:34.283Z",
+  "fetchedAt": "2026-08-01T14:16:55.672Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/T?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 438273000,
-      "regularMarketTime": 1785441854,
+      "regularMarketTime": 1785528211,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 23.21,
+      "regularMarketPrice": 23.25,
       "fiftyTwoWeekHigh": 29.79,
       "fiftyTwoWeekLow": 19.89,
-      "regularMarketDayHigh": 23.62,
-      "regularMarketDayLow": 23.145,
-      "regularMarketVolume": 49397279,
+      "regularMarketDayHigh": 23.46,
+      "regularMarketDayLow": 22.915,
+      "regularMarketVolume": 58128621,
       "longName": "AT&T Inc.",
       "shortName": "AT&T Inc.",
-      "chartPreviousClose": 22.96,
+      "chartPreviousClose": 24.13,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
           "end": 1785504600,
+          "start": 1785484800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
           "end": 1785528000,
+          "start": 1785504600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
           "end": 1785542400,
+          "start": 1785528000,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1784899800,
       1785159000,
       1785245400,
       1785331800,
-      1785418200
+      1785418200,
+      1785504600
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            24.1299991607666,
-            24.420000076293945,
-            24.65999984741211,
-            23.940000534057617,
-            23.209999084472656
-          ],
-          "low": [
-            23,
-            24.030000686645508,
-            24.600000381469727,
-            23.600000381469727,
-            23.139999389648438
-          ],
           "open": [
-            23,
             24.1299991607666,
             24.84000015258789,
             24.639999389648438,
-            23.40999984741211
+            23.40999984741211,
+            23.170000076293945
           ],
           "high": [
-            24.1299991607666,
             24.520000457763672,
             25.31999969482422,
             24.670000076293945,
-            23.6200008392334
+            23.6200008392334,
+            23.459999084472656
+          ],
+          "close": [
+            24.420000076293945,
+            24.65999984741211,
+            23.940000534057617,
+            23.209999084472656,
+            23.25
           ],
           "volume": [
-            80670900,
             74458300,
             57350500,
             77480900,
-            49433700
+            49433700,
+            58132900
+          ],
+          "low": [
+            24.030000686645508,
+            24.600000381469727,
+            23.600000381469727,
+            23.139999389648438,
+            22.920000076293945
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            24.1299991607666,
             24.420000076293945,
             24.65999984741211,
             23.940000534057617,
-            23.209999084472656
+            23.209999084472656,
+            23.25
           ]
         }
       ]

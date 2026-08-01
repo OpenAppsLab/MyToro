@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:14.545Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXR?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "EXR",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1092663000,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 148.04,
+      "fiftyTwoWeekHigh": 158.88,
+      "fiftyTwoWeekLow": 125.71,
+      "regularMarketDayHigh": 148.88,
+      "regularMarketDayLow": 146.035,
+      "regularMarketVolume": 971802,
+      "longName": "Extra Space Storage Inc.",
+      "shortName": "Extra Space Storage Inc",
+      "chartPreviousClose": 147.71,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            1500300,
+            1974500,
+            2782900,
+            2020500,
+            1575500
+          ],
+          "high": [
+            150.66000366210938,
+            153.33999633789062,
+            158.8800048828125,
+            152.83999633789062,
+            148.8800048828125
+          ],
+          "open": [
+            146.9499969482422,
+            149.52000427246094,
+            155.6300048828125,
+            152.83999633789062,
+            148.1999969482422
+          ],
+          "low": [
+            146.9499969482422,
+            149.19000244140625,
+            152.3000030517578,
+            146.5,
+            145.72000122070312
+          ],
+          "close": [
+            148.2899932861328,
+            152.2100067138672,
+            152.85000610351562,
+            148.2100067138672,
+            148.0399932861328
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            148.2899932861328,
+            152.2100067138672,
+            152.85000610351562,
+            148.2100067138672,
+            148.0399932861328
+          ]
+        }
+      ]
+    }
+  }
+}

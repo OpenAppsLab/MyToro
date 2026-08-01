@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:55.795Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DOC?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "DOC",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 485703000,
+      "regularMarketTime": 1785528002,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 21.83,
+      "fiftyTwoWeekHigh": 22.95,
+      "fiftyTwoWeekLow": 15.7,
+      "regularMarketDayHigh": 22.175,
+      "regularMarketDayLow": 21.68,
+      "regularMarketVolume": 2847648,
+      "longName": "Healthpeak Properties, Inc.",
+      "shortName": "Healthpeak Properties, Inc.",
+      "chartPreviousClose": 22.27,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1785484800,
+          "end": 1785504600,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1785504600,
+          "end": 1785528000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1785528000,
+          "end": 1785542400,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "volume": [
+            5733700,
+            7429200,
+            5539500,
+            5462500,
+            7331800
+          ],
+          "low": [
+            22.170000076293945,
+            22.579999923706055,
+            22.399999618530273,
+            21.889999389648438,
+            21.68000030517578
+          ],
+          "open": [
+            22.219999313354492,
+            22.700000762939453,
+            22.790000915527344,
+            22.450000762939453,
+            22.06999969482422
+          ],
+          "high": [
+            22.540000915527344,
+            22.950000762939453,
+            22.90999984741211,
+            22.469999313354492,
+            22.18000030517578
+          ],
+          "close": [
+            22.520000457763672,
+            22.81999969482422,
+            22.479999542236328,
+            22.059999465942383,
+            21.829999923706055
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            22.520000457763672,
+            22.81999969482422,
+            22.479999542236328,
+            22.059999465942383,
+            21.829999923706055
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "fetchedAt": "2026-08-01T14:19:40.998Z",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GNRC?interval=1d&range=5d",
+  "result": {
+    "meta": {
+      "currency": "USD",
+      "symbol": "GNRC",
+      "exchangeName": "NYQ",
+      "fullExchangeName": "NYSE",
+      "instrumentType": "EQUITY",
+      "firstTradeDate": 1265898600,
+      "regularMarketTime": 1785528003,
+      "hasPrePostMarketData": true,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 197.11,
+      "fiftyTwoWeekHigh": 296.44,
+      "fiftyTwoWeekLow": 134.8,
+      "regularMarketDayHigh": 202.06,
+      "regularMarketDayLow": 190.27,
+      "regularMarketVolume": 1527054,
+      "longName": "Generac Holdings Inc.",
+      "shortName": "Generac Holdlings Inc.",
+      "chartPreviousClose": 202.01,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1785504600,
+          "start": 1785484800,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1785528000,
+          "start": 1785504600,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1785542400,
+          "start": 1785528000,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "5d",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "timestamp": [
+      1785159000,
+      1785245400,
+      1785331800,
+      1785418200,
+      1785504600
+    ],
+    "indicators": {
+      "quote": [
+        {
+          "low": [
+            192.9499969482422,
+            187.5500030517578,
+            191.75999450683594,
+            189.80999755859375,
+            190.27000427246094
+          ],
+          "high": [
+            207.27000427246094,
+            196.4199981689453,
+            210,
+            205.47999572753906,
+            202.89999389648438
+          ],
+          "open": [
+            204.38999938964844,
+            194.5800018310547,
+            210,
+            201.3300018310547,
+            197.44000244140625
+          ],
+          "close": [
+            197.5399932861328,
+            195.60000610351562,
+            195.19000244140625,
+            191.91000366210938,
+            197.11000061035156
+          ],
+          "volume": [
+            1397600,
+            1856700,
+            2727200,
+            2025600,
+            1527100
+          ]
+        }
+      ],
+      "adjclose": [
+        {
+          "adjclose": [
+            197.5399932861328,
+            195.60000610351562,
+            195.19000244140625,
+            191.91000366210938,
+            197.11000061035156
+          ]
+        }
+      ]
+    }
+  }
+}

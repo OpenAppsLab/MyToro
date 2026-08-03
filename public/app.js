@@ -380,8 +380,39 @@ async function openAppInfo() {
 
   const markdown = await fetchAppDocumentation();
   appInfoBody.innerHTML = parseMarkdownToHtml(markdown);
+
+  // Ensure a visible close button is present
+  ensureFloatingClose();
+
   appInfoModal.classList.remove('hidden');
   appInfoModal.setAttribute('aria-hidden', 'false');
+}
+
+// Ensure there is a visible floating close button inside the modal if the default Close is not visible
+function ensureFloatingClose() {
+  if (!appInfoModal) return;
+  const card = appInfoModal.querySelector('.app-info-card');
+  if (!card) return;
+
+  // If existing close button is present and visible, nothing to do
+  const existingClose = document.getElementById('appInfoClose');
+  if (existingClose && existingClose.offsetParent !== null) {
+    // remove any floating fallback if present
+    const floatBtn = document.getElementById('appInfoCloseFloating');
+    if (floatBtn) floatBtn.remove();
+    return;
+  }
+
+  // Create a floating close button if not already created
+  if (!document.getElementById('appInfoCloseFloating')) {
+    const btn = document.createElement('button');
+    btn.id = 'appInfoCloseFloating';
+    btn.className = 'app-info-close-floating';
+    btn.setAttribute('aria-label', 'Close');
+    btn.innerHTML = '✕';
+    btn.addEventListener('click', closeAppInfo);
+    card.appendChild(btn);
+  }
 }
 
 function closeAppInfo() {

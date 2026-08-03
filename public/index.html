@@ -26,6 +26,9 @@
           <div class="brand-title">Live entry signals and daily risk controls</div>
         </div>
       </div>
+      <div class="topbar-actions">
+        <button id="infoButton" class="icon-button" aria-label="App info">ℹ️</button>
+      </div>
       <div class="trend-strip">
         <span>📈 Trending</span>
         <strong>Tech momentum with low volatility</strong>
@@ -95,6 +98,16 @@
         <div id="resultsArea" class="results-area">No predictions yet.</div>
       </section>
     </main>
+  </div>
+
+  <div id="appInfoModal" class="app-info-modal hidden" aria-hidden="true">
+    <div class="app-info-card" role="dialog" aria-modal="true" aria-labelledby="appInfoTitle">
+      <div class="app-info-title" id="appInfoTitle">About MyToro</div>
+      <div id="appInfoBody" class="app-info-body">Loading…</div>
+      <div class="app-info-actions">
+        <button id="appInfoClose" class="primary-button">Close</button>
+      </div>
+    </div>
   </div>
 
   <script src="app.js"></script>

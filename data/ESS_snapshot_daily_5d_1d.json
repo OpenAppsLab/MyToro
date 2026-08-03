@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:04.159Z",
+  "fetchedAt": "2026-08-03T17:18:58.412Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ESS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 770995800,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777254,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 284.14,
+      "regularMarketPrice": 284.41,
       "fiftyTwoWeekHigh": 303.35,
       "fiftyTwoWeekLow": 238.46,
-      "regularMarketDayHigh": 286.205,
-      "regularMarketDayLow": 279.32,
-      "regularMarketVolume": 412386,
+      "regularMarketDayHigh": 288.515,
+      "regularMarketDayLow": 284.38,
+      "regularMarketVolume": 166403,
       "longName": "Essex Property Trust, Inc.",
       "shortName": "Essex Property Trust, Inc.",
-      "chartPreviousClose": 293.46,
+      "chartPreviousClose": 290.68,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            290.67999267578125,
-            294.5199890136719,
-            296.79998779296875,
-            281.8599853515625,
-            284.1400146484375
-          ],
-          "open": [
-            291.8699951171875,
-            293.1400146484375,
-            296.30999755859375,
-            289.989990234375,
-            280.8399963378906
-          ],
           "low": [
-            290.1600036621094,
             289.0199890136719,
             294.55999755859375,
             280.42999267578125,
-            279.32000732421875
+            279.32000732421875,
+            284.3800048828125
+          ],
+          "close": [
+            294.5199890136719,
+            296.79998779296875,
+            281.8599853515625,
+            284.1400146484375,
+            284.4100036621094
           ],
           "high": [
-            294.9800109863281,
             296.6199951171875,
             297.8900146484375,
             289.989990234375,
-            286.2099914550781
+            286.2099914550781,
+            288.5150146484375
           ],
           "volume": [
-            357600,
             688900,
             500300,
             794000,
-            819300
+            819300,
+            166403
+          ],
+          "open": [
+            293.1400146484375,
+            296.30999755859375,
+            289.989990234375,
+            280.8399963378906,
+            286.9800109863281
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            290.67999267578125,
             294.5199890136719,
             296.79998779296875,
             281.8599853515625,
-            284.1400146484375
+            284.1400146484375,
+            284.4100036621094
           ]
         }
       ]

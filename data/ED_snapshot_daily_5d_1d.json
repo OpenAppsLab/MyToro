@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:05.268Z",
+  "fetchedAt": "2026-08-03T17:18:00.874Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ED?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785528107,
+      "regularMarketTime": 1785777474,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 108.85,
+      "regularMarketPrice": 107.77,
       "fiftyTwoWeekHigh": 116.23,
       "fiftyTwoWeekLow": 94.96,
-      "regularMarketDayHigh": 109.94,
-      "regularMarketDayLow": 108.265,
-      "regularMarketVolume": 1435897,
+      "regularMarketDayHigh": 109.245,
+      "regularMarketDayLow": 107.41,
+      "regularMarketVolume": 572291,
       "longName": "Consolidated Edison, Inc.",
       "shortName": "Consolidated Edison, Inc.",
-      "chartPreviousClose": 113.01,
+      "chartPreviousClose": 111.5,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            111.38999938964844,
             111.9000015258789,
             111.44000244140625,
             108.58000183105469,
-            108.22000122070312
-          ],
-          "close": [
-            111.5,
-            111.9800033569336,
-            112.25,
-            109.66000366210938,
-            108.8499984741211
-          ],
-          "open": [
-            112.37000274658203,
-            112.79000091552734,
-            112.58000183105469,
-            111.7699966430664,
-            109
-          ],
-          "high": [
-            113.36000061035156,
-            114.58000183105469,
-            114.20999908447266,
-            112.02999877929688,
-            109.94000244140625
+            108.22000122070312,
+            107.41000366210938
           ],
           "volume": [
-            2393900,
             2395600,
             2324500,
             2762900,
-            2786600
+            2786600,
+            572291
+          ],
+          "open": [
+            112.79000091552734,
+            112.58000183105469,
+            111.7699966430664,
+            109,
+            108.30000305175781
+          ],
+          "high": [
+            114.58000183105469,
+            114.20999908447266,
+            112.02999877929688,
+            109.94000244140625,
+            109.24500274658203
+          ],
+          "close": [
+            111.9800033569336,
+            112.25,
+            109.66000366210938,
+            108.8499984741211,
+            107.7699966430664
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            111.5,
             111.9800033569336,
             112.25,
             109.66000366210938,
-            108.8499984741211
+            108.8499984741211,
+            107.7699966430664
           ]
         }
       ]

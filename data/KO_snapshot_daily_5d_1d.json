@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:26.354Z",
+  "fetchedAt": "2026-08-03T17:15:23.524Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KO?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777322,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 87.59,
+      "regularMarketPrice": 86.81,
       "fiftyTwoWeekHigh": 90.92,
       "fiftyTwoWeekLow": 65.35,
-      "regularMarketDayHigh": 88,
-      "regularMarketDayLow": 86.82,
-      "regularMarketVolume": 10879681,
+      "regularMarketDayHigh": 88.48,
+      "regularMarketDayLow": 86.63,
+      "regularMarketVolume": 6229561,
       "longName": "The Coca-Cola Company",
       "shortName": "Coca-Cola Company (The)",
-      "chartPreviousClose": 82.25,
+      "chartPreviousClose": 84.07,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            19937600,
-            34982900,
-            21711700,
-            17616100,
-            14709600
-          ],
           "open": [
-            83.08000183105469,
             88.30000305175781,
             88.6500015258789,
             87.62999725341797,
-            87.66000366210938
+            87.66000366210938,
+            88.4800033569336
           ],
           "close": [
-            84.06999969482422,
             88.2699966430664,
             89.08000183105469,
             88.48999786376953,
-            87.58999633789062
-          ],
-          "high": [
-            84.13999938964844,
-            90.22000122070312,
-            90.91999816894531,
-            88.63999938964844,
-            88
+            87.58999633789062,
+            86.80989837646484
           ],
           "low": [
-            82.5,
             86.25,
             88.63999938964844,
             87.20999908447266,
-            86.81999969482422
+            86.81999969482422,
+            86.62999725341797
+          ],
+          "high": [
+            90.22000122070312,
+            90.91999816894531,
+            88.63999938964844,
+            88,
+            88.4800033569336
+          ],
+          "volume": [
+            34982900,
+            21711700,
+            17616100,
+            14709600,
+            6229561
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            84.06999969482422,
             88.2699966430664,
             89.08000183105469,
             88.48999786376953,
-            87.58999633789062
+            87.58999633789062,
+            86.80989837646484
           ]
         }
       ]

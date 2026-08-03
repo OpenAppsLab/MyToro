@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:29.657Z",
+  "fetchedAt": "2026-08-03T17:18:25.037Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DVN?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 490887000,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777485,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 45.13,
+      "regularMarketPrice": 44.49,
       "fiftyTwoWeekHigh": 52.71,
       "fiftyTwoWeekLow": 31.47,
-      "regularMarketDayHigh": 45.149,
-      "regularMarketDayLow": 43.982,
-      "regularMarketVolume": 6442796,
+      "regularMarketDayHigh": 44.68,
+      "regularMarketDayLow": 43.774,
+      "regularMarketVolume": 3701299,
       "longName": "Devon Energy Corporation",
       "shortName": "Devon Energy Corporation",
-      "chartPreviousClose": 45.04,
+      "chartPreviousClose": 43.16,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            43.84000015258789,
-            43.220001220703125,
-            44.029998779296875,
-            43.630001068115234,
-            44.61000061035156
-          ],
-          "high": [
-            44.40999984741211,
-            43.66999816894531,
-            44.599998474121094,
-            44.31999969482422,
-            45.150001525878906
-          ],
-          "volume": [
-            10159400,
-            12510900,
-            7891700,
-            11186800,
-            7895300
-          ],
           "low": [
-            43.04999923706055,
             42.40999984741211,
             43.66999816894531,
             43.33000183105469,
-            43.97999954223633
+            43.97999954223633,
+            43.77399826049805
+          ],
+          "volume": [
+            12510900,
+            7891700,
+            11186800,
+            7895300,
+            3701299
+          ],
+          "high": [
+            43.66999816894531,
+            44.599998474121094,
+            44.31999969482422,
+            45.150001525878906,
+            44.68000030517578
           ],
           "close": [
-            43.15999984741211,
             42.65999984741211,
             44.459999084472656,
             44.16999816894531,
-            45.130001068115234
+            45.130001068115234,
+            44.4900016784668
+          ],
+          "open": [
+            43.220001220703125,
+            44.029998779296875,
+            43.630001068115234,
+            44.61000061035156,
+            44.099998474121094
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            43.15999984741211,
             42.65999984741211,
             44.459999084472656,
             44.16999816894531,
-            45.130001068115234
+            45.130001068115234,
+            44.4900016784668
           ]
         }
       ]

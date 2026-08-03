@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:26.870Z",
+  "fetchedAt": "2026-08-03T17:17:23.438Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CDNS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 550330200,
-      "regularMarketTime": 1785528000,
+      "regularMarketTime": 1785777426,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 340.02,
+      "regularMarketPrice": 337.88,
       "fiftyTwoWeekHigh": 416.69,
       "fiftyTwoWeekLow": 262.75,
-      "regularMarketDayHigh": 344.77,
-      "regularMarketDayLow": 334.249,
-      "regularMarketVolume": 2087614,
+      "regularMarketDayHigh": 344.445,
+      "regularMarketDayLow": 331.675,
+      "regularMarketVolume": 637294,
       "longName": "Cadence Design Systems, Inc.",
       "shortName": "Cadence Design Systems, Inc.",
-      "chartPreviousClose": 326.24,
+      "chartPreviousClose": 338.61,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            334.3800048828125,
             335.1600036621094,
             332.55999755859375,
             329.5899963378906,
-            334.25
-          ],
-          "high": [
-            342.2699890136719,
-            355.5899963378906,
-            351,
-            342.5,
-            344.7699890136719
+            334.25,
+            331.67498779296875
           ],
           "close": [
-            338.6099853515625,
             344.7200012207031,
             332.760009765625,
             332.82000732421875,
-            340.0199890136719
+            340.0199890136719,
+            337.8800048828125
           ],
           "open": [
-            336.510009765625,
             335.1600036621094,
             349,
             336.6199951171875,
-            335.2699890136719
+            335.2699890136719,
+            343.7900085449219
+          ],
+          "high": [
+            355.5899963378906,
+            351,
+            342.5,
+            344.7699890136719,
+            344.44500732421875
           ],
           "volume": [
-            3670000,
             4909600,
             3421100,
             2669700,
-            2088200
+            2088200,
+            637294
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            338.6099853515625,
             344.7200012207031,
             332.760009765625,
             332.82000732421875,
-            340.0199890136719
+            340.0199890136719,
+            337.8800048828125
           ]
         }
       ]

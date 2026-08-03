@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:39.890Z",
+  "fetchedAt": "2026-08-03T17:16:37.298Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AME?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 459091800,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777354,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 241.71,
+      "regularMarketPrice": 241.43,
       "fiftyTwoWeekHigh": 244.97,
       "fiftyTwoWeekLow": 179.24,
-      "regularMarketDayHigh": 244.97,
-      "regularMarketDayLow": 240.607,
-      "regularMarketVolume": 725945,
+      "regularMarketDayHigh": 244.63,
+      "regularMarketDayLow": 240.21,
+      "regularMarketVolume": 478429,
       "longName": "AMETEK, Inc.",
       "shortName": "AMETEK, Inc.",
-      "chartPreviousClose": 241.97,
+      "chartPreviousClose": 243.12,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "high": [
-            243.97000122070312,
             244.16000366210938,
             240.8000030517578,
             240.44000244140625,
-            244.97000122070312
-          ],
-          "close": [
-            243.1199951171875,
-            241.42999267578125,
-            235.25,
-            240.00999450683594,
-            241.7100067138672
+            244.97000122070312,
+            244.6300048828125
           ],
           "open": [
-            242.92999267578125,
             242.38999938964844,
             238.3699951171875,
             240.44000244140625,
-            243.52999877929688
-          ],
-          "volume": [
-            1016900,
-            1352600,
-            1518600,
-            1071000,
-            1051300
+            243.52999877929688,
+            241.60000610351562
           ],
           "low": [
-            238.10000610351562,
             239.92999267578125,
             233.99000549316406,
             235.9499969482422,
-            240.61000061035156
+            240.61000061035156,
+            240.2100067138672
+          ],
+          "close": [
+            241.42999267578125,
+            235.25,
+            240.00999450683594,
+            241.7100067138672,
+            241.42999267578125
+          ],
+          "volume": [
+            1352600,
+            1518600,
+            1071000,
+            1051300,
+            478429
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            243.1199951171875,
             241.42999267578125,
             235.25,
             240.00999450683594,
-            241.7100067138672
+            241.7100067138672,
+            241.42999267578125
           ]
         }
       ]

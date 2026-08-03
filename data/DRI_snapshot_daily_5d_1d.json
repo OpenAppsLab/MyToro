@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:21.902Z",
+  "fetchedAt": "2026-08-03T17:18:17.508Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DRI?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 800026200,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777405,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 203.58,
+      "regularMarketPrice": 205.525,
       "fiftyTwoWeekHigh": 220.65,
       "fiftyTwoWeekLow": 169,
-      "regularMarketDayHigh": 206.115,
-      "regularMarketDayLow": 202.05,
-      "regularMarketVolume": 1185960,
+      "regularMarketDayHigh": 210.475,
+      "regularMarketDayLow": 204.71,
+      "regularMarketVolume": 447367,
       "longName": "Darden Restaurants, Inc.",
       "shortName": "Darden Restaurants, Inc.",
-      "chartPreviousClose": 196.31,
+      "chartPreviousClose": 204.1,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            1554900,
-            1658400,
-            1356300,
-            1636500,
-            1451400
-          ],
-          "open": [
-            200.02999877929688,
-            207.5,
-            206.66000366210938,
-            212.86000061035156,
-            204.9499969482422
-          ],
           "low": [
-            200.02999877929688,
             206.07000732421875,
             205.05999755859375,
             205.8300018310547,
-            202.0500030517578
+            202.0500030517578,
+            204.7100067138672
+          ],
+          "volume": [
+            1658400,
+            1356300,
+            1636500,
+            1451400,
+            447367
+          ],
+          "open": [
+            207.5,
+            206.66000366210938,
+            212.86000061035156,
+            204.9499969482422,
+            205.92999267578125
           ],
           "high": [
-            204.7100067138672,
             211.05999755859375,
             212.33999633789062,
             212.99000549316406,
-            206.1199951171875
+            206.1199951171875,
+            210.47500610351562
           ],
           "close": [
-            204.10000610351562,
             206.97999572753906,
             212.22999572753906,
             206.97000122070312,
-            203.5800018310547
+            203.5800018310547,
+            205.52499389648438
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            204.10000610351562,
             206.97999572753906,
             212.22999572753906,
             206.97000122070312,
-            203.5800018310547
+            203.5800018310547,
+            205.52499389648438
           ]
         }
       ]

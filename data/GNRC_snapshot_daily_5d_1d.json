@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:40.998Z",
+  "fetchedAt": "2026-08-03T17:19:34.640Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GNRC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1265898600,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777502,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 197.11,
+      "regularMarketPrice": 203.96,
       "fiftyTwoWeekHigh": 296.44,
       "fiftyTwoWeekLow": 134.8,
-      "regularMarketDayHigh": 202.06,
-      "regularMarketDayLow": 190.27,
-      "regularMarketVolume": 1527054,
+      "regularMarketDayHigh": 205.79,
+      "regularMarketDayLow": 193.7,
+      "regularMarketVolume": 837195,
       "longName": "Generac Holdings Inc.",
       "shortName": "Generac Holdlings Inc.",
-      "chartPreviousClose": 202.01,
+      "chartPreviousClose": 197.54,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            192.9499969482422,
-            187.5500030517578,
-            191.75999450683594,
-            189.80999755859375,
-            190.27000427246094
-          ],
           "high": [
-            207.27000427246094,
             196.4199981689453,
             210,
             205.47999572753906,
-            202.89999389648438
+            202.89999389648438,
+            205.7899932861328
           ],
-          "open": [
-            204.38999938964844,
-            194.5800018310547,
-            210,
-            201.3300018310547,
-            197.44000244140625
+          "low": [
+            187.5500030517578,
+            191.75999450683594,
+            189.80999755859375,
+            190.27000427246094,
+            193.6999969482422
           ],
           "close": [
-            197.5399932861328,
             195.60000610351562,
             195.19000244140625,
             191.91000366210938,
-            197.11000061035156
+            197.11000061035156,
+            203.9600067138672
+          ],
+          "open": [
+            194.5800018310547,
+            210,
+            201.3300018310547,
+            197.44000244140625,
+            195.27000427246094
           ],
           "volume": [
-            1397600,
             1856700,
             2727200,
             2025600,
-            1527100
+            1527100,
+            837195
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            197.5399932861328,
             195.60000610351562,
             195.19000244140625,
             191.91000366210938,
-            197.11000061035156
+            197.11000061035156,
+            203.9600067138672
           ]
         }
       ]

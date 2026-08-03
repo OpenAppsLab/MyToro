@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:47.647Z",
+  "fetchedAt": "2026-08-03T17:16:44.809Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/APTV?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1321540200,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777399,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 56.47,
+      "regularMarketPrice": 56.58,
       "fiftyTwoWeekHigh": 88.93,
       "fiftyTwoWeekLow": 51.68,
-      "regularMarketDayHigh": 57.785,
-      "regularMarketDayLow": 55.42,
-      "regularMarketVolume": 3830671,
+      "regularMarketDayHigh": 57.78,
+      "regularMarketDayLow": 56.31,
+      "regularMarketVolume": 1903440,
       "longName": "Aptiv PLC",
       "shortName": "Aptiv PLC",
-      "chartPreviousClose": 56.55,
+      "chartPreviousClose": 57.45,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            57.369998931884766,
-            57.47999954223633,
-            58.95000076293945,
-            58.25,
-            57.619998931884766
-          ],
-          "low": [
-            56.369998931884766,
-            57.47999954223633,
-            57.83000183105469,
-            56.459999084472656,
-            55.41999816894531
-          ],
           "volume": [
-            1491900,
             2181500,
             1922900,
             2384800,
-            3830700
-          ],
-          "high": [
-            57.72999954223633,
-            59.599998474121094,
-            59.7400016784668,
-            58.720001220703125,
-            57.790000915527344
+            3830700,
+            1903440
           ],
           "close": [
-            57.45000076293945,
             59.400001525878906,
             57.970001220703125,
             58.09000015258789,
-            56.470001220703125
+            56.470001220703125,
+            56.58000183105469
+          ],
+          "open": [
+            57.47999954223633,
+            58.95000076293945,
+            58.25,
+            57.619998931884766,
+            57
+          ],
+          "high": [
+            59.599998474121094,
+            59.7400016784668,
+            58.720001220703125,
+            57.790000915527344,
+            57.779998779296875
+          ],
+          "low": [
+            57.47999954223633,
+            57.83000183105469,
+            56.459999084472656,
+            55.41999816894531,
+            56.310001373291016
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            57.45000076293945,
             59.400001525878906,
             57.970001220703125,
             58.09000015258789,
-            56.470001220703125
+            56.470001220703125,
+            56.58000183105469
           ]
         }
       ]

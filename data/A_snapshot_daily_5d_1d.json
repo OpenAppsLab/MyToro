@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:18.589Z",
+  "fetchedAt": "2026-08-03T17:16:16.084Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/A?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 942935400,
-      "regularMarketTime": 1785528059,
+      "regularMarketTime": 1785777359,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 138.37,
+      "regularMarketPrice": 138.705,
       "fiftyTwoWeekHigh": 160.27,
       "fiftyTwoWeekLow": 108.35,
-      "regularMarketDayHigh": 139.5,
-      "regularMarketDayLow": 135.78,
-      "regularMarketVolume": 1322269,
+      "regularMarketDayHigh": 140.37,
+      "regularMarketDayLow": 137.13,
+      "regularMarketVolume": 640531,
       "longName": "Agilent Technologies, Inc.",
       "shortName": "Agilent Technologies, Inc.",
-      "chartPreviousClose": 138.57,
+      "chartPreviousClose": 137.89,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            1830500,
-            2277100,
-            1864600,
-            1955100,
-            1720600
-          ],
           "low": [
-            136.13999938964844,
             138.5800018310547,
             139.1999969482422,
             137.22999572753906,
-            135.77999877929688
-          ],
-          "open": [
-            137.58999633789062,
-            139.99000549316406,
-            139.1999969482422,
-            138.72000122070312,
-            138.47000122070312
+            135.77999877929688,
+            137.1300048828125
           ],
           "high": [
-            139.05999755859375,
             142.4199981689453,
             142.00999450683594,
             139.5,
-            139.5
+            139.5,
+            140.3699951171875
           ],
           "close": [
-            137.88999938964844,
             140.5399932861328,
             140.3000030517578,
             138.7100067138672,
-            138.3699951171875
+            138.3699951171875,
+            138.7050018310547
+          ],
+          "open": [
+            139.99000549316406,
+            139.1999969482422,
+            138.72000122070312,
+            138.47000122070312,
+            140.2899932861328
+          ],
+          "volume": [
+            2277100,
+            1864600,
+            1955100,
+            1720600,
+            640531
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            137.88999938964844,
             140.5399932861328,
             140.3000030517578,
             138.7100067138672,
-            138.3699951171875
+            138.3699951171875,
+            138.7050018310547
           ]
         }
       ]

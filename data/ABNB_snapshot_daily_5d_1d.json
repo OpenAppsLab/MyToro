@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:20.808Z",
+  "fetchedAt": "2026-08-03T17:16:18.390Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABNB?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1607610600,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777373,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 151.52,
+      "regularMarketPrice": 151.275,
       "fiftyTwoWeekHigh": 156.5,
       "fiftyTwoWeekLow": 110.81,
-      "regularMarketDayHigh": 152.625,
-      "regularMarketDayLow": 149.61,
-      "regularMarketVolume": 2313188,
+      "regularMarketDayHigh": 154.56,
+      "regularMarketDayLow": 150.02,
+      "regularMarketVolume": 1301776,
       "longName": "Airbnb, Inc.",
       "shortName": "Airbnb, Inc.",
-      "chartPreviousClose": 141.1,
+      "chartPreviousClose": 146.86,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            143,
-            148.08999633789062,
-            151.5,
-            149.5800018310547,
-            149.61000061035156
-          ],
-          "close": [
-            146.86000061035156,
-            153.11000061035156,
-            153.00999450683594,
-            152.0800018310547,
-            151.52000427246094
-          ],
           "open": [
-            143.5,
             148.8300018310547,
             152.00999450683594,
             151.5,
-            150.83999633789062
+            150.83999633789062,
+            153.49000549316406
           ],
-          "high": [
-            147.02999877929688,
-            153.19000244140625,
-            156.5,
-            152.2100067138672,
-            152.63999938964844
+          "low": [
+            148.08999633789062,
+            151.5,
+            149.5800018310547,
+            149.61000061035156,
+            150.02000427246094
+          ],
+          "close": [
+            153.11000061035156,
+            153.00999450683594,
+            152.0800018310547,
+            151.52000427246094,
+            151.27499389648438
           ],
           "volume": [
-            2902200,
             6844100,
             3851700,
             3055600,
-            2460700
+            2460700,
+            1301776
+          ],
+          "high": [
+            153.19000244140625,
+            156.5,
+            152.2100067138672,
+            152.63999938964844,
+            154.55999755859375
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            146.86000061035156,
             153.11000061035156,
             153.00999450683594,
             152.0800018310547,
-            151.52000427246094
+            151.52000427246094,
+            151.27499389648438
           ]
         }
       ]

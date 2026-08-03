@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:10.132Z",
+  "fetchedAt": "2026-08-03T17:16:07.545Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XOM?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785528228,
+      "regularMarketTime": 1785777363,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 155.44,
+      "regularMarketPrice": 155.315,
       "fiftyTwoWeekHigh": 176.41,
       "fiftyTwoWeekLow": 105.53,
-      "regularMarketDayHigh": 156.16,
-      "regularMarketDayLow": 152.14,
-      "regularMarketVolume": 11761157,
+      "regularMarketDayHigh": 155.87,
+      "regularMarketDayLow": 152.66,
+      "regularMarketVolume": 5994511,
       "longName": "ExxonMobil Holdings Corporation",
       "shortName": "ExxonMobil Holdings Corporation",
-      "chartPreviousClose": 156.94,
+      "chartPreviousClose": 154.77,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            152.5,
             151.8800048828125,
             155.86000061035156,
             154.52999877929688,
-            152.13999938964844
+            152.13999938964844,
+            152.66000366210938
           ],
           "volume": [
-            13955800,
             16299900,
             14571300,
             12578100,
-            15669200
-          ],
-          "open": [
-            153.07000732421875,
-            154.1699981689453,
-            157.72000122070312,
-            155.08999633789062,
-            153.74000549316406
-          ],
-          "close": [
-            154.77000427246094,
-            153.0399932861328,
-            156.75,
-            156.97000122070312,
-            155.44000244140625
+            15669200,
+            5994511
           ],
           "high": [
-            155.4199981689453,
             156.17999267578125,
             159.07000732421875,
             157.77999877929688,
-            156.16000366210938
+            156.16000366210938,
+            155.8699951171875
+          ],
+          "close": [
+            153.0399932861328,
+            156.75,
+            156.97000122070312,
+            155.44000244140625,
+            155.31500244140625
+          ],
+          "open": [
+            154.1699981689453,
+            157.72000122070312,
+            155.08999633789062,
+            153.74000549316406,
+            153.4550018310547
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            154.77000427246094,
             153.0399932861328,
             156.75,
             156.97000122070312,
-            155.44000244140625
+            155.44000244140625,
+            155.31500244140625
           ]
         }
       ]

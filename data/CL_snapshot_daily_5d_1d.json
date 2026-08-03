@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:01.836Z",
+  "fetchedAt": "2026-08-03T17:17:57.466Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CL?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 105197400,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777474,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 91.3,
+      "regularMarketPrice": 90.75,
       "fiftyTwoWeekHigh": 99.33,
       "fiftyTwoWeekLow": 74.55,
-      "regularMarketDayHigh": 91.68,
-      "regularMarketDayLow": 89.675,
-      "regularMarketVolume": 4326898,
+      "regularMarketDayHigh": 93.64,
+      "regularMarketDayLow": 90.7,
+      "regularMarketVolume": 2204793,
       "longName": "Colgate-Palmolive Company",
       "shortName": "Colgate-Palmolive Company",
-      "chartPreviousClose": 90.75,
+      "chartPreviousClose": 91.98,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            91.25,
             94.11000061035156,
             90.94000244140625,
             92.62000274658203,
-            90.8499984741211
+            90.8499984741211,
+            92.38999938964844
           ],
           "high": [
-            92.80999755859375,
             95.45999908447266,
             93.81999969482422,
             92.88999938964844,
-            91.68000030517578
-          ],
-          "volume": [
-            3772100,
-            5089700,
-            5866300,
-            4678800,
-            6660200
+            91.68000030517578,
+            93.63999938964844
           ],
           "low": [
-            90.83999633789062,
             92.69999694824219,
             89.91000366210938,
             90.7300033569336,
-            89.5999984741211
+            89.5999984741211,
+            90.69999694824219
+          ],
+          "volume": [
+            5089700,
+            5866300,
+            4678800,
+            6660200,
+            2204793
           ],
           "close": [
-            91.9800033569336,
             92.7300033569336,
             93.48999786376953,
             91.5999984741211,
-            91.30000305175781
+            91.30000305175781,
+            90.75
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            91.9800033569336,
             92.7300033569336,
             93.48999786376953,
             91.5999984741211,
-            91.30000305175781
+            91.30000305175781,
+            90.75
           ]
         }
       ]

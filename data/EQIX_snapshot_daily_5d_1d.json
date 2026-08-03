@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:00.783Z",
+  "fetchedAt": "2026-08-03T17:18:55.065Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EQIX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 966000600,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777402,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1019.28,
+      "regularMarketPrice": 1026.075,
       "fiftyTwoWeekHigh": 1128.68,
       "fiftyTwoWeekLow": 720.62,
-      "regularMarketDayHigh": 1066.13,
-      "regularMarketDayLow": 1016.91,
-      "regularMarketVolume": 657712,
+      "regularMarketDayHigh": 1029.74,
+      "regularMarketDayLow": 1003.54,
+      "regularMarketVolume": 208119,
       "longName": "Equinix, Inc.",
       "shortName": "Equinix, Inc.",
-      "chartPreviousClose": 1084.24,
+      "chartPreviousClose": 1046.79,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            1046.7900390625,
-            1034.8599853515625,
-            1008.02001953125,
-            1047.530029296875,
-            1019.280029296875
-          ],
-          "open": [
-            1084.239990234375,
-            1045.469970703125,
-            1043.3499755859375,
-            1061.6300048828125,
-            1058.52001953125
-          ],
-          "high": [
-            1085.7099609375,
-            1055.969970703125,
-            1044.1300048828125,
-            1083.8599853515625,
-            1066.1300048828125
-          ],
-          "volume": [
-            514700,
-            603000,
-            751400,
-            892800,
-            728000
-          ],
           "low": [
-            1041.780029296875,
             1029.010009765625,
             1001.6099853515625,
             1044.0899658203125,
-            1016.9000244140625
+            1016.9000244140625,
+            1003.5399780273438
+          ],
+          "high": [
+            1055.969970703125,
+            1044.1300048828125,
+            1083.8599853515625,
+            1066.1300048828125,
+            1029.739990234375
+          ],
+          "close": [
+            1034.8599853515625,
+            1008.02001953125,
+            1047.530029296875,
+            1019.280029296875,
+            1026.074951171875
+          ],
+          "open": [
+            1045.469970703125,
+            1043.3499755859375,
+            1061.6300048828125,
+            1058.52001953125,
+            1016.739990234375
+          ],
+          "volume": [
+            603000,
+            751400,
+            892800,
+            728000,
+            208119
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            1046.7900390625,
             1034.8599853515625,
             1008.02001953125,
             1047.530029296875,
-            1019.280029296875
+            1019.280029296875,
+            1026.074951171875
           ]
         }
       ]

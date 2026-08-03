@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:13.028Z",
+  "fetchedAt": "2026-08-03T17:18:08.656Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTVA?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1558704600,
-      "regularMarketTime": 1785528101,
+      "regularMarketTime": 1785777486,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 78.71,
+      "regularMarketPrice": 77.235,
       "fiftyTwoWeekHigh": 90.97,
       "fiftyTwoWeekLow": 60.535,
-      "regularMarketDayHigh": 84.135,
-      "regularMarketDayLow": 78.68,
-      "regularMarketVolume": 10711043,
+      "regularMarketDayHigh": 78.46,
+      "regularMarketDayLow": 76.79,
+      "regularMarketVolume": 3301487,
       "longName": "Corteva, Inc.",
       "shortName": "Corteva, Inc.",
-      "chartPreviousClose": 89.25,
+      "chartPreviousClose": 87.58,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            86.94999694824219,
-            87.77999877929688,
-            88.58499908447266,
-            89.19999694824219,
-            78.66999816894531
-          ],
           "high": [
-            88.9800033569336,
             89.74500274658203,
             90.97000122070312,
             90.5270004272461,
-            84.13500213623047
-          ],
-          "close": [
-            87.58000183105469,
-            88.94999694824219,
-            90.51000213623047,
-            89.33999633789062,
-            78.70999908447266
-          ],
-          "open": [
-            88.77999877929688,
-            88.55999755859375,
-            89.30000305175781,
-            90,
-            83.98999786376953
+            84.13500213623047,
+            78.45999908447266
           ],
           "volume": [
-            3681400,
             5697600,
             3922100,
             5561900,
-            11529500
+            11529500,
+            3301487
+          ],
+          "close": [
+            88.94999694824219,
+            90.51000213623047,
+            89.33999633789062,
+            78.70999908447266,
+            77.23500061035156
+          ],
+          "open": [
+            88.55999755859375,
+            89.30000305175781,
+            90,
+            83.98999786376953,
+            78
+          ],
+          "low": [
+            87.77999877929688,
+            88.58499908447266,
+            89.19999694824219,
+            78.66999816894531,
+            76.79000091552734
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            87.58000183105469,
             88.94999694824219,
             90.51000213623047,
             89.33999633789062,
-            78.70999908447266
+            78.70999908447266,
+            77.23500061035156
           ]
         }
       ]

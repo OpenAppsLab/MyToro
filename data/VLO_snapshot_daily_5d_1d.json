@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:05.492Z",
+  "fetchedAt": "2026-08-03T17:16:03.090Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VLO?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 379002600,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777330,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 312.9,
+      "regularMarketPrice": 309.875,
       "fiftyTwoWeekHigh": 320.24,
       "fiftyTwoWeekLow": 130.78,
-      "regularMarketDayHigh": 314.853,
-      "regularMarketDayLow": 306.275,
-      "regularMarketVolume": 2385738,
+      "regularMarketDayHigh": 314.35,
+      "regularMarketDayLow": 303.774,
+      "regularMarketVolume": 1219577,
       "longName": "Valero Energy Corporation",
       "shortName": "Valero Energy Corporation",
-      "chartPreviousClose": 302.5,
+      "chartPreviousClose": 304.93,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            2372800,
-            2512000,
-            2319800,
-            2254700,
-            2431400
-          ],
           "open": [
-            295.75,
             304.8999938964844,
             306.3299865722656,
             296.4100036621094,
-            312.3299865722656
-          ],
-          "low": [
-            295.7200012207031,
-            297.82000732421875,
-            301.32000732421875,
-            294.2099914550781,
-            306.25
+            312.3299865722656,
+            311.94000244140625
           ],
           "high": [
-            306.1300048828125,
             307,
             309.9800109863281,
             313.75,
-            315
+            315,
+            314.3500061035156
+          ],
+          "volume": [
+            2512000,
+            2319800,
+            2254700,
+            2431400,
+            1219577
           ],
           "close": [
-            304.92999267578125,
             298.8800048828125,
             301.32000732421875,
             311.7099914550781,
-            312.8999938964844
+            312.8999938964844,
+            309.875
+          ],
+          "low": [
+            297.82000732421875,
+            301.32000732421875,
+            294.2099914550781,
+            306.25,
+            303.7744140625
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            303.756103515625,
             297.7294006347656,
             300.1600036621094,
             310.5099792480469,
-            312.8999938964844
+            312.8999938964844,
+            309.875
           ]
         }
       ]

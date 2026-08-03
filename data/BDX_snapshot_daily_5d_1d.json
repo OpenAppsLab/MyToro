@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:07.054Z",
+  "fetchedAt": "2026-08-03T17:17:03.730Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BDX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777352,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 165.62,
+      "regularMarketPrice": 168.75,
       "fiftyTwoWeekHigh": 187.35,
       "fiftyTwoWeekLow": 127.586,
-      "regularMarketDayHigh": 166.29,
-      "regularMarketDayLow": 162.45,
-      "regularMarketVolume": 1283378,
+      "regularMarketDayHigh": 171.2,
+      "regularMarketDayLow": 167.155,
+      "regularMarketVolume": 621113,
       "longName": "Becton, Dickinson and Company",
       "shortName": "Becton, Dickinson and Company",
-      "chartPreviousClose": 156.36,
+      "chartPreviousClose": 158.92,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            157.08999633789062,
             161.6199951171875,
             165.00999450683594,
             164.42999267578125,
-            162.4499969482422
-          ],
-          "close": [
-            158.9199981689453,
-            166.33999633789062,
-            168.39999389648438,
-            165.4499969482422,
-            165.6199951171875
+            162.4499969482422,
+            167.15499877929688
           ],
           "open": [
-            157.08999633789062,
             162,
             166.07000732421875,
             165.91000366210938,
-            163.8000030517578
+            163.8000030517578,
+            167.75
           ],
-          "high": [
-            160.5500030517578,
-            168.2100067138672,
-            169.10000610351562,
-            168.16000366210938,
-            166.2899932861328
+          "close": [
+            166.33999633789062,
+            168.39999389648438,
+            165.4499969482422,
+            165.6199951171875,
+            168.75
           ],
           "volume": [
-            1341800,
             2693300,
             2126600,
             2041000,
-            2024700
+            2024700,
+            621113
+          ],
+          "high": [
+            168.2100067138672,
+            169.10000610351562,
+            168.16000366210938,
+            166.2899932861328,
+            171.1999969482422
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            158.9199981689453,
             166.33999633789062,
             168.39999389648438,
             165.4499969482422,
-            165.6199951171875
+            165.6199951171875,
+            168.75
           ]
         }
       ]

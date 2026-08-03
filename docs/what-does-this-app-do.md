@@ -111,7 +111,21 @@ This app is a local trading game and model-backed stock selection system that us
 3. Run `npm run refresh:walkforward` to tune alpha/threshold, persist the model calibration report, and generate meta-model metadata.
 4. Restart the server to load the latest persisted models and runtime metrics.
 
-## 10. Why this app exists
+## 10. How this could be used in real time market?
+
+- In live trading, the app can help convert fresh market snapshots into actionable intraday candidates before or during market hours.
+- Updated `data/` snapshots become the current market context for the server to score today’s symbols and identify the strongest momentum setups.
+- The Home page then shows the best ranked candidates, and the Admin page helps verify whether model calibration and drift are in acceptable ranges.
+- When the market opens, the server can place auto-orders for symbols that meet runtime gating, while the app continues to evaluate trailing stops and profit targets.
+- After every data refresh, rerun the calibration workflow so the model weights and runtime thresholds stay aligned with the newest market behavior.
+- Recommended live workflow:
+  1. run `npm run refresh:snapshots`
+  2. run `npm run refresh:models`
+  3. run `npm run refresh:walkforward`
+  4. restart the server and verify Admin metrics before relying on live auto-orders.
+- This helps the app stay connected to current market conditions and avoids stale decisions when the `data/` folder has been updated.
+
+## 11. Why this app exists
 
 - To turn live market snapshots into probability-weighted intraday picks.
 - To combine a logistic model with legacy ensemble signals for stronger ranking.

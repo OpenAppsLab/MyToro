@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:17.966Z",
+  "fetchedAt": "2026-08-03T17:19:11.695Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FICO?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 553959000,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777548,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1122.97,
+      "regularMarketPrice": 1048.4,
       "fiftyTwoWeekHigh": 1998.01,
       "fiftyTwoWeekLow": 870.01,
-      "regularMarketDayHigh": 1136.01,
-      "regularMarketDayLow": 1070.57,
-      "regularMarketVolume": 881946,
+      "regularMarketDayHigh": 1115.975,
+      "regularMarketDayLow": 1036.45,
+      "regularMarketVolume": 258947,
       "longName": "Fair Isaac Corporation",
       "shortName": "Fair Isaac Corporation",
-      "chartPreviousClose": 1237.37,
+      "chartPreviousClose": 1280.57,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            1250,
             1288.1500244140625,
             1334.239990234375,
             1125.280029296875,
-            1070.239990234375
+            1070.239990234375,
+            1036.449951171875
           ],
           "close": [
-            1280.5699462890625,
             1336.219970703125,
             1373.0799560546875,
             1139.5400390625,
-            1122.969970703125
-          ],
-          "high": [
-            1301,
-            1390,
-            1410.1700439453125,
-            1238.5999755859375,
-            1136.02001953125
+            1122.969970703125,
+            1048.4000244140625
           ],
           "volume": [
-            275600,
             402800,
             432200,
             996400,
-            926600
+            926600,
+            258947
           ],
           "open": [
-            1262.1099853515625,
             1301.550048828125,
             1348.489990234375,
             1150,
-            1136.010009765625
+            1136.010009765625,
+            1111.5999755859375
+          ],
+          "high": [
+            1390,
+            1410.1700439453125,
+            1238.5999755859375,
+            1136.02001953125,
+            1115.97509765625
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            1280.5699462890625,
             1336.219970703125,
             1373.0799560546875,
             1139.5400390625,
-            1122.969970703125
+            1122.969970703125,
+            1048.4000244140625
           ]
         }
       ]

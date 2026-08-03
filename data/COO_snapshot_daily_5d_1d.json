@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:08.594Z",
+  "fetchedAt": "2026-08-03T17:18:04.175Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COO?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 412007400,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777477,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 72.32,
+      "regularMarketPrice": 73.76,
       "fiftyTwoWeekHigh": 89.83,
       "fiftyTwoWeekLow": 58.89,
-      "regularMarketDayHigh": 72.5,
-      "regularMarketDayLow": 71.15,
-      "regularMarketVolume": 2436437,
+      "regularMarketDayHigh": 74.83,
+      "regularMarketDayLow": 73.38,
+      "regularMarketVolume": 519978,
       "longName": "The Cooper Companies, Inc.",
       "shortName": "The Cooper Companies, Inc.",
-      "chartPreviousClose": 70.31,
+      "chartPreviousClose": 70.29,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            70.26000213623047,
-            71.06999969482422,
-            71.43000030517578,
-            71.77999877929688,
-            71.1500015258789
-          ],
-          "close": [
-            70.29000091552734,
-            72.05999755859375,
-            73.05999755859375,
-            72.6500015258789,
-            72.31999969482422
-          ],
-          "volume": [
-            2199600,
-            1772800,
-            1739200,
-            1407100,
-            2518500
-          ],
           "high": [
-            71.62999725341797,
             72.63999938964844,
             73.08999633789062,
             73.0999984741211,
-            72.51000213623047
+            72.51000213623047,
+            74.83000183105469
+          ],
+          "low": [
+            71.06999969482422,
+            71.43000030517578,
+            71.77999877929688,
+            71.1500015258789,
+            73.37999725341797
+          ],
+          "close": [
+            72.05999755859375,
+            73.05999755859375,
+            72.6500015258789,
+            72.31999969482422,
+            73.76000213623047
           ],
           "open": [
-            70.81999969482422,
             71.37999725341797,
             71.5,
             73.05999755859375,
-            71.94999694824219
+            71.94999694824219,
+            73.37999725341797
+          ],
+          "volume": [
+            1772800,
+            1739200,
+            1407100,
+            2518500,
+            519978
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            70.29000091552734,
             72.05999755859375,
             73.05999755859375,
             72.6500015258789,
-            72.31999969482422
+            72.31999969482422,
+            73.76000213623047
           ]
         }
       ]

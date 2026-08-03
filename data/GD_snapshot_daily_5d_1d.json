@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:42.098Z",
+  "fetchedAt": "2026-08-03T17:19:35.744Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777574,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 383.42,
+      "regularMarketPrice": 382.75,
       "fiftyTwoWeekHigh": 400,
       "fiftyTwoWeekLow": 306.77,
-      "regularMarketDayHigh": 384.66,
-      "regularMarketDayLow": 376.82,
-      "regularMarketVolume": 1523763,
+      "regularMarketDayHigh": 386.95,
+      "regularMarketDayLow": 380.45,
+      "regularMarketVolume": 388178,
       "longName": "General Dynamics Corporation",
       "shortName": "General Dynamics Corporation",
-      "chartPreviousClose": 386.75,
+      "chartPreviousClose": 389.14,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            386.4700012207031,
             389.25,
             380.9599914550781,
             374.0400085449219,
-            376.82000732421875
-          ],
-          "close": [
-            389.1400146484375,
-            393.19000244140625,
-            380.9599914550781,
-            382.20001220703125,
-            383.4200134277344
-          ],
-          "open": [
-            389.1000061035156,
-            393,
-            398.79998779296875,
-            376.8500061035156,
-            382.3800048828125
+            376.82000732421875,
+            380.45001220703125
           ],
           "high": [
-            392.57000732421875,
             395.42999267578125,
             400,
             383.4800109863281,
-            384.6700134277344
+            384.6700134277344,
+            386.95001220703125
+          ],
+          "open": [
+            393,
+            398.79998779296875,
+            376.8500061035156,
+            382.3800048828125,
+            387.54998779296875
           ],
           "volume": [
-            1194200,
             1702600,
             1935800,
             1199900,
-            1523900
+            1523900,
+            388178
+          ],
+          "close": [
+            393.19000244140625,
+            380.9599914550781,
+            382.20001220703125,
+            383.4200134277344,
+            382.75
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            389.1400146484375,
             393.19000244140625,
             380.9599914550781,
             382.20001220703125,
-            383.4200134277344
+            383.4200134277344,
+            382.75
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:02.343Z",
+  "fetchedAt": "2026-08-03T17:16:59.049Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AXON?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 992957400,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777410,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 527.76,
+      "regularMarketPrice": 565.05,
       "fiftyTwoWeekHigh": 885.92,
       "fiftyTwoWeekLow": 339.01,
-      "regularMarketDayHigh": 530.97,
-      "regularMarketDayLow": 514.759,
-      "regularMarketVolume": 461328,
+      "regularMarketDayHigh": 574.09,
+      "regularMarketDayLow": 546.37,
+      "regularMarketVolume": 486696,
       "longName": "Axon Enterprise, Inc.",
       "shortName": "Axon Enterprise, Inc.",
-      "chartPreviousClose": 502.34,
+      "chartPreviousClose": 525.48,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            525.47998046875,
-            547.6500244140625,
-            531.2000122070312,
-            525.2999877929688,
-            527.760009765625
-          ],
-          "low": [
-            514.239990234375,
-            520.4400024414062,
-            526.1599731445312,
-            502.7200012207031,
-            514.760009765625
-          ],
-          "high": [
-            533.02001953125,
-            551.0700073242188,
-            564.239990234375,
-            526.030029296875,
-            530.969970703125
-          ],
           "open": [
-            517,
             534.25,
             544.510009765625,
             517.02001953125,
-            519.0599975585938
+            519.0599975585938,
+            547.780029296875
+          ],
+          "high": [
+            551.0700073242188,
+            564.239990234375,
+            526.030029296875,
+            530.969970703125,
+            574.0900268554688
+          ],
+          "low": [
+            520.4400024414062,
+            526.1599731445312,
+            502.7200012207031,
+            514.760009765625,
+            546.3699951171875
           ],
           "volume": [
-            787800,
             953000,
             900300,
             618600,
-            491200
+            491200,
+            486696
+          ],
+          "close": [
+            547.6500244140625,
+            531.2000122070312,
+            525.2999877929688,
+            527.760009765625,
+            565.0499877929688
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            525.47998046875,
             547.6500244140625,
             531.2000122070312,
             525.2999877929688,
-            527.760009765625
+            527.760009765625,
+            565.0499877929688
           ]
         }
       ]

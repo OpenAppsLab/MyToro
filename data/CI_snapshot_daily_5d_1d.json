@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:50.446Z",
+  "fetchedAt": "2026-08-03T17:17:46.296Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CI?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 386433000,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777444,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 279.05,
+      "regularMarketPrice": 282.08,
       "fiftyTwoWeekHigh": 315.47,
       "fiftyTwoWeekLow": 239.51,
-      "regularMarketDayHigh": 287.354,
-      "regularMarketDayLow": 278.98,
-      "regularMarketVolume": 1731318,
+      "regularMarketDayHigh": 283.83,
+      "regularMarketDayLow": 276.71,
+      "regularMarketVolume": 685366,
       "longName": "The Cigna Group",
       "shortName": "The Cigna Group",
-      "chartPreviousClose": 289.57,
+      "chartPreviousClose": 291.02,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            289.6499938964844,
-            293.5799865722656,
-            303,
-            286,
-            285.1099853515625
-          ],
-          "volume": [
-            1313500,
-            1858800,
-            1719300,
-            2320600,
-            2187800
-          ],
-          "high": [
-            293.3299865722656,
-            304.69000244140625,
-            303,
-            291.95001220703125,
-            287.3500061035156
-          ],
-          "close": [
-            291.0199890136719,
-            301.05999755859375,
-            296.4700012207031,
-            287.6600036621094,
-            279.04998779296875
-          ],
           "low": [
-            286.7099914550781,
             291.8900146484375,
             296.2200012207031,
             281.0299987792969,
-            278.9700012207031
+            278.9700012207031,
+            276.7099914550781
+          ],
+          "open": [
+            293.5799865722656,
+            303,
+            286,
+            285.1099853515625,
+            279.04998779296875
+          ],
+          "close": [
+            301.05999755859375,
+            296.4700012207031,
+            287.6600036621094,
+            279.04998779296875,
+            282.0799865722656
+          ],
+          "volume": [
+            1858800,
+            1719300,
+            2320600,
+            2187800,
+            685366
+          ],
+          "high": [
+            304.69000244140625,
+            303,
+            291.95001220703125,
+            287.3500061035156,
+            283.8299865722656
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            291.0199890136719,
             301.05999755859375,
             296.4700012207031,
             287.6600036621094,
-            279.04998779296875
+            279.04998779296875,
+            282.0799865722656
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:11.222Z",
+  "fetchedAt": "2026-08-03T17:19:05.257Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXE?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1612967400,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777538,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 94.03,
+      "regularMarketPrice": 94.61,
       "fiftyTwoWeekHigh": 126.621,
       "fiftyTwoWeekLow": 84.985,
-      "regularMarketDayHigh": 94.175,
-      "regularMarketDayLow": 92.06,
-      "regularMarketVolume": 3038834,
+      "regularMarketDayHigh": 95.51,
+      "regularMarketDayLow": 93.77,
+      "regularMarketVolume": 1189813,
       "longName": "Expand Energy Corporation",
       "shortName": "Expand Energy Corporation",
-      "chartPreviousClose": 91.52,
+      "chartPreviousClose": 90.51,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            91.87999725341797,
             91.4000015258789,
             91.95999908447266,
             92.30999755859375,
-            92.5
-          ],
-          "volume": [
-            4351800,
-            5098700,
-            6435000,
-            3145000,
-            3071900
-          ],
-          "close": [
-            90.51000213623047,
-            88.5199966430664,
-            92.45999908447266,
-            92.41999816894531,
-            94.02999877929688
+            92.5,
+            94.34500122070312
           ],
           "high": [
-            92.27999877929688,
             91.66999816894531,
             93.08000183105469,
             93.55999755859375,
-            94.17500305175781
+            94.17500305175781,
+            95.51000213623047
           ],
           "low": [
-            90.20999908447266,
             88.0979995727539,
             88.76000213623047,
             90.58999633789062,
-            92.05999755859375
+            92.05999755859375,
+            93.7699966430664
+          ],
+          "volume": [
+            5098700,
+            6435000,
+            3145000,
+            3071900,
+            1189813
+          ],
+          "close": [
+            88.5199966430664,
+            92.45999908447266,
+            92.41999816894531,
+            94.02999877929688,
+            94.61000061035156
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            90.51000213623047,
             88.5199966430664,
             92.45999908447266,
             92.41999816894531,
-            94.02999877929688
+            94.02999877929688,
+            94.61000061035156
           ]
         }
       ]

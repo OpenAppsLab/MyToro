@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:23.582Z",
+  "fetchedAt": "2026-08-03T17:17:20.076Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 996759000,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777428,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 106.23,
+      "regularMarketPrice": 105.54,
       "fiftyTwoWeekHigh": 134.87,
       "fiftyTwoWeekLow": 76.01,
-      "regularMarketDayHigh": 107.04,
-      "regularMarketDayLow": 104.41,
-      "regularMarketVolume": 1552964,
+      "regularMarketDayHigh": 106.46,
+      "regularMarketDayLow": 103.37,
+      "regularMarketVolume": 352103,
       "longName": "Bunge Global SA",
       "shortName": "Bunge Limited",
-      "chartPreviousClose": 121.53,
+      "chartPreviousClose": 117.5,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            120.25,
-            119.58000183105469,
-            115.94999694824219,
-            107.44999694824219,
-            107.04000091552734
-          ],
           "open": [
-            119.77999877929688,
             117.6500015258789,
             112.88999938964844,
             105.7699966430664,
-            106.5999984741211
+            106.5999984741211,
+            106.01000213623047
+          ],
+          "high": [
+            119.58000183105469,
+            115.94999694824219,
+            107.44999694824219,
+            107.04000091552734,
+            106.45999908447266
           ],
           "low": [
-            116.83000183105469,
             115.02999877929688,
             107.30999755859375,
             102.80999755859375,
-            104.41000366210938
-          ],
-          "close": [
-            117.5,
-            117.37000274658203,
-            107.77999877929688,
-            105.06999969482422,
-            106.2300033569336
+            104.41000366210938,
+            103.37000274658203
           ],
           "volume": [
-            1179500,
             1737700,
             2990100,
             2537900,
-            1600100
+            1600100,
+            352103
+          ],
+          "close": [
+            117.37000274658203,
+            107.77999877929688,
+            105.06999969482422,
+            106.2300033569336,
+            105.54000091552734
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            117.5,
             117.37000274658203,
             107.77999877929688,
             105.06999969482422,
-            106.2300033569336
+            106.2300033569336,
+            105.54000091552734
           ]
         }
       ]

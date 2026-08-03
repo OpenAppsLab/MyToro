@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:18.302Z",
+  "fetchedAt": "2026-08-03T17:15:15.724Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 925824600,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777310,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1018.38,
+      "regularMarketPrice": 1011.17,
       "fiftyTwoWeekHigh": 1153.99,
       "fiftyTwoWeekLow": 705.55,
-      "regularMarketDayHigh": 1042.89,
-      "regularMarketDayLow": 1008.6,
-      "regularMarketVolume": 1191921,
+      "regularMarketDayHigh": 1026.056,
+      "regularMarketDayLow": 1005.42,
+      "regularMarketVolume": 844665,
       "longName": "The Goldman Sachs Group, Inc.",
       "shortName": "Goldman Sachs Group, Inc. (The)",
-      "chartPreviousClose": 1061.23,
+      "chartPreviousClose": 1048.23,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            1029,
             1011.8699951171875,
             977.7000122070312,
             998.510009765625,
-            1008.5999755859375
+            1008.5999755859375,
+            1005.4199829101562
           ],
           "close": [
-            1048.22998046875,
             1033.3399658203125,
             980.75,
             1024.8599853515625,
-            1018.3800048828125
-          ],
-          "open": [
-            1080.1800537109375,
-            1041.9300537109375,
-            1025,
-            1007.3599853515625,
-            1034.719970703125
-          ],
-          "high": [
-            1088.5,
-            1047.7099609375,
-            1028.1199951171875,
-            1029.7900390625,
-            1042.97998046875
+            1018.3800048828125,
+            1011.1699829101562
           ],
           "volume": [
-            2538900,
             2173100,
             3198400,
             2330800,
-            1552600
+            1552600,
+            844665
+          ],
+          "open": [
+            1041.9300537109375,
+            1025,
+            1007.3599853515625,
+            1034.719970703125,
+            1025
+          ],
+          "high": [
+            1047.7099609375,
+            1028.1199951171875,
+            1029.7900390625,
+            1042.97998046875,
+            1026.0555419921875
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            1048.22998046875,
             1033.3399658203125,
             980.75,
             1024.8599853515625,
-            1018.3800048828125
+            1018.3800048828125,
+            1011.1699829101562
           ]
         }
       ]

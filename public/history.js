@@ -323,7 +323,7 @@ function formatCurrency(amount) {
   return `$${Number(amount || 0).toFixed(2)}`;
 }
 
-function clearAllSavedData() {
+async function clearAllSavedData() {
   const confirmed = window.confirm('Are you sure you want to wipe out all the order details?');
   if (!confirmed) {
     return;
@@ -331,10 +331,15 @@ function clearAllSavedData() {
 
   saveHistory([], []);
   window.historyOrders = [];
-  window.dispatchEvent(new CustomEvent('orders-cleared'));
 
-  fetch('/api/orders/clear', { method: 'POST' }).catch(() => {});
-  renderHistoryFull();
+  try {
+    await fetch('/api/orders/clear', { method: 'POST' });
+  } catch {
+    // If the backend clear fails, continue to refresh the UI anyway.
+  }
+
+  window.dispatchEvent(new CustomEvent('orders-cleared'));
+  await renderHistoryFull();
 }
 
 function getOrderRealizedPnl(order) {

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:34.509Z",
+  "fetchedAt": "2026-08-03T17:19:28.193Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GRMN?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 976285800,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777475,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 293.78,
-      "fiftyTwoWeekHigh": 304,
+      "regularMarketPrice": 301.415,
+      "fiftyTwoWeekHigh": 304.24,
       "fiftyTwoWeekLow": 186.67,
-      "regularMarketDayHigh": 298.45,
-      "regularMarketDayLow": 288.17,
-      "regularMarketVolume": 884702,
+      "regularMarketDayHigh": 304.24,
+      "regularMarketDayLow": 296.5,
+      "regularMarketVolume": 275546,
       "longName": "Garmin Ltd.",
       "shortName": "Garmin Ltd.",
-      "chartPreviousClose": 243.03,
+      "chartPreviousClose": 242.47,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            1544000,
-            1195500,
-            3664200,
-            1350600,
-            1168100
-          ],
-          "close": [
-            242.47000122070312,
-            253.64999389648438,
-            294.8299865722656,
-            297.54998779296875,
-            293.7799987792969
-          ],
           "open": [
-            244.97999572753906,
             246.30999755859375,
             261.80999755859375,
             292.9599914550781,
-            295.6600036621094
+            295.6600036621094,
+            297.3299865722656
           ],
           "high": [
-            246.7100067138672,
             255.60000610351562,
             304,
             298.2099914550781,
-            298.45001220703125
+            298.45001220703125,
+            304.239990234375
+          ],
+          "volume": [
+            1195500,
+            3664200,
+            1350600,
+            1168100,
+            275546
+          ],
+          "close": [
+            253.64999389648438,
+            294.8299865722656,
+            297.54998779296875,
+            293.7799987792969,
+            301.4150085449219
           ],
           "low": [
-            240,
             245.0500030517578,
             261.0400085449219,
             285.9700012207031,
-            288.0299987792969
+            288.0299987792969,
+            296.5
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            242.47000122070312,
             253.64999389648438,
             294.8299865722656,
             297.54998779296875,
-            293.7799987792969
+            293.7799987792969,
+            301.4150085449219
           ]
         }
       ]

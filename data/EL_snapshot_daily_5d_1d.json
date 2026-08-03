@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:05.296Z",
+  "fetchedAt": "2026-08-03T17:18:59.544Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EL?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 816618600,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777512,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 83.9,
+      "regularMarketPrice": 83.98,
       "fiftyTwoWeekHigh": 121.64,
       "fiftyTwoWeekLow": 66.22,
-      "regularMarketDayHigh": 84.76,
-      "regularMarketDayLow": 83.14,
-      "regularMarketVolume": 1341757,
+      "regularMarketDayHigh": 87.5,
+      "regularMarketDayLow": 83.81,
+      "regularMarketVolume": 721844,
       "longName": "The Estée Lauder Companies Inc.",
       "shortName": "Estee Lauder Companies, Inc. (T",
-      "chartPreviousClose": 80.29,
+      "chartPreviousClose": 83.2,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            81.01000213623047,
-            83.25,
-            82.61000061035156,
-            83.79000091552734,
-            83.12999725341797
-          ],
-          "close": [
-            83.19999694824219,
-            84.75,
-            84.12999725341797,
-            84.87999725341797,
-            83.9000015258789
-          ],
           "open": [
-            81.01000213623047,
             84.23999786376953,
             83.29000091552734,
             84.18000030517578,
-            84.27999877929688
+            84.27999877929688,
+            85.4000015258789
           ],
-          "high": [
-            83.27999877929688,
-            85.37000274658203,
-            86,
-            85.63999938964844,
-            84.76000213623047
+          "low": [
+            83.25,
+            82.61000061035156,
+            83.79000091552734,
+            83.12999725341797,
+            83.80999755859375
           ],
           "volume": [
-            1756600,
             2295200,
             2482400,
             2552800,
-            1847500
+            1847500,
+            721844
+          ],
+          "high": [
+            85.37000274658203,
+            86,
+            85.63999938964844,
+            84.76000213623047,
+            87.5
+          ],
+          "close": [
+            84.75,
+            84.12999725341797,
+            84.87999725341797,
+            83.9000015258789,
+            83.9800033569336
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            83.19999694824219,
             84.75,
             84.12999725341797,
             84.87999725341797,
-            83.9000015258789
+            83.9000015258789,
+            83.9800033569336
           ]
         }
       ]

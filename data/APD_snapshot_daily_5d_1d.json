@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:19.732Z",
+  "fetchedAt": "2026-08-03T17:16:17.222Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/APD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777374,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 294.89,
+      "regularMarketPrice": 290.57,
       "fiftyTwoWeekHigh": 314.87,
       "fiftyTwoWeekLow": 229.11,
-      "regularMarketDayHigh": 301.75,
-      "regularMarketDayLow": 291.375,
-      "regularMarketVolume": 989711,
+      "regularMarketDayHigh": 296.005,
+      "regularMarketDayLow": 290.345,
+      "regularMarketVolume": 405728,
       "longName": "Air Products and Chemicals, Inc.",
       "shortName": "Air Products and Chemicals, Inc",
-      "chartPreviousClose": 297.87,
+      "chartPreviousClose": 292.58,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            291.3800048828125,
-            292.5799865722656,
-            291.5400085449219,
-            297.3500061035156,
-            291.3800048828125
-          ],
-          "close": [
-            292.5799865722656,
-            292.8500061035156,
-            294.2699890136719,
-            300.20001220703125,
-            294.8900146484375
-          ],
-          "volume": [
-            1218100,
-            1539100,
-            1068900,
-            1614400,
-            1463900
-          ],
           "high": [
-            297.3399963378906,
             298.1000061035156,
             295.5299987792969,
             311.0799865722656,
-            301.75
+            301.75,
+            296.0050048828125
+          ],
+          "low": [
+            292.5799865722656,
+            291.5400085449219,
+            297.3500061035156,
+            291.3800048828125,
+            290.3450012207031
+          ],
+          "volume": [
+            1539100,
+            1068900,
+            1614400,
+            1463900,
+            405728
+          ],
+          "close": [
+            292.8500061035156,
+            294.2699890136719,
+            300.20001220703125,
+            294.8900146484375,
+            290.57000732421875
           ],
           "open": [
-            296.5,
             293.1099853515625,
             294.79998779296875,
             308.5799865722656,
-            299.57000732421875
+            299.57000732421875,
+            295.1400146484375
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            292.5799865722656,
             292.8500061035156,
             294.2699890136719,
             300.20001220703125,
-            294.8900146484375
+            294.8900146484375,
+            290.57000732421875
           ]
         }
       ]

@@ -13,8 +13,13 @@ const dailyPnlLabel = document.getElementById('dailyPnl');
 const selectionModal = document.getElementById('selectionModal');
 const selectionModalText = document.getElementById('selectionModalText');
 const selectionModalClose = document.getElementById('selectionModalClose');
+const infoButton = document.getElementById('infoButton');
+const appInfoModal = document.getElementById('appInfoModal');
+const appInfoBody = document.getElementById('appInfoBody');
+const appInfoClose = document.getElementById('appInfoClose');
 const STARTING_DAILY_BALANCE = 3000;
 let latestPredictionOptions = [];
+let appInfoCache = '';
 let selectedPredictionSymbol = '';
 let orderCreateInProgress = false;
 
@@ -37,6 +42,7 @@ const curveMeta = document.getElementById('curveMeta');
 const alphaControl = document.getElementById('alphaControl');
 const thresholdControl = document.getElementById('thresholdControl');
 const saveAdminButton = document.getElementById('saveAdminSettings');
+const restartServerButton = document.getElementById('restartServerButton');
 const adminTuningSummary = document.getElementById('adminTuningSummary');
 
 function showAdminAlert(message, type = 'healthy') {
@@ -212,6 +218,29 @@ async function saveAdminSettings() {
   }
 }
 
+async function requestServerRestart() {
+  if (!restartServerButton) return;
+  if (!window.confirm('Restart the server? This will stop the backend process and may require a manual restart if no watcher is running.')) {
+    return;
+  }
+
+  restartServerButton.disabled = true;
+
+  try {
+    const response = await fetch('/api/admin/restart', { method: 'POST' });
+    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(payload.error || 'Unable to request server restart');
+    }
+
+    showAdminAlert('Server restart requested. Backend process will stop shortly.', 'warning');
+  } catch (error) {
+    showAdminAlert(error.message || 'Unable to request server restart', 'danger');
+  } finally {
+    restartServerButton.disabled = false;
+  }
+}
+
 function showSelectionModal(option, order) {
   if (!selectionModal || !selectionModalText) {
     return;
@@ -234,6 +263,134 @@ function hideSelectionModal() {
 
   selectionModal.classList.add('hidden');
   selectionModal.setAttribute('aria-hidden', 'true');
+}
+
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function parseMarkdownToHtml(markdown) {
+  const lines = markdown.split(/\r?\n/);
+  let html = '';
+  let currentList = null;
+  let paragraphOpen = false;
+
+  const closeParagraph = () => {
+    if (paragraphOpen) {
+      html += '</p>';
+      paragraphOpen = false;
+    }
+  };
+
+  const closeList = () => {
+    if (currentList) {
+      html += currentList === 'ol' ? '</ol>' : '</ul>';
+      currentList = null;
+    }
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+
+    if (!line) {
+      closeList();
+      closeParagraph();
+      continue;
+    }
+
+    const headerMatch = line.match(/^(#{1,2})\s+(.*)$/);
+    const olMatch = line.match(/^\d+\.\s+(.*)$/);
+    const ulMatch = line.match(/^[-*+]\s+(.*)$/);
+
+    if (headerMatch) {
+      closeList();
+      closeParagraph();
+      const level = headerMatch[1].length + 1;
+      html += `<h${level}>${escapeHtml(headerMatch[2])}</h${level}>`;
+      continue;
+    }
+
+    if (olMatch) {
+      if (currentList !== 'ol') {
+        closeParagraph();
+        closeList();
+        currentList = 'ol';
+        html += '<ol class="doc-list">';
+      }
+      html += `<li>${escapeHtml(olMatch[1])}</li>`;
+      continue;
+    }
+
+    if (ulMatch) {
+      if (currentList !== 'ul') {
+        closeParagraph();
+        closeList();
+        currentList = 'ul';
+        html += '<ul class="doc-list">';
+      }
+      html += `<li>${escapeHtml(ulMatch[1])}</li>`;
+      continue;
+    }
+
+    if (!paragraphOpen) {
+      closeList();
+      html += '<p>';
+      paragraphOpen = true;
+    } else {
+      html += ' ';
+    }
+
+    html += escapeHtml(line);
+  }
+
+  closeList();
+  closeParagraph();
+
+  return html;
+}
+
+async function fetchAppDocumentation() {
+  if (appInfoCache) {
+    return appInfoCache;
+  }
+
+  try {
+    const response = await fetch('/api/docs/what-does-this-app-do', { cache: 'no-store' });
+    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(payload.error || 'Unable to load documentation');
+    }
+
+    appInfoCache = payload.content || 'Documentation could not be loaded.';
+    return appInfoCache;
+  } catch (error) {
+    return `Unable to load documentation: ${error.message}`;
+  }
+}
+
+async function openAppInfo() {
+  if (!appInfoModal || !appInfoBody) {
+    return;
+  }
+
+  const markdown = await fetchAppDocumentation();
+  appInfoBody.innerHTML = parseMarkdownToHtml(markdown);
+  appInfoModal.classList.remove('hidden');
+  appInfoModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeAppInfo() {
+  if (!appInfoModal) {
+    return;
+  }
+
+  appInfoModal.classList.add('hidden');
+  appInfoModal.setAttribute('aria-hidden', 'true');
 }
 
 function loadHistory() {
@@ -458,7 +615,8 @@ async function createPendingOrder(option) {
         targetProfit: minProfit,
         ballparkAmount: ballpark,
         leverage: 2,
-        stopLossPct: 5
+        stopLossPct: 5,
+        force: true
       })
     });
 
@@ -556,7 +714,7 @@ async function searchPrediction() {
             <span>Estimated profit: ${option.estimatedProfit.toFixed(2)}</span>
             <span>Leverage profit: ${option.leverageProfit.toFixed(2)}</span>
           </div>
-          <button data-select="${option.symbol}" class="ghost-button" ${payload.viable ? '' : 'disabled'}>${payload.viable ? `Select option ${index + 1}` : `Watch option ${index + 1}`}</button>
+          <button data-select="${option.symbol}" class="ghost-button">${payload.viable ? `Select option ${index + 1}` : `Place manual order ${index + 1}`}</button>
         </article>
       `).join('')
       : '<div class="option-card">No live movement data is available for your requested target right now.</div>';
@@ -595,12 +753,6 @@ if (resultsArea) {
       return;
     }
 
-    if (!option.viable) {
-      updateStatus('This option is a watch candidate only. Re-scan for a live viable pick when the market moves.');
-      target.disabled = false;
-      return;
-    }
-
     updateStatus(`Placing order for ${option.name}...`);
     const order = await createPendingOrder(option);
     if (!order) {
@@ -631,17 +783,53 @@ if (selectionModal) {
   });
 }
 
+if (appInfoModal) {
+  appInfoModal.addEventListener('click', (event) => {
+    if (event.target === appInfoModal) {
+      closeAppInfo();
+    }
+  });
+}
+
+if (infoButton) {
+  infoButton.addEventListener('click', openAppInfo);
+}
+
+if (appInfoClose) {
+  appInfoClose.addEventListener('click', closeAppInfo);
+}
+
 if (searchButton) {
   searchButton.addEventListener('click', searchPrediction);
+}
+
+async function triggerAutoOrdersOnLoad() {
+  try {
+    const response = await fetch('/api/auto-orders/trigger', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(payload.error || 'Unable to trigger auto orders');
+    }
+  } catch {
+    // Best-effort startup trigger; ignore failures so page still loads.
+  }
 }
 
 if (saveAdminButton) {
   saveAdminButton.addEventListener('click', saveAdminSettings);
 }
 
+if (restartServerButton) {
+  restartServerButton.addEventListener('click', requestServerRestart);
+}
+
 updateSessionBadge();
 updateDailyBalance();
 updateDailyPnl();
+triggerAutoOrdersOnLoad().catch(() => {});
 startHomeOrderAutoRefresh();
 
 if (adminPanel) {

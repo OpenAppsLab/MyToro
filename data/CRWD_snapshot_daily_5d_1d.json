@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:16.263Z",
+  "fetchedAt": "2026-08-03T17:18:11.895Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRWD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1560346200,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777490,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 190.86,
+      "regularMarketPrice": 199.01,
       "fiftyTwoWeekHigh": 217.5,
       "fiftyTwoWeekLow": 85.68,
-      "regularMarketDayHigh": 191.64,
-      "regularMarketDayLow": 184.16,
-      "regularMarketVolume": 7346518,
+      "regularMarketDayHigh": 199.69,
+      "regularMarketDayLow": 192.6,
+      "regularMarketVolume": 5034719,
       "longName": "CrowdStrike Holdings, Inc.",
       "shortName": "CrowdStrike Holdings, Inc.",
-      "chartPreviousClose": 183.28,
+      "chartPreviousClose": 180.11,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            187.90499877929688,
-            181.3300018310547,
-            182.625,
-            180.5800018310547,
-            187.22000122070312
-          ],
           "high": [
-            188.5,
             184.6649932861328,
             186.38999938964844,
             185.4600067138672,
-            191.64500427246094
-          ],
-          "close": [
-            180.11000061035156,
-            181.8000030517578,
-            179.3800048828125,
-            185.22000122070312,
-            190.86000061035156
-          ],
-          "volume": [
-            6580300,
-            8475300,
-            7152500,
-            8958800,
-            7879000
+            191.64500427246094,
+            199.6898956298828
           ],
           "low": [
-            179.5,
             174.13999938964844,
             176.4600067138672,
             177.7469940185547,
-            184.16000366210938
+            184.16000366210938,
+            192.60000610351562
+          ],
+          "open": [
+            181.3300018310547,
+            182.625,
+            180.5800018310547,
+            187.22000122070312,
+            194.0399932861328
+          ],
+          "volume": [
+            8475300,
+            7152500,
+            8958800,
+            7879000,
+            5034719
+          ],
+          "close": [
+            181.8000030517578,
+            179.3800048828125,
+            185.22000122070312,
+            190.86000061035156,
+            199.00999450683594
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            180.11000061035156,
             181.8000030517578,
             179.3800048828125,
             185.22000122070312,
-            190.86000061035156
+            190.86000061035156,
+            199.00999450683594
           ]
         }
       ]

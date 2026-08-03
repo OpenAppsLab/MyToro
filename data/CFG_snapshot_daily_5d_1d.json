@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:53.857Z",
+  "fetchedAt": "2026-08-03T17:17:49.825Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CFG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1411565400,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777442,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 71.65,
+      "regularMarketPrice": 72.24,
       "fiftyTwoWeekHigh": 74.7,
       "fiftyTwoWeekLow": 46.53,
-      "regularMarketDayHigh": 72.31,
-      "regularMarketDayLow": 71.24,
-      "regularMarketVolume": 1569579,
+      "regularMarketDayHigh": 72.76,
+      "regularMarketDayLow": 71.53,
+      "regularMarketVolume": 829964,
       "longName": "Citizens Financial Group, Inc.",
       "shortName": "Citizens Financial Group, Inc.",
-      "chartPreviousClose": 71.88,
+      "chartPreviousClose": 71.1,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            72.2300033569336,
-            71.33000183105469,
-            72.12000274658203,
-            71.6500015258789,
-            71.9000015258789
-          ],
           "volume": [
-            3643100,
             5126000,
             4133200,
             5413900,
-            2741000
-          ],
-          "close": [
-            71.0999984741211,
-            72.94000244140625,
-            71.30999755859375,
-            71.7300033569336,
-            71.6500015258789
+            2741000,
+            829964
           ],
           "high": [
-            72.86000061035156,
             73.06999969482422,
             72.91999816894531,
             71.90499877929688,
-            72.30999755859375
+            72.30999755859375,
+            72.76000213623047
+          ],
+          "open": [
+            71.33000183105469,
+            72.12000274658203,
+            71.6500015258789,
+            71.9000015258789,
+            71.66999816894531
+          ],
+          "close": [
+            72.94000244140625,
+            71.30999755859375,
+            71.7300033569336,
+            71.6500015258789,
+            72.23999786376953
           ],
           "low": [
-            70.58000183105469,
             71.16000366210938,
             71.30000305175781,
             70.04000091552734,
-            71.23999786376953
+            71.23999786376953,
+            71.52999877929688
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            70.64134979248047,
             72.46949005126953,
             70.8499984741211,
             71.7300033569336,
-            71.6500015258789
+            71.6500015258789,
+            72.23999786376953
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:46.943Z",
+  "fetchedAt": "2026-08-03T17:17:43.012Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CB?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 733069800,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777428,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 350.68,
+      "regularMarketPrice": 347.51,
       "fiftyTwoWeekHigh": 365.91,
       "fiftyTwoWeekLow": 265.3,
-      "regularMarketDayHigh": 354.015,
-      "regularMarketDayLow": 347.2,
-      "regularMarketVolume": 846578,
+      "regularMarketDayHigh": 353.61,
+      "regularMarketDayLow": 347,
+      "regularMarketVolume": 549179,
       "longName": "Chubb Limited",
       "shortName": "Chubb Limited",
-      "chartPreviousClose": 359.75,
+      "chartPreviousClose": 358.91,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            358.9800109863281,
-            361.5299987792969,
-            365,
-            358.3599853515625,
-            349.5899963378906
-          ],
           "high": [
-            362.0899963378906,
             365.1700134277344,
             365.9100036621094,
             359.3500061035156,
-            354.04998779296875
+            354.04998779296875,
+            353.6099853515625
           ],
-          "close": [
-            358.9100036621094,
-            363.5,
-            361.8999938964844,
-            350.1499938964844,
-            350.67999267578125
+          "open": [
+            361.5299987792969,
+            365,
+            358.3599853515625,
+            349.5899963378906,
+            350.989990234375
           ],
           "volume": [
-            1751300,
             2137800,
             1858300,
             1615500,
-            1361900
+            1361900,
+            549179
+          ],
+          "close": [
+            363.5,
+            361.8999938964844,
+            350.1499938964844,
+            350.67999267578125,
+            347.510009765625
           ],
           "low": [
-            357.2300109863281,
             360.3500061035156,
             360.5899963378906,
             347,
-            347.010009765625
+            347.010009765625,
+            347
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            358.9100036621094,
             363.5,
             361.8999938964844,
             350.1499938964844,
-            350.67999267578125
+            350.67999267578125,
+            347.510009765625
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:22.470Z",
+  "fetchedAt": "2026-08-03T17:19:16.219Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FDXF?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1779888600,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777480,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 140.53,
+      "regularMarketPrice": 140.275,
       "fiftyTwoWeekHigh": 200,
       "fiftyTwoWeekLow": 135,
-      "regularMarketDayHigh": 141.9,
-      "regularMarketDayLow": 136.935,
-      "regularMarketVolume": 663584,
+      "regularMarketDayHigh": 144.7,
+      "regularMarketDayLow": 140,
+      "regularMarketVolume": 235246,
       "longName": "FedEx Freight Holding Company, Inc.",
       "shortName": "FedEx Freight Holding Company, ",
-      "chartPreviousClose": 158,
+      "chartPreviousClose": 150.3,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -56,60 +56,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            1122700,
-            757800,
-            901400,
-            1563100,
-            878300
-          ],
-          "close": [
-            150.3000030517578,
-            150.99000549316406,
-            144.36000061035156,
-            137.5500030517578,
-            140.52999877929688
-          ],
-          "open": [
-            157.24000549316406,
-            150.1300048828125,
-            150.4499969482422,
-            144.58999633789062,
-            136.6300048828125
-          ],
-          "high": [
-            158.35000610351562,
-            153.63999938964844,
-            153.77999877929688,
-            147.3300018310547,
-            141.9199981689453
-          ],
           "low": [
-            149.25999450683594,
             147.4499969482422,
             143.5,
             135.63999938964844,
-            136.6300048828125
+            136.6300048828125,
+            140
+          ],
+          "close": [
+            150.99000549316406,
+            144.36000061035156,
+            137.5500030517578,
+            140.52999877929688,
+            140.27499389648438
+          ],
+          "high": [
+            153.63999938964844,
+            153.77999877929688,
+            147.3300018310547,
+            141.9199981689453,
+            144.6999969482422
+          ],
+          "volume": [
+            757800,
+            901400,
+            1563100,
+            878300,
+            235246
+          ],
+          "open": [
+            150.1300048828125,
+            150.4499969482422,
+            144.58999633789062,
+            136.6300048828125,
+            141
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            150.3000030517578,
             150.99000549316406,
             144.36000061035156,
             137.5500030517578,
-            140.52999877929688
+            140.52999877929688,
+            140.27499389648438
           ]
         }
       ]

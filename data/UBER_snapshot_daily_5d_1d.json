@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:02.156Z",
+  "fetchedAt": "2026-08-03T17:15:59.721Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/UBER?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1557495000,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777349,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 70.36,
+      "regularMarketPrice": 71.38,
       "fiftyTwoWeekHigh": 101.99,
       "fiftyTwoWeekLow": 65.41,
-      "regularMarketDayHigh": 70.5,
-      "regularMarketDayLow": 69.5,
-      "regularMarketVolume": 11858962,
+      "regularMarketDayHigh": 71.949,
+      "regularMarketDayLow": 71.08,
+      "regularMarketVolume": 6754705,
       "longName": "Uber Technologies, Inc.",
       "shortName": "Uber Technologies, Inc.",
-      "chartPreviousClose": 65.94,
+      "chartPreviousClose": 68.18,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            66.37999725341797,
-            69.11000061035156,
-            70.0999984741211,
-            70.5999984741211,
-            69.95999908447266
-          ],
           "low": [
-            65.41000366210938,
             68.76000213623047,
             69.66000366210938,
             68.69000244140625,
-            69.5
+            69.5,
+            71.08000183105469
           ],
           "close": [
-            68.18000030517578,
             70.73999786376953,
             71.19999694824219,
             70.37000274658203,
-            70.36000061035156
+            70.36000061035156,
+            71.37999725341797
           ],
           "volume": [
-            25722900,
             20969300,
             12052100,
             14183500,
-            11981200
+            11981200,
+            6754705
+          ],
+          "open": [
+            69.11000061035156,
+            70.0999984741211,
+            70.5999984741211,
+            69.95999908447266,
+            71.2300033569336
           ],
           "high": [
-            68.33999633789062,
             70.9000015258789,
             71.79000091552734,
             70.5999984741211,
-            70.5
+            70.5,
+            71.9489974975586
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            68.18000030517578,
             70.73999786376953,
             71.19999694824219,
             70.37000274658203,
-            70.36000061035156
+            70.36000061035156,
+            71.37999725341797
           ]
         }
       ]

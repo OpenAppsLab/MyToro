@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:23.110Z",
+  "fetchedAt": "2026-08-03T17:16:20.469Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALB?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 761927400,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777345,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 117.64,
+      "regularMarketPrice": 118.41,
       "fiftyTwoWeekHigh": 221,
       "fiftyTwoWeekLow": 66.67,
-      "regularMarketDayHigh": 118.79,
-      "regularMarketDayLow": 116,
-      "regularMarketVolume": 1502811,
+      "regularMarketDayHigh": 120.37,
+      "regularMarketDayLow": 115.59,
+      "regularMarketVolume": 907563,
       "longName": "Albemarle Corporation",
       "shortName": "Albemarle Corporation",
-      "chartPreviousClose": 114.85,
+      "chartPreviousClose": 116.18,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            114.91999816894531,
             115.05999755859375,
             115.29000091552734,
             116.47000122070312,
-            116.80000305175781
-          ],
-          "low": [
-            113.75,
-            111.55000305175781,
-            112.22000122070312,
-            115.94000244140625,
-            116
-          ],
-          "close": [
-            116.18000030517578,
-            113.16000366210938,
-            113.87999725341797,
-            117.76000213623047,
-            117.63999938964844
-          ],
-          "volume": [
-            2392300,
-            2304300,
-            2294800,
-            2179600,
-            3649000
+            116.80000305175781,
+            116.19999694824219
           ],
           "high": [
-            117.19000244140625,
             115.79000091552734,
             117,
             118.55999755859375,
-            118.79000091552734
+            118.79000091552734,
+            120.37000274658203
+          ],
+          "volume": [
+            2304300,
+            2294800,
+            2179600,
+            3649000,
+            907563
+          ],
+          "close": [
+            113.16000366210938,
+            113.87999725341797,
+            117.76000213623047,
+            117.63999938964844,
+            118.41000366210938
+          ],
+          "low": [
+            111.55000305175781,
+            112.22000122070312,
+            115.94000244140625,
+            116,
+            115.58999633789062
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            116.18000030517578,
             113.16000366210938,
             113.87999725341797,
             117.76000213623047,
-            117.63999938964844
+            117.63999938964844,
+            118.41000366210938
           ]
         }
       ]

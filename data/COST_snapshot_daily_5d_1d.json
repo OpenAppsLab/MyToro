@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:04.840Z",
+  "fetchedAt": "2026-08-03T17:15:02.506Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COST?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 521299800,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777289,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 951.89,
+      "regularMarketPrice": 951.78,
       "fiftyTwoWeekHigh": 1096.5,
       "fiftyTwoWeekLow": 844.06,
-      "regularMarketDayHigh": 955.56,
-      "regularMarketDayLow": 937.51,
-      "regularMarketVolume": 1684576,
+      "regularMarketDayHigh": 967.98,
+      "regularMarketDayLow": 948.75,
+      "regularMarketVolume": 809266,
       "longName": "Costco Wholesale Corporation",
       "shortName": "Costco Wholesale Corporation",
-      "chartPreviousClose": 935.03,
+      "chartPreviousClose": 951.58,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            936.6599731445312,
-            965.8699951171875,
-            963,
-            949.6799926757812,
-            937.510009765625
-          ],
-          "high": [
-            956.6099853515625,
-            987.5499877929688,
-            978.7999877929688,
-            960.760009765625,
-            955.5599975585938
-          ],
-          "open": [
-            938.1099853515625,
-            970.5499877929688,
-            968.0700073242188,
-            955.0399780273438,
-            945.739990234375
-          ],
-          "close": [
-            951.5800170898438,
-            966.5800170898438,
-            974.030029296875,
-            954.1699829101562,
-            951.8900146484375
-          ],
           "volume": [
-            2109500,
             2682800,
             1973400,
             2334500,
-            1758800
+            1758800,
+            809266
+          ],
+          "high": [
+            987.5499877929688,
+            978.7999877929688,
+            960.760009765625,
+            955.5599975585938,
+            967.97998046875
+          ],
+          "close": [
+            966.5800170898438,
+            974.030029296875,
+            954.1699829101562,
+            951.8900146484375,
+            951.780029296875
+          ],
+          "low": [
+            965.8699951171875,
+            963,
+            949.6799926757812,
+            937.510009765625,
+            948.7501220703125
+          ],
+          "open": [
+            970.5499877929688,
+            968.0700073242188,
+            955.0399780273438,
+            945.739990234375,
+            965.1500244140625
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            951.5800170898438,
             966.5800170898438,
             974.030029296875,
             954.1699829101562,
-            951.8900146484375
+            951.8900146484375,
+            951.780029296875
           ]
         }
       ]

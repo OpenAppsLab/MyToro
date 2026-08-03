@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:02.983Z",
+  "fetchedAt": "2026-08-03T17:17:58.606Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FIX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 867418200,
-      "regularMarketTime": 1785528027,
+      "regularMarketTime": 1785777474,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1729.69,
+      "regularMarketPrice": 1748.045,
       "fiftyTwoWeekHigh": 2073.99,
       "fiftyTwoWeekLow": 655.96,
-      "regularMarketDayHigh": 1803.35,
-      "regularMarketDayLow": 1718.585,
-      "regularMarketVolume": 337484,
+      "regularMarketDayHigh": 1764,
+      "regularMarketDayLow": 1657,
+      "regularMarketVolume": 174727,
       "longName": "Comfort Systems USA, Inc.",
       "shortName": "Comfort Systems USA, Inc.",
-      "chartPreviousClose": 1733.6,
+      "chartPreviousClose": 1730.42,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "volume": [
-            632500,
             671400,
             770800,
             694400,
-            392300
-          ],
-          "open": [
-            1735.449951171875,
-            1665.199951171875,
-            1608,
-            1689.0999755859375,
-            1777.5999755859375
-          ],
-          "close": [
-            1730.4200439453125,
-            1626.3199462890625,
-            1519.9599609375,
-            1697.8399658203125,
-            1729.68994140625
+            392300,
+            174727
           ],
           "high": [
-            1802,
             1674,
             1644.0799560546875,
             1724.3199462890625,
-            1803.3499755859375
+            1803.3499755859375,
+            1764
+          ],
+          "close": [
+            1626.3199462890625,
+            1519.9599609375,
+            1697.8399658203125,
+            1729.68994140625,
+            1748.0450439453125
+          ],
+          "open": [
+            1665.199951171875,
+            1608,
+            1689.0999755859375,
+            1777.5999755859375,
+            1674.3199462890625
           ],
           "low": [
-            1655.260009765625,
             1533.4100341796875,
             1491.239990234375,
             1650.8299560546875,
-            1718.5899658203125
+            1718.5899658203125,
+            1657
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            1730.4200439453125,
             1626.3199462890625,
             1519.9599609375,
             1697.8399658203125,
-            1729.68994140625
+            1729.68994140625,
+            1748.0450439453125
           ]
         }
       ]

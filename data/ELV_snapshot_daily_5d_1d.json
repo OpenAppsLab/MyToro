@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:53.641Z",
+  "fetchedAt": "2026-08-03T17:18:48.334Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ELV?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1004452200,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777522,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 375.84,
+      "regularMarketPrice": 378.18,
       "fiftyTwoWeekHigh": 436.24,
       "fiftyTwoWeekLow": 273.71,
-      "regularMarketDayHigh": 380.04,
-      "regularMarketDayLow": 373.16,
-      "regularMarketVolume": 692975,
+      "regularMarketDayHigh": 380.2,
+      "regularMarketDayLow": 374.04,
+      "regularMarketVolume": 423997,
       "longName": "Elevance Health, Inc.",
       "shortName": "Elevance Health, Inc.",
-      "chartPreviousClose": 377.68,
+      "chartPreviousClose": 378.36,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            378.79998779296875,
-            374.510009765625,
-            386.2799987792969,
-            371.4700012207031,
-            376.010009765625
-          ],
-          "volume": [
-            1179700,
-            1758600,
-            1061300,
-            783800,
-            976900
-          ],
-          "high": [
-            379.3399963378906,
-            386.6600036621094,
-            388.7300109863281,
-            378.1700134277344,
-            380.0400085449219
-          ],
           "low": [
-            372.3900146484375,
             362.9800109863281,
             375.75,
             368.69000244140625,
-            373.1600036621094
+            373.1600036621094,
+            374.0400085449219
+          ],
+          "high": [
+            386.6600036621094,
+            388.7300109863281,
+            378.1700134277344,
+            380.0400085449219,
+            380.20001220703125
           ],
           "close": [
-            378.3599853515625,
             385.7300109863281,
             375.9800109863281,
             376.3999938964844,
+            375.8399963378906,
+            378.17999267578125
+          ],
+          "open": [
+            374.510009765625,
+            386.2799987792969,
+            371.4700012207031,
+            376.010009765625,
             375.8399963378906
+          ],
+          "volume": [
+            1758600,
+            1061300,
+            783800,
+            976900,
+            423997
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            378.3599853515625,
             385.7300109863281,
             375.9800109863281,
             376.3999938964844,
-            375.8399963378906
+            375.8399963378906,
+            378.17999267578125
           ]
         }
       ]

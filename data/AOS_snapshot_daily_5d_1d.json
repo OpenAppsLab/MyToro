@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:12.710Z",
+  "fetchedAt": "2026-08-03T17:16:10.092Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AOS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 433776600,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777309,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 60.13,
+      "regularMarketPrice": 60.48,
       "fiftyTwoWeekHigh": 81.87,
       "fiftyTwoWeekLow": 54.16,
-      "regularMarketDayHigh": 60.472,
-      "regularMarketDayLow": 58.855,
-      "regularMarketVolume": 1535839,
+      "regularMarketDayHigh": 61.435,
+      "regularMarketDayLow": 60.125,
+      "regularMarketVolume": 783730,
       "longName": "A. O. Smith Corporation",
       "shortName": "A.O. Smith Corporation",
-      "chartPreviousClose": 60.78,
+      "chartPreviousClose": 62.44,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            61.099998474121094,
-            62.959999084472656,
-            61.470001220703125,
-            59.04999923706055,
-            58.86000061035156
-          ],
-          "volume": [
-            1567300,
-            1634300,
-            2500400,
-            3045300,
-            2938600
-          ],
-          "open": [
-            61.099998474121094,
-            63.09000015258789,
-            63.36000061035156,
-            64.44000244140625,
-            59.13999938964844
-          ],
           "high": [
-            62.70000076293945,
             64.37000274658203,
             63.61000061035156,
             64.7699966430664,
-            60.470001220703125
+            60.470001220703125,
+            61.435001373291016
           ],
           "close": [
-            62.439998626708984,
             64.01000213623047,
             62.040000915527344,
             59.810001373291016,
-            60.130001068115234
+            60.130001068115234,
+            60.47999954223633
+          ],
+          "open": [
+            63.09000015258789,
+            63.36000061035156,
+            64.44000244140625,
+            59.13999938964844,
+            60.619998931884766
+          ],
+          "volume": [
+            1634300,
+            2500400,
+            3045300,
+            2938600,
+            783730
+          ],
+          "low": [
+            62.959999084472656,
+            61.470001220703125,
+            59.04999923706055,
+            58.86000061035156,
+            60.125
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            62.06416702270508,
             63.62472152709961,
             61.66658020019531,
             59.45000076293945,
-            60.130001068115234
+            60.130001068115234,
+            60.47999954223633
           ]
         }
       ]

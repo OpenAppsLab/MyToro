@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:23.558Z",
+  "fetchedAt": "2026-08-03T17:19:17.320Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FITB?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777542,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 56.5,
+      "regularMarketPrice": 56.63,
       "fiftyTwoWeekHigh": 59.5,
       "fiftyTwoWeekLow": 40.05,
-      "regularMarketDayHigh": 56.83,
-      "regularMarketDayLow": 56.175,
-      "regularMarketVolume": 3706039,
+      "regularMarketDayHigh": 57.31,
+      "regularMarketDayLow": 56.41,
+      "regularMarketVolume": 2244012,
       "longName": "Fifth Third Bancorp",
       "shortName": "Fifth Third Bancorp",
-      "chartPreviousClose": 57.41,
+      "chartPreviousClose": 57,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            56.68000030517578,
-            56.869998931884766,
-            56.2400016784668,
-            56.09000015258789,
-            56.18000030517578
-          ],
-          "close": [
-            57,
-            57.79999923706055,
-            56.56999969482422,
-            56.59000015258789,
-            56.5
-          ],
-          "open": [
-            57.630001068115234,
-            57.279998779296875,
-            57.91999816894531,
-            56.529998779296875,
-            56.650001525878906
-          ],
           "high": [
-            58.060001373291016,
             57.869998931884766,
             58.0099983215332,
             57.18000030517578,
-            56.83000183105469
+            56.83000183105469,
+            57.310001373291016
+          ],
+          "close": [
+            57.79999923706055,
+            56.56999969482422,
+            56.59000015258789,
+            56.5,
+            56.630001068115234
+          ],
+          "open": [
+            57.279998779296875,
+            57.91999816894531,
+            56.529998779296875,
+            56.650001525878906,
+            56.619998931884766
           ],
           "volume": [
-            4425500,
             6578000,
             5953700,
             7360600,
-            8054700
+            8054700,
+            2244012
+          ],
+          "low": [
+            56.869998931884766,
+            56.2400016784668,
+            56.09000015258789,
+            56.18000030517578,
+            56.40999984741211
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            57,
             57.79999923706055,
             56.56999969482422,
             56.59000015258789,
-            56.5
+            56.5,
+            56.630001068115234
           ]
         }
       ]

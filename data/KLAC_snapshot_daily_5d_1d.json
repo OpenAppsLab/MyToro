@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:25.185Z",
+  "fetchedAt": "2026-08-03T17:15:22.384Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 339859800,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777322,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 182.82,
+      "regularMarketPrice": 180,
       "fiftyTwoWeekHigh": 307.37,
       "fiftyTwoWeekLow": 83.224,
-      "regularMarketDayHigh": 190,
-      "regularMarketDayLow": 179.65,
-      "regularMarketVolume": 12944725,
+      "regularMarketDayHigh": 182.51,
+      "regularMarketDayLow": 174.6,
+      "regularMarketVolume": 4750828,
       "longName": "KLA Corporation",
       "shortName": "KLA Corporation",
-      "chartPreviousClose": 210.52,
+      "chartPreviousClose": 203.36,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            214.00999450683594,
-            195.99000549316406,
-            191.3699951171875,
-            186.86000061035156,
-            190
-          ],
-          "close": [
-            203.36000061035156,
-            190.8000030517578,
-            170.19000244140625,
-            180.3300018310547,
-            182.82000732421875
-          ],
           "open": [
-            210.82000732421875,
             193.27000427246094,
             177.6300048828125,
             186.86000061035156,
-            188
+            188,
+            177.97000122070312
           ],
           "volume": [
-            14194900,
             17199200,
             20427600,
             17485100,
-            13503700
+            13503700,
+            4750828
+          ],
+          "high": [
+            195.99000549316406,
+            191.3699951171875,
+            186.86000061035156,
+            190,
+            182.50999450683594
           ],
           "low": [
-            195.55999755859375,
             186.75,
             169.80999755859375,
             178.86000061035156,
-            179.64999389648438
+            179.64999389648438,
+            174.60000610351562
+          ],
+          "close": [
+            190.8000030517578,
+            170.19000244140625,
+            180.3300018310547,
+            182.82000732421875,
+            180
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            203.36000061035156,
             190.8000030517578,
             170.19000244140625,
             180.3300018310547,
-            182.82000732421875
+            182.82000732421875,
+            180
           ]
         }
       ]

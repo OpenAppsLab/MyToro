@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:34.723Z",
+  "fetchedAt": "2026-08-03T17:17:31.058Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CASY?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 435504600,
-      "regularMarketTime": 1785528000,
+      "regularMarketTime": 1785777308,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 871,
+      "regularMarketPrice": 858.86,
       "fiftyTwoWeekHigh": 927.85,
       "fiftyTwoWeekLow": 490,
-      "regularMarketDayHigh": 879.66,
-      "regularMarketDayLow": 863.669,
-      "regularMarketVolume": 218805,
+      "regularMarketDayHigh": 872.487,
+      "regularMarketDayLow": 848.06,
+      "regularMarketVolume": 104646,
       "longName": "Casey's General Stores, Inc.",
       "shortName": "Caseys General Stores, Inc.",
-      "chartPreviousClose": 861.63,
+      "chartPreviousClose": 853.38,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            840.4199829101562,
-            854.219970703125,
-            858.1500244140625,
-            858.3499755859375,
-            863.6699829101562
-          ],
-          "close": [
-            853.3800048828125,
-            856.8599853515625,
-            867.1599731445312,
-            867.5,
-            871
-          ],
           "high": [
-            867.4299926757812,
             878.510009765625,
             885.489990234375,
             879,
-            879.6599731445312
+            879.6599731445312,
+            872.4869995117188
+          ],
+          "low": [
+            854.219970703125,
+            858.1500244140625,
+            858.3499755859375,
+            863.6699829101562,
+            848.0599975585938
           ],
           "volume": [
-            292000,
             388900,
             349900,
             236500,
-            218800
+            218800,
+            104646
+          ],
+          "close": [
+            856.8599853515625,
+            867.1599731445312,
+            867.5,
+            871,
+            858.8599853515625
           ],
           "open": [
-            867.4299926757812,
             867,
             858.1500244140625,
             867.1900024414062,
-            867.0599975585938
+            867.0599975585938,
+            869.6900024414062
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            852.7406005859375,
             856.2179565429688,
             866.5101928710938,
             866.8499755859375,
-            871
+            871,
+            858.8599853515625
           ]
         }
       ]

@@ -56,57 +56,8 @@ select {
   font-family: inherit;
 }
 
-body,
-.page-shell,
-.topbar,
-.mobile-tabs,
-.tab-button,
-.nav-link,
-.page-card,
-.panel,
-.panel-title-row h2,
-.badge,
-label,
-label span,
-input,
-button,
-textarea,
-select,
-.session-badge,
-.session-note,
-.status-card,
-.results-area,
-.option-card,
-.clean-card,
-.card-header-row,
-.card-header-row small,
-.signal-pill,
-.metric-grid,
-.metric-chip,
-.metric-label,
-.metric-chip strong,
-.option-card h3,
-.option-meta,
-.calendar,
-.day-cell,
-.day-cell small,
-.history-page,
-.history-card,
-.history-summary,
-.summary-pill,
-.legend-card,
-.legend-item,
-.tooltip,
-a,
-p,
-strong,
-small,
-span {
-  font-family: inherit;
-}
-
 .page-shell {
-  width: min(100%, 460px);
+  width: min(100%, 960px);
   margin: 0 auto;
   padding: 22px;
   border-radius: 34px;
@@ -116,16 +67,6 @@ span {
   backdrop-filter: blur(18px);
   position: relative;
   overflow: hidden;
-}
-
-.page-shell::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(135deg, rgba(79, 178, 255, 0.08), transparent 35%),
-    linear-gradient(315deg, rgba(54, 211, 153, 0.06), transparent 40%);
-  pointer-events: none;
 }
 
 .topbar {
@@ -183,14 +124,6 @@ span {
   color: white;
 }
 
-.tab-panel {
-  display: none;
-}
-
-.tab-panel.active {
-  display: flex;
-}
-
 .eyebrow {
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -229,12 +162,6 @@ span {
     inset 0 1px 0 rgba(255,255,255,0.04),
     0 12px 28px rgba(0, 0, 0, 0.24);
   font-size: 15px;
-}
-
-.nav-link-inline {
-  border-color: #cfdae7;
-  color: #143253;
-  background: #edf4ff;
 }
 
 .dashboard-grid {
@@ -774,11 +701,6 @@ input:focus {
   font-weight: 700;
 }
 
-.calendar-header-cell {
-  text-align: center;
-  padding: 4px 0;
-}
-
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -979,104 +901,6 @@ input:focus {
   justify-content: flex-end;
 }
 
-.balance-card {
-  margin-top: 12px;
-  padding: 14px 16px;
-  border-radius: 18px;
-  background: rgba(12, 22, 39, 0.94);
-  border: 1px solid rgba(96, 129, 194, 0.22);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-  color: #cbd5e1;
-}
-
-.balance-card strong {
-  display: block;
-  font-size: 1.05rem;
-  color: #f8fafc;
-}
-
-.history-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(2, 7, 18, 0.8);
-  backdrop-filter: blur(6px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 50;
-  padding: 18px;
-}
-
-.history-modal.hidden {
-  display: none;
-}
-
-.history-modal-card {
-  width: min(100%, 520px);
-  max-height: 85vh;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(11, 23, 42, 0.98), rgba(7, 14, 26, 0.98));
-  border: 1px solid rgba(83, 128, 196, 0.24);
-  border-radius: 24px;
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
-  display: flex;
-  flex-direction: column;
-}
-
-.history-modal-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 18px 20px 0;
-}
-
-.history-modal-title {
-  margin: 0 0 6px;
-  font-size: 1.15rem;
-  color: #f8fafc;
-  font-weight: 800;
-}
-
-.history-modal-date {
-  color: #a5b4fc;
-  font-size: 0.92rem;
-}
-
-.history-modal-content {
-  padding: 0 20px 20px;
-  overflow-y: auto;
-  min-height: 120px;
-}
-
-.history-order-card {
-  border-radius: 16px;
-  margin-top: 12px;
-  padding: 14px 16px;
-  background: rgba(15, 27, 48, 0.94);
-  border: 1px solid rgba(111, 147, 215, 0.18);
-}
-
-.history-order-card strong {
-  display: block;
-  margin-bottom: 8px;
-  color: #f8fafc;
-  font-size: 0.96rem;
-  font-weight: 800;
-}
-
-.history-order-card small {
-  display: block;
-  color: #a8bdda;
-  line-height: 1.55;
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
 .icon-button {
   border: none;
   background: rgba(219, 234, 254, 0.14);
@@ -1090,6 +914,66 @@ input:focus {
 
 .icon-button:hover {
   background: rgba(219, 234, 254, 0.24);
+}
+
+/* History page modal (localized) */
+.history-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 7, 18, 0.64);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 120;
+}
+
+.history-modal.hidden {
+  display: none;
+}
+
+.history-modal-card {
+  width: min(100%, 860px);
+  max-width: 920px;
+  background: linear-gradient(180deg, rgba(16, 27, 48, 0.98), rgba(9, 17, 32, 0.98));
+  border: 1px solid rgba(103, 142, 194, 0.28);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.6);
+}
+
+.history-modal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+}
+
+.history-modal-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #f7fbff;
+}
+
+.history-modal-date {
+  color: #9fb4d7;
+  font-size: 0.94rem;
+  margin-top: 6px;
+}
+
+.history-modal-content {
+  margin-top: 12px;
+  max-height: 60vh;
+  overflow: auto;
+  display: grid;
+  gap: 10px;
+}
+
+/* Make calendar area breathe on narrow viewports */
+.history-card {
+  padding-bottom: 28px;
 }
 
 @media (max-width: 900px) {

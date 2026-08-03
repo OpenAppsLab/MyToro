@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:48.131Z",
+  "fetchedAt": "2026-08-03T17:18:42.770Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ECHO?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1199284200,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777520,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 84.09,
+      "regularMarketPrice": 84.33,
       "fiftyTwoWeekHigh": 147.25,
       "fiftyTwoWeekLow": 26.06,
-      "regularMarketDayHigh": 86.98,
-      "regularMarketDayLow": 83.75,
-      "regularMarketVolume": 4126131,
+      "regularMarketDayHigh": 88.32,
+      "regularMarketDayLow": 83.04,
+      "regularMarketVolume": 3219752,
       "longName": "EchoStar Corporation",
       "shortName": "EchoStar Corporation",
-      "chartPreviousClose": 87.88,
+      "chartPreviousClose": 86.69,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "high": [
-            88.66999816894531,
             86.05000305175781,
             88.22000122070312,
             87.02999877929688,
-            86.9800033569336
-          ],
-          "volume": [
-            3517700,
-            7229500,
-            8089600,
-            5673600,
-            4126300
-          ],
-          "low": [
-            85.81999969482422,
-            82.88999938964844,
-            82.4800033569336,
-            83.98999786376953,
-            83.75
-          ],
-          "open": [
-            87.12999725341797,
-            84.45999908447266,
-            86.26000213623047,
-            85.1500015258789,
-            86.9800033569336
+            86.9800033569336,
+            88.31999969482422
           ],
           "close": [
-            86.69000244140625,
             85.93000030517578,
             83.88999938964844,
             86.12999725341797,
-            84.08999633789062
+            84.08999633789062,
+            84.33000183105469
+          ],
+          "volume": [
+            7229500,
+            8089600,
+            5673600,
+            4126300,
+            3219752
+          ],
+          "open": [
+            84.45999908447266,
+            86.26000213623047,
+            85.1500015258789,
+            86.9800033569336,
+            83.31999969482422
+          ],
+          "low": [
+            82.88999938964844,
+            82.4800033569336,
+            83.98999786376953,
+            83.75,
+            83.04000091552734
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            86.69000244140625,
             85.93000030517578,
             83.88999938964844,
             86.12999725341797,
-            84.08999633789062
+            84.08999633789062,
+            84.33000183105469
           ]
         }
       ]

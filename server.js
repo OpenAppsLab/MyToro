@@ -1,5 +1,7 @@
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
+const { spawn } = require('child_process');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -8,6 +10,16 @@ const DATA_DIR = path.join(__dirname, 'data');
 
 app.use(express.static(PUBLIC_DIR));
 app.use(express.json({ limit: '200kb' }));
+
+app.get('/api/docs/what-does-this-app-do', (req, res) => {
+  const docsPath = path.join(__dirname, 'docs', 'what-does-this-app-do.md');
+  fs.readFile(docsPath, 'utf8', (err, content) => {
+    if (err) {
+      return res.status(500).json({ error: 'Unable to load documentation.' });
+    }
+    res.json({ content });
+  });
+});
 
 const DEFAULT_MARKET_SYMBOLS = [
   { symbol: 'QQQ', name: 'Nasdaq 100 ETF', region: 'NASDAQ' },
@@ -274,7 +286,6 @@ let newsCache = { expiresAt: 0, data: [] };
 let yesterdayCache = { expiresAt: 0, data: [] };
 const pendingOrders = [];
 
-const fs = require('fs');
 const MODELS_DIR = path.join(__dirname, 'models');
 const INTRADAY_MODEL_PATH = path.join(MODELS_DIR, 'intraday_model.json');
 const META_MODEL_PATH = path.join(MODELS_DIR, 'meta_model.json');
@@ -2042,7 +2053,21 @@ function resolveOrderMetricsForDisplay(order, options = {}) {
   const symbol = String(order?.symbol || '').toUpperCase();
   const referenceTime = Number(options.referenceTime || order?.updatedAt || order?.settledAt || order?.createdAt || Date.now());
   const resolvedEntryPrice = resolvePriceFromIntradaySnapshot(symbol, order?.createdAt || referenceTime) || entryPrice;
-  const resolvedCurrentPrice = resolvePriceFromIntradaySnapshot(symbol, referenceTime) || currentPrice || resolvedEntryPrice;
+  // Prefer live order price for pending orders when market is open or when server has a recent live price.
+  const snapshotPrice = resolvePriceFromIntradaySnapshot(symbol, referenceTime);
+  let resolvedCurrentPrice = currentPrice || resolvedEntryPrice;
+  try {
+    const now = Date.now();
+    const recentServerPrice = Number(order?.updatedAt) && (now - Number(order.updatedAt) < 60 * 1000) && Number(order.currentPrice) > 0 ? Number(order.currentPrice) : null;
+    if (order?.status === 'pending' && isNasdaqMarketOpen()) {
+      // prefer a recent live server-updated price first, then fall back to snapshot
+      resolvedCurrentPrice = recentServerPrice || snapshotPrice || currentPrice || resolvedEntryPrice;
+    } else {
+      resolvedCurrentPrice = snapshotPrice || recentServerPrice || currentPrice || resolvedEntryPrice;
+    }
+  } catch (err) {
+    resolvedCurrentPrice = snapshotPrice || currentPrice || resolvedEntryPrice;
+  }
   const leverage = Number(order?.leverage || 1);
   const ballparkAmount = Number(order?.ballparkAmount || order?.ballpark || 0);
   const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;
@@ -2899,6 +2924,20 @@ function getRealizedOrderPnl(order) {
     return 0;
   }
 
+  if (order.result === 'profit-hit' || order.status === 'green') {
+    const targetProfit = Number(order.targetProfit || 0);
+    if (Number.isFinite(targetProfit) && targetProfit > 0) {
+      return Number(targetProfit.toFixed(2));
+    }
+  }
+
+  if (order.result === 'loss-hit' || order.status === 'red') {
+    const stopLossAmount = Number(order.stopLossAmount || 0);
+    if (Number.isFinite(stopLossAmount) && stopLossAmount > 0) {
+      return Number((-stopLossAmount).toFixed(2));
+    }
+  }
+
   const entryPrice = Number(order.entryPrice || 0);
   const currentPrice = Number(order.currentPrice || entryPrice);
   const leverage = Number(order.leverage || 1);
@@ -3100,8 +3139,7 @@ function parseRss(xml) {
   return items.slice(0, 8);
 }
 
-function isNasdaqMarketOpen() {
-  const now = new Date();
+function isNasdaqMarketOpen(now = new Date()) {
   const nyParts = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/New_York',
     hour: '2-digit',
@@ -3129,9 +3167,8 @@ function isNasdaqMarketOpen() {
   return totalMinutes >= marketOpen && totalMinutes < marketClose;
 }
 
-function getServerSessionStatus() {
-  const open = isNasdaqMarketOpen();
-  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
+function getServerSessionStatus(now = new Date()) {
+  const open = isNasdaqMarketOpen(now);
   const nyParts = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/New_York',
     hour: '2-digit',
@@ -3286,6 +3323,20 @@ app.post('/api/orders/clear', async (req, res) => {
     res.json({ ok: true, orders: [] });
   } catch (error) {
     res.status(500).json({ error: error.message || 'Unable to clear orders' });
+  }
+});
+
+app.post('/api/auto-orders/trigger', async (req, res) => {
+  try {
+    await refreshAutoOrders();
+    const openOrders = pendingOrders.filter((order) => order.status === 'pending');
+    res.json({ ok: true, autoOrderState: {
+      dateKey: autoOrderState.dateKey,
+      orderCount: autoOrderState.orderCount,
+      lastOrderPlacedAt: autoOrderState.lastOrderPlacedAt
+    }, pendingCount: openOrders.length, orders: openOrders.slice(0, 20).map((order) => resolveOrderMetricsForDisplay(order)) });
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Unable to trigger auto orders' });
   }
 });
 
@@ -3562,6 +3613,31 @@ app.post('/api/admin/settings', async (req, res) => {
   }
 });
 
+function spawnRestartChild() {
+  const nodeBin = process.argv[0];
+  const args = process.argv.slice(1);
+  try {
+    const child = spawn(nodeBin, args, {
+      cwd: process.cwd(),
+      env: process.env,
+      detached: true,
+      stdio: 'ignore'
+    });
+    child.unref();
+    console.log('Spawned restart child process with PID', child.pid);
+  } catch (error) {
+    console.error('Unable to spawn restart child process:', error);
+  }
+}
+
+app.post('/api/admin/restart', (req, res) => {
+  res.json({ ok: true, message: 'Server restart initiated and will relaunch automatically.' });
+  setImmediate(() => {
+    spawnRestartChild();
+    process.exit(0);
+  });
+});
+
 if (require.main === module) {
   loadPersistedIntradayModel();
   console.log('Live trading mode enabled');
@@ -3606,5 +3682,7 @@ module.exports = {
   getRuntimeThreshold,
   getIntradayModel,
   isRuntimeTradingPaused,
-  getLiveScore
+  getLiveScore,
+  isNasdaqMarketOpen,
+  getServerSessionStatus
 };

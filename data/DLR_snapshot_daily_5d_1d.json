@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:32.870Z",
+  "fetchedAt": "2026-08-03T17:18:28.234Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DLR?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1099056600,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777484,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 188.52,
+      "regularMarketPrice": 191.59,
       "fiftyTwoWeekHigh": 208.14,
       "fiftyTwoWeekLow": 146.23,
-      "regularMarketDayHigh": 195.88,
-      "regularMarketDayLow": 188.435,
-      "regularMarketVolume": 1384758,
+      "regularMarketDayHigh": 192.66,
+      "regularMarketDayLow": 185.16,
+      "regularMarketVolume": 776899,
       "longName": "Digital Realty Trust, Inc.",
       "shortName": "Digital Realty Trust, Inc.",
-      "chartPreviousClose": 199.08,
+      "chartPreviousClose": 195.76,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            200.0500030517578,
-            194.72000122070312,
-            191.1699981689453,
-            194.3699951171875,
-            194.9199981689453
-          ],
-          "volume": [
-            2921700,
-            2909100,
-            2291700,
-            2865900,
-            2168000
-          ],
-          "close": [
-            195.75999450683594,
-            193.17999267578125,
-            188.17999267578125,
-            193.19000244140625,
-            188.52000427246094
-          ],
-          "high": [
-            200.75,
-            196.64999389648438,
-            193.2100067138672,
-            196.2100067138672,
-            195.8800048828125
-          ],
           "low": [
-            192,
             190.69000244140625,
             185.8000030517578,
             191.8300018310547,
-            188.38999938964844
+            188.38999938964844,
+            185.16000366210938
+          ],
+          "volume": [
+            2909100,
+            2291700,
+            2865900,
+            2168000,
+            776899
+          ],
+          "open": [
+            194.72000122070312,
+            191.1699981689453,
+            194.3699951171875,
+            194.9199981689453,
+            188.07000732421875
+          ],
+          "high": [
+            196.64999389648438,
+            193.2100067138672,
+            196.2100067138672,
+            195.8800048828125,
+            192.66000366210938
+          ],
+          "close": [
+            193.17999267578125,
+            188.17999267578125,
+            193.19000244140625,
+            188.52000427246094,
+            191.58999633789062
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            195.75999450683594,
             193.17999267578125,
             188.17999267578125,
             193.19000244140625,
-            188.52000427246094
+            188.52000427246094,
+            191.58999633789062
           ]
         }
       ]

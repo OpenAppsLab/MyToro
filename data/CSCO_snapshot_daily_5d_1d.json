@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:06.981Z",
+  "fetchedAt": "2026-08-03T17:15:04.611Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CSCO?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 635178600,
-      "regularMarketTime": 1785528000,
+      "regularMarketTime": 1785777303,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 115.99,
+      "regularMarketPrice": 114.99,
       "fiftyTwoWeekHigh": 130.37,
       "fiftyTwoWeekLow": 65.75,
-      "regularMarketDayHigh": 117.25,
-      "regularMarketDayLow": 113.9,
-      "regularMarketVolume": 18798354,
+      "regularMarketDayHigh": 115.92,
+      "regularMarketDayLow": 113.85,
+      "regularMarketVolume": 7835260,
       "longName": "Cisco Systems, Inc.",
       "shortName": "Cisco Systems, Inc.",
-      "chartPreviousClose": 114.17,
+      "chartPreviousClose": 114.57,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            114.56999969482422,
-            115.58000183105469,
-            112.4800033569336,
-            113.55999755859375,
-            115.98999786376953
-          ],
           "low": [
-            112.73999786376953,
             111.7300033569336,
             112.3499984741211,
             111.66000366210938,
-            113.88999938964844
-          ],
-          "volume": [
-            15974600,
-            27972100,
-            22761500,
-            25570000,
-            18801400
-          ],
-          "high": [
-            115.37999725341797,
-            117.06999969482422,
-            117.27999877929688,
-            114.33000183105469,
-            117.25
+            113.88999938964844,
+            113.8499984741211
           ],
           "open": [
-            115.16000366210938,
             114.12999725341797,
             117.0199966430664,
             112.69000244140625,
-            115.33000183105469
+            115.33000183105469,
+            114.69000244140625
+          ],
+          "close": [
+            115.58000183105469,
+            112.4800033569336,
+            113.55999755859375,
+            115.98999786376953,
+            114.98999786376953
+          ],
+          "volume": [
+            27972100,
+            22761500,
+            25570000,
+            18801400,
+            7835260
+          ],
+          "high": [
+            117.06999969482422,
+            117.27999877929688,
+            114.33000183105469,
+            117.25,
+            115.91999816894531
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            114.56999969482422,
             115.58000183105469,
             112.4800033569336,
             113.55999755859375,
-            115.98999786376953
+            115.98999786376953,
+            114.98999786376953
           ]
         }
       ]

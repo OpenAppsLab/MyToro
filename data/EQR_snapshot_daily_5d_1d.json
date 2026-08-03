@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:01.922Z",
+  "fetchedAt": "2026-08-03T17:18:56.157Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EQR?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 745162200,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777533,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 66.45,
+      "regularMarketPrice": 66.9,
       "fiftyTwoWeekHigh": 71.5,
       "fiftyTwoWeekLow": 57.57,
-      "regularMarketDayHigh": 67.02,
-      "regularMarketDayLow": 66.29,
-      "regularMarketVolume": 1748824,
+      "regularMarketDayHigh": 67.454,
+      "regularMarketDayLow": 66.167,
+      "regularMarketVolume": 918985,
       "longName": "Equity Residential",
       "shortName": "Equity Residential",
-      "chartPreviousClose": 67.86,
+      "chartPreviousClose": 67.24,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            3352600,
-            4454300,
-            2824200,
-            2579100,
-            3904500
-          ],
-          "low": [
-            67.20999908447266,
-            67.37000274658203,
-            68.2699966430664,
-            66.62999725341797,
-            66.29000091552734
-          ],
           "open": [
-            67.58000183105469,
             67.79000091552734,
             68.61000061035156,
             68.2300033569336,
-            66.93000030517578
+            66.93000030517578,
+            66.22000122070312
+          ],
+          "volume": [
+            4454300,
+            2824200,
+            2579100,
+            3904500,
+            918985
           ],
           "high": [
-            68.13999938964844,
             68.62999725341797,
             68.97000122070312,
             69.47000122070312,
-            67.16999816894531
+            67.16999816894531,
+            67.45390319824219
+          ],
+          "low": [
+            67.37000274658203,
+            68.2699966430664,
+            66.62999725341797,
+            66.29000091552734,
+            66.16719818115234
           ],
           "close": [
-            67.23999786376953,
             68.08999633789062,
             68.8499984741211,
             67.12000274658203,
-            66.44999694824219
+            66.44999694824219,
+            66.9000015258789
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            67.23999786376953,
             68.08999633789062,
             68.8499984741211,
             67.12000274658203,
-            66.44999694824219
+            66.44999694824219,
+            66.9000015258789
           ]
         }
       ]

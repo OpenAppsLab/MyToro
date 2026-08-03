@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:06.587Z",
+  "fetchedAt": "2026-08-03T17:16:04.188Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VRTX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 680362200,
-      "regularMarketTime": 1785528000,
+      "regularMarketTime": 1785777350,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 477.1,
+      "regularMarketPrice": 472.34,
       "fiftyTwoWeekHigh": 533.67,
       "fiftyTwoWeekLow": 362.5,
-      "regularMarketDayHigh": 480.67,
-      "regularMarketDayLow": 469.87,
-      "regularMarketVolume": 949700,
+      "regularMarketDayHigh": 483.36,
+      "regularMarketDayLow": 468.14,
+      "regularMarketVolume": 459118,
       "longName": "Vertex Pharmaceuticals Incorporated",
       "shortName": "Vertex Pharmaceuticals Incorpor",
-      "chartPreviousClose": 477.36,
+      "chartPreviousClose": 479,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            477.989990234375,
-            482.8599853515625,
-            481.9100036621094,
-            470.5400085449219,
-            469.8699951171875
-          ],
-          "close": [
-            479,
-            490.3900146484375,
-            483.3299865722656,
-            481.70001220703125,
-            477.1000061035156
-          ],
           "open": [
-            479.2699890136719,
             483.1300048828125,
             492.6700134277344,
             474.1000061035156,
-            480.6700134277344
+            480.6700134277344,
+            480
           ],
           "high": [
-            487.2099914550781,
             493.6099853515625,
             492.989990234375,
             482.1499938964844,
-            480.6700134277344
+            480.6700134277344,
+            483.3599853515625
           ],
           "volume": [
-            1631000,
             1700000,
             1451200,
             1248600,
-            957200
+            957200,
+            459118
+          ],
+          "close": [
+            490.3900146484375,
+            483.3299865722656,
+            481.70001220703125,
+            477.1000061035156,
+            472.3399963378906
+          ],
+          "low": [
+            482.8599853515625,
+            481.9100036621094,
+            470.5400085449219,
+            469.8699951171875,
+            468.1400146484375
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            479,
             490.3900146484375,
             483.3299865722656,
             481.70001220703125,
-            477.1000061035156
+            477.1000061035156,
+            472.3399963378906
           ]
         }
       ]

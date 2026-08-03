@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:37.696Z",
+  "fetchedAt": "2026-08-03T17:15:34.863Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NKE?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 344615400,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777330,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 41.71,
+      "regularMarketPrice": 42.25,
       "fiftyTwoWeekHigh": 80.17,
       "fiftyTwoWeekLow": 40,
-      "regularMarketDayHigh": 42.075,
-      "regularMarketDayLow": 41.49,
-      "regularMarketVolume": 22584710,
+      "regularMarketDayHigh": 43.205,
+      "regularMarketDayLow": 42.06,
+      "regularMarketVolume": 14089496,
       "longName": "NIKE, Inc.",
       "shortName": "Nike, Inc.",
-      "chartPreviousClose": 41.7,
+      "chartPreviousClose": 42.14,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            42.13999938964844,
-            43.04999923706055,
-            43.220001220703125,
-            42.290000915527344,
-            41.709999084472656
-          ],
-          "low": [
-            41.58000183105469,
-            42.52000045776367,
-            42.400001525878906,
-            41.22999954223633,
-            41.4900016784668
-          ],
           "open": [
-            42.150001525878906,
             42.75,
             42.599998474121094,
             42.5,
-            42.02000045776367
+            42.02000045776367,
+            42.56999969482422
           ],
           "high": [
-            42.599998474121094,
             43.27000045776367,
             43.689998626708984,
             42.5,
-            42.08000183105469
+            42.08000183105469,
+            43.20500183105469
+          ],
+          "low": [
+            42.52000045776367,
+            42.400001525878906,
+            41.22999954223633,
+            41.4900016784668,
+            42.060001373291016
           ],
           "volume": [
-            16996900,
             23601400,
             15029100,
             16977600,
-            22598400
+            22598400,
+            14089496
+          ],
+          "close": [
+            43.04999923706055,
+            43.220001220703125,
+            42.290000915527344,
+            41.709999084472656,
+            42.25
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            42.13999938964844,
             43.04999923706055,
             43.220001220703125,
             42.290000915527344,
-            41.709999084472656
+            41.709999084472656,
+            42.25
           ]
         }
       ]

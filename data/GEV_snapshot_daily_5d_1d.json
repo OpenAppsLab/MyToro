@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:38.896Z",
+  "fetchedAt": "2026-08-03T17:19:32.524Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GEV?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1711546200,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777571,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 990.29,
+      "regularMarketPrice": 1001.745,
       "fiftyTwoWeekHigh": 1195.94,
       "fiftyTwoWeekLow": 530.16,
-      "regularMarketDayHigh": 1042.85,
-      "regularMarketDayLow": 979.6,
-      "regularMarketVolume": 2025134,
+      "regularMarketDayHigh": 1005,
+      "regularMarketDayLow": 958.565,
+      "regularMarketVolume": 1143629,
       "longName": "GE Vernova Inc.",
       "shortName": "GE Vernova Inc.",
-      "chartPreviousClose": 1014.75,
+      "chartPreviousClose": 996.57,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -60,60 +60,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            1015.2100219726562,
-            948.8300170898438,
-            943.989990234375,
-            959,
-            1040.989990234375
-          ],
-          "volume": [
-            3580000,
-            3897400,
-            3697300,
-            3134700,
-            2355400
-          ],
           "close": [
-            996.5700073242188,
             943.3800048828125,
             900.280029296875,
             981.97998046875,
-            990.2899780273438
+            990.2899780273438,
+            1001.7449951171875
+          ],
+          "open": [
+            948.8300170898438,
+            943.989990234375,
+            959,
+            1040.989990234375,
+            975.02001953125
           ],
           "high": [
-            1015.219970703125,
             956.9000244140625,
             953.989990234375,
             986,
-            1042.8499755859375
+            1042.8499755859375,
+            1005
           ],
           "low": [
-            941.8699951171875,
             913.510009765625,
             897.6799926757812,
             950,
-            979.1400146484375
+            979.1400146484375,
+            958.5650024414062
+          ],
+          "volume": [
+            3897400,
+            3697300,
+            3134700,
+            2355400,
+            1143629
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            996.5700073242188,
             943.3800048828125,
             900.280029296875,
             981.97998046875,
-            990.2899780273438
+            990.2899780273438,
+            1001.7449951171875
           ]
         }
       ]

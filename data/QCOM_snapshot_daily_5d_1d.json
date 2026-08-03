@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:48.672Z",
+  "fetchedAt": "2026-08-03T17:15:45.984Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/QCOM?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 692634600,
-      "regularMarketTime": 1785528000,
+      "regularMarketTime": 1785777336,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 147.61,
+      "regularMarketPrice": 149.52,
       "fiftyTwoWeekHigh": 259.92,
       "fiftyTwoWeekLow": 121.99,
-      "regularMarketDayHigh": 153.73,
-      "regularMarketDayLow": 146.15,
-      "regularMarketVolume": 13778152,
+      "regularMarketDayHigh": 150.5,
+      "regularMarketDayLow": 142.89,
+      "regularMarketVolume": 7652585,
       "longName": "QUALCOMM Incorporated",
       "shortName": "QUALCOMM Incorporated",
-      "chartPreviousClose": 166.97,
+      "chartPreviousClose": 170.04,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            165.2899932861328,
             162.16000366210938,
             155,
             146,
-            146.14999389648438
+            146.14999389648438,
+            142.88999938964844
           ],
           "high": [
-            171.19000244140625,
             167.9199981689453,
             164.55999755859375,
             154.16000366210938,
-            153.72999572753906
+            153.72999572753906,
+            150.49989318847656
           ],
           "open": [
-            169.77000427246094,
             164.89999389648438,
             162.5800018310547,
             146.5500030517578,
-            152.9600067138672
-          ],
-          "close": [
-            170.0399932861328,
-            162.8800048828125,
-            155.67999267578125,
-            151.60000610351562,
-            147.61000061035156
+            152.9600067138672,
+            146.1999969482422
           ],
           "volume": [
-            12487100,
             16147500,
             19240700,
             24336800,
-            13788600
+            13788600,
+            7652585
+          ],
+          "close": [
+            162.8800048828125,
+            155.67999267578125,
+            151.60000610351562,
+            147.61000061035156,
+            149.52000427246094
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            170.0399932861328,
             162.8800048828125,
             155.67999267578125,
             151.60000610351562,
-            147.61000061035156
+            147.61000061035156,
+            149.52000427246094
           ]
         }
       ]

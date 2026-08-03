@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:19.436Z",
+  "fetchedAt": "2026-08-03T17:15:16.840Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 370013400,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777309,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 331.96,
+      "regularMarketPrice": 336.455,
       "fiftyTwoWeekHigh": 426.75,
       "fiftyTwoWeekLow": 289.1,
-      "regularMarketDayHigh": 333.996,
-      "regularMarketDayLow": 328.795,
-      "regularMarketVolume": 3292591,
+      "regularMarketDayHigh": 343.635,
+      "regularMarketDayLow": 333.72,
+      "regularMarketVolume": 1205532,
       "longName": "The Home Depot, Inc.",
       "shortName": "Home Depot, Inc. (The)",
-      "chartPreviousClose": 332.98,
+      "chartPreviousClose": 336.09,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            335.3500061035156,
             342.6000061035156,
             336.9599914550781,
             330.25,
-            328.79998779296875
+            328.79998779296875,
+            333.7200012207031
           ],
           "close": [
-            336.0899963378906,
             344.4700012207031,
             338.2699890136719,
             333.3500061035156,
-            331.9599914550781
+            331.9599914550781,
+            336.4549865722656
           ],
           "open": [
-            339.3900146484375,
             342.6400146484375,
             340.3800048828125,
             334.989990234375,
-            332.44000244140625
+            332.44000244140625,
+            339.79998779296875
           ],
           "high": [
-            341.8900146484375,
             349.42999267578125,
             345.2699890136719,
             335.69000244140625,
-            334
+            334,
+            343.635009765625
           ],
           "volume": [
-            3622400,
             4308000,
             4028500,
             6275400,
-            4958900
+            4958900,
+            1205532
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            336.0899963378906,
             344.4700012207031,
             338.2699890136719,
             333.3500061035156,
-            331.9599914550781
+            331.9599914550781,
+            336.4549865722656
           ]
         }
       ]

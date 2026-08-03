@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:28.833Z",
+  "fetchedAt": "2026-08-03T17:15:25.841Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 452525400,
-      "regularMarketTime": 1785528000,
+      "regularMarketTime": 1785777322,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 293.02,
+      "regularMarketPrice": 291.57,
       "fiftyTwoWeekHigh": 438.5,
       "fiftyTwoWeekLow": 94.11,
-      "regularMarketDayHigh": 318.4,
-      "regularMarketDayLow": 292.935,
-      "regularMarketVolume": 12544424,
+      "regularMarketDayHigh": 294.735,
+      "regularMarketDayLow": 276.845,
+      "regularMarketVolume": 4810541,
       "longName": "Lam Research Corporation",
       "shortName": "Lam Research Corporation",
-      "chartPreviousClose": 305.21,
+      "chartPreviousClose": 291.61,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            291.6099853515625,
-            269.6099853515625,
-            252.35000610351562,
-            297.7200012207031,
-            293.0199890136719
-          ],
-          "low": [
-            278.45001220703125,
-            258.5299987792969,
-            250.5,
-            294.25,
-            292.92999267578125
-          ],
-          "high": [
-            309.5,
-            277.29998779296875,
-            273.4599914550781,
-            319.5,
-            318.3999938964844
-          ],
           "open": [
-            306.30999755859375,
             275.1700134277344,
             264.510009765625,
             318.2900085449219,
-            315.3699951171875
+            315.3699951171875,
+            284.3349914550781
+          ],
+          "low": [
+            258.5299987792969,
+            250.5,
+            294.25,
+            292.92999267578125,
+            276.8446960449219
           ],
           "volume": [
-            14117600,
             16097700,
             16103100,
             22085800,
-            12551800
+            12551800,
+            4810541
+          ],
+          "high": [
+            277.29998779296875,
+            273.4599914550781,
+            319.5,
+            318.3999938964844,
+            294.7349853515625
+          ],
+          "close": [
+            269.6099853515625,
+            252.35000610351562,
+            297.7200012207031,
+            293.0199890136719,
+            291.57000732421875
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            291.6099853515625,
             269.6099853515625,
             252.35000610351562,
             297.7200012207031,
-            293.0199890136719
+            293.0199890136719,
+            291.57000732421875
           ]
         }
       ]

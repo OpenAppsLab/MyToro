@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:13.439Z",
+  "fetchedAt": "2026-08-03T17:19:07.404Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXPD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 465053400,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777503,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 167.89,
+      "regularMarketPrice": 167.53,
       "fiftyTwoWeekHigh": 183.52,
       "fiftyTwoWeekLow": 112.95,
-      "regularMarketDayHigh": 169.37,
-      "regularMarketDayLow": 165.77,
-      "regularMarketVolume": 786525,
+      "regularMarketDayHigh": 169.99,
+      "regularMarketDayLow": 166.445,
+      "regularMarketVolume": 614736,
       "longName": "Expeditors International of Washington, Inc.",
       "shortName": "Expeditors International of Was",
-      "chartPreviousClose": 175.3,
+      "chartPreviousClose": 171.34,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            174.35000610351562,
-            171.33999633789062,
-            171.4600067138672,
-            169.1999969482422,
-            167.0800018310547
-          ],
           "low": [
-            170.7100067138672,
             170.4199981689453,
             169.22000122070312,
             164.35000610351562,
-            165.77000427246094
+            165.77000427246094,
+            166.44500732421875
           ],
-          "close": [
+          "open": [
             171.33999633789062,
-            171.4199981689453,
-            170.1300048828125,
-            167.00999450683594,
-            167.88999938964844
+            171.4600067138672,
+            169.1999969482422,
+            167.0800018310547,
+            169.16000366210938
           ],
           "high": [
-            174.52000427246094,
             172.3699951171875,
             171.57000732421875,
             170.55999755859375,
-            169.41000366210938
+            169.41000366210938,
+            169.99000549316406
           ],
           "volume": [
-            923000,
             946600,
             883600,
             1115900,
-            1330300
+            1330300,
+            614736
+          ],
+          "close": [
+            171.4199981689453,
+            170.1300048828125,
+            167.00999450683594,
+            167.88999938964844,
+            167.52999877929688
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            171.33999633789062,
             171.4199981689453,
             170.1300048828125,
             167.00999450683594,
-            167.88999938964844
+            167.88999938964844,
+            167.52999877929688
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:40.102Z",
+  "fetchedAt": "2026-08-03T17:17:36.441Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CNC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1008253800,
-      "regularMarketTime": 1785528233,
+      "regularMarketTime": 1785777452,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 62.22,
+      "regularMarketPrice": 62.91,
       "fiftyTwoWeekHigh": 69.36,
       "fiftyTwoWeekLow": 25.08,
-      "regularMarketDayHigh": 62.55,
-      "regularMarketDayLow": 60.485,
-      "regularMarketVolume": 2692169,
+      "regularMarketDayHigh": 63.39,
+      "regularMarketDayLow": 61.22,
+      "regularMarketVolume": 3689947,
       "longName": "Centene Corporation",
       "shortName": "Centene Corporation",
-      "chartPreviousClose": 63.41,
+      "chartPreviousClose": 64.08,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            62.529998779296875,
-            56.66999816894531,
-            61.439998626708984,
-            59.83000183105469,
-            60.4900016784668
-          ],
-          "close": [
-            64.08000183105469,
-            63.90999984741211,
-            61.81999969482422,
-            60.84000015258789,
-            62.220001220703125
-          ],
           "open": [
-            63.83000183105469,
             59.5099983215332,
             64.4000015258789,
             61.400001525878906,
-            61.04999923706055
+            61.04999923706055,
+            61.84000015258789
           ],
           "high": [
-            64.76000213623047,
             64.91999816894531,
             64.94999694824219,
             62.040000915527344,
-            62.54999923706055
+            62.54999923706055,
+            63.38999938964844
+          ],
+          "low": [
+            56.66999816894531,
+            61.439998626708984,
+            59.83000183105469,
+            60.4900016784668,
+            61.220001220703125
           ],
           "volume": [
-            6875800,
             12245500,
             8354200,
             7344100,
-            3912700
+            3912700,
+            3689947
+          ],
+          "close": [
+            63.90999984741211,
+            61.81999969482422,
+            60.84000015258789,
+            62.220001220703125,
+            62.90999984741211
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            64.08000183105469,
             63.90999984741211,
             61.81999969482422,
             60.84000015258789,
-            62.220001220703125
+            62.220001220703125,
+            62.90999984741211
           ]
         }
       ]

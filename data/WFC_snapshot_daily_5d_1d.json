@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:07.724Z",
+  "fetchedAt": "2026-08-03T17:16:05.301Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/WFC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785528059,
+      "regularMarketTime": 1785777360,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 86.45,
+      "regularMarketPrice": 86.755,
       "fiftyTwoWeekHigh": 97.76,
       "fiftyTwoWeekLow": 72.78,
-      "regularMarketDayHigh": 86.74,
-      "regularMarketDayLow": 85.44,
-      "regularMarketVolume": 11315238,
+      "regularMarketDayHigh": 87.56,
+      "regularMarketDayLow": 86.41,
+      "regularMarketVolume": 3644721,
       "longName": "Wells Fargo & Company",
       "shortName": "Wells Fargo & Company",
-      "chartPreviousClose": 86.31,
+      "chartPreviousClose": 87.27,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            86.9000015258789,
             86.41000366210938,
             83.70999908447266,
             84.0199966430664,
-            85.44000244140625
+            85.44000244140625,
+            86.41010284423828
           ],
           "high": [
-            87.9000015258789,
             88.22000122070312,
             87.0199966430664,
             85.58000183105469,
-            86.73999786376953
+            86.73999786376953,
+            87.55999755859375
           ],
           "close": [
-            87.2699966430664,
             86.87000274658203,
             83.87000274658203,
             85.43000030517578,
-            86.44999694824219
+            86.44999694824219,
+            86.75499725341797
           ],
           "open": [
-            87.30000305175781,
             87.75,
             86.8499984741211,
             84.58000183105469,
-            86
+            86,
+            87.55999755859375
           ],
           "volume": [
-            10379300,
             16570500,
             18076900,
             15139000,
-            14769100
+            14769100,
+            3644721
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            87.2699966430664,
             86.87000274658203,
             83.87000274658203,
             85.43000030517578,
-            86.44999694824219
+            86.44999694824219,
+            86.75499725341797
           ]
         }
       ]

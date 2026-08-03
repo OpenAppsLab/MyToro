@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:20.619Z",
+  "fetchedAt": "2026-08-03T17:15:17.807Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HON?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777297,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 243.05,
+      "regularMarketPrice": 242.945,
       "fiftyTwoWeekHigh": 260.283,
       "fiftyTwoWeekLow": 195.868,
-      "regularMarketDayHigh": 246,
-      "regularMarketDayLow": 238.02,
-      "regularMarketVolume": 3299187,
+      "regularMarketDayHigh": 249.64,
+      "regularMarketDayLow": 242.2,
+      "regularMarketVolume": 1254639,
       "longName": "Honeywell International Inc.",
       "shortName": "Honeywell International Inc.",
-      "chartPreviousClose": 243.15,
+      "chartPreviousClose": 245.75,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            244.5,
             249.8000030517578,
             245.44000244140625,
             241.8800048828125,
-            240.52000427246094
-          ],
-          "low": [
-            242.52999877929688,
-            246.08999633789062,
-            240.32000732421875,
-            237.36000061035156,
-            238.02000427246094
-          ],
-          "close": [
-            245.75,
-            247.0500030517578,
-            241.1199951171875,
-            241.91000366210938,
-            243.0500030517578
-          ],
-          "high": [
-            248.00999450683594,
-            252,
-            246.24000549316406,
-            242.4199981689453,
-            246
+            240.52000427246094,
+            245.47000122070312
           ],
           "volume": [
-            4053300,
             2945300,
             2775200,
             2839500,
-            3887500
+            3887500,
+            1254639
+          ],
+          "high": [
+            252,
+            246.24000549316406,
+            242.4199981689453,
+            246,
+            249.63999938964844
+          ],
+          "low": [
+            246.08999633789062,
+            240.32000732421875,
+            237.36000061035156,
+            238.02000427246094,
+            242.1999969482422
+          ],
+          "close": [
+            247.0500030517578,
+            241.1199951171875,
+            241.91000366210938,
+            243.0500030517578,
+            242.94500732421875
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            245.75,
             247.0500030517578,
             241.1199951171875,
             241.91000366210938,
-            243.0500030517578
+            243.0500030517578,
+            242.94500732421875
           ]
         }
       ]

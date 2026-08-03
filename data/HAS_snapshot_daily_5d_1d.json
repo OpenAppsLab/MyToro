@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:53.575Z",
+  "fetchedAt": "2026-08-03T17:19:47.018Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HAS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777580,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 93.94,
+      "regularMarketPrice": 93.11,
       "fiftyTwoWeekHigh": 106.98,
       "fiftyTwoWeekLow": 69.5,
-      "regularMarketDayHigh": 95.35,
-      "regularMarketDayLow": 93.675,
-      "regularMarketVolume": 2549850,
+      "regularMarketDayHigh": 95.125,
+      "regularMarketDayLow": 92.91,
+      "regularMarketVolume": 601064,
       "longName": "Hasbro, Inc.",
       "shortName": "Hasbro, Inc.",
-      "chartPreviousClose": 88.79,
+      "chartPreviousClose": 90.61,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            90.61000061035156,
-            96.33999633789062,
-            95.16999816894531,
-            94.52999877929688,
-            93.94000244140625
-          ],
           "open": [
-            90.02999877929688,
             92,
             95.63999938964844,
             94.48999786376953,
-            94.97000122070312
+            94.97000122070312,
+            94.2300033569336
           ],
-          "low": [
-            88.79000091552734,
-            91.4000015258789,
-            95.06999969482422,
-            93.04000091552734,
-            93.68000030517578
-          ],
-          "high": [
-            90.72000122070312,
-            96.44000244140625,
-            97,
-            95.22000122070312,
-            95.3499984741211
+          "close": [
+            96.33999633789062,
+            95.16999816894531,
+            94.52999877929688,
+            93.94000244140625,
+            93.11000061035156
           ],
           "volume": [
-            1494000,
             4063200,
             2000700,
             1263500,
-            2808600
+            2808600,
+            601064
+          ],
+          "low": [
+            91.4000015258789,
+            95.06999969482422,
+            93.04000091552734,
+            93.68000030517578,
+            92.91000366210938
+          ],
+          "high": [
+            96.44000244140625,
+            97,
+            95.22000122070312,
+            95.3499984741211,
+            95.125
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            90.61000061035156,
             96.33999633789062,
             95.16999816894531,
             94.52999877929688,
-            93.94000244140625
+            93.94000244140625,
+            93.11000061035156
           ]
         }
       ]

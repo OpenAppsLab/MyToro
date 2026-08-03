@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:25.290Z",
+  "fetchedAt": "2026-08-03T17:16:22.645Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALGN?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 980865000,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777378,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 169.16,
+      "regularMarketPrice": 171.84,
       "fiftyTwoWeekHigh": 200.44,
       "fiftyTwoWeekLow": 122,
-      "regularMarketDayHigh": 171.745,
-      "regularMarketDayLow": 164.74,
-      "regularMarketVolume": 1563785,
+      "regularMarketDayHigh": 175.48,
+      "regularMarketDayLow": 171,
+      "regularMarketVolume": 324505,
       "longName": "Align Technology, Inc.",
       "shortName": "Align Technology, Inc.",
-      "chartPreviousClose": 167.02,
+      "chartPreviousClose": 168.05,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            165.42999267578125,
-            169.92999267578125,
-            175.60000610351562,
-            180.72000122070312,
-            170.80999755859375
-          ],
-          "low": [
-            164.75,
-            169.92999267578125,
-            174.41000366210938,
-            171.0399932861328,
-            164.74000549316406
-          ],
-          "close": [
-            168.0500030517578,
-            175.60000610351562,
-            180.0800018310547,
-            173.41000366210938,
-            169.16000366210938
-          ],
           "high": [
-            172.10000610351562,
             175.85000610351562,
             184,
             187.9600067138672,
-            171.75
+            171.75,
+            175.47999572753906
+          ],
+          "close": [
+            175.60000610351562,
+            180.0800018310547,
+            173.41000366210938,
+            169.16000366210938,
+            171.83999633789062
           ],
           "volume": [
-            1032700,
             914000,
             1657600,
             1534300,
-            1608000
+            1608000,
+            324505
+          ],
+          "low": [
+            169.92999267578125,
+            174.41000366210938,
+            171.0399932861328,
+            164.74000549316406,
+            171
+          ],
+          "open": [
+            169.92999267578125,
+            175.60000610351562,
+            180.72000122070312,
+            170.80999755859375,
+            171.41000366210938
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            168.0500030517578,
             175.60000610351562,
             180.0800018310547,
             173.41000366210938,
-            169.16000366210938
+            169.16000366210938,
+            171.83999633789062
           ]
         }
       ]

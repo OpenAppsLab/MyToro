@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:40.845Z",
+  "fetchedAt": "2026-08-03T17:15:38.080Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1342791000,
-      "regularMarketTime": 1785528000,
+      "regularMarketTime": 1785777334,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 331.83,
+      "regularMarketPrice": 343.07,
       "fiftyTwoWeekHigh": 368.8,
       "fiftyTwoWeekLow": 139.57,
-      "regularMarketDayHigh": 333.98,
-      "regularMarketDayLow": 319.48,
-      "regularMarketVolume": 5023621,
+      "regularMarketDayHigh": 343.69,
+      "regularMarketDayLow": 330.01,
+      "regularMarketVolume": 3225554,
       "longName": "Palo Alto Networks, Inc.",
       "shortName": "Palo Alto Networks, Inc.",
-      "chartPreviousClose": 323.79,
+      "chartPreviousClose": 317.32,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "volume": [
-            5223400,
             6507500,
             6336700,
             6859300,
-            5024700
-          ],
-          "open": [
-            331.510009765625,
-            317.510009765625,
-            319.3800048828125,
-            316.0299987792969,
-            332.3399963378906
-          ],
-          "low": [
-            316.70001220703125,
-            308.5400085449219,
-            310.4599914550781,
-            313.04998779296875,
-            319.4800109863281
-          ],
-          "high": [
-            331.80999755859375,
-            323.3999938964844,
-            322.1099853515625,
-            326.29998779296875,
-            333.9800109863281
+            5024700,
+            3225554
           ],
           "close": [
-            317.32000732421875,
             319,
             314.1499938964844,
             325.67999267578125,
-            331.8299865722656
+            331.8299865722656,
+            343.07000732421875
+          ],
+          "high": [
+            323.3999938964844,
+            322.1099853515625,
+            326.29998779296875,
+            333.9800109863281,
+            343.69000244140625
+          ],
+          "low": [
+            308.5400085449219,
+            310.4599914550781,
+            313.04998779296875,
+            319.4800109863281,
+            330.010009765625
+          ],
+          "open": [
+            317.510009765625,
+            319.3800048828125,
+            316.0299987792969,
+            332.3399963378906,
+            336.489990234375
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            317.32000732421875,
             319,
             314.1499938964844,
             325.67999267578125,
-            331.8299865722656
+            331.8299865722656,
+            343.07000732421875
           ]
         }
       ]

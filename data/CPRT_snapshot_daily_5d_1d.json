@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:09.786Z",
+  "fetchedAt": "2026-08-03T17:18:05.428Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CPRT?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 763914600,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777484,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 29.12,
+      "regularMarketPrice": 29.35,
       "fiftyTwoWeekHigh": 50.11,
       "fiftyTwoWeekLow": 26.81,
-      "regularMarketDayHigh": 29.235,
-      "regularMarketDayLow": 28.78,
-      "regularMarketVolume": 8008847,
+      "regularMarketDayHigh": 30.07,
+      "regularMarketDayLow": 29.06,
+      "regularMarketVolume": 5379151,
       "longName": "Copart, Inc.",
       "shortName": "Copart, Inc.",
-      "chartPreviousClose": 27.94,
+      "chartPreviousClose": 29.79,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            28.360000610351562,
-            30.440000534057617,
-            30.6200008392334,
-            30.260000228881836,
-            29
-          ],
-          "volume": [
-            25955300,
-            17180800,
-            14544600,
-            10208800,
-            8532000
-          ],
-          "high": [
-            29.940000534057617,
-            31.200000762939453,
-            31.420000076293945,
-            30.260000228881836,
-            29.239999771118164
-          ],
           "low": [
-            28.209999084472656,
             30.440000534057617,
             30.200000762939453,
             28.860000610351562,
-            28.780000686645508
+            28.780000686645508,
+            29.059999465942383
+          ],
+          "volume": [
+            17180800,
+            14544600,
+            10208800,
+            8532000,
+            5379151
+          ],
+          "high": [
+            31.200000762939453,
+            31.420000076293945,
+            30.260000228881836,
+            29.239999771118164,
+            30.06999969482422
           ],
           "close": [
-            29.790000915527344,
             30.690000534057617,
             30.81999969482422,
             29.56999969482422,
-            29.1200008392334
+            29.1200008392334,
+            29.350000381469727
+          ],
+          "open": [
+            30.440000534057617,
+            30.6200008392334,
+            30.260000228881836,
+            29,
+            29.600000381469727
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            29.790000915527344,
             30.690000534057617,
             30.81999969482422,
             29.56999969482422,
-            29.1200008392334
+            29.1200008392334,
+            29.350000381469727
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:54.678Z",
+  "fetchedAt": "2026-08-03T17:19:48.140Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HCA?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1299767400,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777578,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 402.59,
+      "regularMarketPrice": 403.36,
       "fiftyTwoWeekHigh": 556.52,
       "fiftyTwoWeekLow": 353.99,
-      "regularMarketDayHigh": 404.485,
-      "regularMarketDayLow": 391.38,
-      "regularMarketVolume": 1255819,
+      "regularMarketDayHigh": 415.592,
+      "regularMarketDayLow": 403,
+      "regularMarketVolume": 524925,
       "longName": "HCA Healthcare, Inc.",
       "shortName": "HCA Healthcare, Inc.",
-      "chartPreviousClose": 382.19,
+      "chartPreviousClose": 389.62,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            383.6300048828125,
-            396.2200012207031,
-            418.1099853515625,
-            402.6499938964844,
-            395.5
-          ],
-          "volume": [
-            1979700,
-            2925400,
-            1849800,
-            1244300,
-            1255900
-          ],
-          "high": [
-            392.6600036621094,
-            419.2200012207031,
-            421.30999755859375,
-            406.760009765625,
-            404.5199890136719
-          ],
-          "low": [
-            383.6300048828125,
-            392.1400146484375,
-            405.760009765625,
-            394.739990234375,
-            391.3800048828125
-          ],
           "close": [
-            389.6199951171875,
             418.19000244140625,
             408.17999267578125,
             395.7900085449219,
-            402.5899963378906
+            402.5899963378906,
+            403.3599853515625
+          ],
+          "volume": [
+            2925400,
+            1849800,
+            1244300,
+            1255900,
+            524925
+          ],
+          "high": [
+            419.2200012207031,
+            421.30999755859375,
+            406.760009765625,
+            404.5199890136719,
+            415.5924987792969
+          ],
+          "low": [
+            392.1400146484375,
+            405.760009765625,
+            394.739990234375,
+            391.3800048828125,
+            403
+          ],
+          "open": [
+            396.2200012207031,
+            418.1099853515625,
+            402.6499938964844,
+            395.5,
+            404.7099914550781
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            389.6199951171875,
             418.19000244140625,
             408.17999267578125,
             395.7900085449219,
-            402.5899963378906
+            402.5899963378906,
+            403.3599853515625
           ]
         }
       ]

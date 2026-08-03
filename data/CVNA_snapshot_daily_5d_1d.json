@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:33.598Z",
+  "fetchedAt": "2026-08-03T17:17:30.010Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVNA?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1493386200,
-      "regularMarketTime": 1785528169,
+      "regularMarketTime": 1785777446,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 62.36,
+      "regularMarketPrice": 64.2,
       "fiftyTwoWeekHigh": 97.378,
       "fiftyTwoWeekLow": 54.464,
-      "regularMarketDayHigh": 63.28,
-      "regularMarketDayLow": 59.69,
-      "regularMarketVolume": 11873472,
+      "regularMarketDayHigh": 65.01,
+      "regularMarketDayLow": 62.1,
+      "regularMarketVolume": 4800693,
       "longName": "Carvana Co.",
       "shortName": "Carvana Co.",
-      "chartPreviousClose": 60.46,
+      "chartPreviousClose": 64.04,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            62.5,
-            64.04000091552734,
-            65.0199966430664,
-            58.95000076293945,
-            62.119998931884766
-          ],
-          "low": [
-            62.13999938964844,
-            61.95000076293945,
-            64.41000366210938,
-            56.119998931884766,
-            59.689998626708984
-          ],
           "close": [
-            64.04000091552734,
             66.06999969482422,
             66.31999969482422,
             61.439998626708984,
-            62.36000061035156
+            62.36000061035156,
+            64.19999694824219
           ],
           "volume": [
-            8936400,
             11287400,
             18103900,
             33498900,
-            11878900
+            11878900,
+            4800693
           ],
           "high": [
-            64.80000305175781,
             66.66000366210938,
             69.40499877929688,
             61.599998474121094,
-            63.279998779296875
+            63.279998779296875,
+            65.01000213623047
+          ],
+          "open": [
+            64.04000091552734,
+            65.0199966430664,
+            58.95000076293945,
+            62.119998931884766,
+            63.439998626708984
+          ],
+          "low": [
+            61.95000076293945,
+            64.41000366210938,
+            56.119998931884766,
+            59.689998626708984,
+            62.099998474121094
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            64.04000091552734,
             66.06999969482422,
             66.31999969482422,
             61.439998626708984,
-            62.36000061035156
+            62.36000061035156,
+            64.19999694824219
           ]
         }
       ]

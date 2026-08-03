@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:36.351Z",
+  "fetchedAt": "2026-08-03T17:18:31.627Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/D?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785528063,
+      "regularMarketTime": 1785777503,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 69.17,
+      "regularMarketPrice": 68.64,
       "fiftyTwoWeekHigh": 72.99,
       "fiftyTwoWeekLow": 55.85,
-      "regularMarketDayHigh": 70.06,
-      "regularMarketDayLow": 69.17,
-      "regularMarketVolume": 3523844,
+      "regularMarketDayHigh": 69.38,
+      "regularMarketDayLow": 68.24,
+      "regularMarketVolume": 1041806,
       "longName": "Dominion Energy, Inc.",
       "shortName": "Dominion Energy, Inc.",
-      "chartPreviousClose": 71.1,
+      "chartPreviousClose": 70.27,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            2902600,
-            4010900,
-            3097500,
-            3063700,
-            3581000
-          ],
           "low": [
-            70.08999633789062,
             70.5999984741211,
             69.9800033569336,
             69.0999984741211,
-            69.16999816894531
+            69.16999816894531,
+            68.23999786376953
+          ],
+          "volume": [
+            4010900,
+            3097500,
+            3063700,
+            3581000,
+            1041806
           ],
           "open": [
-            70.81999969482422,
             70.83999633789062,
             71.01000213623047,
             70.5199966430664,
-            69.37000274658203
+            69.37000274658203,
+            69
           ],
           "high": [
-            71.41000366210938,
             71.93000030517578,
             71.5999984741211,
             70.79000091552734,
-            70.06999969482422
+            70.06999969482422,
+            69.37999725341797
           ],
           "close": [
-            70.2699966430664,
             70.62000274658203,
             70.55000305175781,
             69.7300033569336,
-            69.16999816894531
+            69.16999816894531,
+            68.63999938964844
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            70.2699966430664,
             70.62000274658203,
             70.55000305175781,
             69.7300033569336,
-            69.16999816894531
+            69.16999816894531,
+            68.63999938964844
           ]
         }
       ]

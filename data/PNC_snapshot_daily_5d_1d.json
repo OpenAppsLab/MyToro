@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:47.601Z",
+  "fetchedAt": "2026-08-03T17:15:44.868Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PNC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 185466600,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777329,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 249.87,
+      "regularMarketPrice": 250.41,
       "fiftyTwoWeekHigh": 256.49,
       "fiftyTwoWeekLow": 176.88,
-      "regularMarketDayHigh": 250.94,
-      "regularMarketDayLow": 248.21,
-      "regularMarketVolume": 1440389,
+      "regularMarketDayHigh": 253.11,
+      "regularMarketDayLow": 249.98,
+      "regularMarketVolume": 518119,
       "longName": "The PNC Financial Services Group, Inc.",
       "shortName": "PNC Financial Services Group, I",
-      "chartPreviousClose": 250.99,
+      "chartPreviousClose": 249.64,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            249.63999938964844,
-            251.60000610351562,
-            248.49000549316406,
-            248.7100067138672,
-            249.8699951171875
-          ],
-          "low": [
-            248.2100067138672,
-            249.61000061035156,
-            247.02000427246094,
-            246.61000061035156,
-            248.1699981689453
-          ],
-          "high": [
-            253.5,
-            252.4199981689453,
-            252.2100067138672,
-            249.91000366210938,
-            250.94000244140625
-          ],
           "open": [
-            251.6999969482422,
             250.3699951171875,
             250.42999267578125,
             249.77000427246094,
-            249.75
+            249.75,
+            250.86000061035156
+          ],
+          "low": [
+            249.61000061035156,
+            247.02000427246094,
+            246.61000061035156,
+            248.1699981689453,
+            249.97999572753906
+          ],
+          "close": [
+            251.60000610351562,
+            248.49000549316406,
+            248.7100067138672,
+            249.8699951171875,
+            250.41000366210938
+          ],
+          "high": [
+            252.4199981689453,
+            252.2100067138672,
+            249.91000366210938,
+            250.94000244140625,
+            253.10989379882812
           ],
           "volume": [
-            1210700,
             1480800,
             2297400,
             1408200,
-            1440800
+            1440800,
+            518119
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            249.63999938964844,
             251.60000610351562,
             248.49000549316406,
             248.7100067138672,
-            249.8699951171875
+            249.8699951171875,
+            250.41000366210938
           ]
         }
       ]

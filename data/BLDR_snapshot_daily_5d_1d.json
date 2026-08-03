@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:22.492Z",
+  "fetchedAt": "2026-08-03T17:17:18.840Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BLDR?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1119965400,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777426,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 66.44,
+      "regularMarketPrice": 71.825,
       "fiftyTwoWeekHigh": 151.03,
       "fiftyTwoWeekLow": 65.1,
-      "regularMarketDayHigh": 66.81,
-      "regularMarketDayLow": 65.11,
-      "regularMarketVolume": 3117028,
+      "regularMarketDayHigh": 71.94,
+      "regularMarketDayLow": 68.49,
+      "regularMarketVolume": 1234847,
       "longName": "Builders FirstSource, Inc.",
       "shortName": "Builders FirstSource, Inc.",
-      "chartPreviousClose": 72.86,
+      "chartPreviousClose": 72.72,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "volume": [
-            1642100,
             1920600,
             5075400,
             4608700,
-            3117100
-          ],
-          "open": [
-            74.30000305175781,
-            74,
-            72.08999633789062,
-            66.4000015258789,
-            65.75
-          ],
-          "close": [
-            72.72000122070312,
-            73.68000030517578,
-            67.76000213623047,
-            66.01000213623047,
-            66.44000244140625
+            3117100,
+            1234847
           ],
           "high": [
-            75.72000122070312,
             75.69999694824219,
             72.6500015258789,
             69.86000061035156,
-            66.80999755859375
+            66.80999755859375,
+            71.94000244140625
+          ],
+          "open": [
+            74,
+            72.08999633789062,
+            66.4000015258789,
+            65.75,
+            68.48999786376953
           ],
           "low": [
-            72.13999938964844,
             72.68000030517578,
             67.41000366210938,
             65.11000061035156,
-            65.0999984741211
+            65.0999984741211,
+            68.48999786376953
+          ],
+          "close": [
+            73.68000030517578,
+            67.76000213623047,
+            66.01000213623047,
+            66.44000244140625,
+            71.82499694824219
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            72.72000122070312,
             73.68000030517578,
             67.76000213623047,
             66.01000213623047,
-            66.44000244140625
+            66.44000244140625,
+            71.82499694824219
           ]
         }
       ]

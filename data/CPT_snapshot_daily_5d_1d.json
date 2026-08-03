@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:27.970Z",
+  "fetchedAt": "2026-08-03T17:17:24.512Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CPT?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 743347800,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777429,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 110.81,
+      "regularMarketPrice": 109.955,
       "fiftyTwoWeekHigh": 119.81,
       "fiftyTwoWeekLow": 96.53,
-      "regularMarketDayHigh": 112.61,
-      "regularMarketDayLow": 108.96,
-      "regularMarketVolume": 1424509,
+      "regularMarketDayHigh": 111.917,
+      "regularMarketDayLow": 109.93,
+      "regularMarketVolume": 459745,
       "longName": "Camden Property Trust",
       "shortName": "Camden Property Trust",
-      "chartPreviousClose": 113.73,
+      "chartPreviousClose": 112.84,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            112.61000061035156,
-            113.88999938964844,
-            115.05000305175781,
-            112.6500015258789,
-            108.95999908447266
-          ],
-          "close": [
-            112.83999633789062,
-            115.04000091552734,
-            116.37000274658203,
-            113.29000091552734,
-            110.80999755859375
-          ],
-          "open": [
-            113.55000305175781,
-            113.91999816894531,
-            115.58999633789062,
-            115.16999816894531,
-            111.66999816894531
-          ],
-          "high": [
-            113.91999816894531,
-            115.75,
-            116.83999633789062,
-            115.3499984741211,
-            113.23999786376953
-          ],
           "volume": [
-            614100,
             1315000,
             1071400,
             1806900,
-            1874000
+            1874000,
+            459745
+          ],
+          "high": [
+            115.75,
+            116.83999633789062,
+            115.3499984741211,
+            113.23999786376953,
+            111.91719818115234
+          ],
+          "open": [
+            113.91999816894531,
+            115.58999633789062,
+            115.16999816894531,
+            111.66999816894531,
+            110.73999786376953
+          ],
+          "close": [
+            115.04000091552734,
+            116.37000274658203,
+            113.29000091552734,
+            110.80999755859375,
+            109.95500183105469
+          ],
+          "low": [
+            113.88999938964844,
+            115.05000305175781,
+            112.6500015258789,
+            108.95999908447266,
+            109.93000030517578
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            112.83999633789062,
             115.04000091552734,
             116.37000274658203,
             113.29000091552734,
-            110.80999755859375
+            110.80999755859375,
+            109.95500183105469
           ]
         }
       ]

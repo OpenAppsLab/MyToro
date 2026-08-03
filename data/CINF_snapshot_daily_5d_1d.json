@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:51.603Z",
+  "fetchedAt": "2026-08-03T17:17:47.436Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CINF?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777450,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 177.68,
+      "regularMarketPrice": 177.08,
       "fiftyTwoWeekHigh": 194.81,
       "fiftyTwoWeekLow": 146.52,
-      "regularMarketDayHigh": 177.945,
-      "regularMarketDayLow": 172.869,
-      "regularMarketVolume": 781330,
+      "regularMarketDayHigh": 179.54,
+      "regularMarketDayLow": 176.45,
+      "regularMarketVolume": 198730,
       "longName": "Cincinnati Financial Corporation",
       "shortName": "Cincinnati Financial Corporatio",
-      "chartPreviousClose": 182.81,
+      "chartPreviousClose": 184.23,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            183.3300018310547,
-            176.4600067138672,
-            180.64999389648438,
-            179.9199981689453,
-            173.6199951171875
-          ],
-          "volume": [
-            958400,
-            1454100,
-            918400,
-            962400,
-            944400
-          ],
           "low": [
-            183.22000122070312,
             174.1999969482422,
             178.4600067138672,
             173.89999389648438,
-            172.8699951171875
+            172.8699951171875,
+            176.4499969482422
+          ],
+          "open": [
+            176.4600067138672,
+            180.64999389648438,
+            179.9199981689453,
+            173.6199951171875,
+            178.30999755859375
+          ],
+          "volume": [
+            1454100,
+            918400,
+            962400,
+            944400,
+            198730
           ],
           "high": [
-            186.3300018310547,
             186.19000244140625,
             181.4499969482422,
             179.9199981689453,
-            177.9499969482422
+            177.9499969482422,
+            179.5399932861328
           ],
           "close": [
-            184.22999572753906,
             182.6300048828125,
             181.3300018310547,
             174.72999572753906,
-            177.67999267578125
+            177.67999267578125,
+            177.0800018310547
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            184.22999572753906,
             182.6300048828125,
             181.3300018310547,
             174.72999572753906,
-            177.67999267578125
+            177.67999267578125,
+            177.0800018310547
           ]
         }
       ]

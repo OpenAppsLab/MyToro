@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:05.896Z",
+  "fetchedAt": "2026-08-03T17:17:02.559Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAX?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 373041000,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777421,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 26.16,
+      "regularMarketPrice": 28,
       "fiftyTwoWeekHigh": 30,
       "fiftyTwoWeekLow": 15.73,
-      "regularMarketDayHigh": 27.145,
-      "regularMarketDayLow": 26.025,
-      "regularMarketVolume": 7100383,
+      "regularMarketDayHigh": 28.095,
+      "regularMarketDayLow": 26.9,
+      "regularMarketVolume": 4457638,
       "longName": "Baxter International Inc.",
       "shortName": "Baxter International Inc.",
-      "chartPreviousClose": 22.4,
+      "chartPreviousClose": 23.34,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            22.600000381469727,
-            23.579999923706055,
-            24.280000686645508,
-            26.049999237060547,
-            26.030000686645508
-          ],
           "volume": [
-            5445200,
             7102200,
             9433100,
             22670900,
-            9282400
-          ],
-          "open": [
-            22.68000030517578,
-            23.850000381469727,
-            24.399999618530273,
-            29.06999969482422,
-            26.920000076293945
-          ],
-          "high": [
-            23.399999618530273,
-            24.75,
-            24.93000030517578,
-            30,
-            27.149999618530273
+            9282400,
+            4457638
           ],
           "close": [
-            23.34000015258789,
             24.3700008392334,
             24.770000457763672,
             26.75,
-            26.15999984741211
+            26.15999984741211,
+            28
+          ],
+          "high": [
+            24.75,
+            24.93000030517578,
+            30,
+            27.149999618530273,
+            28.094999313354492
+          ],
+          "low": [
+            23.579999923706055,
+            24.280000686645508,
+            26.049999237060547,
+            26.030000686645508,
+            26.899999618530273
+          ],
+          "open": [
+            23.850000381469727,
+            24.399999618530273,
+            29.06999969482422,
+            26.920000076293945,
+            26.979999542236328
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            23.34000015258789,
             24.3700008392334,
             24.770000457763672,
             26.75,
-            26.15999984741211
+            26.15999984741211,
+            28
           ]
         }
       ]

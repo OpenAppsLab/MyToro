@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:03.422Z",
+  "fetchedAt": "2026-08-03T17:17:00.118Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BKR?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 544714200,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777420,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 60.49,
+      "regularMarketPrice": 60.59,
       "fiftyTwoWeekHigh": 70.41,
       "fiftyTwoWeekLow": 41.96,
-      "regularMarketDayHigh": 61.26,
-      "regularMarketDayLow": 59.99,
-      "regularMarketVolume": 5424154,
+      "regularMarketDayHigh": 60.74,
+      "regularMarketDayLow": 59.08,
+      "regularMarketVolume": 2542082,
       "longName": "Baker Hughes Company",
       "shortName": "Baker Hughes Company",
-      "chartPreviousClose": 57.25,
+      "chartPreviousClose": 60.59,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            60.59000015258789,
-            58.459999084472656,
-            58.720001220703125,
-            59.900001525878906,
-            60.4900016784668
-          ],
-          "low": [
-            59.84000015258789,
-            57.869998931884766,
-            58.540000915527344,
-            58.72999954223633,
-            59.9900016784668
-          ],
           "high": [
-            62.66999816894531,
             60.9900016784668,
             60.470001220703125,
             60.119998931884766,
-            61.2599983215332
+            61.2599983215332,
+            60.7400016784668
           ],
-          "open": [
-            60.630001068115234,
-            60.099998474121094,
-            60.45000076293945,
-            59.18000030517578,
-            60.72999954223633
+          "low": [
+            57.869998931884766,
+            58.540000915527344,
+            58.72999954223633,
+            59.9900016784668,
+            59.08000183105469
           ],
           "volume": [
-            15186300,
             12307800,
             20168000,
             9294700,
-            5758100
+            5758100,
+            2542082
+          ],
+          "close": [
+            58.459999084472656,
+            58.720001220703125,
+            59.900001525878906,
+            60.4900016784668,
+            60.59000015258789
+          ],
+          "open": [
+            60.099998474121094,
+            60.45000076293945,
+            59.18000030517578,
+            60.72999954223633,
+            60.150001525878906
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            60.59000015258789,
             58.459999084472656,
             58.720001220703125,
             59.900001525878906,
-            60.4900016784668
+            60.4900016784668,
+            60.59000015258789
           ]
         }
       ]

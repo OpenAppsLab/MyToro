@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:52.419Z",
+  "fetchedAt": "2026-08-03T17:19:45.908Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HIG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 819037800,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777565,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 141.91,
+      "regularMarketPrice": 142.765,
       "fiftyTwoWeekHigh": 146.07,
       "fiftyTwoWeekLow": 120.33,
-      "regularMarketDayHigh": 143.55,
-      "regularMarketDayLow": 141.83,
-      "regularMarketVolume": 777767,
+      "regularMarketDayHigh": 143.96,
+      "regularMarketDayLow": 141.16,
+      "regularMarketVolume": 690349,
       "longName": "The Hartford Insurance Group, Inc.",
       "shortName": "The Hartford Insurance Group, I",
-      "chartPreviousClose": 140.53,
+      "chartPreviousClose": 140.14,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            140.13999938964844,
-            143.4199981689453,
-            145.67999267578125,
-            143.0500030517578,
-            141.91000366210938
-          ],
-          "low": [
-            139.69000244140625,
-            140.91000366210938,
-            142.50999450683594,
-            141.10000610351562,
-            141.8300018310547
-          ],
           "high": [
-            141.9199981689453,
             143.72000122070312,
             145.80999755859375,
             146.07000732421875,
-            143.5500030517578
+            143.5500030517578,
+            143.9600067138672
           ],
           "open": [
-            140.8000030517578,
             142,
             142.97000122070312,
             145,
-            142.3699951171875
+            142.3699951171875,
+            142.19000244140625
+          ],
+          "close": [
+            143.4199981689453,
+            145.67999267578125,
+            143.0500030517578,
+            141.91000366210938,
+            142.76499938964844
           ],
           "volume": [
-            2573600,
             1934900,
             1775600,
             1505000,
-            1131200
+            1131200,
+            690349
+          ],
+          "low": [
+            140.91000366210938,
+            142.50999450683594,
+            141.10000610351562,
+            141.8300018310547,
+            141.16000366210938
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            140.13999938964844,
             143.4199981689453,
             145.67999267578125,
             143.0500030517578,
-            141.91000366210938
+            141.91000366210938,
+            142.76499938964844
           ]
         }
       ]

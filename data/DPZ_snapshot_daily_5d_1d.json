@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:37.634Z",
+  "fetchedAt": "2026-08-03T17:18:32.700Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DPZ?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1089725400,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777509,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 347.44,
+      "regularMarketPrice": 361.8,
       "fiftyTwoWeekHigh": 469,
       "fiftyTwoWeekLow": 282,
-      "regularMarketDayHigh": 350.07,
-      "regularMarketDayLow": 342.96,
-      "regularMarketVolume": 639142,
+      "regularMarketDayHigh": 363.55,
+      "regularMarketDayLow": 351.2,
+      "regularMarketVolume": 413982,
       "longName": "Domino's Pizza, Inc.",
       "shortName": "Domino's Pizza Inc",
-      "chartPreviousClose": 332.97,
+      "chartPreviousClose": 343.53,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            343.5299987792969,
-            350.4700012207031,
-            360,
-            352.25,
-            347.44000244140625
-          ],
           "low": [
-            335.57000732421875,
             346.95001220703125,
             347.6099853515625,
             342.79998779296875,
-            342.9599914550781
-          ],
-          "open": [
-            335.57000732421875,
-            349.8900146484375,
-            350.3699951171875,
-            353.19000244140625,
-            347.3900146484375
+            342.9599914550781,
+            351.20001220703125
           ],
           "high": [
-            348.6000061035156,
             359.70001220703125,
             364.5799865722656,
             355.1400146484375,
-            350.07000732421875
+            350.07000732421875,
+            363.54998779296875
+          ],
+          "close": [
+            350.4700012207031,
+            360,
+            352.25,
+            347.44000244140625,
+            361.79998779296875
+          ],
+          "open": [
+            349.8900146484375,
+            350.3699951171875,
+            353.19000244140625,
+            347.3900146484375,
+            351.20001220703125
           ],
           "volume": [
-            1075400,
             1127200,
             1292200,
             835000,
-            652400
+            652400,
+            413982
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            343.5299987792969,
             350.4700012207031,
             360,
             352.25,
-            347.44000244140625
+            347.44000244140625,
+            361.79998779296875
           ]
         }
       ]

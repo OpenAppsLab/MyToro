@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:26.333Z",
+  "fetchedAt": "2026-08-03T17:16:23.683Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALLE?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1384785000,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777267,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 157.4,
+      "regularMarketPrice": 160.44,
       "fiftyTwoWeekHigh": 183.11,
       "fiftyTwoWeekLow": 125,
-      "regularMarketDayHigh": 157.95,
-      "regularMarketDayLow": 155.5,
-      "regularMarketVolume": 718282,
+      "regularMarketDayHigh": 162.085,
+      "regularMarketDayLow": 159.17,
+      "regularMarketVolume": 314846,
       "longName": "Allegion plc",
       "shortName": "Allegion plc",
-      "chartPreviousClose": 153.36,
+      "chartPreviousClose": 158.14,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            158.13999938964844,
-            161.22999572753906,
-            158.47000122070312,
-            157.05999755859375,
-            157.39999389648438
-          ],
-          "open": [
-            154.25,
-            160,
-            159.25999450683594,
-            158.97999572753906,
-            156.85000610351562
-          ],
-          "high": [
-            158.39999389648438,
-            164.25,
-            160.10000610351562,
-            159.1699981689453,
-            157.9499969482422
-          ],
-          "volume": [
-            1803100,
-            1806000,
-            1341400,
-            1222900,
-            933800
-          ],
           "low": [
-            153.66000366210938,
             158.94000244140625,
             156.8300018310547,
             153.38999938964844,
-            155.5
+            155.5,
+            159.1699981689453
+          ],
+          "close": [
+            161.22999572753906,
+            158.47000122070312,
+            157.05999755859375,
+            157.39999389648438,
+            160.44000244140625
+          ],
+          "volume": [
+            1806000,
+            1341400,
+            1222900,
+            933800,
+            314846
+          ],
+          "open": [
+            160,
+            159.25999450683594,
+            158.97999572753906,
+            156.85000610351562,
+            158.6999969482422
+          ],
+          "high": [
+            164.25,
+            160.10000610351562,
+            159.1699981689453,
+            157.9499969482422,
+            162.0850067138672
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            158.13999938964844,
             161.22999572753906,
             158.47000122070312,
             157.05999755859375,
-            157.39999389648438
+            157.39999389648438,
+            160.44000244140625
           ]
         }
       ]

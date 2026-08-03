@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:07.483Z",
+  "fetchedAt": "2026-08-03T17:18:03.082Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CEG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1642602600,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777482,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 262.75,
+      "regularMarketPrice": 274.34,
       "fiftyTwoWeekHigh": 412.7,
       "fiftyTwoWeekLow": 228.63,
-      "regularMarketDayHigh": 269.862,
-      "regularMarketDayLow": 260.86,
-      "regularMarketVolume": 1849681,
+      "regularMarketDayHigh": 274.34,
+      "regularMarketDayLow": 261.841,
+      "regularMarketVolume": 1043957,
       "longName": "Constellation Energy Corporation",
       "shortName": "Constellation Energy Corporatio",
-      "chartPreviousClose": 274.35,
+      "chartPreviousClose": 270,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -60,60 +60,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            277.19000244140625,
-            266.5849914550781,
-            263.8800048828125,
-            270.2699890136719,
-            269.86199951171875
-          ],
-          "volume": [
-            3081700,
-            2966200,
-            2855000,
-            3262100,
-            1850300
-          ],
           "low": [
-            267.739990234375,
             257.6499938964844,
             256.1600036621094,
             261.8999938964844,
-            260.8399963378906
+            260.8399963378906,
+            261.8411865234375
+          ],
+          "high": [
+            266.5849914550781,
+            263.8800048828125,
+            270.2699890136719,
+            269.86199951171875,
+            274.3399963378906
           ],
           "open": [
-            276,
             263.3550109863281,
             260.7900085449219,
             262.6400146484375,
-            266.4519958496094
+            266.4519958496094,
+            264.95001220703125
           ],
           "close": [
-            270,
             259.82000732421875,
             257.95001220703125,
             263.55999755859375,
-            262.75
+            262.75,
+            274.3399963378906
+          ],
+          "volume": [
+            2966200,
+            2855000,
+            3262100,
+            1850300,
+            1043957
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            270,
             259.82000732421875,
             257.95001220703125,
             263.55999755859375,
-            262.75
+            262.75,
+            274.3399963378906
           ]
         }
       ]

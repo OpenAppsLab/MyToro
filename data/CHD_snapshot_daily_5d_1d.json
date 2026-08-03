@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:48.074Z",
+  "fetchedAt": "2026-08-03T17:17:44.146Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CHD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785528095,
+      "regularMarketTime": 1785777445,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 98.81,
+      "regularMarketPrice": 100.08,
       "fiftyTwoWeekHigh": 106.04,
       "fiftyTwoWeekLow": 81.33,
-      "regularMarketDayHigh": 99.79,
-      "regularMarketDayLow": 94.88,
-      "regularMarketVolume": 1896649,
+      "regularMarketDayHigh": 102.24,
+      "regularMarketDayLow": 99.805,
+      "regularMarketVolume": 654326,
       "longName": "Church & Dwight Co., Inc.",
       "shortName": "Church & Dwight Company, Inc.",
-      "chartPreviousClose": 97.64,
+      "chartPreviousClose": 98.7,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "low": [
-            97.9000015258789,
             99.56999969482422,
             97.44000244140625,
             97.41999816894531,
-            94.87999725341797
+            94.87999725341797,
+            99.80500030517578
           ],
           "volume": [
-            1246100,
             2269100,
             2438200,
             3897600,
-            2657000
-          ],
-          "high": [
-            99.58000183105469,
-            101.68000030517578,
-            100.05999755859375,
-            99.04000091552734,
-            99.79000091552734
-          ],
-          "close": [
-            98.69999694824219,
-            99.93000030517578,
-            99.86000061035156,
-            97.68000030517578,
-            98.80999755859375
+            2657000,
+            654326
           ],
           "open": [
-            97.91000366210938,
             100.7300033569336,
             98.04000091552734,
             98.3499984741211,
-            95.70999908447266
+            95.70999908447266,
+            100.48999786376953
+          ],
+          "high": [
+            101.68000030517578,
+            100.05999755859375,
+            99.04000091552734,
+            99.79000091552734,
+            102.23999786376953
+          ],
+          "close": [
+            99.93000030517578,
+            99.86000061035156,
+            97.68000030517578,
+            98.80999755859375,
+            100.08000183105469
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            98.69999694824219,
             99.93000030517578,
             99.86000061035156,
             97.68000030517578,
-            98.80999755859375
+            98.80999755859375,
+            100.08000183105469
           ]
         }
       ]

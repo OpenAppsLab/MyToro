@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:28.742Z",
+  "fetchedAt": "2026-08-03T17:16:25.931Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALL?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 739114200,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777382,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 264.08,
+      "regularMarketPrice": 263.13,
       "fiftyTwoWeekHigh": 277.22,
       "fiftyTwoWeekLow": 188.08,
-      "regularMarketDayHigh": 267.22,
-      "regularMarketDayLow": 262.59,
-      "regularMarketVolume": 823177,
+      "regularMarketDayHigh": 266.875,
+      "regularMarketDayLow": 260.99,
+      "regularMarketVolume": 441386,
       "longName": "The Allstate Corporation",
       "shortName": "Allstate Corporation (The)",
-      "chartPreviousClose": 259.97,
+      "chartPreviousClose": 261.27,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            260.70001220703125,
-            263.25,
-            271,
-            270.2900085449219,
-            262.79998779296875
-          ],
-          "high": [
-            262.239990234375,
-            272.6099853515625,
-            277.2200012207031,
-            271.4700012207031,
-            267.25
-          ],
-          "volume": [
-            1102900,
-            2460300,
-            1513100,
-            1694200,
-            1309200
-          ],
           "low": [
-            258.8999938964844,
             263.25,
             270.0799865722656,
             261.92999267578125,
-            262.5899963378906
+            262.5899963378906,
+            260.989990234375
           ],
           "close": [
-            261.2699890136719,
             272.4200134277344,
             274.3900146484375,
             265.3800048828125,
-            264.0799865722656
+            264.0799865722656,
+            263.1300048828125
+          ],
+          "open": [
+            263.25,
+            271,
+            270.2900085449219,
+            262.79998779296875,
+            264.07000732421875
+          ],
+          "high": [
+            272.6099853515625,
+            277.2200012207031,
+            271.4700012207031,
+            267.25,
+            266.875
+          ],
+          "volume": [
+            2460300,
+            1513100,
+            1694200,
+            1309200,
+            441386
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            261.2699890136719,
             272.4200134277344,
             274.3900146484375,
             265.3800048828125,
-            264.0799865722656
+            264.0799865722656,
+            263.1300048828125
           ]
         }
       ]

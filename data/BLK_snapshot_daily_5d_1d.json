@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:14:57.991Z",
+  "fetchedAt": "2026-08-03T17:14:55.683Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BLK?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 938784600,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777262,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1090.39,
+      "regularMarketPrice": 1108.97,
       "fiftyTwoWeekHigh": 1219.94,
       "fiftyTwoWeekLow": 917.39,
-      "regularMarketDayHigh": 1104.185,
-      "regularMarketDayLow": 1089.83,
-      "regularMarketVolume": 374905,
+      "regularMarketDayHigh": 1119.34,
+      "regularMarketDayLow": 1096.19,
+      "regularMarketVolume": 254553,
       "longName": "BlackRock, Inc.",
       "shortName": "BlackRock, Inc.",
-      "chartPreviousClose": 1055.67,
+      "chartPreviousClose": 1062.14,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            698100,
-            1044000,
-            1121800,
-            624200,
-            378200
-          ],
           "open": [
-            1067.3800048828125,
             1069.3900146484375,
             1086.0699462890625,
             1079.3599853515625,
-            1100.8399658203125
+            1100.8399658203125,
+            1100.0699462890625
           ],
           "low": [
-            1051.010009765625,
             1062.510009765625,
             1079.18994140625,
             1071.3699951171875,
-            1089.7900390625
-          ],
-          "high": [
-            1069.989990234375,
-            1103.47998046875,
-            1110,
-            1104.1099853515625,
-            1104.18994140625
+            1089.7900390625,
+            1096.18994140625
           ],
           "close": [
-            1062.1400146484375,
             1097.550048828125,
             1079.18994140625,
             1098.3699951171875,
-            1090.3900146484375
+            1090.3900146484375,
+            1108.969970703125
+          ],
+          "high": [
+            1103.47998046875,
+            1110,
+            1104.1099853515625,
+            1104.18994140625,
+            1119.3399658203125
+          ],
+          "volume": [
+            1044000,
+            1121800,
+            624200,
+            378200,
+            254553
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            1062.1400146484375,
             1097.550048828125,
             1079.18994140625,
             1098.3699951171875,
-            1090.3900146484375
+            1090.3900146484375,
+            1108.969970703125
           ]
         }
       ]

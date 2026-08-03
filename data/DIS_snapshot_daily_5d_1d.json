@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:10.456Z",
+  "fetchedAt": "2026-08-03T17:15:08.053Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785528250,
+      "regularMarketTime": 1785777306,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 96.19,
+      "regularMarketPrice": 97.28,
       "fiftyTwoWeekHigh": 119.78,
       "fiftyTwoWeekLow": 92.19,
-      "regularMarketDayHigh": 96.58,
-      "regularMarketDayLow": 95.6,
-      "regularMarketVolume": 8249340,
+      "regularMarketDayHigh": 99.05,
+      "regularMarketDayLow": 97.21,
+      "regularMarketVolume": 5232716,
       "longName": "The Walt Disney Company",
       "shortName": "Walt Disney Company (The)",
-      "chartPreviousClose": 94.85,
+      "chartPreviousClose": 96.65,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            95.51000213623047,
-            97,
-            98.33999633789062,
-            97.41000366210938,
-            96.08000183105469
-          ],
-          "low": [
-            95.51000213623047,
-            96.97000122070312,
-            97.98999786376953,
-            94.45999908447266,
-            95.5999984741211
-          ],
-          "close": [
-            96.6500015258789,
-            98.88999938964844,
-            98.4800033569336,
-            96.16000366210938,
-            96.19000244140625
-          ],
           "volume": [
-            10593900,
             11389300,
             11070100,
             21112400,
-            11181500
+            11181500,
+            5232716
+          ],
+          "low": [
+            96.97000122070312,
+            97.98999786376953,
+            94.45999908447266,
+            95.5999984741211,
+            97.20999908447266
+          ],
+          "open": [
+            97,
+            98.33999633789062,
+            97.41000366210938,
+            96.08000183105469,
+            97.62000274658203
           ],
           "high": [
-            97.19000244140625,
             99.2300033569336,
             99.41000366210938,
             97.4800033569336,
-            96.58999633789062
+            96.58999633789062,
+            99.05000305175781
+          ],
+          "close": [
+            98.88999938964844,
+            98.4800033569336,
+            96.16000366210938,
+            96.19000244140625,
+            97.28009796142578
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            96.6500015258789,
             98.88999938964844,
             98.4800033569336,
             96.16000366210938,
-            96.19000244140625
+            96.19000244140625,
+            97.28009796142578
           ]
         }
       ]

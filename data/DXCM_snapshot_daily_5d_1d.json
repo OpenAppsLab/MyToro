@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:30.751Z",
+  "fetchedAt": "2026-08-03T17:18:26.105Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DXCM?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1113485400,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777505,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 83.45,
-      "fiftyTwoWeekHigh": 84.7,
+      "regularMarketPrice": 86.37,
+      "fiftyTwoWeekHigh": 87.62,
       "fiftyTwoWeekLow": 54.11,
-      "regularMarketDayHigh": 84.7,
-      "regularMarketDayLow": 79.665,
-      "regularMarketVolume": 11764839,
+      "regularMarketDayHigh": 87.62,
+      "regularMarketDayLow": 83.51,
+      "regularMarketVolume": 4096286,
       "longName": "DexCom, Inc.",
       "shortName": "DexCom, Inc.",
-      "chartPreviousClose": 71.54,
+      "chartPreviousClose": 73.37,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            72,
-            74.08999633789062,
-            73.44999694824219,
-            73.23999786376953,
-            79.5
-          ],
-          "high": [
-            74.58999633789062,
-            76.08999633789062,
-            76.08999633789062,
-            74.87000274658203,
-            84.69999694824219
-          ],
-          "close": [
-            73.37000274658203,
-            74.8499984741211,
-            75.13999938964844,
-            74.54000091552734,
-            83.44999694824219
-          ],
           "open": [
-            72,
             74.56999969482422,
             74.41999816894531,
             73.93000030517578,
-            79.87999725341797
+            79.87999725341797,
+            85.30000305175781
+          ],
+          "high": [
+            76.08999633789062,
+            76.08999633789062,
+            74.87000274658203,
+            84.69999694824219,
+            87.61990356445312
+          ],
+          "low": [
+            74.08999633789062,
+            73.44999694824219,
+            73.23999786376953,
+            79.5,
+            83.51000213623047
           ],
           "volume": [
-            5003900,
             4119900,
             6268700,
             5645100,
-            11980700
+            11980700,
+            4096286
+          ],
+          "close": [
+            74.8499984741211,
+            75.13999938964844,
+            74.54000091552734,
+            83.44999694824219,
+            86.37000274658203
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            73.37000274658203,
             74.8499984741211,
             75.13999938964844,
             74.54000091552734,
-            83.44999694824219
+            83.44999694824219,
+            86.37000274658203
           ]
         }
       ]

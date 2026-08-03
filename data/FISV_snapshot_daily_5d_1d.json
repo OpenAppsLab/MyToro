@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:14.857Z",
+  "fetchedAt": "2026-08-03T17:15:12.398Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FISV?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 528039000,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777307,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 53.94,
+      "regularMarketPrice": 54.465,
       "fiftyTwoWeekHigh": 140.42,
       "fiftyTwoWeekLow": 47.04,
-      "regularMarketDayHigh": 54.075,
-      "regularMarketDayLow": 52.74,
-      "regularMarketVolume": 4921451,
+      "regularMarketDayHigh": 55.52,
+      "regularMarketDayLow": 54.185,
+      "regularMarketVolume": 11482996,
       "longName": "Fiserv, Inc.",
       "shortName": "Fiserv, Inc.",
-      "chartPreviousClose": 51.02,
+      "chartPreviousClose": 52.31,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            51.18000030517578,
-            52.5,
-            54.08000183105469,
-            53.060001373291016,
-            52.7400016784668
-          ],
-          "close": [
-            52.310001373291016,
-            54.209999084472656,
-            55.630001068115234,
-            54.06999969482422,
-            53.939998626708984
-          ],
           "open": [
-            51.529998779296875,
             52.560001373291016,
             54.119998931884766,
             54.61000061035156,
-            53.369998931884766
+            53.369998931884766,
+            54.86000061035156
           ],
           "high": [
-            52.61000061035156,
             54.66999816894531,
             56,
             54.81999969482422,
-            54.08000183105469
+            54.08000183105469,
+            55.52000045776367
+          ],
+          "close": [
+            54.209999084472656,
+            55.630001068115234,
+            54.06999969482422,
+            53.939998626708984,
+            54.46500015258789
           ],
           "volume": [
-            5429100,
             6011200,
             6966700,
             7391000,
-            5723000
+            5723000,
+            11482996
+          ],
+          "low": [
+            52.5,
+            54.08000183105469,
+            53.060001373291016,
+            52.7400016784668,
+            54.185001373291016
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            52.310001373291016,
             54.209999084472656,
             55.630001068115234,
             54.06999969482422,
-            53.939998626708984
+            53.939998626708984,
+            54.46500015258789
           ]
         }
       ]

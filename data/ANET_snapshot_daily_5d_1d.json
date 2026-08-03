@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:52.165Z",
+  "fetchedAt": "2026-08-03T17:16:49.093Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1402061400,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777403,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 180.35,
+      "regularMarketPrice": 183.23,
       "fiftyTwoWeekHigh": 189.817,
       "fiftyTwoWeekLow": 114.52,
-      "regularMarketDayHigh": 183.51,
-      "regularMarketDayLow": 175.71,
-      "regularMarketVolume": 8464295,
+      "regularMarketDayHigh": 183.38,
+      "regularMarketDayLow": 173.45,
+      "regularMarketVolume": 4001914,
       "longName": "Arista Networks, Inc.",
       "shortName": "Arista Networks, Inc.",
-      "chartPreviousClose": 173.99,
+      "chartPreviousClose": 170.76,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
           "open": [
-            175.2100067138672,
             165.57000732421875,
             168.4499969482422,
             164.55999755859375,
-            177.60000610351562
-          ],
-          "low": [
-            165.89999389648438,
-            159.27000427246094,
-            156.83999633789062,
-            164.48500061035156,
-            175.6999969482422
-          ],
-          "volume": [
-            6023000,
-            8561600,
-            8189500,
-            7284700,
-            8467900
+            177.60000610351562,
+            174.4199981689453
           ],
           "high": [
-            176.72999572753906,
             169.97000122070312,
             169.3300018310547,
             171.50999450683594,
-            183.52000427246094
+            183.52000427246094,
+            183.3800048828125
+          ],
+          "low": [
+            159.27000427246094,
+            156.83999633789062,
+            164.48500061035156,
+            175.6999969482422,
+            173.4499969482422
+          ],
+          "volume": [
+            8561600,
+            8189500,
+            7284700,
+            8467900,
+            4001914
           ],
           "close": [
-            170.75999450683594,
             169.7100067138672,
             157.97000122070312,
             171.02000427246094,
-            180.35000610351562
+            180.35000610351562,
+            183.22999572753906
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            170.75999450683594,
             169.7100067138672,
             157.97000122070312,
             171.02000427246094,
-            180.35000610351562
+            180.35000610351562,
+            183.22999572753906
           ]
         }
       ]

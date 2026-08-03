@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:48.702Z",
+  "fetchedAt": "2026-08-03T17:16:45.843Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACGL?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 811085400,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777360,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 100.53,
+      "regularMarketPrice": 100.665,
       "fiftyTwoWeekHigh": 107.09,
       "fiftyTwoWeekLow": 82.45,
-      "regularMarketDayHigh": 101.38,
-      "regularMarketDayLow": 99.8,
-      "regularMarketVolume": 1702880,
+      "regularMarketDayHigh": 101.91,
+      "regularMarketDayLow": 100,
+      "regularMarketVolume": 577451,
       "longName": "Arch Capital Group Ltd.",
       "shortName": "Arch Capital Group Ltd.",
-      "chartPreviousClose": 103.36,
+      "chartPreviousClose": 103.88,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            103.87999725341797,
-            106.4800033569336,
-            104.55000305175781,
-            101.13999938964844,
-            100.52999877929688
-          ],
           "open": [
-            103.37000274658203,
             105.19000244140625,
             102.01000213623047,
             103.43000030517578,
-            100.3499984741211
+            100.3499984741211,
+            101.12000274658203
           ],
           "low": [
-            101.93000030517578,
             104.55000305175781,
             101.36000061035156,
             99.13999938964844,
-            99.80000305175781
-          ],
-          "high": [
-            104.80000305175781,
-            107.08999633789062,
-            105.66000366210938,
-            103.70999908447266,
-            101.38999938964844
+            99.80000305175781,
+            100
           ],
           "volume": [
-            1874600,
             2062300,
             2885700,
             2149800,
-            1743500
+            1743500,
+            577451
+          ],
+          "high": [
+            107.08999633789062,
+            105.66000366210938,
+            103.70999908447266,
+            101.38999938964844,
+            101.91000366210938
+          ],
+          "close": [
+            106.4800033569336,
+            104.55000305175781,
+            101.13999938964844,
+            100.52999877929688,
+            100.66500091552734
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            103.87999725341797,
             106.4800033569336,
             104.55000305175781,
             101.13999938964844,
-            100.52999877929688
+            100.52999877929688,
+            100.66500091552734
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:34.407Z",
+  "fetchedAt": "2026-08-03T17:15:31.648Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 511108200,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777331,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 464.72,
+      "regularMarketPrice": 487.91,
       "fiftyTwoWeekHigh": 553.72,
       "fiftyTwoWeekLow": 349.2,
-      "regularMarketDayHigh": 466.84,
-      "regularMarketDayLow": 449.552,
-      "regularMarketVolume": 56468734,
+      "regularMarketDayHigh": 491.37,
+      "regularMarketDayLow": 475,
+      "regularMarketVolume": 38256172,
       "longName": "Microsoft Corporation",
       "shortName": "Microsoft Corporation",
-      "chartPreviousClose": 381.7,
+      "chartPreviousClose": 389.1,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            394.20001220703125,
-            400.32000732421875,
-            401.25,
-            458.69000244140625,
-            466.8399963378906
-          ],
           "open": [
-            390.0799865722656,
             393.1600036621094,
             393.3999938964844,
             437.8999938964844,
-            450
+            450,
+            476.3949890136719
           ],
           "low": [
-            387.989990234375,
             391.29998779296875,
             388.739990234375,
             432.44000244140625,
-            449.3299865722656
-          ],
-          "close": [
-            389.1000061035156,
-            393.3500061035156,
-            390.5400085449219,
-            451.1000061035156,
-            464.7200012207031
+            449.3299865722656,
+            475.0000915527344
           ],
           "volume": [
-            27856200,
             32367500,
             47209000,
             110160700,
-            60748000
+            60748000,
+            38256172
+          ],
+          "high": [
+            400.32000732421875,
+            401.25,
+            458.69000244140625,
+            466.8399963378906,
+            491.3699951171875
+          ],
+          "close": [
+            393.3500061035156,
+            390.5400085449219,
+            451.1000061035156,
+            464.7200012207031,
+            487.9100036621094
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            389.1000061035156,
             393.3500061035156,
             390.5400085449219,
             451.1000061035156,
-            464.7200012207031
+            464.7200012207031,
+            487.9100036621094
           ]
         }
       ]

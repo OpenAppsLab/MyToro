@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:16:37.679Z",
+  "fetchedAt": "2026-08-03T17:16:35.088Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AWK?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1208957400,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777387,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 134.17,
+      "regularMarketPrice": 132.255,
       "fiftyTwoWeekHigh": 147.87,
       "fiftyTwoWeekLow": 120.57,
-      "regularMarketDayHigh": 136.9,
-      "regularMarketDayLow": 134.14,
-      "regularMarketVolume": 2594701,
+      "regularMarketDayHigh": 137.095,
+      "regularMarketDayLow": 131.77,
+      "regularMarketVolume": 628644,
       "longName": "American Water Works Company, Inc.",
       "shortName": "American Water Works Company, I",
-      "chartPreviousClose": 134.66,
+      "chartPreviousClose": 134.56,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            2541100,
-            4666600,
-            3034900,
-            3580300,
-            3254400
-          ],
-          "open": [
-            133.52999877929688,
-            136.02000427246094,
-            138.60000610351562,
-            140,
-            136.64999389648438
-          ],
-          "close": [
-            134.55999755859375,
-            138.0399932861328,
-            138.08999633789062,
-            136.80999755859375,
-            134.1699981689453
-          ],
           "high": [
-            136.58999633789062,
             140.44000244140625,
             140.3000030517578,
             141.25,
-            136.89999389648438
+            136.89999389648438,
+            137.09500122070312
           ],
           "low": [
-            133.4199981689453,
             135.49000549316406,
             137.07000732421875,
             135.61000061035156,
-            134.1300048828125
+            134.1300048828125,
+            131.77000427246094
+          ],
+          "close": [
+            138.0399932861328,
+            138.08999633789062,
+            136.80999755859375,
+            134.1699981689453,
+            132.2550048828125
+          ],
+          "open": [
+            136.02000427246094,
+            138.60000610351562,
+            140,
+            136.64999389648438,
+            133.74000549316406
+          ],
+          "volume": [
+            4666600,
+            3034900,
+            3580300,
+            3254400,
+            628644
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            134.55999755859375,
             138.0399932861328,
             138.08999633789062,
             136.80999755859375,
-            134.1699981689453
+            134.1699981689453,
+            132.2550048828125
           ]
         }
       ]

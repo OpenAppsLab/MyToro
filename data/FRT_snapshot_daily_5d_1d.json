@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:20.197Z",
+  "fetchedAt": "2026-08-03T17:19:13.949Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FRT?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 105283800,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777409,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 124.09,
+      "regularMarketPrice": 123.25,
       "fiftyTwoWeekHigh": 128.21,
       "fiftyTwoWeekLow": 90.03,
-      "regularMarketDayHigh": 126.18,
-      "regularMarketDayLow": 123.99,
-      "regularMarketVolume": 631155,
+      "regularMarketDayHigh": 124.965,
+      "regularMarketDayLow": 123.13,
+      "regularMarketVolume": 256208,
       "longName": "Federal Realty Investment Trust",
       "shortName": "Federal Realty Investment Trust",
-      "chartPreviousClose": 126.08,
+      "chartPreviousClose": 127.13,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            126.0199966430664,
-            127.80999755859375,
-            126.05999755859375,
-            125.61000061035156,
-            126.18000030517578
-          ],
           "volume": [
-            765900,
             937200,
             897500,
             829700,
-            1242100
-          ],
-          "close": [
-            127.12999725341797,
-            126.12000274658203,
-            125.77999877929688,
-            124.08999633789062,
-            124.08999633789062
+            1242100,
+            256208
           ],
           "high": [
-            127.72000122070312,
             128.2100067138672,
             126.48999786376953,
             125.61000061035156,
-            126.18000030517578
+            126.18000030517578,
+            124.96499633789062
+          ],
+          "open": [
+            127.80999755859375,
+            126.05999755859375,
+            125.61000061035156,
+            126.18000030517578,
+            124.96499633789062
           ],
           "low": [
-            125.73999786376953,
             126,
             125.30000305175781,
             123.16000366210938,
-            123.98999786376953
+            123.98999786376953,
+            123.12999725341797
+          ],
+          "close": [
+            126.12000274658203,
+            125.77999877929688,
+            124.08999633789062,
+            124.08999633789062,
+            123.25
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            127.12999725341797,
             126.12000274658203,
             125.77999877929688,
             124.08999633789062,
-            124.08999633789062
+            124.08999633789062,
+            123.25
           ]
         }
       ]

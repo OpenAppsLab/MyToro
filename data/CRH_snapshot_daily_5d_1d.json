@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:15.191Z",
+  "fetchedAt": "2026-08-03T17:18:10.777Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRH?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 616339800,
-      "regularMarketTime": 1785528002,
+      "regularMarketTime": 1785777488,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 95.01,
+      "regularMarketPrice": 97.195,
       "fiftyTwoWeekHigh": 131.55,
-      "fiftyTwoWeekLow": 94.115,
-      "regularMarketDayHigh": 96.28,
-      "regularMarketDayLow": 94.115,
-      "regularMarketVolume": 7495273,
+      "fiftyTwoWeekLow": 94.12,
+      "regularMarketDayHigh": 97.41,
+      "regularMarketDayLow": 95.35,
+      "regularMarketVolume": 1996520,
       "longName": "CRH plc",
       "shortName": "CRH PLC",
-      "chartPreviousClose": 99.87,
+      "chartPreviousClose": 102.86,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            102.01000213623047,
-            103.91999816894531,
-            102.37999725341797,
-            102.08000183105469,
-            95.11000061035156
-          ],
-          "high": [
-            103.47000122070312,
-            104.27999877929688,
-            102.88999938964844,
-            102.25,
-            96.27999877929688
-          ],
-          "close": [
-            102.86000061035156,
-            103.4000015258789,
-            99.70999908447266,
-            96,
-            95.01000213623047
-          ],
           "volume": [
-            4112100,
             4200200,
             4918800,
             5622800,
-            7495300
+            7495300,
+            1996520
+          ],
+          "high": [
+            104.27999877929688,
+            102.88999938964844,
+            102.25,
+            96.27999877929688,
+            97.41000366210938
+          ],
+          "close": [
+            103.4000015258789,
+            99.70999908447266,
+            96,
+            95.01000213623047,
+            97.19499969482422
+          ],
+          "open": [
+            103.91999816894531,
+            102.37999725341797,
+            102.08000183105469,
+            95.11000061035156,
+            96.44999694824219
           ],
           "low": [
-            100.81999969482422,
             102.13999938964844,
             99.33000183105469,
             95.36000061035156,
-            94.12000274658203
+            94.12000274658203,
+            95.3499984741211
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            102.86000061035156,
             103.4000015258789,
             99.70999908447266,
             96,
-            95.01000213623047
+            95.01000213623047,
+            97.19499969482422
           ]
         }
       ]

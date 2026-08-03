@@ -12,6 +12,16 @@ test('auto orders become eligible 30 minutes after the New York market open', ()
   assert.equal(notYetEligible, false, 'expected the first auto-order to wait until 30 minutes after the New York open');
 });
 
+test('server session status uses New York time for market open/closed state', () => {
+  const { getServerSessionStatus } = server;
+
+  const weekendDate = new Date('2026-08-01T14:00:00.000Z');
+  const status = getServerSessionStatus(weekendDate);
+
+  assert.equal(status.state, 'closed', 'expected a weekend date to resolve to a closed market');
+  assert.equal(status.open, false, 'expected the market to be closed on a weekend');
+});
+
 test('auto orders keep running until the $100 profit target or the $50 daily loss cap is reached', () => {
   const { pendingOrders, canPlaceAutoOrder, getTodayRealizedPnl } = server;
 

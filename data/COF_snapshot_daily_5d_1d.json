@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:29.123Z",
+  "fetchedAt": "2026-08-03T17:17:25.604Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COF?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 784996200,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777444,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 209.01,
+      "regularMarketPrice": 216.75,
       "fiftyTwoWeekHigh": 259.64,
       "fiftyTwoWeekLow": 174.24,
-      "regularMarketDayHigh": 210.84,
-      "regularMarketDayLow": 206.895,
-      "regularMarketVolume": 4019144,
+      "regularMarketDayHigh": 216.92,
+      "regularMarketDayLow": 210,
+      "regularMarketVolume": 1538619,
       "longName": "Capital One Financial Corporation",
       "shortName": "Capital One Financial Corporati",
-      "chartPreviousClose": 202.84,
+      "chartPreviousClose": 207.05,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            205.85000610351562,
-            207.52000427246094,
-            210,
-            208.5500030517578,
-            210
-          ],
-          "high": [
-            208.47999572753906,
-            212.57000732421875,
-            212.4499969482422,
-            210.52999877929688,
-            210.88999938964844
-          ],
-          "close": [
-            207.0500030517578,
-            212.41000366210938,
-            208.7100067138672,
-            210.13999938964844,
-            209.00999450683594
-          ],
-          "volume": [
-            4805600,
-            5263200,
-            4129800,
-            4110300,
-            4019200
-          ],
           "low": [
-            204.97000122070312,
             206.94000244140625,
             207.85000610351562,
             205.13999938964844,
-            206.89999389648438
+            206.89999389648438,
+            210
+          ],
+          "volume": [
+            5263200,
+            4129800,
+            4110300,
+            4019200,
+            1538619
+          ],
+          "high": [
+            212.57000732421875,
+            212.4499969482422,
+            210.52999877929688,
+            210.88999938964844,
+            216.9199981689453
+          ],
+          "close": [
+            212.41000366210938,
+            208.7100067138672,
+            210.13999938964844,
+            209.00999450683594,
+            216.75
+          ],
+          "open": [
+            207.52000427246094,
+            210,
+            208.5500030517578,
+            210,
+            211.83999633789062
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            207.0500030517578,
             212.41000366210938,
             208.7100067138672,
             210.13999938964844,
-            209.00999450683594
+            209.00999450683594,
+            216.75
           ]
         }
       ]

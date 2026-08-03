@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:37.847Z",
+  "fetchedAt": "2026-08-03T17:19:31.500Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GEHC?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1671114600,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777570,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 68.02,
+      "regularMarketPrice": 69.405,
       "fiftyTwoWeekHigh": 89.77,
       "fiftyTwoWeekLow": 58.75,
-      "regularMarketDayHigh": 69.02,
-      "regularMarketDayLow": 67.16,
-      "regularMarketVolume": 4922333,
+      "regularMarketDayHigh": 70.27,
+      "regularMarketDayLow": 68.85,
+      "regularMarketVolume": 1749624,
       "longName": "GE HealthCare Technologies Inc.",
       "shortName": "GE HealthCare Technologies Inc.",
-      "chartPreviousClose": 60.58,
+      "chartPreviousClose": 61.12,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -60,60 +60,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "volume": [
-            6052100,
-            7986800,
-            15269600,
-            7665100,
-            5126700
-          ],
-          "close": [
-            61.119998931884766,
-            64.11000061035156,
-            71.9000015258789,
-            69.94000244140625,
-            68.0199966430664
-          ],
           "open": [
-            62.040000915527344,
             61.400001525878906,
             69.31999969482422,
             71.37000274658203,
-            68.83999633789062
+            68.83999633789062,
+            69.61000061035156
           ],
           "high": [
-            62.70000076293945,
             64.25499725341797,
             72.04000091552734,
             71.81999969482422,
-            69.0199966430664
+            69.0199966430664,
+            70.2699966430664
+          ],
+          "volume": [
+            7986800,
+            15269600,
+            7665100,
+            5126700,
+            1749624
+          ],
+          "close": [
+            64.11000061035156,
+            71.9000015258789,
+            69.94000244140625,
+            68.0199966430664,
+            69.40499877929688
           ],
           "low": [
-            60.93000030517578,
             61.400001525878906,
             68.08000183105469,
             68.26000213623047,
-            67.15499877929688
+            67.15499877929688,
+            68.8499984741211
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            61.119998931884766,
             64.11000061035156,
             71.9000015258789,
             69.94000244140625,
-            68.0199966430664
+            68.0199966430664,
+            69.40499877929688
           ]
         }
       ]

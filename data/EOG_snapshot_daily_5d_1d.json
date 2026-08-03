@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:12.676Z",
+  "fetchedAt": "2026-08-03T17:15:10.254Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EOG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 623511000,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777307,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 148.69,
+      "regularMarketPrice": 146.215,
       "fiftyTwoWeekHigh": 151.87,
       "fiftyTwoWeekLow": 101.59,
-      "regularMarketDayHigh": 148.69,
-      "regularMarketDayLow": 144.96,
-      "regularMarketVolume": 2727209,
+      "regularMarketDayHigh": 147.3,
+      "regularMarketDayLow": 144.078,
+      "regularMarketVolume": 1062020,
       "longName": "EOG Resources, Inc.",
       "shortName": "EOG Resources, Inc.",
-      "chartPreviousClose": 146.39,
+      "chartPreviousClose": 140.31,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            140.30999755859375,
-            139.63999938964844,
-            145.94000244140625,
-            145.50999450683594,
-            148.69000244140625
-          ],
-          "low": [
-            140,
-            138.91000366210938,
-            143.5,
-            142.44000244140625,
-            144.89999389648438
-          ],
-          "volume": [
-            2519900,
-            3292600,
-            2557700,
-            1630300,
-            2914300
-          ],
-          "high": [
-            144.4600067138672,
-            143.25999450683594,
-            146.10000610351562,
-            145.6699981689453,
-            148.69000244140625
-          ],
           "open": [
-            143,
             141.07000732421875,
             144.92999267578125,
             143.72999572753906,
-            146.83999633789062
+            146.83999633789062,
+            145.00999450683594
+          ],
+          "close": [
+            139.63999938964844,
+            145.94000244140625,
+            145.50999450683594,
+            148.69000244140625,
+            146.21499633789062
+          ],
+          "low": [
+            138.91000366210938,
+            143.5,
+            142.44000244140625,
+            144.89999389648438,
+            144.07789611816406
+          ],
+          "high": [
+            143.25999450683594,
+            146.10000610351562,
+            145.6699981689453,
+            148.69000244140625,
+            147.3000030517578
+          ],
+          "volume": [
+            3292600,
+            2557700,
+            1630300,
+            2914300,
+            1062020
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            140.30999755859375,
             139.63999938964844,
             145.94000244140625,
             145.50999450683594,
-            148.69000244140625
+            148.69000244140625,
+            146.21499633789062
           ]
         }
       ]

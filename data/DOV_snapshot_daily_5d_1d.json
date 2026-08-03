@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:18:39.968Z",
+  "fetchedAt": "2026-08-03T17:18:34.854Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DOV?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777503,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 204.62,
+      "regularMarketPrice": 204.855,
       "fiftyTwoWeekHigh": 237.54,
       "fiftyTwoWeekLow": 158.97,
-      "regularMarketDayHigh": 205.68,
-      "regularMarketDayLow": 203.261,
-      "regularMarketVolume": 905475,
+      "regularMarketDayHigh": 206.99,
+      "regularMarketDayLow": 203.49,
+      "regularMarketVolume": 468169,
       "longName": "Dover Corporation",
       "shortName": "Dover Corporation",
-      "chartPreviousClose": 202.2,
+      "chartPreviousClose": 205.85,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "low": [
-            201.99000549316406,
-            201.5399932861328,
-            197.2100067138672,
-            199.75,
-            203.25
-          ],
           "high": [
-            205.97000122070312,
             206.77999877929688,
             201.5800018310547,
             204.47999572753906,
-            205.67999267578125
-          ],
-          "open": [
-            202.64999389648438,
-            206,
-            201.0800018310547,
-            200.75999450683594,
-            205.25999450683594
+            205.67999267578125,
+            206.99000549316406
           ],
           "close": [
-            205.85000610351562,
             203.0800018310547,
             197.99000549316406,
             204.05999755859375,
-            204.6199951171875
+            204.6199951171875,
+            204.85499572753906
           ],
           "volume": [
-            1354900,
             1482000,
             1085700,
             1401500,
-            1353000
+            1353000,
+            468169
+          ],
+          "low": [
+            201.5399932861328,
+            197.2100067138672,
+            199.75,
+            203.25,
+            203.49000549316406
+          ],
+          "open": [
+            206,
+            201.0800018310547,
+            200.75999450683594,
+            205.25999450683594,
+            203.25999450683594
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            205.85000610351562,
             203.0800018310547,
             197.99000549316406,
             204.05999755859375,
-            204.6199951171875
+            204.6199951171875,
+            204.85499572753906
           ]
         }
       ]

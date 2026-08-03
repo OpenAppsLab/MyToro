@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:17:44.552Z",
+  "fetchedAt": "2026-08-03T17:17:40.883Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CHTR?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1262701800,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777454,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 144.98,
+      "regularMarketPrice": 143.99,
       "fiftyTwoWeekHigh": 285.82,
       "fiftyTwoWeekLow": 111.55,
-      "regularMarketDayHigh": 146.58,
-      "regularMarketDayLow": 138.915,
-      "regularMarketVolume": 2826347,
+      "regularMarketDayHigh": 148.7,
+      "regularMarketDayLow": 142.34,
+      "regularMarketVolume": 1118560,
       "longName": "Charter Communications, Inc.",
       "shortName": "Charter Communications, Inc.",
-      "chartPreviousClose": 123.31,
+      "chartPreviousClose": 131.61,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "end": 1785763800,
+          "start": 1785744000,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "end": 1785787200,
+          "start": 1785763800,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "end": 1785801600,
+          "start": 1785787200,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            132.57000732421875,
-            141.16000366210938,
-            146.85000610351562,
-            142.08999633789062,
-            146.5800018310547
-          ],
-          "volume": [
-            4126400,
-            3812000,
-            4266200,
-            3387200,
-            2826900
-          ],
-          "low": [
-            123.83000183105469,
-            132.1999969482422,
-            136.5,
-            136.6699981689453,
-            138.8000030517578
-          ],
-          "open": [
-            125.48999786376953,
-            133.5800018310547,
-            138.02000427246094,
-            140,
-            140.5
-          ],
           "close": [
-            131.61000061035156,
             139.97000122070312,
             145.1999969482422,
             142,
-            144.97999572753906
+            144.97999572753906,
+            143.99000549316406
+          ],
+          "open": [
+            133.5800018310547,
+            138.02000427246094,
+            140,
+            140.5,
+            147
+          ],
+          "high": [
+            141.16000366210938,
+            146.85000610351562,
+            142.08999633789062,
+            146.5800018310547,
+            148.6999969482422
+          ],
+          "low": [
+            132.1999969482422,
+            136.5,
+            136.6699981689453,
+            138.8000030517578,
+            142.33999633789062
+          ],
+          "volume": [
+            3812000,
+            4266200,
+            3387200,
+            2826900,
+            1118560
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            131.61000061035156,
             139.97000122070312,
             145.1999969482422,
             142,
-            144.97999572753906
+            144.97999572753906,
+            143.99000549316406
           ]
         }
       ]

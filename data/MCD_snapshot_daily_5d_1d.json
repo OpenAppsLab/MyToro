@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:15:29.980Z",
+  "fetchedAt": "2026-08-03T17:15:27.143Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -110197800,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777325,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 270.64,
+      "regularMarketPrice": 268.345,
       "fiftyTwoWeekHigh": 341.75,
       "fiftyTwoWeekLow": 260.96,
-      "regularMarketDayHigh": 271.07,
-      "regularMarketDayLow": 265.52,
-      "regularMarketVolume": 4411629,
+      "regularMarketDayHigh": 276.33,
+      "regularMarketDayLow": 267.888,
+      "regularMarketVolume": 2663304,
       "longName": "McDonald's Corporation",
       "shortName": "McDonald's Corporation",
-      "chartPreviousClose": 264.76,
+      "chartPreviousClose": 270.67,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "open": [
-            267.5,
-            276.2099914550781,
-            272.6300048828125,
-            270.489990234375,
-            267.1199951171875
-          ],
-          "volume": [
-            4874400,
-            5261500,
-            3650700,
-            4040200,
-            4962900
-          ],
-          "close": [
-            270.6700134277344,
-            273.0199890136719,
-            271.5199890136719,
-            268.44000244140625,
-            270.6400146484375
-          ],
-          "high": [
-            271.1700134277344,
-            278.70001220703125,
-            273.0299987792969,
-            271.79998779296875,
-            271.07000732421875
-          ],
           "low": [
-            266.79998779296875,
             271.6300048828125,
             270.25,
             266.30999755859375,
-            265.5199890136719
+            265.5199890136719,
+            267.8883972167969
+          ],
+          "high": [
+            278.70001220703125,
+            273.0299987792969,
+            271.79998779296875,
+            271.07000732421875,
+            276.3299865722656
+          ],
+          "close": [
+            273.0199890136719,
+            271.5199890136719,
+            268.44000244140625,
+            270.6400146484375,
+            268.3450012207031
+          ],
+          "open": [
+            276.2099914550781,
+            272.6300048828125,
+            270.489990234375,
+            267.1199951171875,
+            275.7099914550781
+          ],
+          "volume": [
+            5261500,
+            3650700,
+            4040200,
+            4962900,
+            2663304
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            270.6700134277344,
             273.0199890136719,
             271.5199890136719,
             268.44000244140625,
-            270.6400146484375
+            270.6400146484375,
+            268.3450012207031
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:16.859Z",
+  "fetchedAt": "2026-08-03T17:19:10.592Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FDS?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 835968600,
-      "regularMarketTime": 1785528003,
+      "regularMarketTime": 1785777482,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 263.2,
+      "regularMarketPrice": 270.515,
       "fiftyTwoWeekHigh": 398.5,
       "fiftyTwoWeekLow": 185,
-      "regularMarketDayHigh": 264.37,
-      "regularMarketDayLow": 254.99,
-      "regularMarketVolume": 464838,
+      "regularMarketDayHigh": 276.51,
+      "regularMarketDayLow": 266.39,
+      "regularMarketVolume": 172316,
       "longName": "FactSet Research Systems Inc.",
       "shortName": "FactSet Research Systems Inc.",
-      "chartPreviousClose": 254.36,
+      "chartPreviousClose": 265.9,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785484800,
-          "end": 1785504600,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785504600,
-          "end": 1785528000,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785528000,
-          "end": 1785542400,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "high": [
-            270.30999755859375,
-            287.8900146484375,
-            295.5799865722656,
-            279.3900146484375,
-            264.3699951171875
-          ],
           "open": [
-            260.2200012207031,
             269.489990234375,
             283.6600036621094,
             274.17999267578125,
-            261.2099914550781
+            261.2099914550781,
+            269.989990234375
           ],
           "close": [
-            265.8999938964844,
             283.8699951171875,
             282.0400085449219,
             263.0299987792969,
-            263.20001220703125
-          ],
-          "low": [
-            256.2699890136719,
-            269.489990234375,
-            281.3500061035156,
-            261.8900146484375,
-            254.99000549316406
+            263.20001220703125,
+            270.5150146484375
           ],
           "volume": [
-            1759200,
             1642600,
             1298800,
             1148400,
-            674300
+            674300,
+            172316
+          ],
+          "high": [
+            287.8900146484375,
+            295.5799865722656,
+            279.3900146484375,
+            264.3699951171875,
+            276.510009765625
+          ],
+          "low": [
+            269.489990234375,
+            281.3500061035156,
+            261.8900146484375,
+            254.99000549316406,
+            266.3900146484375
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            265.8999938964844,
             283.8699951171875,
             282.0400085449219,
             263.0299987792969,
-            263.20001220703125
+            263.20001220703125,
+            270.5150146484375
           ]
         }
       ]

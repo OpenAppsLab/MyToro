@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-01T14:19:07.781Z",
+  "fetchedAt": "2026-08-03T17:19:01.848Z",
   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EVRG?interval=1d&range=5d",
   "result": {
     "meta": {
@@ -9,38 +9,38 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785528001,
+      "regularMarketTime": 1785777511,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 83.01,
+      "regularMarketPrice": 82.96,
       "fiftyTwoWeekHigh": 88.62,
       "fiftyTwoWeekLow": 70.42,
-      "regularMarketDayHigh": 83.575,
-      "regularMarketDayLow": 82.52,
-      "regularMarketVolume": 2551258,
+      "regularMarketDayHigh": 84.18,
+      "regularMarketDayLow": 82.455,
+      "regularMarketVolume": 545158,
       "longName": "Evergy, Inc.",
       "shortName": "Evergy, Inc.",
-      "chartPreviousClose": 87.18,
+      "chartPreviousClose": 85.84,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785504600,
-          "start": 1785484800,
+          "start": 1785744000,
+          "end": 1785763800,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785528000,
-          "start": 1785504600,
+          "start": 1785763800,
+          "end": 1785787200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785542400,
-          "start": 1785528000,
+          "start": 1785787200,
+          "end": 1785801600,
           "gmtoffset": -14400
         }
       },
@@ -61,60 +61,60 @@
       ]
     },
     "timestamp": [
-      1785159000,
       1785245400,
       1785331800,
       1785418200,
-      1785504600
+      1785504600,
+      1785763800
     ],
     "indicators": {
       "quote": [
         {
-          "close": [
-            85.83999633789062,
-            85.66000366210938,
-            84,
-            83.25,
-            83.01000213623047
-          ],
           "low": [
-            85.66999816894531,
             85.63999938964844,
             83.44999694824219,
             82.62000274658203,
-            82.5199966430664
-          ],
-          "volume": [
-            1415800,
-            1607900,
-            2029100,
-            1677400,
-            2840300
+            82.5199966430664,
+            82.45500183105469
           ],
           "high": [
-            87.29000091552734,
             87.43000030517578,
             86.13999938964844,
             84.37000274658203,
-            83.58000183105469
+            83.58000183105469,
+            84.18000030517578
+          ],
+          "close": [
+            85.66000366210938,
+            84,
+            83.25,
+            83.01000213623047,
+            82.95999908447266
           ],
           "open": [
-            87.01000213623047,
             86.5199966430664,
             85.93000030517578,
             84.0999984741211,
-            83.05999755859375
+            83.05999755859375,
+            83.01000213623047
+          ],
+          "volume": [
+            1607900,
+            2029100,
+            1677400,
+            2840300,
+            545158
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            85.83999633789062,
             85.66000366210938,
             84,
             83.25,
-            83.01000213623047
+            83.01000213623047,
+            82.95999908447266
           ]
         }
       ]

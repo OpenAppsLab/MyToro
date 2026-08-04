@@ -3284,18 +3284,21 @@ function evaluateOrderEligibility(candidate = {}, options = {}) {
     reasons.push('Market is not open; execution will use the latest available intraday quote once the session opens.');
   }
 
-  if (probability < 0.55) {
+  // For manual review orders, relax strict signal validation
+  const isManualReview = requireManualReview === true;
+
+  if (!isManualReview && probability < 0.55) {
     riskFlags.push('probability-threshold');
     reasons.push('Rejected by risk rules: probability is below the 55% execution threshold.');
   }
 
   const runtimeThreshold = getRuntimeThreshold();
-  if (combinedScore < runtimeThreshold) {
+  if (!isManualReview && combinedScore < runtimeThreshold) {
     riskFlags.push('combined-threshold');
     reasons.push(`Rejected by risk rules: the model score (${combinedScore.toFixed(2)}) is below the minimum combined threshold (${runtimeThreshold.toFixed(2)}).`);
   }
 
-  if (requiredMovePct > 0 && expectedMovePct < requiredMovePct * 0.75) {
+  if (!isManualReview && requiredMovePct > 0 && expectedMovePct < requiredMovePct * 0.75) {
     riskFlags.push('target-gap');
     reasons.push(`Rejected by risk rules: expected move ${expectedMovePct.toFixed(1)}% is below the ${requiredMovePct.toFixed(1)}% target requirement.`);
   }

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:39.384Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ADI?interval=1d&range=5d",
+  "symbol": "ADI",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ADI?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:24.628Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 367.4100036621094,
+    "firstOpen": 366.44000244140625,
+    "dayMovePct": -100,
+    "gapPct": -0.2640105634127458,
+    "currentVolume": 3736722,
+    "averageVolume": 4827664.4,
+    "volumeSpikeRatio": 0.7740227344717665,
+    "morningHigh": 376.7300109863281,
+    "morningLow": 352.7300109863281,
+    "morningRangePct": 6.80407089061958,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.86009302491369,
+    "intradayVolatility": 43.45604176686025,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777370,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 360.5,
+      "regularMarketPrice": 361.88,
       "fiftyTwoWeekHigh": 445.91,
       "fiftyTwoWeekLow": 218.37,
       "regularMarketDayHigh": 365.73,
       "regularMarketDayLow": 353.11,
-      "regularMarketVolume": 1647309,
+      "regularMarketVolume": 3736722,
       "longName": "Analog Devices, Inc.",
       "shortName": "Analog Devices, Inc.",
       "chartPreviousClose": 371.89,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -75,21 +97,21 @@
             353.3699951171875,
             366.6700134277344,
             367.4100036621094,
-            360.5
-          ],
-          "high": [
-            373.2799987792969,
-            368.94000244140625,
-            368.4200134277344,
-            376.7300109863281,
-            365.7300109863281
+            null
           ],
           "volume": [
             5046600,
             5473900,
             6365800,
-            3514200,
-            1647309
+            3515300,
+            3736722
+          ],
+          "low": [
+            363.1499938964844,
+            352.7300109863281,
+            361.2099914550781,
+            362.8599853515625,
+            353.1099853515625
           ],
           "open": [
             366.44000244140625,
@@ -98,12 +120,12 @@
             374.1600036621094,
             363
           ],
-          "low": [
-            363.1499938964844,
-            352.7300109863281,
-            361.2099914550781,
-            362.8599853515625,
-            353.1099853515625
+          "high": [
+            373.2799987792969,
+            368.94000244140625,
+            368.4200134277344,
+            376.7300109863281,
+            365.7300109863281
           ]
         }
       ],
@@ -114,7 +136,7 @@
             353.3699951171875,
             366.6700134277344,
             367.4100036621094,
-            360.5
+            null
           ]
         }
       ]

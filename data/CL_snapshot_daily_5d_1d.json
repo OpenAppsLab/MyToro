@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:57.466Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CL?interval=1d&range=5d",
+  "symbol": "CL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:59.963Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 91.30000305175781,
+    "firstOpen": 94.11000061035156,
+    "dayMovePct": -100,
+    "gapPct": 3.077762830961536,
+    "currentVolume": 5360045,
+    "averageVolume": 5531269,
+    "volumeSpikeRatio": 0.9690443549210859,
+    "morningHigh": 95.45999908447266,
+    "morningLow": 89.36499786376953,
+    "morningRangePct": 6.820345063952795,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.382383530777496,
+    "intradayVolatility": 43.092355133506636,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 105197400,
-      "regularMarketTime": 1785777474,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 90.75,
+      "regularMarketPrice": 89.88,
       "fiftyTwoWeekHigh": 99.33,
       "fiftyTwoWeekLow": 74.55,
       "regularMarketDayHigh": 93.64,
-      "regularMarketDayLow": 90.7,
-      "regularMarketVolume": 2204793,
+      "regularMarketDayLow": 89.365,
+      "regularMarketVolume": 5360045,
       "longName": "Colgate-Palmolive Company",
       "shortName": "Colgate-Palmolive Company",
       "chartPreviousClose": 91.98,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "low": [
+            92.69999694824219,
+            89.91000366210938,
+            90.7300033569336,
+            89.5999984741211,
+            89.36499786376953
+          ],
           "open": [
             94.11000061035156,
             90.94000244140625,
@@ -77,33 +106,26 @@
             90.8499984741211,
             92.38999938964844
           ],
+          "close": [
+            92.7300033569336,
+            93.48999786376953,
+            91.5999984741211,
+            91.30000305175781,
+            null
+          ],
+          "volume": [
+            5089700,
+            5866300,
+            4678800,
+            6661500,
+            5360045
+          ],
           "high": [
             95.45999908447266,
             93.81999969482422,
             92.88999938964844,
             91.68000030517578,
             93.63999938964844
-          ],
-          "low": [
-            92.69999694824219,
-            89.91000366210938,
-            90.7300033569336,
-            89.5999984741211,
-            90.69999694824219
-          ],
-          "volume": [
-            5089700,
-            5866300,
-            4678800,
-            6660200,
-            2204793
-          ],
-          "close": [
-            92.7300033569336,
-            93.48999786376953,
-            91.5999984741211,
-            91.30000305175781,
-            90.75
           ]
         }
       ],
@@ -114,7 +136,7 @@
             93.48999786376953,
             91.5999984741211,
             91.30000305175781,
-            90.75
+            null
           ]
         }
       ]

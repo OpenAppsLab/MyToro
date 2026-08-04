@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:47.018Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HAS?interval=1d&range=5d",
+  "symbol": "HAS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/HAS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:14.698Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 93.94000244140625,
+    "firstOpen": 92,
+    "dayMovePct": -100,
+    "gapPct": -2.0651505120156872,
+    "currentVolume": 1744802,
+    "averageVolume": 2376160.4,
+    "volumeSpikeRatio": 0.7342947050207553,
+    "morningHigh": 97,
+    "morningLow": 91.37000274658203,
+    "morningRangePct": 6.161756686199263,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.62776594664026,
+    "intradayVolatility": 42.93945478204752,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777580,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 93.11,
+      "regularMarketPrice": 91.47,
       "fiftyTwoWeekHigh": 106.98,
       "fiftyTwoWeekLow": 69.5,
       "regularMarketDayHigh": 95.125,
-      "regularMarketDayLow": 92.91,
-      "regularMarketVolume": 601064,
+      "regularMarketDayLow": 91.37,
+      "regularMarketVolume": 1744802,
       "longName": "Hasbro, Inc.",
       "shortName": "Hasbro, Inc.",
       "chartPreviousClose": 90.61,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,33 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            92,
-            95.63999938964844,
-            94.48999786376953,
-            94.97000122070312,
-            94.2300033569336
-          ],
           "close": [
             96.33999633789062,
             95.16999816894531,
             94.52999877929688,
             93.94000244140625,
-            93.11000061035156
-          ],
-          "volume": [
-            4063200,
-            2000700,
-            1263500,
-            2808600,
-            601064
+            null
           ],
           "low": [
             91.4000015258789,
             95.06999969482422,
             93.04000091552734,
             93.68000030517578,
-            92.91000366210938
+            91.37000274658203
           ],
           "high": [
             96.44000244140625,
@@ -104,6 +112,20 @@
             95.22000122070312,
             95.3499984741211,
             95.125
+          ],
+          "volume": [
+            4063200,
+            2000700,
+            1263500,
+            2808600,
+            1744802
+          ],
+          "open": [
+            92,
+            95.63999938964844,
+            94.48999786376953,
+            94.97000122070312,
+            94.2300033569336
           ]
         }
       ],
@@ -114,7 +136,7 @@
             95.16999816894531,
             94.52999877929688,
             93.94000244140625,
-            93.11000061035156
+            null
           ]
         }
       ]

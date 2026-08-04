@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:59.932Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EL?interval=1d&range=2mo",
+  "symbol": "EL",
+  "range": "2mo",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EL?interval=1d&range=2mo",
+  "fetchedAt": "2026-08-04T09:56:16.987Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 83.9000015258789,
+    "firstOpen": 82.97000122070312,
+    "dayMovePct": -100,
+    "gapPct": -1.10846279888198,
+    "currentVolume": 1885574,
+    "averageVolume": 2908199.3658536584,
+    "volumeSpikeRatio": 0.6483647655450602,
+    "morningHigh": 91.54000091552734,
+    "morningLow": 81.4000015258789,
+    "morningRangePct": 12.457001473672825,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -2.449885966968524,
+    "intradayVolatility": 15.748317699593635,
+    "minutesSinceOpen": 86400,
+    "timestampsCount": 41
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 816618600,
-      "regularMarketTime": 1785777512,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 83.98,
+      "regularMarketPrice": 84.68,
       "fiftyTwoWeekHigh": 121.64,
       "fiftyTwoWeekLow": 66.22,
       "regularMarketDayHigh": 87.5,
       "regularMarketDayLow": 83.81,
-      "regularMarketVolume": 721844,
+      "regularMarketVolume": 1885574,
       "longName": "The Estée Lauder Companies Inc.",
       "shortName": "Estee Lauder Companies, Inc. (T",
       "chartPreviousClose": 82.05,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -61,7 +83,6 @@
       ]
     },
     "timestamp": [
-      1780493400,
       1780579800,
       1780666200,
       1780925400,
@@ -107,8 +128,50 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            4418000,
+            3165600,
+            2958200,
+            3847500,
+            4072000,
+            2968100,
+            2798100,
+            3554600,
+            4093300,
+            3784500,
+            5699600,
+            5149000,
+            3247500,
+            3135800,
+            2150300,
+            5107900,
+            3795100,
+            3084300,
+            3663500,
+            3259900,
+            2844200,
+            2293200,
+            3333200,
+            1736000,
+            1462400,
+            1793800,
+            1952200,
+            2414400,
+            2007000,
+            2448000,
+            2371000,
+            1771600,
+            1820700,
+            2784700,
+            1430400,
+            1756600,
+            2295200,
+            2482400,
+            2552800,
+            1848000,
+            1885574
+          ],
           "high": [
-            83.5,
             84.5,
             83.9800033569336,
             85.22000122070312,
@@ -152,7 +215,6 @@
             87.5
           ],
           "low": [
-            81.31999969482422,
             81.4000015258789,
             82.30999755859375,
             82.69999694824219,
@@ -195,52 +257,7 @@
             83.12999725341797,
             83.80999755859375
           ],
-          "volume": [
-            5990900,
-            4418000,
-            3165600,
-            2958200,
-            3847500,
-            4072000,
-            2968100,
-            2798100,
-            3554600,
-            4093300,
-            3784500,
-            5699600,
-            5149000,
-            3247500,
-            3135800,
-            2150300,
-            5107900,
-            3795100,
-            3084300,
-            3663500,
-            3259900,
-            2844200,
-            2293200,
-            3333200,
-            1736000,
-            1462400,
-            1793800,
-            1952200,
-            2414400,
-            2007000,
-            2448000,
-            2371000,
-            1771600,
-            1820700,
-            2784700,
-            1430400,
-            1756600,
-            2295200,
-            2482400,
-            2552800,
-            1847500,
-            721844
-          ],
           "close": [
-            82.05000305175781,
             82.9000015258789,
             83.48999786376953,
             84.63999938964844,
@@ -281,10 +298,9 @@
             84.12999725341797,
             84.87999725341797,
             83.9000015258789,
-            83.9800033569336
+            null
           ],
           "open": [
-            83.04000091552734,
             82.97000122070312,
             82.6500015258789,
             83.83000183105469,
@@ -332,7 +348,6 @@
       "adjclose": [
         {
           "adjclose": [
-            82.05000305175781,
             82.9000015258789,
             83.48999786376953,
             84.63999938964844,
@@ -373,7 +388,7 @@
             84.12999725341797,
             84.87999725341797,
             83.9000015258789,
-            83.9800033569336
+            null
           ]
         }
       ]

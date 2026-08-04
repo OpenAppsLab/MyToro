@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:43.858Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ECL?interval=1d&range=5d",
+  "symbol": "ECL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ECL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:57.454Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 277.6300048828125,
+    "firstOpen": 278,
+    "dayMovePct": -100,
+    "gapPct": 0.1332691390268407,
+    "currentVolume": 1540021,
+    "averageVolume": 1552784.2,
+    "volumeSpikeRatio": 0.9917804418669381,
+    "morningHigh": 285.67999267578125,
+    "morningLow": 272.7900085449219,
+    "morningRangePct": 4.725240561271036,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.46655061843628,
+    "intradayVolatility": 43.03671624390981,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785777523,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 277.62,
+      "regularMarketPrice": 279.43,
       "fiftyTwoWeekHigh": 309.27,
       "fiftyTwoWeekLow": 243.15,
       "regularMarketDayHigh": 281.86,
       "regularMarketDayLow": 275.72,
-      "regularMarketVolume": 521890,
+      "regularMarketVolume": 1540021,
       "longName": "Ecolab Inc.",
       "shortName": "Ecolab Inc.",
       "chartPreviousClose": 271.38,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            278,
-            285.67999267578125,
-            282,
-            274.3999938964844,
-            280.25
-          ],
-          "close": [
-            282.8999938964844,
-            283.70001220703125,
-            279.3399963378906,
-            277.6300048828125,
-            277.6199951171875
-          ],
           "volume": [
             1889600,
             1536300,
             1141400,
-            1656000,
-            521890
+            1656600,
+            1540021
           ],
           "high": [
             284.989990234375,
@@ -98,12 +106,26 @@
             279.1700134277344,
             281.8599853515625
           ],
+          "close": [
+            282.8999938964844,
+            283.70001220703125,
+            279.3399963378906,
+            277.6300048828125,
+            null
+          ],
           "low": [
             275.2099914550781,
             278.8800048828125,
             275.75,
             272.7900085449219,
             275.7200012207031
+          ],
+          "open": [
+            278,
+            285.67999267578125,
+            282,
+            274.3999938964844,
+            280.25
           ]
         }
       ],
@@ -114,7 +136,7 @@
             283.70001220703125,
             279.3399963378906,
             277.6300048828125,
-            277.6199951171875
+            null
           ]
         }
       ]

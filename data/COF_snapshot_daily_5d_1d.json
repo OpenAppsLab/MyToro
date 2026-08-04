@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:25.604Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/COF?interval=1d&range=5d",
+  "symbol": "COF",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/COF?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:21.021Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 209.00999450683594,
+    "firstOpen": 207.52000427246094,
+    "dayMovePct": -100,
+    "gapPct": -0.7128798973899154,
+    "currentVolume": 4225874,
+    "averageVolume": 4349894.8,
+    "volumeSpikeRatio": 0.9714887817516875,
+    "morningHigh": 218.9600067138672,
+    "morningLow": 205.13999938964844,
+    "morningRangePct": 6.736866220794246,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.398623532661627,
+    "intradayVolatility": 43.0796719898514,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 784996200,
-      "regularMarketTime": 1785777444,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 216.75,
+      "regularMarketPrice": 217.68,
       "fiftyTwoWeekHigh": 259.64,
       "fiftyTwoWeekLow": 174.24,
-      "regularMarketDayHigh": 216.92,
+      "regularMarketDayHigh": 218.96,
       "regularMarketDayLow": 210,
-      "regularMarketVolume": 1538619,
+      "regularMarketVolume": 4225874,
       "longName": "Capital One Financial Corporation",
       "shortName": "Capital One Financial Corporati",
       "chartPreviousClose": 207.05,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,27 @@
     "indicators": {
       "quote": [
         {
+          "open": [
+            207.52000427246094,
+            210,
+            208.5500030517578,
+            210,
+            211.83999633789062
+          ],
+          "close": [
+            212.41000366210938,
+            208.7100067138672,
+            210.13999938964844,
+            209.00999450683594,
+            null
+          ],
+          "volume": [
+            5263200,
+            4129800,
+            4110300,
+            4020300,
+            4225874
+          ],
           "low": [
             206.94000244140625,
             207.85000610351562,
@@ -77,33 +120,12 @@
             206.89999389648438,
             210
           ],
-          "volume": [
-            5263200,
-            4129800,
-            4110300,
-            4019200,
-            1538619
-          ],
           "high": [
             212.57000732421875,
             212.4499969482422,
             210.52999877929688,
             210.88999938964844,
-            216.9199981689453
-          ],
-          "close": [
-            212.41000366210938,
-            208.7100067138672,
-            210.13999938964844,
-            209.00999450683594,
-            216.75
-          ],
-          "open": [
-            207.52000427246094,
-            210,
-            208.5500030517578,
-            210,
-            211.83999633789062
+            218.9600067138672
           ]
         }
       ],
@@ -114,7 +136,7 @@
             208.7100067138672,
             210.13999938964844,
             209.00999450683594,
-            216.75
+            null
           ]
         }
       ]

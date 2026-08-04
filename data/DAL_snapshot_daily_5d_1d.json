@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:23.907Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DAL?interval=1d&range=5d",
+  "symbol": "DAL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DAL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:33.245Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 87.44000244140625,
+    "firstOpen": 86.91000366210938,
+    "dayMovePct": -100,
+    "gapPct": -0.6061285046875753,
+    "currentVolume": 4572224,
+    "averageVolume": 5547304.8,
+    "volumeSpikeRatio": 0.8242244053364438,
+    "morningHigh": 91.93000030517578,
+    "morningLow": 86.12000274658203,
+    "morningRangePct": 6.746397321526258,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.519044051630082,
+    "intradayVolatility": 43.0591078049654,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1178199000,
-      "regularMarketTime": 1785777490,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 90.805,
+      "regularMarketPrice": 91.59,
       "fiftyTwoWeekHigh": 95.68,
       "fiftyTwoWeekLow": 51.23,
       "regularMarketDayHigh": 91.93,
       "regularMarketDayLow": 89.2,
-      "regularMarketVolume": 2837791,
+      "regularMarketVolume": 4572224,
       "longName": "Delta Air Lines, Inc.",
       "shortName": "Delta Air Lines, Inc.",
       "chartPreviousClose": 86.67,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,27 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            89.37000274658203,
-            86.25,
-            88.58999633789062,
-            87.44000244140625,
-            90.80500030517578
-          ],
-          "low": [
-            86.2300033569336,
-            86.12000274658203,
-            86.19999694824219,
-            87.31999969482422,
-            89.19999694824219
-          ],
-          "volume": [
-            7214700,
-            5459800,
-            5717300,
-            4768500,
-            2837791
-          ],
           "open": [
             86.91000366210938,
             87.12999725341797,
@@ -104,6 +105,27 @@
             89.26000213623047,
             88.58000183105469,
             91.93000030517578
+          ],
+          "volume": [
+            7214700,
+            5459800,
+            5717300,
+            4772500,
+            4572224
+          ],
+          "low": [
+            86.2300033569336,
+            86.12000274658203,
+            86.19999694824219,
+            87.31999969482422,
+            89.19999694824219
+          ],
+          "close": [
+            89.37000274658203,
+            86.25,
+            88.58999633789062,
+            87.44000244140625,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             86.25,
             88.58999633789062,
             87.44000244140625,
-            90.80500030517578
+            null
           ]
         }
       ]

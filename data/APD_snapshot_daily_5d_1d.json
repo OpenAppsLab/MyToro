@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:17.222Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/APD?interval=1d&range=5d",
+  "symbol": "APD",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/APD?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:56.469Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 294.8900146484375,
+    "firstOpen": 293.1099853515625,
+    "dayMovePct": -100,
+    "gapPct": -0.6036248121175343,
+    "currentVolume": 1293509,
+    "averageVolume": 1395961.8,
+    "volumeSpikeRatio": 0.9266077338219426,
+    "morningHigh": 311.0799865722656,
+    "morningLow": 290.2200012207031,
+    "morningRangePct": 7.187645670120145,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.817192941347543,
+    "intradayVolatility": 43.427676833978836,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777374,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 290.57,
+      "regularMarketPrice": 292.94,
       "fiftyTwoWeekHigh": 314.87,
       "fiftyTwoWeekLow": 229.11,
       "regularMarketDayHigh": 296.005,
-      "regularMarketDayLow": 290.345,
-      "regularMarketVolume": 405728,
+      "regularMarketDayLow": 290.22,
+      "regularMarketVolume": 1293509,
       "longName": "Air Products and Chemicals, Inc.",
       "shortName": "Air Products and Chemicals, Inc",
       "chartPreviousClose": 292.58,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -82,21 +104,14 @@
             291.5400085449219,
             297.3500061035156,
             291.3800048828125,
-            290.3450012207031
+            290.2200012207031
           ],
           "volume": [
             1539100,
             1068900,
             1614400,
             1463900,
-            405728
-          ],
-          "close": [
-            292.8500061035156,
-            294.2699890136719,
-            300.20001220703125,
-            294.8900146484375,
-            290.57000732421875
+            1293509
           ],
           "open": [
             293.1099853515625,
@@ -104,6 +119,13 @@
             308.5799865722656,
             299.57000732421875,
             295.1400146484375
+          ],
+          "close": [
+            292.8500061035156,
+            294.2699890136719,
+            300.20001220703125,
+            294.8900146484375,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             294.2699890136719,
             300.20001220703125,
             294.8900146484375,
-            290.57000732421875
+            null
           ]
         }
       ]

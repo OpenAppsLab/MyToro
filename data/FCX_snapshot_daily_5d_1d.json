@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:27.090Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FCX?interval=1d&range=5d",
+  "symbol": "FCX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FCX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:50.322Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 62.630001068115234,
+    "firstOpen": 61.459999084472656,
+    "dayMovePct": -100,
+    "gapPct": -1.8681174575905013,
+    "currentVolume": 7298937,
+    "averageVolume": 13839947.4,
+    "volumeSpikeRatio": 0.5273818453963199,
+    "morningHigh": 63.744998931884766,
+    "morningLow": 58.189998626708984,
+    "morningRangePct": 9.546314549363226,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.550667361550726,
+    "intradayVolatility": 43.6775915337887,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 805383000,
-      "regularMarketTime": 1785777567,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 63.01,
+      "regularMarketPrice": 63.64,
       "fiftyTwoWeekHigh": 72.28,
       "fiftyTwoWeekLow": 35.15,
-      "regularMarketDayHigh": 63.52,
+      "regularMarketDayHigh": 63.745,
       "regularMarketDayLow": 61.27,
-      "regularMarketVolume": 4749693,
+      "regularMarketVolume": 7298937,
       "longName": "Freeport-McMoRan Inc.",
       "shortName": "Freeport-McMoRan, Inc.",
       "chartPreviousClose": 62.72,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,27 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            61.63999938964844,
-            59.9900016784668,
-            63.439998626708984,
-            62.630001068115234,
-            63.0099983215332
-          ],
-          "high": [
-            62.56999969482422,
-            61.560001373291016,
-            63.63999938964844,
-            63.650001525878906,
-            63.52000045776367
-          ],
-          "volume": [
-            13592000,
-            22668800,
-            14850400,
-            10785800,
-            4749693
-          ],
           "open": [
             61.459999084472656,
             60.79999923706055,
@@ -98,12 +99,33 @@
             62.599998474121094,
             62.06999969482422
           ],
+          "high": [
+            62.56999969482422,
+            61.560001373291016,
+            63.63999938964844,
+            63.650001525878906,
+            63.744998931884766
+          ],
           "low": [
             59.93000030517578,
             58.189998626708984,
             61.7400016784668,
             60.970001220703125,
             61.27000045776367
+          ],
+          "volume": [
+            13592000,
+            22668800,
+            14850400,
+            10789600,
+            7298937
+          ],
+          "close": [
+            61.63999938964844,
+            59.9900016784668,
+            63.439998626708984,
+            62.630001068115234,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             59.9900016784668,
             63.439998626708984,
             62.630001068115234,
-            63.0099983215332
+            null
           ]
         }
       ]

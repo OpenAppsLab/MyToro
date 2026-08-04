@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:36.900Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GIS?interval=1d&range=5d",
+  "symbol": "GIS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GIS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:02.528Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 35.75,
+    "firstOpen": 37.290000915527344,
+    "dayMovePct": -100,
+    "gapPct": 4.307694868607954,
+    "currentVolume": 7163485,
+    "averageVolume": 8342917,
+    "volumeSpikeRatio": 0.8586307403034215,
+    "morningHigh": 38.52000045776367,
+    "morningLow": 35.720001220703125,
+    "morningRangePct": 7.838743396900227,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.269554368574475,
+    "intradayVolatility": 42.600434682042355,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777567,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 35.88,
+      "regularMarketPrice": 36,
       "fiftyTwoWeekHigh": 51.33,
       "fiftyTwoWeekLow": 31.75,
       "regularMarketDayHigh": 37.13,
-      "regularMarketDayLow": 35.775,
-      "regularMarketVolume": 4350239,
+      "regularMarketDayLow": 35.765,
+      "regularMarketVolume": 7163485,
       "longName": "General Mills, Inc.",
       "shortName": "General Mills, Inc.",
       "chartPreviousClose": 36.61,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            9259200,
-            7431200,
-            8511300,
-            9347200,
-            4350239
+          "open": [
+            37.290000915527344,
+            37.5,
+            36.970001220703125,
+            36.25,
+            36.41999816894531
           ],
           "high": [
             38.52000045776367,
@@ -89,21 +111,21 @@
             37.91999816894531,
             36.41999816894531,
             35.75,
-            35.880001068115234
+            null
           ],
-          "open": [
-            37.290000915527344,
-            37.5,
-            36.970001220703125,
-            36.25,
-            36.41999816894531
+          "volume": [
+            9259200,
+            7431200,
+            8511300,
+            9349400,
+            7163485
           ],
           "low": [
             37.18000030517578,
             37.41999816894531,
             35.939998626708984,
             35.720001220703125,
-            35.775001525878906
+            35.76499938964844
           ]
         }
       ],
@@ -114,7 +136,7 @@
             37.91999816894531,
             36.41999816894531,
             35.75,
-            35.880001068115234
+            null
           ]
         }
       ]

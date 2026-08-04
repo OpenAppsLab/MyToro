@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:38.753Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CF?interval=1d&range=5d",
+  "symbol": "CF",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CF?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:36.982Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 125.19000244140625,
+    "firstOpen": 121.48999786376953,
+    "dayMovePct": -100,
+    "gapPct": -2.9555112273190214,
+    "currentVolume": 1680819,
+    "averageVolume": 1917183.8,
+    "volumeSpikeRatio": 0.8767124988224916,
+    "morningHigh": 127.83000183105469,
+    "morningLow": 117.71499633789062,
+    "morningRangePct": 8.59279259893941,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.52446526354306,
+    "intradayVolatility": 43.61462758917227,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1123767000,
-      "regularMarketTime": 1785777441,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 119.64,
+      "regularMarketPrice": 118.3,
       "fiftyTwoWeekHigh": 141.96,
       "fiftyTwoWeekLow": 75.42,
       "regularMarketDayHigh": 123.97,
-      "regularMarketDayLow": 119.42,
-      "regularMarketVolume": 791012,
+      "regularMarketDayLow": 117.715,
+      "regularMarketVolume": 1680819,
       "longName": "CF Industries Holdings, Inc.",
       "shortName": "CF Industries Holdings, Inc.",
       "chartPreviousClose": 119.78,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,20 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            122.91999816894531,
+            127.3499984741211,
+            125.7699966430664,
+            125.19000244140625,
+            null
+          ],
+          "high": [
+            123.63999938964844,
+            127.83000183105469,
+            127.19000244140625,
+            127.55000305175781,
+            123.96990203857422
+          ],
           "open": [
             121.48999786376953,
             125.80999755859375,
@@ -82,28 +118,14 @@
             125.05999755859375,
             124.54000091552734,
             124.16999816894531,
-            119.41999816894531
+            117.71499633789062
           ],
           "volume": [
             2184800,
             1796900,
             1569100,
             2354300,
-            791012
-          ],
-          "high": [
-            123.63999938964844,
-            127.83000183105469,
-            127.19000244140625,
-            127.55000305175781,
-            123.96990203857422
-          ],
-          "close": [
-            122.91999816894531,
-            127.3499984741211,
-            125.7699966430664,
-            125.19000244140625,
-            119.63999938964844
+            1680819
           ]
         }
       ],
@@ -114,7 +136,7 @@
             127.3499984741211,
             125.7699966430664,
             125.19000244140625,
-            119.63999938964844
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:57.693Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/TMO?interval=1d&range=5d",
+  "symbol": "TMO",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/TMO?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:33.049Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 574.2999877929688,
+    "firstOpen": 572,
+    "dayMovePct": -100,
+    "gapPct": -0.4004854330238781,
+    "currentVolume": 1294863,
+    "averageVolume": 2250712.6,
+    "volumeSpikeRatio": 0.5753124588185982,
+    "morningHigh": 588.5599975585938,
+    "morningLow": 560.4199829101562,
+    "morningRangePct": 5.02123684139735,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.09144838121392,
+    "intradayVolatility": 43.24888218194242,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777357,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 573.605,
+      "regularMarketPrice": 574.03,
       "fiftyTwoWeekHigh": 643.99,
       "fiftyTwoWeekLow": 435.27,
       "regularMarketDayHigh": 583.64,
       "regularMarketDayLow": 572.75,
-      "regularMarketVolume": 813771,
+      "regularMarketVolume": 1294863,
       "longName": "Thermo Fisher Scientific Inc.",
       "shortName": "Thermo Fisher Scientific Inc",
       "chartPreviousClose": 559.53,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            572,
-            578.7100219726562,
-            567.3699951171875,
-            573.4000244140625,
-            576
-          ],
           "high": [
             588.5599975585938,
             584.5399780273438,
@@ -95,15 +110,22 @@
             3034300,
             2546800,
             2264700,
-            2112300,
-            813771
+            2112900,
+            1294863
+          ],
+          "open": [
+            572,
+            578.7100219726562,
+            567.3699951171875,
+            573.4000244140625,
+            576
           ],
           "close": [
             576.4099731445312,
             576.4600219726562,
             576.77001953125,
             574.2999877929688,
-            573.60498046875
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             576.4600219726562,
             576.77001953125,
             574.2999877929688,
-            573.60498046875
+            null
           ]
         }
       ]

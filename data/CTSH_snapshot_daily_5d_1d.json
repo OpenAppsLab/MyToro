@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:54.304Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?interval=1d&range=5d",
+  "symbol": "CTSH",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:55.903Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 55.349998474121094,
+    "firstOpen": 48.369998931884766,
+    "dayMovePct": -100,
+    "gapPct": -12.610658960541487,
+    "currentVolume": 7710431,
+    "averageVolume": 12121966.2,
+    "volumeSpikeRatio": 0.6360709865698191,
+    "morningHigh": 57.5099983215332,
+    "morningLow": 48.279998779296875,
+    "morningRangePct": 19.1176465940473,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -22.439500037379304,
+    "intradayVolatility": 45.0925676451333,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 898263000,
-      "regularMarketTime": 1785777468,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 55.28,
+      "regularMarketPrice": 55.17,
       "fiftyTwoWeekHigh": 87.03,
       "fiftyTwoWeekLow": 37.08,
       "regularMarketDayHigh": 57.51,
       "regularMarketDayLow": 55.13,
-      "regularMarketVolume": 3745937,
+      "regularMarketVolume": 7710431,
       "longName": "Cognizant Technology Solutions Corporation",
       "shortName": "Cognizant Technology Solutions ",
       "chartPreviousClose": 47.05,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -74,22 +96,8 @@
             13905900,
             18262400,
             12606100,
-            8124000,
-            3745937
-          ],
-          "high": [
-            51.04999923706055,
-            57.060001373291016,
-            54.779998779296875,
-            55.529998779296875,
-            57.5099983215332
-          ],
-          "close": [
-            50.310001373291016,
-            55.970001220703125,
-            53.900001525878906,
-            55.349998474121094,
-            55.279998779296875
+            8125000,
+            7710431
           ],
           "low": [
             48.279998779296875,
@@ -98,12 +106,26 @@
             52.209999084472656,
             55.130001068115234
           ],
+          "high": [
+            51.04999923706055,
+            57.060001373291016,
+            54.779998779296875,
+            55.529998779296875,
+            57.5099983215332
+          ],
           "open": [
             48.369998931884766,
             52.310001373291016,
             53.849998474121094,
             53.0099983215332,
             56.25199890136719
+          ],
+          "close": [
+            50.310001373291016,
+            55.970001220703125,
+            53.900001525878906,
+            55.349998474121094,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             55.970001220703125,
             53.900001525878906,
             55.349998474121094,
-            55.279998779296875
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:20.182Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?interval=1d&range=5d",
+  "symbol": "INTC",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:48.044Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 90.19999694824219,
+    "firstOpen": 86.62000274658203,
+    "dayMovePct": -100,
+    "gapPct": -3.968951577364685,
+    "currentVolume": 93454443,
+    "averageVolume": 129911568.6,
+    "volumeSpikeRatio": 0.7193696759042905,
+    "morningHigh": 97.9000015258789,
+    "morningLow": 81.79000091552734,
+    "morningRangePct": 19.6967849737402,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.711293807266674,
+    "intradayVolatility": 44.457827973079524,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777317,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 90.31,
+      "regularMarketPrice": 91,
       "fiftyTwoWeekHigh": 142.35,
       "fiftyTwoWeekLow": 19.35,
-      "regularMarketDayHigh": 91.055,
+      "regularMarketDayHigh": 91.675,
       "regularMarketDayLow": 85.62,
-      "regularMarketVolume": 56101143,
+      "regularMarketVolume": 93454443,
       "longName": "Intel Corporation",
       "shortName": "Intel Corporation",
       "chartPreviousClose": 91.67,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -75,7 +97,7 @@
             81.87999725341797,
             91.12999725341797,
             90.19999694824219,
-            90.30999755859375
+            null
           ],
           "open": [
             86.62000274658203,
@@ -84,26 +106,26 @@
             96.72000122070312,
             88.4000015258789
           ],
+          "high": [
+            88.27999877929688,
+            88.47000122070312,
+            94.0999984741211,
+            97.9000015258789,
+            91.67510223388672
+          ],
+          "volume": [
+            154346700,
+            152394600,
+            140322600,
+            109039500,
+            93454443
+          ],
           "low": [
             83.0999984741211,
             81.79000091552734,
             85.97000122070312,
             90.12999725341797,
             85.62000274658203
-          ],
-          "volume": [
-            154346700,
-            152394600,
-            140322600,
-            108664200,
-            56101143
-          ],
-          "high": [
-            88.27999877929688,
-            88.47000122070312,
-            94.0999984741211,
-            97.9000015258789,
-            91.05500030517578
           ]
         }
       ],
@@ -114,7 +136,7 @@
             81.87999725341797,
             91.12999725341797,
             90.19999694824219,
-            90.30999755859375
+            null
           ]
         }
       ]

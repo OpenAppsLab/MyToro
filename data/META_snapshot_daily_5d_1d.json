@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:28.244Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?interval=1d&range=5d",
+  "symbol": "META",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/META?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:57.609Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 556.7100219726562,
+    "firstOpen": 596.8200073242188,
+    "dayMovePct": -100,
+    "gapPct": 7.204825451037519,
+    "currentVolume": 24169883,
+    "averageVolume": 25016656.6,
+    "volumeSpikeRatio": 0.9661516079650707,
+    "morningHigh": 601,
+    "morningLow": 524.489990234375,
+    "morningRangePct": 14.587506185091451,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.497140603169967,
+    "intradayVolatility": 42.62440510291499,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1337347800,
-      "regularMarketTime": 1785777327,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 593.71,
+      "regularMarketPrice": 590.24,
       "fiftyTwoWeekHigh": 796.25,
       "fiftyTwoWeekLow": 520.26,
       "regularMarketDayHigh": 597.52,
       "regularMarketDayLow": 559.36,
-      "regularMarketVolume": 15920834,
+      "regularMarketVolume": 24169883,
       "longName": "Meta Platforms, Inc.",
       "shortName": "Meta Platforms, Inc.",
       "chartPreviousClose": 593.87,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -77,20 +99,6 @@
             543.5999755859375,
             562.4199829101562
           ],
-          "low": [
-            587,
-            582.219970703125,
-            524.489990234375,
-            540.219970703125,
-            559.3599853515625
-          ],
-          "close": [
-            593.4099731445312,
-            585.6099853515625,
-            539.030029296875,
-            556.7100219726562,
-            593.7100219726562
-          ],
           "high": [
             601,
             599.969970703125,
@@ -102,8 +110,22 @@
             12009300,
             22371100,
             42271500,
-            24202500,
-            15920834
+            24261500,
+            24169883
+          ],
+          "close": [
+            593.4099731445312,
+            585.6099853515625,
+            539.030029296875,
+            556.7100219726562,
+            null
+          ],
+          "low": [
+            587,
+            582.219970703125,
+            524.489990234375,
+            540.219970703125,
+            559.3599853515625
           ]
         }
       ],
@@ -114,7 +136,7 @@
             585.6099853515625,
             539.030029296875,
             556.7100219726562,
-            593.7100219726562
+            null
           ]
         }
       ]

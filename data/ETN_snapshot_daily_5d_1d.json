@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:40.583Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETN?interval=1d&range=5d",
+  "symbol": "ETN",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ETN?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:53.430Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 415.20001220703125,
+    "firstOpen": 383.2699890136719,
+    "dayMovePct": -100,
+    "gapPct": -7.690275109490628,
+    "currentVolume": 3160026,
+    "averageVolume": 3817085.2,
+    "volumeSpikeRatio": 0.8278636274610794,
+    "morningHigh": 438.760009765625,
+    "morningLow": 358.1300048828125,
+    "morningRangePct": 22.514171888277357,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.02083850130697,
+    "intradayVolatility": 44.780883053592326,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785777499,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 431.8,
-      "fiftyTwoWeekHigh": 436.74,
+      "regularMarketPrice": 438.23,
+      "fiftyTwoWeekHigh": 438.76,
       "fiftyTwoWeekLow": 311.92,
-      "regularMarketDayHigh": 435.7,
+      "regularMarketDayHigh": 438.76,
       "regularMarketDayLow": 410.15,
-      "regularMarketVolume": 1845698,
+      "regularMarketVolume": 3160026,
       "longName": "Eaton Corporation plc",
       "shortName": "Eaton Corporation, PLC",
       "chartPreviousClose": 398.64,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -74,22 +96,22 @@
             2963500,
             4513900,
             3897300,
-            4548500,
-            1845698
+            4550700,
+            3160026
           ],
           "close": [
             386.260009765625,
             361.8800048828125,
             386.8900146484375,
             415.20001220703125,
-            431.79998779296875
+            null
           ],
           "high": [
             388.57000732421875,
             386.5199890136719,
             389.3900146484375,
             420,
-            435.70001220703125
+            438.760009765625
           ],
           "low": [
             375.75,
@@ -114,7 +136,7 @@
             361.8800048828125,
             386.8900146484375,
             415.20001220703125,
-            431.79998779296875
+            null
           ]
         }
       ]

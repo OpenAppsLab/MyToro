@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:41.720Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EBAY?interval=1d&range=5d",
+  "symbol": "EBAY",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EBAY?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:54.802Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 114.01000213623047,
+    "firstOpen": 114.5,
+    "dayMovePct": -100,
+    "gapPct": 0.4297849790266938,
+    "currentVolume": 6399550,
+    "averageVolume": 3934230,
+    "volumeSpikeRatio": 1.6266334200084895,
+    "morningHigh": 117.62999725341797,
+    "morningLow": 107.08999633789062,
+    "morningRangePct": 9.842190004630783,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.733590994237755,
+    "intradayVolatility": 42.88653420808237,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 906643800,
-      "regularMarketTime": 1785777518,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 108.175,
+      "regularMarketPrice": 107.13,
       "fiftyTwoWeekHigh": 119.31,
       "fiftyTwoWeekLow": 78.03,
       "regularMarketDayHigh": 112.19,
-      "regularMarketDayLow": 107.88,
-      "regularMarketVolume": 3099504,
+      "regularMarketDayLow": 107.09,
+      "regularMarketVolume": 6399550,
       "longName": "eBay Inc.",
       "shortName": "eBay Inc.",
       "chartPreviousClose": 113.21,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            117.62999725341797,
-            117.62999725341797,
-            114.66999816894531,
-            114.37999725341797,
-            112.19000244140625
+          "close": [
+            117.44000244140625,
+            115.30000305175781,
+            113.5199966430664,
+            114.01000213623047,
+            null
           ],
           "open": [
             114.5,
@@ -84,26 +106,26 @@
             113.77999877929688,
             111.56999969482422
           ],
+          "high": [
+            117.62999725341797,
+            117.62999725341797,
+            114.66999816894531,
+            114.37999725341797,
+            112.19000244140625
+          ],
           "volume": [
             3775700,
             3113200,
             2706600,
-            3675400,
-            3099504
-          ],
-          "close": [
-            117.44000244140625,
-            115.30000305175781,
-            113.5199966430664,
-            114.01000213623047,
-            108.17500305175781
+            3676100,
+            6399550
           ],
           "low": [
             114.02999877929688,
             115.06999969482422,
             111.79000091552734,
             112.66000366210938,
-            107.87999725341797
+            107.08999633789062
           ]
         }
       ],
@@ -114,7 +136,7 @@
             115.30000305175781,
             113.5199966430664,
             114.01000213623047,
-            108.17500305175781
+            null
           ]
         }
       ]

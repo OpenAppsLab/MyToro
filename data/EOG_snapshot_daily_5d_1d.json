@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:10.254Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EOG?interval=1d&range=5d",
+  "symbol": "EOG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EOG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:35.845Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 148.69000244140625,
+    "firstOpen": 141.07000732421875,
+    "dayMovePct": -100,
+    "gapPct": -5.124752836150019,
+    "currentVolume": 2634445,
+    "averageVolume": 2606289,
+    "volumeSpikeRatio": 1.010803099732992,
+    "morningHigh": 148.69000244140625,
+    "morningLow": 138.91000366210938,
+    "morningRangePct": 7.040528775080995,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.399405313664655,
+    "intradayVolatility": 44.25801841875151,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 623511000,
-      "regularMarketTime": 1785777307,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 146.215,
+      "regularMarketPrice": 145.68,
       "fiftyTwoWeekHigh": 151.87,
       "fiftyTwoWeekLow": 101.59,
       "regularMarketDayHigh": 147.3,
       "regularMarketDayLow": 144.078,
-      "regularMarketVolume": 1062020,
+      "regularMarketVolume": 2634445,
       "longName": "EOG Resources, Inc.",
       "shortName": "EOG Resources, Inc.",
       "chartPreviousClose": 140.31,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            141.07000732421875,
-            144.92999267578125,
-            143.72999572753906,
-            146.83999633789062,
-            145.00999450683594
-          ],
           "close": [
             139.63999938964844,
             145.94000244140625,
             145.50999450683594,
             148.69000244140625,
-            146.21499633789062
+            null
+          ],
+          "volume": [
+            3292600,
+            2557700,
+            1630300,
+            2916400,
+            2634445
           ],
           "low": [
             138.91000366210938,
@@ -91,19 +113,19 @@
             144.89999389648438,
             144.07789611816406
           ],
+          "open": [
+            141.07000732421875,
+            144.92999267578125,
+            143.72999572753906,
+            146.83999633789062,
+            145.00999450683594
+          ],
           "high": [
             143.25999450683594,
             146.10000610351562,
             145.6699981689453,
             148.69000244140625,
             147.3000030517578
-          ],
-          "volume": [
-            3292600,
-            2557700,
-            1630300,
-            2914300,
-            1062020
           ]
         }
       ],
@@ -114,7 +136,7 @@
             145.94000244140625,
             145.50999450683594,
             148.69000244140625,
-            146.21499633789062
+            null
           ]
         }
       ]

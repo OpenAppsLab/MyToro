@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:13.136Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABBV?interval=1d&range=2mo",
+  "symbol": "ABBV",
+  "range": "2mo",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ABBV?interval=1d&range=2mo",
+  "fetchedAt": "2026-08-04T09:52:51.424Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 250.94000244140625,
+    "firstOpen": 222.5,
+    "dayMovePct": -100,
+    "gapPct": -11.333387329525872,
+    "currentVolume": 5777474,
+    "averageVolume": 7442914,
+    "volumeSpikeRatio": 0.7762381776814834,
+    "morningHigh": 232.32000732421875,
+    "morningLow": 215.3699951171875,
+    "morningRangePct": 7.870182751226966,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -2.2067265902116593,
+    "intradayVolatility": 15.784996994982164,
+    "minutesSinceOpen": 86400,
+    "timestampsCount": 41
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1357137000,
-      "regularMarketTime": 1785777372,
+      "regularMarketTime": 1785787437,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 245.68,
+      "regularMarketPrice": 245.1,
       "fiftyTwoWeekHigh": 267.47,
       "fiftyTwoWeekLow": 190.75,
       "regularMarketDayHigh": 256.2,
-      "regularMarketDayLow": 244.71,
-      "regularMarketVolume": 2713546,
+      "regularMarketDayLow": 244.44,
+      "regularMarketVolume": 5777474,
       "longName": "AbbVie Inc.",
       "shortName": "AbbVie Inc.",
       "chartPreviousClose": 217.13,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -61,7 +83,6 @@
       ]
     },
     "timestamp": [
-      1780493400,
       1780579800,
       1780666200,
       1780925400,
@@ -108,7 +129,6 @@
       "quote": [
         {
           "open": [
-            214.8000030517578,
             222.5,
             227.3699951171875,
             226.75,
@@ -152,7 +172,6 @@
             251.4499969482422
           ],
           "high": [
-            219.5399932861328,
             224.99000549316406,
             230.47000122070312,
             228.5800018310547,
@@ -196,7 +215,6 @@
             256.20001220703125
           ],
           "low": [
-            213.72999572753906,
             219.83999633789062,
             226,
             221.1699981689453,
@@ -237,10 +255,9 @@
             262.760009765625,
             253.50999450683594,
             247,
-            244.7100067138672
+            244.44000244140625
           ],
           "volume": [
-            5667500,
             6782000,
             6248900,
             4915600,
@@ -280,11 +297,10 @@
             7058400,
             5562300,
             6403400,
-            7251900,
-            2713546
+            7258200,
+            5777474
           ],
           "close": [
-            217.1300048828125,
             224.94000244140625,
             227.22999572753906,
             223.07000732421875,
@@ -325,14 +341,13 @@
             263.29998779296875,
             257.4100036621094,
             250.94000244140625,
-            245.67999267578125
+            null
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            215.59542846679688,
             223.3502197265625,
             225.62403869628906,
             221.4934539794922,
@@ -373,7 +388,7 @@
             263.29998779296875,
             257.4100036621094,
             250.94000244140625,
-            245.67999267578125
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:17.508Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DRI?interval=1d&range=5d",
+  "symbol": "DRI",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DRI?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:25.370Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 203.5800018310547,
+    "firstOpen": 207.5,
+    "dayMovePct": -100,
+    "gapPct": 1.9255320432693623,
+    "currentVolume": 963673,
+    "averageVolume": 1413254.6,
+    "volumeSpikeRatio": 0.6818820897522639,
+    "morningHigh": 212.99000549316406,
+    "morningLow": 202.0500030517578,
+    "morningRangePct": 5.414502487586611,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.39497047192771,
+    "intradayVolatility": 43.11508163848402,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 800026200,
-      "regularMarketTime": 1785777405,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 205.525,
+      "regularMarketPrice": 206.24,
       "fiftyTwoWeekHigh": 220.65,
       "fiftyTwoWeekLow": 169,
       "regularMarketDayHigh": 210.475,
       "regularMarketDayLow": 204.71,
-      "regularMarketVolume": 447367,
+      "regularMarketVolume": 963673,
       "longName": "Darden Restaurants, Inc.",
       "shortName": "Darden Restaurants, Inc.",
       "chartPreviousClose": 204.1,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -77,19 +99,19 @@
             202.0500030517578,
             204.7100067138672
           ],
-          "volume": [
-            1658400,
-            1356300,
-            1636500,
-            1451400,
-            447367
-          ],
           "open": [
             207.5,
             206.66000366210938,
             212.86000061035156,
             204.9499969482422,
             205.92999267578125
+          ],
+          "volume": [
+            1658400,
+            1356300,
+            1636500,
+            1451400,
+            963673
           ],
           "high": [
             211.05999755859375,
@@ -103,7 +125,7 @@
             212.22999572753906,
             206.97000122070312,
             203.5800018310547,
-            205.52499389648438
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             212.22999572753906,
             206.97000122070312,
             203.5800018310547,
-            205.52499389648438
+            null
           ]
         }
       ]

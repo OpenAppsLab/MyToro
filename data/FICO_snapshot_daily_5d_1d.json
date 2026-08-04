@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:11.695Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FICO?interval=1d&range=5d",
+  "symbol": "FICO",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FICO?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:31.540Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 1122.969970703125,
+    "firstOpen": 1301.550048828125,
+    "dayMovePct": -100,
+    "gapPct": 15.902480278540812,
+    "currentVolume": 635610,
+    "averageVolume": 678722,
+    "volumeSpikeRatio": 0.9364806209316923,
+    "morningHigh": 1410.1700439453125,
+    "morningLow": 1031.1400146484375,
+    "morningRangePct": 36.758347451592556,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -28.926011625145655,
+    "intradayVolatility": 41.689793113568435,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 553959000,
-      "regularMarketTime": 1785777548,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1048.4,
+      "regularMarketPrice": 1045.46,
       "fiftyTwoWeekHigh": 1998.01,
       "fiftyTwoWeekLow": 870.01,
       "regularMarketDayHigh": 1115.975,
-      "regularMarketDayLow": 1036.45,
-      "regularMarketVolume": 258947,
+      "regularMarketDayLow": 1031.14,
+      "regularMarketVolume": 635610,
       "longName": "Fair Isaac Corporation",
       "shortName": "Fair Isaac Corporation",
       "chartPreviousClose": 1280.57,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,33 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            1288.1500244140625,
-            1334.239990234375,
-            1125.280029296875,
-            1070.239990234375,
-            1036.449951171875
+          "high": [
+            1390,
+            1410.1700439453125,
+            1238.5999755859375,
+            1136.02001953125,
+            1115.97509765625
           ],
           "close": [
             1336.219970703125,
             1373.0799560546875,
             1139.5400390625,
             1122.969970703125,
-            1048.4000244140625
+            null
           ],
           "volume": [
             402800,
             432200,
             996400,
             926600,
-            258947
+            635610
+          ],
+          "low": [
+            1288.1500244140625,
+            1334.239990234375,
+            1125.280029296875,
+            1070.239990234375,
+            1031.1400146484375
           ],
           "open": [
             1301.550048828125,
@@ -97,13 +126,6 @@
             1150,
             1136.010009765625,
             1111.5999755859375
-          ],
-          "high": [
-            1390,
-            1410.1700439453125,
-            1238.5999755859375,
-            1136.02001953125,
-            1115.97509765625
           ]
         }
       ],
@@ -114,7 +136,7 @@
             1373.0799560546875,
             1139.5400390625,
             1122.969970703125,
-            1048.4000244140625
+            null
           ]
         }
       ]

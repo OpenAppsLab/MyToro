@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:09.101Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BX?interval=1d&range=5d",
+  "symbol": "BX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:00.672Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 127.75,
+    "firstOpen": 132.27000427246094,
+    "dayMovePct": -100,
+    "gapPct": 3.5381638140594425,
+    "currentVolume": 4674074,
+    "averageVolume": 5566714.8,
+    "volumeSpikeRatio": 0.8396467517969486,
+    "morningHigh": 135.2100067138672,
+    "morningLow": 125.72000122070312,
+    "morningRangePct": 7.54852481786429,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.159599137319866,
+    "intradayVolatility": 42.64714158093227,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1182519000,
-      "regularMarketTime": 1785777399,
+      "regularMarketTime": 1785787490,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 131.42,
+      "regularMarketPrice": 134.68,
       "fiftyTwoWeekHigh": 190.09,
       "fiftyTwoWeekLow": 101.73,
-      "regularMarketDayHigh": 131.445,
+      "regularMarketDayHigh": 135.21,
       "regularMarketDayLow": 128,
-      "regularMarketVolume": 2019130,
+      "regularMarketVolume": 4674074,
       "longName": "Blackstone Inc.",
       "shortName": "Blackstone Inc.",
       "chartPreviousClose": 132.6,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            133.89999389648438,
-            129.39999389648438,
-            128.07000732421875,
+          "low": [
+            130.39999389648438,
             127.75,
-            131.4199981689453
+            125.72000122070312,
+            127.19000244140625,
+            128
           ],
           "open": [
             132.27000427246094,
@@ -84,37 +106,37 @@
             127.77999877929688,
             128.10000610351562
           ],
-          "low": [
-            130.39999389648438,
+          "close": [
+            133.89999389648438,
+            129.39999389648438,
+            128.07000732421875,
             127.75,
-            125.72000122070312,
-            127.19000244140625,
-            128
+            null
           ],
           "volume": [
             6229400,
             6291600,
             5740600,
-            4894700,
-            2019130
+            4897900,
+            4674074
           ],
           "high": [
             134.02000427246094,
             133.49000549316406,
             131.1999969482422,
             129.08999633789062,
-            131.44509887695312
+            135.2100067138672
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            133.89999389648438,
-            129.39999389648438,
-            128.07000732421875,
-            127.75,
-            131.4199981689453
+            132.5478973388672,
+            128.0933380126953,
+            126.77677154541016,
+            126.45999908447266,
+            null
           ]
         }
       ]

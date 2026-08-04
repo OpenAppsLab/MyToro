@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:00.226Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CAT?interval=1d&range=5d",
+  "symbol": "CAT",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CAT?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:23.539Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 814.8099975585938,
+    "firstOpen": 855.760009765625,
+    "dayMovePct": -100,
+    "gapPct": 5.025713028771041,
+    "currentVolume": 2784199,
+    "averageVolume": 3697599.8,
+    "volumeSpikeRatio": 0.7529746729216071,
+    "morningHigh": 855.8200073242188,
+    "morningLow": 776,
+    "morningRangePct": 10.286083418069426,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.70923902419939,
+    "intradayVolatility": 43.05764375788879,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777294,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 822.765,
+      "regularMarketPrice": 830.03,
       "fiftyTwoWeekHigh": 1073.46,
       "fiftyTwoWeekLow": 405.46,
-      "regularMarketDayHigh": 834.96,
+      "regularMarketDayHigh": 835.34,
       "regularMarketDayLow": 804.71,
-      "regularMarketVolume": 1429682,
+      "regularMarketVolume": 2784199,
       "longName": "Caterpillar Inc.",
       "shortName": "Caterpillar, Inc.",
       "chartPreviousClose": 873.28,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            824,
-            776,
-            801.6799926757812,
-            807.3099975585938,
-            804.7100219726562
+          "high": [
+            855.8200073242188,
+            822.7999877929688,
+            822.760009765625,
+            845,
+            835.3400268554688
           ],
-          "close": [
-            840.8499755859375,
-            782.7100219726562,
-            809.1400146484375,
-            814.8099975585938,
-            822.7650146484375
+          "volume": [
+            3808600,
+            5966400,
+            3505200,
+            2423600,
+            2784199
           ],
           "open": [
             855.760009765625,
@@ -91,19 +113,19 @@
             843.3900146484375,
             811.5800170898438
           ],
-          "high": [
-            855.8200073242188,
-            822.7999877929688,
-            822.760009765625,
-            845,
-            834.9600219726562
+          "close": [
+            840.8499755859375,
+            782.7100219726562,
+            809.1400146484375,
+            814.8099975585938,
+            null
           ],
-          "volume": [
-            3808600,
-            5966400,
-            3505200,
-            2395800,
-            1429682
+          "low": [
+            824,
+            776,
+            801.6799926757812,
+            807.3099975585938,
+            804.7100219726562
           ]
         }
       ],
@@ -114,7 +136,7 @@
             782.7100219726562,
             809.1400146484375,
             814.8099975585938,
-            822.7650146484375
+            null
           ]
         }
       ]

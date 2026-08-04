@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:50.934Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CLX?interval=1d&range=5d",
+  "symbol": "CLX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CLX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:51.797Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 95.52999877929688,
+    "firstOpen": 98.3499984741211,
+    "dayMovePct": -100,
+    "gapPct": 2.9519519845690243,
+    "currentVolume": 3259821,
+    "averageVolume": 2779724.2,
+    "volumeSpikeRatio": 1.1727138253500113,
+    "morningHigh": 101.37000274658203,
+    "morningLow": 94.19999694824219,
+    "morningRangePct": 7.611471370088658,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.2097841239965,
+    "intradayVolatility": 42.610660339934086,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785777458,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 97.72,
+      "regularMarketPrice": 98.26,
       "fiftyTwoWeekHigh": 128.9,
       "fiftyTwoWeekLow": 84.7,
       "regularMarketDayHigh": 99.8,
-      "regularMarketDayLow": 97.375,
-      "regularMarketVolume": 1086630,
+      "regularMarketDayLow": 96.58,
+      "regularMarketVolume": 3259821,
       "longName": "The Clorox Company",
       "shortName": "Clorox Company (The)",
       "chartPreviousClose": 97.41,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            2843300,
-            2349700,
-            2281100,
-            3162700,
-            1086630
-          ],
           "high": [
             101.37000274658203,
             100.44999694824219,
@@ -89,14 +104,7 @@
             99.62999725341797,
             96.7300033569336,
             95.52999877929688,
-            97.72000122070312
-          ],
-          "low": [
-            97.80000305175781,
-            97.19000244140625,
-            96.12000274658203,
-            94.19999694824219,
-            97.375
+            null
           ],
           "open": [
             98.3499984741211,
@@ -104,6 +112,20 @@
             98.0199966430664,
             95.6500015258789,
             97.31999969482422
+          ],
+          "volume": [
+            2843300,
+            2349700,
+            2281100,
+            3164700,
+            3259821
+          ],
+          "low": [
+            97.80000305175781,
+            97.19000244140625,
+            96.12000274658203,
+            94.19999694824219,
+            96.58000183105469
           ]
         }
       ],
@@ -114,7 +136,7 @@
             99.62999725341797,
             96.7300033569336,
             95.52999877929688,
-            97.72000122070312
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:47.783Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=1d&range=5d",
+  "symbol": "AMD",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:08.483Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 476.1499938964844,
+    "firstOpen": 467,
+    "dayMovePct": -100,
+    "gapPct": -1.9216620841695515,
+    "currentVolume": 24086408,
+    "averageVolume": 31251821.6,
+    "volumeSpikeRatio": 0.7707201297987698,
+    "morningHigh": 515.6199951171875,
+    "morningLow": 424.0299987792969,
+    "morningRangePct": 21.599885999000332,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.604724838632716,
+    "intradayVolatility": 44.64918728956548,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777274,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 481.6,
+      "regularMarketPrice": 484.64,
       "fiftyTwoWeekHigh": 584.73,
       "fiftyTwoWeekLow": 149.22,
-      "regularMarketDayHigh": 486.85,
+      "regularMarketDayHigh": 490.946,
       "regularMarketDayLow": 455.3,
-      "regularMarketVolume": 13863177,
+      "regularMarketVolume": 24086408,
       "longName": "Advanced Micro Devices, Inc.",
       "shortName": "Advanced Micro Devices, Inc.",
       "chartPreviousClose": 494.95,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            472.75,
-            457.2200012207031,
-            498.20001220703125,
-            515.6199951171875,
-            486.8500061035156
+          "close": [
+            454.6199951171875,
+            429.55999755859375,
+            485.3900146484375,
+            476.1499938964844,
+            null
+          ],
+          "volume": [
+            36315500,
+            32304900,
+            36936600,
+            26615700,
+            24086408
           ],
           "low": [
             442.2699890136719,
@@ -84,13 +113,6 @@
             475.760009765625,
             455.29998779296875
           ],
-          "close": [
-            454.6199951171875,
-            429.55999755859375,
-            485.3900146484375,
-            476.1499938964844,
-            481.6000061035156
-          ],
           "open": [
             467,
             452.67999267578125,
@@ -98,12 +120,12 @@
             510.2799987792969,
             461.7900085449219
           ],
-          "volume": [
-            36315500,
-            32304900,
-            36936600,
-            26515500,
-            13863177
+          "high": [
+            472.75,
+            457.2200012207031,
+            498.20001220703125,
+            515.6199951171875,
+            490.9464111328125
           ]
         }
       ],
@@ -114,7 +136,7 @@
             429.55999755859375,
             485.3900146484375,
             476.1499938964844,
-            481.6000061035156
+            null
           ]
         }
       ]

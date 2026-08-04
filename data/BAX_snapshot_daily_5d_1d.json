@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:02.559Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAX?interval=1d&range=5d",
+  "symbol": "BAX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BAX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:52.757Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 26.15999984741211,
+    "firstOpen": 23.850000381469727,
+    "dayMovePct": -100,
+    "gapPct": -8.830273239358984,
+    "currentVolume": 8373876,
+    "averageVolume": 11372655.2,
+    "volumeSpikeRatio": 0.7363167046513466,
+    "morningHigh": 30,
+    "morningLow": 23.579999923706055,
+    "morningRangePct": 27.22646351597154,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.142677190169934,
+    "intradayVolatility": 44.52280707881672,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 373041000,
-      "regularMarketTime": 1785777421,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 28,
+      "regularMarketPrice": 28.1,
       "fiftyTwoWeekHigh": 30,
       "fiftyTwoWeekLow": 15.73,
-      "regularMarketDayHigh": 28.095,
+      "regularMarketDayHigh": 28.295,
       "regularMarketDayLow": 26.9,
-      "regularMarketVolume": 4457638,
+      "regularMarketVolume": 8373876,
       "longName": "Baxter International Inc.",
       "shortName": "Baxter International Inc.",
       "chartPreviousClose": 23.34,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,27 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            7102200,
-            9433100,
-            22670900,
-            9282400,
-            4457638
-          ],
-          "close": [
-            24.3700008392334,
-            24.770000457763672,
-            26.75,
-            26.15999984741211,
-            28
-          ],
-          "high": [
-            24.75,
-            24.93000030517578,
-            30,
-            27.149999618530273,
-            28.094999313354492
-          ],
           "low": [
             23.579999923706055,
             24.280000686645508,
@@ -104,6 +105,27 @@
             29.06999969482422,
             26.920000076293945,
             26.979999542236328
+          ],
+          "close": [
+            24.3700008392334,
+            24.770000457763672,
+            26.75,
+            26.15999984741211,
+            null
+          ],
+          "volume": [
+            7102200,
+            9433100,
+            22670900,
+            9283200,
+            8373876
+          ],
+          "high": [
+            24.75,
+            24.93000030517578,
+            30,
+            27.149999618530273,
+            28.295000076293945
           ]
         }
       ],
@@ -114,7 +136,7 @@
             24.770000457763672,
             26.75,
             26.15999984741211,
-            28
+            null
           ]
         }
       ]

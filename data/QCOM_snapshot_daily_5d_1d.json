@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:45.984Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/QCOM?interval=1d&range=5d",
+  "symbol": "QCOM",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/QCOM?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:19.406Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 147.61000061035156,
+    "firstOpen": 164.89999389648438,
+    "dayMovePct": -100,
+    "gapPct": 11.713293960192765,
+    "currentVolume": 13664181,
+    "averageVolume": 17440076.2,
+    "volumeSpikeRatio": 0.7834931936822616,
+    "morningHigh": 167.9199981689453,
+    "morningLow": 142.88999938964844,
+    "morningRangePct": 17.516970317175435,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -27.418280313349356,
+    "intradayVolatility": 41.91147605242665,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 692634600,
-      "regularMarketTime": 1785777336,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 149.52,
+      "regularMarketPrice": 151.57,
       "fiftyTwoWeekHigh": 259.92,
       "fiftyTwoWeekLow": 121.99,
-      "regularMarketDayHigh": 150.5,
+      "regularMarketDayHigh": 151.68,
       "regularMarketDayLow": 142.89,
-      "regularMarketVolume": 7652585,
+      "regularMarketVolume": 13664181,
       "longName": "QUALCOMM Incorporated",
       "shortName": "QUALCOMM Incorporated",
       "chartPreviousClose": 170.04,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            16147500,
+            19240700,
+            24336800,
+            13811200,
+            13664181
+          ],
           "low": [
             162.16000366210938,
             155,
@@ -82,7 +111,7 @@
             164.55999755859375,
             154.16000366210938,
             153.72999572753906,
-            150.49989318847656
+            151.67999267578125
           ],
           "open": [
             164.89999389648438,
@@ -91,19 +120,12 @@
             152.9600067138672,
             146.1999969482422
           ],
-          "volume": [
-            16147500,
-            19240700,
-            24336800,
-            13788600,
-            7652585
-          ],
           "close": [
             162.8800048828125,
             155.67999267578125,
             151.60000610351562,
             147.61000061035156,
-            149.52000427246094
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             155.67999267578125,
             151.60000610351562,
             147.61000061035156,
-            149.52000427246094
+            null
           ]
         }
       ]

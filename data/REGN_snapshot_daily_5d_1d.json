@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:47.059Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/REGN?interval=1d&range=5d",
+  "symbol": "REGN",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/REGN?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:20.723Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 762.6300048828125,
+    "firstOpen": 676.9299926757812,
+    "dayMovePct": -100,
+    "gapPct": -11.237429901568076,
+    "currentVolume": 818806,
+    "averageVolume": 1072021.2,
+    "volumeSpikeRatio": 0.7637964622341424,
+    "morningHigh": 772.719970703125,
+    "morningLow": 676.4600219726562,
+    "morningRangePct": 14.229953818964894,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -22.62596311829325,
+    "intradayVolatility": 44.72465350543223,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 670602600,
-      "regularMarketTime": 1785777323,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 762.61,
+      "regularMarketPrice": 759.24,
       "fiftyTwoWeekHigh": 821.11,
       "fiftyTwoWeekLow": 541,
       "regularMarketDayHigh": 772.72,
-      "regularMarketDayLow": 758.4,
-      "regularMarketVolume": 354537,
+      "regularMarketDayLow": 756.44,
+      "regularMarketVolume": 818806,
       "longName": "Regeneron Pharmaceuticals, Inc.",
       "shortName": "Regeneron Pharmaceuticals, Inc.",
       "chartPreviousClose": 667.17,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            900200,
+            1022100,
+            1460700,
+            1158300,
+            818806
+          ],
+          "low": [
+            676.4600219726562,
+            691,
+            694.97998046875,
+            724.7899780273438,
+            756.4400024414062
+          ],
           "high": [
             696.739990234375,
             702.5999755859375,
             740,
             764.75,
             772.719970703125
-          ],
-          "volume": [
-            900200,
-            1022100,
-            1460700,
-            1158300,
-            354537
-          ],
-          "close": [
-            695.1799926757812,
-            695.4199829101562,
-            738.3400268554688,
-            762.6300048828125,
-            762.6099853515625
           ],
           "open": [
             676.9299926757812,
@@ -98,12 +120,12 @@
             726.6900024414062,
             770
           ],
-          "low": [
-            676.4600219726562,
-            691,
-            694.97998046875,
-            724.7899780273438,
-            758.4000244140625
+          "close": [
+            695.1799926757812,
+            695.4199829101562,
+            738.3400268554688,
+            762.6300048828125,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             695.4199829101562,
             738.3400268554688,
             762.6300048828125,
-            762.6099853515625
+            null
           ]
         }
       ]

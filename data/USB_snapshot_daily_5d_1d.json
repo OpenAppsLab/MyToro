@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:00.835Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/USB?interval=1d&range=5d",
+  "symbol": "USB",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/USB?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:37.113Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 63.0099983215332,
+    "firstOpen": 63.65999984741211,
+    "dayMovePct": -100,
+    "gapPct": 1.031584737650712,
+    "currentVolume": 3769645,
+    "averageVolume": 7312689,
+    "volumeSpikeRatio": 0.5154936850179188,
+    "morningHigh": 64.45999908447266,
+    "morningLow": 62.34000015258789,
+    "morningRangePct": 3.4007040851711627,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.549152580800925,
+    "intradayVolatility": 42.99783190790015,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 105283800,
-      "regularMarketTime": 1785777356,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 63.32,
+      "regularMarketPrice": 63.94,
       "fiftyTwoWeekHigh": 64.84,
       "fiftyTwoWeekLow": 43.83,
-      "regularMarketDayHigh": 63.815,
+      "regularMarketDayHigh": 63.96,
       "regularMarketDayLow": 63.085,
-      "regularMarketVolume": 2014606,
+      "regularMarketVolume": 3769645,
       "longName": "U.S. Bancorp",
       "shortName": "U.S. Bancorp",
       "chartPreviousClose": 63.49,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            8093600,
-            8431700,
-            7182400,
-            9083600,
-            2014606
-          ],
-          "high": [
-            64.45999908447266,
-            64.29000091552734,
-            63.34000015258789,
-            63.29999923706055,
-            63.814998626708984
+          "low": [
+            63.45000076293945,
+            62.61000061035156,
+            62.34000015258789,
+            62.540000915527344,
+            63.084999084472656
           ],
           "open": [
             63.65999984741211,
@@ -91,19 +106,26 @@
             63.060001373291016,
             63.36000061035156
           ],
-          "low": [
-            63.45000076293945,
-            62.61000061035156,
-            62.34000015258789,
-            62.540000915527344,
-            63.084999084472656
+          "volume": [
+            8093600,
+            8431700,
+            7182400,
+            9086100,
+            3769645
+          ],
+          "high": [
+            64.45999908447266,
+            64.29000091552734,
+            63.34000015258789,
+            63.29999923706055,
+            63.959999084472656
           ],
           "close": [
             64.43000030517578,
             62.81999969482422,
             62.900001525878906,
             63.0099983215332,
-            63.31999969482422
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             62.81999969482422,
             62.900001525878906,
             63.0099983215332,
-            63.31999969482422
+            null
           ]
         }
       ]

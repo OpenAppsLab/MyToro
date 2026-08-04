@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:23.830Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FOXA?interval=1d&range=5d",
+  "symbol": "FOXA",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FOXA?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:46.269Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 58.22999954223633,
+    "firstOpen": 56.904998779296875,
+    "dayMovePct": -100,
+    "gapPct": -2.2754607133018814,
+    "currentVolume": 3697718,
+    "averageVolume": 3356223.6,
+    "volumeSpikeRatio": 1.101749597374859,
+    "morningHigh": 60.22999954223633,
+    "morningLow": 56.75,
+    "morningRangePct": 6.132157783676349,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.773152958455956,
+    "intradayVolatility": 43.447552844401244,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1552397400,
-      "regularMarketTime": 1785777557,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 58.645,
+      "regularMarketPrice": 58.7,
       "fiftyTwoWeekHigh": 76.39,
       "fiftyTwoWeekLow": 48.34,
       "regularMarketDayHigh": 60.23,
-      "regularMarketDayLow": 58.61,
-      "regularMarketVolume": 1588284,
+      "regularMarketDayLow": 58.55,
+      "regularMarketVolume": 3697718,
       "longName": "Fox Corporation",
       "shortName": "Fox Corporation",
       "chartPreviousClose": 56.64,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -77,19 +99,19 @@
             58.95000076293945,
             60.22999954223633
           ],
+          "volume": [
+            2416900,
+            3919400,
+            2909400,
+            3837700,
+            3697718
+          ],
           "low": [
             56.75,
             57.78499984741211,
             57.459999084472656,
             57.7400016784668,
-            58.61000061035156
-          ],
-          "close": [
-            57.720001220703125,
-            58.95000076293945,
-            58.81999969482422,
-            58.22999954223633,
-            58.64500045776367
+            58.54999923706055
           ],
           "open": [
             56.904998779296875,
@@ -98,12 +120,12 @@
             58.95000076293945,
             59.25
           ],
-          "volume": [
-            2416900,
-            3919400,
-            2909400,
-            3837700,
-            1588284
+          "close": [
+            57.720001220703125,
+            58.95000076293945,
+            58.81999969482422,
+            58.22999954223633,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             58.95000076293945,
             58.81999969482422,
             58.22999954223633,
-            58.64500045776367
+            null
           ]
         }
       ]

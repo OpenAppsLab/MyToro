@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:39.838Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRL?interval=1d&range=5d",
+  "symbol": "CRL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CRL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:38.296Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 232.50999450683594,
+    "firstOpen": 232.3000030517578,
+    "dayMovePct": -100,
+    "gapPct": -0.0903150230266558,
+    "currentVolume": 608127,
+    "averageVolume": 873485.4,
+    "volumeSpikeRatio": 0.6962074008334884,
+    "morningHigh": 242.72999572753906,
+    "morningLow": 227.3800048828125,
+    "morningRangePct": 6.750809444584922,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.82940621758996,
+    "intradayVolatility": 42.83008583976366,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 961767000,
-      "regularMarketTime": 1785777249,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 229.32,
+      "regularMarketPrice": 230.87,
       "fiftyTwoWeekHigh": 242.73,
       "fiftyTwoWeekLow": 144.26,
       "regularMarketDayHigh": 235.102,
       "regularMarketDayLow": 228.01,
-      "regularMarketVolume": 244625,
+      "regularMarketVolume": 608127,
       "longName": "Charles River Laboratories International, Inc.",
       "shortName": "Charles River Laboratories Inte",
       "chartPreviousClose": 224.3,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,19 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            240.42999267578125,
+            234.8000030517578,
+            234.6199951171875,
+            232.50999450683594,
+            null
+          ],
           "low": [
             231.5,
             234.17999267578125,
             227.3800048828125,
             230.05999755859375,
             228.00999450683594
-          ],
-          "open": [
-            232.3000030517578,
-            240.63999938964844,
-            234.5500030517578,
-            235.7100067138672,
-            233.2899932861328
           ],
           "high": [
             242.72999572753906,
@@ -96,14 +118,14 @@
             1054500,
             937700,
             509200,
-            244625
+            608127
           ],
-          "close": [
-            240.42999267578125,
-            234.8000030517578,
-            234.6199951171875,
-            232.50999450683594,
-            229.32000732421875
+          "open": [
+            232.3000030517578,
+            240.63999938964844,
+            234.5500030517578,
+            235.7100067138672,
+            233.2899932861328
           ]
         }
       ],
@@ -114,7 +136,7 @@
             234.8000030517578,
             234.6199951171875,
             232.50999450683594,
-            229.32000732421875
+            null
           ]
         }
       ]

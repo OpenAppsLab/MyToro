@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:22.776Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FTV?interval=1d&range=5d",
+  "symbol": "FTV",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FTV?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:44.950Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 59.209999084472656,
+    "firstOpen": 63.5,
+    "dayMovePct": -100,
+    "gapPct": 7.245399395137572,
+    "currentVolume": 2092356,
+    "averageVolume": 4276331.2,
+    "volumeSpikeRatio": 0.48928763983481915,
+    "morningHigh": 64.55999755859375,
+    "morningLow": 57.47999954223633,
+    "morningRangePct": 12.31732441325967,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.907853384109035,
+    "intradayVolatility": 42.305433241803115,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1467725400,
-      "regularMarketTime": 1785777554,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 59.635,
+      "regularMarketPrice": 59.46,
       "fiftyTwoWeekHigh": 64.56,
       "fiftyTwoWeekLow": 46.34,
       "regularMarketDayHigh": 60.16,
       "regularMarketDayLow": 59.13,
-      "regularMarketVolume": 954058,
+      "regularMarketVolume": 2092356,
       "longName": "Fortive Corporation",
       "shortName": "Fortive Corporation",
       "chartPreviousClose": 62.92,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -77,6 +99,13 @@
             59.40999984741211,
             60.15999984741211
           ],
+          "close": [
+            64.08999633789062,
+            59.540000915527344,
+            58.47999954223633,
+            59.209999084472656,
+            null
+          ],
           "low": [
             63.17499923706055,
             58.220001220703125,
@@ -84,26 +113,19 @@
             57.61000061035156,
             59.130001068115234
           ],
-          "volume": [
-            4220100,
-            6906700,
-            4602200,
-            3559800,
-            954058
-          ],
-          "close": [
-            64.08999633789062,
-            59.540000915527344,
-            58.47999954223633,
-            59.209999084472656,
-            59.6349983215332
-          ],
           "open": [
             63.5,
             62.25,
             59.959999084472656,
             58.15999984741211,
             59.2400016784668
+          ],
+          "volume": [
+            4220100,
+            6906700,
+            4602200,
+            3560300,
+            2092356
           ]
         }
       ],
@@ -114,7 +136,7 @@
             59.540000915527344,
             58.47999954223633,
             59.209999084472656,
-            59.6349983215332
+            null
           ]
         }
       ]

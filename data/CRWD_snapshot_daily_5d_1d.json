@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:11.895Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRWD?interval=1d&range=5d",
+  "symbol": "CRWD",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CRWD?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:17.982Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 190.86000061035156,
+    "firstOpen": 181.3300018310547,
+    "dayMovePct": -100,
+    "gapPct": -4.993188069171578,
+    "currentVolume": 10272473,
+    "averageVolume": 8549294.6,
+    "volumeSpikeRatio": 1.2015579624545867,
+    "morningHigh": 203.1699981689453,
+    "morningLow": 174.13999938964844,
+    "morningRangePct": 16.670494361459458,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.757612162463946,
+    "intradayVolatility": 44.056630766959344,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1560346200,
-      "regularMarketTime": 1785777490,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 199.01,
+      "regularMarketPrice": 202.54,
       "fiftyTwoWeekHigh": 217.5,
       "fiftyTwoWeekLow": 85.68,
-      "regularMarketDayHigh": 199.69,
+      "regularMarketDayHigh": 203.17,
       "regularMarketDayLow": 192.6,
-      "regularMarketVolume": 5034719,
+      "regularMarketVolume": 10272473,
       "longName": "CrowdStrike Holdings, Inc.",
       "shortName": "CrowdStrike Holdings, Inc.",
       "chartPreviousClose": 180.11,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,19 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            181.8000030517578,
+            179.3800048828125,
+            185.22000122070312,
+            190.86000061035156,
+            null
+          ],
           "high": [
             184.6649932861328,
             186.38999938964844,
             185.4600067138672,
             191.64500427246094,
-            199.6898956298828
+            203.1699981689453
           ],
           "low": [
             174.13999938964844,
@@ -95,15 +124,8 @@
             8475300,
             7152500,
             8958800,
-            7879000,
-            5034719
-          ],
-          "close": [
-            181.8000030517578,
-            179.3800048828125,
-            185.22000122070312,
-            190.86000061035156,
-            199.00999450683594
+            7887400,
+            10272473
           ]
         }
       ],
@@ -114,7 +136,7 @@
             179.3800048828125,
             185.22000122070312,
             190.86000061035156,
-            199.00999450683594
+            null
           ]
         }
       ]

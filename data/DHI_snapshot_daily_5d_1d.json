@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:35.989Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DHI?interval=1d&range=5d",
+  "symbol": "DHI",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DHI?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:47.827Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 143.05999755859375,
+    "firstOpen": 149.5,
+    "dayMovePct": -100,
+    "gapPct": 4.501609500425573,
+    "currentVolume": 1942618,
+    "averageVolume": 2663363.6,
+    "volumeSpikeRatio": 0.7293852029816732,
+    "morningHigh": 152.74000549316406,
+    "morningLow": 142.75999450683594,
+    "morningRangePct": 6.990761677179975,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.36277231949992,
+    "intradayVolatility": 42.518016304815234,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 707751000,
-      "regularMarketTime": 1785777512,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 145.05,
+      "regularMarketPrice": 146.66,
       "fiftyTwoWeekHigh": 184.55,
       "fiftyTwoWeekLow": 131.75,
       "regularMarketDayHigh": 148.71,
       "regularMarketDayLow": 144.375,
-      "regularMarketVolume": 802754,
+      "regularMarketVolume": 1942618,
       "longName": "D.R. Horton, Inc.",
       "shortName": "D.R. Horton, Inc.",
       "chartPreviousClose": 147.65,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,27 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            152.08999633789062,
-            152.74000549316406,
-            148.3000030517578,
-            145.5,
-            148.7100067138672
-          ],
-          "volume": [
-            2751500,
-            3578000,
-            2821600,
-            2223100,
-            802754
-          ],
-          "close": [
-            151.16000366210938,
-            147.16000366210938,
-            145.52999877929688,
-            143.05999755859375,
-            145.0500030517578
-          ],
           "open": [
             149.5,
             148.99000549316406,
@@ -98,12 +99,33 @@
             145.14999389648438,
             145.9199981689453
           ],
+          "high": [
+            152.08999633789062,
+            152.74000549316406,
+            148.3000030517578,
+            145.5,
+            148.7100067138672
+          ],
           "low": [
             149.02999877929688,
             146.42999267578125,
             143.27999877929688,
             142.75999450683594,
             144.375
+          ],
+          "volume": [
+            2751500,
+            3578000,
+            2821600,
+            2223100,
+            1942618
+          ],
+          "close": [
+            151.16000366210938,
+            147.16000366210938,
+            145.52999877929688,
+            143.05999755859375,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             147.16000366210938,
             145.52999877929688,
             143.05999755859375,
-            145.0500030517578
+            null
           ]
         }
       ]

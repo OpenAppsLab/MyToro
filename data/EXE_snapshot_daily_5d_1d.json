@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:05.257Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXE?interval=1d&range=5d",
+  "symbol": "EXE",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EXE?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:23.495Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 94.02999877929688,
+    "firstOpen": 91.4000015258789,
+    "dayMovePct": -100,
+    "gapPct": -2.7969768026807955,
+    "currentVolume": 3184144,
+    "averageVolume": 4187268.8,
+    "volumeSpikeRatio": 0.7604345820836723,
+    "morningHigh": 95.51000213623047,
+    "morningLow": 88.0979995727539,
+    "morningRangePct": 8.413360802086673,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.462560153047594,
+    "intradayVolatility": 44.21787212303641,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1612967400,
-      "regularMarketTime": 1785777538,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 94.61,
+      "regularMarketPrice": 94.66,
       "fiftyTwoWeekHigh": 126.621,
       "fiftyTwoWeekLow": 84.985,
       "regularMarketDayHigh": 95.51,
       "regularMarketDayLow": 93.77,
-      "regularMarketVolume": 1189813,
+      "regularMarketVolume": 3184144,
       "longName": "Expand Energy Corporation",
       "shortName": "Expand Energy Corporation",
       "chartPreviousClose": 90.51,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,27 @@
     "indicators": {
       "quote": [
         {
+          "low": [
+            88.0979995727539,
+            88.76000213623047,
+            90.58999633789062,
+            92.05999755859375,
+            93.7699966430664
+          ],
+          "volume": [
+            5098700,
+            6435000,
+            3145000,
+            3073500,
+            3184144
+          ],
+          "close": [
+            88.5199966430664,
+            92.45999908447266,
+            92.41999816894531,
+            94.02999877929688,
+            null
+          ],
           "open": [
             91.4000015258789,
             91.95999908447266,
@@ -83,27 +126,6 @@
             93.55999755859375,
             94.17500305175781,
             95.51000213623047
-          ],
-          "low": [
-            88.0979995727539,
-            88.76000213623047,
-            90.58999633789062,
-            92.05999755859375,
-            93.7699966430664
-          ],
-          "volume": [
-            5098700,
-            6435000,
-            3145000,
-            3071900,
-            1189813
-          ],
-          "close": [
-            88.5199966430664,
-            92.45999908447266,
-            92.41999816894531,
-            94.02999877929688,
-            94.61000061035156
           ]
         }
       ],
@@ -114,7 +136,7 @@
             92.45999908447266,
             92.41999816894531,
             94.02999877929688,
-            94.61000061035156
+            null
           ]
         }
       ]

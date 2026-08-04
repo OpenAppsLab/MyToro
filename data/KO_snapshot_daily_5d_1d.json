@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:23.524Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/KO?interval=1d&range=5d",
+  "symbol": "KO",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/KO?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:52.104Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 87.58999633789062,
+    "firstOpen": 88.30000305175781,
+    "dayMovePct": -100,
+    "gapPct": 0.8106025157578927,
+    "currentVolume": 22855450,
+    "averageVolume": 22378410,
+    "volumeSpikeRatio": 1.0213169747091058,
+    "morningHigh": 90.91999816894531,
+    "morningLow": 86.25,
+    "morningRangePct": 5.4144906306612315,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.19043782219351,
+    "intradayVolatility": 43.19746099629128,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777322,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 86.81,
+      "regularMarketPrice": 86.86,
       "fiftyTwoWeekHigh": 90.92,
       "fiftyTwoWeekLow": 65.35,
       "regularMarketDayHigh": 88.48,
       "regularMarketDayLow": 86.63,
-      "regularMarketVolume": 6229561,
+      "regularMarketVolume": 22855450,
       "longName": "The Coca-Cola Company",
       "shortName": "Coca-Cola Company (The)",
       "chartPreviousClose": 84.07,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,11 +92,11 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            88.30000305175781,
-            88.6500015258789,
-            87.62999725341797,
-            87.66000366210938,
+          "high": [
+            90.22000122070312,
+            90.91999816894531,
+            88.63999938964844,
+            88,
             88.4800033569336
           ],
           "close": [
@@ -82,7 +104,14 @@
             89.08000183105469,
             88.48999786376953,
             87.58999633789062,
-            86.80989837646484
+            null
+          ],
+          "open": [
+            88.30000305175781,
+            88.6500015258789,
+            87.62999725341797,
+            87.66000366210938,
+            88.4800033569336
           ],
           "low": [
             86.25,
@@ -91,19 +120,12 @@
             86.81999969482422,
             86.62999725341797
           ],
-          "high": [
-            90.22000122070312,
-            90.91999816894531,
-            88.63999938964844,
-            88,
-            88.4800033569336
-          ],
           "volume": [
             34982900,
             21711700,
             17616100,
-            14709600,
-            6229561
+            14725900,
+            22855450
           ]
         }
       ],
@@ -114,7 +136,7 @@
             89.08000183105469,
             88.48999786376953,
             87.58999633789062,
-            86.80989837646484
+            null
           ]
         }
       ]

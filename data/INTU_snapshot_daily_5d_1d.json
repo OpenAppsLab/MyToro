@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:21.279Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/INTU?interval=1d&range=5d",
+  "symbol": "INTU",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/INTU?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:49.374Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 316.07000732421875,
+    "firstOpen": 305.7300109863281,
+    "dayMovePct": -100,
+    "gapPct": -3.2714259810435125,
+    "currentVolume": 3801274,
+    "averageVolume": 4668494.8,
+    "volumeSpikeRatio": 0.8142397416829082,
+    "morningHigh": 336.94000244140625,
+    "morningLow": 303.79998779296875,
+    "morningRangePct": 10.908497689282823,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.66921161518357,
+    "intradayVolatility": 43.68971815283696,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 731946600,
-      "regularMarketTime": 1785777313,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 323.835,
+      "regularMarketPrice": 318.39,
       "fiftyTwoWeekHigh": 794.09,
       "fiftyTwoWeekLow": 252.84,
       "regularMarketDayHigh": 331.15,
       "regularMarketDayLow": 317.77,
-      "regularMarketVolume": 1873991,
+      "regularMarketVolume": 3801274,
       "longName": "Intuit Inc.",
       "shortName": "Intuit Inc.",
       "chartPreviousClose": 303.91,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "high": [
+            319.989990234375,
+            336.94000244140625,
+            318.989990234375,
+            317.5299987792969,
+            331.1499938964844
+          ],
           "open": [
             305.7300109863281,
             313.4599914550781,
@@ -77,12 +106,12 @@
             310.42999267578125,
             326.8399963378906
           ],
-          "high": [
-            319.989990234375,
-            336.94000244140625,
-            318.989990234375,
-            317.5299987792969,
-            331.1499938964844
+          "close": [
+            312.989990234375,
+            333.1300048828125,
+            315.5,
+            316.07000732421875,
+            null
           ],
           "low": [
             305.7300109863281,
@@ -91,19 +120,12 @@
             306.80999755859375,
             317.7699890136719
           ],
-          "close": [
-            312.989990234375,
-            333.1300048828125,
-            315.5,
-            316.07000732421875,
-            323.8349914550781
-          ],
           "volume": [
             5763200,
             5976900,
             4683000,
-            3115100,
-            1873991
+            3118100,
+            3801274
           ]
         }
       ],
@@ -114,7 +136,7 @@
             333.1300048828125,
             315.5,
             316.07000732421875,
-            323.8349914550781
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:18.993Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/IBM?interval=1d&range=5d",
+  "symbol": "IBM",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/IBM?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:46.637Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 223.64999389648438,
+    "firstOpen": 219.72999572753906,
+    "dayMovePct": -100,
+    "gapPct": -1.7527378832657918,
+    "currentVolume": 5737060,
+    "averageVolume": 9315112,
+    "volumeSpikeRatio": 0.615887388149493,
+    "morningHigh": 230.97000122070312,
+    "morningLow": 215.11000061035156,
+    "morningRangePct": 7.3729722306496726,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.42551121662938,
+    "intradayVolatility": 43.06814817718322,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777304,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 227.25,
+      "regularMarketPrice": 226.31,
       "fiftyTwoWeekHigh": 332.46,
       "fiftyTwoWeekLow": 199.19,
-      "regularMarketDayHigh": 228.305,
+      "regularMarketDayHigh": 228.55,
       "regularMarketDayLow": 224.87,
-      "regularMarketVolume": 3351642,
+      "regularMarketVolume": 5737060,
       "longName": "International Business Machines Corporation",
       "shortName": "International Business Machines",
       "chartPreviousClose": 216.28,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            215.11000061035156,
-            223.9499969482422,
-            220.1999969482422,
-            216.58999633789062,
-            224.8699951171875
-          ],
           "close": [
             227.5500030517578,
             226.44000244140625,
             221.74000549316406,
             223.64999389648438,
-            227.25
+            null
           ],
           "open": [
             219.72999572753906,
@@ -96,14 +111,21 @@
             230.97000122070312,
             224.86000061035156,
             224.75999450683594,
-            228.3052978515625
+            228.5500030517578
           ],
           "volume": [
             13263000,
             8806700,
             9675200,
-            9085100,
-            3351642
+            9093600,
+            5737060
+          ],
+          "low": [
+            215.11000061035156,
+            223.9499969482422,
+            220.1999969482422,
+            216.58999633789062,
+            224.8699951171875
           ]
         }
       ],
@@ -114,7 +136,7 @@
             226.44000244140625,
             221.74000549316406,
             223.64999389648438,
-            227.25
+            null
           ]
         }
       ]

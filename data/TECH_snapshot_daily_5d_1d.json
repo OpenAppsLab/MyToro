@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:06.982Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/TECH?interval=1d&range=5d",
+  "symbol": "TECH",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/TECH?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:58.061Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 72.08999633789062,
+    "firstOpen": 71.76000213623047,
+    "dayMovePct": -100,
+    "gapPct": -0.45775311197610746,
+    "currentVolume": 3264664,
+    "averageVolume": 5481672.8,
+    "volumeSpikeRatio": 0.5955598079476762,
+    "morningHigh": 72.37000274658203,
+    "morningLow": 71.76000213623047,
+    "morningRangePct": 0.8500565666003277,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.993051907170518,
+    "intradayVolatility": 43.305309848004434,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 603037800,
-      "regularMarketTime": 1785777352,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 72.15,
+      "regularMarketPrice": 72.14,
       "fiftyTwoWeekHigh": 72.37,
       "fiftyTwoWeekLow": 43.2,
       "regularMarketDayHigh": 72.2,
       "regularMarketDayLow": 72.07,
-      "regularMarketVolume": 1894233,
+      "regularMarketVolume": 3264664,
       "longName": "Bio-Techne Corporation",
       "shortName": "Bio-Techne Corp",
       "chartPreviousClose": 71.62,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,19 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            72.06999969482422,
+            72.02999877929688,
+            72.02999877929688,
+            72.08999633789062,
+            null
+          ],
           "low": [
             71.76000213623047,
             71.94000244140625,
             71.98999786376953,
             71.95999908447266,
             72.06999969482422
-          ],
-          "volume": [
-            7785800,
-            6272400,
-            6052000,
-            4033500,
-            1894233
           ],
           "high": [
             72.16000366210938,
@@ -91,12 +113,12 @@
             72.16999816894531,
             72.19999694824219
           ],
-          "close": [
-            72.06999969482422,
-            72.02999877929688,
-            72.02999877929688,
-            72.08999633789062,
-            72.1500015258789
+          "volume": [
+            7785800,
+            6272400,
+            6052000,
+            4033500,
+            3264664
           ],
           "open": [
             71.76000213623047,
@@ -114,7 +136,7 @@
             72.02999877929688,
             72.02999877929688,
             72.08999633789062,
-            72.1500015258789
+            null
           ]
         }
       ]

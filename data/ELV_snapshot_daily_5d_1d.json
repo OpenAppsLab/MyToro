@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:48.334Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ELV?interval=1d&range=5d",
+  "symbol": "ELV",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ELV?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:02.811Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 375.8399963378906,
+    "firstOpen": 374.510009765625,
+    "dayMovePct": -100,
+    "gapPct": -0.35387041965324256,
+    "currentVolume": 1139996,
+    "averageVolume": 1144119.2,
+    "volumeSpikeRatio": 0.9963961796987587,
+    "morningHigh": 388.7300109863281,
+    "morningLow": 362.9800109863281,
+    "morningRangePct": 7.094054554141796,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.64118711379695,
+    "intradayVolatility": 42.94339834436225,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1004452200,
-      "regularMarketTime": 1785777522,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 378.18,
+      "regularMarketPrice": 382.77,
       "fiftyTwoWeekHigh": 436.24,
       "fiftyTwoWeekLow": 273.71,
-      "regularMarketDayHigh": 380.2,
+      "regularMarketDayHigh": 383.81,
       "regularMarketDayLow": 374.04,
-      "regularMarketVolume": 423997,
+      "regularMarketVolume": 1139996,
       "longName": "Elevance Health, Inc.",
       "shortName": "Elevance Health, Inc.",
       "chartPreviousClose": 378.36,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -77,19 +99,12 @@
             373.1600036621094,
             374.0400085449219
           ],
-          "high": [
-            386.6600036621094,
-            388.7300109863281,
-            378.1700134277344,
-            380.0400085449219,
-            380.20001220703125
-          ],
-          "close": [
-            385.7300109863281,
-            375.9800109863281,
-            376.3999938964844,
-            375.8399963378906,
-            378.17999267578125
+          "volume": [
+            1758600,
+            1061300,
+            783800,
+            976900,
+            1139996
           ],
           "open": [
             374.510009765625,
@@ -98,12 +113,19 @@
             376.010009765625,
             375.8399963378906
           ],
-          "volume": [
-            1758600,
-            1061300,
-            783800,
-            976900,
-            423997
+          "high": [
+            386.6600036621094,
+            388.7300109863281,
+            378.1700134277344,
+            380.0400085449219,
+            383.80999755859375
+          ],
+          "close": [
+            385.7300109863281,
+            375.9800109863281,
+            376.3999938964844,
+            375.8399963378906,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             375.9800109863281,
             376.3999938964844,
             375.8399963378906,
-            378.17999267578125
+            null
           ]
         }
       ]

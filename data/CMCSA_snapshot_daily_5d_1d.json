@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:01.383Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMCSA?interval=1d&range=5d",
+  "symbol": "CMCSA",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CMCSA?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:24.956Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 23.959999084472656,
+    "firstOpen": 23.25,
+    "dayMovePct": -100,
+    "gapPct": -2.9632684123630586,
+    "currentVolume": 36587963,
+    "averageVolume": 34556132.6,
+    "volumeSpikeRatio": 1.0587979686129576,
+    "morningHigh": 24.895000457763672,
+    "morningLow": 23.229999542236328,
+    "morningRangePct": 7.167459958404527,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.214539330980745,
+    "intradayVolatility": 43.23196997201787,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777300,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 24.54,
+      "regularMarketPrice": 24.56,
       "fiftyTwoWeekHigh": 32.86,
       "fiftyTwoWeekLow": 21.28,
       "regularMarketDayHigh": 24.895,
       "regularMarketDayLow": 24.39,
-      "regularMarketVolume": 18839288,
+      "regularMarketVolume": 36587963,
       "longName": "Comcast Corporation",
       "shortName": "Comcast Corporation",
       "chartPreviousClose": 22.8,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,20 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            23.229999542236328,
-            23.84000015258789,
-            23.360000610351562,
-            23.280000686645508,
-            24.389999389648438
-          ],
-          "volume": [
-            41669500,
-            37047700,
-            29273100,
-            28194900,
-            18839288
-          ],
           "high": [
             24.260000228881836,
             24.8799991607666,
@@ -91,12 +99,12 @@
             24.149999618530273,
             24.895000457763672
           ],
-          "close": [
-            24.190000534057617,
-            24.610000610351562,
-            23.670000076293945,
-            23.959999084472656,
-            24.540000915527344
+          "volume": [
+            41669500,
+            37047700,
+            29273100,
+            28202400,
+            36587963
           ],
           "open": [
             23.25,
@@ -104,6 +112,20 @@
             23.850000381469727,
             23.440000534057617,
             24.465999603271484
+          ],
+          "low": [
+            23.229999542236328,
+            23.84000015258789,
+            23.360000610351562,
+            23.280000686645508,
+            24.389999389648438
+          ],
+          "close": [
+            24.190000534057617,
+            24.610000610351562,
+            23.670000076293945,
+            23.959999084472656,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             24.610000610351562,
             23.670000076293945,
             23.959999084472656,
-            24.540000915527344
+            null
           ]
         }
       ]

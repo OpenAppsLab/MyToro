@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:22.991Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALGN?interval=1d&range=2mo",
+  "symbol": "ALGN",
+  "range": "2mo",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ALGN?interval=1d&range=2mo",
+  "fetchedAt": "2026-08-04T09:53:03.547Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 169.16000366210938,
+    "firstOpen": 164.89999389648438,
+    "dayMovePct": -100,
+    "gapPct": -2.5183315638454387,
+    "currentVolume": 903759,
+    "averageVolume": 1035835.5853658536,
+    "volumeSpikeRatio": 0.8724927129055866,
+    "morningHigh": 185,
+    "morningLow": 164.07000732421875,
+    "morningRangePct": 12.756745134058226,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -2.446673790229813,
+    "intradayVolatility": 15.878742010879455,
+    "minutesSinceOpen": 86400,
+    "timestampsCount": 41
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 980865000,
-      "regularMarketTime": 1785777378,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 171.84,
+      "regularMarketPrice": 172.89,
       "fiftyTwoWeekHigh": 200.44,
       "fiftyTwoWeekLow": 122,
       "regularMarketDayHigh": 175.48,
       "regularMarketDayLow": 171,
-      "regularMarketVolume": 324505,
+      "regularMarketVolume": 903759,
       "longName": "Align Technology, Inc.",
       "shortName": "Align Technology, Inc.",
       "chartPreviousClose": 161.71,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -61,7 +83,6 @@
       ]
     },
     "timestamp": [
-      1780493400,
       1780579800,
       1780666200,
       1780925400,
@@ -107,52 +128,7 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            1068900,
-            979600,
-            494400,
-            1010900,
-            1044500,
-            1155000,
-            1029400,
-            574500,
-            1091800,
-            635200,
-            843700,
-            1949700,
-            1277800,
-            1112500,
-            1502700,
-            850500,
-            1668700,
-            973300,
-            1372600,
-            1506000,
-            1354100,
-            1104700,
-            913500,
-            1018600,
-            1086100,
-            630800,
-            486800,
-            417700,
-            604800,
-            1378100,
-            828700,
-            1060200,
-            683100,
-            511900,
-            821000,
-            846000,
-            1032700,
-            914000,
-            1657600,
-            1534300,
-            1608000,
-            324505
-          ],
           "high": [
-            167.1300048828125,
             168.4199981689453,
             171,
             173.2899932861328,
@@ -196,7 +172,6 @@
             175.47999572753906
           ],
           "close": [
-            161.7100067138672,
             168.2899932861328,
             167.74000549316406,
             172.0500030517578,
@@ -237,10 +212,9 @@
             180.0800018310547,
             173.41000366210938,
             169.16000366210938,
-            171.83999633789062
+            null
           ],
           "low": [
-            160.6999969482422,
             164.07000732421875,
             166.39999389648438,
             167.0800018310547,
@@ -283,8 +257,50 @@
             164.74000549316406,
             171
           ],
+          "volume": [
+            979600,
+            494400,
+            1010900,
+            1044500,
+            1155000,
+            1029400,
+            574500,
+            1091800,
+            635200,
+            843700,
+            1949700,
+            1277800,
+            1112500,
+            1502700,
+            850500,
+            1668700,
+            973300,
+            1372600,
+            1506000,
+            1354100,
+            1104700,
+            913500,
+            1018600,
+            1086100,
+            630800,
+            486800,
+            417700,
+            604800,
+            1378100,
+            828700,
+            1060200,
+            683100,
+            511900,
+            821000,
+            846000,
+            1032700,
+            914000,
+            1657600,
+            1534300,
+            1608000,
+            903759
+          ],
           "open": [
-            166.27000427246094,
             164.89999389648438,
             168.2899932861328,
             167.5500030517578,
@@ -332,7 +348,6 @@
       "adjclose": [
         {
           "adjclose": [
-            161.7100067138672,
             168.2899932861328,
             167.74000549316406,
             172.0500030517578,
@@ -373,7 +388,7 @@
             180.0800018310547,
             173.41000366210938,
             169.16000366210938,
-            171.83999633789062
+            null
           ]
         }
       ]

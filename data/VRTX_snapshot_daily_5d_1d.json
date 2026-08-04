@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:04.188Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/VRTX?interval=1d&range=5d",
+  "symbol": "VRTX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/VRTX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:41.090Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 477.1000061035156,
+    "firstOpen": 483.1300048828125,
+    "dayMovePct": -100,
+    "gapPct": 1.2638857057546455,
+    "currentVolume": 1450928,
+    "averageVolume": 1361685.6,
+    "volumeSpikeRatio": 1.0655381829696957,
+    "morningHigh": 493.6099853515625,
+    "morningLow": 468.1400146484375,
+    "morningRangePct": 5.440673710033604,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.682966754169247,
+    "intradayVolatility": 42.908738055818276,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 680362200,
-      "regularMarketTime": 1785777350,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 472.34,
+      "regularMarketPrice": 470.72,
       "fiftyTwoWeekHigh": 533.67,
       "fiftyTwoWeekLow": 362.5,
       "regularMarketDayHigh": 483.36,
       "regularMarketDayLow": 468.14,
-      "regularMarketVolume": 459118,
+      "regularMarketVolume": 1450928,
       "longName": "Vertex Pharmaceuticals Incorporated",
       "shortName": "Vertex Pharmaceuticals Incorpor",
       "chartPreviousClose": 479,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            483.1300048828125,
-            492.6700134277344,
-            474.1000061035156,
-            480.6700134277344,
-            480
+          "close": [
+            490.3900146484375,
+            483.3299865722656,
+            481.70001220703125,
+            477.1000061035156,
+            null
           ],
           "high": [
             493.6099853515625,
@@ -84,26 +106,26 @@
             480.6700134277344,
             483.3599853515625
           ],
-          "volume": [
-            1700000,
-            1451200,
-            1248600,
-            957200,
-            459118
-          ],
-          "close": [
-            490.3900146484375,
-            483.3299865722656,
-            481.70001220703125,
-            477.1000061035156,
-            472.3399963378906
-          ],
           "low": [
             482.8599853515625,
             481.9100036621094,
             470.5400085449219,
             469.8699951171875,
             468.1400146484375
+          ],
+          "volume": [
+            1700000,
+            1451200,
+            1248600,
+            957700,
+            1450928
+          ],
+          "open": [
+            483.1300048828125,
+            492.6700134277344,
+            474.1000061035156,
+            480.6700134277344,
+            480
           ]
         }
       ],
@@ -114,7 +136,7 @@
             483.3299865722656,
             481.70001220703125,
             477.1000061035156,
-            472.3399963378906
+            null
           ]
         }
       ]

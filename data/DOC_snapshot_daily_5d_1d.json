@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:49.227Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DOC?interval=1d&range=5d",
+  "symbol": "DOC",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DOC?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:17.395Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 21.829999923706055,
+    "firstOpen": 22.700000762939453,
+    "dayMovePct": -100,
+    "gapPct": 3.9853451318093245,
+    "currentVolume": 3969123,
+    "averageVolume": 5946744.6,
+    "volumeSpikeRatio": 0.6674446721656754,
+    "morningHigh": 22.950000762939453,
+    "morningLow": 21.639999389648438,
+    "morningRangePct": 6.053610953046787,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.10021465021808,
+    "intradayVolatility": 42.66706203294527,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 485703000,
-      "regularMarketTime": 1785777583,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 21.69,
+      "regularMarketPrice": 21.64,
       "fiftyTwoWeekHigh": 22.95,
       "fiftyTwoWeekLow": 15.7,
       "regularMarketDayHigh": 22.03,
-      "regularMarketDayLow": 21.66,
-      "regularMarketVolume": 1914369,
+      "regularMarketDayLow": 21.64,
+      "regularMarketVolume": 3969123,
       "longName": "Healthpeak Properties, Inc.",
       "shortName": "Healthpeak Properties, Inc.",
       "chartPreviousClose": 22.52,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            22.700000762939453,
-            22.790000915527344,
-            22.450000762939453,
-            22.06999969482422,
-            21.889999389648438
-          ],
           "high": [
             22.950000762939453,
             22.90999984741211,
@@ -84,26 +99,33 @@
             22.18000030517578,
             22.030000686645508
           ],
+          "open": [
+            22.700000762939453,
+            22.790000915527344,
+            22.450000762939453,
+            22.06999969482422,
+            21.889999389648438
+          ],
           "low": [
             22.579999923706055,
             22.399999618530273,
             21.889999389648438,
             21.68000030517578,
-            21.65999984741211
-          ],
-          "volume": [
-            7429200,
-            5539500,
-            5462500,
-            7331800,
-            1914369
+            21.639999389648438
           ],
           "close": [
             22.81999969482422,
             22.479999542236328,
             22.059999465942383,
             21.829999923706055,
-            21.690000534057617
+            null
+          ],
+          "volume": [
+            7429200,
+            5539500,
+            5462500,
+            7333400,
+            3969123
           ]
         }
       ],
@@ -114,7 +136,7 @@
             22.479999542236328,
             22.059999465942383,
             21.829999923706055,
-            21.690000534057617
+            null
           ]
         }
       ]

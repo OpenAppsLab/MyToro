@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:55.065Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EQIX?interval=1d&range=5d",
+  "symbol": "EQIX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EQIX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:11.064Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 1019.280029296875,
+    "firstOpen": 1045.469970703125,
+    "dayMovePct": -100,
+    "gapPct": 2.569454973459696,
+    "currentVolume": 513554,
+    "averageVolume": 697750.8,
+    "volumeSpikeRatio": 0.7360134879100102,
+    "morningHigh": 1083.8599853515625,
+    "morningLow": 1001.6099853515625,
+    "morningRangePct": 8.211779155848816,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.342709588707052,
+    "intradayVolatility": 43.18666112968135,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 966000600,
-      "regularMarketTime": 1785777402,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1026.075,
+      "regularMarketPrice": 1031.44,
       "fiftyTwoWeekHigh": 1128.68,
       "fiftyTwoWeekLow": 720.62,
-      "regularMarketDayHigh": 1029.74,
+      "regularMarketDayHigh": 1032.97,
       "regularMarketDayLow": 1003.54,
-      "regularMarketVolume": 208119,
+      "regularMarketVolume": 513554,
       "longName": "Equinix, Inc.",
       "shortName": "Equinix, Inc.",
       "chartPreviousClose": 1046.79,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            603000,
+            751400,
+            892800,
+            728000,
+            513554
+          ],
           "low": [
             1029.010009765625,
             1001.6099853515625,
@@ -82,14 +111,7 @@
             1044.1300048828125,
             1083.8599853515625,
             1066.1300048828125,
-            1029.739990234375
-          ],
-          "close": [
-            1034.8599853515625,
-            1008.02001953125,
-            1047.530029296875,
-            1019.280029296875,
-            1026.074951171875
+            1032.969970703125
           ],
           "open": [
             1045.469970703125,
@@ -98,12 +120,12 @@
             1058.52001953125,
             1016.739990234375
           ],
-          "volume": [
-            603000,
-            751400,
-            892800,
-            728000,
-            208119
+          "close": [
+            1034.8599853515625,
+            1008.02001953125,
+            1047.530029296875,
+            1019.280029296875,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             1008.02001953125,
             1047.530029296875,
             1019.280029296875,
-            1026.074951171875
+            null
           ]
         }
       ]

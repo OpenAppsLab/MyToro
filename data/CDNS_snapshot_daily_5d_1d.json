@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:23.438Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CDNS?interval=1d&range=5d",
+  "symbol": "CDNS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CDNS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:18.401Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 340.0199890136719,
+    "firstOpen": 335.1600036621094,
+    "dayMovePct": -100,
+    "gapPct": -1.429323424678743,
+    "currentVolume": 1763289,
+    "averageVolume": 2970497.8,
+    "volumeSpikeRatio": 0.5936005069588,
+    "morningHigh": 355.5899963378906,
+    "morningLow": 329.5899963378906,
+    "morningRangePct": 7.888588940468083,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.322030931750877,
+    "intradayVolatility": 43.16218424078389,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 550330200,
-      "regularMarketTime": 1785777426,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 337.88,
+      "regularMarketPrice": 336.15,
       "fiftyTwoWeekHigh": 416.69,
       "fiftyTwoWeekLow": 262.75,
       "regularMarketDayHigh": 344.445,
       "regularMarketDayLow": 331.675,
-      "regularMarketVolume": 637294,
+      "regularMarketVolume": 1763289,
       "longName": "Cadence Design Systems, Inc.",
       "shortName": "Cadence Design Systems, Inc.",
       "chartPreviousClose": 338.61,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,20 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            335.1600036621094,
-            332.55999755859375,
-            329.5899963378906,
-            334.25,
-            331.67498779296875
-          ],
-          "close": [
-            344.7200012207031,
-            332.760009765625,
-            332.82000732421875,
-            340.0199890136719,
-            337.8800048828125
-          ],
           "open": [
             335.1600036621094,
             349,
@@ -98,12 +106,26 @@
             344.7699890136719,
             344.44500732421875
           ],
+          "low": [
+            335.1600036621094,
+            332.55999755859375,
+            329.5899963378906,
+            334.25,
+            331.67498779296875
+          ],
           "volume": [
             4909600,
             3421100,
             2669700,
-            2088200,
-            637294
+            2088800,
+            1763289
+          ],
+          "close": [
+            344.7200012207031,
+            332.760009765625,
+            332.82000732421875,
+            340.0199890136719,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             332.760009765625,
             332.82000732421875,
             340.0199890136719,
-            337.8800048828125
+            null
           ]
         }
       ]

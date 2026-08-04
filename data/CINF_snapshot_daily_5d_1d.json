@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:47.436Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CINF?interval=1d&range=5d",
+  "symbol": "CINF",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CINF?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:47.662Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 177.67999267578125,
+    "firstOpen": 176.4600067138672,
+    "dayMovePct": -100,
+    "gapPct": -0.6866197727395299,
+    "currentVolume": 699632,
+    "averageVolume": 995786.4,
+    "volumeSpikeRatio": 0.7025924435200159,
+    "morningHigh": 186.19000244140625,
+    "morningLow": 172.8699951171875,
+    "morningRangePct": 7.705216463498596,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.665820517878707,
+    "intradayVolatility": 42.9583161535022,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777450,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 177.08,
+      "regularMarketPrice": 178.03,
       "fiftyTwoWeekHigh": 194.81,
       "fiftyTwoWeekLow": 146.52,
       "regularMarketDayHigh": 179.54,
       "regularMarketDayLow": 176.45,
-      "regularMarketVolume": 198730,
+      "regularMarketVolume": 699632,
       "longName": "Cincinnati Financial Corporation",
       "shortName": "Cincinnati Financial Corporatio",
       "chartPreviousClose": 184.23,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "high": [
+            186.19000244140625,
+            181.4499969482422,
+            179.9199981689453,
+            177.9499969482422,
+            179.5399932861328
+          ],
           "low": [
             174.1999969482422,
             178.4600067138672,
             173.89999389648438,
             172.8699951171875,
             176.4499969482422
+          ],
+          "close": [
+            182.6300048828125,
+            181.3300018310547,
+            174.72999572753906,
+            177.67999267578125,
+            null
           ],
           "open": [
             176.4600067138672,
@@ -89,21 +125,7 @@
             918400,
             962400,
             944400,
-            198730
-          ],
-          "high": [
-            186.19000244140625,
-            181.4499969482422,
-            179.9199981689453,
-            177.9499969482422,
-            179.5399932861328
-          ],
-          "close": [
-            182.6300048828125,
-            181.3300018310547,
-            174.72999572753906,
-            177.67999267578125,
-            177.0800018310547
+            699632
           ]
         }
       ],
@@ -114,7 +136,7 @@
             181.3300018310547,
             174.72999572753906,
             177.67999267578125,
-            177.0800018310547
+            null
           ]
         }
       ]

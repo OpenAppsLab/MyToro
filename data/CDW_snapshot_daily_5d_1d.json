@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:34.274Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CDW?interval=1d&range=5d",
+  "symbol": "CDW",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CDW?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:31.664Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 147.80999755859375,
+    "firstOpen": 139.63999938964844,
+    "dayMovePct": -100,
+    "gapPct": -5.527365065889148,
+    "currentVolume": 1790803,
+    "averageVolume": 1688120.6,
+    "volumeSpikeRatio": 1.0608264599105064,
+    "morningHigh": 151.22000122070312,
+    "morningLow": 138.24000549316406,
+    "morningRangePct": 9.389464128877599,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.337219316559022,
+    "intradayVolatility": 43.712207461967054,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1372339800,
-      "regularMarketTime": 1785777415,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 149.018,
+      "regularMarketPrice": 147.7,
       "fiftyTwoWeekHigh": 173.38,
       "fiftyTwoWeekLow": 97.12,
       "regularMarketDayHigh": 151.22,
-      "regularMarketDayLow": 148.685,
-      "regularMarketVolume": 688527,
+      "regularMarketDayLow": 147.6,
+      "regularMarketVolume": 1790803,
       "longName": "CDW Corporation",
       "shortName": "CDW Corporation",
       "chartPreviousClose": 138.04,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            138.24000549316406,
-            143.7100067138672,
-            141.9499969482422,
-            142.83999633789062,
-            148.68499755859375
-          ],
           "open": [
             139.63999938964844,
             145,
             146.30999755859375,
             144.75999450683594,
             149.5500030517578
+          ],
+          "low": [
+            138.24000549316406,
+            143.7100067138672,
+            141.9499969482422,
+            142.83999633789062,
+            147.60000610351562
           ],
           "high": [
             144.38999938964844,
@@ -91,19 +113,19 @@
             148.4199981689453,
             151.22000122070312
           ],
-          "volume": [
-            1434900,
-            2560900,
-            1541400,
-            1112600,
-            688527
-          ],
           "close": [
             144.02999877929688,
             147.9199981689453,
             145.55999755859375,
             147.80999755859375,
-            149.0175018310547
+            null
+          ],
+          "volume": [
+            1434900,
+            2560900,
+            1541400,
+            1112600,
+            1790803
           ]
         }
       ],
@@ -114,7 +136,7 @@
             147.9199981689453,
             145.55999755859375,
             147.80999755859375,
-            149.0175018310547
+            null
           ]
         }
       ]

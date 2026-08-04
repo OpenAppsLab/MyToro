@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:11.278Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BNY?interval=1d&range=5d",
+  "symbol": "BNY",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BNY?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:03.298Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 156.3300018310547,
+    "firstOpen": 157.47999572753906,
+    "dayMovePct": -100,
+    "gapPct": 0.7356194479720979,
+    "currentVolume": 2697843,
+    "averageVolume": 2774468.6,
+    "volumeSpikeRatio": 0.9723818824260617,
+    "morningHigh": 159.02999877929688,
+    "morningLow": 151.67999267578125,
+    "morningRangePct": 4.845732106030884,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.01049266364186,
+    "intradayVolatility": 43.32995078849124,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,37 +31,37 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 105283800,
-      "regularMarketTime": 1785777420,
+      "regularMarketTime": 1785787416,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 154.325,
+      "regularMarketPrice": 156.2,
       "fiftyTwoWeekHigh": 163.77,
       "fiftyTwoWeekLow": 99.67,
       "regularMarketDayHigh": 157,
       "regularMarketDayLow": 154.14,
-      "regularMarketVolume": 1070448,
+      "regularMarketVolume": 2697843,
       "shortName": "The Bank of New York Mellon Cor",
       "chartPreviousClose": 157.77,
       "priceHint": 2,
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -76,19 +98,26 @@
             157.2899932861328,
             157
           ],
-          "close": [
-            156.49000549316406,
-            152.5,
-            156.0800018310547,
-            156.3300018310547,
-            154.3249969482422
+          "low": [
+            154.8800048828125,
+            151.67999267578125,
+            153.02000427246094,
+            155.7100067138672,
+            154.13999938964844
           ],
           "volume": [
             3484800,
             2836000,
             2516600,
-            2336000,
-            1070448
+            2337100,
+            2697843
+          ],
+          "close": [
+            156.49000549316406,
+            152.5,
+            156.0800018310547,
+            156.3300018310547,
+            null
           ],
           "open": [
             157.47999572753906,
@@ -96,13 +125,6 @@
             153.85000610351562,
             156.6699981689453,
             156.3300018310547
-          ],
-          "low": [
-            154.8800048828125,
-            151.67999267578125,
-            153.02000427246094,
-            155.7100067138672,
-            154.13999938964844
           ]
         }
       ],
@@ -113,7 +135,7 @@
             152.5,
             156.0800018310547,
             156.3300018310547,
-            154.3249969482422
+            null
           ]
         }
       ]

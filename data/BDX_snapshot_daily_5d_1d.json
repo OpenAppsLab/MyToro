@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:03.730Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BDX?interval=1d&range=5d",
+  "symbol": "BDX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BDX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:54.133Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 165.6199951171875,
+    "firstOpen": 162,
+    "dayMovePct": -100,
+    "gapPct": -2.1857234777878753,
+    "currentVolume": 1725848,
+    "averageVolume": 2122289.6,
+    "volumeSpikeRatio": 0.8132009882157458,
+    "morningHigh": 171.1999969482422,
+    "morningLow": 161.6199951171875,
+    "morningRangePct": 5.927485534267227,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.102651219036588,
+    "intradayVolatility": 43.255174821363674,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785777352,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 168.75,
+      "regularMarketPrice": 170.21,
       "fiftyTwoWeekHigh": 187.35,
       "fiftyTwoWeekLow": 127.586,
       "regularMarketDayHigh": 171.2,
       "regularMarketDayLow": 167.155,
-      "regularMarketVolume": 621113,
+      "regularMarketVolume": 1725848,
       "longName": "Becton, Dickinson and Company",
       "shortName": "Becton, Dickinson and Company",
       "chartPreviousClose": 158.92,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -84,26 +106,26 @@
             163.8000030517578,
             167.75
           ],
-          "close": [
-            166.33999633789062,
-            168.39999389648438,
-            165.4499969482422,
-            165.6199951171875,
-            168.75
-          ],
-          "volume": [
-            2693300,
-            2126600,
-            2041000,
-            2024700,
-            621113
-          ],
           "high": [
             168.2100067138672,
             169.10000610351562,
             168.16000366210938,
             166.2899932861328,
             171.1999969482422
+          ],
+          "close": [
+            166.33999633789062,
+            168.39999389648438,
+            165.4499969482422,
+            165.6199951171875,
+            null
+          ],
+          "volume": [
+            2693300,
+            2126600,
+            2041000,
+            2024700,
+            1725848
           ]
         }
       ],
@@ -114,7 +136,7 @@
             168.39999389648438,
             165.4499969482422,
             165.6199951171875,
-            168.75
+            null
           ]
         }
       ]

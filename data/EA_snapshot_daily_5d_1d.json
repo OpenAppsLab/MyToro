@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:47.236Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EA?interval=1d&range=5d",
+  "symbol": "EA",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EA?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:01.493Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 209.86000061035156,
+    "firstOpen": 209.25999450683594,
+    "dayMovePct": -100,
+    "gapPct": -0.28590779651700293,
+    "currentVolume": 4398247,
+    "averageVolume": 4134429.4,
+    "volumeSpikeRatio": 1.0638099177603566,
+    "morningHigh": 209.97000122070312,
+    "morningLow": 208.52000427246094,
+    "morningRangePct": 0.6953754644794468,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.881631188199268,
+    "intradayVolatility": 43.36974932992848,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 622301400,
-      "regularMarketTime": 1785777485,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 209.935,
-      "fiftyTwoWeekHigh": 209.95,
+      "regularMarketPrice": 209.91,
+      "fiftyTwoWeekHigh": 209.97,
       "fiftyTwoWeekLow": 156.37,
-      "regularMarketDayHigh": 209.95,
+      "regularMarketDayHigh": 209.97,
       "regularMarketDayLow": 209.89,
-      "regularMarketVolume": 1529177,
+      "regularMarketVolume": 4398247,
       "longName": "Electronic Arts Inc.",
       "shortName": "Electronic Arts Inc.",
       "chartPreviousClose": 209.07,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            208.8699951171875,
+            208.91000366210938,
+            209.58999633789062,
+            209.86000061035156,
+            null
+          ],
+          "high": [
+            209.41000366210938,
+            209.16000366210938,
+            209.8000030517578,
+            209.92999267578125,
+            209.97000122070312
+          ],
           "low": [
             208.72000122070312,
             208.52000427246094,
             208.6999969482422,
             209.75999450683594,
             209.88999938964844
-          ],
-          "close": [
-            208.8699951171875,
-            208.91000366210938,
-            209.58999633789062,
-            209.86000061035156,
-            209.93499755859375
-          ],
-          "volume": [
-            3709400,
-            3568700,
-            4143500,
-            4850900,
-            1529177
           ],
           "open": [
             209.25999450683594,
@@ -98,12 +120,12 @@
             209.85000610351562,
             209.89999389648438
           ],
-          "high": [
-            209.41000366210938,
-            209.16000366210938,
-            209.8000030517578,
-            209.92999267578125,
-            209.9499969482422
+          "volume": [
+            3709400,
+            3568700,
+            4143500,
+            4852300,
+            4398247
           ]
         }
       ],
@@ -114,7 +136,7 @@
             208.91000366210938,
             209.58999633789062,
             209.86000061035156,
-            209.93499755859375
+            null
           ]
         }
       ]

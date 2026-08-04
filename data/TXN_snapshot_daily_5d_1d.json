@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:58.676Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/TXN?interval=1d&range=5d",
+  "symbol": "TXN",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/TXN?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:34.438Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 275.739990234375,
+    "firstOpen": 275.4599914550781,
+    "dayMovePct": -100,
+    "gapPct": -0.10154449452866089,
+    "currentVolume": 7803783,
+    "averageVolume": 9450096.6,
+    "volumeSpikeRatio": 0.8257887014615279,
+    "morningHigh": 285.1099853515625,
+    "morningLow": 264.80999755859375,
+    "morningRangePct": 7.665869106198314,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.104039404755422,
+    "intradayVolatility": 43.27880662733811,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785777347,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 267.535,
+      "regularMarketPrice": 269.04,
       "fiftyTwoWeekHigh": 334.03,
       "fiftyTwoWeekLow": 152.73,
       "regularMarketDayHigh": 273.34,
       "regularMarketDayLow": 264.81,
-      "regularMarketVolume": 3842161,
+      "regularMarketVolume": 7803783,
       "longName": "Texas Instruments Incorporated",
       "shortName": "Texas Instruments Incorporated",
       "chartPreviousClose": 279.41,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -88,15 +110,15 @@
             11160400,
             10212400,
             9238400,
-            8832500,
-            3842161
+            8835500,
+            7803783
           ],
           "close": [
             277.07000732421875,
             271.29998779296875,
             278.760009765625,
             275.739990234375,
-            267.5350036621094
+            null
           ],
           "low": [
             273.45001220703125,
@@ -114,7 +136,7 @@
             269.9179992675781,
             277.3399963378906,
             275.739990234375,
-            267.5350036621094
+            null
           ]
         }
       ]

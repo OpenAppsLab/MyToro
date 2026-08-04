@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:40.485Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AON?interval=1d&range=5d",
+  "symbol": "AON",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AON?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:25.987Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 360.54998779296875,
+    "firstOpen": 370,
+    "dayMovePct": -100,
+    "gapPct": 2.6209991754201742,
+    "currentVolume": 1603435,
+    "averageVolume": 2133067,
+    "volumeSpikeRatio": 0.7517040017964742,
+    "morningHigh": 382.3399963378906,
+    "morningLow": 356.12139892578125,
+    "morningRangePct": 7.3622639614457865,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.38136638890697,
+    "intradayVolatility": 42.50832674734219,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 328800600,
-      "regularMarketTime": 1785777356,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 357.67,
+      "regularMarketPrice": 357.63,
       "fiftyTwoWeekHigh": 382.34,
       "fiftyTwoWeekLow": 304.59,
       "regularMarketDayHigh": 366.32,
-      "regularMarketDayLow": 356.51,
-      "regularMarketVolume": 406566,
+      "regularMarketDayLow": 356.121,
+      "regularMarketVolume": 1603435,
       "longName": "Aon plc",
       "shortName": "Aon plc",
       "chartPreviousClose": 367.17,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,51 +92,51 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            382.3399963378906,
-            379.5,
-            370.489990234375,
-            365.0199890136719,
-            366.32000732421875
-          ],
-          "close": [
-            381.260009765625,
-            377.1600036621094,
-            366.57000732421875,
-            360.54998779296875,
-            357.6700134277344
-          ],
-          "volume": [
-            1508000,
-            2010600,
-            4227700,
-            1315600,
-            406566
-          ],
-          "low": [
-            367.1700134277344,
-            362.260009765625,
-            358.489990234375,
-            359.7799987792969,
-            356.510009765625
-          ],
           "open": [
             370,
             367.6400146484375,
             367.19000244140625,
             363.0799865722656,
             362.0400085449219
+          ],
+          "close": [
+            381.260009765625,
+            377.1600036621094,
+            366.57000732421875,
+            360.54998779296875,
+            null
+          ],
+          "volume": [
+            1508000,
+            2010600,
+            4227700,
+            1315600,
+            1603435
+          ],
+          "low": [
+            367.1700134277344,
+            362.260009765625,
+            358.489990234375,
+            359.7799987792969,
+            356.12139892578125
+          ],
+          "high": [
+            382.3399963378906,
+            379.5,
+            370.489990234375,
+            365.0199890136719,
+            366.32000732421875
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            381.260009765625,
-            377.1600036621094,
-            366.57000732421875,
-            360.54998779296875,
-            357.6700134277344
+            380.3929138183594,
+            376.30224609375,
+            365.736328125,
+            359.7300109863281,
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:56.846Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVB?interval=1d&range=5d",
+  "symbol": "AVB",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AVB?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:45.954Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 185.61000061035156,
+    "firstOpen": 189.38999938964844,
+    "dayMovePct": -100,
+    "gapPct": 2.0365275399315217,
+    "currentVolume": 394503,
+    "averageVolume": 658960.6,
+    "volumeSpikeRatio": 0.5986746400315892,
+    "morningHigh": 192.85000610351562,
+    "morningLow": 185.01480102539062,
+    "morningRangePct": 4.234907172129289,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.625055434187683,
+    "intradayVolatility": 42.9587612295674,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 763396200,
-      "regularMarketTime": 1785777358,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 186.88,
+      "regularMarketPrice": 188.78,
       "fiftyTwoWeekHigh": 198.63,
       "fiftyTwoWeekLow": 160.1,
-      "regularMarketDayHigh": 188.01,
+      "regularMarketDayHigh": 189.22,
       "regularMarketDayLow": 185.015,
-      "regularMarketVolume": 181655,
+      "regularMarketVolume": 394503,
       "longName": "AvalonBay Communities, Inc.",
       "shortName": "AvalonBay Communities, Inc.",
       "chartPreviousClose": 187.56,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            191.99000549316406,
-            192.85000610351562,
-            191.85000610351562,
-            187.24000549316406,
-            188.00999450683594
-          ],
           "low": [
             188.6300048828125,
             190.82000732421875,
@@ -84,12 +99,19 @@
             185.10000610351562,
             185.01480102539062
           ],
-          "close": [
-            190.38999938964844,
-            192.4499969482422,
-            187.77999877929688,
-            185.61000061035156,
-            186.8800048828125
+          "volume": [
+            965000,
+            557700,
+            647700,
+            729900,
+            394503
+          ],
+          "high": [
+            191.99000549316406,
+            192.85000610351562,
+            191.85000610351562,
+            187.24000549316406,
+            189.22000122070312
           ],
           "open": [
             189.38999938964844,
@@ -98,12 +120,12 @@
             186.67999267578125,
             185.60000610351562
           ],
-          "volume": [
-            965000,
-            557700,
-            647700,
-            729900,
-            181655
+          "close": [
+            190.38999938964844,
+            192.4499969482422,
+            187.77999877929688,
+            185.61000061035156,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             192.4499969482422,
             187.77999877929688,
             185.61000061035156,
-            186.8800048828125
+            null
           ]
         }
       ]

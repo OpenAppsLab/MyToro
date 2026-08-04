@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:20.564Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FLEX?interval=1d&range=5d",
+  "symbol": "FLEX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FLEX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:42.246Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 113.75,
+    "firstOpen": 109.94999694824219,
+    "dayMovePct": -100,
+    "gapPct": -3.3406620235233517,
+    "currentVolume": 4275486,
+    "averageVolume": 8015737.2,
+    "volumeSpikeRatio": 0.5333864987489859,
+    "morningHigh": 119.38999938964844,
+    "morningLow": 99.5,
+    "morningRangePct": 19.989949135325062,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.695907724079838,
+    "intradayVolatility": 43.93077333211674,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 764001000,
-      "regularMarketTime": 1785777559,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 115.91,
+      "regularMarketPrice": 117.45,
       "fiftyTwoWeekHigh": 166.86,
       "fiftyTwoWeekLow": 47.83,
-      "regularMarketDayHigh": 116.36,
+      "regularMarketDayHigh": 117.73,
       "regularMarketDayLow": 107.1,
-      "regularMarketVolume": 2110202,
+      "regularMarketVolume": 4275486,
       "longName": "Flex Ltd.",
       "shortName": "Flex Ltd.",
       "chartPreviousClose": 116.07,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -77,33 +99,33 @@
             117.91000366210938,
             109.94000244140625
           ],
-          "high": [
-            114.23999786376953,
-            108.5199966430664,
-            112.33000183105469,
-            119.38999938964844,
-            116.36000061035156
-          ],
-          "volume": [
-            11029000,
-            9974000,
-            8155800,
-            6643200,
-            2110202
-          ],
-          "close": [
-            113.27999877929688,
-            103.0199966430664,
-            111.91000366210938,
-            113.75,
-            115.91000366210938
-          ],
           "low": [
             102.75,
             99.5,
             104.20999908447266,
             111.93000030517578,
             107.0999984741211
+          ],
+          "close": [
+            113.27999877929688,
+            103.0199966430664,
+            111.91000366210938,
+            113.75,
+            null
+          ],
+          "volume": [
+            11029000,
+            9974000,
+            8155800,
+            6644400,
+            4275486
+          ],
+          "high": [
+            114.23999786376953,
+            108.5199966430664,
+            112.33000183105469,
+            119.38999938964844,
+            117.7300033569336
           ]
         }
       ],
@@ -114,7 +136,7 @@
             103.0199966430664,
             111.91000366210938,
             113.75,
-            115.91000366210938
+            null
           ]
         }
       ]

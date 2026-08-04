@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:35.936Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?interval=1d&range=5d",
+  "symbol": "NOW",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:07.199Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 111.2300033569336,
+    "firstOpen": 106.87999725341797,
+    "dayMovePct": -100,
+    "gapPct": -3.9108207967562416,
+    "currentVolume": 22545076,
+    "averageVolume": 29391495.2,
+    "volumeSpikeRatio": 0.767061214361085,
+    "morningHigh": 119.62999725341797,
+    "morningLow": 106.05000305175781,
+    "morningRangePct": 12.805274692007718,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.8037322347405,
+    "intradayVolatility": 43.548711353143354,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1340976600,
-      "regularMarketTime": 1785777334,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 115.53,
+      "regularMarketPrice": 114.19,
       "fiftyTwoWeekHigh": 194.726,
       "fiftyTwoWeekLow": 81.24,
       "regularMarketDayHigh": 119.63,
       "regularMarketDayLow": 113.7,
-      "regularMarketVolume": 16717381,
+      "regularMarketVolume": 22545076,
       "longName": "ServiceNow, Inc.",
       "shortName": "ServiceNow, Inc.",
       "chartPreviousClose": 105.56,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -74,8 +96,8 @@
             33681100,
             40448100,
             29757900,
-            20455600,
-            16717381
+            20525300,
+            22545076
           ],
           "high": [
             112.27999877929688,
@@ -84,12 +106,12 @@
             112.38999938964844,
             119.62999725341797
           ],
-          "close": [
-            110.62000274658203,
-            115.76000213623047,
-            110.06999969482422,
-            111.2300033569336,
-            115.52999877929688
+          "low": [
+            106.5,
+            109.5,
+            106.37999725341797,
+            106.05000305175781,
+            113.69999694824219
           ],
           "open": [
             106.87999725341797,
@@ -98,12 +120,12 @@
             108.5,
             114.51000213623047
           ],
-          "low": [
-            106.5,
-            109.5,
-            106.37999725341797,
-            106.05000305175781,
-            113.69999694824219
+          "close": [
+            110.62000274658203,
+            115.76000213623047,
+            110.06999969482422,
+            111.2300033569336,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             115.76000213623047,
             110.06999969482422,
             111.2300033569336,
-            115.52999877929688
+            null
           ]
         }
       ]

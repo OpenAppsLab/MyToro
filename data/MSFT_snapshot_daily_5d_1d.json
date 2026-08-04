@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:31.648Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?interval=1d&range=5d",
+  "symbol": "MSFT",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:01.727Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 464.7200012207031,
+    "firstOpen": 393.1600036621094,
+    "dayMovePct": -100,
+    "gapPct": -15.39851897284893,
+    "currentVolume": 61678582,
+    "averageVolume": 62452356.4,
+    "volumeSpikeRatio": 0.9876101648584072,
+    "morningHigh": 491.6400146484375,
+    "morningLow": 388.739990234375,
+    "morningRangePct": 26.4701412252501,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -20.547089377679693,
+    "intradayVolatility": 46.26379163366918,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 511108200,
-      "regularMarketTime": 1785777331,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 487.91,
+      "regularMarketPrice": 487.65,
       "fiftyTwoWeekHigh": 553.72,
       "fiftyTwoWeekLow": 349.2,
-      "regularMarketDayHigh": 491.37,
+      "regularMarketDayHigh": 491.64,
       "regularMarketDayLow": 475,
-      "regularMarketVolume": 38256172,
+      "regularMarketVolume": 61678582,
       "longName": "Microsoft Corporation",
       "shortName": "Microsoft Corporation",
       "chartPreviousClose": 389.1,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            393.1600036621094,
-            393.3999938964844,
-            437.8999938964844,
-            450,
-            476.3949890136719
+          "volume": [
+            32367500,
+            47209000,
+            110160700,
+            60846000,
+            61678582
           ],
           "low": [
             391.29998779296875,
@@ -84,26 +106,26 @@
             449.3299865722656,
             475.0000915527344
           ],
-          "volume": [
-            32367500,
-            47209000,
-            110160700,
-            60748000,
-            38256172
+          "close": [
+            393.3500061035156,
+            390.5400085449219,
+            451.1000061035156,
+            464.7200012207031,
+            null
           ],
           "high": [
             400.32000732421875,
             401.25,
             458.69000244140625,
             466.8399963378906,
-            491.3699951171875
+            491.6400146484375
           ],
-          "close": [
-            393.3500061035156,
-            390.5400085449219,
-            451.1000061035156,
-            464.7200012207031,
-            487.9100036621094
+          "open": [
+            393.1600036621094,
+            393.3999938964844,
+            437.8999938964844,
+            450,
+            476.3949890136719
           ]
         }
       ],
@@ -114,7 +136,7 @@
             390.5400085449219,
             451.1000061035156,
             464.7200012207031,
-            487.9100036621094
+            null
           ]
         }
       ]

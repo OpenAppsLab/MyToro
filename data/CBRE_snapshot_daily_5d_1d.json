@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:33.215Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CBRE?interval=1d&range=5d",
+  "symbol": "CBRE",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CBRE?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:30.416Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 146.80999755859375,
+    "firstOpen": 145.80999755859375,
+    "dayMovePct": -100,
+    "gapPct": -0.6811525213743616,
+    "currentVolume": 1496967,
+    "averageVolume": 2477673.4,
+    "volumeSpikeRatio": 0.6041825367298208,
+    "morningHigh": 153.0800018310547,
+    "morningLow": 143.55999755859375,
+    "morningRangePct": 6.631376730537604,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.034949608138888,
+    "intradayVolatility": 43.294594760565325,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1086874200,
-      "regularMarketTime": 1785777443,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 146.25,
+      "regularMarketPrice": 148.43,
       "fiftyTwoWeekHigh": 174.27,
       "fiftyTwoWeekLow": 121.69,
       "regularMarketDayHigh": 148.6,
       "regularMarketDayLow": 144.89,
-      "regularMarketVolume": 511120,
+      "regularMarketVolume": 1496967,
       "longName": "CBRE Group, Inc.",
       "shortName": "CBRE Group Inc",
       "chartPreviousClose": 143.88,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -77,13 +99,6 @@
             148.24000549316406,
             144.57000732421875
           ],
-          "high": [
-            149,
-            153.0800018310547,
-            150.39999389648438,
-            150.49000549316406,
-            148.60000610351562
-          ],
           "low": [
             145.0399932861328,
             143.55999755859375,
@@ -91,19 +106,26 @@
             144.8699951171875,
             144.88999938964844
           ],
-          "volume": [
-            2519800,
-            3663500,
-            2876800,
-            1830800,
-            511120
+          "high": [
+            149,
+            153.0800018310547,
+            150.39999389648438,
+            150.49000549316406,
+            148.60000610351562
           ],
           "close": [
             147.0500030517578,
             147.77999877929688,
             149.4600067138672,
             146.80999755859375,
-            146.25
+            null
+          ],
+          "volume": [
+            2519800,
+            3663500,
+            2876800,
+            1831300,
+            1496967
           ]
         }
       ],
@@ -114,7 +136,7 @@
             147.77999877929688,
             149.4600067138672,
             146.80999755859375,
-            146.25
+            null
           ]
         }
       ]

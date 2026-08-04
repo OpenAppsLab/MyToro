@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:54.558Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAC?interval=1d&range=5d",
+  "symbol": "BAC",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BAC?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:16.551Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 61.95000076293945,
+    "firstOpen": 62.29999923706055,
+    "dayMovePct": -100,
+    "gapPct": 0.5649692813732369,
+    "currentVolume": 18813868,
+    "averageVolume": 27523173.6,
+    "volumeSpikeRatio": 0.6835646307880716,
+    "morningHigh": 62.65999984741211,
+    "morningLow": 60.90999984741211,
+    "morningRangePct": 2.87309145359381,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.259531711135995,
+    "intradayVolatility": 43.17188338949368,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785777289,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 61.825,
+      "regularMarketPrice": 62.48,
       "fiftyTwoWeekHigh": 62.99,
       "fiftyTwoWeekLow": 44.75,
-      "regularMarketDayHigh": 62.458,
+      "regularMarketDayHigh": 62.505,
       "regularMarketDayLow": 61.71,
-      "regularMarketVolume": 11023261,
+      "regularMarketVolume": 18813868,
       "longName": "Bank of America Corporation",
       "shortName": "Bank of America Corporation",
       "chartPreviousClose": 62.13,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,27 @@
     "indicators": {
       "quote": [
         {
+          "low": [
+            61.900001525878906,
+            60.90999984741211,
+            61.029998779296875,
+            61.540000915527344,
+            61.709999084472656
+          ],
+          "close": [
+            62.619998931884766,
+            61.06999969482422,
+            61.72999954223633,
+            61.95000076293945,
+            null
+          ],
+          "high": [
+            62.65999984741211,
+            62.650001525878906,
+            61.93000030517578,
+            62.2400016784668,
+            62.505001068115234
+          ],
           "open": [
             62.29999923706055,
             62.5099983215332,
@@ -77,33 +120,12 @@
             61.540000915527344,
             62.2599983215332
           ],
-          "close": [
-            62.619998931884766,
-            61.06999969482422,
-            61.72999954223633,
-            61.95000076293945,
-            61.82500076293945
-          ],
           "volume": [
             28737900,
             37919000,
             24844000,
-            27282600,
-            11023261
-          ],
-          "high": [
-            62.65999984741211,
-            62.650001525878906,
-            61.93000030517578,
-            62.2400016784668,
-            62.45750045776367
-          ],
-          "low": [
-            61.900001525878906,
-            60.90999984741211,
-            61.029998779296875,
-            61.540000915527344,
-            61.709999084472656
+            27301100,
+            18813868
           ]
         }
       ],
@@ -114,7 +136,7 @@
             61.06999969482422,
             61.72999954223633,
             61.95000076293945,
-            61.82500076293945
+            null
           ]
         }
       ]

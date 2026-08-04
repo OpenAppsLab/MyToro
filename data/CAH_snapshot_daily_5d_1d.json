@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:26.739Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CAH?interval=1d&range=5d",
+  "symbol": "CAH",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CAH?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:22.405Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 230.02999877929688,
+    "firstOpen": 232.08999633789062,
+    "dayMovePct": -100,
+    "gapPct": 0.8955343083621985,
+    "currentVolume": 1612607,
+    "averageVolume": 2046561.4,
+    "volumeSpikeRatio": 0.7879592569272538,
+    "morningHigh": 235.72000122070312,
+    "morningLow": 224.11000061035156,
+    "morningRangePct": 5.180491981050532,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.26229123759872,
+    "intradayVolatility": 43.16217130885407,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 428851800,
-      "regularMarketTime": 1785777419,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 232.29,
+      "regularMarketPrice": 235.6,
       "fiftyTwoWeekHigh": 243.21,
       "fiftyTwoWeekLow": 137.75,
-      "regularMarketDayHigh": 234.74,
+      "regularMarketDayHigh": 235.72,
       "regularMarketDayLow": 230.01,
-      "regularMarketVolume": 691108,
+      "regularMarketVolume": 1612607,
       "longName": "Cardinal Health, Inc.",
       "shortName": "Cardinal Health, Inc.",
       "chartPreviousClose": 229.35,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -77,12 +99,19 @@
             226.66000366210938,
             230.38999938964844
           ],
-          "high": [
-            233.77000427246094,
-            234.02000427246094,
-            227.77999877929688,
-            231.22999572753906,
-            234.74000549316406
+          "close": [
+            232.50999450683594,
+            229.1199951171875,
+            227.07000732421875,
+            230.02999877929688,
+            null
+          ],
+          "volume": [
+            2652200,
+            2746000,
+            1484200,
+            1737800,
+            1612607
           ],
           "low": [
             230.32000732421875,
@@ -91,19 +120,12 @@
             225.38999938964844,
             230.00999450683594
           ],
-          "volume": [
-            2652200,
-            2746000,
-            1484200,
-            1737800,
-            691108
-          ],
-          "close": [
-            232.50999450683594,
-            229.1199951171875,
-            227.07000732421875,
-            230.02999877929688,
-            232.2899932861328
+          "high": [
+            233.77000427246094,
+            234.02000427246094,
+            227.77999877929688,
+            231.22999572753906,
+            235.72000122070312
           ]
         }
       ],
@@ -114,7 +136,7 @@
             229.1199951171875,
             227.07000732421875,
             230.02999877929688,
-            232.2899932861328
+            null
           ]
         }
       ]

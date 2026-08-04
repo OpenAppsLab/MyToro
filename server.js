@@ -298,6 +298,26 @@ const autoOrderState = {
   orderCount: 0
 };
 
+const reliabilityMonitorState = {
+  dataHealth: {
+    healthy: true,
+    stale: false,
+    providerFailureCount: 0,
+    fallbackUsed: false,
+    lastUpdatedAt: null,
+    warnings: []
+  },
+  performance: {
+    sampleSize: 0,
+    successCount: 0,
+    failureCount: 0,
+    successRate: 1,
+    autoOrderPaused: false,
+    pauseReason: null,
+    lastUpdatedAt: null
+  }
+};
+
 const RUNTIME_SETTINGS_PATH = path.join(MODELS_DIR, 'runtime_settings.json');
 
 const AUTO_ORDER_SETTINGS = {
@@ -443,9 +463,154 @@ function getLiveScore(live) {
   return clamp(Number((live?.score ?? live?.ensembleScore) || 0) / 100, 0, 1);
 }
 
+function computeLiquidityScore(item) {
+  const volume = Number(item.volume || 0);
+  if (volume >= 200000000) return 1;
+  if (volume >= 100000000) return 0.9;
+  if (volume >= 50000000) return 0.75;
+  if (volume > 0) return 0.5;
+  return 0.25;
+}
+
+function computeExpectedMoveScore(live) {
+  const positiveMove = Math.max(0, Number(live.dayMovePct || 0));
+  const targetMovePct = Number(live.targetMovePct || 0);
+  if (targetMovePct <= 0) {
+    return 0.5;
+  }
+  const ratio = positiveMove / targetMovePct;
+  return clamp(ratio, 0, 1);
+}
+
+function scoreIntradayCandidate(item, live, model, context = {}) {
+  const marketStats = context.marketStats || {};
+  const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
+  const probability = getCalibratedProbability(intradayFeatures, model);
+  const trendScore = Number(live.advancedSignals?.movingAverageDistancePct || 0) / 10;
+  const momentumScore = Number(live.advancedSignals?.rsi || 50) > 55 ? 0.12 : 0;
+  const volumeSignal = Number(live.advancedSignals?.volumeSpike ? 0.1 : 0);
+  const trendStrength = clamp(trendScore + momentumScore + volumeSignal, 0, 1);
+  const liquidityScore = computeLiquidityScore(item);
+  const expectedMoveScore = computeExpectedMoveScore(live);
+  const qualityScore = clamp(
+    ((Number(live.ensembleScore || 0) / 100) * 0.55) +
+    ((Number(live.advancedSignals?.sectorStrength || 0.5)) * 0.2) +
+    (trendStrength * 0.25),
+    0,
+    1
+  );
+  const compositeScore = clamp(
+    (probability * 0.55) +
+    (qualityScore * 0.2) +
+    (expectedMoveScore * 0.15) +
+    (liquidityScore * 0.1),
+    0,
+    1
+  );
+
+  const viable = probability >= 0.55 && expectedMoveScore >= 0.75 && qualityScore >= 0.45;
+
+  return {
+    probability,
+    trendStrength,
+    expectedMoveScore,
+    liquidityScore,
+    qualityScore,
+    compositeScore,
+    viable,
+    isViable: viable,
+    intradayFeatures
+  };
+}
+
 function isRuntimeTradingPaused() {
   const tuningReport = loadWalkForwardTuningReport();
-  return tuningReport?.healthGate === 'pause';
+  const reliabilityPaused = reliabilityMonitorState.performance.autoOrderPaused;
+  return tuningReport?.healthGate === 'pause' || reliabilityPaused;
+}
+
+function resetReliabilityMonitor() {
+  reliabilityMonitorState.dataHealth = {
+    healthy: true,
+    stale: false,
+    providerFailureCount: 0,
+    fallbackUsed: false,
+    lastUpdatedAt: null,
+    warnings: []
+  };
+  reliabilityMonitorState.performance = {
+    sampleSize: 0,
+    successCount: 0,
+    failureCount: 0,
+    successRate: 1,
+    autoOrderPaused: false,
+    pauseReason: null,
+    lastUpdatedAt: null
+  };
+}
+
+function updateDataHealthMonitoring({ marketItems = [], newsItems = [], providerErrors = [], sourceUpdatedAt = null, fallbackUsed = false } = {}) {
+  const providerFailureCount = Array.isArray(providerErrors) ? providerErrors.filter(Boolean).length : 0;
+  const now = Date.now();
+  const freshnessWindowMs = 15 * 60 * 1000;
+  const stale = sourceUpdatedAt != null && now - Number(sourceUpdatedAt) > freshnessWindowMs;
+  const warnings = [];
+
+  if (providerFailureCount > 0) {
+    warnings.push(`Provider failures detected (${providerFailureCount}).`);
+  }
+  if (stale) {
+    warnings.push('Data source is stale and has not refreshed recently.');
+  }
+  if (fallbackUsed) {
+    warnings.push('Fallback data source was used.');
+  }
+  if (!marketItems.length) {
+    warnings.push('No market items were returned.');
+  }
+
+  reliabilityMonitorState.dataHealth = {
+    healthy: warnings.length === 0,
+    stale,
+    providerFailureCount,
+    fallbackUsed,
+    lastUpdatedAt: sourceUpdatedAt ?? reliabilityMonitorState.dataHealth.lastUpdatedAt,
+    warnings
+  };
+
+  return reliabilityMonitorState.dataHealth;
+}
+
+function recordOrderOutcomeMonitoring(order = {}, outcome = {}) {
+  const success = Boolean(outcome?.profitable);
+  const performance = reliabilityMonitorState.performance;
+  const sampleSize = performance.sampleSize + 1;
+  const successCount = performance.successCount + (success ? 1 : 0);
+  const failureCount = performance.failureCount + (success ? 0 : 1);
+  const successRate = sampleSize > 0 ? successCount / sampleSize : 1;
+
+  reliabilityMonitorState.performance = {
+    sampleSize,
+    successCount,
+    failureCount,
+    successRate,
+    autoOrderPaused: sampleSize >= 3 && successRate < 0.5,
+    pauseReason: sampleSize >= 3 && successRate < 0.5
+      ? `Auto-ordering paused because live candidate success rate fell to ${Math.round(successRate * 100)}%.`
+      : null,
+    lastUpdatedAt: Date.now()
+  };
+
+  return reliabilityMonitorState.performance;
+}
+
+function getReliabilityMonitorSnapshot() {
+  return {
+    dataHealth: reliabilityMonitorState.dataHealth,
+    performance: reliabilityMonitorState.performance,
+    autoOrderPaused: reliabilityMonitorState.performance.autoOrderPaused,
+    pauseReason: reliabilityMonitorState.performance.pauseReason
+  };
 }
 
 const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY || 'd9kd0t9r01qq9sqg0da0d9kd0t9r01qq9sqg0dag';
@@ -1063,8 +1228,41 @@ function buildWalkForwardSplits(examples, foldSize = 50) {
   return splits;
 }
 
+function buildKFoldSplits(examples, foldCount = 5) {
+  const splits = [];
+  const n = examples.length;
+  const k = Math.min(Math.max(2, foldCount), n);
+  if (n < 2) {
+    return splits;
+  }
+
+  const baseSize = Math.floor(n / k);
+  let remainder = n % k;
+  let start = 0;
+
+  for (let fold = 0; fold < k; fold += 1) {
+    const size = baseSize + (remainder > 0 ? 1 : 0);
+    if (size <= 0) break;
+    const test = examples.slice(start, start + size);
+    const train = examples.slice(0, start).concat(examples.slice(start + size));
+    splits.push({ train, test });
+    start += size;
+    remainder -= 1;
+  }
+
+  return splits;
+}
+
 function evaluateWalkForward(examples, featureNames, initialModel = DEFAULT_LOGISTIC_MODEL, foldSize = 50) {
-  const splits = buildWalkForwardSplits(examples, foldSize);
+  const foldCount = Math.min(5, Math.max(2, Math.floor(examples.length / 10) || 2));
+  const splits = examples.length >= foldSize * 2
+    ? buildWalkForwardSplits(examples, foldSize)
+    : buildKFoldSplits(examples, foldCount);
+
+  if (!splits.length) {
+    return [];
+  }
+
   const results = splits.map(({ train, test }) => {
     const model = trainLogisticRegression(train, featureNames);
     const predictions = test.map((example) => logisticPredict(example.features, model.weights, model.bias, model));
@@ -1181,8 +1379,16 @@ function labelIntradayOutcome(item, thresholdPct = 2.5, options = {}) {
     : Math.min(Math.max(1, closes.length - 1), 3);
   const futureMoves = [];
 
+  let signalIndex = closes.findIndex((value) => Number(value) >= signalPrice);
+  if (signalIndex === -1) {
+    signalIndex = closes.findIndex((value) => Number(value) > signalPrice) ;
+  }
+  if (signalIndex === -1) {
+    signalIndex = 0;
+  }
+
   for (let offset = 1; offset <= horizon; offset += 1) {
-    const futureIndex = Math.min(closes.length - 1, offset);
+    const futureIndex = Math.min(closes.length - 1, signalIndex + offset);
     const futureClose = closes[futureIndex];
     if (futureClose === undefined || futureClose === null) {
       continue;
@@ -1249,6 +1455,101 @@ function predictIntradayPicks(market, news = [], context = {}) {
   }).sort((a, b) => b.probability - a.probability);
 
   return picks;
+}
+
+async function buildCandidateDetail(symbol, targetProfit = DAILY_TARGET_PROFIT, ballparkAmount = AUTO_ORDER_SETTINGS.ballparkAmount, leverage = AUTO_ORDER_SETTINGS.leverage) {
+  if (!symbol) {
+    return null;
+  }
+
+  const [market, news] = await Promise.all([loadMarketSnapshot(), loadNewsSnapshot()]);
+  const item = (market || []).find((entry) => String(entry.symbol || '').toUpperCase() === String(symbol || '').toUpperCase());
+  if (!item) {
+    return null;
+  }
+
+  const peerMoves = (market || []).reduce((acc, entry) => {
+    acc[entry.symbol] = Number(entry.dayMovePct || 0);
+    return acc;
+  }, {});
+
+  const marketStats = buildMarketFeatureStats(market || []);
+  const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
+  const model = getIntradayModel();
+  const score = scoreIntradayCandidate(item, live, model, { marketStats });
+  const evaluation = evaluateOrderEligibility({
+    symbol: item.symbol,
+    name: item.name,
+    currentPrice: Number(item.currentPrice || 0),
+    dayMovePct: Number(item.dayMovePct || 0),
+    probability: score.probability,
+    combinedScore: score.compositeScore,
+    advancedSignals: live.advancedSignals || {},
+    stopLossAmount: 0
+  }, {
+    targetProfit,
+    ballparkAmount,
+    leverage,
+    stopLossPct: 5,
+    marketOpen: isNasdaqMarketOpen(),
+    requireManualReview: true
+  });
+
+  const snapshot = loadLocalIntradaySnapshot(item.symbol);
+  const closes = Array.isArray(snapshot?.closes) ? snapshot.closes.slice(-10) : [];
+  const highHistory = Array.isArray(snapshot?.highs) ? snapshot.highs.slice(-10) : [];
+  const lowHistory = Array.isArray(snapshot?.lows) ? snapshot.lows.slice(-10) : [];
+  const volumeHistory = Array.isArray(snapshot?.volumes) ? snapshot.volumes.slice(-10) : [];
+
+  const featureBreakdown = Object.entries(live).filter(([key]) => [
+    'probability', 'ensembleScore', 'qualityScore', 'liquidityScore', 'expectedMoveScore', 'trendStrength', 'optionsFlowScore', 'correlationScore'
+  ].includes(key)).map(([key, value]) => ({
+    label: key.replace(/([A-Z])/g, ' $1').replace(/^./, (s) => s.toUpperCase()),
+    value: Number(value).toFixed(2),
+    key
+  }));
+
+  const riskTable = (evaluation.reasons || []).map((reason, index) => ({
+    id: `${index + 1}`,
+    description: reason,
+    status: evaluation.status
+  }));
+
+  return {
+    symbol: item.symbol,
+    name: item.name,
+    region: item.region,
+    currentPrice: Number(item.currentPrice || 0),
+    changePct: Number(item.changePct || 0),
+    dayMovePct: Number(item.dayMovePct || 0),
+    targetMovePct: ballparkAmount > 0 ? Number(((targetProfit / ballparkAmount) * 100).toFixed(2)) : 0,
+    probability: score.probability,
+    combinedScore: score.compositeScore,
+    qualityScore: score.qualityScore,
+    expectedMoveScore: score.expectedMoveScore,
+    liquidityScore: score.liquidityScore,
+    trendStrength: score.trendStrength,
+    signalType: live.signalType,
+    viable: score.viable,
+    evaluation,
+    featureBreakdown,
+    advancedSignals: live.advancedSignals || {},
+    trendContext: {
+      regime: detectRegime(item, live.advancedSignals || {}),
+      candlePattern: detectCandlePatterns({
+        closeHistory: closes,
+        highHistory,
+        lowHistory
+      }),
+      closes,
+      highHistory,
+      lowHistory,
+      volumeHistory,
+      snapshotFresh: Boolean(snapshot?.snapshotFresh),
+      snapshotAgeMs: snapshot?.snapshotAgeMs || null
+    },
+    riskTable
+  };
 }
 
 function saveIntradayModel(model) {
@@ -1427,11 +1728,9 @@ async function countThresholdCandidates(alpha, threshold, model = null) {
 
   const candidates = (market || []).map((item) => {
     const live = buildLiveSignal(item, news, DAILY_TARGET_PROFIT, AUTO_ORDER_SETTINGS.ballparkAmount, AUTO_ORDER_SETTINGS.leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
-    const features = buildIntradayFeatureVector(item, live, { marketStats });
-    const p = getCalibratedProbability(features, scoringModel);
-    const s = getLiveScore(live);
+    const score = scoreIntradayCandidate(item, live, scoringModel, { marketStats });
     return {
-      combined: alpha * p + (1 - alpha) * s,
+      combined: score.compositeScore,
       symbol: item.symbol,
       name: item.name
     };
@@ -1748,6 +2047,7 @@ function buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, con
     signalType,
     targetMovePct,
     viable,
+    isViable: viable,
     probability,
     ensembleScore,
     source: 'Finnhub live market data + news context',
@@ -1778,19 +2078,20 @@ async function rankAutoOptions({ targetProfit, ballparkAmount, leverage }) {
   // compute cross-sectional stats used by feature percentiles
   const marketStats = buildMarketFeatureStats(market || []);
 
+  const intradayModel = getIntradayModel();
   const ranked = (market || []).map((item) => {
     const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
-    // build intraday feature vector using advanced signals
-    const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
-    const intradayModel = getIntradayModel();
-    const p = getCalibratedProbability(intradayFeatures, intradayModel);
-    const normScore = getLiveScore(live);
-    const alpha = getRuntimeAlpha();
-    const combined = alpha * p + (1 - alpha) * normScore;
+    const score = scoreIntradayCandidate(item, live, intradayModel, { marketStats });
     return {
       ...live,
-      intradayProbability: p,
-      combinedScore: combined
+      intradayProbability: score.probability,
+      score: score.compositeScore,
+      qualityScore: score.qualityScore,
+      expectedMoveScore: score.expectedMoveScore,
+      liquidityScore: score.liquidityScore,
+      trendStrength: score.trendStrength,
+      viable: score.viable,
+      combinedScore: score.compositeScore
     };
   }).filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
     .sort((a, b) => b.combinedScore - a.combinedScore)
@@ -1831,16 +2132,45 @@ async function placeAutoOrder() {
     return null;
   }
 
+  const executionContext = resolveExecutionPriceContext(topPick.symbol || '', Number(topPick.currentPrice || 0), Date.now());
+  const evaluation = evaluateOrderEligibility({
+    symbol: topPick.symbol,
+    name: topPick.name,
+    currentPrice: executionContext.price || Number(topPick.currentPrice || 0),
+    dayMovePct: Number(topPick.dayMovePct || 0),
+    probability: Number(topPick.probability || 0),
+    combinedScore: Number(topPick.combinedScore ?? topPick.score ?? 0),
+    advancedSignals: topPick.advancedSignals || {},
+    stopLossAmount: AUTO_ORDER_STOP_LOSS
+  }, {
+    targetProfit: orderTarget,
+    ballparkAmount: AUTO_ORDER_SETTINGS.ballparkAmount,
+    leverage: AUTO_ORDER_SETTINGS.leverage,
+    stopLossPct: 5,
+    marketOpen: isNasdaqMarketOpen(),
+    requireManualReview: false
+  });
+
+  if (evaluation.status === 'rejected-risk') {
+    console.log(`Auto order skipped for ${topPick.symbol}: ${evaluation.reasons.join(' ')}`);
+    return null;
+  }
+
   const record = buildOrderRecord({
     symbol: topPick.symbol,
     name: topPick.name,
-    entryPrice: Number(topPick.currentPrice || 0),
+    entryPrice: executionContext.price || Number(topPick.currentPrice || 0),
     targetProfit: orderTarget,
     ballparkAmount: AUTO_ORDER_SETTINGS.ballparkAmount,
     leverage: AUTO_ORDER_SETTINGS.leverage,
     stopLossAmount: AUTO_ORDER_STOP_LOSS,
-    auto: true
+    auto: true,
+    volatilityPct: evaluation.signalSummary?.volatilityPct || 0,
+    expectedMovePct: evaluation.signalSummary?.dayMovePct || 0
   });
+  record.eligibility = evaluation;
+  record.executionContext = executionContext;
+  record.reviewRequired = false;
 
   pendingOrders.unshift(record);
   autoOrderState.orderCount += 1;
@@ -1903,7 +2233,10 @@ async function refreshAutoOrders() {
   const todayKey = getNewYorkDateKey();
   loadRuntimeSettings();
   if (isRuntimeTradingPaused()) {
-    console.log('Auto order placement paused because walk-forward calibration health is degraded.');
+    const reason = reliabilityMonitorState.performance.autoOrderPaused
+      ? reliabilityMonitorState.performance.pauseReason
+      : 'Auto order placement paused because walk-forward calibration health is degraded.';
+    console.log(reason);
     return;
   }
 
@@ -1937,12 +2270,25 @@ async function fetchJson(url, timeoutMs = 5000, headers = {}) {
 
   try {
     const response = await fetch(url, { signal: controller.signal, headers });
+    const text = await response.text();
     if (!response.ok) {
       const error = new Error(`Request failed with ${response.status} for ${url}`);
       error.status = response.status;
       throw error;
     }
-    return await response.json();
+    if (!text) {
+      return {};
+    }
+    try {
+      return JSON.parse(text);
+    } catch {
+      return { raw: text };
+    }
+  } catch (error) {
+    if (error?.name === 'AbortError') {
+      throw new Error(`Request timed out after ${timeoutMs}ms for ${url}`);
+    }
+    throw error;
   } finally {
     clearTimeout(timer);
   }
@@ -2001,27 +2347,39 @@ function loadLocalIntradaySnapshot(symbol) {
   const open = Array.isArray(quote.open) ? quote.open : [];
   const volumes = Array.isArray(quote.volume) ? quote.volume : [];
   const timestamps = Array.isArray(result.timestamp) ? result.timestamp : [];
+  const derived = raw.derivedMetrics || {};
 
   if (!closes.length) {
     return null;
   }
 
-  const currentPrice = closes[closes.length - 1] || closes[0] || 0;
-  const dayOpen = open[0] || currentPrice;
-  const lastClose = closes.length > 1 ? closes[closes.length - 2] : closes[0] || 0;
-  const volume = volumes[volumes.length - 1] || 0;
-  const changePct = lastClose ? ((currentPrice - lastClose) / lastClose) * 100 : 0;
+  const currentPrice = Number(derived.currentPrice ?? closes[closes.length - 1] ?? closes[0] ?? 0);
+  const dayOpen = Number(derived.firstOpen ?? open[0] ?? currentPrice);
+  const prevClose = Number(derived.prevClose ?? (closes.length > 1 ? closes[closes.length - 2] : closes[0] || currentPrice));
+  const volume = Number(derived.currentVolume ?? (volumes[volumes.length - 1] || 0));
+  const changePct = prevClose ? ((currentPrice - prevClose) / prevClose) * 100 : 0;
   const dayMovePct = dayOpen ? ((currentPrice - dayOpen) / dayOpen) * 100 : 0;
+  const fetchedAt = raw.fetchedAt ? new Date(raw.fetchedAt) : null;
+  const snapshotAgeMs = fetchedAt ? Date.now() - fetchedAt.getTime() : null;
+  const sourceUrl = raw.sourceUrl || raw.url || null;
 
   return {
+    source: raw.source || raw.provider || null,
+    sourceUrl,
+    priceSource: 'snapshot',
+    snapshotFresh: true,
+    snapshotAgeMs,
+    derivedMetrics: derived,
     currentPrice,
     changePct,
     dayMovePct,
     volume,
-    updatedAt: timestamps[timestamps.length - 1] || Date.now(),
+    updatedAt: Number(derived.updatedAt ?? (timestamps[timestamps.length - 1] ? timestamps[timestamps.length - 1] * 1000 : Date.now())),
     timestamps,
     closes,
-    opens: open
+    opens: open,
+    firstOpen: dayOpen,
+    prevClose
   };
 }
 
@@ -2047,20 +2405,42 @@ function resolvePriceFromIntradaySnapshot(symbol, timestamp) {
   return Number.isFinite(price) && price > 0 ? price : null;
 }
 
+function resolveSnapshotPriceContext(symbol, timestamp) {
+  const snapshot = loadLocalIntradaySnapshot(symbol);
+  if (!snapshot) {
+    return null;
+  }
+  const price = resolvePriceFromIntradaySnapshot(symbol, timestamp) || snapshot.currentPrice || 0;
+  return {
+    price,
+    priceSource: snapshot.priceSource || 'snapshot',
+    priceProvider: snapshot.source || null,
+    snapshotUrl: snapshot.sourceUrl || null,
+    snapshotFresh: Boolean(snapshot.snapshotFresh),
+    snapshotAgeMs: snapshot.snapshotAgeMs,
+    updatedAt: snapshot.updatedAt
+  };
+}
+
 function resolveOrderMetricsForDisplay(order, options = {}) {
   const entryPrice = Number(order?.entryPrice || 0);
   const currentPrice = Number(order?.currentPrice || entryPrice || 0);
   const symbol = String(order?.symbol || '').toUpperCase();
   const referenceTime = Number(options.referenceTime || order?.updatedAt || order?.settledAt || order?.createdAt || Date.now());
-  const resolvedEntryPrice = resolvePriceFromIntradaySnapshot(symbol, order?.createdAt || referenceTime) || entryPrice;
-  // Prefer live order price for pending orders when market is open or when server has a recent live price.
-  const snapshotPrice = resolvePriceFromIntradaySnapshot(symbol, referenceTime);
+  const snapshotContext = resolveSnapshotPriceContext(symbol, referenceTime) || {};
+  const resolvedEntryPrice = entryPrice;
+  const snapshotPrice = snapshotContext.price || null;
   let resolvedCurrentPrice = currentPrice || resolvedEntryPrice;
+  let resolvedPriceSource = 'entry';
+  let resolvedPriceProvider = null;
+  let snapshotUrl = snapshotContext.snapshotUrl || null;
+  let snapshotFresh = Boolean(snapshotContext.snapshotFresh);
+  let snapshotAgeMs = snapshotContext.snapshotAgeMs;
+
   try {
     const now = Date.now();
     const recentServerPrice = Number(order?.updatedAt) && (now - Number(order.updatedAt) < 60 * 1000) && Number(order.currentPrice) > 0 ? Number(order.currentPrice) : null;
     if (order?.status === 'pending' && isNasdaqMarketOpen()) {
-      // prefer a recent live server-updated price first, then fall back to snapshot
       resolvedCurrentPrice = recentServerPrice || snapshotPrice || currentPrice || resolvedEntryPrice;
     } else {
       resolvedCurrentPrice = snapshotPrice || recentServerPrice || currentPrice || resolvedEntryPrice;
@@ -2068,11 +2448,24 @@ function resolveOrderMetricsForDisplay(order, options = {}) {
   } catch (err) {
     resolvedCurrentPrice = snapshotPrice || currentPrice || resolvedEntryPrice;
   }
+
+  if (resolvedCurrentPrice === currentPrice && currentPrice !== entryPrice && resolvedCurrentPrice !== snapshotPrice) {
+    resolvedPriceSource = 'live-server';
+    resolvedPriceProvider = order?.priceProvider || null;
+  } else if (resolvedCurrentPrice === snapshotPrice && snapshotPrice !== null) {
+    resolvedPriceSource = 'snapshot';
+    resolvedPriceProvider = snapshotContext.priceProvider || null;
+    snapshotUrl = snapshotContext.snapshotUrl || null;
+  }
+
   const leverage = Number(order?.leverage || 1);
   const ballparkAmount = Number(order?.ballparkAmount || order?.ballpark || 0);
   const shareCount = entryPrice > 0 ? Math.max(1, Math.floor((ballparkAmount / entryPrice) * leverage)) : 0;
   const realizedPnl = Number(((resolvedCurrentPrice - resolvedEntryPrice) * shareCount).toFixed(2));
   const movePct = resolvedEntryPrice > 0 ? ((resolvedCurrentPrice - resolvedEntryPrice) / resolvedEntryPrice) * 100 : 0;
+  const executionQuality = resolvedPriceSource === 'snapshot'
+    ? (snapshotFresh ? 'fresh' : 'stale')
+    : (resolvedPriceSource === 'live-server' ? 'live' : 'entry');
 
   return {
     ...order,
@@ -2080,7 +2473,13 @@ function resolveOrderMetricsForDisplay(order, options = {}) {
     resolvedCurrentPrice,
     resolvedMovePct: movePct,
     resolvedPnl: realizedPnl,
-    resolvedShareCount: shareCount
+    resolvedShareCount: shareCount,
+    priceSource: resolvedPriceSource,
+    priceProvider: resolvedPriceProvider,
+    snapshotUrl,
+    snapshotFresh,
+    snapshotAgeMs,
+    executionQuality
   };
 }
 
@@ -2117,7 +2516,12 @@ function buildLocalMarketSnapshot() {
       changePct: local?.changePct || 0,
       dayMovePct: local?.dayMovePct || 0,
       volume: local?.volume || 0,
-      updatedAt: local?.updatedAt || Date.now()
+      updatedAt: local?.updatedAt || Date.now(),
+      priceSource: local?.priceSource || 'snapshot',
+      priceProvider: local?.source || null,
+      sourceUrl: local?.sourceUrl || local?.url || null,
+      snapshotFresh: local?.snapshotFresh ?? false,
+      snapshotAgeMs: local?.snapshotAgeMs || null
     };
   });
 }
@@ -2813,12 +3217,151 @@ async function loadYesterdaySnapshot(deposit, leverage) {
   return await refreshYesterdaySnapshot(deposit, leverage);
 }
 
+function calculateDynamicPositionSizing(params = {}) {
+  const entryPrice = Number(params.entryPrice || 0);
+  const targetProfit = Number(params.targetProfit || 0);
+  const stopLossAmount = Number(params.stopLossAmount || 0);
+  const ballparkAmount = Number(params.ballparkAmount || 0);
+  const leverage = Number(params.leverage || 1);
+  const volatilityPct = Number(params.volatilityPct || 0);
+  const expectedMovePct = Number(params.expectedMovePct || 0);
+  const riskBudget = Math.min(ballparkAmount * 0.02, 250);
+  const baseRiskPerShare = stopLossAmount > 0 ? stopLossAmount : Math.max(1, entryPrice * 0.02);
+  const volatilityPenalty = Math.max(0, (volatilityPct - 2) / 10);
+  const expectedValueBoost = Math.max(0, (expectedMovePct - 2) / 6);
+  const sizeMultiplier = clamp(1 - volatilityPenalty + expectedValueBoost * 0.25, 0.35, 1.25);
+  const positionValue = ballparkAmount > 0 ? Math.min(ballparkAmount * sizeMultiplier, ballparkAmount) : 0;
+  const shareCount = entryPrice > 0 ? Math.max(1, Math.floor(positionValue / entryPrice)) : 0;
+  const riskAmount = shareCount * baseRiskPerShare;
+  return {
+    sizeMultiplier,
+    shareCount,
+    positionValue: Number(positionValue.toFixed(2)),
+    riskAmount: Number(riskAmount.toFixed(2)),
+    riskBudget: Number(riskBudget.toFixed(2)),
+    riskPerShare: Number(baseRiskPerShare.toFixed(2)),
+    targetProfit,
+    leverage
+  };
+}
+
+function resolveExecutionPriceContext(symbol, fallbackPrice = 0, referenceTime = Date.now()) {
+  const snapshotContext = resolveSnapshotPriceContext(symbol, referenceTime) || {};
+  const price = Number(snapshotContext.price || fallbackPrice || 0);
+  const priceSource = snapshotContext.priceSource || 'entry';
+  const priceProvider = snapshotContext.priceProvider || null;
+  return {
+    price: Number.isFinite(price) && price > 0 ? price : Number(fallbackPrice || 0),
+    priceSource,
+    priceProvider,
+    snapshotFresh: Boolean(snapshotContext.snapshotFresh),
+    snapshotAgeMs: snapshotContext.snapshotAgeMs || null
+  };
+}
+
+function evaluateOrderEligibility(candidate = {}, options = {}) {
+  const currentPrice = Number(candidate.currentPrice || candidate.entryPrice || 0);
+  const dayMovePct = Number(candidate.dayMovePct || 0);
+  const probability = Number(candidate.probability || 0);
+  const combinedScore = Number(candidate.combinedScore ?? candidate.score ?? candidate.marketScore ?? 0);
+  const advancedSignals = candidate.advancedSignals || {};
+  const targetProfit = Number(options.targetProfit || 0);
+  const ballparkAmount = Number(options.ballparkAmount || 0);
+  const leverage = Number(options.leverage || 1);
+  const stopLossPct = Number(options.stopLossPct || 5);
+  const marketOpen = options.marketOpen !== false;
+  const requireManualReview = options.requireManualReview !== false;
+  const requiredMovePct = ballparkAmount > 0 ? (targetProfit / ballparkAmount) * 100 : 0;
+  const expectedMovePct = Math.max(0, Math.abs(dayMovePct));
+  const volatilityPct = Number(advancedSignals.atrPct || 0) * 100;
+  const volumeZ = Number(advancedSignals.volumeZ || 0);
+  const liquidityPenalty = Number(advancedSignals.liquidityPenalty || 0);
+  const reasons = [];
+  let status = 'pending-eligible';
+  const riskFlags = [];
+
+  if (!marketOpen) {
+    reasons.push('Market is not open; execution will use the latest available intraday quote once the session opens.');
+  }
+
+  if (probability < 0.55) {
+    riskFlags.push('probability-threshold');
+    reasons.push('Rejected by risk rules: probability is below the 55% execution threshold.');
+  }
+
+  if (combinedScore < 0.6) {
+    riskFlags.push('combined-threshold');
+    reasons.push('Rejected by risk rules: the model score is below the minimum combined threshold.');
+  }
+
+  if (requiredMovePct > 0 && expectedMovePct < requiredMovePct * 0.75) {
+    riskFlags.push('target-gap');
+    reasons.push(`Rejected by risk rules: expected move ${expectedMovePct.toFixed(1)}% is below the ${requiredMovePct.toFixed(1)}% target requirement.`);
+  }
+
+  if (volatilityPct > 7) {
+    riskFlags.push('volatility');
+    reasons.push('Rejected by risk rules: volatility is too high for the current risk budget.');
+  }
+
+  if (liquidityPenalty > 0.08 || volumeZ < 1) {
+    riskFlags.push('liquidity');
+    reasons.push('Rejected by risk rules: liquidity or volume confirmation is too weak.');
+  }
+
+  if (riskFlags.length) {
+    status = 'rejected-risk';
+  } else if (requireManualReview) {
+    reasons.push('Pending eligible; manual review is required before execution.');
+  } else {
+    reasons.push('Pending eligible for execution.');
+  }
+
+  const executionContext = resolveExecutionPriceContext(candidate.symbol || '', currentPrice, Date.now());
+  const positionSizing = calculateDynamicPositionSizing({
+    entryPrice: executionContext.price || currentPrice || 0,
+    targetProfit,
+    stopLossAmount: Number(candidate.stopLossAmount || 0),
+    ballparkAmount,
+    leverage,
+    volatilityPct,
+    expectedMovePct
+  });
+
+  return {
+    status,
+    reasons,
+    reviewRequired: requireManualReview,
+    riskFlags,
+    executionContext,
+    requiredMovePct,
+    positionSizing,
+    signalSummary: {
+      probability,
+      combinedScore,
+      dayMovePct,
+      volatilityPct,
+      volumeZ,
+      stopLossPct
+    }
+  };
+}
+
 function buildOrderRecord(body) {
   const ballparkAmount = Number(body.ballparkAmount || 0);
   const targetProfit = Number(body.targetProfit || 0);
   const entryPrice = Number(body.entryPrice || 0);
   const leverage = Number(body.leverage || 2);
   const trailingStopPct = 5;
+  const positionSizing = calculateDynamicPositionSizing({
+    entryPrice,
+    targetProfit,
+    stopLossAmount: Number(body.stopLossAmount || 0),
+    ballparkAmount,
+    leverage,
+    volatilityPct: Number(body.volatilityPct || 0),
+    expectedMovePct: Number(body.expectedMovePct || 0)
+  });
 
   const requestedStopLossPct = Number(body.stopLossPct);
   const requestedStopLossAmount = Number(body.stopLossAmount);
@@ -2868,7 +3411,21 @@ function buildOrderRecord(body) {
     updatedAt: Date.now(),
     settledAt: null,
     timeToHitMs: null,
-    currentMovePct: 0
+    currentMovePct: 0,
+    priceSource: 'entry',
+    priceProvider: null,
+    snapshotFresh: false,
+    snapshotAgeMs: null,
+    executionQuality: 'entry',
+    positionSizing,
+    shareCount: positionSizing.shareCount,
+    riskAmount: positionSizing.riskAmount,
+    positionValue: positionSizing.positionValue,
+    probability: Number(body.probability || 0),
+    combinedScore: Number(body.combinedScore || 0),
+    dayMovePct: Number(body.dayMovePct || 0),
+    advancedSignals: body.advancedSignals || {},
+    evaluation: body.evaluation || null
   };
 }
 
@@ -2896,10 +3453,10 @@ function evaluateOrderOutcome(order, currentPrice) {
 
   const stopWasHit = currentPrice <= currentTrailingStopPrice;
   const targetWasHit = currentPrice >= targetPrice;
-  const exitIsProfit = currentPrice >= entryPrice;
-  const shouldCloseAsProfit = targetWasHit || (stopWasHit && exitIsProfit);
-  const shouldCloseAsLoss = stopWasHit && !exitIsProfit;
   const didClose = targetWasHit || stopWasHit;
+  const profitableStopExit = stopWasHit && currentPrice > entryPrice;
+  const result = targetWasHit ? 'profit-hit' : stopWasHit ? (profitableStopExit ? 'profit-hit' : 'loss-hit') : null;
+  const status = targetWasHit || profitableStopExit ? 'green' : stopWasHit ? 'red' : order.status;
 
   return {
     ...order,
@@ -2908,8 +3465,8 @@ function evaluateOrderOutcome(order, currentPrice) {
     highWaterMark: currentHighWaterMark,
     trailingStopPrice: currentTrailingStopPrice,
     stopLossPrice: currentTrailingStopPrice,
-    status: didClose ? (shouldCloseAsProfit ? 'green' : 'red') : order.status,
-    result: didClose ? (shouldCloseAsProfit ? 'profit-hit' : 'loss-hit') : null,
+    status,
+    result,
     settledAt: didClose ? Date.now() : null,
     timeToHitMs: didClose ? Date.now() - order.createdAt : null
   };
@@ -3019,6 +3576,10 @@ async function settlePendingOrders() {
     order.result = outcome.result;
     order.settledAt = outcome.settledAt;
     order.timeToHitMs = outcome.timeToHitMs;
+    order.priceProvider = matching.priceProvider || order.priceProvider || null;
+    order.priceSource = matching.priceSource || order.priceSource || 'live-server';
+    order.snapshotFresh = matching.snapshotFresh ?? order.snapshotFresh;
+    order.snapshotAgeMs = matching.snapshotAgeMs ?? order.snapshotAgeMs;
 
     if (order.status === 'pending' && forceClose) {
       if (Math.abs(order.currentMovePct) < 1e-6) {
@@ -3030,6 +3591,10 @@ async function settlePendingOrders() {
       }
       order.settledAt = now;
       order.timeToHitMs = now - order.createdAt;
+    }
+
+    if (order.status !== 'pending' && order.result !== null) {
+      recordOrderOutcomeMonitoring(order, { profitable: order.status === 'green' || order.result === 'profit-hit' });
     }
   });
 }
@@ -3075,6 +3640,20 @@ async function forceClosePendingOrders() {
     order.result = outcome.result || 'day-close';
     order.settledAt = now;
     order.timeToHitMs = now - order.createdAt;
+    order.priceProvider = matching.priceProvider || order.priceProvider || null;
+    order.priceSource = matching.priceSource || order.priceSource || 'live-server';
+    order.snapshotFresh = matching.snapshotFresh ?? order.snapshotFresh;
+    order.snapshotAgeMs = matching.snapshotAgeMs ?? order.snapshotAgeMs;
+    const resolvedOrder = resolveOrderMetricsForDisplay(order);
+    order.executionQuality = resolvedOrder.executionQuality;
+    order.priceSource = resolvedOrder.priceSource;
+    order.priceProvider = resolvedOrder.priceProvider;
+    order.snapshotFresh = resolvedOrder.snapshotFresh;
+    order.snapshotAgeMs = resolvedOrder.snapshotAgeMs;
+
+    if (order.status !== 'pending' && order.result !== null) {
+      recordOrderOutcomeMonitoring(order, { profitable: order.status === 'green' || order.result === 'profit-hit' });
+    }
   });
 }
 
@@ -3214,6 +3793,28 @@ app.get('/api/session', (req, res) => {
   res.json(getServerSessionStatus());
 });
 
+app.get('/api/candidate-detail', async (req, res) => {
+  try {
+    const symbol = String(req.query.symbol || '').trim().toUpperCase();
+    const minProfit = Number(req.query.minProfit || DAILY_TARGET_PROFIT);
+    const ballpark = Number(req.query.ballpark || AUTO_ORDER_SETTINGS.ballparkAmount);
+    const leverage = Number(req.query.leverage || AUTO_ORDER_SETTINGS.leverage);
+
+    if (!symbol) {
+      return res.status(400).json({ error: 'The symbol query parameter is required.' });
+    }
+
+    const detail = await buildCandidateDetail(symbol, minProfit, ballpark, leverage);
+    if (!detail) {
+      return res.status(404).json({ error: `Candidate details for symbol ${symbol} were not found.` });
+    }
+
+    res.json({ ok: true, detail });
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Unable to load candidate detail.' });
+  }
+});
+
 app.get('/api/news', async (req, res) => {
   try {
     const news = await loadNewsSnapshot();
@@ -3240,6 +3841,50 @@ app.get('/api/yesterday', async (req, res) => {
   }
 });
 
+app.post('/api/orders/validate', async (req, res) => {
+  try {
+    const body = req.body || {};
+    const symbol = String(body.symbol || '').trim();
+    const name = String(body.name || '').trim();
+    const entryPrice = Number(body.entryPrice || 0);
+    const targetProfit = Number(body.targetProfit || 0);
+    const ballparkAmount = Number(body.ballparkAmount || 0);
+    const leverage = Number(body.leverage || 0);
+    const requireManualReview = Boolean(body.requireManualReview);
+
+    if (!symbol || !name || entryPrice <= 0 || targetProfit <= 0 || ballparkAmount <= 0 || leverage <= 0) {
+      return res.status(400).json({ error: 'Missing or invalid order fields. symbol, name, entryPrice, targetProfit, ballparkAmount, and leverage are required.' });
+    }
+
+    const executionContext = resolveExecutionPriceContext(symbol, entryPrice, Date.now());
+    const evaluation = evaluateOrderEligibility({
+      symbol,
+      name,
+      currentPrice: executionContext.price || entryPrice,
+      dayMovePct: Number(body.dayMovePct || 0),
+      probability: Number(body.probability || 0),
+      combinedScore: Number(body.combinedScore || 0),
+      advancedSignals: body.advancedSignals || {},
+      stopLossAmount: Number(body.stopLossAmount || 0)
+    }, {
+      targetProfit,
+      ballparkAmount,
+      leverage,
+      stopLossPct: Number(body.stopLossPct || 5),
+      marketOpen: isNasdaqMarketOpen(),
+      requireManualReview
+    });
+
+    if (evaluation.status === 'rejected-risk') {
+      return res.status(422).json({ ok: false, error: 'Order rejected by risk rules.', evaluation });
+    }
+
+    res.json({ ok: true, evaluation });
+  } catch (error) {
+    res.status(400).json({ error: error.message || 'Unable to validate order' });
+  }
+});
+
 app.post('/api/orders', async (req, res) => {
   try {
     const body = req.body || {};
@@ -3249,9 +3894,38 @@ app.post('/api/orders', async (req, res) => {
     const targetProfit = Number(body.targetProfit || 0);
     const ballparkAmount = Number(body.ballparkAmount || 0);
     const leverage = Number(body.leverage || 0);
+    const requireManualReview = Boolean(body.requireManualReview);
+    const manualReviewApproved = Boolean(body.manualReviewApproved);
 
     if (!symbol || !name || entryPrice <= 0 || targetProfit <= 0 || ballparkAmount <= 0 || leverage <= 0) {
       return res.status(400).json({ error: 'Missing or invalid order fields. symbol, name, entryPrice, targetProfit, ballparkAmount, and leverage are required.' });
+    }
+
+    const executionContext = resolveExecutionPriceContext(symbol, entryPrice, Date.now());
+    const evaluation = evaluateOrderEligibility({
+      symbol,
+      name,
+      currentPrice: executionContext.price || entryPrice,
+      dayMovePct: Number(body.dayMovePct || 0),
+      probability: Number(body.probability || 0),
+      combinedScore: Number(body.combinedScore || 0),
+      advancedSignals: body.advancedSignals || {},
+      stopLossAmount: Number(body.stopLossAmount || 0)
+    }, {
+      targetProfit,
+      ballparkAmount,
+      leverage,
+      stopLossPct: Number(body.stopLossPct || 5),
+      marketOpen: isNasdaqMarketOpen(),
+      requireManualReview
+    });
+
+    if (evaluation.status === 'rejected-risk') {
+      return res.status(422).json({ ok: false, error: 'Order rejected by risk rules.', evaluation });
+    }
+
+    if (requireManualReview && !manualReviewApproved) {
+      return res.status(409).json({ ok: false, error: 'Manual review approval is required before placing this order.', evaluation });
     }
 
     // Manual orders should be accepted by the API without blocking on live confidence threshold.
@@ -3265,13 +3939,13 @@ app.post('/api/orders', async (req, res) => {
           const peerMoves = market.reduce((acc, e) => { acc[e.symbol] = Number(e.dayMovePct || 0); return acc; }, {});
           const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, leverage, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
           const marketStats = buildMarketFeatureStats(market);
-          const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
-          const model = getIntradayModel();
-          const p = getCalibratedProbability(intradayFeatures, model);
-          const normScore = getLiveScore(live);
-          const alpha = getRuntimeAlpha();
-          const combined = alpha * p + (1 - alpha) * normScore;
-          res.locals.orderConfidence = { p, combined, viable: live.viable };
+          const score = scoreIntradayCandidate(item, live, getIntradayModel(), { marketStats });
+          res.locals.orderConfidence = {
+            p: score.probability,
+            combined: score.compositeScore,
+            viable: score.viable,
+            isViable: score.viable
+          };
         }
       } catch (e) {
         // ignore validation errors and allow forced order to proceed
@@ -3288,10 +3962,21 @@ app.post('/api/orders', async (req, res) => {
       return res.status(409).json({ error: 'A pending order for this symbol at the same entry price already exists.', order: existingPending });
     }
 
-    const record = buildOrderRecord(body);
+    const record = buildOrderRecord({
+      ...body,
+      entryPrice: executionContext.price || entryPrice,
+      executionContext,
+      evaluation,
+      volatilityPct: evaluation.signalSummary?.volatilityPct || 0,
+      expectedMovePct: evaluation.signalSummary?.dayMovePct || 0,
+      stopLossAmount: Number(body.stopLossAmount || 0)
+    });
+    record.eligibility = evaluation;
+    record.executionContext = executionContext;
     pendingOrders.unshift(record);
     await settlePendingOrders();
-    res.json({ ok: true, order: record });
+    const displayOrder = resolveOrderMetricsForDisplay(record);
+    res.json({ ok: true, order: displayOrder, evaluation });
   } catch (error) {
     res.status(400).json({ error: error.message || 'Unable to create pending order' });
   }
@@ -3374,15 +4059,40 @@ app.get('/api/predict', async (req, res) => {
 
     const filteredMarket = filterMarketItemsByQuery(market, query);
     const marketStats = buildMarketFeatureStats(filteredMarket || []);
-    const scored = (filteredMarket || []).map((item) => {
+    const intradayModel = getIntradayModel();
+  const scored = (filteredMarket || []).map((item) => {
       const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, 2, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
-      const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
-      const model = getIntradayModel();
-      const p = getCalibratedProbability(intradayFeatures, model);
-      const normScore = getLiveScore(live);
-      const alpha = getRuntimeAlpha();
-      const combined = alpha * p + (1 - alpha) * normScore;
-      return { ...live, intradayProbability: p, combinedScore: combined };
+      const score = scoreIntradayCandidate(item, live, intradayModel, { marketStats });
+      const evaluation = evaluateOrderEligibility({
+        symbol: item.symbol,
+        currentPrice: Number(item.currentPrice || 0),
+        dayMovePct: Number(item.dayMovePct || 0),
+        probability: score.probability,
+        combinedScore: score.compositeScore,
+        advancedSignals: live.advancedSignals || {},
+        stopLossAmount: 0
+      }, {
+        targetProfit,
+        ballparkAmount,
+        leverage: 2,
+        stopLossPct: 5,
+        marketOpen: isNasdaqMarketOpen(),
+        requireManualReview: true
+      });
+
+      return {
+        ...live,
+        intradayProbability: score.probability,
+        combinedScore: score.compositeScore,
+        qualityScore: score.qualityScore,
+        expectedMoveScore: score.expectedMoveScore,
+        liquidityScore: score.liquidityScore,
+        trendStrength: score.trendStrength,
+        viable: score.viable,
+        eligibility: evaluation,
+        reviewRequired: evaluation.reviewRequired,
+        eligibleForExecution: evaluation.status === 'pending-eligible'
+      };
     }).filter((item) => Number.isFinite(item.currentPrice) && item.currentPrice > 0)
       .sort((a, b) => b.combinedScore - a.combinedScore)
       .filter((item) => (item.combinedScore || 0) >= getRuntimeThreshold());
@@ -3397,13 +4107,39 @@ app.get('/api/predict', async (req, res) => {
       // instead of hiding the result behind the top watch/viable ranking.
       result = filteredMarket.slice(0, 5).map((item) => {
         const live = buildLiveSignal(item, news, targetProfit, ballparkAmount, 2, { peerMoves, peerTargets: ['NVDA', 'AMD'] });
-        const intradayFeatures = buildIntradayFeatureVector(item, live, { marketStats });
-        const model = getIntradayModel();
-        const p = getCalibratedProbability(intradayFeatures, model);
-        const normScore = getLiveScore(live);
-        const alpha = getRuntimeAlpha();
-        const combined = alpha * p + (1 - alpha) * normScore;
-        return { ...live, intradayProbability: p, combinedScore: combined };
+        const score = scoreIntradayCandidate(item, live, getIntradayModel(), { marketStats });
+        const evaluation = evaluateOrderEligibility({
+          symbol: item.symbol,
+          currentPrice: Number(item.currentPrice || 0),
+          dayMovePct: Number(item.dayMovePct || 0),
+          probability: score.probability,
+          combinedScore: score.compositeScore,
+          advancedSignals: live.advancedSignals || {},
+          stopLossAmount: 0
+        }, {
+          targetProfit,
+          ballparkAmount,
+          leverage: 2,
+          stopLossPct: 5,
+          marketOpen: isNasdaqMarketOpen(),
+          requireManualReview: true
+        });
+
+        return {
+          ...live,
+          intradayProbability: score.probability,
+          score: score.compositeScore,
+          compositeScore: score.compositeScore,
+          qualityScore: score.qualityScore,
+          expectedMoveScore: score.expectedMoveScore,
+          liquidityScore: score.liquidityScore,
+          trendStrength: score.trendStrength,
+          viable: score.viable,
+          isViable: score.viable,
+          eligibility: evaluation,
+          reviewRequired: evaluation.reviewRequired,
+          eligibleForExecution: evaluation.status === 'pending-eligible'
+        };
       }).slice(0, 5);
     }
 
@@ -3535,6 +4271,15 @@ app.get('/api/admin/metrics', async (req, res) => {
   try {
     loadRuntimeSettings();
     const [market, news] = await Promise.all([loadMarketSnapshot(), loadNewsSnapshot()]);
+    const reliability = getReliabilityMonitorSnapshot();
+    const latestMarketEntry = Array.isArray(market) && market.length ? market[0] : null;
+    const dataHealth = updateDataHealthMonitoring({
+      marketItems: market || [],
+      newsItems: news || [],
+      providerErrors: [],
+      sourceUpdatedAt: latestMarketEntry?.updatedAt || null,
+      fallbackUsed: Boolean(latestMarketEntry?.source === 'fallback' || latestMarketEntry?.priceSource === 'snapshot')
+    });
     const drift = computeMarketDrift(market);
     const examples = loadRecentIntradayExamples(150);
     const model = getIntradayModel();
@@ -3545,7 +4290,8 @@ app.get('/api/admin/metrics', async (req, res) => {
       ? computeCalibrationCurve(examples, model, { thresholdPct: 2.5, bins: 10 })
       : [];
     const tuningReport = loadWalkForwardTuningReport();
-    const health = computeCalibrationHealth(curve, { brier: tuningReport?.best?.brier ?? null, alwaysHealthy: true });
+    const health = computeCalibrationHealth(curve, { brier: tuningReport?.best?.brier ?? null });
+    const validationSummary = tuningReport?.validationSummary || null;
     const candidateCounts = await countThresholdCandidates(getRuntimeAlpha(), getRuntimeThreshold());
     const intradayModelFile = readJsonFileSync(INTRADAY_MODEL_PATH);
     const metaModelFile = readJsonFileSync(META_MODEL_PATH);
@@ -3558,13 +4304,19 @@ app.get('/api/admin/metrics', async (req, res) => {
       trainingParameters: tuningReport?.trainingParameters || null,
       runtimeParameters: tuningReport?.runtimeParameters || null,
       best: tuningReport?.best || null,
+      validationSummary,
       curveBins: Array.isArray(curve) ? curve.length : 0
     };
-    const runtimeGate = tuningReport?.healthGate || 'run';
+    const runtimeGate = isRuntimeTradingPaused() ? 'pause' : (tuningReport?.healthGate || 'run');
     res.json({
       drift,
       calibration: { method: calibration?.method || 'logistic', params: calibration || {}, health, curve },
       tuningReport,
+      monitoring: {
+        dataHealth,
+        performance: reliability.performance,
+        autoOrderPaused: isRuntimeTradingPaused()
+      },
       modelMetadata,
       metaModelMetadata,
       calibrationMetadata,
@@ -3652,11 +4404,18 @@ if (require.main === module) {
 
 module.exports = {
   buildLiveSignal,
+  resetReliabilityMonitor,
+  updateDataHealthMonitoring,
+  recordOrderOutcomeMonitoring,
+  getReliabilityMonitorSnapshot,
   buildOrderRecord,
+  calculateDynamicPositionSizing,
+  evaluateOrderEligibility,
   evaluateOrderOutcome,
   resolveOrderMetricsForDisplay,
   filterMarketItemsByQuery,
   pendingOrders,
+  placeAutoOrder,
   canPlaceAutoOrder,
   shouldPlaceAutoOrder,
   getTodayRealizedPnl,
@@ -3666,6 +4425,7 @@ module.exports = {
   buildAdvancedSignals,
   buildIntradayFeatureVector,
   buildMarketFeatureStats,
+  scoreIntradayCandidate,
   calibrateModel,
   computeCalibrationCurve,
   computeCalibrationHealth,

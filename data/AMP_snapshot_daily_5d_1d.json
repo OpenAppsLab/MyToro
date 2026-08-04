@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:36.171Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMP?interval=1d&range=5d",
+  "symbol": "AMP",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AMP?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:20.552Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 545.8400268554688,
+    "firstOpen": 538.22998046875,
+    "dayMovePct": -100,
+    "gapPct": -1.394189874743977,
+    "currentVolume": 236051,
+    "averageVolume": 455410.2,
+    "volumeSpikeRatio": 0.5183261156645151,
+    "morningHigh": 553.8195190429688,
+    "morningLow": 532.9199829101562,
+    "morningRangePct": 3.921702469981484,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.033187472857062,
+    "intradayVolatility": 43.287870916218374,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1126791000,
-      "regularMarketTime": 1785777324,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 545.55,
+      "regularMarketPrice": 552.07,
       "fiftyTwoWeekHigh": 553.82,
       "fiftyTwoWeekLow": 422.37,
       "regularMarketDayHigh": 553.82,
       "regularMarketDayLow": 543.97,
-      "regularMarketVolume": 125182,
+      "regularMarketVolume": 236051,
       "longName": "Ameriprise Financial, Inc.",
       "shortName": "Ameriprise Financial, Inc.",
       "chartPreviousClose": 538.01,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            553.4600219726562,
-            547.9199829101562,
-            546.3099975585938,
-            549.3900146484375,
-            553.8195190429688
+          "volume": [
+            697100,
+            444700,
+            418600,
+            480600,
+            236051
           ],
           "low": [
             536.2899780273438,
@@ -84,19 +106,19 @@
             543.4299926757812,
             543.969970703125
           ],
-          "volume": [
-            697100,
-            444700,
-            418600,
-            480600,
-            125182
-          ],
           "close": [
             546.6199951171875,
             540.2899780273438,
             544.4600219726562,
             545.8400268554688,
-            545.5499877929688
+            null
+          ],
+          "high": [
+            553.4600219726562,
+            547.9199829101562,
+            546.3099975585938,
+            549.3900146484375,
+            553.8195190429688
           ],
           "open": [
             538.22998046875,
@@ -110,11 +132,11 @@
       "adjclose": [
         {
           "adjclose": [
-            546.6199951171875,
-            540.2899780273438,
-            544.4600219726562,
-            545.8400268554688,
-            545.5499877929688
+            544.9175415039062,
+            538.6072387695312,
+            542.7643432617188,
+            544.1400146484375,
+            null
           ]
         }
       ]

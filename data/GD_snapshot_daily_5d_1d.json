@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:35.744Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GD?interval=1d&range=5d",
+  "symbol": "GD",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GD?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:01.006Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 383.4200134277344,
+    "firstOpen": 393,
+    "dayMovePct": -100,
+    "gapPct": 2.49856195210614,
+    "currentVolume": 918779,
+    "averageVolume": 1456295.8,
+    "volumeSpikeRatio": 0.6309013594628234,
+    "morningHigh": 400,
+    "morningLow": 374.0400085449219,
+    "morningRangePct": 6.940431735114869,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.616438605247197,
+    "intradayVolatility": 42.96822978895294,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777574,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 382.75,
+      "regularMarketPrice": 382.43,
       "fiftyTwoWeekHigh": 400,
       "fiftyTwoWeekLow": 306.77,
       "regularMarketDayHigh": 386.95,
       "regularMarketDayLow": 380.45,
-      "regularMarketVolume": 388178,
+      "regularMarketVolume": 918779,
       "longName": "General Dynamics Corporation",
       "shortName": "General Dynamics Corporation",
       "chartPreviousClose": 389.14,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -84,6 +106,13 @@
             384.6700134277344,
             386.95001220703125
           ],
+          "volume": [
+            1702600,
+            1935800,
+            1199900,
+            1524400,
+            918779
+          ],
           "open": [
             393,
             398.79998779296875,
@@ -91,19 +120,12 @@
             382.3800048828125,
             387.54998779296875
           ],
-          "volume": [
-            1702600,
-            1935800,
-            1199900,
-            1523900,
-            388178
-          ],
           "close": [
             393.19000244140625,
             380.9599914550781,
             382.20001220703125,
             383.4200134277344,
-            382.75
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             380.9599914550781,
             382.20001220703125,
             383.4200134277344,
-            382.75
+            null
           ]
         }
       ]

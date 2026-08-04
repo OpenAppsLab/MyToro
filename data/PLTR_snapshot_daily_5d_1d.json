@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:42.709Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PLTR?interval=1d&range=5d",
+  "symbol": "PLTR",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/PLTR?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:15.382Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 123.05999755859375,
+    "firstOpen": 125.83999633789062,
+    "dayMovePct": -100,
+    "gapPct": 2.2590596736955137,
+    "currentVolume": 67056359,
+    "averageVolume": 38949651.8,
+    "volumeSpikeRatio": 1.7216163919596326,
+    "morningHigh": 127.27999877929688,
+    "morningLow": 117.88999938964844,
+    "morningRangePct": 7.9650516907823015,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.09408235603053,
+    "intradayVolatility": 43.24963096369455,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1601472600,
-      "regularMarketTime": 1785777341,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 125.675,
+      "regularMarketPrice": 125.65,
       "fiftyTwoWeekHigh": 207.52,
       "fiftyTwoWeekLow": 106.37,
       "regularMarketDayHigh": 126.965,
       "regularMarketDayLow": 123.657,
-      "regularMarketVolume": 25416059,
+      "regularMarketVolume": 67056359,
       "longName": "Palantir Technologies Inc.",
       "shortName": "Palantir Technologies Inc.",
       "chartPreviousClose": 131.53,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            123.52999877929688,
-            123,
-            122.26000213623047,
-            123.05999755859375,
-            125.67500305175781
-          ],
           "open": [
             125.83999633789062,
             124,
@@ -102,8 +117,15 @@
             43597300,
             27207900,
             27801600,
-            29004900,
-            25416059
+            29085100,
+            67056359
+          ],
+          "close": [
+            123.52999877929688,
+            123,
+            122.26000213623047,
+            123.05999755859375,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             123,
             122.26000213623047,
             123.05999755859375,
-            125.67500305175781
+            null
           ]
         }
       ]

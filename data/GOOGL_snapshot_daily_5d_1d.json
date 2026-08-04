@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:14.668Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?interval=1d&range=5d",
+  "symbol": "GOOGL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:41.134Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 356.1300048828125,
+    "firstOpen": 327.8999938964844,
+    "dayMovePct": -100,
+    "gapPct": -7.926883609713661,
+    "currentVolume": 38121117,
+    "averageVolume": 34360123.4,
+    "volumeSpikeRatio": 1.1094580935061484,
+    "morningHigh": 376.6932067871094,
+    "morningLow": 324.44000244140625,
+    "morningRangePct": 16.105660199882422,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.31810891246647,
+    "intradayVolatility": 44.36227006502866,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1092922200,
-      "regularMarketTime": 1785777313,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 374.72,
+      "regularMarketPrice": 373.51,
       "fiftyTwoWeekHigh": 408.61,
       "fiftyTwoWeekLow": 190.12,
       "regularMarketDayHigh": 376.693,
       "regularMarketDayLow": 363.35,
-      "regularMarketVolume": 22503961,
+      "regularMarketVolume": 38121117,
       "longName": "Alphabet Inc.",
       "shortName": "Alphabet Inc.",
       "chartPreviousClose": 326.56,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            327.8999938964844,
-            334.6700134277344,
-            334.20001220703125,
-            340.8299865722656,
-            365.239990234375
-          ],
-          "close": [
-            333.7099914550781,
-            336.7099914550781,
-            333.6600036621094,
-            356.1300048828125,
-            374.7200012207031
-          ],
           "volume": [
             29511900,
             27501600,
             30168000,
-            46425700,
-            22503961
+            46498000,
+            38121117
           ],
           "low": [
             324.44000244140625,
@@ -104,6 +112,20 @@
             336.510009765625,
             358.5799865722656,
             376.6932067871094
+          ],
+          "open": [
+            327.8999938964844,
+            334.6700134277344,
+            334.20001220703125,
+            340.8299865722656,
+            365.239990234375
+          ],
+          "close": [
+            333.7099914550781,
+            336.7099914550781,
+            333.6600036621094,
+            356.1300048828125,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             336.7099914550781,
             333.6600036621094,
             356.1300048828125,
-            374.7200012207031
+            null
           ]
         }
       ]

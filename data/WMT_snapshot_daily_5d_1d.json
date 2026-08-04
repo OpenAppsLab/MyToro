@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:06.375Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?interval=1d&range=5d",
+  "symbol": "WMT",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:43.871Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 111.19999694824219,
+    "firstOpen": 113.95999908447266,
+    "dayMovePct": -100,
+    "gapPct": 2.482016377675897,
+    "currentVolume": 22846671,
+    "averageVolume": 24548134.2,
+    "volumeSpikeRatio": 0.930688695680994,
+    "morningHigh": 116.02999877929688,
+    "morningLow": 109.88999938964844,
+    "morningRangePct": 5.587405063018702,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.412822216082336,
+    "intradayVolatility": 43.08481202307741,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 83597400,
-      "regularMarketTime": 1785777361,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 110.57,
+      "regularMarketPrice": 110.71,
       "fiftyTwoWeekHigh": 135.16,
       "fiftyTwoWeekLow": 95.42,
       "regularMarketDayHigh": 113.29,
       "regularMarketDayLow": 110.155,
-      "regularMarketVolume": 11001065,
+      "regularMarketVolume": 22846671,
       "longName": "Walmart Inc.",
       "shortName": "Walmart Inc.",
       "chartPreviousClose": 111.74,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -88,15 +110,15 @@
             24867900,
             23480000,
             28747000,
-            22780100,
-            11001065
+            22799100,
+            22846671
           ],
           "close": [
             113.0999984741211,
             114.22000122070312,
             111.0999984741211,
             111.19999694824219,
-            110.56999969482422
+            null
           ],
           "low": [
             112.83999633789062,
@@ -114,7 +136,7 @@
             114.22000122070312,
             111.0999984741211,
             111.19999694824219,
-            110.56999969482422
+            null
           ]
         }
       ]

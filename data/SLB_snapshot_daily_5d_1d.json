@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:50.802Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?interval=1d&range=5d",
+  "symbol": "SLB",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:24.825Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 49.59000015258789,
+    "firstOpen": 51.630001068115234,
+    "dayMovePct": -100,
+    "gapPct": 4.113734440916078,
+    "currentVolume": 12534208,
+    "averageVolume": 13180041.6,
+    "volumeSpikeRatio": 0.950999122794878,
+    "morningHigh": 51.95000076293945,
+    "morningLow": 48.29999923706055,
+    "morningRangePct": 7.556939096343222,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.188157632282163,
+    "intradayVolatility": 43.20976505548835,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 378657000,
-      "regularMarketTime": 1785777339,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 49.265,
+      "regularMarketPrice": 49.31,
       "fiftyTwoWeekHigh": 58.82,
       "fiftyTwoWeekLow": 31.64,
       "regularMarketDayHigh": 49.745,
       "regularMarketDayLow": 48.3,
-      "regularMarketVolume": 6231204,
+      "regularMarketVolume": 12534208,
       "longName": "SLB N.V.",
       "shortName": "SLB Limited",
       "chartPreviousClose": 51.53,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            15340000,
-            13762600,
-            11946000,
-            12312500,
-            6231204
+          "open": [
+            51.630001068115234,
+            50.779998779296875,
+            49.2599983215332,
+            49.439998626708984,
+            49.02000045776367
           ],
           "high": [
             51.95000076293945,
@@ -84,19 +106,19 @@
             49.95000076293945,
             49.744998931884766
           ],
+          "volume": [
+            15340000,
+            13762600,
+            11946000,
+            12317400,
+            12534208
+          ],
           "close": [
             49.97999954223633,
             48.959999084472656,
             48.90999984741211,
             49.59000015258789,
-            49.26499938964844
-          ],
-          "open": [
-            51.630001068115234,
-            50.779998779296875,
-            49.2599983215332,
-            49.439998626708984,
-            49.02000045776367
+            null
           ],
           "low": [
             49.880001068115234,
@@ -114,7 +136,7 @@
             48.959999084472656,
             48.90999984741211,
             49.59000015258789,
-            49.26499938964844
+            null
           ]
         }
       ]

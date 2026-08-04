@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:15.230Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMI?interval=1d&range=5d",
+  "symbol": "CMI",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CMI?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:22.076Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 634.2000122070312,
+    "firstOpen": 650.030029296875,
+    "dayMovePct": -100,
+    "gapPct": 2.4960606725242576,
+    "currentVolume": 974323,
+    "averageVolume": 1111284.6,
+    "volumeSpikeRatio": 0.8767538036610962,
+    "morningHigh": 652.5,
+    "morningLow": 597.3499755859375,
+    "morningRangePct": 9.232447755600246,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.225934679050713,
+    "intradayVolatility": 43.31643693346299,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785777493,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 645.59,
+      "regularMarketPrice": 648.85,
       "fiftyTwoWeekHigh": 737.76,
       "fiftyTwoWeekLow": 356.92,
       "regularMarketDayHigh": 652.5,
       "regularMarketDayLow": 631,
-      "regularMarketVolume": 402681,
+      "regularMarketVolume": 974323,
       "longName": "Cummins Inc.",
       "shortName": "Cummins Inc.",
       "chartPreviousClose": 661.84,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            1296000,
+            1332100,
+            1062800,
+            891200,
+            974323
+          ],
           "high": [
             650.4600219726562,
             635.010009765625,
@@ -84,19 +113,12 @@
             629.3400268554688,
             631
           ],
-          "volume": [
-            1296000,
-            1332100,
-            1062800,
-            891200,
-            402681
-          ],
           "close": [
             641.5999755859375,
             606,
             632.97998046875,
             634.2000122070312,
-            645.5900268554688
+            null
           ],
           "open": [
             650.030029296875,
@@ -114,7 +136,7 @@
             606,
             632.97998046875,
             634.2000122070312,
-            645.5900268554688
+            null
           ]
         }
       ]

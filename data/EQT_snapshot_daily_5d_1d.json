@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:52.848Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EQT?interval=1d&range=5d",
+  "symbol": "EQT",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EQT?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:08.338Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 53.290000915527344,
+    "firstOpen": 52.099998474121094,
+    "dayMovePct": -100,
+    "gapPct": -2.2330689077911305,
+    "currentVolume": 5073111,
+    "averageVolume": 6228402.2,
+    "volumeSpikeRatio": 0.8145124282436352,
+    "morningHigh": 53.73500061035156,
+    "morningLow": 51.220001220703125,
+    "morningRangePct": 4.9101900228613715,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.217952073516578,
+    "intradayVolatility": 43.75599346039226,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777504,
+      "regularMarketTime": 1785787421,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 53.39,
+      "regularMarketPrice": 53.56,
       "fiftyTwoWeekHigh": 68.24,
       "fiftyTwoWeekLow": 47.94,
-      "regularMarketDayHigh": 53.48,
+      "regularMarketDayHigh": 53.735,
       "regularMarketDayLow": 52.59,
-      "regularMarketVolume": 2068888,
+      "regularMarketVolume": 5073111,
       "longName": "EQT Corporation",
       "shortName": "EQT Corporation",
       "chartPreviousClose": 52,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            51.65999984741211,
-            52.56999969482422,
-            52.709999084472656,
-            53.290000915527344,
-            53.38999938964844
-          ],
-          "volume": [
-            8309700,
-            6973600,
-            5446700,
-            5337500,
-            2068888
+          "high": [
+            52.95000076293945,
+            53.18000030517578,
+            52.75,
+            53.349998474121094,
+            53.73500061035156
           ],
           "low": [
             51.220001220703125,
@@ -91,6 +106,13 @@
             52.33000183105469,
             52.59000015258789
           ],
+          "volume": [
+            8309700,
+            6973600,
+            5446700,
+            5338900,
+            5073111
+          ],
           "open": [
             52.099998474121094,
             52.38999938964844,
@@ -98,12 +120,12 @@
             52.619998931884766,
             52.709999084472656
           ],
-          "high": [
-            52.95000076293945,
-            53.18000030517578,
-            52.75,
-            53.349998474121094,
-            53.47999954223633
+          "close": [
+            51.65999984741211,
+            52.56999969482422,
+            52.709999084472656,
+            53.290000915527344,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             52.56999969482422,
             52.709999084472656,
             53.290000915527344,
-            53.38999938964844
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:17.450Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BF.B?interval=5m&range=1d",
+  "symbol": "BF.B",
+  "range": "1d",
+  "interval": "5m",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BF.B?interval=5m&range=1d",
+  "fetchedAt": "2026-08-04T09:54:11.228Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 0,
+    "firstOpen": 0,
+    "dayMovePct": 0,
+    "gapPct": 0,
+    "currentVolume": 0,
+    "averageVolume": 0,
+    "volumeSpikeRatio": 1,
+    "morningHigh": 0,
+    "morningLow": 0,
+    "morningRangePct": 0,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": 0,
+    "intradayVolatility": 0,
+    "minutesSinceOpen": null,
+    "timestampsCount": 0
+  },
   "result": {
     "meta": {
       "currency": null,
@@ -18,20 +40,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },

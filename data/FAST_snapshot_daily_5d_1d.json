@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:12.823Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FAST?interval=1d&range=5d",
+  "symbol": "FAST",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FAST?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:32.910Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 47.709999084472656,
+    "firstOpen": 47.939998626708984,
+    "dayMovePct": -100,
+    "gapPct": 0.48207827845291673,
+    "currentVolume": 7420318,
+    "averageVolume": 9313963.6,
+    "volumeSpikeRatio": 0.7966874596761362,
+    "morningHigh": 49.16999816894531,
+    "morningLow": 46.349998474121094,
+    "morningRangePct": 6.084141936700878,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.189758762311904,
+    "intradayVolatility": 43.222984157219294,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 556464600,
-      "regularMarketTime": 1785777546,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 47.885,
+      "regularMarketPrice": 48.11,
       "fiftyTwoWeekHigh": 50.63,
       "fiftyTwoWeekLow": 38.97,
       "regularMarketDayHigh": 48.79,
       "regularMarketDayLow": 47.69,
-      "regularMarketVolume": 2926872,
+      "regularMarketVolume": 7420318,
       "longName": "Fastenal Company",
       "shortName": "Fastenal Company",
       "chartPreviousClose": 47.64,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "open": [
+            47.939998626708984,
+            47.630001068115234,
+            47.470001220703125,
+            46.5099983215332,
+            47.880001068115234
+          ],
           "high": [
             49.16999816894531,
             48.16999816894531,
@@ -82,14 +111,14 @@
             47.779998779296875,
             46.65999984741211,
             47.709999084472656,
-            47.8849983215332
+            null
           ],
           "volume": [
             10519300,
             10174300,
             8806800,
-            9647200,
-            2926872
+            9649100,
+            7420318
           ],
           "low": [
             47.77000045776367,
@@ -97,13 +126,6 @@
             46.349998474121094,
             46.380001068115234,
             47.689998626708984
-          ],
-          "open": [
-            47.939998626708984,
-            47.630001068115234,
-            47.470001220703125,
-            46.5099983215332,
-            47.880001068115234
           ]
         }
       ],
@@ -114,7 +136,7 @@
             47.779998779296875,
             46.65999984741211,
             47.709999084472656,
-            47.8849983215332
+            null
           ]
         }
       ]

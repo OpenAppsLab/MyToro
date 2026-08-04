@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { buildLiveSignal, buildOrderRecord, evaluateOrderOutcome, buildIntradayFeatureVector, labelIntradayOutcome, computeCalibrationHealth, optimizeAlphaThreshold } = require('../server');
+const { buildLiveSignal, buildOrderRecord, evaluateOrderOutcome, buildIntradayFeatureVector, labelIntradayOutcome, computeCalibrationHealth, optimizeAlphaThreshold, scoreIntradayCandidate, getIntradayModel, buildMarketFeatureStats } = require('../server');
 
 test('buildLiveSignal includes advanced live forecasting signals', () => {
   const item = {
@@ -153,6 +153,43 @@ test('optimizeAlphaThreshold computes win rate from realized trade outcomes', ()
 
   assert.equal(result.results[0].orderCount, 1);
   assert.equal(result.results[0].winRate, 1);
+});
+
+test('scoreIntradayCandidate marks strong live candidates as viable and returns composite score metrics', () => {
+  const item = {
+    symbol: 'NVDA',
+    name: 'NVIDIA',
+    region: 'NASDAQ',
+    currentPrice: 150,
+    changePct: 2,
+    dayMovePct: 4,
+    volume: 150000000,
+    volumeHistory: [90000000, 100000000, 110000000, 130000000, 140000000],
+    closeHistory: [144, 145, 146, 148, 150],
+    highHistory: [145, 146, 147, 149, 151],
+    lowHistory: [143, 144, 145, 147, 149]
+  };
+
+  const news = [
+    { title: 'Strong AI earnings beat and optimistic guidance' }
+  ];
+
+  const live = buildLiveSignal(item, news, 100, 3000, 2, {
+    peerMoves: { NVDA: 4, AMD: 2 },
+    peerTargets: ['NVDA', 'AMD']
+  });
+
+  const score = scoreIntradayCandidate(item, live, getIntradayModel(), {
+    marketStats: buildMarketFeatureStats([item])
+  });
+
+  assert.equal(typeof score.compositeScore, 'number');
+  assert.equal(typeof score.qualityScore, 'number');
+  assert.equal(typeof score.expectedMoveScore, 'number');
+  assert.equal(typeof score.liquidityScore, 'number');
+  assert.equal(typeof score.trendStrength, 'number');
+  assert.equal(typeof score.isViable, 'boolean');
+  assert.ok(score.compositeScore >= 0 && score.compositeScore <= 1, 'Expected composite score within [0,1]');
 });
 
 test('calibration health stays healthy when the curve is only moderately off but the brier score is strong', () => {

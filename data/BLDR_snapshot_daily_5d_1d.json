@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:18.840Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BLDR?interval=1d&range=5d",
+  "symbol": "BLDR",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BLDR?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:12.928Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 66.44000244140625,
+    "firstOpen": 74,
+    "dayMovePct": -100,
+    "gapPct": 11.378683444903464,
+    "currentVolume": 2441837,
+    "averageVolume": 3432727.4,
+    "volumeSpikeRatio": 0.7113402013803951,
+    "morningHigh": 75.69999694824219,
+    "morningLow": 65.0999984741211,
+    "morningRangePct": 16.282640126842495,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -27.491492494381795,
+    "intradayVolatility": 41.97774065729374,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1119965400,
-      "regularMarketTime": 1785777426,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 71.825,
+      "regularMarketPrice": 72.48,
       "fiftyTwoWeekHigh": 151.03,
       "fiftyTwoWeekLow": 65.1,
-      "regularMarketDayHigh": 71.94,
+      "regularMarketDayHigh": 73.01,
       "regularMarketDayLow": 68.49,
-      "regularMarketVolume": 1234847,
+      "regularMarketVolume": 2441837,
       "longName": "Builders FirstSource, Inc.",
       "shortName": "Builders FirstSource, Inc.",
       "chartPreviousClose": 72.72,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            1920600,
-            5075400,
-            4608700,
-            3117100,
-            1234847
-          ],
           "high": [
             75.69999694824219,
             72.6500015258789,
             69.86000061035156,
             66.80999755859375,
-            71.94000244140625
+            73.01000213623047
+          ],
+          "close": [
+            73.68000030517578,
+            67.76000213623047,
+            66.01000213623047,
+            66.44000244140625,
+            null
           ],
           "open": [
             74,
@@ -91,19 +113,19 @@
             65.75,
             68.48999786376953
           ],
+          "volume": [
+            1920600,
+            5075400,
+            4608700,
+            3117100,
+            2441837
+          ],
           "low": [
             72.68000030517578,
             67.41000366210938,
             65.11000061035156,
             65.0999984741211,
             68.48999786376953
-          ],
-          "close": [
-            73.68000030517578,
-            67.76000213623047,
-            66.01000213623047,
-            66.44000244140625,
-            71.82499694824219
           ]
         }
       ],
@@ -114,7 +136,7 @@
             67.76000213623047,
             66.01000213623047,
             66.44000244140625,
-            71.82499694824219
+            null
           ]
         }
       ]

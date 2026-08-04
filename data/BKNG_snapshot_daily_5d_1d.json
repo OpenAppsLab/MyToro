@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:13.536Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BKNG?interval=1d&range=5d",
+  "symbol": "BKNG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BKNG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:06.325Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 192.89999389648438,
+    "firstOpen": 189.47999572753906,
+    "dayMovePct": -100,
+    "gapPct": -1.7729384536842343,
+    "currentVolume": 7022606,
+    "averageVolume": 7239881.2,
+    "volumeSpikeRatio": 0.9699891208159603,
+    "morningHigh": 204.61000061035156,
+    "morningLow": 188.47999572753906,
+    "morningRangePct": 8.55793996628138,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.79536962428958,
+    "intradayVolatility": 42.88197546580403,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 922890600,
-      "regularMarketTime": 1785777431,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 193.23,
+      "regularMarketPrice": 192.71,
       "fiftyTwoWeekHigh": 231.8,
       "fiftyTwoWeekLow": 150.14,
       "regularMarketDayHigh": 199.43,
       "regularMarketDayLow": 191.066,
-      "regularMarketVolume": 3240156,
+      "regularMarketVolume": 7022606,
       "longName": "Booking Holdings Inc.",
       "shortName": "Booking Holdings Inc. Common St",
       "chartPreviousClose": 186.79,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            199.97999572753906,
-            204.61000061035156,
-            199.89999389648438,
-            194.9600067138672,
-            199.42990112304688
-          ],
           "low": [
             188.47999572753906,
             195.33999633789062,
             190.14999389648438,
             190.80999755859375,
             191.06640625
-          ],
-          "close": [
-            199.30999755859375,
-            201.3000030517578,
-            193.24000549316406,
-            192.89999389648438,
-            193.22999572753906
           ],
           "open": [
             189.47999572753906,
@@ -98,12 +106,26 @@
             191.61000061035156,
             198.21800231933594
           ],
+          "close": [
+            199.30999755859375,
+            201.3000030517578,
+            193.24000549316406,
+            192.89999389648438,
+            null
+          ],
           "volume": [
             9074000,
             7906000,
             7597000,
-            4598400,
-            3240156
+            4599800,
+            7022606
+          ],
+          "high": [
+            199.97999572753906,
+            204.61000061035156,
+            199.89999389648438,
+            194.9600067138672,
+            199.42990112304688
           ]
         }
       ],
@@ -114,7 +136,7 @@
             201.3000030517578,
             193.24000549316406,
             192.89999389648438,
-            193.22999572753906
+            null
           ]
         }
       ]

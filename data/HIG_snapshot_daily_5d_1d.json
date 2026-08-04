@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:45.908Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HIG?interval=1d&range=5d",
+  "symbol": "HIG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/HIG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:13.317Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 141.91000366210938,
+    "firstOpen": 142,
+    "dayMovePct": -100,
+    "gapPct": 0.06341789554519928,
+    "currentVolume": 1657727,
+    "averageVolume": 1600985.4,
+    "volumeSpikeRatio": 1.0354416723600353,
+    "morningHigh": 146.07000732421875,
+    "morningLow": 140.91000366210938,
+    "morningRangePct": 3.6619143623632575,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.25661396216041,
+    "intradayVolatility": 43.17056629752819,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 819037800,
-      "regularMarketTime": 1785777565,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 142.765,
+      "regularMarketPrice": 142.9,
       "fiftyTwoWeekHigh": 146.07,
       "fiftyTwoWeekLow": 120.33,
       "regularMarketDayHigh": 143.96,
       "regularMarketDayLow": 141.16,
-      "regularMarketVolume": 690349,
+      "regularMarketVolume": 1657727,
       "longName": "The Hartford Insurance Group, Inc.",
       "shortName": "The Hartford Insurance Group, I",
       "chartPreviousClose": 140.14,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            143.72000122070312,
-            145.80999755859375,
-            146.07000732421875,
-            143.5500030517578,
-            143.9600067138672
-          ],
           "open": [
             142,
             142.97000122070312,
@@ -84,26 +99,33 @@
             142.3699951171875,
             142.19000244140625
           ],
-          "close": [
-            143.4199981689453,
-            145.67999267578125,
-            143.0500030517578,
-            141.91000366210938,
-            142.76499938964844
-          ],
-          "volume": [
-            1934900,
-            1775600,
-            1505000,
-            1131200,
-            690349
-          ],
           "low": [
             140.91000366210938,
             142.50999450683594,
             141.10000610351562,
             141.8300018310547,
             141.16000366210938
+          ],
+          "high": [
+            143.72000122070312,
+            145.80999755859375,
+            146.07000732421875,
+            143.5500030517578,
+            143.9600067138672
+          ],
+          "close": [
+            143.4199981689453,
+            145.67999267578125,
+            143.0500030517578,
+            141.91000366210938,
+            null
+          ],
+          "volume": [
+            1934900,
+            1775600,
+            1505000,
+            1131700,
+            1657727
           ]
         }
       ],
@@ -114,7 +136,7 @@
             145.67999267578125,
             143.0500030517578,
             141.91000366210938,
-            142.76499938964844
+            null
           ]
         }
       ]

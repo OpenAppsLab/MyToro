@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:22.384Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?interval=1d&range=5d",
+  "symbol": "KLAC",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:50.721Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 182.82000732421875,
+    "firstOpen": 193.27000427246094,
+    "dayMovePct": -100,
+    "gapPct": 5.716002915211481,
+    "currentVolume": 10247758,
+    "averageVolume": 15774411.6,
+    "volumeSpikeRatio": 0.6496443899054847,
+    "morningHigh": 195.99000549316406,
+    "morningLow": 169.80999755859375,
+    "morningRangePct": 15.417235917182543,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.86575889987412,
+    "intradayVolatility": 43.23752932113975,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 339859800,
-      "regularMarketTime": 1785777322,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 180,
+      "regularMarketPrice": 182.75,
       "fiftyTwoWeekHigh": 307.37,
       "fiftyTwoWeekLow": 83.224,
-      "regularMarketDayHigh": 182.51,
+      "regularMarketDayHigh": 183.19,
       "regularMarketDayLow": 174.6,
-      "regularMarketVolume": 4750828,
+      "regularMarketVolume": 10247758,
       "longName": "KLA Corporation",
       "shortName": "KLA Corporation",
       "chartPreviousClose": 203.36,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            190.8000030517578,
+            170.19000244140625,
+            180.3300018310547,
+            182.82000732421875,
+            null
+          ],
           "open": [
             193.27000427246094,
             177.6300048828125,
@@ -77,19 +106,19 @@
             188,
             177.97000122070312
           ],
-          "volume": [
-            17199200,
-            20427600,
-            17485100,
-            13503700,
-            4750828
-          ],
           "high": [
             195.99000549316406,
             191.3699951171875,
             186.86000061035156,
             190,
-            182.50999450683594
+            183.19000244140625
+          ],
+          "volume": [
+            17199200,
+            20427600,
+            17485100,
+            13512400,
+            10247758
           ],
           "low": [
             186.75,
@@ -97,13 +126,6 @@
             178.86000061035156,
             179.64999389648438,
             174.60000610351562
-          ],
-          "close": [
-            190.8000030517578,
-            170.19000244140625,
-            180.3300018310547,
-            182.82000732421875,
-            180
           ]
         }
       ],
@@ -114,7 +136,7 @@
             170.19000244140625,
             180.3300018310547,
             182.82000732421875,
-            180
+            null
           ]
         }
       ]

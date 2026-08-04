@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:44.543Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?interval=1d&range=5d",
+  "symbol": "ACN",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:04.542Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 165.9199981689453,
+    "firstOpen": 156.9499969482422,
+    "dayMovePct": -100,
+    "gapPct": -5.406220660374869,
+    "currentVolume": 6640364,
+    "averageVolume": 9241072.8,
+    "volumeSpikeRatio": 0.7185706836981091,
+    "morningHigh": 176.39999389648438,
+    "morningLow": 156.9499969482422,
+    "morningRangePct": 12.392479978611446,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.731630667043856,
+    "intradayVolatility": 43.63267637523435,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 995549400,
-      "regularMarketTime": 1785777277,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 166.98,
+      "regularMarketPrice": 165.76,
       "fiftyTwoWeekHigh": 291.09,
       "fiftyTwoWeekLow": 118.15,
       "regularMarketDayHigh": 171.473,
       "regularMarketDayLow": 165.44,
-      "regularMarketVolume": 2475543,
+      "regularMarketVolume": 6640364,
       "longName": "Accenture plc",
       "shortName": "Accenture plc",
       "chartPreviousClose": 154.06,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,20 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            156.9499969482422,
-            163.86000061035156,
-            159.9600067138672,
-            159.1999969482422,
-            165.44000244140625
-          ],
-          "volume": [
-            10614800,
-            10917200,
-            8643800,
-            9387000,
-            2475543
-          ],
           "high": [
             167.75,
             176.39999389648438,
@@ -96,7 +104,7 @@
             173.1699981689453,
             163.2899932861328,
             165.9199981689453,
-            166.97999572753906
+            null
           ],
           "open": [
             156.9499969482422,
@@ -104,6 +112,20 @@
             166.72999572753906,
             160.82000732421875,
             170.3699951171875
+          ],
+          "low": [
+            156.9499969482422,
+            163.86000061035156,
+            159.9600067138672,
+            159.1999969482422,
+            165.44000244140625
+          ],
+          "volume": [
+            10614800,
+            10917200,
+            8643800,
+            9389200,
+            6640364
           ]
         }
       ],
@@ -114,7 +136,7 @@
             173.1699981689453,
             163.2899932861328,
             165.9199981689453,
-            166.97999572753906
+            null
           ]
         }
       ]

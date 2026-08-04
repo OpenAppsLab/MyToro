@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:31.627Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/D?interval=1d&range=5d",
+  "symbol": "D",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/D?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:42.471Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 69.16999816894531,
+    "firstOpen": 70.83999633789062,
+    "dayMovePct": -100,
+    "gapPct": 2.414338894250655,
+    "currentVolume": 2817353,
+    "averageVolume": 3314390.6,
+    "volumeSpikeRatio": 0.8500365044482083,
+    "morningHigh": 71.93000030517578,
+    "morningLow": 68.20999908447266,
+    "morningRangePct": 5.453747647901592,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.516130612639873,
+    "intradayVolatility": 43.004982410503985,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777503,
+      "regularMarketTime": 1785787357,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 68.64,
+      "regularMarketPrice": 68.75,
       "fiftyTwoWeekHigh": 72.99,
       "fiftyTwoWeekLow": 55.85,
       "regularMarketDayHigh": 69.38,
-      "regularMarketDayLow": 68.24,
-      "regularMarketVolume": 1041806,
+      "regularMarketDayLow": 68.21,
+      "regularMarketVolume": 2817353,
       "longName": "Dominion Energy, Inc.",
       "shortName": "Dominion Energy, Inc.",
       "chartPreviousClose": 70.27,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,19 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            4010900,
+            3097500,
+            3063700,
+            3582500,
+            2817353
+          ],
           "low": [
             70.5999984741211,
             69.9800033569336,
             69.0999984741211,
             69.16999816894531,
-            68.23999786376953
-          ],
-          "volume": [
-            4010900,
-            3097500,
-            3063700,
-            3581000,
-            1041806
-          ],
-          "open": [
-            70.83999633789062,
-            71.01000213623047,
-            70.5199966430664,
-            69.37000274658203,
-            69
+            68.20999908447266
           ],
           "high": [
             71.93000030517578,
@@ -98,12 +113,19 @@
             70.06999969482422,
             69.37999725341797
           ],
+          "open": [
+            70.83999633789062,
+            71.01000213623047,
+            70.5199966430664,
+            69.37000274658203,
+            69
+          ],
           "close": [
             70.62000274658203,
             70.55000305175781,
             69.7300033569336,
             69.16999816894531,
-            68.63999938964844
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             70.55000305175781,
             69.7300033569336,
             69.16999816894531,
-            68.63999938964844
+            null
           ]
         }
       ]

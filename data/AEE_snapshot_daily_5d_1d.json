@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:30.581Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AEE?interval=1d&range=5d",
+  "symbol": "AEE",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AEE?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:13.681Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 109.61000061035156,
+    "firstOpen": 113.0999984741211,
+    "dayMovePct": -100,
+    "gapPct": 3.184014090261702,
+    "currentVolume": 1179488,
+    "averageVolume": 1643117.6,
+    "volumeSpikeRatio": 0.7178354123892289,
+    "morningHigh": 114.75,
+    "morningLow": 107.19000244140625,
+    "morningRangePct": 7.0528942871573355,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.64404182121083,
+    "intradayVolatility": 42.94323364413361,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 883751400,
-      "regularMarketTime": 1785777343,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 108.83,
+      "regularMarketPrice": 109.5,
       "fiftyTwoWeekHigh": 118.32,
       "fiftyTwoWeekLow": 96.57,
       "regularMarketDayHigh": 110.56,
       "regularMarketDayLow": 108.52,
-      "regularMarketVolume": 547930,
+      "regularMarketVolume": 1179488,
       "longName": "Ameren Corporation",
       "shortName": "Ameren Corporation",
       "chartPreviousClose": 112.11,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,27 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            1192000,
+            1118500,
+            1967000,
+            2758600,
+            1179488
+          ],
+          "close": [
+            112.51000213623047,
+            109.97000122070312,
+            108.75,
+            109.61000061035156,
+            null
+          ],
+          "open": [
+            113.0999984741211,
+            112.9000015258789,
+            110.76000213623047,
+            108.7699966430664,
+            108.95999908447266
+          ],
           "high": [
             114.75,
             112.9000015258789,
@@ -83,27 +126,6 @@
             107.77999877929688,
             107.19000244140625,
             108.5199966430664
-          ],
-          "open": [
-            113.0999984741211,
-            112.9000015258789,
-            110.76000213623047,
-            108.7699966430664,
-            108.95999908447266
-          ],
-          "volume": [
-            1192000,
-            1118500,
-            1967000,
-            2758600,
-            547930
-          ],
-          "close": [
-            112.51000213623047,
-            109.97000122070312,
-            108.75,
-            109.61000061035156,
-            108.83000183105469
           ]
         }
       ],
@@ -114,7 +136,7 @@
             109.97000122070312,
             108.75,
             109.61000061035156,
-            108.83000183105469
+            null
           ]
         }
       ]

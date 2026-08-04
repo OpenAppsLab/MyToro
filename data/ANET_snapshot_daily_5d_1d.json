@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:49.093Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=5d",
+  "symbol": "ANET",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:36.521Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 180.35000610351562,
+    "firstOpen": 165.57000732421875,
+    "dayMovePct": -100,
+    "gapPct": -8.195175092377644,
+    "currentVolume": 7378292,
+    "averageVolume": 7977278.4,
+    "volumeSpikeRatio": 0.9249134391498735,
+    "morningHigh": 186.57000732421875,
+    "morningLow": 156.83999633789062,
+    "morningRangePct": 18.9556310128182,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.30027968994055,
+    "intradayVolatility": 44.64932793824755,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1402061400,
-      "regularMarketTime": 1785777403,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 183.23,
+      "regularMarketPrice": 184.89,
       "fiftyTwoWeekHigh": 189.817,
       "fiftyTwoWeekLow": 114.52,
-      "regularMarketDayHigh": 183.38,
+      "regularMarketDayHigh": 186.57,
       "regularMarketDayLow": 173.45,
-      "regularMarketVolume": 4001914,
+      "regularMarketVolume": 7378292,
       "longName": "Arista Networks, Inc.",
       "shortName": "Arista Networks, Inc.",
       "chartPreviousClose": 170.76,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            165.57000732421875,
-            168.4499969482422,
-            164.55999755859375,
-            177.60000610351562,
-            174.4199981689453
-          ],
           "high": [
             169.97000122070312,
             169.3300018310547,
             171.50999450683594,
             183.52000427246094,
-            183.3800048828125
+            186.57000732421875
           ],
           "low": [
             159.27000427246094,
@@ -95,15 +110,22 @@
             8561600,
             8189500,
             7284700,
-            8467900,
-            4001914
+            8472300,
+            7378292
+          ],
+          "open": [
+            165.57000732421875,
+            168.4499969482422,
+            164.55999755859375,
+            177.60000610351562,
+            174.4199981689453
           ],
           "close": [
             169.7100067138672,
             157.97000122070312,
             171.02000427246094,
             180.35000610351562,
-            183.22999572753906
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             157.97000122070312,
             171.02000427246094,
             180.35000610351562,
-            183.22999572753906
+            null
           ]
         }
       ]

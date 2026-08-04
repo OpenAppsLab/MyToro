@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:59.033Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/C?interval=1d&range=5d",
+  "symbol": "C",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/C?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:22.113Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 132.4499969482422,
+    "firstOpen": 132.77999877929688,
+    "dayMovePct": -100,
+    "gapPct": 0.24915201106697127,
+    "currentVolume": 7730691,
+    "averageVolume": 10033338.2,
+    "volumeSpikeRatio": 0.770500390388515,
+    "morningHigh": 135.44000244140625,
+    "morningLow": 126.77999877929688,
+    "morningRangePct": 6.830733353440882,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.96260554978528,
+    "intradayVolatility": 43.417735699601735,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 221149800,
-      "regularMarketTime": 1785777298,
+      "regularMarketTime": 1785787362,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 131.585,
+      "regularMarketPrice": 133.57,
       "fiftyTwoWeekHigh": 147.96,
       "fiftyTwoWeekLow": 89.68,
-      "regularMarketDayHigh": 132.67,
+      "regularMarketDayHigh": 133.62,
       "regularMarketDayLow": 131.19,
-      "regularMarketVolume": 3384812,
+      "regularMarketVolume": 7730691,
       "longName": "Citigroup Inc.",
       "shortName": "Citigroup, Inc.",
       "chartPreviousClose": 133.1,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            132.47000122070312,
+            127.12999725341797,
+            132.32000732421875,
+            132.4499969482422,
+            null
+          ],
           "open": [
             132.77999877929688,
             131.75999450683594,
@@ -77,44 +106,37 @@
             133.5500030517578,
             132.47000122070312
           ],
-          "low": [
-            130.75,
-            126.77999877929688,
-            128.8000030517578,
-            131.94000244140625,
-            131.19000244140625
-          ],
           "volume": [
             9420800,
             12942600,
             10467700,
-            9604000,
-            3384812
+            9604900,
+            7730691
           ],
           "high": [
             133,
             132.42999267578125,
             132.5800018310547,
             135.44000244140625,
-            132.6699981689453
+            133.6199951171875
           ],
-          "close": [
-            132.47000122070312,
-            127.12999725341797,
-            132.32000732421875,
-            132.4499969482422,
-            131.5850067138672
+          "low": [
+            130.75,
+            126.77999877929688,
+            128.8000030517578,
+            131.94000244140625,
+            131.19000244140625
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            132.47000122070312,
-            127.12999725341797,
-            132.32000732421875,
-            132.4499969482422,
-            131.5850067138672
+            131.79989624023438,
+            126.48690795898438,
+            131.65066528320312,
+            131.77999877929688,
+            null
           ]
         }
       ]

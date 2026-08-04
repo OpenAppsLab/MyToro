@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:10.592Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FDS?interval=1d&range=5d",
+  "symbol": "FDS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FDS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:30.188Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 263.20001220703125,
+    "firstOpen": 269.489990234375,
+    "dayMovePct": -100,
+    "gapPct": 2.389809170068008,
+    "currentVolume": 394679,
+    "averageVolume": 1031755.8,
+    "volumeSpikeRatio": 0.3825314090795516,
+    "morningHigh": 295.5799865722656,
+    "morningLow": 254.99000549316406,
+    "morningRangePct": 15.918263541584073,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.830050502406856,
+    "intradayVolatility": 42.32742424519132,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 835968600,
-      "regularMarketTime": 1785777482,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 270.515,
+      "regularMarketPrice": 269.68,
       "fiftyTwoWeekHigh": 398.5,
       "fiftyTwoWeekLow": 185,
       "regularMarketDayHigh": 276.51,
       "regularMarketDayLow": 266.39,
-      "regularMarketVolume": 172316,
+      "regularMarketVolume": 394679,
       "longName": "FactSet Research Systems Inc.",
       "shortName": "FactSet Research Systems Inc.",
       "chartPreviousClose": 265.9,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -77,20 +99,6 @@
             261.2099914550781,
             269.989990234375
           ],
-          "close": [
-            283.8699951171875,
-            282.0400085449219,
-            263.0299987792969,
-            263.20001220703125,
-            270.5150146484375
-          ],
-          "volume": [
-            1642600,
-            1298800,
-            1148400,
-            674300,
-            172316
-          ],
           "high": [
             287.8900146484375,
             295.5799865722656,
@@ -104,6 +112,20 @@
             261.8900146484375,
             254.99000549316406,
             266.3900146484375
+          ],
+          "volume": [
+            1642600,
+            1298800,
+            1148400,
+            674300,
+            394679
+          ],
+          "close": [
+            283.8699951171875,
+            282.0400085449219,
+            263.0299987792969,
+            263.20001220703125,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             282.0400085449219,
             263.0299987792969,
             263.20001220703125,
-            270.5150146484375
+            null
           ]
         }
       ]

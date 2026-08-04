@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:49.402Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EME?interval=1d&range=5d",
+  "symbol": "EME",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EME?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:04.124Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 797.4299926757812,
+    "firstOpen": 733.0499877929688,
+    "dayMovePct": -100,
+    "gapPct": -8.073436599341468,
+    "currentVolume": 383570,
+    "averageVolume": 632474,
+    "volumeSpikeRatio": 0.6064597121778919,
+    "morningHigh": 839.989990234375,
+    "morningLow": 668.8200073242188,
+    "morningRangePct": 25.592832307000574,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -21.50604718341341,
+    "intradayVolatility": 46.221540460488754,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 789748200,
-      "regularMarketTime": 1785777316,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 807.5,
+      "regularMarketPrice": 817.42,
       "fiftyTwoWeekHigh": 951.96,
       "fiftyTwoWeekLow": 564.92,
-      "regularMarketDayHigh": 816.08,
+      "regularMarketDayHigh": 821.75,
       "regularMarketDayLow": 775.05,
-      "regularMarketVolume": 186206,
+      "regularMarketVolume": 383570,
       "longName": "EMCOR Group, Inc.",
       "shortName": "EMCOR Group, Inc.",
       "chartPreviousClose": 742.75,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            698.3599853515625,
-            668.8200073242188,
-            771.6599731445312,
-            797.4199829101562,
-            775.0499877929688
-          ],
           "high": [
             733.3300170898438,
             711.0800170898438,
             808.719970703125,
             839.989990234375,
-            816.0800170898438
+            821.75
           ],
-          "close": [
-            705.8200073242188,
-            672.47998046875,
-            802.3699951171875,
-            797.4299926757812,
-            807.5001220703125
+          "volume": [
+            524500,
+            765300,
+            879600,
+            609400,
+            383570
           ],
           "open": [
             733.0499877929688,
@@ -98,12 +113,19 @@
             838.9000244140625,
             787.989990234375
           ],
-          "volume": [
-            524500,
-            765300,
-            879600,
-            609400,
-            186206
+          "close": [
+            705.8200073242188,
+            672.47998046875,
+            802.3699951171875,
+            797.4299926757812,
+            null
+          ],
+          "low": [
+            698.3599853515625,
+            668.8200073242188,
+            771.6599731445312,
+            797.4199829101562,
+            775.0499877929688
           ]
         }
       ],
@@ -114,7 +136,7 @@
             672.47998046875,
             802.3699951171875,
             797.4299926757812,
-            807.5001220703125
+            null
           ]
         }
       ]

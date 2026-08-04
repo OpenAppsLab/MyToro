@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:22.361Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CHRW?interval=1d&range=5d",
+  "symbol": "CHRW",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CHRW?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:17.053Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 147.72999572753906,
+    "firstOpen": 171.7100067138672,
+    "dayMovePct": -100,
+    "gapPct": 16.23232361730712,
+    "currentVolume": 2827693,
+    "averageVolume": 4250998.6,
+    "volumeSpikeRatio": 0.6651832348286354,
+    "morningHigh": 174.27000427246094,
+    "morningLow": 143.16000366210938,
+    "morningRangePct": 21.73093029794714,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -28.071544620503133,
+    "intradayVolatility": 42.111419034420194,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 877008600,
-      "regularMarketTime": 1785777375,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 146.275,
+      "regularMarketPrice": 147,
       "fiftyTwoWeekHigh": 210.33,
       "fiftyTwoWeekLow": 113.4,
       "regularMarketDayHigh": 149.84,
       "regularMarketDayLow": 144.87,
-      "regularMarketVolume": 901376,
+      "regularMarketVolume": 2827693,
       "longName": "C.H. Robinson Worldwide, Inc.",
       "shortName": "C.H. Robinson Worldwide, Inc.",
       "chartPreviousClose": 174.46,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            2752500,
-            4086100,
-            7408100,
-            4180600,
-            901376
-          ],
           "high": [
             172.82000732421875,
             174.27000427246094,
@@ -84,12 +99,12 @@
             151.22999572753906,
             149.83999633789062
           ],
-          "close": [
-            169.33999633789062,
-            173.75,
-            146.9199981689453,
-            147.72999572753906,
-            146.27499389648438
+          "volume": [
+            2752500,
+            4086100,
+            7408100,
+            4180600,
+            2827693
           ],
           "open": [
             171.7100067138672,
@@ -104,6 +119,13 @@
             143.16000366210938,
             143.4600067138672,
             144.8699951171875
+          ],
+          "close": [
+            169.33999633789062,
+            173.75,
+            146.9199981689453,
+            147.72999572753906,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             173.75,
             146.9199981689453,
             147.72999572753906,
-            146.27499389648438
+            null
           ]
         }
       ]

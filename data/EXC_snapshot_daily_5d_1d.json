@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:04.166Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXC?interval=1d&range=5d",
+  "symbol": "EXC",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EXC?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:22.160Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 45.81999969482422,
+    "firstOpen": 47.66999816894531,
+    "dayMovePct": -100,
+    "gapPct": 4.037534889661005,
+    "currentVolume": 6213609,
+    "averageVolume": 10603061.8,
+    "volumeSpikeRatio": 0.5860202569035294,
+    "morningHigh": 48.4900016784668,
+    "morningLow": 44.7400016784668,
+    "morningRangePct": 8.38176097298821,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.787109126111794,
+    "intradayVolatility": 42.866750645115964,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 105197400,
-      "regularMarketTime": 1785777539,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 45.471,
+      "regularMarketPrice": 45.63,
       "fiftyTwoWeekHigh": 50.65,
       "fiftyTwoWeekLow": 42.58,
       "regularMarketDayHigh": 46.26,
-      "regularMarketDayLow": 45.32,
-      "regularMarketVolume": 2487856,
+      "regularMarketDayLow": 45.23,
+      "regularMarketVolume": 6213609,
       "longName": "Exelon Corporation",
       "shortName": "Exelon Corporation",
       "chartPreviousClose": 47.15,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -82,14 +104,7 @@
             46.599998474121094,
             44.7400016784668,
             45.40999984741211,
-            45.31999969482422
-          ],
-          "close": [
-            47.310001373291016,
-            47.029998779296875,
-            45.58000183105469,
-            45.81999969482422,
-            45.47100067138672
+            45.22999954223633
           ],
           "open": [
             47.66999816894531,
@@ -98,12 +113,19 @@
             45.52000045776367,
             45.880001068115234
           ],
+          "close": [
+            47.310001373291016,
+            47.029998779296875,
+            45.58000183105469,
+            45.81999969482422,
+            null
+          ],
           "volume": [
             9586300,
             8613900,
             18553600,
-            10046200,
-            2487856
+            10047900,
+            6213609
           ]
         }
       ],
@@ -114,7 +136,7 @@
             47.029998779296875,
             45.58000183105469,
             45.81999969482422,
-            45.47100067138672
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:12.398Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FISV?interval=1d&range=5d",
+  "symbol": "FISV",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FISV?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:38.554Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 53.939998626708984,
+    "firstOpen": 52.560001373291016,
+    "dayMovePct": -100,
+    "gapPct": -2.5583931934596826,
+    "currentVolume": 14281093,
+    "averageVolume": 8075618.6,
+    "volumeSpikeRatio": 1.768420935580093,
+    "morningHigh": 56,
+    "morningLow": 52.5,
+    "morningRangePct": 6.666666666666667,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.106307292412094,
+    "intradayVolatility": 43.28243417570774,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 528039000,
-      "regularMarketTime": 1785777307,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 54.465,
+      "regularMarketPrice": 54.35,
       "fiftyTwoWeekHigh": 140.42,
       "fiftyTwoWeekLow": 47.04,
       "regularMarketDayHigh": 55.52,
       "regularMarketDayLow": 54.185,
-      "regularMarketVolume": 11482996,
+      "regularMarketVolume": 14281093,
       "longName": "Fiserv, Inc.",
       "shortName": "Fiserv, Inc.",
       "chartPreviousClose": 52.31,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            52.560001373291016,
-            54.119998931884766,
-            54.61000061035156,
-            53.369998931884766,
-            54.86000061035156
+          "volume": [
+            6011200,
+            6966700,
+            7391000,
+            5728100,
+            14281093
           ],
           "high": [
             54.66999816894531,
@@ -84,26 +106,26 @@
             54.08000183105469,
             55.52000045776367
           ],
-          "close": [
-            54.209999084472656,
-            55.630001068115234,
-            54.06999969482422,
-            53.939998626708984,
-            54.46500015258789
-          ],
-          "volume": [
-            6011200,
-            6966700,
-            7391000,
-            5723000,
-            11482996
-          ],
           "low": [
             52.5,
             54.08000183105469,
             53.060001373291016,
             52.7400016784668,
             54.185001373291016
+          ],
+          "close": [
+            54.209999084472656,
+            55.630001068115234,
+            54.06999969482422,
+            53.939998626708984,
+            null
+          ],
+          "open": [
+            52.560001373291016,
+            54.119998931884766,
+            54.61000061035156,
+            53.369998931884766,
+            54.86000061035156
           ]
         }
       ],
@@ -114,7 +136,7 @@
             55.630001068115234,
             54.06999969482422,
             53.939998626708984,
-            54.46500015258789
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:18.390Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABNB?interval=1d&range=5d",
+  "symbol": "ABNB",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ABNB?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:57.815Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 151.52000427246094,
+    "firstOpen": 148.8300018310547,
+    "dayMovePct": -100,
+    "gapPct": -1.7753447502345163,
+    "currentVolume": 3511509,
+    "averageVolume": 3944881.8,
+    "volumeSpikeRatio": 0.8901430202547514,
+    "morningHigh": 156.5,
+    "morningLow": 148.08999633789062,
+    "morningRangePct": 5.678981612586869,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.26033519803828,
+    "intradayVolatility": 43.15139377324061,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1607610600,
-      "regularMarketTime": 1785777373,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 151.275,
+      "regularMarketPrice": 150.64,
       "fiftyTwoWeekHigh": 156.5,
       "fiftyTwoWeekLow": 110.81,
       "regularMarketDayHigh": 154.56,
       "regularMarketDayLow": 150.02,
-      "regularMarketVolume": 1301776,
+      "regularMarketVolume": 3511509,
       "longName": "Airbnb, Inc.",
       "shortName": "Airbnb, Inc.",
       "chartPreviousClose": 146.86,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            148.8300018310547,
-            152.00999450683594,
-            151.5,
-            150.83999633789062,
-            153.49000549316406
+          "close": [
+            153.11000061035156,
+            153.00999450683594,
+            152.0800018310547,
+            151.52000427246094,
+            null
           ],
           "low": [
             148.08999633789062,
@@ -84,26 +106,26 @@
             149.61000061035156,
             150.02000427246094
           ],
-          "close": [
-            153.11000061035156,
-            153.00999450683594,
-            152.0800018310547,
-            151.52000427246094,
-            151.27499389648438
-          ],
-          "volume": [
-            6844100,
-            3851700,
-            3055600,
-            2460700,
-            1301776
-          ],
           "high": [
             153.19000244140625,
             156.5,
             152.2100067138672,
             152.63999938964844,
             154.55999755859375
+          ],
+          "volume": [
+            6844100,
+            3851700,
+            3055600,
+            2461500,
+            3511509
+          ],
+          "open": [
+            148.8300018310547,
+            152.00999450683594,
+            151.5,
+            150.83999633789062,
+            153.49000549316406
           ]
         }
       ],
@@ -114,7 +136,7 @@
             153.00999450683594,
             152.0800018310547,
             151.52000427246094,
-            151.27499389648438
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:07.545Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/XOM?interval=1d&range=5d",
+  "symbol": "XOM",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/XOM?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:45.323Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 155.44000244140625,
+    "firstOpen": 154.1699981689453,
+    "dayMovePct": -100,
+    "gapPct": -0.8170382478858174,
+    "currentVolume": 14453456,
+    "averageVolume": 14723391.2,
+    "volumeSpikeRatio": 0.9816662346104069,
+    "morningHigh": 159.07000732421875,
+    "morningLow": 151.8800048828125,
+    "morningRangePct": 4.73400198199487,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.602537196423313,
+    "intradayVolatility": 43.54798269985215,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777363,
+      "regularMarketTime": 1785787459,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 155.315,
+      "regularMarketPrice": 155.06,
       "fiftyTwoWeekHigh": 176.41,
       "fiftyTwoWeekLow": 105.53,
       "regularMarketDayHigh": 155.87,
       "regularMarketDayLow": 152.66,
-      "regularMarketVolume": 5994511,
+      "regularMarketVolume": 14453456,
       "longName": "ExxonMobil Holdings Corporation",
       "shortName": "ExxonMobil Holdings Corporation",
       "chartPreviousClose": 154.77,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,20 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            151.8800048828125,
-            155.86000061035156,
-            154.52999877929688,
-            152.13999938964844,
-            152.66000366210938
-          ],
-          "volume": [
-            16299900,
-            14571300,
-            12578100,
-            15669200,
-            5994511
-          ],
           "high": [
             156.17999267578125,
             159.07000732421875,
@@ -96,7 +104,14 @@
             156.75,
             156.97000122070312,
             155.44000244140625,
-            155.31500244140625
+            null
+          ],
+          "low": [
+            151.8800048828125,
+            155.86000061035156,
+            154.52999877929688,
+            152.13999938964844,
+            152.66000366210938
           ],
           "open": [
             154.1699981689453,
@@ -104,6 +119,13 @@
             155.08999633789062,
             153.74000549316406,
             153.4550018310547
+          ],
+          "volume": [
+            16299900,
+            14571300,
+            12578100,
+            15714200,
+            14453456
           ]
         }
       ],
@@ -114,7 +136,7 @@
             156.75,
             156.97000122070312,
             155.44000244140625,
-            155.31500244140625
+            null
           ]
         }
       ]

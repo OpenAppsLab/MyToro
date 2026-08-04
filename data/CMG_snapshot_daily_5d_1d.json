@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:41.926Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMG?interval=1d&range=5d",
+  "symbol": "CMG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CMG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:40.884Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 37.220001220703125,
+    "firstOpen": 33.810001373291016,
+    "dayMovePct": -100,
+    "gapPct": -9.161740289023266,
+    "currentVolume": 11530872,
+    "averageVolume": 18842434.4,
+    "volumeSpikeRatio": 0.6119629637665078,
+    "morningHigh": 39.09000015258789,
+    "morningLow": 33.099998474121094,
+    "morningRangePct": 18.09668264229686,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -22.174102008714005,
+    "intradayVolatility": 45.29244456303435,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1138285800,
-      "regularMarketTime": 1785777456,
+      "regularMarketTime": 1785787451,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 37.25,
+      "regularMarketPrice": 37.46,
       "fiftyTwoWeekHigh": 44.27,
       "fiftyTwoWeekLow": 28.04,
       "regularMarketDayHigh": 38.35,
       "regularMarketDayLow": 36.87,
-      "regularMarketVolume": 6552894,
+      "regularMarketVolume": 11530872,
       "longName": "Chipotle Mexican Grill, Inc.",
       "shortName": "Chipotle Mexican Grill, Inc.",
       "chartPreviousClose": 33.2,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "open": [
+            33.810001373291016,
+            33.650001525878906,
+            36.63999938964844,
+            37.970001220703125,
+            38.349998474121094
+          ],
           "high": [
             34.15999984741211,
             34.5099983215332,
@@ -84,26 +113,19 @@
             37.18000030517578,
             36.869998931884766
           ],
-          "open": [
-            33.810001373291016,
-            33.650001525878906,
-            36.63999938964844,
-            37.970001220703125,
-            38.349998474121094
-          ],
-          "volume": [
-            13816100,
-            18926300,
-            35584400,
-            14346000,
-            6552894
-          ],
           "close": [
             33.5099983215332,
             34.2400016784668,
             38.52000045776367,
             37.220001220703125,
-            37.25
+            null
+          ],
+          "volume": [
+            13816100,
+            18926300,
+            35584400,
+            14354500,
+            11530872
           ]
         }
       ],
@@ -114,7 +136,7 @@
             34.2400016784668,
             38.52000045776367,
             37.220001220703125,
-            37.25
+            null
           ]
         }
       ]

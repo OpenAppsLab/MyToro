@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:56.845Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMY?interval=1d&range=5d",
+  "symbol": "BMY",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BMY?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:19.315Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 65.30999755859375,
+    "firstOpen": 63.650001525878906,
+    "dayMovePct": -100,
+    "gapPct": -2.5417181056017584,
+    "currentVolume": 24636623,
+    "averageVolume": 16599324.6,
+    "volumeSpikeRatio": 1.4841943027007256,
+    "morningHigh": 68.0999984741211,
+    "morningLow": 62.22999954223633,
+    "morningRangePct": 9.432747830731895,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.325784827411436,
+    "intradayVolatility": 43.70899210890107,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785777296,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 64.74,
+      "regularMarketPrice": 65.47,
       "fiftyTwoWeekHigh": 68.1,
       "fiftyTwoWeekLow": 42.52,
       "regularMarketDayHigh": 68.1,
       "regularMarketDayLow": 64.14,
-      "regularMarketVolume": 16388660,
+      "regularMarketVolume": 24636623,
       "longName": "Bristol-Myers Squibb Company",
       "shortName": "Bristol-Myers Squibb Company",
       "chartPreviousClose": 62.56,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            15141700,
-            10606600,
-            18031400,
-            14574100,
-            16388660
-          ],
-          "high": [
-            64.97000122070312,
-            63.90999984741211,
-            65.55999755859375,
-            65.66000366210938,
-            68.0999984741211
-          ],
           "close": [
             63.599998474121094,
             63.099998474121094,
             64.86000061035156,
             65.30999755859375,
-            64.73999786376953
+            null
           ],
           "open": [
             63.650001525878906,
@@ -97,6 +105,20 @@
             62.689998626708984,
             65,
             66.12000274658203
+          ],
+          "volume": [
+            15141700,
+            10606600,
+            18031400,
+            14580300,
+            24636623
+          ],
+          "high": [
+            64.97000122070312,
+            63.90999984741211,
+            65.55999755859375,
+            65.66000366210938,
+            68.0999984741211
           ],
           "low": [
             63.20000076293945,
@@ -114,7 +136,7 @@
             63.099998474121094,
             64.86000061035156,
             65.30999755859375,
-            64.73999786376953
+            null
           ]
         }
       ]

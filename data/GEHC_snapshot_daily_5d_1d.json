@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:31.500Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GEHC?interval=1d&range=5d",
+  "symbol": "GEHC",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GEHC?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:55.709Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 68.0199966430664,
+    "firstOpen": 61.400001525878906,
+    "dayMovePct": -100,
+    "gapPct": -9.732424939574452,
+    "currentVolume": 4108863,
+    "averageVolume": 8031592.6,
+    "volumeSpikeRatio": 0.5115875772882206,
+    "morningHigh": 72.04000091552734,
+    "morningLow": 61.400001525878906,
+    "morningRangePct": 17.328988803304647,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.330058397758496,
+    "intradayVolatility": 44.68066539470752,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1671114600,
-      "regularMarketTime": 1785777570,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 69.405,
+      "regularMarketPrice": 69.73,
       "fiftyTwoWeekHigh": 89.77,
       "fiftyTwoWeekLow": 58.75,
       "regularMarketDayHigh": 70.27,
       "regularMarketDayLow": 68.85,
-      "regularMarketVolume": 1749624,
+      "regularMarketVolume": 4108863,
       "longName": "GE HealthCare Technologies Inc.",
       "shortName": "GE HealthCare Technologies Inc.",
       "chartPreviousClose": 61.12,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -69,12 +91,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
+          "low": [
             61.400001525878906,
-            69.31999969482422,
-            71.37000274658203,
-            68.83999633789062,
-            69.61000061035156
+            68.08000183105469,
+            68.26000213623047,
+            67.15499877929688,
+            68.8499984741211
           ],
           "high": [
             64.25499725341797,
@@ -83,26 +105,26 @@
             69.0199966430664,
             70.2699966430664
           ],
+          "open": [
+            61.400001525878906,
+            69.31999969482422,
+            71.37000274658203,
+            68.83999633789062,
+            69.61000061035156
+          ],
           "volume": [
             7986800,
             15269600,
             7665100,
-            5126700,
-            1749624
+            5127600,
+            4108863
           ],
           "close": [
             64.11000061035156,
             71.9000015258789,
             69.94000244140625,
             68.0199966430664,
-            69.40499877929688
-          ],
-          "low": [
-            61.400001525878906,
-            68.08000183105469,
-            68.26000213623047,
-            67.15499877929688,
-            68.8499984741211
+            null
           ]
         }
       ],
@@ -113,7 +135,7 @@
             71.9000015258789,
             69.94000244140625,
             68.0199966430664,
-            69.40499877929688
+            null
           ]
         }
       ]

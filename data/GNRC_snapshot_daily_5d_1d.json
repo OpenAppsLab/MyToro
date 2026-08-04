@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:34.640Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GNRC?interval=1d&range=5d",
+  "symbol": "GNRC",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GNRC?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:59.615Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 197.11000061035156,
+    "firstOpen": 194.5800018310547,
+    "dayMovePct": -100,
+    "gapPct": -1.2835466346013535,
+    "currentVolume": 1336320,
+    "averageVolume": 1894744,
+    "volumeSpikeRatio": 0.7052773356189543,
+    "morningHigh": 210,
+    "morningLow": 187.5500030517578,
+    "morningRangePct": 11.970139473709688,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.795106202205396,
+    "intradayVolatility": 43.44830405876198,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1265898600,
-      "regularMarketTime": 1785777502,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 203.96,
+      "regularMarketPrice": 201.21,
       "fiftyTwoWeekHigh": 296.44,
       "fiftyTwoWeekLow": 134.8,
       "regularMarketDayHigh": 205.79,
       "regularMarketDayLow": 193.7,
-      "regularMarketVolume": 837195,
+      "regularMarketVolume": 1336320,
       "longName": "Generac Holdings Inc.",
       "shortName": "Generac Holdlings Inc.",
       "chartPreviousClose": 197.54,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            196.4199981689453,
-            210,
-            205.47999572753906,
-            202.89999389648438,
-            205.7899932861328
+          "volume": [
+            1856700,
+            2727200,
+            2025600,
+            1527900,
+            1336320
           ],
           "low": [
             187.5500030517578,
@@ -89,7 +111,14 @@
             195.19000244140625,
             191.91000366210938,
             197.11000061035156,
-            203.9600067138672
+            null
+          ],
+          "high": [
+            196.4199981689453,
+            210,
+            205.47999572753906,
+            202.89999389648438,
+            205.7899932861328
           ],
           "open": [
             194.5800018310547,
@@ -97,13 +126,6 @@
             201.3300018310547,
             197.44000244140625,
             195.27000427246094
-          ],
-          "volume": [
-            1856700,
-            2727200,
-            2025600,
-            1527100,
-            837195
           ]
         }
       ],
@@ -114,7 +136,7 @@
             195.19000244140625,
             191.91000366210938,
             197.11000061035156,
-            203.9600067138672
+            null
           ]
         }
       ]

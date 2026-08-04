@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:18.413Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FSLR?interval=1d&range=5d",
+  "symbol": "FSLR",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FSLR?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:39.606Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 211.02999877929688,
+    "firstOpen": 202.11000061035156,
+    "dayMovePct": -100,
+    "gapPct": -4.226886329215299,
+    "currentVolume": 5054094,
+    "averageVolume": 2938658.8,
+    "volumeSpikeRatio": 1.719864177494849,
+    "morningHigh": 242.1699981689453,
+    "morningLow": 195.83999633789062,
+    "morningRangePct": 23.657068370814137,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.954724515129648,
+    "intradayVolatility": 43.94571274974457,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1163773800,
-      "regularMarketTime": 1785777555,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 237.85,
+      "regularMarketPrice": 232.73,
       "fiftyTwoWeekHigh": 320.95,
       "fiftyTwoWeekLow": 176.47,
       "regularMarketDayHigh": 242.17,
       "regularMarketDayLow": 213.55,
-      "regularMarketVolume": 2713632,
+      "regularMarketVolume": 5054094,
       "longName": "First Solar, Inc.",
       "shortName": "First Solar, Inc.",
       "chartPreviousClose": 205.83,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -77,6 +99,13 @@
             212.77999877929688,
             218.02000427246094
           ],
+          "volume": [
+            2169500,
+            1645900,
+            2397700,
+            3426100,
+            5054094
+          ],
           "low": [
             195.83999633789062,
             197.35000610351562,
@@ -89,7 +118,7 @@
             199.24000549316406,
             206.00999450683594,
             211.02999877929688,
-            237.85000610351562
+            null
           ],
           "high": [
             203.75,
@@ -97,13 +126,6 @@
             206.74000549316406,
             217.1300048828125,
             242.1699981689453
-          ],
-          "volume": [
-            2169500,
-            1645900,
-            2397700,
-            3424300,
-            2713632
           ]
         }
       ],
@@ -114,7 +136,7 @@
             199.24000549316406,
             206.00999450683594,
             211.02999877929688,
-            237.85000610351562
+            null
           ]
         }
       ]

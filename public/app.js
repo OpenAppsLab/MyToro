@@ -13,15 +13,22 @@ const dailyPnlLabel = document.getElementById('dailyPnl');
 const selectionModal = document.getElementById('selectionModal');
 const selectionModalText = document.getElementById('selectionModalText');
 const selectionModalClose = document.getElementById('selectionModalClose');
+const selectionModalSecondary = document.getElementById('selectionModalSecondary');
 const infoButton = document.getElementById('infoButton');
 const appInfoModal = document.getElementById('appInfoModal');
 const appInfoBody = document.getElementById('appInfoBody');
 const appInfoClose = document.getElementById('appInfoClose');
+const candidateDetailModal = document.getElementById('candidateDetailModal');
+const candidateDetailContent = document.getElementById('candidateDetailContent');
+const candidateDetailSubtitle = document.getElementById('candidateDetailSubtitle');
+const candidateDetailClose = document.getElementById('candidateDetailClose');
 const STARTING_DAILY_BALANCE = 3000;
 let latestPredictionOptions = [];
 let appInfoCache = '';
 let selectedPredictionSymbol = '';
 let orderCreateInProgress = false;
+let pendingReviewOption = null;
+let activeSelectionModalMode = 'info';
 
 const adminPanel = document.getElementById('adminPanel');
 const adminAlerts = document.getElementById('adminAlerts');
@@ -37,11 +44,16 @@ const snapshotCountLabel = document.getElementById('snapshotCount');
 const snapshotCountDetail = document.getElementById('snapshotCountDetail');
 const runtimeGateLabel = document.getElementById('runtimeGate');
 const runtimeGateDetail = document.getElementById('runtimeGateDetail');
+const dataHealthStateLabel = document.getElementById('dataHealthState');
+const dataHealthDetailLabel = document.getElementById('dataHealthDetail');
+const livePerformanceStateLabel = document.getElementById('livePerformanceState');
+const livePerformanceDetailLabel = document.getElementById('livePerformanceDetail');
 const calibrationChart = document.getElementById('adminCalibrationChart');
 const curveMeta = document.getElementById('curveMeta');
 const alphaControl = document.getElementById('alphaControl');
 const thresholdControl = document.getElementById('thresholdControl');
 const saveAdminButton = document.getElementById('saveAdminSettings');
+const refreshAdminButton = document.getElementById('refreshAdminSettings');
 const restartServerButton = document.getElementById('restartServerButton');
 const adminTuningSummary = document.getElementById('adminTuningSummary');
 
@@ -137,6 +149,28 @@ async function loadAdminMetrics() {
       ? 'Auto trading is blocked by walk-forward calibration health.'
       : 'Auto trading is permitted under current calibration settings.';
 
+    const monitoring = payload.monitoring || {};
+    const dataHealth = monitoring.dataHealth || {};
+    const performance = monitoring.performance || {};
+    if (dataHealthStateLabel) {
+      dataHealthStateLabel.textContent = dataHealth.stale ? 'Stale' : (dataHealth.healthy ? 'Healthy' : 'Warning');
+    }
+    if (dataHealthDetailLabel) {
+      dataHealthDetailLabel.textContent = dataHealth.stale
+        ? 'The latest data refresh is older than the freshness window.'
+        : (dataHealth.providerFailureCount > 0
+          ? `Provider failures detected (${dataHealth.providerFailureCount}).`
+          : 'Live data refreshes are currently healthy.');
+    }
+    if (livePerformanceStateLabel) {
+      livePerformanceStateLabel.textContent = performance.autoOrderPaused ? 'Paused' : `${Math.round((Number(performance.successRate || 0) * 100) || 0)}%`;
+    }
+    if (livePerformanceDetailLabel) {
+      livePerformanceDetailLabel.textContent = performance.autoOrderPaused
+        ? (performance.pauseReason || 'Auto-ordering is paused because success rate fell below the threshold.')
+        : `Based on ${performance.sampleSize || 0} recent outcomes.`;
+    }
+
     const runtime = payload.runtimeSettings || {};
     if (alphaControl) alphaControl.value = runtime.intradayAlpha ?? 0.7;
     if (thresholdControl) thresholdControl.value = runtime.minCombinedThreshold ?? 0.6;
@@ -146,6 +180,7 @@ async function loadAdminMetrics() {
 
     const tuning = payload.tuningReport;
     const bestTuning = getBestTuningResult(tuning);
+    const validationSummary = payload.calibrationMetadata?.validationSummary;
     if (bestTuning) {
       adminTuningSummary.innerHTML = `
         <strong>Best walk-forward tuning</strong><br>
@@ -153,6 +188,12 @@ async function loadAdminMetrics() {
         total PnL $${Number(bestTuning.totalPnl || 0).toFixed(0)}, win rate ${(Number(bestTuning.winRate || 0) * 100).toFixed(1)}%<br>
         candidate set size ${payload.candidateCounts?.candidateCount ?? '—'}.
       `;
+      if (validationSummary) {
+        adminTuningSummary.innerHTML += `
+          <div style="margin-top:0.75rem; font-size:0.9rem; color:var(--text-secondary);">
+            Validation: ${validationSummary.folds} folds, avg accuracy ${(Number(validationSummary.averageAccuracy || 0) * 100).toFixed(1)}%, avg brier ${Number(validationSummary.averageBrier || 0).toFixed(4)}
+          </div>`;
+      }
     } else {
       adminTuningSummary.textContent = 'Walk-forward tuning report is unavailable or not yet generated.';
     }
@@ -179,8 +220,13 @@ async function loadAdminMetrics() {
         : 'Based on saved intraday examples';
     }
 
-    if (health.degraded || drift.warning) {
-      showAdminAlert('Warning: calibration or market drift requires review.', 'warning');
+    const monitoringWarnings = [
+      ...(Array.isArray(dataHealth.warnings) ? dataHealth.warnings : []),
+      ...(performance.autoOrderPaused ? [performance.pauseReason || 'Auto-ordering is paused because live performance is under threshold.'] : [])
+    ];
+
+    if (health.degraded || drift.warning || dataHealth.stale || performance.autoOrderPaused || monitoringWarnings.length) {
+      showAdminAlert(monitoringWarnings[0] || 'Warning: calibration or market drift requires review.', 'warning');
     } else {
       showAdminAlert('Admin diagnostics are within expected limits.', 'healthy');
     }
@@ -218,6 +264,25 @@ async function saveAdminSettings() {
   }
 }
 
+async function refreshAdminMetrics() {
+  if (!refreshAdminButton) return;
+
+  refreshAdminButton.disabled = true;
+  refreshAdminButton.textContent = 'Refreshing...';
+
+  try {
+    await loadAdminMetrics();
+    showAdminAlert('Admin metrics refreshed successfully.', 'healthy');
+  } catch (error) {
+    showAdminAlert(error.message || 'Unable to refresh admin metrics', 'danger');
+  } finally {
+    if (refreshAdminButton) {
+      refreshAdminButton.disabled = false;
+      refreshAdminButton.textContent = 'Refresh';
+    }
+  }
+}
+
 async function requestServerRestart() {
   if (!restartServerButton) return;
   if (!window.confirm('Restart the server? This will stop the backend process and may require a manual restart if no watcher is running.')) {
@@ -241,17 +306,44 @@ async function requestServerRestart() {
   }
 }
 
-function showSelectionModal(option, order) {
+function showSelectionModal(option, order, mode = 'info') {
   if (!selectionModal || !selectionModalText) {
     return;
   }
 
-  const symbolName = option?.name || selectedPredictionSymbol || 'your selected option';
-  const stopLossMessage = order
-    ? `Your order is placed at $${order.entryPrice.toFixed(2)} with a 5% trailing stop loss at $${(order.trailingStopPrice || order.stopLossPrice || order.entryPrice * 0.95).toFixed(2)}. `
-    : '';
+  activeSelectionModalMode = mode;
+  let canApprove = false;
+  if (mode === 'review' && option) {
+    const evaluation = option.eligibility || {};
+    canApprove = evaluation.status === 'pending-eligible';
+    const reasons = Array.isArray(evaluation.reasons) ? evaluation.reasons : [];
+    const signalSummary = evaluation.signalSummary || {};
+    const reviewHtml = `
+      <strong>${option.name} (${option.symbol})</strong>
+      <div style="margin-top:0.6rem; color:#8fd5ff; font-weight:700;">Status: ${canApprove ? 'Pending eligible' : 'Rejected by risk rules'}</div>
+      <ul style="margin:0.7rem 0 0 1rem; padding:0; color:#cfd9ec; line-height:1.55;">
+        ${reasons.length ? reasons.map((reason) => `<li>${reason}</li>`).join('') : '<li>Model and signal checks were completed.</li>'}
+      </ul>
+      <div style="margin-top:0.7rem; font-size:0.9rem; color:#9cb2d1;">Probability ${(Number(signalSummary.probability || 0) * 100).toFixed(0)}%, combined score ${(Number(signalSummary.combinedScore || 0) * 100).toFixed(0)}%, volatility ${(Number(signalSummary.volatilityPct || 0).toFixed(2))}%</div>
+      <div style="margin-top:0.7rem; font-size:0.9rem; color:${canApprove ? '#7dd3fc' : '#fda4af'};">${canApprove ? 'Manual review is required before execution.' : 'This pick is blocked by risk rules and cannot be approved.'}</div>
+    `;
+    selectionModalText.innerHTML = reviewHtml;
+  } else {
+    const symbolName = option?.name || selectedPredictionSymbol || 'your selected option';
+    const stopLossMessage = order
+      ? `Your order is placed at $${order.entryPrice.toFixed(2)} with a 5% trailing stop loss at $${(order.trailingStopPrice || order.stopLossPrice || order.entryPrice * 0.95).toFixed(2)}. `
+      : '';
 
-  selectionModalText.textContent = `You picked ${symbolName} for today. ${stopLossMessage}The position is pending in History until the profit target or stop loss condition is met.`;
+    selectionModalText.innerHTML = `<div>${`You picked ${symbolName} for today. ${stopLossMessage}The position is pending in History until the profit target or stop loss condition is met.`}</div>`;
+  }
+
+  const closeLabel = mode === 'review' ? (canApprove ? 'Approve & place' : 'Close') : 'Continue';
+  if (selectionModalClose) {
+    selectionModalClose.textContent = closeLabel;
+  }
+  if (selectionModalSecondary) {
+    selectionModalSecondary.style.display = mode === 'review' ? 'inline-flex' : 'none';
+  }
   selectionModal.classList.remove('hidden');
   selectionModal.setAttribute('aria-hidden', 'false');
 }
@@ -381,38 +473,8 @@ async function openAppInfo() {
   const markdown = await fetchAppDocumentation();
   appInfoBody.innerHTML = parseMarkdownToHtml(markdown);
 
-  // Ensure a visible close button is present
-  ensureFloatingClose();
-
   appInfoModal.classList.remove('hidden');
   appInfoModal.setAttribute('aria-hidden', 'false');
-}
-
-// Ensure there is a visible floating close button inside the modal if the default Close is not visible
-function ensureFloatingClose() {
-  if (!appInfoModal) return;
-  const card = appInfoModal.querySelector('.app-info-card');
-  if (!card) return;
-
-  // If existing close button is present and visible, nothing to do
-  const existingClose = document.getElementById('appInfoClose');
-  if (existingClose && existingClose.offsetParent !== null) {
-    // remove any floating fallback if present
-    const floatBtn = document.getElementById('appInfoCloseFloating');
-    if (floatBtn) floatBtn.remove();
-    return;
-  }
-
-  // Create a floating close button if not already created
-  if (!document.getElementById('appInfoCloseFloating')) {
-    const btn = document.createElement('button');
-    btn.id = 'appInfoCloseFloating';
-    btn.className = 'app-info-close-floating';
-    btn.setAttribute('aria-label', 'Close');
-    btn.innerHTML = '✕';
-    btn.addEventListener('click', closeAppInfo);
-    card.appendChild(btn);
-  }
 }
 
 function closeAppInfo() {
@@ -422,6 +484,124 @@ function closeAppInfo() {
 
   appInfoModal.classList.add('hidden');
   appInfoModal.setAttribute('aria-hidden', 'true');
+}
+
+function renderCandidateDetail(detail) {
+  if (!detail || typeof detail !== 'object') {
+    return '<div class="option-card">Unable to load candidate details.</div>';
+  }
+
+  const probabilityText = Number(detail.probability || 0) > 0
+    ? `${(Number(detail.probability) * 100).toFixed(1)}%`
+    : '—';
+  const combinedScoreText = Number(detail.combinedScore || 0) > 0
+    ? Number(detail.combinedScore).toFixed(3)
+    : '—';
+  const riskStatus = detail.evaluation?.status || 'unknown';
+  const riskReasons = Array.isArray(detail.evaluation?.reasons) ? detail.evaluation.reasons : [];
+  const riskFlags = Array.isArray(detail.evaluation?.riskFlags) ? detail.evaluation.riskFlags : [];
+  const featureBreakdownHtml = Array.isArray(detail.featureBreakdown) && detail.featureBreakdown.length
+    ? detail.featureBreakdown.map((feature) => `
+        <div class="metric-chip">
+          <span class="metric-label">${feature.label}</span>
+          <strong>${feature.value}</strong>
+        </div>
+      `).join('')
+    : '<div class="metric-chip">Feature details unavailable.</div>';
+
+  const riskListHtml = riskReasons.length
+    ? `<ul class="candidate-detail-list">${riskReasons.map((reason) => `<li>${reason}</li>`).join('')}</ul>`
+    : '<div class="candidate-detail-copy">No risk reasons were recorded.</div>';
+
+  const trendDetails = detail.trendContext || {};
+  const trendSummary = [];
+  if (trendDetails.regime) trendSummary.push(`Regime: ${trendDetails.regime}`);
+  if (trendDetails.candlePattern) trendSummary.push(`Pattern: ${trendDetails.candlePattern.pattern || trendDetails.candlePattern}`);
+  if (trendDetails.snapshotFresh !== undefined) trendSummary.push(`Snapshot: ${trendDetails.snapshotFresh ? 'fresh' : 'stale'}`);
+
+  const trendSummaryHtml = trendSummary.length
+    ? `<div class="candidate-detail-copy">${trendSummary.join(' • ')}</div>`
+    : '<div class="candidate-detail-copy">Trend and regime context unavailable.</div>';
+
+  return `
+    <section class="candidate-detail-section">
+      <div class="candidate-detail-row">
+        <div>
+          <strong>Symbol</strong>
+          <div>${detail.symbol || 'Unknown'}</div>
+        </div>
+        <div>
+          <strong>Region</strong>
+          <div>${detail.region || 'N/A'}</div>
+        </div>
+        <div>
+          <strong>Price</strong>
+          <div>$${Number(detail.currentPrice || 0).toFixed(2)}</div>
+        </div>
+      </div>
+      <div class="confidence-grid">
+        <div class="confidence-item"><span>Probability</span><strong>${probabilityText}</strong></div>
+        <div class="confidence-item"><span>Combined score</span><strong>${combinedScoreText}</strong></div>
+        <div class="confidence-item"><span>Expected move</span><strong>${(Number(detail.expectedMoveScore || 0) * 100).toFixed(1)}%</strong></div>
+        <div class="confidence-item"><span>Liquidity</span><strong>${Number(detail.liquidityScore || 0).toFixed(2)}</strong></div>
+      </div>
+      <div class="candidate-detail-copy">Target move: ${Number(detail.targetMovePct || 0).toFixed(2)}%, day move: ${Number(detail.dayMovePct || 0).toFixed(2)}%</div>
+      <div class="candidate-detail-copy">Review status: ${riskStatus}${detail.evaluation?.reviewRequired ? ' (manual review required)' : ''}</div>
+      ${riskFlags.length ? `<div class="candidate-detail-copy">Risk flags: ${riskFlags.join(', ')}</div>` : ''}
+    </section>
+
+    <section class="candidate-detail-section">
+      <div class="candidate-detail-section-title">Feature & trend drivers</div>
+      <div class="metric-grid">${featureBreakdownHtml}</div>
+      ${trendSummaryHtml}
+    </section>
+
+    <section class="candidate-detail-section">
+      <div class="candidate-detail-section-title">Risk review and reasons</div>
+      ${riskListHtml}
+    </section>
+  `;
+}
+
+async function fetchCandidateDetail(symbol) {
+  const minProfit = Number(minProfitInput?.value || 100);
+  const ballpark = Number(ballparkInput?.value || 500);
+  const searchParams = new URLSearchParams({ symbol, minProfit: String(minProfit), ballpark: String(ballpark) });
+  const response = await fetch(`/api/candidate-detail?${searchParams.toString()}`);
+  const payload = await response.json();
+  if (!response.ok || !payload.ok || !payload.detail) {
+    throw new Error(payload.error || 'Unable to fetch candidate detail');
+  }
+  return payload.detail;
+}
+
+async function openCandidateDetail(symbol) {
+  if (!candidateDetailModal || !candidateDetailContent || !candidateDetailSubtitle) {
+    return;
+  }
+
+  candidateDetailSubtitle.textContent = `Loading ${symbol} candidate intelligence...`;
+  candidateDetailContent.innerHTML = '<div class="option-card">Fetching candidate details…</div>';
+  candidateDetailModal.classList.remove('hidden');
+  candidateDetailModal.setAttribute('aria-hidden', 'false');
+
+  try {
+    const detail = await fetchCandidateDetail(symbol);
+    candidateDetailSubtitle.textContent = `${detail.name || symbol} — ${detail.currentPrice ? `$${Number(detail.currentPrice).toFixed(2)}` : 'price unavailable'}`;
+    candidateDetailContent.innerHTML = renderCandidateDetail(detail);
+  } catch (error) {
+    candidateDetailSubtitle.textContent = 'Unable to load candidate details.';
+    candidateDetailContent.innerHTML = `<div class="option-card">${error.message || 'Candidate detail lookup failed.'}</div>`;
+  }
+}
+
+function closeCandidateDetail() {
+  if (!candidateDetailModal) {
+    return;
+  }
+
+  candidateDetailModal.classList.add('hidden');
+  candidateDetailModal.setAttribute('aria-hidden', 'true');
 }
 
 function loadHistory() {
@@ -619,7 +799,7 @@ window.addEventListener('orders-cleared', () => {
   updateDailyPnl();
 });
 
-async function createPendingOrder(option) {
+async function createPendingOrder(option, overrides = {}) {
   const minProfit = Number(minProfitInput.value || 0);
   const ballpark = Number(ballparkInput.value || 0);
 
@@ -647,7 +827,14 @@ async function createPendingOrder(option) {
         ballparkAmount: ballpark,
         leverage: 2,
         stopLossPct: 5,
-        force: true
+        force: true,
+        requireManualReview: true,
+        manualReviewApproved: Boolean(overrides.manualReviewApproved),
+        probability: Number(option.probability || 0),
+        combinedScore: Number(option.combinedScore ?? option.score ?? 0),
+        dayMovePct: Number(option.dayMovePct || 0),
+        advancedSignals: option.advancedSignals || {},
+        stopLossAmount: Number(option.stopLossAmount || 0)
       })
     });
 
@@ -725,13 +912,19 @@ async function searchPrediction() {
       ...option,
       estimatedProfit: Number(option.estimatedProfit.toFixed(2)),
       leverageProfit: Number((option.leverageProfit || option.estimatedProfit * 2).toFixed(2)),
-      marketScore: Number(option.score.toFixed(2))
+      marketScore: Number(((option.compositeScore ?? option.score) || 0).toFixed(2)),
+      compositeScore: Number(((option.compositeScore ?? option.score) || 0).toFixed(2)),
+      eligibility: option.eligibility || { status: option.eligibleForExecution ? 'pending-eligible' : 'rejected-risk', reasons: ['Manual review and risk checks were completed.'] }
     }));
     selectedPredictionSymbol = latestPredictionOptions[0]?.symbol || '';
 
     const headerCard = `<div class="option-card info-card"><strong>${payload.viable ? 'Live picks meet your target' : 'No currently viable live pick'}</strong><div class="info-copy">${payload.note}</div><div class="info-copy">Live source: ${payload.liveSource}</div></div>`;
     const optionsMarkup = latestPredictionOptions.length
-      ? latestPredictionOptions.map((option, index) => `
+      ? latestPredictionOptions.map((option, index) => {
+        const evaluation = option.eligibility || {};
+        const statusText = evaluation.status === 'pending-eligible' ? 'Pending review' : 'Blocked by risk rules';
+        const actionLabel = evaluation.status === 'pending-eligible' ? `Review and approve ${index + 1}` : `Review reason ${index + 1}`;
+        return `
         <article class="option-card ${option.viable ? '' : 'watch-card'}">
           <h3>${option.name} (${option.symbol})</h3>
           <div class="option-meta">
@@ -739,15 +932,25 @@ async function searchPrediction() {
             <span>Current price: ${Number(option.currentPrice).toFixed(2)}</span>
             <span>Day move: ${Number(option.dayMovePct).toFixed(2)}%</span>
             <span>Signal: ${option.signalType}</span>
-            <span>Score: ${option.marketScore}</span>
-            <span>Confidence: ${option.confidence?.toFixed(1) ?? 'n/a'}</span>
+            <span>Composite score: ${option.marketScore}</span>
+            <span>Probability: ${(Number(option.probability) * 100).toFixed(0)}%</span>
+            <span>Quality: ${Number(option.qualityScore || 0).toFixed(2)}</span>
+            <span>Expected move: ${(Number(option.expectedMoveScore || 0) * 100).toFixed(0)}%</span>
+            <span>Liquidity: ${Number(option.liquidityScore || 0).toFixed(2)}</span>
             <span>News mentions: ${option.newsMentions}</span>
             <span>Estimated profit: ${option.estimatedProfit.toFixed(2)}</span>
             <span>Leverage profit: ${option.leverageProfit.toFixed(2)}</span>
           </div>
-          <button data-select="${option.symbol}" class="ghost-button">${payload.viable ? `Select option ${index + 1}` : `Place manual order ${index + 1}`}</button>
+          <div class="review-pill">${statusText}</div>
+          <div class="review-details">${Array.isArray(evaluation.reasons) ? evaluation.reasons.slice(0, 2).join(' • ') : 'Review required before execution.'}</div>
+          <div class="option-actions">
+            <button data-details="${option.symbol}" class="ghost-button small-button">View details</button>
+            <a href="candidate.html?symbol=${option.symbol}" class="ghost-button small-button">Open full page</a>
+            <button data-select="${option.symbol}" class="ghost-button">${actionLabel}</button>
+          </div>
         </article>
-      `).join('')
+      `;
+      }).join('')
       : '<div class="option-card">No live movement data is available for your requested target right now.</div>';
 
     resultsArea.innerHTML = `${headerCard}${optionsMarkup}`;
@@ -770,6 +973,17 @@ async function searchPrediction() {
 
 if (resultsArea) {
   resultsArea.addEventListener('click', async (event) => {
+    const detailTarget = event.target.closest('[data-details]');
+    if (detailTarget && !detailTarget.disabled) {
+      const symbol = detailTarget.getAttribute('data-details');
+      if (symbol) {
+        detailTarget.disabled = true;
+        window.location.assign(`candidate.html?symbol=${encodeURIComponent(symbol)}`);
+        detailTarget.disabled = false;
+      }
+      return;
+    }
+
     const target = event.target.closest('[data-select]');
     if (!target || target.disabled) {
       return;
@@ -784,26 +998,45 @@ if (resultsArea) {
       return;
     }
 
-    updateStatus(`Placing order for ${option.name}...`);
-    const order = await createPendingOrder(option);
-    if (!order) {
-      target.disabled = false;
-      return;
-    }
-
-    updateStatus(`Order placed at $${order.entryPrice.toFixed(2)} with a 5% trailing stop loss.`);
-    showSelectionModal(option, order);
+    pendingReviewOption = option;
+    showSelectionModal(option, null, 'review');
     target.disabled = false;
-    // after placing an order, suggest top intraday picks for quick follow-up
-    const postSuggestions = await fetchIntradaySuggestionsHtml(5);
-    if (postSuggestions) {
-      resultsArea.insertAdjacentHTML('afterbegin', postSuggestions);
-    }
+    updateStatus(`Reviewing ${option.name} before placement.`);
   });
 }
 
 if (selectionModalClose) {
-  selectionModalClose.addEventListener('click', hideSelectionModal);
+  selectionModalClose.addEventListener('click', async () => {
+    if (activeSelectionModalMode === 'review' && pendingReviewOption) {
+      const option = pendingReviewOption;
+      const evaluation = option.eligibility || {};
+      if (evaluation.status === 'rejected-risk') {
+        updateStatus(`${option.symbol} is blocked by risk rules and was not placed.`);
+        pendingReviewOption = null;
+        hideSelectionModal();
+        return;
+      }
+
+      updateStatus(`Placing order for ${option.name}...`);
+      const order = await createPendingOrder(option, { manualReviewApproved: true });
+      if (!order) {
+        return;
+      }
+
+      updateStatus(`Order placed at $${order.entryPrice.toFixed(2)} with a 5% trailing stop loss.`);
+      showSelectionModal(option, order, 'info');
+      return;
+    }
+
+    hideSelectionModal();
+  });
+}
+
+if (selectionModalSecondary) {
+  selectionModalSecondary.addEventListener('click', () => {
+    pendingReviewOption = null;
+    hideSelectionModal();
+  });
 }
 
 if (selectionModal) {
@@ -820,6 +1053,18 @@ if (appInfoModal) {
       closeAppInfo();
     }
   });
+}
+
+if (candidateDetailModal) {
+  candidateDetailModal.addEventListener('click', (event) => {
+    if (event.target === candidateDetailModal) {
+      closeCandidateDetail();
+    }
+  });
+}
+
+if (candidateDetailClose) {
+  candidateDetailClose.addEventListener('click', closeCandidateDetail);
 }
 
 if (infoButton) {
@@ -851,6 +1096,10 @@ async function triggerAutoOrdersOnLoad() {
 
 if (saveAdminButton) {
   saveAdminButton.addEventListener('click', saveAdminSettings);
+}
+
+if (refreshAdminButton) {
+  refreshAdminButton.addEventListener('click', refreshAdminMetrics);
 }
 
 if (restartServerButton) {

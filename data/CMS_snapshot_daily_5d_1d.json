@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:53.194Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMS?interval=1d&range=5d",
+  "symbol": "CMS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CMS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:54.561Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 71.98999786376953,
+    "firstOpen": 74.91999816894531,
+    "dayMovePct": -100,
+    "gapPct": 4.070010268260287,
+    "currentVolume": 2098648,
+    "averageVolume": 3758689.6,
+    "volumeSpikeRatio": 0.5583456532297851,
+    "morningHigh": 76.38999938964844,
+    "morningLow": 71.12999725341797,
+    "morningRangePct": 7.39491401565844,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.80280066603792,
+    "intradayVolatility": 42.85142131426605,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785777446,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 71.68,
+      "regularMarketPrice": 71.74,
       "fiftyTwoWeekHigh": 80.36,
       "fiftyTwoWeekLow": 68.64,
       "regularMarketDayHigh": 72.53,
       "regularMarketDayLow": 71.13,
-      "regularMarketVolume": 1044470,
+      "regularMarketVolume": 2098648,
       "longName": "CMS Energy Corporation",
       "shortName": "CMS Energy Corporation",
       "chartPreviousClose": 74.27,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            74.37000274658203,
+            74.36000061035156,
+            72.26000213623047,
+            71.98999786376953,
+            null
+          ],
           "high": [
             76.38999938964844,
             75.13999938964844,
@@ -77,12 +106,12 @@
             72.55999755859375,
             72.52999877929688
           ],
-          "open": [
-            74.91999816894531,
-            74.44999694824219,
-            73.62999725341797,
-            72.0999984741211,
-            72.31999969482422
+          "volume": [
+            4405000,
+            3851500,
+            3900700,
+            4537600,
+            2098648
           ],
           "low": [
             74.37000274658203,
@@ -91,19 +120,12 @@
             71.54000091552734,
             71.12999725341797
           ],
-          "close": [
-            74.37000274658203,
-            74.36000061035156,
-            72.26000213623047,
-            71.98999786376953,
-            71.68000030517578
-          ],
-          "volume": [
-            4405000,
-            3851500,
-            3900700,
-            4537100,
-            1044470
+          "open": [
+            74.91999816894531,
+            74.44999694824219,
+            73.62999725341797,
+            72.0999984741211,
+            72.31999969482422
           ]
         }
       ],
@@ -114,7 +136,7 @@
             74.36000061035156,
             72.26000213623047,
             71.98999786376953,
-            71.68000030517578
+            null
           ]
         }
       ]

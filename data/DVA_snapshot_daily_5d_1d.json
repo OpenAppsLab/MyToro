@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:19.630Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DVA?interval=1d&range=5d",
+  "symbol": "DVA",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DVA?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:27.947Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 240.08999633789062,
+    "firstOpen": 237.6699981689453,
+    "dayMovePct": -100,
+    "gapPct": -1.0079546027979975,
+    "currentVolume": 1195380,
+    "averageVolume": 671996,
+    "volumeSpikeRatio": 1.7788498741063934,
+    "morningHigh": 247.49000549316406,
+    "morningLow": 231.97000122070312,
+    "morningRangePct": 6.69052213251262,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.932540711460003,
+    "intradayVolatility": 43.3442347720171,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 815149800,
-      "regularMarketTime": 1785777489,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 237.825,
+      "regularMarketPrice": 233.68,
       "fiftyTwoWeekHigh": 247.49,
       "fiftyTwoWeekLow": 101,
       "regularMarketDayHigh": 247.49,
-      "regularMarketDayLow": 236.545,
-      "regularMarketVolume": 566219,
+      "regularMarketDayLow": 231.97,
+      "regularMarketVolume": 1195380,
       "longName": "DaVita Inc.",
       "shortName": "DaVita Inc.",
       "chartPreviousClose": 236.31,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,26 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            237.22000122070312,
-            238.67999267578125,
-            238.7899932861328,
-            236.08999633789062,
-            236.5449981689453
-          ],
           "close": [
             239.4600067138672,
             240.9600067138672,
             238.86000061035156,
             240.08999633789062,
-            237.8249969482422
+            null
           ],
-          "high": [
-            241.72999572753906,
-            244.49000549316406,
-            241.77000427246094,
-            240.91000366210938,
-            247.49000549316406
+          "volume": [
+            650500,
+            694500,
+            393000,
+            426600,
+            1195380
+          ],
+          "low": [
+            237.22000122070312,
+            238.67999267578125,
+            238.7899932861328,
+            236.08999633789062,
+            231.97000122070312
           ],
           "open": [
             237.6699981689453,
@@ -98,12 +120,12 @@
             237.80999755859375,
             245
           ],
-          "volume": [
-            650500,
-            694500,
-            393000,
-            426600,
-            566219
+          "high": [
+            241.72999572753906,
+            244.49000549316406,
+            241.77000427246094,
+            240.91000366210938,
+            247.49000549316406
           ]
         }
       ],
@@ -114,7 +136,7 @@
             240.9600067138672,
             238.86000061035156,
             240.08999633789062,
-            237.8249969482422
+            null
           ]
         }
       ]

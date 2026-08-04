@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:07.620Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CPAY?interval=1d&range=5d",
+  "symbol": "CPAY",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CPAY?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:12.117Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 382.1099853515625,
+    "firstOpen": 383.5,
+    "dayMovePct": -100,
+    "gapPct": 0.36377344265384975,
+    "currentVolume": 314141,
+    "averageVolume": 627508.2,
+    "volumeSpikeRatio": 0.5006165656480664,
+    "morningHigh": 395.489990234375,
+    "morningLow": 379.69000244140625,
+    "morningRangePct": 4.1612862312346515,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.13215930413423,
+    "intradayVolatility": 43.25252331842384,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1292423400,
-      "regularMarketTime": 1785777471,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 383.69,
+      "regularMarketPrice": 385.78,
       "fiftyTwoWeekHigh": 395.49,
       "fiftyTwoWeekLow": 252.84,
       "regularMarketDayHigh": 390.19,
       "regularMarketDayLow": 381.56,
-      "regularMarketVolume": 159614,
+      "regularMarketVolume": 314141,
       "longName": "Corpay, Inc.",
       "shortName": "Corpay, Inc.",
       "chartPreviousClose": 379.71,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -77,26 +99,12 @@
             379.69000244140625,
             381.55999755859375
           ],
-          "volume": [
-            715800,
-            898200,
-            661000,
-            548400,
-            159614
-          ],
-          "high": [
-            389.25,
-            395.489990234375,
-            392.8699951171875,
-            388.2900085449219,
-            390.19000244140625
-          ],
           "close": [
             384.32000732421875,
             392.8500061035156,
             390.1199951171875,
             382.1099853515625,
-            383.69000244140625
+            null
           ],
           "open": [
             383.5,
@@ -104,6 +112,20 @@
             389.54998779296875,
             386.3500061035156,
             384.6600036621094
+          ],
+          "volume": [
+            715800,
+            898200,
+            661000,
+            548400,
+            314141
+          ],
+          "high": [
+            389.25,
+            395.489990234375,
+            392.8699951171875,
+            388.2900085449219,
+            390.19000244140625
           ]
         }
       ],
@@ -114,7 +136,7 @@
             392.8500061035156,
             390.1199951171875,
             382.1099853515625,
-            383.69000244140625
+            null
           ]
         }
       ]

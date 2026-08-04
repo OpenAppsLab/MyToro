@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:50.182Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AJG?interval=1d&range=5d",
+  "symbol": "AJG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AJG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:37.873Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 249.4199981689453,
+    "firstOpen": 255,
+    "dayMovePct": -100,
+    "gapPct": 2.237191032001796,
+    "currentVolume": 1222193,
+    "averageVolume": 1598438.6,
+    "volumeSpikeRatio": 0.7646167954152258,
+    "morningHigh": 269.989990234375,
+    "morningLow": 242.27999877929688,
+    "morningRangePct": 11.437176652918977,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.504491410256446,
+    "intradayVolatility": 42.48782007995925,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 456586200,
-      "regularMarketTime": 1785777404,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 248.865,
+      "regularMarketPrice": 247.79,
       "fiftyTwoWeekHigh": 313.55,
       "fiftyTwoWeekLow": 190.75,
       "regularMarketDayHigh": 255.98,
       "regularMarketDayLow": 246.223,
-      "regularMarketVolume": 526652,
+      "regularMarketVolume": 1222193,
       "longName": "Arthur J. Gallagher & Co.",
       "shortName": "Arthur J. Gallagher & Co.",
       "chartPreviousClose": 253.36,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            254.14999389648438,
-            259.3399963378906,
-            253.5399932861328,
-            242.27999877929688,
-            246.22250366210938
+          "volume": [
+            1533700,
+            1573600,
+            1926400,
+            1736300,
+            1222193
           ],
           "high": [
             265.3800048828125,
@@ -84,26 +106,26 @@
             255.72999572753906,
             255.97999572753906
           ],
-          "open": [
-            255,
-            261.5899963378906,
-            269.989990234375,
-            245.92999267578125,
-            251.2100067138672
-          ],
-          "volume": [
-            1533700,
-            1573600,
-            1926400,
-            1735800,
-            526652
+          "low": [
+            254.14999389648438,
+            259.3399963378906,
+            253.5399932861328,
+            242.27999877929688,
+            246.22250366210938
           ],
           "close": [
             265.30999755859375,
             268.9100036621094,
             256.4599914550781,
             249.4199981689453,
-            248.86500549316406
+            null
+          ],
+          "open": [
+            255,
+            261.5899963378906,
+            269.989990234375,
+            245.92999267578125,
+            251.2100067138672
           ]
         }
       ],
@@ -114,7 +136,7 @@
             268.9100036621094,
             256.4599914550781,
             249.4199981689453,
-            248.86500549316406
+            null
           ]
         }
       ]

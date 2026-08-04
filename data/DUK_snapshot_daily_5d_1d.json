@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:38.269Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DUK?interval=1d&range=5d",
+  "symbol": "DUK",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DUK?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:50.657Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 125.43000030517578,
+    "firstOpen": 129.82000732421875,
+    "dayMovePct": -100,
+    "gapPct": 3.4999657245969233,
+    "currentVolume": 3767713,
+    "averageVolume": 4026922.6,
+    "volumeSpikeRatio": 0.9356308462447229,
+    "morningHigh": 132.64999389648438,
+    "morningLow": 123.49500274658203,
+    "morningRangePct": 7.413248266157657,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.741497573860535,
+    "intradayVolatility": 42.879768494987005,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777513,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 123.97,
+      "regularMarketPrice": 124.28,
       "fiftyTwoWeekHigh": 134.49,
       "fiftyTwoWeekLow": 113.9,
       "regularMarketDayHigh": 126,
-      "regularMarketDayLow": 123.965,
-      "regularMarketVolume": 1841199,
+      "regularMarketDayLow": 123.495,
+      "regularMarketVolume": 3767713,
       "longName": "Duke Energy Corporation",
       "shortName": "Duke Energy Corporation (Holdin",
       "chartPreviousClose": 128.83,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -89,21 +111,21 @@
             128.36000061035156,
             125.23999786376953,
             124.62999725341797,
-            123.96499633789062
+            123.49500274658203
           ],
           "volume": [
             3641600,
             3668300,
             4743800,
-            4311900,
-            1841199
+            4313200,
+            3767713
           ],
           "close": [
             129.24000549316406,
             129.0800018310547,
             126.2699966430664,
             125.43000030517578,
-            123.97000122070312
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             129.0800018310547,
             126.2699966430664,
             125.43000030517578,
-            123.97000122070312
+            null
           ]
         }
       ]

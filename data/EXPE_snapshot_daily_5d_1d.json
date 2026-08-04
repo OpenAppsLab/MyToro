@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:06.319Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXPE?interval=1d&range=5d",
+  "symbol": "EXPE",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EXPE?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:24.814Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 294.739990234375,
+    "firstOpen": 282.42999267578125,
+    "dayMovePct": -100,
+    "gapPct": -4.176561704031045,
+    "currentVolume": 2111896,
+    "averageVolume": 1783119.2,
+    "volumeSpikeRatio": 1.1843829621710091,
+    "morningHigh": 312.3999938964844,
+    "morningLow": 279.9200134277344,
+    "morningRangePct": 11.6033076988742,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.060541399106064,
+    "intradayVolatility": 43.33118996132476,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1121952600,
-      "regularMarketTime": 1785777543,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 298.87,
+      "regularMarketPrice": 298.03,
       "fiftyTwoWeekHigh": 312.4,
       "fiftyTwoWeekLow": 179.61,
       "regularMarketDayHigh": 307.237,
-      "regularMarketDayLow": 298.75,
-      "regularMarketVolume": 761081,
+      "regularMarketDayLow": 297.8,
+      "regularMarketVolume": 2111896,
       "longName": "Expedia Group, Inc.",
       "shortName": "Expedia Group, Inc.",
       "chartPreviousClose": 278.37,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            1446700,
-            2495400,
-            1737000,
-            1124600,
-            761081
-          ],
           "close": [
             295.7900085449219,
             304.2699890136719,
             292.92999267578125,
             294.739990234375,
-            298.8699951171875
+            null
           ],
           "open": [
             282.42999267578125,
@@ -98,12 +113,19 @@
             297.3699951171875,
             307.23748779296875
           ],
+          "volume": [
+            1446700,
+            2495400,
+            1737000,
+            1124600,
+            2111896
+          ],
           "low": [
             279.9200134277344,
             290.6400146484375,
             287.1600036621094,
             287.6499938964844,
-            298.75
+            297.79998779296875
           ]
         }
       ],
@@ -114,7 +136,7 @@
             304.2699890136719,
             292.92999267578125,
             294.739990234375,
-            298.8699951171875
+            null
           ]
         }
       ]

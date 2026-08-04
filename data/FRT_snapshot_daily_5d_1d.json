@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:13.949Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FRT?interval=1d&range=5d",
+  "symbol": "FRT",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FRT?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:34.286Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 124.08999633789062,
+    "firstOpen": 127.80999755859375,
+    "dayMovePct": -100,
+    "gapPct": 2.9978252320789456,
+    "currentVolume": 601487,
+    "averageVolume": 901597.4,
+    "volumeSpikeRatio": 0.6671347987472014,
+    "morningHigh": 128.2100067138672,
+    "morningLow": 122.94000244140625,
+    "morningRangePct": 4.286647281443356,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.403301363419505,
+    "intradayVolatility": 43.07135679785873,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 105283800,
-      "regularMarketTime": 1785777409,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 123.25,
+      "regularMarketPrice": 123.65,
       "fiftyTwoWeekHigh": 128.21,
       "fiftyTwoWeekLow": 90.03,
       "regularMarketDayHigh": 124.965,
-      "regularMarketDayLow": 123.13,
-      "regularMarketVolume": 256208,
+      "regularMarketDayLow": 122.94,
+      "regularMarketVolume": 601487,
       "longName": "Federal Realty Investment Trust",
       "shortName": "Federal Realty Investment Trust",
       "chartPreviousClose": 127.13,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            937200,
-            897500,
-            829700,
-            1242100,
-            256208
-          ],
           "high": [
             128.2100067138672,
             126.48999786376953,
@@ -96,14 +111,21 @@
             125.30000305175781,
             123.16000366210938,
             123.98999786376953,
-            123.12999725341797
+            122.94000244140625
           ],
           "close": [
             126.12000274658203,
             125.77999877929688,
             124.08999633789062,
             124.08999633789062,
-            123.25
+            null
+          ],
+          "volume": [
+            937200,
+            897500,
+            829700,
+            1242100,
+            601487
           ]
         }
       ],
@@ -114,7 +136,7 @@
             125.77999877929688,
             124.08999633789062,
             124.08999633789062,
-            123.25
+            null
           ]
         }
       ]

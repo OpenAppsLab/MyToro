@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:25.931Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALL?interval=1d&range=5d",
+  "symbol": "ALL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ALL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:07.976Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 264.0799865722656,
+    "firstOpen": 263.25,
+    "dayMovePct": -100,
+    "gapPct": -0.314293628623197,
+    "currentVolume": 952701,
+    "averageVolume": 1586000.2,
+    "volumeSpikeRatio": 0.6006941234938054,
+    "morningHigh": 277.2200012207031,
+    "morningLow": 260.989990234375,
+    "morningRangePct": 6.218633508416627,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.762593184228887,
+    "intradayVolatility": 42.885604953048826,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 739114200,
-      "regularMarketTime": 1785777382,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 263.13,
+      "regularMarketPrice": 262.68,
       "fiftyTwoWeekHigh": 277.22,
       "fiftyTwoWeekLow": 188.08,
       "regularMarketDayHigh": 266.875,
       "regularMarketDayLow": 260.99,
-      "regularMarketVolume": 441386,
+      "regularMarketVolume": 952701,
       "longName": "The Allstate Corporation",
       "shortName": "Allstate Corporation (The)",
       "chartPreviousClose": 261.27,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            263.25,
-            270.0799865722656,
-            261.92999267578125,
-            262.5899963378906,
-            260.989990234375
-          ],
           "close": [
             272.4200134277344,
             274.3900146484375,
             265.3800048828125,
             264.0799865722656,
-            263.1300048828125
+            null
           ],
           "open": [
             263.25,
@@ -102,8 +117,15 @@
             2460300,
             1513100,
             1694200,
-            1309200,
-            441386
+            1309700,
+            952701
+          ],
+          "low": [
+            263.25,
+            270.0799865722656,
+            261.92999267578125,
+            262.5899963378906,
+            260.989990234375
           ]
         }
       ],
@@ -114,7 +136,7 @@
             274.3900146484375,
             265.3800048828125,
             264.0799865722656,
-            263.1300048828125
+            null
           ]
         }
       ]

@@ -34,7 +34,24 @@ This app is a local trading game and model-backed stock selection system that us
    - a normalized ensemble score `s` from legacy signals.
 4. These are blended into a combined score using `alpha`:
    - `combined = alpha * p + (1 - alpha) * s`
-5. The UI in `public/app.js` and `public/premarket.js` displays the top candidates, probability drivers, combined score, and whether a symbol qualifies for auto-order consideration.
+5. The UI in `public/app.js` displays the top candidates, probability drivers, combined score, and whether a symbol qualifies for auto-order consideration.
+6. Each candidate also includes a detail lookup that explains the predictive signals, market trend context, and the reasons behind risk/rejection decisions.
+
+## 4.1. How the model works
+
+- The app combines a logistic intraday model with live signal features such as momentum, volatility, volume confirmation, and trend strength.
+- `Probability` is the model’s estimated chance that a symbol will reach your intraday target before the session closes.
+- `Combined score` is the blended ranking value that mixes the model probability with other live market signals so the highest-quality ideas appear first.
+- The risk review explains why a symbol was accepted, rejected, or sent for manual review.
+
+## 4.2. How to read the Home dashboard metrics
+
+- `Target intraday profit` defines the profit goal used for position sizing and order construction.
+- `Daily loss target` is the maximum unrealized loss the app is using to decide whether to continue placing trades.
+- `Minimum profit per order` ensures only candidates with sufficient expected reward are considered.
+- `Composite score` mixes the model probability with legacy signal strength to rank candidates.
+- `Probability` is the model’s estimated chance of the candidate reaching the intraday profit threshold.
+- `Liquidity`, `quality`, and `expected move` are internal driver scores that help explain why a pick is eligible or blocked.
 
 ## 5. Order placement and stop-loss behavior
 

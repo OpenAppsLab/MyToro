@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:08.053Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?interval=1d&range=5d",
+  "symbol": "DIS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:33.136Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 96.19000244140625,
+    "firstOpen": 97,
+    "dayMovePct": -100,
+    "gapPct": 0.8420808171692862,
+    "currentVolume": 11142304,
+    "averageVolume": 13181420.8,
+    "volumeSpikeRatio": 0.8453037171835072,
+    "morningHigh": 99.41000366210938,
+    "morningLow": 94.45999908447266,
+    "morningRangePct": 5.24031825705406,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.684802309233092,
+    "intradayVolatility": 42.91528404013875,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777306,
+      "regularMarketTime": 1785787438,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 97.28,
+      "regularMarketPrice": 98.14,
       "fiftyTwoWeekHigh": 119.78,
       "fiftyTwoWeekLow": 92.19,
       "regularMarketDayHigh": 99.05,
       "regularMarketDayLow": 97.21,
-      "regularMarketVolume": 5232716,
+      "regularMarketVolume": 11142304,
       "longName": "The Walt Disney Company",
       "shortName": "Walt Disney Company (The)",
       "chartPreviousClose": 96.65,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -74,15 +96,8 @@
             11389300,
             11070100,
             21112400,
-            11181500,
-            5232716
-          ],
-          "low": [
-            96.97000122070312,
-            97.98999786376953,
-            94.45999908447266,
-            95.5999984741211,
-            97.20999908447266
+            11193000,
+            11142304
           ],
           "open": [
             97,
@@ -90,6 +105,13 @@
             97.41000366210938,
             96.08000183105469,
             97.62000274658203
+          ],
+          "low": [
+            96.97000122070312,
+            97.98999786376953,
+            94.45999908447266,
+            95.5999984741211,
+            97.20999908447266
           ],
           "high": [
             99.2300033569336,
@@ -103,7 +125,7 @@
             98.4800033569336,
             96.16000366210938,
             96.19000244140625,
-            97.28009796142578
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             98.4800033569336,
             96.16000366210938,
             96.19000244140625,
-            97.28009796142578
+            null
           ]
         }
       ]

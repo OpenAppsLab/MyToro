@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:30.010Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVNA?interval=1d&range=5d",
+  "symbol": "CVNA",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CVNA?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:26.420Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 62.36000061035156,
+    "firstOpen": 64.04000091552734,
+    "dayMovePct": -100,
+    "gapPct": 2.6940351005976524,
+    "currentVolume": 10023117,
+    "averageVolume": 16959263.4,
+    "volumeSpikeRatio": 0.5910113407401881,
+    "morningHigh": 69.40499877929688,
+    "morningLow": 56.119998931884766,
+    "morningRangePct": 23.6724877053841,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.370619738748243,
+    "intradayVolatility": 42.646486071293,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1493386200,
-      "regularMarketTime": 1785777446,
+      "regularMarketTime": 1785787505,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 64.2,
+      "regularMarketPrice": 66.13,
       "fiftyTwoWeekHigh": 97.378,
       "fiftyTwoWeekLow": 54.464,
-      "regularMarketDayHigh": 65.01,
+      "regularMarketDayHigh": 66.15,
       "regularMarketDayLow": 62.1,
-      "regularMarketVolume": 4800693,
+      "regularMarketVolume": 10023117,
       "longName": "Carvana Co.",
       "shortName": "Carvana Co.",
       "chartPreviousClose": 64.04,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            66.06999969482422,
-            66.31999969482422,
-            61.439998626708984,
-            62.36000061035156,
-            64.19999694824219
-          ],
-          "volume": [
-            11287400,
-            18103900,
-            33498900,
-            11878900,
-            4800693
-          ],
-          "high": [
-            66.66000366210938,
-            69.40499877929688,
-            61.599998474121094,
-            63.279998779296875,
-            65.01000213623047
+          "low": [
+            61.95000076293945,
+            64.41000366210938,
+            56.119998931884766,
+            59.689998626708984,
+            62.099998474121094
           ],
           "open": [
             64.04000091552734,
@@ -98,12 +106,26 @@
             62.119998931884766,
             63.439998626708984
           ],
-          "low": [
-            61.95000076293945,
-            64.41000366210938,
-            56.119998931884766,
-            59.689998626708984,
-            62.099998474121094
+          "close": [
+            66.06999969482422,
+            66.31999969482422,
+            61.439998626708984,
+            62.36000061035156,
+            null
+          ],
+          "high": [
+            66.66000366210938,
+            69.40499877929688,
+            61.599998474121094,
+            63.279998779296875,
+            66.1500015258789
+          ],
+          "volume": [
+            11287400,
+            18103900,
+            33498900,
+            11883000,
+            10023117
           ]
         }
       ],
@@ -114,7 +136,7 @@
             66.31999969482422,
             61.439998626708984,
             62.36000061035156,
-            64.19999694824219
+            null
           ]
         }
       ]

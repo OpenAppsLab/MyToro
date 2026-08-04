@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:16.840Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HD?interval=1d&range=5d",
+  "symbol": "HD",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/HD?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:43.790Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 331.9599914550781,
+    "firstOpen": 342.6400146484375,
+    "dayMovePct": -100,
+    "gapPct": 3.2172621605831764,
+    "currentVolume": 2173948,
+    "averageVolume": 4349549.6,
+    "volumeSpikeRatio": 0.49980991135266056,
+    "morningHigh": 349.42999267578125,
+    "morningLow": 328.79998779296875,
+    "morningRangePct": 6.274332618224526,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.917826996786673,
+    "intradayVolatility": 42.774390177099086,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 370013400,
-      "regularMarketTime": 1785777309,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 336.455,
+      "regularMarketPrice": 340.02,
       "fiftyTwoWeekHigh": 426.75,
       "fiftyTwoWeekLow": 289.1,
       "regularMarketDayHigh": 343.635,
       "regularMarketDayLow": 333.72,
-      "regularMarketVolume": 1205532,
+      "regularMarketVolume": 2173948,
       "longName": "The Home Depot, Inc.",
       "shortName": "Home Depot, Inc. (The)",
       "chartPreviousClose": 336.09,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            344.4700012207031,
+            338.2699890136719,
+            333.3500061035156,
+            331.9599914550781,
+            null
+          ],
+          "volume": [
+            4308000,
+            4028500,
+            6275400,
+            4961900,
+            2173948
+          ],
           "low": [
             342.6000061035156,
             336.9599914550781,
             330.25,
             328.79998779296875,
             333.7200012207031
-          ],
-          "close": [
-            344.4700012207031,
-            338.2699890136719,
-            333.3500061035156,
-            331.9599914550781,
-            336.4549865722656
           ],
           "open": [
             342.6400146484375,
@@ -97,13 +126,6 @@
             335.69000244140625,
             334,
             343.635009765625
-          ],
-          "volume": [
-            4308000,
-            4028500,
-            6275400,
-            4958900,
-            1205532
           ]
         }
       ],
@@ -114,7 +136,7 @@
             338.2699890136719,
             333.3500061035156,
             331.9599914550781,
-            336.4549865722656
+            null
           ]
         }
       ]

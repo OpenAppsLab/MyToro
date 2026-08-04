@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:03.090Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/VLO?interval=1d&range=5d",
+  "symbol": "VLO",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/VLO?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:39.762Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 312.8999938964844,
+    "firstOpen": 304.8999938964844,
+    "dayMovePct": -100,
+    "gapPct": -2.5567274388144003,
+    "currentVolume": 2521367,
+    "averageVolume": 2408293.4,
+    "volumeSpikeRatio": 1.046951754300369,
+    "morningHigh": 315,
+    "morningLow": 294.2099914550781,
+    "morningRangePct": 7.066384265911727,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.838424017894663,
+    "intradayVolatility": 43.98755553101824,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 379002600,
-      "regularMarketTime": 1785777330,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 309.875,
+      "regularMarketPrice": 307.54,
       "fiftyTwoWeekHigh": 320.24,
       "fiftyTwoWeekLow": 130.78,
       "regularMarketDayHigh": 314.35,
-      "regularMarketDayLow": 303.774,
-      "regularMarketVolume": 1219577,
+      "regularMarketDayLow": 303.03,
+      "regularMarketVolume": 2521367,
       "longName": "Valero Energy Corporation",
       "shortName": "Valero Energy Corporation",
       "chartPreviousClose": 304.93,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            304.8999938964844,
-            306.3299865722656,
-            296.4100036621094,
-            312.3299865722656,
-            311.94000244140625
+          "close": [
+            298.8800048828125,
+            301.32000732421875,
+            311.7099914550781,
+            312.8999938964844,
+            null
           ],
           "high": [
             307,
@@ -88,22 +110,22 @@
             2512000,
             2319800,
             2254700,
-            2431400,
-            1219577
-          ],
-          "close": [
-            298.8800048828125,
-            301.32000732421875,
-            311.7099914550781,
-            312.8999938964844,
-            309.875
+            2433600,
+            2521367
           ],
           "low": [
             297.82000732421875,
             301.32000732421875,
             294.2099914550781,
             306.25,
-            303.7744140625
+            303.0299987792969
+          ],
+          "open": [
+            304.8999938964844,
+            306.3299865722656,
+            296.4100036621094,
+            312.3299865722656,
+            311.94000244140625
           ]
         }
       ],
@@ -114,7 +136,7 @@
             300.1600036621094,
             310.5099792480469,
             312.8999938964844,
-            309.875
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:08.470Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXR?interval=1d&range=5d",
+  "symbol": "EXR",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EXR?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:27.531Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 148.0399932861328,
+    "firstOpen": 149.52000427246094,
+    "dayMovePct": -100,
+    "gapPct": 0.9997372692847591,
+    "currentVolume": 851816,
+    "averageVolume": 1841043.2,
+    "volumeSpikeRatio": 0.4626811581607645,
+    "morningHigh": 158.8800048828125,
+    "morningLow": 145.72000122070312,
+    "morningRangePct": 9.031020828896116,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.682473805170076,
+    "intradayVolatility": 42.92740184067164,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1092663000,
-      "regularMarketTime": 1785777469,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 149.145,
+      "regularMarketPrice": 149.73,
       "fiftyTwoWeekHigh": 158.88,
       "fiftyTwoWeekLow": 125.71,
       "regularMarketDayHigh": 150.82,
-      "regularMarketDayLow": 148.89,
-      "regularMarketVolume": 411123,
+      "regularMarketDayLow": 148.82,
+      "regularMarketVolume": 851816,
       "longName": "Extra Space Storage Inc.",
       "shortName": "Extra Space Storage Inc",
       "chartPreviousClose": 148.29,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -75,7 +97,21 @@
             152.85000610351562,
             148.2100067138672,
             148.0399932861328,
-            149.14500427246094
+            null
+          ],
+          "high": [
+            153.33999633789062,
+            158.8800048828125,
+            152.83999633789062,
+            148.8800048828125,
+            150.82000732421875
+          ],
+          "low": [
+            149.19000244140625,
+            152.3000030517578,
+            146.5,
+            145.72000122070312,
+            148.82000732421875
           ],
           "open": [
             149.52000427246094,
@@ -84,26 +120,12 @@
             148.1999969482422,
             149
           ],
-          "low": [
-            149.19000244140625,
-            152.3000030517578,
-            146.5,
-            145.72000122070312,
-            148.88999938964844
-          ],
           "volume": [
             1974500,
             2782900,
             2020500,
             1575500,
-            411123
-          ],
-          "high": [
-            153.33999633789062,
-            158.8800048828125,
-            152.83999633789062,
-            148.8800048828125,
-            150.82000732421875
+            851816
           ]
         }
       ],
@@ -114,7 +136,7 @@
             152.85000610351562,
             148.2100067138672,
             148.0399932861328,
-            149.14500427246094
+            null
           ]
         }
       ]

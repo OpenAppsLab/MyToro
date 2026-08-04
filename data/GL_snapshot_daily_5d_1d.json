@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:42.588Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GL?interval=1d&range=5d",
+  "symbol": "GL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:09.249Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 182.25,
+    "firstOpen": 175.35000610351562,
+    "dayMovePct": -100,
+    "gapPct": -3.786004881472908,
+    "currentVolume": 448763,
+    "averageVolume": 741312.6,
+    "volumeSpikeRatio": 0.6053627039389321,
+    "morningHigh": 185.83999633789062,
+    "morningLow": 175.2899932861328,
+    "morningRangePct": 6.0185997237940585,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.569426351213473,
+    "intradayVolatility": 43.557394425661585,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 339255000,
-      "regularMarketTime": 1785777497,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 185.11,
+      "regularMarketPrice": 184.09,
       "fiftyTwoWeekHigh": 191.55,
       "fiftyTwoWeekLow": 127.85,
       "regularMarketDayHigh": 185.84,
       "regularMarketDayLow": 181.56,
-      "regularMarketVolume": 196997,
+      "regularMarketVolume": 448763,
       "longName": "Globe Life Inc.",
       "shortName": "Globe Life Inc.",
       "chartPreviousClose": 174.37,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            651900,
+            919900,
+            759800,
+            926200,
+            448763
+          ],
           "low": [
             175.2899932861328,
             177.72000122070312,
@@ -82,14 +111,7 @@
             179.67999267578125,
             182.97999572753906,
             182.25,
-            185.11000061035156
-          ],
-          "open": [
-            175.35000610351562,
-            177.83999633789062,
-            177.41000366210938,
-            181.80999755859375,
-            181.2899932861328
+            null
           ],
           "high": [
             179.52000427246094,
@@ -98,12 +120,12 @@
             183.67999267578125,
             185.83999633789062
           ],
-          "volume": [
-            651900,
-            919900,
-            759800,
-            926200,
-            196997
+          "open": [
+            175.35000610351562,
+            177.83999633789062,
+            177.41000366210938,
+            181.80999755859375,
+            181.2899932861328
           ]
         }
       ],
@@ -114,7 +136,7 @@
             179.67999267578125,
             182.97999572753906,
             182.25,
-            185.11000061035156
+            null
           ]
         }
       ]

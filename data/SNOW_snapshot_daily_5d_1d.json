@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:51.910Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?interval=1d&range=5d",
+  "symbol": "SNOW",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:26.176Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 293.2799987792969,
+    "firstOpen": 273.0199890136719,
+    "dayMovePct": -100,
+    "gapPct": -6.908077553857106,
+    "currentVolume": 7096709,
+    "averageVolume": 6972141.8,
+    "volumeSpikeRatio": 1.017866418035273,
+    "morningHigh": 315.4200134277344,
+    "morningLow": 253.58999633789062,
+    "morningRangePct": 24.381883348213645,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -22.901429566790792,
+    "intradayVolatility": 44.59566776115275,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1600263000,
-      "regularMarketTime": 1785777345,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 311.59,
+      "regularMarketPrice": 307.53,
       "fiftyTwoWeekHigh": 315.42,
       "fiftyTwoWeekLow": 118.3,
       "regularMarketDayHigh": 315.42,
       "regularMarketDayLow": 293.88,
-      "regularMarketVolume": 4787443,
+      "regularMarketVolume": 7096709,
       "longName": "Snowflake Inc.",
       "shortName": "Snowflake Inc.",
       "chartPreviousClose": 272.92,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,20 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            253.58999633789062,
-            276.8999938964844,
-            283,
-            292.6300048828125,
-            293.8800048828125
-          ],
-          "volume": [
-            5145100,
-            8782300,
-            6453500,
-            7375600,
-            4787443
-          ],
           "high": [
             277.2099914550781,
             293.55999755859375,
@@ -91,19 +99,33 @@
             304.1700134277344,
             315.4200134277344
           ],
-          "close": [
-            270.3599853515625,
-            282.8999938964844,
-            298.1000061035156,
-            293.2799987792969,
-            311.5899963378906
-          ],
           "open": [
             273.0199890136719,
             276.8999938964844,
             285,
             299.5,
             296.44000244140625
+          ],
+          "low": [
+            253.58999633789062,
+            276.8999938964844,
+            283,
+            292.6300048828125,
+            293.8800048828125
+          ],
+          "close": [
+            270.3599853515625,
+            282.8999938964844,
+            298.1000061035156,
+            293.2799987792969,
+            null
+          ],
+          "volume": [
+            5145100,
+            8782300,
+            6453500,
+            7383100,
+            7096709
           ]
         }
       ],
@@ -114,7 +136,7 @@
             282.8999938964844,
             298.1000061035156,
             293.2799987792969,
-            311.5899963378906
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:38.422Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/APH?interval=1d&range=5d",
+  "symbol": "APH",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/APH?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:23.287Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 160.6999969482422,
+    "firstOpen": 145.44000244140625,
+    "dayMovePct": -100,
+    "gapPct": -9.495951958076784,
+    "currentVolume": 5601905,
+    "averageVolume": 9588721,
+    "volumeSpikeRatio": 0.5842181663227035,
+    "morningHigh": 167.22999572753906,
+    "morningLow": 139.6699981689453,
+    "morningRangePct": 19.73222447189917,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -22.157918307231867,
+    "intradayVolatility": 44.99057397390892,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 689610600,
-      "regularMarketTime": 1785777391,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 161.65,
+      "regularMarketPrice": 163.34,
       "fiftyTwoWeekHigh": 178.52,
       "fiftyTwoWeekLow": 104.71,
-      "regularMarketDayHigh": 162.2,
+      "regularMarketDayHigh": 164.16,
       "regularMarketDayLow": 155.36,
-      "regularMarketVolume": 2757610,
+      "regularMarketVolume": 5601905,
       "longName": "Amphenol Corporation",
       "shortName": "Amphenol Corporation",
       "chartPreviousClose": 149.28,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            146,
-            159.27999877929688,
-            161.2100067138672,
-            167.22999572753906,
-            162.1999969482422
+          "volume": [
+            10112200,
+            12185800,
+            10763800,
+            9279900,
+            5601905
           ],
           "low": [
             139.6699981689453,
@@ -84,19 +106,19 @@
             159.85000610351562,
             155.360107421875
           ],
-          "volume": [
-            10112200,
-            12185800,
-            10763800,
-            9277100,
-            2757610
-          ],
           "close": [
             143.85000610351562,
             150.30999755859375,
             159.82000732421875,
             160.6999969482422,
-            161.64999389648438
+            null
+          ],
+          "high": [
+            146,
+            159.27999877929688,
+            161.2100067138672,
+            167.22999572753906,
+            164.16000366210938
           ],
           "open": [
             145.44000244140625,
@@ -114,7 +136,7 @@
             150.30999755859375,
             159.82000732421875,
             160.6999969482422,
-            161.64999389648438
+            null
           ]
         }
       ]

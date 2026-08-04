@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:46.922Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ADM?interval=1d&range=5d",
+  "symbol": "ADM",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ADM?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:33.894Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 79.2699966430664,
+    "firstOpen": 83.81999969482422,
+    "dayMovePct": -100,
+    "gapPct": 5.739880464793475,
+    "currentVolume": 3185269,
+    "averageVolume": 4749933.8,
+    "volumeSpikeRatio": 0.67059229330733,
+    "morningHigh": 84.62999725341797,
+    "morningLow": 77.30000305175781,
+    "morningRangePct": 9.482527700228172,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.18559552963257,
+    "intradayVolatility": 42.63635435655719,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777337,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 78.235,
+      "regularMarketPrice": 78.06,
       "fiftyTwoWeekHigh": 88.46,
       "fiftyTwoWeekLow": 53.56,
       "regularMarketDayHigh": 78.97,
       "regularMarketDayLow": 77.3,
-      "regularMarketVolume": 1246745,
+      "regularMarketVolume": 3185269,
       "longName": "Archer-Daniels-Midland Company",
       "shortName": "Archer-Daniels-Midland Company",
       "chartPreviousClose": 83.19,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            82.12000274658203,
-            80.06999969482422,
-            78.93000030517578,
-            79.16999816894531,
-            77.30000305175781
-          ],
           "close": [
             83.18000030517578,
             80.37999725341797,
             80.61000061035156,
             79.2699966430664,
-            78.23500061035156
-          ],
-          "open": [
-            83.81999969482422,
-            84.04000091552734,
-            80.41000366210938,
-            80.30000305175781,
-            78.9000015258789
+            null
           ],
           "high": [
             84.62999725341797,
@@ -98,12 +106,26 @@
             80.44000244140625,
             78.97000122070312
           ],
+          "open": [
+            83.81999969482422,
+            84.04000091552734,
+            80.41000366210938,
+            80.30000305175781,
+            78.9000015258789
+          ],
+          "low": [
+            82.12000274658203,
+            80.06999969482422,
+            78.93000030517578,
+            79.16999816894531,
+            77.30000305175781
+          ],
           "volume": [
             4612100,
             5105000,
             3258800,
-            7587600,
-            1246745
+            7588500,
+            3185269
           ]
         }
       ],
@@ -114,7 +136,7 @@
             80.37999725341797,
             80.61000061035156,
             79.2699966430664,
-            78.23500061035156
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:16.708Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BRO?interval=1d&range=5d",
+  "symbol": "BRO",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BRO?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:10.349Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 70.4000015258789,
+    "firstOpen": 68.97000122070312,
+    "dayMovePct": -100,
+    "gapPct": -2.031250389462159,
+    "currentVolume": 1900315,
+    "averageVolume": 3452843,
+    "volumeSpikeRatio": 0.5503624114968447,
+    "morningHigh": 75.62999725341797,
+    "morningLow": 67.66999816894531,
+    "morningRangePct": 11.762966306870108,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.087324113772667,
+    "intradayVolatility": 42.74790389498718,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,7 +31,7 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 350749800,
-      "regularMarketTime": 1785777425,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
@@ -19,7 +41,7 @@
       "fiftyTwoWeekLow": 53.81,
       "regularMarketDayHigh": 73.49,
       "regularMarketDayLow": 71.12,
-      "regularMarketVolume": 959556,
+      "regularMarketVolume": 1900315,
       "longName": "Brown & Brown, Inc.",
       "shortName": "Brown & Brown, Inc.",
       "chartPreviousClose": 69.7,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,33 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            67.66999816894531,
-            71.87000274658203,
-            69.79000091552734,
-            69.27999877929688,
-            71.12000274658203
-          ],
-          "open": [
-            68.97000122070312,
-            72.48999786376953,
-            73.68000030517578,
-            69.94000244140625,
-            71.4000015258789
-          ],
-          "close": [
-            73.6500015258789,
-            74.87000274658203,
-            70.87000274658203,
-            70.4000015258789,
-            71.77999877929688
-          ],
           "volume": [
             4927200,
             3552200,
             4142300,
-            2741700,
-            959556
+            2742200,
+            1900315
           ],
           "high": [
             74.13999938964844,
@@ -104,6 +105,27 @@
             74.44000244140625,
             70.9000015258789,
             73.48999786376953
+          ],
+          "low": [
+            67.66999816894531,
+            71.87000274658203,
+            69.79000091552734,
+            69.27999877929688,
+            71.12000274658203
+          ],
+          "close": [
+            73.6500015258789,
+            74.87000274658203,
+            70.87000274658203,
+            70.4000015258789,
+            null
+          ],
+          "open": [
+            68.97000122070312,
+            72.48999786376953,
+            73.68000030517578,
+            69.94000244140625,
+            71.4000015258789
           ]
         }
       ],
@@ -114,7 +136,7 @@
             74.87000274658203,
             70.87000274658203,
             70.4000015258789,
-            71.77999877929688
+            null
           ]
         }
       ]

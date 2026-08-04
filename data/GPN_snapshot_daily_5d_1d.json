@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:41.439Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GPN?interval=1d&range=5d",
+  "symbol": "GPN",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GPN?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:07.897Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 84.08000183105469,
+    "firstOpen": 84.93000030517578,
+    "dayMovePct": -100,
+    "gapPct": 1.0109401232281485,
+    "currentVolume": 3280153,
+    "averageVolume": 3116370.6,
+    "volumeSpikeRatio": 1.052555495164792,
+    "morningHigh": 89.0999984741211,
+    "morningLow": 83.87000274658203,
+    "morningRangePct": 6.235835884424365,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.968036914136345,
+    "intradayVolatility": 42.76747522342619,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 979655400,
-      "regularMarketTime": 1785777578,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 85.625,
+      "regularMarketPrice": 86.19,
       "fiftyTwoWeekHigh": 90.64,
       "fiftyTwoWeekLow": 61.16,
       "regularMarketDayHigh": 87.08,
       "regularMarketDayLow": 84.93,
-      "regularMarketVolume": 1100448,
+      "regularMarketVolume": 3280153,
       "longName": "Global Payments Inc.",
       "shortName": "Global Payments Inc.",
       "chartPreviousClose": 84.06,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,26 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            87.45999908447266,
-            88.2699966430664,
-            86.83999633789062,
-            84.08000183105469,
-            85.625
-          ],
-          "volume": [
-            3581400,
-            2942500,
-            2774200,
-            3003600,
-            1100448
-          ],
           "low": [
             84.58999633789062,
             86.29000091552734,
             84.83000183105469,
             83.87000274658203,
             84.93049621582031
+          ],
+          "close": [
+            87.45999908447266,
+            88.2699966430664,
+            86.83999633789062,
+            84.08000183105469,
+            null
+          ],
+          "volume": [
+            3581400,
+            2942500,
+            2774200,
+            3003600,
+            3280153
           ],
           "open": [
             84.93000030517578,
@@ -114,7 +136,7 @@
             88.2699966430664,
             86.83999633789062,
             84.08000183105469,
-            85.625
+            null
           ]
         }
       ]

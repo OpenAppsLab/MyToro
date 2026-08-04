@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:10.777Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRH?interval=1d&range=5d",
+  "symbol": "CRH",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CRH?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:16.641Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 95.01000213623047,
+    "firstOpen": 103.91999816894531,
+    "dayMovePct": -100,
+    "gapPct": 9.377955828207655,
+    "currentVolume": 5063749,
+    "averageVolume": 5460389.8,
+    "volumeSpikeRatio": 0.927360350720749,
+    "morningHigh": 104.27999877929688,
+    "morningLow": 94.12000274658203,
+    "morningRangePct": 10.794725601603112,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -27.080176217055254,
+    "intradayVolatility": 42.11383192923013,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 616339800,
-      "regularMarketTime": 1785777488,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 97.195,
+      "regularMarketPrice": 98.59,
       "fiftyTwoWeekHigh": 131.55,
       "fiftyTwoWeekLow": 94.12,
-      "regularMarketDayHigh": 97.41,
+      "regularMarketDayHigh": 98.7,
       "regularMarketDayLow": 95.35,
-      "regularMarketVolume": 1996520,
+      "regularMarketVolume": 5063749,
       "longName": "CRH plc",
       "shortName": "CRH PLC",
       "chartPreviousClose": 102.86,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -74,29 +96,8 @@
             4200200,
             4918800,
             5622800,
-            7495300,
-            1996520
-          ],
-          "high": [
-            104.27999877929688,
-            102.88999938964844,
-            102.25,
-            96.27999877929688,
-            97.41000366210938
-          ],
-          "close": [
-            103.4000015258789,
-            99.70999908447266,
-            96,
-            95.01000213623047,
-            97.19499969482422
-          ],
-          "open": [
-            103.91999816894531,
-            102.37999725341797,
-            102.08000183105469,
-            95.11000061035156,
-            96.44999694824219
+            7496400,
+            5063749
           ],
           "low": [
             102.13999938964844,
@@ -104,6 +105,27 @@
             95.36000061035156,
             94.12000274658203,
             95.3499984741211
+          ],
+          "close": [
+            103.4000015258789,
+            99.70999908447266,
+            96,
+            95.01000213623047,
+            null
+          ],
+          "high": [
+            104.27999877929688,
+            102.88999938964844,
+            102.25,
+            96.27999877929688,
+            98.69999694824219
+          ],
+          "open": [
+            103.91999816894531,
+            102.37999725341797,
+            102.08000183105469,
+            95.11000061035156,
+            96.44999694824219
           ]
         }
       ],
@@ -114,7 +136,7 @@
             99.70999908447266,
             96,
             95.01000213623047,
-            97.19499969482422
+            null
           ]
         }
       ]

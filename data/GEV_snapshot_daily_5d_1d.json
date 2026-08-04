@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:32.524Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GEV?interval=1d&range=5d",
+  "symbol": "GEV",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GEV?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:56.986Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 990.2899780273438,
+    "firstOpen": 948.8300170898438,
+    "dayMovePct": -100,
+    "gapPct": -4.186648543095244,
+    "currentVolume": 1793149,
+    "averageVolume": 2976029.8,
+    "volumeSpikeRatio": 0.6025305929396272,
+    "morningHigh": 1042.8499755859375,
+    "morningLow": 897.6799926757812,
+    "morningRangePct": 16.17168524358411,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.661869511848497,
+    "intradayVolatility": 44.34074694127067,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1711546200,
-      "regularMarketTime": 1785777571,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1001.745,
+      "regularMarketPrice": 1006.76,
       "fiftyTwoWeekHigh": 1195.94,
       "fiftyTwoWeekLow": 530.16,
-      "regularMarketDayHigh": 1005,
+      "regularMarketDayHigh": 1012.74,
       "regularMarketDayLow": 958.565,
-      "regularMarketVolume": 1143629,
+      "regularMarketVolume": 1793149,
       "longName": "GE Vernova Inc.",
       "shortName": "GE Vernova Inc.",
       "chartPreviousClose": 996.57,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -69,26 +91,12 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            943.3800048828125,
-            900.280029296875,
-            981.97998046875,
-            990.2899780273438,
-            1001.7449951171875
-          ],
-          "open": [
-            948.8300170898438,
-            943.989990234375,
-            959,
-            1040.989990234375,
-            975.02001953125
-          ],
-          "high": [
-            956.9000244140625,
-            953.989990234375,
-            986,
-            1042.8499755859375,
-            1005
+          "volume": [
+            3897400,
+            3697300,
+            3134700,
+            2357600,
+            1793149
           ],
           "low": [
             913.510009765625,
@@ -97,12 +105,26 @@
             979.1400146484375,
             958.5650024414062
           ],
-          "volume": [
-            3897400,
-            3697300,
-            3134700,
-            2355400,
-            1143629
+          "open": [
+            948.8300170898438,
+            943.989990234375,
+            959,
+            1040.989990234375,
+            975.02001953125
+          ],
+          "close": [
+            943.3800048828125,
+            900.280029296875,
+            981.97998046875,
+            990.2899780273438,
+            null
+          ],
+          "high": [
+            956.9000244140625,
+            953.989990234375,
+            986,
+            1042.8499755859375,
+            1012.739990234375
           ]
         }
       ],
@@ -113,7 +135,7 @@
             900.280029296875,
             981.97998046875,
             990.2899780273438,
-            1001.7449951171875
+            null
           ]
         }
       ]

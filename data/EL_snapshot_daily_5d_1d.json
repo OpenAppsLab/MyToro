@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:59.544Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EL?interval=1d&range=5d",
+  "symbol": "EL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:16.533Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 83.9000015258789,
+    "firstOpen": 84.23999786376953,
+    "dayMovePct": -100,
+    "gapPct": 0.4052399662778949,
+    "currentVolume": 1885574,
+    "averageVolume": 2212794.8,
+    "volumeSpikeRatio": 0.8521232967467206,
+    "morningHigh": 87.5,
+    "morningLow": 82.61000061035156,
+    "morningRangePct": 5.919379437742903,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.248663830326688,
+    "intradayVolatility": 43.16446120386659,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 816618600,
-      "regularMarketTime": 1785777512,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 83.98,
+      "regularMarketPrice": 84.68,
       "fiftyTwoWeekHigh": 121.64,
       "fiftyTwoWeekLow": 66.22,
       "regularMarketDayHigh": 87.5,
       "regularMarketDayLow": 83.81,
-      "regularMarketVolume": 721844,
+      "regularMarketVolume": 1885574,
       "longName": "The Estée Lauder Companies Inc.",
       "shortName": "Estee Lauder Companies, Inc. (T",
       "chartPreviousClose": 83.2,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            84.23999786376953,
-            83.29000091552734,
-            84.18000030517578,
-            84.27999877929688,
-            85.4000015258789
+          "high": [
+            85.37000274658203,
+            86,
+            85.63999938964844,
+            84.76000213623047,
+            87.5
+          ],
+          "volume": [
+            2295200,
+            2482400,
+            2552800,
+            1848000,
+            1885574
           ],
           "low": [
             83.25,
@@ -84,26 +113,19 @@
             83.12999725341797,
             83.80999755859375
           ],
-          "volume": [
-            2295200,
-            2482400,
-            2552800,
-            1847500,
-            721844
-          ],
-          "high": [
-            85.37000274658203,
-            86,
-            85.63999938964844,
-            84.76000213623047,
-            87.5
+          "open": [
+            84.23999786376953,
+            83.29000091552734,
+            84.18000030517578,
+            84.27999877929688,
+            85.4000015258789
           ],
           "close": [
             84.75,
             84.12999725341797,
             84.87999725341797,
             83.9000015258789,
-            83.9800033569336
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             84.12999725341797,
             84.87999725341797,
             83.9000015258789,
-            83.9800033569336
+            null
           ]
         }
       ]

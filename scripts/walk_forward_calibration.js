@@ -194,7 +194,19 @@ async function run() {
 
   await runCalibration();
 
-  const walkForward = evaluateWalkForward(formattedExamples, ['premarketMove', 'openingGap', 'firstHourMove', 'volumeZ', 'sentiment', 'patternStrength', 'sectorStrength', 'atrPct', 'liquidity'], chosenModel, 50);
+  const validationResults = evaluateWalkForward(formattedExamples, ['premarketMove', 'openingGap', 'firstHourMove', 'volumeZ', 'sentiment', 'patternStrength', 'sectorStrength', 'atrPct', 'liquidity'], chosenModel, 50);
+  const validationSummary = {
+    method: validationResults.length >= 3 ? 'walk-forward' : 'k-fold',
+    folds: validationResults.length,
+    averageBrier: validationResults.length
+      ? validationResults.reduce((sum, entry) => sum + entry.brier, 0) / validationResults.length
+      : null,
+    averageAccuracy: validationResults.length
+      ? validationResults.reduce((sum, entry) => sum + entry.accuracy, 0) / validationResults.length
+      : null,
+    minAccuracy: validationResults.length ? Math.min(...validationResults.map((entry) => entry.accuracy)) : null,
+    maxAccuracy: validationResults.length ? Math.max(...validationResults.map((entry) => entry.accuracy)) : null
+  };
   const metaModel = trainMetaModel(formattedExamples, chosenModel, {
     thresholdPct: 1.8,
     iterations: 300,
@@ -251,7 +263,8 @@ async function run() {
     tuning,
     calibrationHealth,
     healthGate,
-    walkForward: walkForward.map((entry, index) => ({ fold: index + 1, brier: entry.brier, accuracy: entry.accuracy })),
+    validationSummary,
+    walkForward: validationResults.map((entry, index) => ({ fold: index + 1, brier: entry.brier, accuracy: entry.accuracy })),
     calibration: {
       logistic: logisticCalibration,
       isotonic: isotonicCalibration,
@@ -261,7 +274,8 @@ async function run() {
 
   await fs.writeFile(OUT_PATH, JSON.stringify(output, null, 2));
   console.log(`Saved walk-forward tuning report to ${OUT_PATH}`);
-  console.log('Saved meta-model to ${META_MODEL_PATH}');
+  console.log(`Validation summary: ${validationSummary.folds} folds, avg accuracy ${validationSummary.averageAccuracy != null ? (validationSummary.averageAccuracy * 100).toFixed(1) : 'N/A'}%, avg brier ${validationSummary.averageBrier != null ? validationSummary.averageBrier.toFixed(4) : 'N/A'}`);
+  console.log(`Saved meta-model to ${META_MODEL_PATH}`);
   console.log('Best tuning result:', tuning.best);
 }
 

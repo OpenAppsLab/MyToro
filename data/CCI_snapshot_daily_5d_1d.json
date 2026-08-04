@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:12.956Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CCI?interval=1d&range=5d",
+  "symbol": "CCI",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CCI?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:19.287Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 76.30000305175781,
+    "firstOpen": 75.04000091552734,
+    "dayMovePct": -100,
+    "gapPct": -1.651378880516887,
+    "currentVolume": 3045063,
+    "averageVolume": 4790192.6,
+    "volumeSpikeRatio": 0.6356869659061308,
+    "morningHigh": 79.94999694824219,
+    "morningLow": 74.7300033569336,
+    "morningRangePct": 6.9851376379260826,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.781833977949525,
+    "intradayVolatility": 43.51321870605276,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 903447000,
-      "regularMarketTime": 1785777481,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 77.417,
+      "regularMarketPrice": 76.74,
       "fiftyTwoWeekHigh": 107.89,
       "fiftyTwoWeekLow": 73.52,
       "regularMarketDayHigh": 78.7,
       "regularMarketDayLow": 76.05,
-      "regularMarketVolume": 1617265,
+      "regularMarketVolume": 3045063,
       "longName": "Crown Castle Inc.",
       "shortName": "Crown Castle Inc.",
       "chartPreviousClose": 74.13,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "high": [
+            78.1500015258789,
+            79.94999694824219,
+            79.1500015258789,
+            76.5,
+            78.69999694824219
+          ],
           "open": [
             75.04000091552734,
             76.95999908447266,
@@ -89,21 +118,14 @@
             79.08999633789062,
             76.51000213623047,
             76.30000305175781,
-            77.41739654541016
+            null
           ],
           "volume": [
             4481700,
             6981500,
             4434900,
-            5005100,
-            1617265
-          ],
-          "high": [
-            78.1500015258789,
-            79.94999694824219,
-            79.1500015258789,
-            76.5,
-            78.69999694824219
+            5007800,
+            3045063
           ]
         }
       ],
@@ -114,7 +136,7 @@
             79.08999633789062,
             76.51000213623047,
             76.30000305175781,
-            77.41739654541016
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:50.513Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EMR?interval=1d&range=5d",
+  "symbol": "EMR",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EMR?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:05.493Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 149.82000732421875,
+    "firstOpen": 149,
+    "dayMovePct": -100,
+    "gapPct": -0.5473283167342323,
+    "currentVolume": 3252201,
+    "averageVolume": 3246020.2,
+    "volumeSpikeRatio": 1.0019041163083335,
+    "morningHigh": 154.97999572753906,
+    "morningLow": 145.10000610351562,
+    "morningRangePct": 6.809089737029346,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.30357294189212,
+    "intradayVolatility": 43.18441412727181,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785777526,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 152.31,
+      "regularMarketPrice": 154.85,
       "fiftyTwoWeekHigh": 165.15,
       "fiftyTwoWeekLow": 122.64,
-      "regularMarketDayHigh": 153,
+      "regularMarketDayHigh": 154.98,
       "regularMarketDayLow": 150.035,
-      "regularMarketVolume": 1300598,
+      "regularMarketVolume": 3252201,
       "longName": "Emerson Electric Co.",
       "shortName": "Emerson Electric Company",
       "chartPreviousClose": 149.3,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -75,7 +97,21 @@
             150.77999877929688,
             149.61000061035156,
             151,
-            153
+            154.97999572753906
+          ],
+          "volume": [
+            2740100,
+            3601400,
+            2910900,
+            3725500,
+            3252201
+          ],
+          "low": [
+            147.6199951171875,
+            145.10000610351562,
+            146.75,
+            147.9499969482422,
+            150.03500366210938
           ],
           "open": [
             149,
@@ -84,26 +120,12 @@
             149.72999572753906,
             150.6199951171875
           ],
-          "volume": [
-            2740100,
-            3601400,
-            2910900,
-            3724600,
-            1300598
-          ],
           "close": [
             151.80999755859375,
             145.72999572753906,
             148.63999938964844,
             149.82000732421875,
-            152.30999755859375
-          ],
-          "low": [
-            147.6199951171875,
-            145.10000610351562,
-            146.75,
-            147.9499969482422,
-            150.03500366210938
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             145.72999572753906,
             148.63999938964844,
             149.82000732421875,
-            152.30999755859375
+            null
           ]
         }
       ]

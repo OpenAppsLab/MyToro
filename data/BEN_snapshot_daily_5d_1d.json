@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:25.961Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BEN?interval=1d&range=5d",
+  "symbol": "BEN",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BEN?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:48.941Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 33.86000061035156,
+    "firstOpen": 33.20000076293945,
+    "dayMovePct": -100,
+    "gapPct": -1.9492021131574833,
+    "currentVolume": 6270424,
+    "averageVolume": 6777544.8,
+    "volumeSpikeRatio": 0.9251763263888717,
+    "morningHigh": 35.43000030517578,
+    "morningLow": 32.2599983215332,
+    "morningRangePct": 9.826417075560217,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.582985459317204,
+    "intradayVolatility": 43.59124837701304,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 433171800,
-      "regularMarketTime": 1785777536,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 34.805,
+      "regularMarketPrice": 35.24,
       "fiftyTwoWeekHigh": 35.43,
       "fiftyTwoWeekLow": 21.11,
       "regularMarketDayHigh": 35.43,
       "regularMarketDayLow": 34.05,
-      "regularMarketVolume": 3944100,
+      "regularMarketVolume": 6270424,
       "longName": "Franklin Resources, Inc.",
       "shortName": "Franklin Resources, Inc.",
       "chartPreviousClose": 33.22,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,27 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            33.33000183105469,
-            32.38999938964844,
-            33.16999816894531,
-            33.86000061035156,
-            34.80500030517578
-          ],
-          "low": [
-            32.72999954223633,
-            32.33000183105469,
-            32.2599983215332,
-            32.83000183105469,
-            34.04999923706055
-          ],
-          "volume": [
-            4329500,
-            5229200,
-            6071900,
-            11986200,
-            3944100
-          ],
           "open": [
             33.20000076293945,
             33.11000061035156,
@@ -98,12 +99,33 @@
             33.47999954223633,
             34.119998931884766
           ],
+          "volume": [
+            4329500,
+            5229200,
+            6071900,
+            11986700,
+            6270424
+          ],
+          "close": [
+            33.33000183105469,
+            32.38999938964844,
+            33.16999816894531,
+            33.86000061035156,
+            null
+          ],
           "high": [
             33.41999816894531,
             33.349998474121094,
             33.310001373291016,
             34.63999938964844,
             35.43000030517578
+          ],
+          "low": [
+            32.72999954223633,
+            32.33000183105469,
+            32.2599983215332,
+            32.83000183105469,
+            34.04999923706055
           ]
         }
       ],
@@ -114,7 +136,7 @@
             32.38999938964844,
             33.16999816894531,
             33.86000061035156,
-            34.80500030517578
+            null
           ]
         }
       ]

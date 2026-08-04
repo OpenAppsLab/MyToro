@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:18.591Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DDOG?interval=1d&range=5d",
+  "symbol": "DDOG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DDOG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:26.679Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 267.9700012207031,
+    "firstOpen": 255.1699981689453,
+    "dayMovePct": -100,
+    "gapPct": -4.77665522015488,
+    "currentVolume": 4983770,
+    "averageVolume": 5068694,
+    "volumeSpikeRatio": 0.9832453882597766,
+    "morningHigh": 278.75799560546875,
+    "morningLow": 237.6699981689453,
+    "morningRangePct": 17.287835129832605,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.315028866826772,
+    "intradayVolatility": 44.31872671450411,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1568899800,
-      "regularMarketTime": 1785777496,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 273.85,
+      "regularMarketPrice": 273.6,
       "fiftyTwoWeekHigh": 278.758,
       "fiftyTwoWeekLow": 98.01,
       "regularMarketDayHigh": 278.68,
       "regularMarketDayLow": 267.5,
-      "regularMarketVolume": 2491316,
+      "regularMarketVolume": 4983770,
       "longName": "Datadog, Inc.",
       "shortName": "Datadog, Inc.",
       "chartPreviousClose": 251.86,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "low": [
+            237.6699981689453,
+            252.5,
+            262.6099853515625,
+            263.7799987792969,
+            267.5
+          ],
           "open": [
             255.1699981689453,
             252.8800048828125,
             263.80499267578125,
             271.5,
             272.9800109863281
+          ],
+          "volume": [
+            4046300,
+            6621200,
+            4418800,
+            5273400,
+            4983770
           ],
           "high": [
             255.5399932861328,
@@ -84,26 +120,12 @@
             278.75799560546875,
             278.67999267578125
           ],
-          "low": [
-            237.6699981689453,
-            252.5,
-            262.6099853515625,
-            263.7799987792969,
-            267.5
-          ],
-          "volume": [
-            4046300,
-            6621200,
-            4418800,
-            5271700,
-            2491316
-          ],
           "close": [
             250.8800048828125,
             264.20001220703125,
             268.55999755859375,
             267.9700012207031,
-            273.8500061035156
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             264.20001220703125,
             268.55999755859375,
             267.9700012207031,
-            273.8500061035156
+            null
           ]
         }
       ]

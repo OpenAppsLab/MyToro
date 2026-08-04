@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:17.807Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HON?interval=1d&range=5d",
+  "symbol": "HON",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/HON?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:45.194Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 243.0500030517578,
+    "firstOpen": 249.8000030517578,
+    "dayMovePct": -100,
+    "gapPct": 2.777206301273972,
+    "currentVolume": 3141198,
+    "averageVolume": 3117859.6,
+    "volumeSpikeRatio": 1.007485391580814,
+    "morningHigh": 252,
+    "morningLow": 237.36000061035156,
+    "morningRangePct": 6.167846036401623,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.400359095762763,
+    "intradayVolatility": 43.08531659889298,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777297,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 242.945,
+      "regularMarketPrice": 246.77,
       "fiftyTwoWeekHigh": 260.283,
       "fiftyTwoWeekLow": 195.868,
       "regularMarketDayHigh": 249.64,
       "regularMarketDayLow": 242.2,
-      "regularMarketVolume": 1254639,
+      "regularMarketVolume": 3141198,
       "longName": "Honeywell International Inc.",
       "shortName": "Honeywell International Inc.",
       "chartPreviousClose": 245.75,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            247.0500030517578,
+            241.1199951171875,
+            241.91000366210938,
+            243.0500030517578,
+            null
+          ],
           "open": [
             249.8000030517578,
             245.44000244140625,
@@ -81,8 +110,8 @@
             2945300,
             2775200,
             2839500,
-            3887500,
-            1254639
+            3888100,
+            3141198
           ],
           "high": [
             252,
@@ -97,13 +126,6 @@
             237.36000061035156,
             238.02000427246094,
             242.1999969482422
-          ],
-          "close": [
-            247.0500030517578,
-            241.1199951171875,
-            241.91000366210938,
-            243.0500030517578,
-            242.94500732421875
           ]
         }
       ],
@@ -114,7 +136,7 @@
             241.1199951171875,
             241.91000366210938,
             243.0500030517578,
-            242.94500732421875
+            null
           ]
         }
       ]

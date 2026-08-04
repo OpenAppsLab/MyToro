@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:01.937Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/V?interval=1d&range=5d",
+  "symbol": "V",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/V?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:38.422Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 366.1300048828125,
+    "firstOpen": 365.05999755859375,
+    "dayMovePct": -100,
+    "gapPct": -0.29224792012368067,
+    "currentVolume": 4160393,
+    "averageVolume": 8546398.6,
+    "volumeSpikeRatio": 0.4868007209492897,
+    "morningHigh": 373.9700012207031,
+    "morningLow": 355.4800109863281,
+    "morningRangePct": 5.201414893364041,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.03040429529237,
+    "intradayVolatility": 43.2859757484861,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1205933400,
-      "regularMarketTime": 1785777361,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 365.02,
+      "regularMarketPrice": 365.67,
       "fiftyTwoWeekHigh": 373.97,
       "fiftyTwoWeekLow": 293.89,
       "regularMarketDayHigh": 371.97,
       "regularMarketDayLow": 364.42,
-      "regularMarketVolume": 2611089,
+      "regularMarketVolume": 4160393,
       "longName": "Visa Inc.",
       "shortName": "Visa Inc.",
       "chartPreviousClose": 362.53,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -77,19 +99,19 @@
             360.1000061035156,
             364.4200134277344
           ],
+          "volume": [
+            11061900,
+            11289900,
+            8391400,
+            7828400,
+            4160393
+          ],
           "close": [
             366.5899963378906,
             368.7300109863281,
             366.2699890136719,
             366.1300048828125,
-            365.0201110839844
-          ],
-          "open": [
-            365.05999755859375,
-            357,
-            365,
-            363.760009765625,
-            368.5
+            null
           ],
           "high": [
             371.1600036621094,
@@ -98,12 +120,12 @@
             366.8800048828125,
             371.9700012207031
           ],
-          "volume": [
-            11061900,
-            11289900,
-            8391400,
-            7824000,
-            2611089
+          "open": [
+            365.05999755859375,
+            357,
+            365,
+            363.760009765625,
+            368.5
           ]
         }
       ],
@@ -114,7 +136,7 @@
             368.7300109863281,
             366.2699890136719,
             366.1300048828125,
-            365.0201110839844
+            null
           ]
         }
       ]

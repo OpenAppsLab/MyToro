@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:33.748Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DASH?interval=1d&range=5d",
+  "symbol": "DASH",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DASH?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:45.127Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 196.16000366210938,
+    "firstOpen": 185.5500030517578,
+    "dayMovePct": -100,
+    "gapPct": -5.408850128606013,
+    "currentVolume": 3361085,
+    "averageVolume": 3501557,
+    "volumeSpikeRatio": 0.9598829891959492,
+    "morningHigh": 203.8800048828125,
+    "morningLow": 185.5500030517578,
+    "morningRangePct": 9.878739708746686,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.911125378238946,
+    "intradayVolatility": 43.36914860222185,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1607524200,
-      "regularMarketTime": 1785777509,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 201.71,
+      "regularMarketPrice": 200.5,
       "fiftyTwoWeekHigh": 285.5,
       "fiftyTwoWeekLow": 143.3,
       "regularMarketDayHigh": 203.88,
       "regularMarketDayLow": 197.925,
-      "regularMarketVolume": 1711939,
+      "regularMarketVolume": 3361085,
       "longName": "DoorDash, Inc.",
       "shortName": "DoorDash, Inc.",
       "chartPreviousClose": 184.37,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            185.5500030517578,
-            192.82000732421875,
-            188.82000732421875,
-            193.5399932861328,
-            197.9250030517578
+          "volume": [
+            3722100,
+            3878100,
+            3433800,
+            3112700,
+            3361085
+          ],
+          "close": [
+            195.52000427246094,
+            193.52999877929688,
+            197.52999877929688,
+            196.16000366210938,
+            null
           ],
           "high": [
             195.78500366210938,
@@ -84,12 +113,12 @@
             198.47000122070312,
             203.8800048828125
           ],
-          "close": [
-            195.52000427246094,
-            193.52999877929688,
-            197.52999877929688,
-            196.16000366210938,
-            201.7100067138672
+          "low": [
+            185.5500030517578,
+            192.82000732421875,
+            188.82000732421875,
+            193.5399932861328,
+            197.9250030517578
           ],
           "open": [
             185.5500030517578,
@@ -97,13 +126,6 @@
             189.95199584960938,
             197.57000732421875,
             200.4499969482422
-          ],
-          "volume": [
-            3722100,
-            3878100,
-            3433800,
-            3101700,
-            1711939
           ]
         }
       ],
@@ -114,7 +136,7 @@
             193.52999877929688,
             197.52999877929688,
             196.16000366210938,
-            201.7100067138672
+            null
           ]
         }
       ]

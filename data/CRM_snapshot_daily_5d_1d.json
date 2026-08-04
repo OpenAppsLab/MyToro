@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:03.560Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRM?interval=1d&range=5d",
+  "symbol": "CRM",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CRM?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:27.625Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 184.02000427246094,
+    "firstOpen": 176.91000366210938,
+    "dayMovePct": -100,
+    "gapPct": -3.8637107082252107,
+    "currentVolume": 11534161,
+    "averageVolume": 13750432.2,
+    "volumeSpikeRatio": 0.8388217062733491,
+    "morningHigh": 193.6999969482422,
+    "morningLow": 175.89999389648438,
+    "morningRangePct": 10.119388100850625,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.61231438515036,
+    "intradayVolatility": 43.62120300203928,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1087997400,
-      "regularMarketTime": 1785777297,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 188.89,
+      "regularMarketPrice": 185.95,
       "fiftyTwoWeekHigh": 269.11,
       "fiftyTwoWeekLow": 146.32,
       "regularMarketDayHigh": 193.7,
-      "regularMarketDayLow": 187.46,
-      "regularMarketVolume": 5395910,
+      "regularMarketDayLow": 185.9,
+      "regularMarketVolume": 11534161,
       "longName": "Salesforce, Inc.",
       "shortName": "Salesforce, Inc.",
       "chartPreviousClose": 173.6,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            176.91000366210938,
-            182.00999450683594,
-            175.89999389648438,
-            177.02999877929688,
-            187.4600067138672
-          ],
-          "close": [
-            181.5,
-            188.3800048828125,
-            180.7100067138672,
-            184.02000427246094,
-            188.88999938964844
-          ],
-          "volume": [
-            17204600,
-            18139500,
-            12182400,
-            9686300,
-            5395910
+          "high": [
+            184.5399932861328,
+            190.17999267578125,
+            182.50999450683594,
+            184.4499969482422,
+            193.6999969482422
           ],
           "open": [
             176.91000366210938,
@@ -98,12 +106,26 @@
             177.6999969482422,
             188.99000549316406
           ],
-          "high": [
-            184.5399932861328,
-            190.17999267578125,
-            182.50999450683594,
-            184.4499969482422,
-            193.6999969482422
+          "low": [
+            176.91000366210938,
+            182.00999450683594,
+            175.89999389648438,
+            177.02999877929688,
+            185.89999389648438
+          ],
+          "close": [
+            181.5,
+            188.3800048828125,
+            180.7100067138672,
+            184.02000427246094,
+            null
+          ],
+          "volume": [
+            17204600,
+            18139500,
+            12182400,
+            9691500,
+            11534161
           ]
         }
       ],
@@ -114,7 +136,7 @@
             188.3800048828125,
             180.7100067138672,
             184.02000427246094,
-            188.88999938964844
+            null
           ]
         }
       ]

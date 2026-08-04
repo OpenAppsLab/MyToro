@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:31.737Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AEP?interval=1d&range=5d",
+  "symbol": "AEP",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AEP?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:15.111Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 127.8499984741211,
+    "firstOpen": 134.08999633789062,
+    "dayMovePct": -100,
+    "gapPct": 4.880717980636197,
+    "currentVolume": 4880551,
+    "averageVolume": 4896510.2,
+    "volumeSpikeRatio": 0.9967406991207738,
+    "morningHigh": 135.99000549316406,
+    "morningLow": 126.37000274658203,
+    "morningRangePct": 7.612568281630608,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.979637463396866,
+    "intradayVolatility": 42.74695927415858,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777367,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 127.725,
+      "regularMarketPrice": 128.32,
       "fiftyTwoWeekHigh": 140.58,
       "fiftyTwoWeekLow": 105.7,
       "regularMarketDayHigh": 128.875,
       "regularMarketDayLow": 126.37,
-      "regularMarketVolume": 1779320,
+      "regularMarketVolume": 4880551,
       "longName": "American Electric Power Company, Inc.",
       "shortName": "American Electric Power Company",
       "chartPreviousClose": 133.59,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -74,22 +96,8 @@
             3924200,
             4230900,
             5724000,
-            5721500,
-            1779320
-          ],
-          "close": [
-            133.02000427246094,
-            129.39999389648438,
-            127.77999877929688,
-            127.8499984741211,
-            127.7249984741211
-          ],
-          "high": [
-            135.99000549316406,
-            134.1300048828125,
-            130.49000549316406,
-            129.13999938964844,
-            128.875
+            5722900,
+            4880551
           ],
           "low": [
             132.97999572753906,
@@ -97,6 +105,20 @@
             127.31999969482422,
             126.83000183105469,
             126.37000274658203
+          ],
+          "close": [
+            133.02000427246094,
+            129.39999389648438,
+            127.77999877929688,
+            127.8499984741211,
+            null
+          ],
+          "high": [
+            135.99000549316406,
+            134.1300048828125,
+            130.49000549316406,
+            129.13999938964844,
+            128.875
           ],
           "open": [
             134.08999633789062,
@@ -114,7 +136,7 @@
             129.39999389648438,
             127.77999877929688,
             127.8499984741211,
-            127.7249984741211
+            null
           ]
         }
       ]

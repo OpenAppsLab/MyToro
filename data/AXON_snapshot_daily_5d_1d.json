@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:59.049Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AXON?interval=1d&range=5d",
+  "symbol": "AXON",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AXON?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:48.659Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 527.760009765625,
+    "firstOpen": 534.25,
+    "dayMovePct": -100,
+    "gapPct": 1.2297237597174453,
+    "currentVolume": 1088457,
+    "averageVolume": 810311.4,
+    "volumeSpikeRatio": 1.3432576661268743,
+    "morningHigh": 577.4400024414062,
+    "morningLow": 502.7200012207031,
+    "morningRangePct": 14.863144700681941,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.911533670799745,
+    "intradayVolatility": 42.79265456387546,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 992957400,
-      "regularMarketTime": 1785777410,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 565.05,
+      "regularMarketPrice": 575.88,
       "fiftyTwoWeekHigh": 885.92,
       "fiftyTwoWeekLow": 339.01,
-      "regularMarketDayHigh": 574.09,
+      "regularMarketDayHigh": 577.44,
       "regularMarketDayLow": 546.37,
-      "regularMarketVolume": 486696,
+      "regularMarketVolume": 1088457,
       "longName": "Axon Enterprise, Inc.",
       "shortName": "Axon Enterprise, Inc.",
       "chartPreviousClose": 525.48,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -82,7 +104,21 @@
             564.239990234375,
             526.030029296875,
             530.969970703125,
-            574.0900268554688
+            577.4400024414062
+          ],
+          "volume": [
+            953000,
+            900300,
+            618600,
+            491200,
+            1088457
+          ],
+          "close": [
+            547.6500244140625,
+            531.2000122070312,
+            525.2999877929688,
+            527.760009765625,
+            null
           ],
           "low": [
             520.4400024414062,
@@ -90,20 +126,6 @@
             502.7200012207031,
             514.760009765625,
             546.3699951171875
-          ],
-          "volume": [
-            953000,
-            900300,
-            618600,
-            491200,
-            486696
-          ],
-          "close": [
-            547.6500244140625,
-            531.2000122070312,
-            525.2999877929688,
-            527.760009765625,
-            565.0499877929688
           ]
         }
       ],
@@ -114,7 +136,7 @@
             531.2000122070312,
             525.2999877929688,
             527.760009765625,
-            565.0499877929688
+            null
           ]
         }
       ]

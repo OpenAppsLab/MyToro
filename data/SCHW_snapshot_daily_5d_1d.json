@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:49.645Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHW?interval=1d&range=5d",
+  "symbol": "SCHW",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SCHW?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:23.429Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 105.23999786376953,
+    "firstOpen": 104.23999786376953,
+    "dayMovePct": -100,
+    "gapPct": -0.9502090652780839,
+    "currentVolume": 4401782,
+    "averageVolume": 7080956.4,
+    "volumeSpikeRatio": 0.6216366478403962,
+    "morningHigh": 106.80999755859375,
+    "morningLow": 103.06999969482422,
+    "morningRangePct": 3.628599859166721,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.169318897777554,
+    "intradayVolatility": 43.21112099868816,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 559315800,
-      "regularMarketTime": 1785777345,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 105.15,
+      "regularMarketPrice": 105.87,
       "fiftyTwoWeekHigh": 107.5,
       "fiftyTwoWeekLow": 83.96,
       "regularMarketDayHigh": 106.81,
       "regularMarketDayLow": 105.05,
-      "regularMarketVolume": 2216524,
+      "regularMarketVolume": 4401782,
       "longName": "The Charles Schwab Corporation",
       "shortName": "Charles Schwab Corporation (The",
       "chartPreviousClose": 104.18,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            104.23999786376953,
-            106,
-            103.93000030517578,
-            104.9800033569336,
-            105.86000061035156
-          ],
-          "close": [
-            105.97000122070312,
-            104.47000122070312,
-            104.33000183105469,
-            105.23999786376953,
-            105.1500015258789
+          "volume": [
+            7809100,
+            7149300,
+            7497700,
+            8546900,
+            4401782
           ],
           "low": [
             103.44999694824219,
@@ -98,12 +113,19 @@
             105.69000244140625,
             106.80999755859375
           ],
-          "volume": [
-            7809100,
-            7149300,
-            7497700,
-            8544200,
-            2216524
+          "open": [
+            104.23999786376953,
+            106,
+            103.93000030517578,
+            104.9800033569336,
+            105.86000061035156
+          ],
+          "close": [
+            105.97000122070312,
+            104.47000122070312,
+            104.33000183105469,
+            105.23999786376953,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             104.47000122070312,
             104.33000183105469,
             105.23999786376953,
-            105.1500015258789
+            null
           ]
         }
       ]

@@ -6,98 +6,97 @@
   <title>MyToro</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="home-page">
   <div class="page-shell">
-    <div id="selectionModal" class="selection-modal hidden" aria-hidden="true">
-      <div class="selection-modal-card" role="dialog" aria-modal="true" aria-labelledby="selectionModalTitle">
-        <div class="selection-modal-title" id="selectionModalTitle">Next step</div>
-        <p id="selectionModalText" class="selection-modal-text"></p>
-        <div class="selection-modal-actions">
-          <button id="selectionModalClose" class="primary-button">Continue</button>
-        </div>
-      </div>
-    </div>
-
     <header class="topbar">
-      <div class="brand-row">
-        <img class="brand-logo" src="myToro.png" alt="MyToro logo" />
-        <div>
-          <div class="eyebrow">MyToro</div>
-          <div class="brand-title">Live entry signals and daily risk controls</div>
-        </div>
+      <div>
+        <div class="eyebrow">MyToro</div>
+        <h1>Live entry signals<br />for the Nasdaq session</h1>
       </div>
-      <div class="topbar-actions">
-        <button id="infoButton" class="icon-button" aria-label="App info">ℹ️</button>
-      </div>
-      <div class="trend-strip">
-        <span>📈 Trending</span>
-        <strong>Tech momentum with low volatility</strong>
-      </div>
+
+      <button id="infoButton" class="icon-button" aria-label="App info">i</button>
     </header>
 
-    <nav class="mobile-tabs" aria-label="Primary">
-      <a class="tab-button active" href="index.html">🏠 Home</a>
-      <a class="tab-button" href="yesterday.html">📈 Yesterday Results</a>
-      <a class="tab-button" href="history.html">🗓️ History</a>
-      <a class="tab-button" href="admin.html">⚙️ Admin</a>
-    </nav>
+    <section class="search-card">
+      <div class="search-card-header">
+        <div>
+          <p class="small-label">Search NASDAQ stock or ETF</p>
+          <input id="symbolSearch" type="text" placeholder="AAPL, NVDA or Amazon" />
+        </div>
+        <button id="searchButton" class="primary-button">Scan</button>
+      </div>
+      <div class="search-note">Use the scan button to refresh live signal candidates for the current session.</div>
+    </section>
 
-    <div class="stat-grid">
-      <article class="metric-card">
+    <section class="status-strip">
+      <div class="status-card-light">
         <span>Target intraday profit</span>
         <strong>$100</strong>
-      </article>
-      <article class="metric-card">
-        <span>Daily loss target</span>
+      </div>
+      <div class="status-card-light">
+        <span>Ballpark capital</span>
+        <strong>$3,000</strong>
+      </div>
+      <div class="status-card-light">
+        <span>Daily loss cap</span>
         <strong>$50</strong>
-      </article>
-      <article class="metric-card">
-        <span>Minimum profit per order</span>
-        <strong>$30</strong>
-      </article>
-      <article class="metric-card metric-accent">
-        <span>Cumulative P/L</span>
+      </div>
+    </section>
+
+    <section class="overview-card">
+      <div>
+        <span class="small-label">Market status</span>
+        <div id="sessionBadge" class="status-chip">NASDAQ session: checking…</div>
+      </div>
+      <div class="overview-value">Live signal readiness</div>
+      <p id="sessionNote" class="overview-copy">Checking Nasdaq opening time and market health…</p>
+    </section>
+
+    <section class="input-card">
+      <div class="input-row">
+        <label>
+          <span>Target profit ($)</span>
+          <input id="minProfit" type="number" min="0" step="1" placeholder="100" />
+        </label>
+        <label>
+          <span>Ballpark capital ($)</span>
+          <input id="ballpark" type="number" min="0" step="1" placeholder="3000" />
+        </label>
+      </div>
+    </section>
+
+    <section class="balance-strip">
+      <div>
+        <span>Daily balance</span>
+        <strong id="dailyBalance">$3,000.00</strong>
+      </div>
+      <div>
+        <span>Daily P/L</span>
         <strong id="dailyPnl">$0.00</strong>
-      </article>
+      </div>
+    </section>
+
+    <div id="statusMessage" class="status-banner">Ready for a MyToro live scan.</div>
+
+    <section id="resultsArea" class="results-area">No predictions yet.</section>
+
+    <nav class="bottom-nav" aria-label="Primary navigation">
+      <a class="nav-item active" href="index.html">🏠<span>Home</span></a>
+      <a class="nav-item" href="yesterday.html">📈<span>Yesterday</span></a>
+      <a class="nav-item" href="history.html">🗓️<span>History</span></a>
+      <a class="nav-item" href="admin.html">⚙️<span>Admin</span></a>
+    </nav>
+  </div>
+
+  <div id="selectionModal" class="selection-modal hidden" aria-hidden="true">
+    <div class="selection-modal-card" role="dialog" aria-modal="true" aria-labelledby="selectionModalTitle">
+      <div class="selection-modal-title" id="selectionModalTitle">Next step</div>
+      <p id="selectionModalText" class="selection-modal-text"></p>
+      <div class="selection-modal-actions">
+        <button id="selectionModalSecondary" class="secondary-button">Cancel</button>
+        <button id="selectionModalClose" class="primary-button">Continue</button>
+      </div>
     </div>
-
-    <main class="dashboard-grid">
-      <section class="panel panel-form">
-        <div class="panel-title-row">
-          <h2>🔎 Scan inputs</h2>
-          <span class="badge badge-blue">Live</span>
-        </div>
-
-        <label>
-          <span>Target intraday profit ($)</span>
-          <input id="minProfit" type="number" min="0" step="1" placeholder="e.g. 100" />
-        </label>
-
-        <label>
-          <span>Ballpark capital available ($)</span>
-          <input id="ballpark" type="number" min="0" step="1" placeholder="e.g. 500" />
-        </label>
-
-
-        <div class="search-row">
-          <label>
-            <span>Search NASDAQ stock / ETF</span>
-            <input id="symbolSearch" type="text" placeholder="e.g. AAPL or Apple" />
-          </label>
-          <button id="searchButton" class="primary-button">Scan</button>
-        </div>
-        <div id="sessionBadge" class="session-badge">NASDAQ session: checking…</div>
-        <div id="sessionNote" class="session-note">Checking Nasdaq opening time…</div>
-        <div class="dashboard-footer">
-          <div id="balanceSummary" class="balance-card">
-            <span>Daily capital</span>
-            <strong id="dailyBalance">$3,000.00</strong>
-          </div>
-          <div id="statusMessage" class="status-card">Ready for a MyToro live scan.</div>
-        </div>
-        <div id="resultsArea" class="results-area">No predictions yet.</div>
-      </section>
-    </main>
   </div>
 
   <div id="appInfoModal" class="app-info-modal hidden" aria-hidden="true">
@@ -107,6 +106,19 @@
       <div class="app-info-actions">
         <button id="appInfoClose" class="primary-button">Close</button>
       </div>
+    </div>
+  </div>
+
+  <div id="candidateDetailModal" class="candidate-detail-modal hidden" aria-hidden="true">
+    <div class="candidate-detail-card" role="dialog" aria-modal="true" aria-labelledby="candidateDetailTitle">
+      <div class="candidate-detail-header">
+        <div>
+          <div class="candidate-detail-title" id="candidateDetailTitle">Candidate detail</div>
+          <div id="candidateDetailSubtitle" class="candidate-detail-subtitle">Loading candidate metrics and risk review…</div>
+        </div>
+        <button id="candidateDetailClose" class="icon-button" aria-label="Close details">×</button>
+      </div>
+      <div id="candidateDetailContent" class="candidate-detail-content">Loading…</div>
     </div>
   </div>
 

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:20.661Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DECK?interval=1d&range=5d",
+  "symbol": "DECK",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DECK?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:29.221Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 96.87999725341797,
+    "firstOpen": 99.12999725341797,
+    "dayMovePct": -100,
+    "gapPct": 2.322460842060582,
+    "currentVolume": 1569663,
+    "averageVolume": 2255212.6,
+    "volumeSpikeRatio": 0.6960155330810053,
+    "morningHigh": 104.87999725341797,
+    "morningLow": 96.81999969482422,
+    "morningRangePct": 8.324723800866341,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.725693672268154,
+    "intradayVolatility": 42.32273170541698,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 750691800,
-      "regularMarketTime": 1785777392,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 98.855,
+      "regularMarketPrice": 99.5,
       "fiftyTwoWeekHigh": 125.45,
       "fiftyTwoWeekLow": 78.91,
       "regularMarketDayHigh": 101.15,
       "regularMarketDayLow": 97.89,
-      "regularMarketVolume": 879876,
+      "regularMarketVolume": 1569663,
       "longName": "Deckers Outdoor Corporation",
       "shortName": "Deckers Outdoor Corporation",
       "chartPreviousClose": 97.73,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            99.12999725341797,
-            101.37999725341797,
-            98.0199966430664,
-            96.81999969482422,
-            97.88999938964844
-          ],
-          "volume": [
-            3095200,
-            2154800,
-            2131200,
-            2324100,
-            879876
+          "close": [
+            103.91999816894531,
+            103.54000091552734,
+            99.69000244140625,
+            96.87999725341797,
+            null
           ],
           "high": [
             104.23999786376953,
@@ -91,12 +106,12 @@
             99.7300033569336,
             101.1500015258789
           ],
-          "close": [
-            103.91999816894531,
-            103.54000091552734,
-            99.69000244140625,
-            96.87999725341797,
-            98.8550033569336
+          "low": [
+            99.12999725341797,
+            101.37999725341797,
+            98.0199966430664,
+            96.81999969482422,
+            97.88999938964844
           ],
           "open": [
             99.12999725341797,
@@ -104,6 +119,13 @@
             101.7300033569336,
             98.75,
             99.43000030517578
+          ],
+          "volume": [
+            3095200,
+            2154800,
+            2131200,
+            2325200,
+            1569663
           ]
         }
       ],
@@ -114,7 +136,7 @@
             103.54000091552734,
             99.69000244140625,
             96.87999725341797,
-            98.8550033569336
+            null
           ]
         }
       ]

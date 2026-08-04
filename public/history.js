@@ -114,6 +114,13 @@ function getBrisbaneDateParts(value = new Date()) {
   return getDateParts(value, 'Australia/Brisbane');
 }
 
+function getBrisbaneMonthName(value = new Date()) {
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    timeZone: 'Australia/Brisbane'
+  }).format(parseHistoryDateValue(value));
+}
+
 function getNewYorkDateParts(value = new Date()) {
   return getDateParts(value, 'America/New_York');
 }
@@ -382,9 +389,25 @@ function renderOrderDetailCard(order) {
     ? `<small>Current position value: ${formatCurrency(totalSoldPrice)}</small>`
     : `<small>Total sold price: ${formatCurrency(totalSoldPrice)}</small>`;
 
+  const confidenceText = Number(order.probability || order.evaluation?.signalSummary?.probability || 0) > 0
+    ? `${(Number(order.probability || order.evaluation?.signalSummary?.probability || 0) * 100).toFixed(0)}% probability`
+    : 'Confidence unavailable';
+  const combinedScoreText = Number(order.combinedScore || order.evaluation?.signalSummary?.combinedScore || 0) > 0
+    ? `combined ${Number(order.combinedScore || order.evaluation?.signalSummary?.combinedScore || 0).toFixed(2)}`
+    : 'combined score unavailable';
+  const decisionLabel = order.evaluation?.status === 'rejected-risk' ? 'Rejected' : 'Accepted';
+  const decisionTone = order.evaluation?.status === 'rejected-risk' ? 'rejected' : 'accepted';
+  const reasons = Array.isArray(order.evaluation?.reasons) ? order.evaluation.reasons : [];
+  const riskReasonList = reasons.length
+    ? `<div class="history-order-reason"><strong>Why this decision was ${decisionLabel.toLowerCase()}</strong><ul>${reasons.map((reason) => `<li>${reason}</li>`).join('')}</ul></div>`
+    : '';
+
   return `
     <div class="history-order-card">
-      <strong>${order.symbol || 'Unknown'} - ${statusText}</strong>
+      <div class="history-order-card-header">
+        <strong>${order.symbol || 'Unknown'} - ${statusText}</strong>
+        <span class="history-pill ${decisionTone}">${decisionLabel}</span>
+      </div>
       <small>Entry price: ${formatCurrency(entryPrice)}</small>
       <small>Current / exit price: ${formatCurrency(currentPrice)}</small>
       <small>Shares: ${shareCount}</small>
@@ -394,7 +417,10 @@ function renderOrderDetailCard(order) {
       <small>Profit / Loss: ${formatCurrency(profitLoss)}</small>
       <small>Trailing stop: ${formatCurrency(trailingStopPrice)} (${Number(order.stopLossPct || 0).toFixed(2)}%)</small>
       <small>Target profit: ${formatCurrency(Number(order.targetProfit || 0))}</small>
+      <small>Prediction confidence: ${confidenceText}</small>
+      <small>${combinedScoreText}</small>
       <small>${resultText}</small>
+      ${riskReasonList}
     </div>
   `;
 }
@@ -436,7 +462,10 @@ function openHistoryModal(dateKey) {
           status: entry.correct ? 'green' : 'red',
           result: entry.correct ? 'profit-hit' : 'loss-hit',
           resolvedEntryPrice: Number(entry.entryPrice || entry.targetPrice || 0),
-          resolvedCurrentPrice: Number(entry.targetPrice || entry.entryPrice || 0)
+          resolvedCurrentPrice: Number(entry.targetPrice || entry.entryPrice || 0),
+          probability: Number(entry.probability || 0),
+          combinedScore: Number(entry.combinedScore || 0),
+          evaluation: entry.evaluation || null
         };
         return renderOrderDetailCard(historyOrder);
       })
@@ -507,9 +536,13 @@ async function renderHistoryFull() {
 
   updateRefreshButton(orders);
   const tiles = buildDateTiles(groups);
+  const monthName = getBrisbaneMonthName();
 
   if (historyCalendar) {
-    historyCalendar.innerHTML = tiles.join('');
+    historyCalendar.innerHTML = `
+      <div class="calendar-month-heading">${monthName}</div>
+      ${tiles.join('')}
+    `;
     attachDateClickHandlers();
   }
 }

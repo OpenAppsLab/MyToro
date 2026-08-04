@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:15.724Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GS?interval=1d&range=5d",
+  "symbol": "GS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:42.435Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 1018.3800048828125,
+    "firstOpen": 1041.9300537109375,
+    "dayMovePct": -100,
+    "gapPct": 2.312501101279474,
+    "currentVolume": 1344988,
+    "averageVolume": 2120197.6,
+    "volumeSpikeRatio": 0.6343691738920938,
+    "morningHigh": 1047.7099609375,
+    "morningLow": 977.7000122070312,
+    "morningRangePct": 7.160677902870264,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.306005390091563,
+    "intradayVolatility": 43.25781289736869,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 925824600,
-      "regularMarketTime": 1785777310,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1011.17,
+      "regularMarketPrice": 1027.06,
       "fiftyTwoWeekHigh": 1153.99,
       "fiftyTwoWeekLow": 705.55,
-      "regularMarketDayHigh": 1026.056,
+      "regularMarketDayHigh": 1027.96,
       "regularMarketDayLow": 1005.42,
-      "regularMarketVolume": 844665,
+      "regularMarketVolume": 1344988,
       "longName": "The Goldman Sachs Group, Inc.",
       "shortName": "Goldman Sachs Group, Inc. (The)",
       "chartPreviousClose": 1048.23,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            1033.3399658203125,
+            980.75,
+            1024.8599853515625,
+            1018.3800048828125,
+            null
+          ],
+          "volume": [
+            2173100,
+            3198400,
+            2330800,
+            1553700,
+            1344988
+          ],
           "low": [
             1011.8699951171875,
             977.7000122070312,
             998.510009765625,
             1008.5999755859375,
             1005.4199829101562
-          ],
-          "close": [
-            1033.3399658203125,
-            980.75,
-            1024.8599853515625,
-            1018.3800048828125,
-            1011.1699829101562
-          ],
-          "volume": [
-            2173100,
-            3198400,
-            2330800,
-            1552600,
-            844665
           ],
           "open": [
             1041.9300537109375,
@@ -103,7 +125,7 @@
             1028.1199951171875,
             1029.7900390625,
             1042.97998046875,
-            1026.0555419921875
+            1027.9599609375
           ]
         }
       ],
@@ -114,7 +136,7 @@
             980.75,
             1024.8599853515625,
             1018.3800048828125,
-            1011.1699829101562
+            null
           ]
         }
       ]

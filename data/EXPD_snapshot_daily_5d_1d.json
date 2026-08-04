@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:07.404Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXPD?interval=1d&range=5d",
+  "symbol": "EXPD",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EXPD?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:26.154Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 167.88999938964844,
+    "firstOpen": 171.33999633789062,
+    "dayMovePct": -100,
+    "gapPct": 2.0549150996392838,
+    "currentVolume": 2221293,
+    "averageVolume": 1299538.6,
+    "volumeSpikeRatio": 1.7092935908175408,
+    "morningHigh": 172.3699951171875,
+    "morningLow": 164.35000610351562,
+    "morningRangePct": 4.879822765945318,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.51487849934067,
+    "intradayVolatility": 43.01212338037512,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 465053400,
-      "regularMarketTime": 1785777503,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 167.53,
+      "regularMarketPrice": 170.59,
       "fiftyTwoWeekHigh": 183.52,
       "fiftyTwoWeekLow": 112.95,
-      "regularMarketDayHigh": 169.99,
+      "regularMarketDayHigh": 171.075,
       "regularMarketDayLow": 166.445,
-      "regularMarketVolume": 614736,
+      "regularMarketVolume": 2221293,
       "longName": "Expeditors International of Washington, Inc.",
       "shortName": "Expeditors International of Was",
       "chartPreviousClose": 171.34,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,20 @@
     "indicators": {
       "quote": [
         {
+          "high": [
+            172.3699951171875,
+            171.57000732421875,
+            170.55999755859375,
+            169.41000366210938,
+            171.0749969482422
+          ],
+          "volume": [
+            946600,
+            883600,
+            1115900,
+            1330300,
+            2221293
+          ],
           "low": [
             170.4199981689453,
             169.22000122070312,
@@ -84,26 +120,12 @@
             167.0800018310547,
             169.16000366210938
           ],
-          "high": [
-            172.3699951171875,
-            171.57000732421875,
-            170.55999755859375,
-            169.41000366210938,
-            169.99000549316406
-          ],
-          "volume": [
-            946600,
-            883600,
-            1115900,
-            1330300,
-            614736
-          ],
           "close": [
             171.4199981689453,
             170.1300048828125,
             167.00999450683594,
             167.88999938964844,
-            167.52999877929688
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             170.1300048828125,
             167.00999450683594,
             167.88999938964844,
-            167.52999877929688
+            null
           ]
         }
       ]

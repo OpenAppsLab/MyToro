@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:58.606Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FIX?interval=1d&range=5d",
+  "symbol": "FIX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FIX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:01.342Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 1729.68994140625,
+    "firstOpen": 1665.199951171875,
+    "dayMovePct": -100,
+    "gapPct": -3.7284133237165147,
+    "currentVolume": 325210,
+    "averageVolume": 570822,
+    "volumeSpikeRatio": 0.5697222601791802,
+    "morningHigh": 1803.3499755859375,
+    "morningLow": 1491.239990234375,
+    "morningRangePct": 20.929561130030375,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.24026649025208,
+    "intradayVolatility": 44.78506567364347,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 867418200,
-      "regularMarketTime": 1785777474,
+      "regularMarketTime": 1785787264,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1748.045,
+      "regularMarketPrice": 1770.96,
       "fiftyTwoWeekHigh": 2073.99,
       "fiftyTwoWeekLow": 655.96,
-      "regularMarketDayHigh": 1764,
+      "regularMarketDayHigh": 1776.22,
       "regularMarketDayLow": 1657,
-      "regularMarketVolume": 174727,
+      "regularMarketVolume": 325210,
       "longName": "Comfort Systems USA, Inc.",
       "shortName": "Comfort Systems USA, Inc.",
       "chartPreviousClose": 1730.42,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            671400,
-            770800,
-            694400,
-            392300,
-            174727
-          ],
-          "high": [
-            1674,
-            1644.0799560546875,
-            1724.3199462890625,
-            1803.3499755859375,
-            1764
-          ],
-          "close": [
-            1626.3199462890625,
-            1519.9599609375,
-            1697.8399658203125,
-            1729.68994140625,
-            1748.0450439453125
+          "low": [
+            1533.4100341796875,
+            1491.239990234375,
+            1650.8299560546875,
+            1718.5899658203125,
+            1657
           ],
           "open": [
             1665.199951171875,
@@ -98,12 +106,26 @@
             1777.5999755859375,
             1674.3199462890625
           ],
-          "low": [
-            1533.4100341796875,
-            1491.239990234375,
-            1650.8299560546875,
-            1718.5899658203125,
-            1657
+          "close": [
+            1626.3199462890625,
+            1519.9599609375,
+            1697.8399658203125,
+            1729.68994140625,
+            null
+          ],
+          "volume": [
+            671400,
+            770800,
+            694400,
+            392300,
+            325210
+          ],
+          "high": [
+            1674,
+            1644.0799560546875,
+            1724.3199462890625,
+            1803.3499755859375,
+            1776.219970703125
           ]
         }
       ],
@@ -114,7 +136,7 @@
             1519.9599609375,
             1697.8399658203125,
             1729.68994140625,
-            1748.0450439453125
+            null
           ]
         }
       ]

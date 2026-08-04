@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:39.183Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PEP?interval=1d&range=5d",
+  "symbol": "PEP",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/PEP?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:11.143Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 139.55999755859375,
+    "firstOpen": 143.2100067138672,
+    "dayMovePct": -100,
+    "gapPct": 2.615369173921771,
+    "currentVolume": 6199909,
+    "averageVolume": 8638401.8,
+    "volumeSpikeRatio": 0.7177148208132665,
+    "morningHigh": 145.42999267578125,
+    "morningLow": 138.3800048828125,
+    "morningRangePct": 5.094657858220956,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.57703834642555,
+    "intradayVolatility": 42.97952397305175,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785777336,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 139,
+      "regularMarketPrice": 139.63,
       "fiftyTwoWeekHigh": 171.48,
       "fiftyTwoWeekLow": 133.73,
       "regularMarketDayHigh": 141.55,
       "regularMarketDayLow": 138.71,
-      "regularMarketVolume": 2806192,
+      "regularMarketVolume": 6199909,
       "longName": "PepsiCo, Inc.",
       "shortName": "Pepsico, Inc.",
       "chartPreviousClose": 139.79,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            143.2100067138672,
-            143.27999877929688,
-            141.10000610351562,
-            139.52999877929688,
-            141
+          "volume": [
+            10648800,
+            8390800,
+            8253100,
+            9699400,
+            6199909
           ],
           "low": [
             141.7899932861328,
@@ -84,26 +106,26 @@
             138.3800048828125,
             138.71009826660156
           ],
-          "volume": [
-            10648800,
-            8390800,
-            8253100,
-            9696900,
-            2806192
-          ],
-          "close": [
-            142.86000061035156,
-            143.5,
-            140.1999969482422,
-            139.55999755859375,
-            139
-          ],
           "high": [
             145.42999267578125,
             145.22999572753906,
             142.52000427246094,
             140.16000366210938,
             141.5500030517578
+          ],
+          "open": [
+            143.2100067138672,
+            143.27999877929688,
+            141.10000610351562,
+            139.52999877929688,
+            141
+          ],
+          "close": [
+            142.86000061035156,
+            143.5,
+            140.1999969482422,
+            139.55999755859375,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             143.5,
             140.1999969482422,
             139.55999755859375,
-            139
+            null
           ]
         }
       ]

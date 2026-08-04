@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:59.705Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/COP?interval=1d&range=5d",
+  "symbol": "COP",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/COP?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:02.683Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 120.4800033569336,
+    "firstOpen": 115.98999786376953,
+    "dayMovePct": -100,
+    "gapPct": -3.726764083714365,
+    "currentVolume": 4673259,
+    "averageVolume": 6121671.8,
+    "volumeSpikeRatio": 0.7633958749634373,
+    "morningHigh": 120.83999633789062,
+    "morningLow": 113.20999908447266,
+    "morningRangePct": 6.739684935183841,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.622389909751707,
+    "intradayVolatility": 44.108205422906565,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,7 +31,7 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 378657000,
-      "regularMarketTime": 1785777477,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
@@ -19,7 +41,7 @@
       "fiftyTwoWeekLow": 85.57,
       "regularMarketDayHigh": 119.28,
       "regularMarketDayLow": 117.14,
-      "regularMarketVolume": 2565985,
+      "regularMarketVolume": 4673259,
       "longName": "ConocoPhillips",
       "shortName": "ConocoPhillips",
       "chartPreviousClose": 115.58,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,19 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            114.0999984741211,
+            118.05999755859375,
+            119.02999877929688,
+            120.4800033569336,
+            null
+          ],
           "low": [
             113.20999908447266,
             117.26000213623047,
             116.19999694824219,
             117.83000183105469,
             117.13999938964844
-          ],
-          "close": [
-            114.0999984741211,
-            118.05999755859375,
-            119.02999877929688,
-            120.4800033569336,
-            119.16000366210938
-          ],
-          "open": [
-            115.98999786376953,
-            117.94999694824219,
-            116.19999694824219,
-            119.44999694824219,
-            118.54000091552734
           ],
           "high": [
             117.19000244140625,
@@ -102,8 +117,15 @@
             7638000,
             5998500,
             6496700,
-            5797800,
-            2565985
+            5801900,
+            4673259
+          ],
+          "open": [
+            115.98999786376953,
+            117.94999694824219,
+            116.19999694824219,
+            119.44999694824219,
+            118.54000091552734
           ]
         }
       ],
@@ -114,7 +136,7 @@
             118.05999755859375,
             119.02999877929688,
             120.4800033569336,
-            119.16000366210938
+            null
           ]
         }
       ]

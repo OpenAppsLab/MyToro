@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:21.572Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARE?interval=1d&range=5d",
+  "symbol": "ARE",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ARE?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:01.813Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 51.45000076293945,
+    "firstOpen": 52.0099983215332,
+    "dayMovePct": -100,
+    "gapPct": 1.0884306128079366,
+    "currentVolume": 1841721,
+    "averageVolume": 2012764.2,
+    "volumeSpikeRatio": 0.9150207460963385,
+    "morningHigh": 55.7400016784668,
+    "morningLow": 51.20000076293945,
+    "morningRangePct": 8.867189156007928,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.196940955871845,
+    "intradayVolatility": 42.61647287048101,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 864826200,
-      "regularMarketTime": 1785777338,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 52.65,
+      "regularMarketPrice": 53.03,
       "fiftyTwoWeekHigh": 88.24,
       "fiftyTwoWeekLow": 39.41,
-      "regularMarketDayHigh": 53.2,
+      "regularMarketDayHigh": 53.335,
       "regularMarketDayLow": 52.28,
-      "regularMarketVolume": 759988,
+      "regularMarketVolume": 1841721,
       "longName": "Alexandria Real Estate Equities, Inc.",
       "shortName": "Alexandria Real Estate Equities",
       "chartPreviousClose": 51.39,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -75,7 +97,7 @@
             55.7400016784668,
             53.68000030517578,
             52.630001068115234,
-            53.20000076293945
+            53.334999084472656
           ],
           "open": [
             52.0099983215332,
@@ -89,14 +111,14 @@
             2497100,
             1475300,
             1559200,
-            759988
+            1841721
           ],
           "close": [
             54,
             53.77000045776367,
             52.4900016784668,
             51.45000076293945,
-            52.650001525878906
+            null
           ],
           "low": [
             51.95000076293945,
@@ -114,7 +136,7 @@
             53.77000045776367,
             52.4900016784668,
             51.45000076293945,
-            52.650001525878906
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:33.824Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=5d",
+  "symbol": "NVDA",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:04.547Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 200.75,
+    "firstOpen": 195,
+    "dayMovePct": -100,
+    "gapPct": -2.86425902864259,
+    "currentVolume": 127547828,
+    "averageVolume": 135662305.6,
+    "volumeSpikeRatio": 0.940186203056835,
+    "morningHigh": 208.74000549316406,
+    "morningLow": 190.00999450683594,
+    "morningRangePct": 9.85738199453202,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.494570641443648,
+    "intradayVolatility": 43.669976531102215,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 917015400,
-      "regularMarketTime": 1785777332,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 207.54,
+      "regularMarketPrice": 206.64,
       "fiftyTwoWeekHigh": 236.54,
       "fiftyTwoWeekLow": 164.07,
-      "regularMarketDayHigh": 207.62,
+      "regularMarketDayHigh": 208.74,
       "regularMarketDayLow": 196.85,
-      "regularMarketVolume": 70457318,
+      "regularMarketVolume": 127547828,
       "longName": "NVIDIA Corporation",
       "shortName": "NVIDIA Corporation",
       "chartPreviousClose": 196.51,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            197.00999450683594,
+            190.00999450683594,
+            195.0399932861328,
+            200.75,
+            null
+          ],
           "low": [
             192.74000549316406,
             190.00999450683594,
             191.52000427246094,
             194.9499969482422,
             196.85000610351562
+          ],
+          "high": [
+            198.6999969482422,
+            197.07000732421875,
+            197.25,
+            202,
+            208.74000549316406
           ],
           "open": [
             195,
@@ -84,26 +120,12 @@
             198.44000244140625,
             197.72999572753906
           ],
-          "close": [
-            197.00999450683594,
-            190.00999450683594,
-            195.0399932861328,
-            200.75,
-            207.54010009765625
-          ],
           "volume": [
             134111500,
             147680800,
             129010200,
-            139659700,
-            70457318
-          ],
-          "high": [
-            198.6999969482422,
-            197.07000732421875,
-            197.25,
-            202,
-            207.6199951171875
+            139961200,
+            127547828
           ]
         }
       ],
@@ -114,7 +136,7 @@
             190.00999450683594,
             195.0399932861328,
             200.75,
-            207.54010009765625
+            null
           ]
         }
       ]

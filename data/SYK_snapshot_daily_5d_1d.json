@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:55.406Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SYK?interval=1d&range=5d",
+  "symbol": "SYK",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SYK?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:30.245Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 325.70001220703125,
+    "firstOpen": 346.6600036621094,
+    "dayMovePct": -100,
+    "gapPct": 6.435367107617701,
+    "currentVolume": 2148880,
+    "averageVolume": 2812376,
+    "volumeSpikeRatio": 0.7640799096564613,
+    "morningHigh": 352.489990234375,
+    "morningLow": 317.6199951171875,
+    "morningRangePct": 10.978526431977949,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.49596332389987,
+    "intradayVolatility": 42.53569807635012,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777353,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 337.92,
+      "regularMarketPrice": 341.2,
       "fiftyTwoWeekHigh": 396.86,
       "fiftyTwoWeekLow": 281,
-      "regularMarketDayHigh": 339.99,
+      "regularMarketDayHigh": 342.04,
       "regularMarketDayLow": 330.605,
-      "regularMarketVolume": 1166727,
+      "regularMarketVolume": 2148880,
       "longName": "Stryker Corporation",
       "shortName": "Stryker Corporation",
       "chartPreviousClose": 336.74,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            2751800,
+            1857400,
+            2767300,
+            4536500,
+            2148880
+          ],
           "low": [
             344.010009765625,
             342.9200134277344,
@@ -77,26 +106,12 @@
             317.6199951171875,
             330.6050109863281
           ],
-          "volume": [
-            2751800,
-            1857400,
-            2767300,
-            4535900,
-            1166727
-          ],
           "high": [
             352.4599914550781,
             352.489990234375,
             351.489990234375,
             334.4599914550781,
-            339.989990234375
-          ],
-          "close": [
-            346.6000061035156,
-            352.25,
-            348.0400085449219,
-            325.70001220703125,
-            337.9200134277344
+            342.0400085449219
           ],
           "open": [
             346.6600036621094,
@@ -104,6 +119,13 @@
             349.7300109863281,
             330.1000061035156,
             332.94000244140625
+          ],
+          "close": [
+            346.6000061035156,
+            352.25,
+            348.0400085449219,
+            325.70001220703125,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             352.25,
             348.0400085449219,
             325.70001220703125,
-            337.9200134277344
+            null
           ]
         }
       ]

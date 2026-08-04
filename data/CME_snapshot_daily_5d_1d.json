@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:52.067Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CME?interval=1d&range=5d",
+  "symbol": "CME",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CME?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:53.156Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 267.7900085449219,
+    "firstOpen": 256.510009765625,
+    "dayMovePct": -100,
+    "gapPct": -4.212255281886161,
+    "currentVolume": 1606506,
+    "averageVolume": 2524101.2,
+    "volumeSpikeRatio": 0.6364665568876556,
+    "morningHigh": 270,
+    "morningLow": 255.33999633789062,
+    "morningRangePct": 5.74136597178839,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.25594925451822,
+    "intradayVolatility": 43.73633684611905,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1039185000,
-      "regularMarketTime": 1785777448,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 264.51,
+      "regularMarketPrice": 266.17,
       "fiftyTwoWeekHigh": 329.16,
       "fiftyTwoWeekLow": 218.31,
       "regularMarketDayHigh": 270,
       "regularMarketDayLow": 264.31,
-      "regularMarketVolume": 714521,
+      "regularMarketVolume": 1606506,
       "longName": "CME Group Inc.",
       "shortName": "CME Group Inc.",
       "chartPreviousClose": 255.36,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            255.33999633789062,
-            259.44000244140625,
-            260.6000061035156,
-            265,
-            264.30999755859375
+          "open": [
+            256.510009765625,
+            260.25,
+            260.80999755859375,
+            266.6400146484375,
+            268.1700134277344
           ],
           "high": [
             262.3399963378906,
@@ -84,26 +106,26 @@
             269.94000244140625,
             270
           ],
+          "low": [
+            255.33999633789062,
+            259.44000244140625,
+            260.6000061035156,
+            265,
+            264.30999755859375
+          ],
           "close": [
             260,
             265.44000244140625,
             267.2200012207031,
             267.7900085449219,
-            264.510009765625
-          ],
-          "open": [
-            256.510009765625,
-            260.25,
-            260.80999755859375,
-            266.6400146484375,
-            268.1700134277344
+            null
           ],
           "volume": [
             2238500,
             2915100,
             2590900,
-            3268800,
-            714521
+            3269500,
+            1606506
           ]
         }
       ],
@@ -114,7 +136,7 @@
             265.44000244140625,
             267.2200012207031,
             267.7900085449219,
-            264.510009765625
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:44.781Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HAL?interval=1d&range=5d",
+  "symbol": "HAL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/HAL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:11.935Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 32.25,
+    "firstOpen": 32.16999816894531,
+    "dayMovePct": -100,
+    "gapPct": -0.24806769319282948,
+    "currentVolume": 7823359,
+    "averageVolume": 10261391.8,
+    "volumeSpikeRatio": 0.7624072009412991,
+    "morningHigh": 32.36000061035156,
+    "morningLow": 30.979999542236328,
+    "morningRangePct": 4.454490279232642,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.189342772537067,
+    "intradayVolatility": 43.77590010970294,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785777578,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 31.895,
+      "regularMarketPrice": 31.89,
       "fiftyTwoWeekHigh": 43.59,
       "fiftyTwoWeekLow": 20.39,
       "regularMarketDayHigh": 32.14,
       "regularMarketDayLow": 31.2,
-      "regularMarketVolume": 3879822,
+      "regularMarketVolume": 7823359,
       "longName": "Halliburton Company",
       "shortName": "Halliburton Company",
       "chartPreviousClose": 32.13,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            31.200000762939453,
-            31.1200008392334,
-            30.979999542236328,
-            31.510000228881836,
-            31.200000762939453
+          "volume": [
+            13398800,
+            12568500,
+            8230800,
+            9285500,
+            7823359
           ],
           "high": [
             32.22999954223633,
@@ -84,26 +106,26 @@
             32.36000061035156,
             32.13999938964844
           ],
-          "open": [
-            32.16999816894531,
-            32,
-            31.209999084472656,
-            32,
-            31.75
-          ],
-          "volume": [
-            13398800,
-            12568500,
-            8230800,
-            9283000,
-            3879822
+          "low": [
+            31.200000762939453,
+            31.1200008392334,
+            30.979999542236328,
+            31.510000228881836,
+            31.200000762939453
           ],
           "close": [
             31.229999542236328,
             31.190000534057617,
             31.639999389648438,
             32.25,
-            31.895000457763672
+            null
+          ],
+          "open": [
+            32.16999816894531,
+            32,
+            31.209999084472656,
+            32,
+            31.75
           ]
         }
       ],
@@ -114,7 +136,7 @@
             31.190000534057617,
             31.639999389648438,
             32.25,
-            31.895000457763672
+            null
           ]
         }
       ]

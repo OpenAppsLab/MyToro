@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:48.140Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HCA?interval=1d&range=5d",
+  "symbol": "HCA",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/HCA?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:16.030Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 402.5899963378906,
+    "firstOpen": 396.2200012207031,
+    "dayMovePct": -100,
+    "gapPct": -1.5822537010684221,
+    "currentVolume": 942356,
+    "averageVolume": 1643551.2,
+    "volumeSpikeRatio": 0.5733657704122634,
+    "morningHigh": 421.30999755859375,
+    "morningLow": 391.3800048828125,
+    "morningRangePct": 7.647297333123322,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.927748288751232,
+    "intradayVolatility": 42.80450508803462,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1299767400,
-      "regularMarketTime": 1785777578,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 403.36,
+      "regularMarketPrice": 406.61,
       "fiftyTwoWeekHigh": 556.52,
       "fiftyTwoWeekLow": 353.99,
       "regularMarketDayHigh": 415.592,
-      "regularMarketDayLow": 403,
-      "regularMarketVolume": 524925,
+      "regularMarketDayLow": 402.28,
+      "regularMarketVolume": 942356,
       "longName": "HCA Healthcare, Inc.",
       "shortName": "HCA Healthcare, Inc.",
       "chartPreviousClose": 389.62,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,20 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            418.19000244140625,
-            408.17999267578125,
-            395.7900085449219,
-            402.5899963378906,
-            403.3599853515625
-          ],
-          "volume": [
-            2925400,
-            1849800,
-            1244300,
-            1255900,
-            524925
-          ],
           "high": [
             419.2200012207031,
             421.30999755859375,
@@ -91,12 +99,26 @@
             404.5199890136719,
             415.5924987792969
           ],
+          "volume": [
+            2925400,
+            1849800,
+            1244300,
+            1255900,
+            942356
+          ],
+          "close": [
+            418.19000244140625,
+            408.17999267578125,
+            395.7900085449219,
+            402.5899963378906,
+            null
+          ],
           "low": [
             392.1400146484375,
             405.760009765625,
             394.739990234375,
             391.3800048828125,
-            403
+            402.2799987792969
           ],
           "open": [
             396.2200012207031,
@@ -114,7 +136,7 @@
             408.17999267578125,
             395.7900085449219,
             402.5899963378906,
-            403.3599853515625
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:16.084Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/A?interval=1d&range=5d",
+  "symbol": "A",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/A?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:55.090Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 138.3699951171875,
+    "firstOpen": 139.99000549316406,
+    "dayMovePct": -100,
+    "gapPct": 1.1707815517407172,
+    "currentVolume": 1280205,
+    "averageVolume": 1819621,
+    "volumeSpikeRatio": 0.7035558503666423,
+    "morningHigh": 142.4199981689453,
+    "morningLow": 135.77999877929688,
+    "morningRangePct": 4.890263256255733,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.387292546473578,
+    "intradayVolatility": 43.07933113801699,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 942935400,
-      "regularMarketTime": 1785777359,
+      "regularMarketTime": 1785787296,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 138.705,
+      "regularMarketPrice": 139.8,
       "fiftyTwoWeekHigh": 160.27,
       "fiftyTwoWeekLow": 108.35,
       "regularMarketDayHigh": 140.37,
       "regularMarketDayLow": 137.13,
-      "regularMarketVolume": 640531,
+      "regularMarketVolume": 1280205,
       "longName": "Agilent Technologies, Inc.",
       "shortName": "Agilent Technologies, Inc.",
       "chartPreviousClose": 137.89,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            138.5800018310547,
-            139.1999969482422,
-            137.22999572753906,
-            135.77999877929688,
-            137.1300048828125
+          "close": [
+            140.5399932861328,
+            140.3000030517578,
+            138.7100067138672,
+            138.3699951171875,
+            null
           ],
           "high": [
             142.4199981689453,
@@ -84,12 +106,12 @@
             139.5,
             140.3699951171875
           ],
-          "close": [
-            140.5399932861328,
-            140.3000030517578,
-            138.7100067138672,
-            138.3699951171875,
-            138.7050018310547
+          "low": [
+            138.5800018310547,
+            139.1999969482422,
+            137.22999572753906,
+            135.77999877929688,
+            137.1300048828125
           ],
           "open": [
             139.99000549316406,
@@ -102,8 +124,8 @@
             2277100,
             1864600,
             1955100,
-            1720600,
-            640531
+            1721100,
+            1280205
           ]
         }
       ],
@@ -114,7 +136,7 @@
             140.3000030517578,
             138.7100067138672,
             138.3699951171875,
-            138.7050018310547
+            null
           ]
         }
       ]

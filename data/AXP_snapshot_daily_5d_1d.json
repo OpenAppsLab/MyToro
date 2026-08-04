@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:53.362Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AXP?interval=1d&range=5d",
+  "symbol": "AXP",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AXP?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:15.105Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 336.25,
+    "firstOpen": 335.5,
+    "dayMovePct": -100,
+    "gapPct": -0.22304832713754646,
+    "currentVolume": 2182136,
+    "averageVolume": 2873787.2,
+    "volumeSpikeRatio": 0.7593241420241554,
+    "morningHigh": 345.1549987792969,
+    "morningLow": 329.07000732421875,
+    "morningRangePct": 4.888015041501569,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.02105397833175,
+    "intradayVolatility": 43.30574203566691,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 76253400,
-      "regularMarketTime": 1785777290,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 342.7,
+      "regularMarketPrice": 344.72,
       "fiftyTwoWeekHigh": 387.49,
       "fiftyTwoWeekLow": 290.63,
       "regularMarketDayHigh": 345.155,
       "regularMarketDayLow": 340.013,
-      "regularMarketVolume": 1094143,
+      "regularMarketVolume": 2182136,
       "longName": "American Express Company",
       "shortName": "American Express Company",
       "chartPreviousClose": 335.39,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,27 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            336.6300048828125,
+            331.5,
+            337.5199890136719,
+            336.25,
+            null
+          ],
+          "open": [
+            335.5,
+            333.6199951171875,
+            331.9700012207031,
+            338.2799987792969,
+            340.8999938964844
+          ],
+          "volume": [
+            3535700,
+            3437900,
+            2859500,
+            2353700,
+            2182136
+          ],
           "high": [
             336.82000732421875,
             336.3900146484375,
@@ -83,27 +126,6 @@
             329.07000732421875,
             336,
             340.01251220703125
-          ],
-          "volume": [
-            3535700,
-            3437900,
-            2859500,
-            2349800,
-            1094143
-          ],
-          "close": [
-            336.6300048828125,
-            331.5,
-            337.5199890136719,
-            336.25,
-            342.70001220703125
-          ],
-          "open": [
-            335.5,
-            333.6199951171875,
-            331.9700012207031,
-            338.2799987792969,
-            340.8999938964844
           ]
         }
       ],
@@ -114,7 +136,7 @@
             331.5,
             337.5199890136719,
             336.25,
-            342.70001220703125
+            null
           ]
         }
       ]

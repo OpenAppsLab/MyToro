@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:24.512Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CPT?interval=1d&range=5d",
+  "symbol": "CPT",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CPT?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:19.703Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 110.80999755859375,
+    "firstOpen": 113.91999816894531,
+    "dayMovePct": -100,
+    "gapPct": 2.8066065146396797,
+    "currentVolume": 913889,
+    "averageVolume": 1396237.8,
+    "volumeSpikeRatio": 0.6545367844933004,
+    "morningHigh": 116.83999633789062,
+    "morningLow": 108.95999908447266,
+    "morningRangePct": 7.232009287471541,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.919921453174894,
+    "intradayVolatility": 42.795340117547056,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 743347800,
-      "regularMarketTime": 1785777429,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 109.955,
+      "regularMarketPrice": 110.72,
       "fiftyTwoWeekHigh": 119.81,
       "fiftyTwoWeekLow": 96.53,
       "regularMarketDayHigh": 111.917,
-      "regularMarketDayLow": 109.93,
-      "regularMarketVolume": 459745,
+      "regularMarketDayLow": 109.86,
+      "regularMarketVolume": 913889,
       "longName": "Camden Property Trust",
       "shortName": "Camden Property Trust",
       "chartPreviousClose": 112.84,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            115.04000091552734,
+            116.37000274658203,
+            113.29000091552734,
+            110.80999755859375,
+            null
+          ],
           "volume": [
             1315000,
             1071400,
             1806900,
             1874000,
-            459745
+            913889
           ],
-          "high": [
-            115.75,
-            116.83999633789062,
-            115.3499984741211,
-            113.23999786376953,
-            111.91719818115234
+          "low": [
+            113.88999938964844,
+            115.05000305175781,
+            112.6500015258789,
+            108.95999908447266,
+            109.86000061035156
           ],
           "open": [
             113.91999816894531,
@@ -91,19 +120,12 @@
             111.66999816894531,
             110.73999786376953
           ],
-          "close": [
-            115.04000091552734,
-            116.37000274658203,
-            113.29000091552734,
-            110.80999755859375,
-            109.95500183105469
-          ],
-          "low": [
-            113.88999938964844,
-            115.05000305175781,
-            112.6500015258789,
-            108.95999908447266,
-            109.93000030517578
+          "high": [
+            115.75,
+            116.83999633789062,
+            115.3499984741211,
+            113.23999786376953,
+            111.91719818115234
           ]
         }
       ],
@@ -114,7 +136,7 @@
             116.37000274658203,
             113.29000091552734,
             110.80999755859375,
-            109.95500183105469
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:33.982Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMT?interval=1d&range=5d",
+  "symbol": "AMT",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AMT?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:17.911Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 173.36000061035156,
+    "firstOpen": 169.5399932861328,
+    "dayMovePct": -100,
+    "gapPct": -2.2035113698486297,
+    "currentVolume": 1922220,
+    "averageVolume": 3937064,
+    "volumeSpikeRatio": 0.48823691969447286,
+    "morningHigh": 180.3699951171875,
+    "morningLow": 169.16000366210938,
+    "morningRangePct": 6.626856947502587,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.695852629532908,
+    "intradayVolatility": 43.55599996459639,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 888589800,
-      "regularMarketTime": 1785777363,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 172.64,
+      "regularMarketPrice": 173,
       "fiftyTwoWeekHigh": 214.79,
       "fiftyTwoWeekLow": 160.06,
       "regularMarketDayHigh": 175.155,
-      "regularMarketDayLow": 172.35,
-      "regularMarketVolume": 894502,
+      "regularMarketDayLow": 171.79,
+      "regularMarketVolume": 1922220,
       "longName": "American Tower Corporation",
       "shortName": "American Tower Corporation (REI",
       "chartPreviousClose": 166.74,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -84,26 +106,26 @@
             174.1699981689453,
             175.15499877929688
           ],
-          "low": [
-            169.16000366210938,
-            172.58999633789062,
-            172.82000732421875,
-            170.9600067138672,
-            172.35000610351562
+          "volume": [
+            4395600,
+            5367700,
+            3697400,
+            4302400,
+            1922220
           ],
           "close": [
             171.5,
             179.25999450683594,
             174.4600067138672,
             173.36000061035156,
-            172.63999938964844
+            null
           ],
-          "volume": [
-            4395600,
-            5367700,
-            3697400,
-            4301500,
-            894502
+          "low": [
+            169.16000366210938,
+            172.58999633789062,
+            172.82000732421875,
+            170.9600067138672,
+            171.7899932861328
           ]
         }
       ],
@@ -114,7 +136,7 @@
             179.25999450683594,
             174.4600067138672,
             173.36000061035156,
-            172.63999938964844
+            null
           ]
         }
       ]

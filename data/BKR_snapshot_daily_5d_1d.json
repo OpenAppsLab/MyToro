@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:00.118Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BKR?interval=1d&range=5d",
+  "symbol": "BKR",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BKR?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:49.981Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 60.4900016784668,
+    "firstOpen": 60.099998474121094,
+    "dayMovePct": -100,
+    "gapPct": -0.6447399463117163,
+    "currentVolume": 6494852,
+    "averageVolume": 10805250.4,
+    "volumeSpikeRatio": 0.6010829698125274,
+    "morningHigh": 61.2599983215332,
+    "morningLow": 57.869998931884766,
+    "morningRangePct": 5.857956544354871,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.140183835564027,
+    "intradayVolatility": 43.80129084341395,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 544714200,
-      "regularMarketTime": 1785777420,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 60.59,
+      "regularMarketPrice": 60.81,
       "fiftyTwoWeekHigh": 70.41,
       "fiftyTwoWeekLow": 41.96,
-      "regularMarketDayHigh": 60.74,
+      "regularMarketDayHigh": 60.975,
       "regularMarketDayLow": 59.08,
-      "regularMarketVolume": 2542082,
+      "regularMarketVolume": 6494852,
       "longName": "Baker Hughes Company",
       "shortName": "Baker Hughes Company",
       "chartPreviousClose": 60.59,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -75,7 +97,14 @@
             60.470001220703125,
             60.119998931884766,
             61.2599983215332,
-            60.7400016784668
+            60.974998474121094
+          ],
+          "volume": [
+            12307800,
+            20168000,
+            9294700,
+            5760900,
+            6494852
           ],
           "low": [
             57.869998931884766,
@@ -84,26 +113,19 @@
             59.9900016784668,
             59.08000183105469
           ],
-          "volume": [
-            12307800,
-            20168000,
-            9294700,
-            5758100,
-            2542082
-          ],
-          "close": [
-            58.459999084472656,
-            58.720001220703125,
-            59.900001525878906,
-            60.4900016784668,
-            60.59000015258789
-          ],
           "open": [
             60.099998474121094,
             60.45000076293945,
             59.18000030517578,
             60.72999954223633,
             60.150001525878906
+          ],
+          "close": [
+            58.459999084472656,
+            58.720001220703125,
+            59.900001525878906,
+            60.4900016784668,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             58.720001220703125,
             59.900001525878906,
             60.4900016784668,
-            60.59000015258789
+            null
           ]
         }
       ]

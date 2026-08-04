@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:46.296Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CI?interval=1d&range=5d",
+  "symbol": "CI",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CI?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:46.266Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 279.04998779296875,
+    "firstOpen": 293.5799865722656,
+    "dayMovePct": -100,
+    "gapPct": 5.206951949439572,
+    "currentVolume": 1456177,
+    "averageVolume": 1908955.4,
+    "volumeSpikeRatio": 0.7628135261829585,
+    "morningHigh": 304.69000244140625,
+    "morningLow": 276.7099914550781,
+    "morningRangePct": 10.111673539215326,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.87234155675392,
+    "intradayVolatility": 42.224468192879904,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 386433000,
-      "regularMarketTime": 1785777444,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 282.08,
+      "regularMarketPrice": 282.06,
       "fiftyTwoWeekHigh": 315.47,
       "fiftyTwoWeekLow": 239.51,
       "regularMarketDayHigh": 283.83,
       "regularMarketDayLow": 276.71,
-      "regularMarketVolume": 685366,
+      "regularMarketVolume": 1456177,
       "longName": "The Cigna Group",
       "shortName": "The Cigna Group",
       "chartPreviousClose": 291.02,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "high": [
+            304.69000244140625,
+            303,
+            291.95001220703125,
+            287.3500061035156,
+            283.8299865722656
+          ],
           "low": [
             291.8900146484375,
             296.2200012207031,
             281.0299987792969,
             278.9700012207031,
             276.7099914550781
+          ],
+          "close": [
+            301.05999755859375,
+            296.4700012207031,
+            287.6600036621094,
+            279.04998779296875,
+            null
           ],
           "open": [
             293.5799865722656,
@@ -84,26 +120,12 @@
             285.1099853515625,
             279.04998779296875
           ],
-          "close": [
-            301.05999755859375,
-            296.4700012207031,
-            287.6600036621094,
-            279.04998779296875,
-            282.0799865722656
-          ],
           "volume": [
             1858800,
             1719300,
             2320600,
-            2187800,
-            685366
-          ],
-          "high": [
-            304.69000244140625,
-            303,
-            291.95001220703125,
-            287.3500061035156,
-            283.8299865722656
+            2189900,
+            1456177
           ]
         }
       ],
@@ -114,7 +136,7 @@
             296.4700012207031,
             287.6600036621094,
             279.04998779296875,
-            282.0799865722656
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:58.412Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ESS?interval=1d&range=5d",
+  "symbol": "ESS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ESS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:15.166Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 284.1400146484375,
+    "firstOpen": 293.1400146484375,
+    "dayMovePct": -100,
+    "gapPct": 3.1674525008860774,
+    "currentVolume": 397947,
+    "averageVolume": 640089.4,
+    "volumeSpikeRatio": 0.6217053430348948,
+    "morningHigh": 297.8900146484375,
+    "morningLow": 279.32000732421875,
+    "morningRangePct": 6.648291148962969,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.862657625083948,
+    "intradayVolatility": 42.869229887487734,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 770995800,
-      "regularMarketTime": 1785777254,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 284.41,
+      "regularMarketPrice": 285.88,
       "fiftyTwoWeekHigh": 303.35,
       "fiftyTwoWeekLow": 238.46,
       "regularMarketDayHigh": 288.515,
-      "regularMarketDayLow": 284.38,
-      "regularMarketVolume": 166403,
+      "regularMarketDayLow": 284.24,
+      "regularMarketVolume": 397947,
       "longName": "Essex Property Trust, Inc.",
       "shortName": "Essex Property Trust, Inc.",
       "chartPreviousClose": 290.68,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,33 @@
     "indicators": {
       "quote": [
         {
+          "open": [
+            293.1400146484375,
+            296.30999755859375,
+            289.989990234375,
+            280.8399963378906,
+            286.9800109863281
+          ],
+          "volume": [
+            688900,
+            500300,
+            794000,
+            819300,
+            397947
+          ],
           "low": [
             289.0199890136719,
             294.55999755859375,
             280.42999267578125,
             279.32000732421875,
-            284.3800048828125
+            284.239990234375
           ],
           "close": [
             294.5199890136719,
             296.79998779296875,
             281.8599853515625,
             284.1400146484375,
-            284.4100036621094
+            null
           ],
           "high": [
             296.6199951171875,
@@ -90,20 +126,6 @@
             289.989990234375,
             286.2099914550781,
             288.5150146484375
-          ],
-          "volume": [
-            688900,
-            500300,
-            794000,
-            819300,
-            166403
-          ],
-          "open": [
-            293.1400146484375,
-            296.30999755859375,
-            289.989990234375,
-            280.8399963378906,
-            286.9800109863281
           ]
         }
       ],
@@ -114,7 +136,7 @@
             296.79998779296875,
             281.8599853515625,
             284.1400146484375,
-            284.4100036621094
+            null
           ]
         }
       ]

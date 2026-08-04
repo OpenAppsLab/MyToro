@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:55.683Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BLK?interval=1d&range=5d",
+  "symbol": "BLK",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BLK?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:17.931Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 1090.3900146484375,
+    "firstOpen": 1069.3900146484375,
+    "dayMovePct": -100,
+    "gapPct": -1.925916389354574,
+    "currentVolume": 587756,
+    "averageVolume": 751191.2,
+    "volumeSpikeRatio": 0.782431956071903,
+    "morningHigh": 1129.239990234375,
+    "morningLow": 1062.510009765625,
+    "morningRangePct": 6.2804095825384,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.155522963788012,
+    "intradayVolatility": 43.22986097019041,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 938784600,
-      "regularMarketTime": 1785777262,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1108.97,
+      "regularMarketPrice": 1126.63,
       "fiftyTwoWeekHigh": 1219.94,
       "fiftyTwoWeekLow": 917.39,
-      "regularMarketDayHigh": 1119.34,
+      "regularMarketDayHigh": 1129.24,
       "regularMarketDayLow": 1096.19,
-      "regularMarketVolume": 254553,
+      "regularMarketVolume": 587756,
       "longName": "BlackRock, Inc.",
       "shortName": "BlackRock, Inc.",
       "chartPreviousClose": 1062.14,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            1069.3900146484375,
-            1086.0699462890625,
-            1079.3599853515625,
-            1100.8399658203125,
-            1100.0699462890625
+          "volume": [
+            1044000,
+            1121800,
+            624200,
+            378200,
+            587756
+          ],
+          "high": [
+            1103.47998046875,
+            1110,
+            1104.1099853515625,
+            1104.18994140625,
+            1129.239990234375
           ],
           "low": [
             1062.510009765625,
@@ -89,21 +118,14 @@
             1079.18994140625,
             1098.3699951171875,
             1090.3900146484375,
-            1108.969970703125
+            null
           ],
-          "high": [
-            1103.47998046875,
-            1110,
-            1104.1099853515625,
-            1104.18994140625,
-            1119.3399658203125
-          ],
-          "volume": [
-            1044000,
-            1121800,
-            624200,
-            378200,
-            254553
+          "open": [
+            1069.3900146484375,
+            1086.0699462890625,
+            1079.3599853515625,
+            1100.8399658203125,
+            1100.0699462890625
           ]
         }
       ],
@@ -114,7 +136,7 @@
             1079.18994140625,
             1098.3699951171875,
             1090.3900146484375,
-            1108.969970703125
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:59.721Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/UBER?interval=1d&range=5d",
+  "symbol": "UBER",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/UBER?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:35.785Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 70.36000061035156,
+    "firstOpen": 69.11000061035156,
+    "dayMovePct": -100,
+    "gapPct": -1.7765775854983383,
+    "currentVolume": 12714704,
+    "averageVolume": 14382700.8,
+    "volumeSpikeRatio": 0.8840275673397864,
+    "morningHigh": 71.9489974975586,
+    "morningLow": 68.69000244140625,
+    "morningRangePct": 4.744496928693986,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.132417141237756,
+    "intradayVolatility": 43.22970157343137,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1557495000,
-      "regularMarketTime": 1785777349,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 71.38,
+      "regularMarketPrice": 71.61,
       "fiftyTwoWeekHigh": 101.99,
       "fiftyTwoWeekLow": 65.41,
       "regularMarketDayHigh": 71.949,
-      "regularMarketDayLow": 71.08,
-      "regularMarketVolume": 6754705,
+      "regularMarketDayLow": 71.02,
+      "regularMarketVolume": 12714704,
       "longName": "Uber Technologies, Inc.",
       "shortName": "Uber Technologies, Inc.",
       "chartPreviousClose": 68.18,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            68.76000213623047,
-            69.66000366210938,
-            68.69000244140625,
-            69.5,
-            71.08000183105469
-          ],
-          "close": [
-            70.73999786376953,
-            71.19999694824219,
-            70.37000274658203,
-            70.36000061035156,
-            71.37999725341797
+          "high": [
+            70.9000015258789,
+            71.79000091552734,
+            70.5999984741211,
+            70.5,
+            71.9489974975586
           ],
           "volume": [
             20969300,
             12052100,
             14183500,
-            11981200,
-            6754705
+            11993900,
+            12714704
           ],
           "open": [
             69.11000061035156,
@@ -98,12 +113,19 @@
             69.95999908447266,
             71.2300033569336
           ],
-          "high": [
-            70.9000015258789,
-            71.79000091552734,
-            70.5999984741211,
-            70.5,
-            71.9489974975586
+          "close": [
+            70.73999786376953,
+            71.19999694824219,
+            70.37000274658203,
+            70.36000061035156,
+            null
+          ],
+          "low": [
+            68.76000213623047,
+            69.66000366210938,
+            68.69000244140625,
+            69.5,
+            71.0199966430664
           ]
         }
       ],
@@ -114,7 +136,7 @@
             71.19999694824219,
             70.37000274658203,
             70.36000061035156,
-            71.37999725341797
+            null
           ]
         }
       ]

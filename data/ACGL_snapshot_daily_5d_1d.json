@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:45.843Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACGL?interval=1d&range=5d",
+  "symbol": "ACGL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ACGL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:32.561Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 100.52999877929688,
+    "firstOpen": 105.19000244140625,
+    "dayMovePct": -100,
+    "gapPct": 4.635435908379873,
+    "currentVolume": 1547951,
+    "averageVolume": 2077970.2,
+    "volumeSpikeRatio": 0.7449341670058599,
+    "morningHigh": 107.08999633789062,
+    "morningLow": 99.13999938964844,
+    "morningRangePct": 8.018960053647403,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.41931822629457,
+    "intradayVolatility": 42.49225112948647,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 811085400,
-      "regularMarketTime": 1785777360,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 100.665,
+      "regularMarketPrice": 101.12,
       "fiftyTwoWeekHigh": 107.09,
       "fiftyTwoWeekLow": 82.45,
       "regularMarketDayHigh": 101.91,
       "regularMarketDayLow": 100,
-      "regularMarketVolume": 577451,
+      "regularMarketVolume": 1547951,
       "longName": "Arch Capital Group Ltd.",
       "shortName": "Arch Capital Group Ltd.",
       "chartPreviousClose": 103.88,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,20 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            106.4800033569336,
+            104.55000305175781,
+            101.13999938964844,
+            100.52999877929688,
+            null
+          ],
+          "high": [
+            107.08999633789062,
+            105.66000366210938,
+            103.70999908447266,
+            101.38999938964844,
+            101.91000366210938
+          ],
           "open": [
             105.19000244140625,
             102.01000213623047,
@@ -88,22 +124,8 @@
             2062300,
             2885700,
             2149800,
-            1743500,
-            577451
-          ],
-          "high": [
-            107.08999633789062,
-            105.66000366210938,
-            103.70999908447266,
-            101.38999938964844,
-            101.91000366210938
-          ],
-          "close": [
-            106.4800033569336,
-            104.55000305175781,
-            101.13999938964844,
-            100.52999877929688,
-            100.66500091552734
+            1744100,
+            1547951
           ]
         }
       ],
@@ -114,7 +136,7 @@
             104.55000305175781,
             101.13999938964844,
             100.52999877929688,
-            100.66500091552734
+            null
           ]
         }
       ]

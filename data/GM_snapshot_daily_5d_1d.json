@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:38.003Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GM?interval=1d&range=5d",
+  "symbol": "GM",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GM?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:57:03.871Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 88.86000061035156,
+    "firstOpen": 87.61000061035156,
+    "dayMovePct": -100,
+    "gapPct": -1.406707170171214,
+    "currentVolume": 4802272,
+    "averageVolume": 7814614.4,
+    "volumeSpikeRatio": 0.6145244991230789,
+    "morningHigh": 91.8499984741211,
+    "morningLow": 86.61000061035156,
+    "morningRangePct": 6.050107177973222,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.39872166605882,
+    "intradayVolatility": 43.07590710334342,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1290090600,
-      "regularMarketTime": 1785777567,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 87.62,
+      "regularMarketPrice": 87.68,
       "fiftyTwoWeekHigh": 91.85,
       "fiftyTwoWeekLow": 52.09,
       "regularMarketDayHigh": 90.3,
       "regularMarketDayLow": 87.285,
-      "regularMarketVolume": 2145918,
+      "regularMarketVolume": 4802272,
       "longName": "General Motors Company",
       "shortName": "General Motors Company",
       "chartPreviousClose": 87.04,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            91.1500015258789,
-            91.8499984741211,
-            89.7699966430664,
-            89.11000061035156,
-            90.30000305175781
+          "volume": [
+            13382300,
+            7981500,
+            6229000,
+            6678000,
+            4802272
           ],
           "low": [
             87.20999908447266,
@@ -84,12 +106,12 @@
             87.04000091552734,
             87.28500366210938
           ],
-          "close": [
-            90.30000305175781,
-            89.4000015258789,
-            88.4000015258789,
-            88.86000061035156,
-            87.62000274658203
+          "high": [
+            91.1500015258789,
+            91.8499984741211,
+            89.7699966430664,
+            89.11000061035156,
+            90.30000305175781
           ],
           "open": [
             87.61000061035156,
@@ -98,12 +120,12 @@
             88.8499984741211,
             89.51000213623047
           ],
-          "volume": [
-            13382300,
-            7981500,
-            6229000,
-            6675100,
-            2145918
+          "close": [
+            90.30000305175781,
+            89.4000015258789,
+            88.4000015258789,
+            88.86000061035156,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             89.4000015258789,
             88.4000015258789,
             88.86000061035156,
-            87.62000274658203
+            null
           ]
         }
       ]

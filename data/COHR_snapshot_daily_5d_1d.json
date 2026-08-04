@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:55.348Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/COHR?interval=1d&range=5d",
+  "symbol": "COHR",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/COHR?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:57.194Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 262.8900146484375,
+    "firstOpen": 257.2799987792969,
+    "dayMovePct": -100,
+    "gapPct": -2.1339783013983595,
+    "currentVolume": 5527804,
+    "averageVolume": 6527120.8,
+    "volumeSpikeRatio": 0.846897762333432,
+    "morningHigh": 293.0299987792969,
+    "morningLow": 220.67999267578125,
+    "morningRangePct": 32.785031948868536,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -22.757128641990747,
+    "intradayVolatility": 45.231981730583854,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 560179800,
-      "regularMarketTime": 1785777472,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 288.005,
+      "regularMarketPrice": 288.14,
       "fiftyTwoWeekHigh": 440,
       "fiftyTwoWeekLow": 84.35,
-      "regularMarketDayHigh": 289.744,
+      "regularMarketDayHigh": 293.03,
       "regularMarketDayLow": 249.01,
-      "regularMarketVolume": 3366275,
+      "regularMarketVolume": 5527804,
       "longName": "Coherent Corp.",
       "shortName": "Coherent Corp.",
       "chartPreviousClose": 271.31,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -74,22 +96,8 @@
             8375000,
             6900600,
             6357000,
-            5466600,
-            3366275
-          ],
-          "high": [
-            257.3299865722656,
-            245,
-            250.58999633789062,
-            281.989990234375,
-            289.744384765625
-          ],
-          "close": [
-            243.3300018310547,
-            222.0500030517578,
-            249.05999755859375,
-            262.8900146484375,
-            288.0050048828125
+            5475200,
+            5527804
           ],
           "low": [
             228.22999572753906,
@@ -98,12 +106,26 @@
             257.1300048828125,
             249.010498046875
           ],
+          "high": [
+            257.3299865722656,
+            245,
+            250.58999633789062,
+            281.989990234375,
+            293.0299987792969
+          ],
           "open": [
             257.2799987792969,
             243.92999267578125,
             243.39999389648438,
             275.8999938964844,
             254.86000061035156
+          ],
+          "close": [
+            243.3300018310547,
+            222.0500030517578,
+            249.05999755859375,
+            262.8900146484375,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             222.0500030517578,
             249.05999755859375,
             262.8900146484375,
-            288.0050048828125
+            null
           ]
         }
       ]

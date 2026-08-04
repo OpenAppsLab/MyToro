@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:52.398Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/T?interval=1d&range=5d",
+  "symbol": "T",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/T?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:40.612Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 23.25,
+    "firstOpen": 24.84000015258789,
+    "dayMovePct": -100,
+    "gapPct": 6.838710333711358,
+    "currentVolume": 46703886,
+    "averageVolume": 57823597.2,
+    "volumeSpikeRatio": 0.8076959625749468,
+    "morningHigh": 25.31999969482422,
+    "morningLow": 22.920000076293945,
+    "morningRangePct": 10.471202489273036,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.449164420272446,
+    "intradayVolatility": 42.48417173584135,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 438273000,
-      "regularMarketTime": 1785777389,
+      "regularMarketTime": 1785787449,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 23.515,
+      "regularMarketPrice": 23.59,
       "fiftyTwoWeekHigh": 29.79,
       "fiftyTwoWeekLow": 19.89,
       "regularMarketDayHigh": 23.75,
       "regularMarketDayLow": 23.295,
-      "regularMarketVolume": 28143435,
+      "regularMarketVolume": 46703886,
       "longName": "AT&T Inc.",
       "shortName": "AT&T Inc.",
       "chartPreviousClose": 24.42,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            57350500,
-            77480900,
-            49433700,
-            58132900,
-            28143435
-          ],
           "high": [
             25.31999969482422,
             24.670000076293945,
@@ -84,19 +99,12 @@
             23.459999084472656,
             23.75
           ],
-          "close": [
-            24.65999984741211,
-            23.940000534057617,
-            23.209999084472656,
-            23.25,
-            23.514999389648438
-          ],
-          "low": [
-            24.600000381469727,
-            23.600000381469727,
-            23.139999389648438,
-            22.920000076293945,
-            23.295000076293945
+          "volume": [
+            57350500,
+            77480900,
+            49433700,
+            58149000,
+            46703886
           ],
           "open": [
             24.84000015258789,
@@ -104,6 +112,20 @@
             23.40999984741211,
             23.170000076293945,
             23.65999984741211
+          ],
+          "close": [
+            24.65999984741211,
+            23.940000534057617,
+            23.209999084472656,
+            23.25,
+            null
+          ],
+          "low": [
+            24.600000381469727,
+            23.600000381469727,
+            23.139999389648438,
+            22.920000076293945,
+            23.295000076293945
           ]
         }
       ],
@@ -114,7 +136,7 @@
             23.940000534057617,
             23.209999084472656,
             23.25,
-            23.514999389648438
+            null
           ]
         }
       ]

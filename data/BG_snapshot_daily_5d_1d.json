@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:20.076Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BG?interval=1d&range=5d",
+  "symbol": "BG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:14.253Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 106.2300033569336,
+    "firstOpen": 117.6500015258789,
+    "dayMovePct": -100,
+    "gapPct": 10.75025680887351,
+    "currentVolume": 1171275,
+    "averageVolume": 2007415,
+    "volumeSpikeRatio": 0.583474269147137,
+    "morningHigh": 119.58000183105469,
+    "morningLow": 102.80999755859375,
+    "morningRangePct": 16.3116473793352,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -27.39527405907397,
+    "intradayVolatility": 42.048477691640024,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 996759000,
-      "regularMarketTime": 1785777428,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 105.54,
+      "regularMarketPrice": 105.4,
       "fiftyTwoWeekHigh": 134.87,
       "fiftyTwoWeekLow": 76.01,
       "regularMarketDayHigh": 106.46,
       "regularMarketDayLow": 103.37,
-      "regularMarketVolume": 352103,
+      "regularMarketVolume": 1171275,
       "longName": "Bunge Global SA",
       "shortName": "Bunge Limited",
       "chartPreviousClose": 117.5,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,19 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            117.6500015258789,
-            112.88999938964844,
-            105.7699966430664,
-            106.5999984741211,
-            106.01000213623047
-          ],
-          "high": [
-            119.58000183105469,
-            115.94999694824219,
-            107.44999694824219,
-            107.04000091552734,
-            106.45999908447266
+          "close": [
+            117.37000274658203,
+            107.77999877929688,
+            105.06999969482422,
+            106.2300033569336,
+            null
           ],
           "low": [
             115.02999877929688,
@@ -91,19 +106,26 @@
             104.41000366210938,
             103.37000274658203
           ],
+          "high": [
+            119.58000183105469,
+            115.94999694824219,
+            107.44999694824219,
+            107.04000091552734,
+            106.45999908447266
+          ],
+          "open": [
+            117.6500015258789,
+            112.88999938964844,
+            105.7699966430664,
+            106.5999984741211,
+            106.01000213623047
+          ],
           "volume": [
             1737700,
             2990100,
             2537900,
             1600100,
-            352103
-          ],
-          "close": [
-            117.37000274658203,
-            107.77999877929688,
-            105.06999969482422,
-            106.2300033569336,
-            105.54000091552734
+            1171275
           ]
         }
       ],
@@ -114,7 +136,7 @@
             107.77999877929688,
             105.06999969482422,
             106.2300033569336,
-            105.54000091552734
+            null
           ]
         }
       ]

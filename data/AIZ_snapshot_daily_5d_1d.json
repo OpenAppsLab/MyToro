@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:51.309Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AIZ?interval=1d&range=5d",
+  "symbol": "AIZ",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AIZ?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:39.249Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 279.19000244140625,
+    "firstOpen": 277.2900085449219,
+    "dayMovePct": -100,
+    "gapPct": -0.680537941856685,
+    "currentVolume": 335726,
+    "averageVolume": 443845.2,
+    "volumeSpikeRatio": 0.7564033586484658,
+    "morningHigh": 284.6400146484375,
+    "morningLow": 275.7699890136719,
+    "morningRangePct": 3.2164579135280293,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.343220547533694,
+    "intradayVolatility": 43.1075247401433,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1075991400,
-      "regularMarketTime": 1785777335,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 281.78,
+      "regularMarketPrice": 282.39,
       "fiftyTwoWeekHigh": 284.64,
       "fiftyTwoWeekLow": 186.98,
       "regularMarketDayHigh": 283.455,
       "regularMarketDayLow": 280.557,
-      "regularMarketVolume": 134552,
+      "regularMarketVolume": 335726,
       "longName": "Assurant, Inc.",
       "shortName": "Assurant, Inc.",
       "chartPreviousClose": 276.87,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,20 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            283.0799865722656,
+            281,
+            282.4599914550781,
+            279.19000244140625,
+            null
+          ],
+          "high": [
+            283.4599914550781,
+            284.6400146484375,
+            284.07000732421875,
+            282.8399963378906,
+            283.4549865722656
+          ],
           "low": [
             276.8699951171875,
             278.54998779296875,
@@ -82,21 +118,7 @@
             395000,
             438800,
             531100,
-            134552
-          ],
-          "high": [
-            283.4599914550781,
-            284.6400146484375,
-            284.07000732421875,
-            282.8399963378906,
-            283.4549865722656
-          ],
-          "close": [
-            283.0799865722656,
-            281,
-            282.4599914550781,
-            279.19000244140625,
-            281.7799987792969
+            335726
           ],
           "open": [
             277.2900085449219,
@@ -114,7 +136,7 @@
             281,
             282.4599914550781,
             279.19000244140625,
-            281.7799987792969
+            null
           ]
         }
       ]

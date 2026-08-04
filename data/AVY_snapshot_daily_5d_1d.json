@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:57.966Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVY?interval=1d&range=5d",
+  "symbol": "AVY",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AVY?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:47.314Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 169.72999572753906,
+    "firstOpen": 165.88999938964844,
+    "dayMovePct": -100,
+    "gapPct": -2.2624146789320734,
+    "currentVolume": 679931,
+    "averageVolume": 1222246.2,
+    "volumeSpikeRatio": 0.5562962682968456,
+    "morningHigh": 187.91000366210938,
+    "morningLow": 165.38999938964844,
+    "morningRangePct": 13.61630349813668,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.87330762780908,
+    "intradayVolatility": 43.463345351422454,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785777385,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 170.34,
+      "regularMarketPrice": 172.27,
       "fiftyTwoWeekHigh": 199.54,
       "fiftyTwoWeekLow": 152.42,
       "regularMarketDayHigh": 174.375,
       "regularMarketDayLow": 169.57,
-      "regularMarketVolume": 272756,
+      "regularMarketVolume": 679931,
       "longName": "Avery Dennison Corporation",
       "shortName": "Avery Dennison Corporation",
       "chartPreviousClose": 163.03,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            171.14999389648438,
-            167.8800048828125,
-            187.91000366210938,
-            174.1699981689453,
-            174.375
-          ],
           "low": [
             165.88999938964844,
             165.38999938964844,
@@ -89,14 +104,14 @@
             1052100,
             2072600,
             1336800,
-            272756
+            679931
           ],
-          "close": [
-            169.1300048828125,
-            167.13999938964844,
-            174.82000732421875,
-            169.72999572753906,
-            170.33999633789062
+          "high": [
+            171.14999389648438,
+            167.8800048828125,
+            187.91000366210938,
+            174.1699981689453,
+            174.375
           ],
           "open": [
             165.88999938964844,
@@ -104,6 +119,13 @@
             185.58999633789062,
             172.27000427246094,
             172.4499969482422
+          ],
+          "close": [
+            169.1300048828125,
+            167.13999938964844,
+            174.82000732421875,
+            169.72999572753906,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             167.13999938964844,
             174.82000732421875,
             169.72999572753906,
-            170.33999633789062
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:49.945Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMGN?interval=1d&range=5d",
+  "symbol": "AMGN",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AMGN?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:11.127Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 385.1600036621094,
+    "firstOpen": 383.25,
+    "dayMovePct": -100,
+    "gapPct": -0.49589875478996265,
+    "currentVolume": 3235031,
+    "averageVolume": 2922246.2,
+    "volumeSpikeRatio": 1.107035745311261,
+    "morningHigh": 398,
+    "morningLow": 375.9599914550781,
+    "morningRangePct": 5.8623281854062235,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.507182256167006,
+    "intradayVolatility": 43.01125760695974,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 424704600,
-      "regularMarketTime": 1785777285,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 377.848,
+      "regularMarketPrice": 378.87,
       "fiftyTwoWeekHigh": 398,
       "fiftyTwoWeekLow": 269.77,
       "regularMarketDayHigh": 391.03,
       "regularMarketDayLow": 375.96,
-      "regularMarketVolume": 1462866,
+      "regularMarketVolume": 3235031,
       "longName": "Amgen Inc.",
       "shortName": "Amgen Inc.",
       "chartPreviousClose": 376.26,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            3413000,
-            3003700,
-            3004900,
-            1953600,
-            1462866
+          "open": [
+            383.25,
+            395.0299987792969,
+            379.75,
+            382,
+            388.5
           ],
           "high": [
             398,
@@ -84,13 +106,6 @@
             386.82000732421875,
             391.0299987792969
           ],
-          "open": [
-            383.25,
-            395.0299987792969,
-            379.75,
-            382,
-            388.5
-          ],
           "low": [
             382.2099914550781,
             386.5799865722656,
@@ -98,12 +113,19 @@
             379.3399963378906,
             375.9599914550781
           ],
+          "volume": [
+            3413000,
+            3003700,
+            3004900,
+            1954600,
+            3235031
+          ],
           "close": [
             393.1000061035156,
             387.6400146484375,
             387.6400146484375,
             385.1600036621094,
-            377.8475036621094
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             387.6400146484375,
             387.6400146484375,
             385.1600036621094,
-            377.8475036621094
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:48.549Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTAS?interval=1d&range=5d",
+  "symbol": "CTAS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CTAS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:49.028Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 204.6300048828125,
+    "firstOpen": 214.3699951171875,
+    "dayMovePct": -100,
+    "gapPct": 4.759805503573582,
+    "currentVolume": 1918764,
+    "averageVolume": 2771872.8,
+    "volumeSpikeRatio": 0.6922265697040644,
+    "morningHigh": 219.1699981689453,
+    "morningLow": 202.47999572753906,
+    "morningRangePct": 8.242790790979981,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.196065566242105,
+    "intradayVolatility": 42.65256434596627,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 430147800,
-      "regularMarketTime": 1785777430,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 204.825,
+      "regularMarketPrice": 204.01,
       "fiftyTwoWeekHigh": 226.75,
       "fiftyTwoWeekLow": 161.16,
       "regularMarketDayHigh": 208.78,
       "regularMarketDayLow": 203.67,
-      "regularMarketVolume": 573824,
+      "regularMarketVolume": 1918764,
       "longName": "Cintas Corporation",
       "shortName": "Cintas Corporation",
       "chartPreviousClose": 210.98,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,20 @@
     "indicators": {
       "quote": [
         {
+          "open": [
+            214.3699951171875,
+            214.89999389648438,
+            210.67999267578125,
+            205.25,
+            207.47000122070312
+          ],
+          "high": [
+            218.63999938964844,
+            219.1699981689453,
+            211.05999755859375,
+            206.22000122070312,
+            208.77999877929688
+          ],
           "low": [
             213.5800018310547,
             213.5399932861328,
@@ -81,29 +117,15 @@
             3660800,
             2755100,
             3291000,
-            2233100,
-            573824
-          ],
-          "high": [
-            218.63999938964844,
-            219.1699981689453,
-            211.05999755859375,
-            206.22000122070312,
-            208.77999877929688
+            2233700,
+            1918764
           ],
           "close": [
             214.89999389648438,
             216.52999877929688,
             206.7899932861328,
             204.6300048828125,
-            204.8249969482422
-          ],
-          "open": [
-            214.3699951171875,
-            214.89999389648438,
-            210.67999267578125,
-            205.25,
-            207.47000122070312
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             216.52999877929688,
             206.7899932861328,
             204.6300048828125,
-            204.8249969482422
+            null
           ]
         }
       ]

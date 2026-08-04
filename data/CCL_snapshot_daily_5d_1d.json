@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:27.887Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CCL?interval=1d&range=5d",
+  "symbol": "CCL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CCL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:23.785Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 27.809999465942383,
+    "firstOpen": 27.09000015258789,
+    "dayMovePct": -100,
+    "gapPct": -2.5889943444128503,
+    "currentVolume": 14233603,
+    "averageVolume": 20502320.6,
+    "volumeSpikeRatio": 0.6942435091957346,
+    "morningHigh": 29.084999084472656,
+    "morningLow": 26.90999984741211,
+    "morningRangePct": 8.082494423610013,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.371893021365207,
+    "intradayVolatility": 43.09095931484198,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 554131800,
-      "regularMarketTime": 1785777444,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 28.375,
+      "regularMarketPrice": 28.74,
       "fiftyTwoWeekHigh": 34.03,
       "fiftyTwoWeekLow": 23.45,
       "regularMarketDayHigh": 29.085,
       "regularMarketDayLow": 28.225,
-      "regularMarketVolume": 8436937,
+      "regularMarketVolume": 14233603,
       "longName": "Carnival Corporation Ltd.",
       "shortName": "Carnival Corporation Ltd.",
       "chartPreviousClose": 27.12,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            28.31999969482422,
-            28.389999389648438,
-            27.940000534057617,
-            27.989999771118164,
-            29.084999084472656
-          ],
           "close": [
             28.229999542236328,
             27.809999465942383,
             27.770000457763672,
             27.809999465942383,
-            28.375
-          ],
-          "volume": [
-            27081000,
-            20271300,
-            23650600,
-            17264900,
-            8436937
+            null
           ],
           "low": [
             26.90999984741211,
@@ -97,6 +105,20 @@
             27.15999984741211,
             27.280000686645508,
             28.225000381469727
+          ],
+          "high": [
+            28.31999969482422,
+            28.389999389648438,
+            27.940000534057617,
+            27.989999771118164,
+            29.084999084472656
+          ],
+          "volume": [
+            27081000,
+            20271300,
+            23650600,
+            17275100,
+            14233603
           ],
           "open": [
             27.09000015258789,
@@ -114,7 +136,7 @@
             27.809999465942383,
             27.770000457763672,
             27.809999465942383,
-            28.375
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:42.734Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/APO?interval=1d&range=5d",
+  "symbol": "APO",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/APO?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:28.710Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 125.58999633789062,
+    "firstOpen": 124.0199966430664,
+    "dayMovePct": -100,
+    "gapPct": -1.2500993236756297,
+    "currentVolume": 3676353,
+    "averageVolume": 3841290.6,
+    "volumeSpikeRatio": 0.9570619312165551,
+    "morningHigh": 130.18499755859375,
+    "morningLow": 116.56999969482422,
+    "morningRangePct": 11.679675645031375,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.77606844319705,
+    "intradayVolatility": 43.53170059478157,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1301491800,
-      "regularMarketTime": 1785777399,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 128.54,
+      "regularMarketPrice": 129.42,
       "fiftyTwoWeekHigh": 153.29,
       "fiftyTwoWeekLow": 99.56,
-      "regularMarketDayHigh": 128.96,
+      "regularMarketDayHigh": 130.185,
       "regularMarketDayLow": 125.9,
-      "regularMarketVolume": 1555227,
+      "regularMarketVolume": 3676353,
       "longName": "Apollo Global Management, Inc.",
       "shortName": "Apollo Global Management, Inc. ",
       "chartPreviousClose": 124.24,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,27 @@
     "indicators": {
       "quote": [
         {
+          "close": [
+            124.69000244140625,
+            119.7699966430664,
+            120.25,
+            125.58999633789062,
+            null
+          ],
+          "high": [
+            125.30000305175781,
+            124.05999755859375,
+            121.30000305175781,
+            126.19000244140625,
+            130.18499755859375
+          ],
+          "open": [
+            124.0199966430664,
+            123.87000274658203,
+            119.27999877929688,
+            120.6500015258789,
+            126.79499816894531
+          ],
           "low": [
             123.02999877929688,
             119.69000244140625,
@@ -81,29 +124,8 @@
             3118700,
             2859800,
             4894900,
-            4656000,
-            1555227
-          ],
-          "open": [
-            124.0199966430664,
-            123.87000274658203,
-            119.27999877929688,
-            120.6500015258789,
-            126.79499816894531
-          ],
-          "high": [
-            125.30000305175781,
-            124.05999755859375,
-            121.30000305175781,
-            126.19000244140625,
-            128.9600067138672
-          ],
-          "close": [
-            124.69000244140625,
-            119.7699966430664,
-            120.25,
-            125.58999633789062,
-            128.5399932861328
+            4656700,
+            3676353
           ]
         }
       ],
@@ -114,7 +136,7 @@
             119.7699966430664,
             120.25,
             125.58999633789062,
-            128.5399932861328
+            null
           ]
         }
       ]

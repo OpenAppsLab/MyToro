@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:34.854Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DOV?interval=1d&range=5d",
+  "symbol": "DOV",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DOV?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:46.456Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 204.6199951171875,
+    "firstOpen": 206,
+    "dayMovePct": -100,
+    "gapPct": 0.6744232801013216,
+    "currentVolume": 1113053,
+    "averageVolume": 1287050.6,
+    "volumeSpikeRatio": 0.8648090448036775,
+    "morningHigh": 206.99000549316406,
+    "morningLow": 197.2100067138672,
+    "morningRangePct": 4.959179781118671,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.79154109598277,
+    "intradayVolatility": 43.466292930285476,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777503,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 204.855,
+      "regularMarketPrice": 205.72,
       "fiftyTwoWeekHigh": 237.54,
       "fiftyTwoWeekLow": 158.97,
       "regularMarketDayHigh": 206.99,
       "regularMarketDayLow": 203.49,
-      "regularMarketVolume": 468169,
+      "regularMarketVolume": 1113053,
       "longName": "Dover Corporation",
       "shortName": "Dover Corporation",
       "chartPreviousClose": 205.85,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "high": [
-            206.77999877929688,
-            201.5800018310547,
-            204.47999572753906,
-            205.67999267578125,
-            206.99000549316406
-          ],
-          "close": [
-            203.0800018310547,
-            197.99000549316406,
-            204.05999755859375,
-            204.6199951171875,
-            204.85499572753906
-          ],
           "volume": [
             1482000,
             1085700,
             1401500,
             1353000,
-            468169
+            1113053
           ],
           "low": [
             201.5399932861328,
@@ -97,6 +105,20 @@
             199.75,
             203.25,
             203.49000549316406
+          ],
+          "close": [
+            203.0800018310547,
+            197.99000549316406,
+            204.05999755859375,
+            204.6199951171875,
+            null
+          ],
+          "high": [
+            206.77999877929688,
+            201.5800018310547,
+            204.47999572753906,
+            205.67999267578125,
+            206.99000549316406
           ],
           "open": [
             206,
@@ -114,7 +136,7 @@
             197.99000549316406,
             204.05999755859375,
             204.6199951171875,
-            204.85499572753906
+            null
           ]
         }
       ]

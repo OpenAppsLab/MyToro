@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:25.841Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?interval=1d&range=5d",
+  "symbol": "LRCX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:54.893Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 293.0199890136719,
+    "firstOpen": 275.1700134277344,
+    "dayMovePct": -100,
+    "gapPct": -6.091726249127887,
+    "currentVolume": 9740630,
+    "averageVolume": 15317686,
+    "volumeSpikeRatio": 0.6359074079466049,
+    "morningHigh": 319.5,
+    "morningLow": 250.5,
+    "morningRangePct": 27.54491017964072,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -22.500376475360635,
+    "intradayVolatility": 45.66632279096159,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 452525400,
-      "regularMarketTime": 1785777322,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 291.57,
+      "regularMarketPrice": 294.61,
       "fiftyTwoWeekHigh": 438.5,
       "fiftyTwoWeekLow": 94.11,
-      "regularMarketDayHigh": 294.735,
+      "regularMarketDayHigh": 295.93,
       "regularMarketDayLow": 276.845,
-      "regularMarketVolume": 4810541,
+      "regularMarketVolume": 9740630,
       "longName": "Lam Research Corporation",
       "shortName": "Lam Research Corporation",
       "chartPreviousClose": 291.61,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            275.1700134277344,
-            264.510009765625,
-            318.2900085449219,
-            315.3699951171875,
-            284.3349914550781
+          "volume": [
+            16097700,
+            16103100,
+            22085800,
+            12561200,
+            9740630
+          ],
+          "high": [
+            277.29998779296875,
+            273.4599914550781,
+            319.5,
+            318.3999938964844,
+            295.92999267578125
           ],
           "low": [
             258.5299987792969,
@@ -84,26 +113,19 @@
             292.92999267578125,
             276.8446960449219
           ],
-          "volume": [
-            16097700,
-            16103100,
-            22085800,
-            12551800,
-            4810541
-          ],
-          "high": [
-            277.29998779296875,
-            273.4599914550781,
-            319.5,
-            318.3999938964844,
-            294.7349853515625
-          ],
           "close": [
             269.6099853515625,
             252.35000610351562,
             297.7200012207031,
             293.0199890136719,
-            291.57000732421875
+            null
+          ],
+          "open": [
+            275.1700134277344,
+            264.510009765625,
+            318.2900085449219,
+            315.3699951171875,
+            284.3349914550781
           ]
         }
       ],
@@ -114,7 +136,7 @@
             252.35000610351562,
             297.7200012207031,
             293.0199890136719,
-            291.57000732421875
+            null
           ]
         }
       ]

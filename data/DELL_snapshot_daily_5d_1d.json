@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:22.875Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?interval=1d&range=5d",
+  "symbol": "DELL",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:31.957Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 405.3699951171875,
+    "firstOpen": 401.260009765625,
+    "dayMovePct": -100,
+    "gapPct": -1.013884944882108,
+    "currentVolume": 4051621,
+    "averageVolume": 6179404.2,
+    "volumeSpikeRatio": 0.6556653147887623,
+    "morningHigh": 432.3399963378906,
+    "morningLow": 358.8800048828125,
+    "morningRangePct": 20.469234968681388,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.018783623594896,
+    "intradayVolatility": 44.20336932568381,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1471440600,
-      "regularMarketTime": 1785777501,
+      "regularMarketTime": 1785787487,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 421.98,
+      "regularMarketPrice": 429.02,
       "fiftyTwoWeekHigh": 469.47,
       "fiftyTwoWeekLow": 110.22,
-      "regularMarketDayHigh": 423,
+      "regularMarketDayHigh": 432.34,
       "regularMarketDayLow": 390.11,
-      "regularMarketVolume": 2273721,
+      "regularMarketVolume": 4051621,
       "longName": "Dell Technologies Inc.",
       "shortName": "Dell Technologies Inc.",
       "chartPreviousClose": 426.91,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -75,21 +97,21 @@
             394.9599914550781,
             413,
             431.42999267578125,
-            422.9996032714844
+            432.3399963378906
           ],
           "close": [
             392.1000061035156,
             369.6400146484375,
             404.80999755859375,
             405.3699951171875,
-            421.9800109863281
+            null
           ],
-          "volume": [
-            9448700,
-            6349100,
-            6193700,
-            4842700,
-            2273721
+          "low": [
+            358.8800048828125,
+            364.1700134277344,
+            383,
+            400.25,
+            390.1099853515625
           ],
           "open": [
             401.260009765625,
@@ -98,12 +120,12 @@
             419,
             397.67999267578125
           ],
-          "low": [
-            358.8800048828125,
-            364.1700134277344,
-            383,
-            400.25,
-            390.1099853515625
+          "volume": [
+            9448700,
+            6349100,
+            6193700,
+            4853900,
+            4051621
           ]
         }
       ],
@@ -114,7 +136,7 @@
             369.6400146484375,
             404.80999755859375,
             405.3699951171875,
-            421.9800109863281
+            null
           ]
         }
       ]

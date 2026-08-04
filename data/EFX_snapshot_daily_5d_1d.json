@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:53.956Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EFX?interval=1d&range=5d",
+  "symbol": "EFX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EFX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:09.724Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 172.6199951171875,
+    "firstOpen": 181,
+    "dayMovePct": -100,
+    "gapPct": 4.854596871656449,
+    "currentVolume": 742405,
+    "averageVolume": 1499201,
+    "volumeSpikeRatio": 0.4952004434362037,
+    "morningHigh": 190.14999389648438,
+    "morningLow": 171.50999450683594,
+    "morningRangePct": 10.868170944350124,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.953705355799343,
+    "intradayVolatility": 42.22571831253476,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777527,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 175.4,
+      "regularMarketPrice": 174.11,
       "fiftyTwoWeekHigh": 271.84,
       "fiftyTwoWeekLow": 150.75,
       "regularMarketDayHigh": 179.72,
       "regularMarketDayLow": 174.065,
-      "regularMarketVolume": 296973,
+      "regularMarketVolume": 742405,
       "longName": "Equifax Inc.",
       "shortName": "Equifax, Inc.",
       "chartPreviousClose": 177.31,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,26 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            2182800,
+            1604500,
+            1786300,
+            1180000,
+            742405
+          ],
+          "high": [
+            190,
+            190.14999389648438,
+            182.08999633789062,
+            175.72000122070312,
+            179.72000122070312
+          ],
           "low": [
             177.61000061035156,
             185.22999572753906,
             173.30999755859375,
             171.50999450683594,
             174.06500244140625
-          ],
-          "close": [
-            187.02000427246094,
-            187.0500030517578,
-            176.1300048828125,
-            172.6199951171875,
-            175.39999389648438
-          ],
-          "volume": [
-            2182800,
-            1604500,
-            1786300,
-            1180000,
-            296973
           ],
           "open": [
             181,
@@ -98,12 +120,12 @@
             172.39999389648438,
             175.2100067138672
           ],
-          "high": [
-            190,
-            190.14999389648438,
-            182.08999633789062,
-            175.72000122070312,
-            179.72000122070312
+          "close": [
+            187.02000427246094,
+            187.0500030517578,
+            176.1300048828125,
+            172.6199951171875,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             187.0500030517578,
             176.1300048828125,
             172.6199951171875,
-            175.39999389648438
+            null
           ]
         }
       ]

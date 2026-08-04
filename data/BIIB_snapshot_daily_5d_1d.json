@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:08.035Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BIIB?interval=1d&range=5d",
+  "symbol": "BIIB",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BIIB?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:59.372Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 202.9499969482422,
+    "firstOpen": 201.00999450683594,
+    "dayMovePct": -100,
+    "gapPct": -0.9559016854289502,
+    "currentVolume": 940856,
+    "averageVolume": 1425551.2,
+    "volumeSpikeRatio": 0.6599945340440947,
+    "morningHigh": 218.58999633789062,
+    "morningLow": 199.39999389648438,
+    "morningRangePct": 9.62387313380183,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.313937432427934,
+    "intradayVolatility": 43.14522071445254,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 685114200,
-      "regularMarketTime": 1785777302,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 200.56,
+      "regularMarketPrice": 201.82,
       "fiftyTwoWeekHigh": 219.72,
       "fiftyTwoWeekLow": 127,
       "regularMarketDayHigh": 203.59,
       "regularMarketDayLow": 199.58,
-      "regularMarketVolume": 344952,
+      "regularMarketVolume": 940856,
       "longName": "Biogen Inc.",
       "shortName": "Biogen Inc.",
       "chartPreviousClose": 200.14,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,27 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "close": [
-            205.61000061035156,
-            209.22999572753906,
-            207.92999267578125,
-            202.9499969482422,
-            200.55999755859375
-          ],
-          "volume": [
-            1831900,
-            2400100,
-            892900,
-            1062000,
-            344952
-          ],
-          "high": [
-            207.72000122070312,
-            218.58999633789062,
-            210.19000244140625,
-            208.0500030517578,
-            203.58999633789062
-          ],
           "low": [
             199.39999389648438,
             206.27000427246094,
@@ -104,6 +105,27 @@
             204.3800048828125,
             207.50999450683594,
             203.33999633789062
+          ],
+          "volume": [
+            1831900,
+            2400100,
+            892900,
+            1062000,
+            940856
+          ],
+          "high": [
+            207.72000122070312,
+            218.58999633789062,
+            210.19000244140625,
+            208.0500030517578,
+            203.58999633789062
+          ],
+          "close": [
+            205.61000061035156,
+            209.22999572753906,
+            207.92999267578125,
+            202.9499969482422,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             209.22999572753906,
             207.92999267578125,
             202.9499969482422,
-            200.55999755859375
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:57.954Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?interval=1d&range=5d",
+  "symbol": "BRK-B",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:20.776Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 511.5400085449219,
+    "firstOpen": 500.3299865722656,
+    "dayMovePct": -100,
+    "gapPct": -2.1914262394730795,
+    "currentVolume": 4202307,
+    "averageVolume": 4723361.4,
+    "volumeSpikeRatio": 0.8896856802022389,
+    "morningHigh": 520.6649780273438,
+    "morningLow": 499.5,
+    "morningRangePct": 4.237232838307057,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.0398584751595,
+    "intradayVolatility": 43.279781828357486,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 831648600,
-      "regularMarketTime": 1785777296,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 511.772,
+      "regularMarketPrice": 513.14,
       "fiftyTwoWeekHigh": 520.665,
       "fiftyTwoWeekLow": 455.19,
       "regularMarketDayHigh": 520.665,
-      "regularMarketDayLow": 511.3,
-      "regularMarketVolume": 1850204,
+      "regularMarketDayLow": 510.825,
+      "regularMarketVolume": 4202307,
       "longName": "Berkshire Hathaway Inc.",
       "shortName": "Berkshire Hathaway Inc. New",
       "chartPreviousClose": 497.18,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -77,33 +99,33 @@
             513.030029296875,
             520.6649780273438
           ],
-          "low": [
-            499.5,
-            507.20001220703125,
-            501.2699890136719,
-            506.70001220703125,
-            511.29998779296875
-          ],
-          "volume": [
-            6362100,
-            5057500,
-            4055100,
-            3934400,
-            1850204
-          ],
-          "close": [
-            512.3699951171875,
-            509.1600036621094,
-            509.67999267578125,
-            511.5400085449219,
-            511.7724914550781
-          ],
           "open": [
             500.3299865722656,
             511.44000244140625,
             505.9800109863281,
             508.989990234375,
             514.9299926757812
+          ],
+          "low": [
+            499.5,
+            507.20001220703125,
+            501.2699890136719,
+            506.70001220703125,
+            510.82501220703125
+          ],
+          "close": [
+            512.3699951171875,
+            509.1600036621094,
+            509.67999267578125,
+            511.5400085449219,
+            null
+          ],
+          "volume": [
+            6362100,
+            5057500,
+            4055100,
+            3939800,
+            4202307
           ]
         }
       ],
@@ -114,7 +136,7 @@
             509.1600036621094,
             509.67999267578125,
             511.5400085449219,
-            511.7724914550781
+            null
           ]
         }
       ]

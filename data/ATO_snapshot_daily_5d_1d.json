@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:53.560Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ATO?interval=1d&range=5d",
+  "symbol": "ATO",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ATO?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:41.971Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 172.77999877929688,
+    "firstOpen": 179.61000061035156,
+    "dayMovePct": -100,
+    "gapPct": 3.9530049075756115,
+    "currentVolume": 521925,
+    "averageVolume": 933965,
+    "volumeSpikeRatio": 0.558827150910366,
+    "morningHigh": 182.63999938964844,
+    "morningLow": 171.6300048828125,
+    "morningRangePct": 6.4149590360691695,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.93047027723821,
+    "intradayVolatility": 42.76609812083943,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 441469800,
-      "regularMarketTime": 1785777351,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 172.285,
+      "regularMarketPrice": 172.89,
       "fiftyTwoWeekHigh": 192.51,
       "fiftyTwoWeekLow": 155.56,
       "regularMarketDayHigh": 174.2,
       "regularMarketDayLow": 171.63,
-      "regularMarketVolume": 225505,
+      "regularMarketVolume": 521925,
       "longName": "Atmos Energy Corporation",
       "shortName": "Atmos Energy Corporation",
       "chartPreviousClose": 178.22,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            984400,
-            961400,
-            1156700,
-            1045400,
-            225505
-          ],
           "high": [
             182.63999938964844,
             181.3699951171875,
@@ -84,19 +99,12 @@
             174.9199981689453,
             174.1999969482422
           ],
-          "open": [
-            179.61000061035156,
-            180.49000549316406,
-            176.94000244140625,
-            173.3000030517578,
-            171.9600067138672
-          ],
           "close": [
             179.3800048828125,
             177.6699981689453,
             174.25999450683594,
             172.77999877929688,
-            172.28500366210938
+            null
           ],
           "low": [
             178.97000122070312,
@@ -104,6 +112,20 @@
             173.5500030517578,
             172.22000122070312,
             171.6300048828125
+          ],
+          "volume": [
+            984400,
+            961400,
+            1156700,
+            1045400,
+            521925
+          ],
+          "open": [
+            179.61000061035156,
+            180.49000549316406,
+            176.94000244140625,
+            173.3000030517578,
+            171.9600067138672
           ]
         }
       ],
@@ -114,7 +136,7 @@
             177.6699981689453,
             174.25999450683594,
             172.77999877929688,
-            172.28500366210938
+            null
           ]
         }
       ]

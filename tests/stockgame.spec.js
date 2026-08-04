@@ -166,6 +166,69 @@ test.describe.parallel('StockGame application', () => {
     }
   });
 
+  test('candidate detail endpoint returns evaluation and feature metrics', async ({ request }) => {
+    const response = await request.get('/api/candidate-detail?symbol=AAPL&minProfit=100&ballpark=500');
+    expect(response.ok()).toBeTruthy();
+    const body = await response.json();
+    expect(body.ok).toBeTruthy();
+    expect(body).toHaveProperty('detail');
+    expect(body.detail.symbol).toBe('AAPL');
+    expect(body.detail).toHaveProperty('evaluation');
+    expect(body.detail.evaluation).toHaveProperty('status');
+    expect(body.detail).toHaveProperty('featureBreakdown');
+  });
+
+  test('the home info modal explains the model and dashboard metrics', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('#infoButton').click();
+    await expect(page.locator('#appInfoModal')).toBeVisible();
+    await expect(page.locator('#appInfoBody')).toContainText('How the model works');
+    await expect(page.locator('#appInfoBody')).toContainText('Probability');
+    await expect(page.locator('#appInfoBody')).toContainText('Combined score');
+  });
+
+  test('candidate detail page renders features, trend context, and a risk table', async ({ page }) => {
+    await page.goto('/candidate.html?symbol=AAPL');
+    await expect(page.locator('#candidatePageTitle')).toContainText('AAPL');
+    await expect(page.locator('#candidatePageContent')).toContainText('Features used');
+    await expect(page.locator('#candidatePageContent')).toContainText('Risk table');
+  });
+
+  test('history cards surface confidence and decision reasons', async ({ page }) => {
+    const today = new Date();
+    const todayKey = formatDateKey(today);
+
+    const entry = {
+      date: today.toISOString(),
+      symbol: 'MSFT',
+      name: 'Microsoft',
+      minProfit: 100,
+      ballpark: 600,
+      status: 'pending',
+      correct: null,
+      estimatedProfit: 18,
+      stopLossAmount: 15,
+      stopLossPct: 2.5,
+      probability: 0.74,
+      combinedScore: 0.81,
+      evaluation: {
+        status: 'pending-eligible',
+        reasons: ['Accepted because momentum, volume, and liquidity cleared the review checks.']
+      }
+    };
+
+    await page.goto('/history.html');
+    await page.evaluate((item) => {
+      localStorage.setItem('stockgame-history', JSON.stringify({ entries: [item] }));
+    }, entry);
+    await page.reload();
+
+    await page.click(`[data-date="${todayKey}"]`);
+    await expect(page.locator('#historyModal')).toBeVisible();
+    await expect(page.locator('.history-order-card')).toContainText('Prediction confidence');
+    await expect(page.locator('.history-order-card')).toContainText('Accepted because momentum');
+  });
+
   test('the history page can open and close the modal by backdrop click and Escape key', async ({ page }) => {
     const today = new Date();
     const todayKey = formatDateKey(today);

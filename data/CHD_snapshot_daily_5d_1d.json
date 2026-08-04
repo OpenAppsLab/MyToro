@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:44.146Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CHD?interval=1d&range=5d",
+  "symbol": "CHD",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CHD?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:43.560Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 98.80999755859375,
+    "firstOpen": 100.7300033569336,
+    "dayMovePct": -100,
+    "gapPct": 1.943129081853576,
+    "currentVolume": 1420063,
+    "averageVolume": 2536392.6,
+    "volumeSpikeRatio": 0.5598750761218906,
+    "morningHigh": 102.23999786376953,
+    "morningLow": 94.87999725341797,
+    "morningRangePct": 7.757167815565492,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.274067364590806,
+    "intradayVolatility": 43.159573061434685,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 322151400,
-      "regularMarketTime": 1785777445,
+      "regularMarketTime": 1785787370,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 100.08,
+      "regularMarketPrice": 100.01,
       "fiftyTwoWeekHigh": 106.04,
       "fiftyTwoWeekLow": 81.33,
       "regularMarketDayHigh": 102.24,
-      "regularMarketDayLow": 99.805,
-      "regularMarketVolume": 654326,
+      "regularMarketDayLow": 99.605,
+      "regularMarketVolume": 1420063,
       "longName": "Church & Dwight Co., Inc.",
       "shortName": "Church & Dwight Company, Inc.",
       "chartPreviousClose": 98.7,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            99.56999969482422,
-            97.44000244140625,
-            97.41999816894531,
-            94.87999725341797,
-            99.80500030517578
-          ],
-          "volume": [
-            2269100,
-            2438200,
-            3897600,
-            2657000,
-            654326
-          ],
-          "open": [
-            100.7300033569336,
-            98.04000091552734,
-            98.3499984741211,
-            95.70999908447266,
-            100.48999786376953
+          "close": [
+            99.93000030517578,
+            99.86000061035156,
+            97.68000030517578,
+            98.80999755859375,
+            null
           ],
           "high": [
             101.68000030517578,
@@ -98,12 +106,26 @@
             99.79000091552734,
             102.23999786376953
           ],
-          "close": [
-            99.93000030517578,
-            99.86000061035156,
-            97.68000030517578,
-            98.80999755859375,
-            100.08000183105469
+          "low": [
+            99.56999969482422,
+            97.44000244140625,
+            97.41999816894531,
+            94.87999725341797,
+            99.6050033569336
+          ],
+          "open": [
+            100.7300033569336,
+            98.04000091552734,
+            98.3499984741211,
+            95.70999908447266,
+            100.48999786376953
+          ],
+          "volume": [
+            2269100,
+            2438200,
+            3897600,
+            2657000,
+            1420063
           ]
         }
       ],
@@ -114,7 +136,7 @@
             99.86000061035156,
             97.68000030517578,
             98.80999755859375,
-            100.08000183105469
+            null
           ]
         }
       ]

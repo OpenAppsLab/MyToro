@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:23.683Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALLE?interval=1d&range=5d",
+  "symbol": "ALLE",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ALLE?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:04.422Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 157.39999389648438,
+    "firstOpen": 160,
+    "dayMovePct": -100,
+    "gapPct": 1.651846381408086,
+    "currentVolume": 1162621,
+    "averageVolume": 1293344.2,
+    "volumeSpikeRatio": 0.8989262100529775,
+    "morningHigh": 164.25,
+    "morningLow": 153.38999938964844,
+    "morningRangePct": 7.079992602884418,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.596280508403936,
+    "intradayVolatility": 42.96245633566659,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1384785000,
-      "regularMarketTime": 1785777267,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 160.44,
+      "regularMarketPrice": 161.28,
       "fiftyTwoWeekHigh": 183.11,
       "fiftyTwoWeekLow": 125,
       "regularMarketDayHigh": 162.085,
       "regularMarketDayLow": 159.17,
-      "regularMarketVolume": 314846,
+      "regularMarketVolume": 1162621,
       "longName": "Allegion plc",
       "shortName": "Allegion plc",
       "chartPreviousClose": 158.14,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,20 @@
     "indicators": {
       "quote": [
         {
+          "high": [
+            164.25,
+            160.10000610351562,
+            159.1699981689453,
+            157.9499969482422,
+            162.0850067138672
+          ],
+          "close": [
+            161.22999572753906,
+            158.47000122070312,
+            157.05999755859375,
+            157.39999389648438,
+            null
+          ],
           "low": [
             158.94000244140625,
             156.8300018310547,
@@ -77,19 +113,12 @@
             155.5,
             159.1699981689453
           ],
-          "close": [
-            161.22999572753906,
-            158.47000122070312,
-            157.05999755859375,
-            157.39999389648438,
-            160.44000244140625
-          ],
           "volume": [
             1806000,
             1341400,
             1222900,
             933800,
-            314846
+            1162621
           ],
           "open": [
             160,
@@ -97,13 +126,6 @@
             158.97999572753906,
             156.85000610351562,
             158.6999969482422
-          ],
-          "high": [
-            164.25,
-            160.10000610351562,
-            159.1699981689453,
-            157.9499969482422,
-            162.0850067138672
           ]
         }
       ],
@@ -114,7 +136,7 @@
             158.47000122070312,
             157.05999755859375,
             157.39999389648438,
-            160.44000244140625
+            null
           ]
         }
       ]

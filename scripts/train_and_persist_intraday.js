@@ -22,28 +22,37 @@
       const raw = await fs.readFile(path.join(dataDir, fname), 'utf8');
       const json = JSON.parse(raw);
       const result = json.result || json;
-      // Build a minimal item object compatible with labelIntradayOutcome
-      const meta = result.meta || {};
+      const derived = json.derivedMetrics || {};
       const indicators = result.indicators || {};
       const quote = indicators.quote && indicators.quote[0] ? indicators.quote[0] : {};
-      const closes = quote.close || [];
-      const highs = quote.high || [];
-      const lows = quote.low || [];
-      const volumes = Array.isArray(quote.volume) ? quote.volume.filter((value) => value != null).map(Number) : [];
-      const currentVolume = volumes.length ? volumes[volumes.length - 1] || volumes.slice().reverse().find((value) => value > 0) || 0 : 0;
+      const closes = Array.isArray(quote.close) ? quote.close.map((value) => Number(value)).filter((value) => Number.isFinite(value)) : [];
+      const highs = Array.isArray(quote.high) ? quote.high.map((value) => Number(value)).filter((value) => Number.isFinite(value)) : [];
+      const lows = Array.isArray(quote.low) ? quote.low.map((value) => Number(value)).filter((value) => Number.isFinite(value)) : [];
+      const volumes = Array.isArray(quote.volume) ? quote.volume.map((value) => Number(value)).filter((value) => Number.isFinite(value)) : [];
+      const currentVolume = Number(derived.currentVolume ?? (volumes.length ? volumes[volumes.length - 1] || volumes.slice().reverse().find((value) => value > 0) || 0 : 0));
+      const currentPrice = Number(derived.currentPrice ?? (closes.length ? closes[closes.length - 1] : 0));
+      const openPrice = Number(derived.firstOpen ?? (closes[0] || currentPrice));
+      const prevClose = Number(derived.prevClose ?? (closes.length > 1 ? closes[closes.length - 2] : closes[0] || currentPrice));
+      const dayMovePct = Number(derived.dayMovePct ?? (openPrice ? ((currentPrice - openPrice) / openPrice) * 100 : 0));
       const item = {
         symbol: fname.split('_')[0],
         name: fname.split('_')[0],
         closeHistory: closes,
         highHistory: highs,
         lowHistory: lows,
-        currentPrice: closes.length ? closes[closes.length-1] : 0,
-        dayMovePct: (closes.length && closes[0]) ? ((closes[closes.length-1] - closes[0]) / closes[0]) * 100 : 0,
-        openPrice: closes[0] || 0,
-        prevClose: closes[0] || 0,
-        preMarketMovePct: 0,
+        currentPrice,
+        dayMovePct,
+        openPrice,
+        prevClose,
+        preMarketMovePct: Number(derived.preMarketMovePct ?? 0),
         volumeHistory: volumes,
-        volume: currentVolume
+        volume: currentVolume,
+        derivedMetrics: derived,
+        volumeSpikeRatio: Number(derived.volumeSpikeRatio ?? 0),
+        intradayVolatility: Number(derived.intradayVolatility ?? 0),
+        minutesSinceOpen: derived.minutesSinceOpen,
+        morningRangePct: Number(derived.morningRangePct ?? 0),
+        aboveMorningRange: Boolean(derived.aboveMorningRange)
       };
 
       items.push(item);
@@ -61,7 +70,10 @@
     return { item: example.item, features, label, news: example.news || [] };
   });
 
-  console.log('Training intraday model with', formattedExamples.length, 'examples');
+  const exampleCount = formattedExamples.length;
+  const positiveCount = formattedExamples.filter((ex) => ex.label === 1).length;
+  const positiveRate = exampleCount ? (positiveCount / exampleCount) : 0;
+  console.log(`Training intraday model with ${exampleCount} examples (${positiveCount} positive labels, ${Math.round(positiveRate * 100)}% positive)`);
   const model = trainIntradayModel(formattedExamples, 1.5, 500, 0.01);
   const outPath = path.join(outDir, 'intraday_model.json');
   await fs.writeFile(outPath, JSON.stringify({ trainedAt: new Date().toISOString(), model }, null, 2));

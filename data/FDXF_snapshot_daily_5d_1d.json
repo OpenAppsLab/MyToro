@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:16.219Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FDXF?interval=1d&range=5d",
+  "symbol": "FDXF",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FDXF?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:36.935Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 140.52999877929688,
+    "firstOpen": 150.1300048828125,
+    "dayMovePct": -100,
+    "gapPct": 6.831285979438801,
+    "currentVolume": 626163,
+    "averageVolume": 945352.6,
+    "volumeSpikeRatio": 0.6623592086169753,
+    "morningHigh": 153.77999877929688,
+    "morningLow": 135.63999938964844,
+    "morningRangePct": 13.373635705746558,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.7354780272411,
+    "intradayVolatility": 42.38833911929563,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1779888600,
-      "regularMarketTime": 1785777480,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 140.275,
+      "regularMarketPrice": 139.02,
       "fiftyTwoWeekHigh": 200,
       "fiftyTwoWeekLow": 135,
       "regularMarketDayHigh": 144.7,
-      "regularMarketDayLow": 140,
-      "regularMarketVolume": 235246,
+      "regularMarketDayLow": 139,
+      "regularMarketVolume": 626163,
       "longName": "FedEx Freight Holding Company, Inc.",
       "shortName": "FedEx Freight Holding Company, ",
       "chartPreviousClose": 150.3,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -65,19 +87,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            147.4499969482422,
-            143.5,
-            135.63999938964844,
-            136.6300048828125,
-            140
-          ],
-          "close": [
-            150.99000549316406,
-            144.36000061035156,
-            137.5500030517578,
-            140.52999877929688,
-            140.27499389648438
+          "volume": [
+            757800,
+            901400,
+            1563100,
+            878300,
+            626163
           ],
           "high": [
             153.63999938964844,
@@ -86,12 +101,12 @@
             141.9199981689453,
             144.6999969482422
           ],
-          "volume": [
-            757800,
-            901400,
-            1563100,
-            878300,
-            235246
+          "low": [
+            147.4499969482422,
+            143.5,
+            135.63999938964844,
+            136.6300048828125,
+            139
           ],
           "open": [
             150.1300048828125,
@@ -99,6 +114,13 @@
             144.58999633789062,
             136.6300048828125,
             141
+          ],
+          "close": [
+            150.99000549316406,
+            144.36000061035156,
+            137.5500030517578,
+            140.52999877929688,
+            null
           ]
         }
       ],
@@ -109,7 +131,7 @@
             144.36000061035156,
             137.5500030517578,
             140.52999877929688,
-            140.27499389648438
+            null
           ]
         }
       ]

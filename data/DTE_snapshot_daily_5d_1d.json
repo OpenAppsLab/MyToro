@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:37.113Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DTE?interval=1d&range=5d",
+  "symbol": "DTE",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DTE?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:49.231Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 141.8699951171875,
+    "firstOpen": 146.83999633789062,
+    "dayMovePct": -100,
+    "gapPct": 3.5032081424953905,
+    "currentVolume": 907704,
+    "averageVolume": 1339740.8,
+    "volumeSpikeRatio": 0.6775220997972144,
+    "morningHigh": 150.55999755859375,
+    "morningLow": 140.39999389648438,
+    "morningRangePct": 7.236470159393492,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.725153308911413,
+    "intradayVolatility": 42.8881090696699,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777501,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 141.215,
+      "regularMarketPrice": 141.72,
       "fiftyTwoWeekHigh": 155.75,
       "fiftyTwoWeekLow": 126.23,
       "regularMarketDayHigh": 143.338,
       "regularMarketDayLow": 140.4,
-      "regularMarketVolume": 382315,
+      "regularMarketVolume": 907704,
       "longName": "DTE Energy Company",
       "shortName": "DTE Energy Company",
       "chartPreviousClose": 147.23,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,26 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            146.83999633789062,
-            147.02000427246094,
-            143.3699951171875,
-            141.58999633789062,
-            141.5800018310547
-          ],
-          "low": [
+          "close": [
             146.0800018310547,
-            142.5,
-            141.17999267578125,
-            140.5,
-            140.39999389648438
-          ],
-          "volume": [
-            1685600,
-            1449600,
-            1059100,
-            1596700,
-            382315
+            143.52000427246094,
+            141.6999969482422,
+            141.8699951171875,
+            null
           ],
           "high": [
             150.55999755859375,
@@ -98,12 +106,26 @@
             142.39999389648438,
             143.33799743652344
           ],
-          "close": [
+          "volume": [
+            1685600,
+            1449600,
+            1059100,
+            1596700,
+            907704
+          ],
+          "low": [
             146.0800018310547,
-            143.52000427246094,
-            141.6999969482422,
-            141.8699951171875,
-            141.21499633789062
+            142.5,
+            141.17999267578125,
+            140.5,
+            140.39999389648438
+          ],
+          "open": [
+            146.83999633789062,
+            147.02000427246094,
+            143.3699951171875,
+            141.58999633789062,
+            141.5800018310547
           ]
         }
       ],
@@ -114,7 +136,7 @@
             143.52000427246094,
             141.6999969482422,
             141.8699951171875,
-            141.21499633789062
+            null
           ]
         }
       ]

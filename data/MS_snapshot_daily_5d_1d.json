@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:30.576Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MS?interval=1d&range=5d",
+  "symbol": "MS",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MS?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:00.379Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 210.4199981689453,
+    "firstOpen": 213.75,
+    "dayMovePct": -100,
+    "gapPct": 1.5825500713012284,
+    "currentVolume": 4981027,
+    "averageVolume": 5856045.4,
+    "volumeSpikeRatio": 0.8505786174403633,
+    "morningHigh": 213.75,
+    "morningLow": 202.94000244140625,
+    "morningRangePct": 5.326696278972826,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.10269380195189,
+    "intradayVolatility": 43.321581197395744,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 730477800,
-      "regularMarketTime": 1785777320,
+      "regularMarketTime": 1785787459,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 209.055,
+      "regularMarketPrice": 211.23,
       "fiftyTwoWeekHigh": 232.25,
       "fiftyTwoWeekLow": 139.41,
       "regularMarketDayHigh": 211.53,
       "regularMarketDayLow": 208.01,
-      "regularMarketVolume": 2105057,
+      "regularMarketVolume": 4981027,
       "longName": "Morgan Stanley",
       "shortName": "Morgan Stanley",
       "chartPreviousClose": 214.56,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            6021000,
+            6722300,
+            6832900,
+            4723000,
+            4981027
+          ],
           "low": [
             207.2899932861328,
             202.94000244140625,
@@ -82,7 +111,7 @@
             203.1300048828125,
             210.05999755859375,
             210.4199981689453,
-            209.05499267578125
+            null
           ],
           "high": [
             213.75,
@@ -97,13 +126,6 @@
             207.5,
             210.6999969482422,
             211.4600067138672
-          ],
-          "volume": [
-            6021000,
-            6722300,
-            6832900,
-            4719800,
-            2105057
           ]
         }
       ],
@@ -114,7 +136,7 @@
             202.0179443359375,
             208.91000366210938,
             210.4199981689453,
-            209.05499267578125
+            null
           ]
         }
       ]

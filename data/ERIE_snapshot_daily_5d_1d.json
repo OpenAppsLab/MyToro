@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:57.283Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ERIE?interval=1d&range=5d",
+  "symbol": "ERIE",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ERIE?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:13.762Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 242.0399932861328,
+    "firstOpen": 233.82000732421875,
+    "dayMovePct": -100,
+    "gapPct": -3.396127164900649,
+    "currentVolume": 319506,
+    "averageVolume": 387741.2,
+    "volumeSpikeRatio": 0.8240187011336427,
+    "morningHigh": 253.4600067138672,
+    "morningLow": 230,
+    "morningRangePct": 10.20000291907269,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.97007699139599,
+    "intradayVolatility": 43.47707798848886,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 812640600,
-      "regularMarketTime": 1785777443,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 244.59,
+      "regularMarketPrice": 236.86,
       "fiftyTwoWeekHigh": 380.67,
       "fiftyTwoWeekLow": 204.63,
       "regularMarketDayHigh": 253.46,
-      "regularMarketDayLow": 243.81,
-      "regularMarketVolume": 92132,
+      "regularMarketDayLow": 236.586,
+      "regularMarketVolume": 319506,
       "longName": "Erie Indemnity Company",
       "shortName": "Erie Indemnity Company",
       "chartPreviousClose": 228.26,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            233.82000732421875,
-            235.64999389648438,
-            230,
-            232.36000061035156,
-            243.80999755859375
-          ],
           "high": [
             245.67999267578125,
             248.5500030517578,
@@ -91,19 +106,26 @@
             240.5399932861328,
             246.25999450683594
           ],
+          "low": [
+            233.82000732421875,
+            235.64999389648438,
+            230,
+            232.36000061035156,
+            236.58599853515625
+          ],
           "close": [
             242.42999267578125,
             248.5500030517578,
             233.6699981689453,
             242.0399932861328,
-            244.58999633789062
+            null
           ],
           "volume": [
             338000,
             311300,
             334900,
             635000,
-            92132
+            319506
           ]
         }
       ],
@@ -114,7 +136,7 @@
             248.5500030517578,
             233.6699981689453,
             242.0399932861328,
-            244.58999633789062
+            null
           ]
         }
       ]

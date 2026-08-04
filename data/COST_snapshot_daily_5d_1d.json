@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:02.506Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/COST?interval=1d&range=5d",
+  "symbol": "COST",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/COST?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:26.326Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 951.8900146484375,
+    "firstOpen": 970.5499877929688,
+    "dayMovePct": -100,
+    "gapPct": 1.9603076886380573,
+    "currentVolume": 1974217,
+    "averageVolume": 2145023.4,
+    "volumeSpikeRatio": 0.9203708453716636,
+    "morningHigh": 987.5499877929688,
+    "morningLow": 937.510009765625,
+    "morningRangePct": 5.337540666883505,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.376786018675627,
+    "intradayVolatility": 43.09548536441341,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 521299800,
-      "regularMarketTime": 1785777289,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 951.78,
+      "regularMarketPrice": 954.08,
       "fiftyTwoWeekHigh": 1096.5,
       "fiftyTwoWeekLow": 844.06,
       "regularMarketDayHigh": 967.98,
       "regularMarketDayLow": 948.75,
-      "regularMarketVolume": 809266,
+      "regularMarketVolume": 1974217,
       "longName": "Costco Wholesale Corporation",
       "shortName": "Costco Wholesale Corporation",
       "chartPreviousClose": 951.58,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,13 +92,6 @@
     "indicators": {
       "quote": [
         {
-          "volume": [
-            2682800,
-            1973400,
-            2334500,
-            1758800,
-            809266
-          ],
           "high": [
             987.5499877929688,
             978.7999877929688,
@@ -89,7 +104,14 @@
             974.030029296875,
             954.1699829101562,
             951.8900146484375,
-            951.780029296875
+            null
+          ],
+          "volume": [
+            2682800,
+            1973400,
+            2334500,
+            1760200,
+            1974217
           ],
           "low": [
             965.8699951171875,
@@ -114,7 +136,7 @@
             974.030029296875,
             954.1699829101562,
             951.8900146484375,
-            951.780029296875
+            null
           ]
         }
       ]

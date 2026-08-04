@@ -51,6 +51,16 @@
             <small id="runtimeGateDetail">Determines whether auto trading is permitted.</small>
           </article>
           <article class="metric-card">
+            <span>Data health</span>
+            <strong id="dataHealthState">—</strong>
+            <small id="dataHealthDetail">Live freshness and provider health.</small>
+          </article>
+          <article class="metric-card">
+            <span>Live performance</span>
+            <strong id="livePerformanceState">—</strong>
+            <small id="livePerformanceDetail">Recent outcome success rate for auto-ordering.</small>
+          </article>
+          <article class="metric-card">
             <span>Live candidate count</span>
             <strong id="candidateCount">—</strong>
             <small id="candidateDetail">Using current alpha/threshold</small>
@@ -93,6 +103,11 @@
           </div>
 
           <div class="settings-actions">
+            <button id="refreshAdminSettings" class="secondary-button btn-with-icon" title="Refresh admin metrics">
+              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 4v6h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 20v-6h-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19a9 9 0 0114-9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 5a9 9 0 00-9.5 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Refresh</span>
+            </button>
+
             <button id="saveAdminSettings" class="primary-button btn-with-icon" title="Save runtime settings">
               <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 4h14v14H5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M7 9h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span>Save</span>

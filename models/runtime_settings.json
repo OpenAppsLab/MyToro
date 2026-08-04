@@ -1,6 +1,6 @@
 {
   "leverage": 2,
   "ballparkAmount": 3000,
-  "intradayAlpha": 0,
-  "minCombinedThreshold": 0.4
+  "intradayAlpha": 1,
+  "minCombinedThreshold": 0.2
 }

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:37.598Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CNP?interval=1d&range=5d",
+  "symbol": "CNP",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CNP?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:35.617Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 42.040000915527344,
+    "firstOpen": 43.56999969482422,
+    "dayMovePct": -100,
+    "gapPct": 3.639388073209519,
+    "currentVolume": 3947516,
+    "averageVolume": 6574803.2,
+    "volumeSpikeRatio": 0.6004006325238753,
+    "morningHigh": 45.2599983215332,
+    "morningLow": 41.689998626708984,
+    "morningRangePct": 8.563204155485565,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -26.182734928451787,
+    "intradayVolatility": 42.627061658663486,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": -252322200,
-      "regularMarketTime": 1785777445,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 41.79,
+      "regularMarketPrice": 41.92,
       "fiftyTwoWeekHigh": 45.26,
       "fiftyTwoWeekLow": 36.6,
       "regularMarketDayHigh": 42.49,
-      "regularMarketDayLow": 41.76,
-      "regularMarketVolume": 1791281,
+      "regularMarketDayLow": 41.69,
+      "regularMarketVolume": 3947516,
       "longName": "CenterPoint Energy, Inc.",
       "shortName": "CenterPoint Energy, Inc (Holdin",
       "chartPreviousClose": 44.01,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -77,26 +99,26 @@
             42.38999938964844,
             42.4900016784668
           ],
-          "low": [
-            43.56999969482422,
-            42.810001373291016,
-            41.90999984741211,
-            41.869998931884766,
-            41.7599983215332
-          ],
           "volume": [
             7448400,
             6627000,
             7716500,
-            7133600,
-            1791281
+            7134600,
+            3947516
           ],
           "close": [
             44.099998474121094,
             42.93000030517578,
             42.150001525878906,
             42.040000915527344,
-            41.790000915527344
+            null
+          ],
+          "low": [
+            43.56999969482422,
+            42.810001373291016,
+            41.90999984741211,
+            41.869998931884766,
+            41.689998626708984
           ],
           "open": [
             43.56999969482422,
@@ -114,7 +136,7 @@
             42.93000030517578,
             42.150001525878906,
             42.040000915527344,
-            41.790000915527344
+            null
           ]
         }
       ]

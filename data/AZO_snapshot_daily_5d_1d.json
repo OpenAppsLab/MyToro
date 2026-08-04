@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:16:55.790Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AZO?interval=1d&range=5d",
+  "symbol": "AZO",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/AZO?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:53:44.669Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 3016.25,
+    "firstOpen": 3100,
+    "dayMovePct": -100,
+    "gapPct": 2.7766266058847906,
+    "currentVolume": 180855,
+    "averageVolume": 150791,
+    "volumeSpikeRatio": 1.199375294281489,
+    "morningHigh": 3172.070068359375,
+    "morningLow": 2979.110107421875,
+    "morningRangePct": 6.477100677037001,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.811050637785183,
+    "intradayVolatility": 42.87903685897652,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 670602600,
-      "regularMarketTime": 1785777393,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 3000.85,
+      "regularMarketPrice": 2990.27,
       "fiftyTwoWeekHigh": 4388.11,
       "fiftyTwoWeekLow": 2902.2,
       "regularMarketDayHigh": 3060,
       "regularMarketDayLow": 2985.84,
-      "regularMarketVolume": 61037,
+      "regularMarketVolume": 180855,
       "longName": "AutoZone, Inc.",
       "shortName": "AutoZone, Inc.",
       "chartPreviousClose": 3075.26,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,19 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            3100,
-            3083.280029296875,
+          "volume": [
+            123400,
+            146700,
+            181800,
+            121200,
+            180855
+          ],
+          "high": [
+            3169.97998046875,
+            3172.070068359375,
             3110.97998046875,
-            2990,
-            3030.989990234375
+            3040.14990234375,
+            3060
           ],
           "low": [
             3091.52001953125,
@@ -89,21 +118,14 @@
             3142.169921875,
             3006.570068359375,
             3016.25,
-            3000.85009765625
+            null
           ],
-          "high": [
-            3169.97998046875,
-            3172.070068359375,
+          "open": [
+            3100,
+            3083.280029296875,
             3110.97998046875,
-            3040.14990234375,
-            3060
-          ],
-          "volume": [
-            123400,
-            146700,
-            181800,
-            121200,
-            61037
+            2990,
+            3030.989990234375
           ]
         }
       ],
@@ -114,7 +136,7 @@
             3142.169921875,
             3006.570068359375,
             3016.25,
-            3000.85009765625
+            null
           ]
         }
       ]

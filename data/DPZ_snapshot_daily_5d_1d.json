@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:32.700Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DPZ?interval=1d&range=5d",
+  "symbol": "DPZ",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DPZ?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:43.817Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 347.44000244140625,
+    "firstOpen": 349.8900146484375,
+    "dayMovePct": -100,
+    "gapPct": 0.7051612335411581,
+    "currentVolume": 894501,
+    "averageVolume": 960260.2,
+    "volumeSpikeRatio": 0.9315193944308012,
+    "morningHigh": 365.45001220703125,
+    "morningLow": 342.79998779296875,
+    "morningRangePct": 6.607358582445983,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.19976981410376,
+    "intradayVolatility": 43.22551197930135,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1089725400,
-      "regularMarketTime": 1785777509,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 361.8,
+      "regularMarketPrice": 364.41,
       "fiftyTwoWeekHigh": 469,
       "fiftyTwoWeekLow": 282,
-      "regularMarketDayHigh": 363.55,
+      "regularMarketDayHigh": 365.45,
       "regularMarketDayLow": 351.2,
-      "regularMarketVolume": 413982,
+      "regularMarketVolume": 894501,
       "longName": "Domino's Pizza, Inc.",
       "shortName": "Domino's Pizza Inc",
       "chartPreviousClose": 343.53,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,6 +92,13 @@
     "indicators": {
       "quote": [
         {
+          "volume": [
+            1127200,
+            1292200,
+            835000,
+            652400,
+            894501
+          ],
           "low": [
             346.95001220703125,
             347.6099853515625,
@@ -77,19 +106,19 @@
             342.9599914550781,
             351.20001220703125
           ],
-          "high": [
-            359.70001220703125,
-            364.5799865722656,
-            355.1400146484375,
-            350.07000732421875,
-            363.54998779296875
-          ],
           "close": [
             350.4700012207031,
             360,
             352.25,
             347.44000244140625,
-            361.79998779296875
+            null
+          ],
+          "high": [
+            359.70001220703125,
+            364.5799865722656,
+            355.1400146484375,
+            350.07000732421875,
+            365.45001220703125
           ],
           "open": [
             349.8900146484375,
@@ -97,13 +126,6 @@
             353.19000244140625,
             347.3900146484375,
             351.20001220703125
-          ],
-          "volume": [
-            1127200,
-            1292200,
-            835000,
-            652400,
-            413982
           ]
         }
       ],
@@ -114,7 +136,7 @@
             360,
             352.25,
             347.44000244140625,
-            361.79998779296875
+            null
           ]
         }
       ]

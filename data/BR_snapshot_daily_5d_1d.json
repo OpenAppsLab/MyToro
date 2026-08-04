@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:15.624Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BR?interval=1d&range=5d",
+  "symbol": "BR",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BR?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:08.977Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 153.9499969482422,
+    "firstOpen": 155.42999267578125,
+    "dayMovePct": -100,
+    "gapPct": 0.9613483318461093,
+    "currentVolume": 1016055,
+    "averageVolume": 1088971,
+    "volumeSpikeRatio": 0.9330413757574811,
+    "morningHigh": 163.24000549316406,
+    "morningLow": 150.2899932861328,
+    "morningRangePct": 8.616682936685008,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.666911049569027,
+    "intradayVolatility": 42.933898107427154,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1174570200,
-      "regularMarketTime": 1785777421,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 157.995,
+      "regularMarketPrice": 157.34,
       "fiftyTwoWeekHigh": 271.91,
       "fiftyTwoWeekLow": 133.83,
       "regularMarketDayHigh": 159.72,
       "regularMarketDayLow": 156.47,
-      "regularMarketVolume": 497826,
+      "regularMarketVolume": 1016055,
       "longName": "Broadridge Financial Solutions, Inc.",
       "shortName": "Broadridge Financial Solutions,",
       "chartPreviousClose": 152.78,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            155.22000122070312,
-            157.36000061035156,
-            150.2899932861328,
-            152.36000061035156,
-            156.47000122070312
+          "open": [
+            155.42999267578125,
+            158.27000427246094,
+            156.24000549316406,
+            153.63999938964844,
+            157.63999938964844
           ],
           "high": [
             160.94000244140625,
@@ -84,26 +106,26 @@
             154.7899932861328,
             159.72000122070312
           ],
-          "close": [
-            158.17999267578125,
-            159.1999969482422,
-            154.77000427246094,
-            153.9499969482422,
-            157.9949951171875
-          ],
-          "open": [
-            155.42999267578125,
-            158.27000427246094,
-            156.24000549316406,
-            153.63999938964844,
-            157.63999938964844
+          "low": [
+            155.22000122070312,
+            157.36000061035156,
+            150.2899932861328,
+            152.36000061035156,
+            156.47000122070312
           ],
           "volume": [
             1364200,
             1049200,
             1079900,
             935500,
-            497826
+            1016055
+          ],
+          "close": [
+            158.17999267578125,
+            159.1999969482422,
+            154.77000427246094,
+            153.9499969482422,
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             159.1999969482422,
             154.77000427246094,
             153.9499969482422,
-            157.9949951171875
+            null
           ]
         }
       ]

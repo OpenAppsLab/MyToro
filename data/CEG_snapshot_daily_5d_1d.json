@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:03.082Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CEG?interval=1d&range=5d",
+  "symbol": "CEG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CEG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:06.756Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 262.75,
+    "firstOpen": 263.3550109863281,
+    "dayMovePct": -100,
+    "gapPct": 0.2302610794778782,
+    "currentVolume": 2322159,
+    "averageVolume": 2651651.8,
+    "volumeSpikeRatio": 0.8757405478351268,
+    "morningHigh": 274.69000244140625,
+    "morningLow": 256.1600036621094,
+    "morningRangePct": 7.233759569951862,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.71305557892223,
+    "intradayVolatility": 43.48103580478582,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1642602600,
-      "regularMarketTime": 1785777482,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 274.34,
+      "regularMarketPrice": 273.71,
       "fiftyTwoWeekHigh": 412.7,
       "fiftyTwoWeekLow": 228.63,
-      "regularMarketDayHigh": 274.34,
+      "regularMarketDayHigh": 274.69,
       "regularMarketDayLow": 261.841,
-      "regularMarketVolume": 1043957,
+      "regularMarketVolume": 2322159,
       "longName": "Constellation Energy Corporation",
       "shortName": "Constellation Energy Corporatio",
       "chartPreviousClose": 270,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -69,19 +91,19 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            257.6499938964844,
-            256.1600036621094,
-            261.8999938964844,
-            260.8399963378906,
-            261.8411865234375
+          "volume": [
+            2966200,
+            2855000,
+            3262100,
+            1852800,
+            2322159
           ],
-          "high": [
-            266.5849914550781,
-            263.8800048828125,
-            270.2699890136719,
-            269.86199951171875,
-            274.3399963378906
+          "close": [
+            259.82000732421875,
+            257.95001220703125,
+            263.55999755859375,
+            262.75,
+            null
           ],
           "open": [
             263.3550109863281,
@@ -90,19 +112,19 @@
             266.4519958496094,
             264.95001220703125
           ],
-          "close": [
-            259.82000732421875,
-            257.95001220703125,
-            263.55999755859375,
-            262.75,
-            274.3399963378906
+          "high": [
+            266.5849914550781,
+            263.8800048828125,
+            270.2699890136719,
+            269.86199951171875,
+            274.69000244140625
           ],
-          "volume": [
-            2966200,
-            2855000,
-            3262100,
-            1850300,
-            1043957
+          "low": [
+            257.6499938964844,
+            256.1600036621094,
+            261.8999938964844,
+            260.8399963378906,
+            261.8411865234375
           ]
         }
       ],
@@ -113,7 +135,7 @@
             257.95001220703125,
             263.55999755859375,
             262.75,
-            274.3399963378906
+            null
           ]
         }
       ]

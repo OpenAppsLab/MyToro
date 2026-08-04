@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:17:14.579Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BSX?interval=1d&range=5d",
+  "symbol": "BSX",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BSX?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:54:07.667Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 46.72999954223633,
+    "firstOpen": 46.41999816894531,
+    "dayMovePct": -100,
+    "gapPct": -0.6633883507977028,
+    "currentVolume": 16536243,
+    "averageVolume": 27861968.6,
+    "volumeSpikeRatio": 0.5935059089830429,
+    "morningHigh": 48.91999816894531,
+    "morningLow": 42.54999923706055,
+    "morningRangePct": 14.970620554880226,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.63583751245058,
+    "intradayVolatility": 43.51674936807747,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 706282200,
-      "regularMarketTime": 1785777433,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 48.355,
+      "regularMarketPrice": 48.43,
       "fiftyTwoWeekHigh": 109.5,
       "fiftyTwoWeekLow": 42.2,
       "regularMarketDayHigh": 48.92,
       "regularMarketDayLow": 47.5,
-      "regularMarketVolume": 9082438,
+      "regularMarketVolume": 16536243,
       "longName": "Boston Scientific Corporation",
       "shortName": "Boston Scientific Corporation",
       "chartPreviousClose": 45.51,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            46.41999816894531,
-            42.66999816894531,
-            45.27000045776367,
-            45.84000015258789,
-            47.81999969482422
+          "close": [
+            46.060001373291016,
+            46.040000915527344,
+            46,
+            46.72999954223633,
+            null
           ],
           "high": [
             47.15999984741211,
@@ -84,26 +106,26 @@
             46.79999923706055,
             48.91999816894531
           ],
-          "volume": [
-            26905700,
-            51286700,
-            25889300,
-            18685900,
-            9082438
-          ],
-          "close": [
-            46.060001373291016,
-            46.040000915527344,
-            46,
-            46.72999954223633,
-            48.35499954223633
-          ],
           "low": [
             45.810001373291016,
             42.54999923706055,
             44.54999923706055,
             44.43000030517578,
             47.5
+          ],
+          "volume": [
+            26905700,
+            51286700,
+            25889300,
+            18691900,
+            16536243
+          ],
+          "open": [
+            46.41999816894531,
+            42.66999816894531,
+            45.27000045776367,
+            45.84000015258789,
+            47.81999969482422
           ]
         }
       ],
@@ -114,7 +136,7 @@
             46.040000915527344,
             46,
             46.72999954223633,
-            48.35499954223633
+            null
           ]
         }
       ]

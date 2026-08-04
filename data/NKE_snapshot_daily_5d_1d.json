@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:34.863Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/NKE?interval=1d&range=5d",
+  "symbol": "NKE",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/NKE?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:05.877Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 41.709999084472656,
+    "firstOpen": 42.75,
+    "dayMovePct": -100,
+    "gapPct": 2.4934091065816015,
+    "currentVolume": 19213527,
+    "averageVolume": 19488805.4,
+    "volumeSpikeRatio": 0.9858750500941429,
+    "morningHigh": 43.689998626708984,
+    "morningLow": 41.22999954223633,
+    "morningRangePct": 5.966527071999151,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.782093717512748,
+    "intradayVolatility": 42.859659526134394,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 344615400,
-      "regularMarketTime": 1785777330,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 42.25,
+      "regularMarketPrice": 42.64,
       "fiftyTwoWeekHigh": 80.17,
       "fiftyTwoWeekLow": 40,
       "regularMarketDayHigh": 43.205,
       "regularMarketDayLow": 42.06,
-      "regularMarketVolume": 14089496,
+      "regularMarketVolume": 19213527,
       "longName": "NIKE, Inc.",
       "shortName": "Nike, Inc.",
       "chartPreviousClose": 42.14,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            42.75,
-            42.599998474121094,
-            42.5,
-            42.02000045776367,
-            42.56999969482422
+          "volume": [
+            23601400,
+            15029100,
+            16977600,
+            22622400,
+            19213527
           ],
           "high": [
             43.27000045776367,
@@ -91,19 +113,19 @@
             41.4900016784668,
             42.060001373291016
           ],
-          "volume": [
-            23601400,
-            15029100,
-            16977600,
-            22598400,
-            14089496
-          ],
           "close": [
             43.04999923706055,
             43.220001220703125,
             42.290000915527344,
             41.709999084472656,
-            42.25
+            null
+          ],
+          "open": [
+            42.75,
+            42.599998474121094,
+            42.5,
+            42.02000045776367,
+            42.56999969482422
           ]
         }
       ],
@@ -114,7 +136,7 @@
             43.220001220703125,
             42.290000915527344,
             41.709999084472656,
-            42.25
+            null
           ]
         }
       ]

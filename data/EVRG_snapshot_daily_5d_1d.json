@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:19:01.848Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EVRG?interval=1d&range=5d",
+  "symbol": "EVRG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EVRG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:19.271Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 83.01000213623047,
+    "firstOpen": 86.5199966430664,
+    "dayMovePct": -100,
+    "gapPct": 4.228399489829634,
+    "currentVolume": 1831235,
+    "averageVolume": 1997187,
+    "volumeSpikeRatio": 0.9169071298781737,
+    "morningHigh": 87.43000030517578,
+    "morningLow": 82.45500183105469,
+    "morningRangePct": 6.033592097074432,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -25.779760264239,
+    "intradayVolatility": 42.855138533233806,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 99153000,
-      "regularMarketTime": 1785777511,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 82.96,
+      "regularMarketPrice": 83.23,
       "fiftyTwoWeekHigh": 88.62,
       "fiftyTwoWeekLow": 70.42,
       "regularMarketDayHigh": 84.18,
       "regularMarketDayLow": 82.455,
-      "regularMarketVolume": 545158,
+      "regularMarketVolume": 1831235,
       "longName": "Evergy, Inc.",
       "shortName": "Evergy, Inc.",
       "chartPreviousClose": 85.84,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "low": [
-            85.63999938964844,
-            83.44999694824219,
-            82.62000274658203,
-            82.5199966430664,
-            82.45500183105469
+          "close": [
+            85.66000366210938,
+            84,
+            83.25,
+            83.01000213623047,
+            null
           ],
           "high": [
             87.43000030517578,
@@ -84,12 +106,12 @@
             83.58000183105469,
             84.18000030517578
           ],
-          "close": [
-            85.66000366210938,
-            84,
-            83.25,
-            83.01000213623047,
-            82.95999908447266
+          "low": [
+            85.63999938964844,
+            83.44999694824219,
+            82.62000274658203,
+            82.5199966430664,
+            82.45500183105469
           ],
           "open": [
             86.5199966430664,
@@ -103,7 +125,7 @@
             2029100,
             1677400,
             2840300,
-            545158
+            1831235
           ]
         }
       ],
@@ -114,7 +136,7 @@
             84,
             83.25,
             83.01000213623047,
-            82.95999908447266
+            null
           ]
         }
       ]

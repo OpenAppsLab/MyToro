@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:13.432Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FTNT?interval=1d&range=5d",
+  "symbol": "FTNT",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FTNT?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:51:39.836Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 161.9499969482422,
+    "firstOpen": 152.60000610351562,
+    "dayMovePct": -100,
+    "gapPct": -5.773381303436973,
+    "currentVolume": 5775563,
+    "averageVolume": 8255372.6,
+    "volumeSpikeRatio": 0.6996126377142565,
+    "morningHigh": 169.25999450683594,
+    "morningLow": 143.77000427246094,
+    "morningRangePct": 17.72969985176358,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.043894686288567,
+    "intradayVolatility": 44.45771429136671,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1258554600,
-      "regularMarketTime": 1785777313,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 163.19,
+      "regularMarketPrice": 163.21,
       "fiftyTwoWeekHigh": 170.35,
       "fiftyTwoWeekLow": 70.12,
       "regularMarketDayHigh": 164.497,
       "regularMarketDayLow": 159.37,
-      "regularMarketVolume": 2706765,
+      "regularMarketVolume": 5775563,
       "longName": "Fortinet, Inc.",
       "shortName": "Fortinet, Inc.",
       "chartPreviousClose": 152.38,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -70,12 +92,12 @@
     "indicators": {
       "quote": [
         {
-          "open": [
-            152.60000610351562,
-            148.27000427246094,
-            164,
-            154.00999450683594,
-            163.30499267578125
+          "low": [
+            146.1199951171875,
+            143.77000427246094,
+            152.22999572753906,
+            153.61000061035156,
+            159.3699951171875
           ],
           "high": [
             153.24000549316406,
@@ -84,26 +106,26 @@
             162.57000732421875,
             164.49679565429688
           ],
-          "low": [
-            146.1199951171875,
-            143.77000427246094,
-            152.22999572753906,
-            153.61000061035156,
-            159.3699951171875
+          "open": [
+            152.60000610351562,
+            148.27000427246094,
+            164,
+            154.00999450683594,
+            163.30499267578125
           ],
           "volume": [
             6016800,
             12380400,
             11018600,
-            6083200,
-            2706765
+            6085500,
+            5775563
           ],
           "close": [
             149.97999572753906,
             153.22000122070312,
             154.25,
             161.9499969482422,
-            163.19000244140625
+            null
           ]
         }
       ],
@@ -114,7 +136,7 @@
             153.22000122070312,
             154.25,
             161.9499969482422,
-            163.19000244140625
+            null
           ]
         }
       ]

@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:32.750Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?interval=1d&range=5d",
+  "symbol": "MU",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MU?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:03.247Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 823.030029296875,
+    "firstOpen": 839.6099853515625,
+    "dayMovePct": -100,
+    "gapPct": 2.0145019579482377,
+    "currentVolume": 42015788,
+    "averageVolume": 58102997.6,
+    "volumeSpikeRatio": 0.7231259958264185,
+    "morningHigh": 930.8800048828125,
+    "morningLow": 737.8800048828125,
+    "morningRangePct": 26.15601435502397,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.37047173026511,
+    "intradayVolatility": 44.98578004040389,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 454944600,
-      "regularMarketTime": 1785777331,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 825.49,
+      "regularMarketPrice": 829.5,
       "fiftyTwoWeekHigh": 1255,
       "fiftyTwoWeekLow": 105.46,
-      "regularMarketDayHigh": 829,
+      "regularMarketDayHigh": 836.62,
       "regularMarketDayLow": 770.15,
-      "regularMarketVolume": 27629989,
+      "regularMarketVolume": 42015788,
       "longName": "Micron Technology, Inc.",
       "shortName": "Micron Technology, Inc.",
       "chartPreviousClose": 900.2,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -74,29 +96,8 @@
             61039300,
             69846000,
             63075300,
-            54257900,
-            27629989
-          ],
-          "high": [
-            848.3599853515625,
-            841.7999877929688,
-            882.5,
-            930.8800048828125,
-            829
-          ],
-          "open": [
-            839.6099853515625,
-            833,
-            793.1400146484375,
-            919.6500244140625,
-            786.35498046875
-          ],
-          "close": [
-            820.530029296875,
-            739,
-            874.6599731445312,
-            823.030029296875,
-            825.489990234375
+            54538600,
+            42015788
           ],
           "low": [
             789.0900268554688,
@@ -104,6 +105,27 @@
             789,
             818,
             770.1500244140625
+          ],
+          "close": [
+            820.530029296875,
+            739,
+            874.6599731445312,
+            823.030029296875,
+            null
+          ],
+          "high": [
+            848.3599853515625,
+            841.7999877929688,
+            882.5,
+            930.8800048828125,
+            836.6199951171875
+          ],
+          "open": [
+            839.6099853515625,
+            833,
+            793.1400146484375,
+            919.6500244140625,
+            786.35498046875
           ]
         }
       ],
@@ -114,7 +136,7 @@
             739,
             874.6599731445312,
             823.030029296875,
-            825.489990234375
+            null
           ]
         }
       ]

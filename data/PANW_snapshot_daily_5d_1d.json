@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:15:38.080Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?interval=1d&range=5d",
+  "symbol": "PANW",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:52:09.794Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 331.8299865722656,
+    "firstOpen": 317.510009765625,
+    "dayMovePct": -100,
+    "gapPct": -4.31545592204098,
+    "currentVolume": 6640138,
+    "averageVolume": 6274267.6,
+    "volumeSpikeRatio": 1.0583128459487448,
+    "morningHigh": 347.6600036621094,
+    "morningLow": 308.5400085449219,
+    "morningRangePct": 12.679067230754882,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.990450584184995,
+    "intradayVolatility": 43.92374380149866,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1342791000,
-      "regularMarketTime": 1785777334,
+      "regularMarketTime": 1785787200,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 343.07,
+      "regularMarketPrice": 347.13,
       "fiftyTwoWeekHigh": 368.8,
       "fiftyTwoWeekLow": 139.57,
-      "regularMarketDayHigh": 343.69,
+      "regularMarketDayHigh": 347.66,
       "regularMarketDayLow": 330.01,
-      "regularMarketVolume": 3225554,
+      "regularMarketVolume": 6640138,
       "longName": "Palo Alto Networks, Inc.",
       "shortName": "Palo Alto Networks, Inc.",
       "chartPreviousClose": 317.32,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "start": 1785744000,
-          "end": 1785763800,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "start": 1785763800,
-          "end": 1785787200,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "start": 1785787200,
-          "end": 1785801600,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -74,22 +96,22 @@
             6507500,
             6336700,
             6859300,
-            5024700,
-            3225554
-          ],
-          "close": [
-            319,
-            314.1499938964844,
-            325.67999267578125,
-            331.8299865722656,
-            343.07000732421875
+            5027700,
+            6640138
           ],
           "high": [
             323.3999938964844,
             322.1099853515625,
             326.29998779296875,
             333.9800109863281,
-            343.69000244140625
+            347.6600036621094
+          ],
+          "close": [
+            319,
+            314.1499938964844,
+            325.67999267578125,
+            331.8299865722656,
+            null
           ],
           "low": [
             308.5400085449219,
@@ -114,7 +136,7 @@
             314.1499938964844,
             325.67999267578125,
             331.8299865722656,
-            343.07000732421875
+            null
           ]
         }
       ]

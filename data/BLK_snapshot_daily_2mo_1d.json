@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:14:56.088Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BLK?interval=1d&range=2mo",
+  "symbol": "BLK",
+  "range": "2mo",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/BLK?interval=1d&range=2mo",
+  "fetchedAt": "2026-08-04T09:51:18.388Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 1090.3900146484375,
+    "firstOpen": 997.8400268554688,
+    "dayMovePct": -100,
+    "gapPct": -8.487787539287824,
+    "currentVolume": 587756,
+    "averageVolume": 831681.8536585366,
+    "volumeSpikeRatio": 0.7067077361547375,
+    "morningHigh": 1076.510009765625,
+    "morningLow": 987.8400268554688,
+    "morningRangePct": 8.97614800975559,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -2.3213695864811914,
+    "intradayVolatility": 15.756490284336595,
+    "minutesSinceOpen": 86400,
+    "timestampsCount": 41
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 938784600,
-      "regularMarketTime": 1785777262,
+      "regularMarketTime": 1785787202,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 1108.97,
+      "regularMarketPrice": 1126.63,
       "fiftyTwoWeekHigh": 1219.94,
       "fiftyTwoWeekLow": 917.39,
-      "regularMarketDayHigh": 1119.34,
+      "regularMarketDayHigh": 1129.24,
       "regularMarketDayLow": 1096.19,
-      "regularMarketVolume": 254553,
+      "regularMarketVolume": 587756,
       "longName": "BlackRock, Inc.",
       "shortName": "BlackRock, Inc.",
       "chartPreviousClose": 990.87,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -61,7 +83,6 @@
       ]
     },
     "timestamp": [
-      1780493400,
       1780579800,
       1780666200,
       1780925400,
@@ -108,7 +129,6 @@
       "quote": [
         {
           "open": [
-            1001.1099853515625,
             997.8400268554688,
             1011.9500122070312,
             1002.1900024414062,
@@ -152,7 +172,6 @@
             1100.0699462890625
           ],
           "high": [
-            1001.3699951171875,
             1025.6700439453125,
             1011.9500122070312,
             1005,
@@ -193,10 +212,9 @@
             1110,
             1104.1099853515625,
             1104.18994140625,
-            1119.3399658203125
+            1129.239990234375
           ],
           "low": [
-            983.75,
             991.469970703125,
             991.1799926757812,
             990.760009765625,
@@ -240,7 +258,6 @@
             1096.18994140625
           ],
           "volume": [
-            793100,
             1023800,
             724100,
             531700,
@@ -281,10 +298,9 @@
             1121800,
             624200,
             378200,
-            254553
+            587756
           ],
           "close": [
-            990.8699951171875,
             1022.5599975585938,
             995.5999755859375,
             994.77001953125,
@@ -325,14 +341,13 @@
             1079.18994140625,
             1098.3699951171875,
             1090.3900146484375,
-            1108.969970703125
+            null
           ]
         }
       ],
       "adjclose": [
         {
           "adjclose": [
-            985.3175659179688,
             1016.8299560546875,
             995.5999755859375,
             994.77001953125,
@@ -373,7 +388,7 @@
             1079.18994140625,
             1098.3699951171875,
             1090.3900146484375,
-            1108.969970703125
+            null
           ]
         }
       ]

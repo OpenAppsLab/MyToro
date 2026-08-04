@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:27.145Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/FANG?interval=1d&range=5d",
+  "symbol": "FANG",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FANG?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:55:37.209Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 202.9499969482422,
+    "firstOpen": 197.11000061035156,
+    "dayMovePct": -100,
+    "gapPct": -2.8775542871183113,
+    "currentVolume": 2159662,
+    "averageVolume": 1953092.4,
+    "volumeSpikeRatio": 1.1057654005514537,
+    "morningHigh": 203.7899932861328,
+    "morningLow": 190.0500030517578,
+    "morningRangePct": 7.229671146405129,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -23.36305694513901,
+    "intradayVolatility": 44.27410789925973,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NasdaqGS",
       "instrumentType": "EQUITY",
       "firstTradeDate": 1350048600,
-      "regularMarketTime": 1785777489,
+      "regularMarketTime": 1785787201,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 199.15,
+      "regularMarketPrice": 198.75,
       "fiftyTwoWeekHigh": 214.51,
       "fiftyTwoWeekLow": 134.3,
       "regularMarketDayHigh": 199.595,
       "regularMarketDayLow": 196.26,
-      "regularMarketVolume": 754631,
+      "regularMarketVolume": 2159662,
       "longName": "Diamondback Energy, Inc.",
       "shortName": "Diamondback Energy, Inc.",
       "chartPreviousClose": 195.8,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "start": 1785830400,
+          "end": 1785850200,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "start": 1785850200,
+          "end": 1785873600,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "start": 1785873600,
+          "end": 1785888000,
           "gmtoffset": -14400
         }
       },
@@ -75,14 +97,7 @@
             199.1300048828125,
             199.77000427246094,
             202.9499969482422,
-            199.1501007080078
-          ],
-          "open": [
-            197.11000061035156,
-            198.1999969482422,
-            196.92999267578125,
-            198.47999572753906,
-            198.5500030517578
+            null
           ],
           "high": [
             198.58999633789062,
@@ -98,12 +113,19 @@
             198.10000610351562,
             196.25999450683594
           ],
+          "open": [
+            197.11000061035156,
+            198.1999969482422,
+            196.92999267578125,
+            198.47999572753906,
+            198.5500030517578
+          ],
           "volume": [
             2513100,
             1926400,
             1514600,
-            1650400,
-            754631
+            1651700,
+            2159662
           ]
         }
       ],
@@ -114,7 +136,7 @@
             199.1300048828125,
             199.77000427246094,
             202.9499969482422,
-            199.1501007080078
+            null
           ]
         }
       ]

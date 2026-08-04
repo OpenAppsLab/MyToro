@@ -1,6 +1,28 @@
 {
-  "fetchedAt": "2026-08-03T17:18:46.154Z",
-  "url": "https://query1.finance.yahoo.com/v8/finance/chart/EW?interval=1d&range=5d",
+  "symbol": "EW",
+  "range": "5d",
+  "interval": "1d",
+  "source": "Yahoo",
+  "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EW?interval=1d&range=5d",
+  "fetchedAt": "2026-08-04T09:56:00.190Z",
+  "derivedMetrics": {
+    "currentPrice": 0,
+    "prevClose": 86.06999969482422,
+    "firstOpen": 84.5999984741211,
+    "dayMovePct": -100,
+    "gapPct": -1.707913588840785,
+    "currentVolume": 3072939,
+    "averageVolume": 4432647.8,
+    "volumeSpikeRatio": 0.6932513338867121,
+    "morningHigh": 88.90499877929688,
+    "morningLow": 82.91000366210938,
+    "morningRangePct": 7.230725910493799,
+    "aboveMorningRange": false,
+    "averageIntradayReturn": -24.28490996802568,
+    "intradayVolatility": 43.73195901906486,
+    "minutesSinceOpen": 8640,
+    "timestampsCount": 5
+  },
   "result": {
     "meta": {
       "currency": "USD",
@@ -9,17 +31,17 @@
       "fullExchangeName": "NYSE",
       "instrumentType": "EQUITY",
       "firstTradeDate": 954167400,
-      "regularMarketTime": 1785777521,
+      "regularMarketTime": 1785787203,
       "hasPrePostMarketData": true,
       "gmtoffset": -14400,
       "timezone": "EDT",
       "exchangeTimezoneName": "America/New_York",
-      "regularMarketPrice": 88.785,
+      "regularMarketPrice": 88.82,
       "fiftyTwoWeekHigh": 96.29,
       "fiftyTwoWeekLow": 72.3,
-      "regularMarketDayHigh": 88.79,
+      "regularMarketDayHigh": 88.905,
       "regularMarketDayLow": 86.39,
-      "regularMarketVolume": 1601591,
+      "regularMarketVolume": 3072939,
       "longName": "Edwards Lifesciences Corporation",
       "shortName": "Edwards Lifesciences Corporatio",
       "chartPreviousClose": 83.04,
@@ -27,20 +49,20 @@
       "currentTradingPeriod": {
         "pre": {
           "timezone": "EDT",
-          "end": 1785763800,
-          "start": 1785744000,
+          "end": 1785850200,
+          "start": 1785830400,
           "gmtoffset": -14400
         },
         "regular": {
           "timezone": "EDT",
-          "end": 1785787200,
-          "start": 1785763800,
+          "end": 1785873600,
+          "start": 1785850200,
           "gmtoffset": -14400
         },
         "post": {
           "timezone": "EDT",
-          "end": 1785801600,
-          "start": 1785787200,
+          "end": 1785888000,
+          "start": 1785873600,
           "gmtoffset": -14400
         }
       },
@@ -77,33 +99,33 @@
             87.08000183105469,
             86.88999938964844
           ],
-          "low": [
-            83.22000122070312,
-            82.91000366210938,
-            85.05000305175781,
-            85.23999786376953,
-            86.38999938964844
-          ],
           "volume": [
             5606800,
             5594700,
             3935900,
-            3951900,
-            1601591
+            3952900,
+            3072939
           ],
           "close": [
             83.68000030517578,
             85.76000213623047,
             86.91999816894531,
             86.06999969482422,
-            88.78500366210938
+            null
           ],
           "high": [
             85.51000213623047,
             86,
             87.04000091552734,
             87.08000183105469,
-            88.79000091552734
+            88.90499877929688
+          ],
+          "low": [
+            83.22000122070312,
+            82.91000366210938,
+            85.05000305175781,
+            85.23999786376953,
+            86.38999938964844
           ]
         }
       ],
@@ -114,7 +136,7 @@
             85.76000213623047,
             86.91999816894531,
             86.06999969482422,
-            88.78500366210938
+            null
           ]
         }
       ]

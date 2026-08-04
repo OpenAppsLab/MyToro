@@ -3305,7 +3305,7 @@ function evaluateOrderEligibility(candidate = {}, options = {}) {
     reasons.push('Rejected by risk rules: volatility is too high for the current risk budget.');
   }
 
-  if (liquidityPenalty > 0.08 || volumeZ < 1) {
+  if (liquidityPenalty > 0.15 || volumeZ < -1) {
     riskFlags.push('liquidity');
     reasons.push('Rejected by risk rules: liquidity or volume confirmation is too weak.');
   }

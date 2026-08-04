@@ -564,7 +564,7 @@ function renderCandidateDetail(detail) {
 }
 
 async function fetchCandidateDetail(symbol) {
-  const minProfit = Number(minProfitInput?.value || 100);
+  const minProfit = Number(minProfitInput?.value || 50);
   const ballpark = Number(ballparkInput?.value || 500);
   const searchParams = new URLSearchParams({ symbol, minProfit: String(minProfit), ballpark: String(ballpark) });
   const response = await fetch(`/api/candidate-detail?${searchParams.toString()}`);
@@ -800,7 +800,7 @@ window.addEventListener('orders-cleared', () => {
 });
 
 async function createPendingOrder(option, overrides = {}) {
-  const minProfit = Number(minProfitInput.value || 0);
+  const minProfit = Number(minProfitInput.value || 50);
   const ballpark = Number(ballparkInput.value || 0);
 
   if (orderCreateInProgress) {
@@ -874,7 +874,7 @@ async function fetchIntradaySuggestionsHtml(top = 5) {
 
 async function searchPrediction() {
   updateSessionBadge();
-  const minProfit = Number(minProfitInput.value || 0);
+  const minProfit = Number(minProfitInput.value || 50);
   const ballpark = Number(ballparkInput.value || 0);
 
   if (!minProfit || !ballpark) {

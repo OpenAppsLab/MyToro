@@ -504,12 +504,27 @@ async function renderHistoryFull() {
   const history = loadHistory();
   const entries = Array.isArray(history.entries) ? history.entries : [];
   const importedOrders = Array.isArray(history.orders) ? history.orders : [];
-  const liveOrders = await loadPendingOrders();
-  const orders = [
-    ...importedOrders,
-    ...liveOrders.filter((order) => !importedOrders.some((item) => item.id === order.id))
-  ];
-  window.historyOrders = orders; // store fetched orders for modal use
+  let orders = importedOrders;
+  
+  // Render calendar immediately with local data for fast load
+  renderCalendarWithOrders(entries, orders);
+  
+  // Fetch pending orders in background and re-render if changed
+  loadPendingOrders().then(liveOrders => {
+    const newOrders = [
+      ...importedOrders,
+      ...liveOrders.filter((order) => !importedOrders.some((item) => item.id === order.id))
+    ];
+    if (JSON.stringify(orders) !== JSON.stringify(newOrders)) {
+      orders = newOrders;
+      renderCalendarWithOrders(entries, orders);
+    }
+  }).catch(() => {});
+  
+  window.historyOrders = orders;
+}
+
+function renderCalendarWithOrders(entries, orders) {
   const groups = buildHistoryGroups(entries, orders);
   const { year: currentYear, month: currentMonth } = getBrisbaneDateParts();
   const profitDays = Object.entries(groups).reduce((sum, [dateKey, group]) => {
@@ -545,6 +560,7 @@ async function renderHistoryFull() {
     `;
     attachDateClickHandlers();
   }
+  window.historyOrders = orders; // Update stored orders
 }
 
 if (clearButton) {

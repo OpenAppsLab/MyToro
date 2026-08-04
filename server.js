@@ -3289,9 +3289,10 @@ function evaluateOrderEligibility(candidate = {}, options = {}) {
     reasons.push('Rejected by risk rules: probability is below the 55% execution threshold.');
   }
 
-  if (combinedScore < 0.6) {
+  const runtimeThreshold = getRuntimeThreshold();
+  if (combinedScore < runtimeThreshold) {
     riskFlags.push('combined-threshold');
-    reasons.push('Rejected by risk rules: the model score is below the minimum combined threshold.');
+    reasons.push(`Rejected by risk rules: the model score (${combinedScore.toFixed(2)}) is below the minimum combined threshold (${runtimeThreshold.toFixed(2)}).`);
   }
 
   if (requiredMovePct > 0 && expectedMovePct < requiredMovePct * 0.75) {
